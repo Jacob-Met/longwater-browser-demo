@@ -34,7 +34,14 @@ function label(text, x, y, size, color, weight = 500, align = "left") {
   context.textAlign = align;
   context.textBaseline = "alphabetic";
   context.fillStyle = color;
-  context.fillText(String(text), x, y, Math.max(0, width - x - 8));
+  // Available width depends on alignment: right-aligned text extends left
+  // from x, centered text extends both ways; the old width - x - 8 formula
+  // assumed left alignment and horizontally squished right/center labels
+  // placed near the right edge (e.g. the ACTIVE CELL card hint).
+  const avail = align === "right" ? x - 8
+    : align === "center" ? 2 * Math.min(x, width - x) - 8
+    : width - x - 8;
+  context.fillText(String(text), x, y, Math.max(0, avail));
 }
 
 function wrap(text, maxWidth, font) {
@@ -105,7 +112,9 @@ function drawBackground() {
 function drawHeader(l) {
   label("LONGWATER", l.pad, 33, l.compact ? 22 : 27, palette.paper, 760);
   label("FOURTEEN TIDES · FIELD SIM", l.pad + 1, 51, 9, palette.muted, 650);
-  const right = width - l.pad;
+  // Resource stats sit left of the reset button. They were previously painted
+  // underneath it (same screen region, button drawn later) and invisible.
+  const right = l.restart.x - 14;
   label(`WATER ${state.freshwater}`, right, 29, l.compact ? 10 : 12, palette.water, 700, "right");
   label(`SEED ${state.seedPacks}`, right, 49, l.compact ? 10 : 12, palette.gold, 700, "right");
   rounded(l.restart.x, l.restart.y, l.restart.w, l.restart.h, 12, "#183c3d", "#346259");
