@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./journal.css">
   <link rel="stylesheet" href="./watch-trends.css">
   <link rel="stylesheet" href="./watch-save.css">
+  <link rel="stylesheet" href="./watch-audio.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -29,6 +30,11 @@
       </div>
       <p id="startup-error" hidden></p>
     </div>
+    <section class="watch-audio" aria-label="Sound">
+      <label><input id="sound-enabled" type="checkbox" role="switch" aria-describedby="sound-note sound-status" disabled> Sound cues</label>
+      <span id="sound-status" role="status">Off</span>
+      <p id="sound-note">Quiet tones for your actions and the closing tide.</p>
+    </section>
     <section id="watch-storage" aria-label="Watch progress">
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
       <button id="watch-save-retry" type="button" hidden>Try saving again</button>

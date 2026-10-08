@@ -1,6 +1,7 @@
 import init, { BrowserSession } from "./pkg/longwater_web.js";
 import { WatchJournal } from "./journal.js";
 import { SavedWatch, WATCH_SAVE_KEY } from "./watch-save.js";
+import { WatchAudio } from "./watch-audio.js";
 
 const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
@@ -10,6 +11,7 @@ const cellControls = [...document.querySelectorAll("[data-cell]")];
 const actionControls = [...document.querySelectorAll("[data-action]")];
 const context = canvas.getContext("2d", { alpha: false });
 const journal = new WatchJournal(document.querySelector("#watch-journal"));
+const watchAudio = new WatchAudio(document.querySelector("#sound-enabled"), document.querySelector("#sound-status"));
 let watch;
 let state;
 let selected = 1;
@@ -369,7 +371,10 @@ function act(action) {
   } catch (error) {
     message = String(error).replace(/^Error:\s*/, "");
   }
-  if (state !== previous) journal.record(previous, state);
+  if (state !== previous) {
+    journal.record(previous, state);
+    watchAudio.play(action, state.finished);
+  }
   render();
   announce();
   showSaveStatus();
@@ -440,6 +445,7 @@ try {
   resize();
   announce();
   showSaveStatus();
+  watchAudio.ready();
 } catch (error) {
   live.textContent = `Longwater could not start: ${String(error)}`;
   const errorMessage = document.querySelector("#startup-error");
