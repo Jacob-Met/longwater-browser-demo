@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "sourceMain": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+  "sourceTree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+  "priorEvidenceCommit": "aa40e277164f3f51b6666c5669510a194be365ba",
+  "priorEvidenceTree": "a5c47cef83af035d8d2309047e8f928ef83cf50d",
+  "priorLeaves": 287,
+  "priorLeavesPreservedExactly": true,
+  "packetRoot": "docs/receiving/historical-choice-file-adoption-7879c2abc07f-20261008/integration",
+  "payloadCount": 10,
+  "payloadBytes": 2827862,
+  "payloadFiles": [
+    {
+      "path": "README.md",
+      "bytes": 3490,
+      "sha256": "7bbf98f04bf2e03892fe5f5c1abca12494bfeb5a7d05a64c0fe76c0238a979e9",
+      "gitBlob": "e5d313abaf610ee8875e8ce33d1f0e9b072af844"
+    },
+    {
+      "path": "MAIN-PUBLICATION.json",
+      "bytes": 10506,
+      "sha256": "2bc3845af4d894c3c5bc915143bfc6e2d1144627fb9c79a25897c24c2a94abf8",
+      "gitBlob": "c0872bac3cdb8a31680f9076b983793370099ddb"
+    },
+    {
+      "path": "raw/main-browser.log",
+      "bytes": 2705155,
+      "sha256": "23680832cd7afef1cafafb3d1e52613024ce66d25b81b112f55b17dcb942fa13",
+      "gitBlob": "4010fc59b2aa8542a41e281b153a17dbc2ed7b1b"
+    },
+    {
+      "path": "raw/main-smoke.log",
+      "bytes": 11575,
+      "sha256": "41149a5a1ce9c0a3116cda4c60492bef26f83c24e5e7e998170fee7a736e00a2",
+      "gitBlob": "c9ada728e263a9a1b7baafc1339997ac25077006"
+    },
+    {
+      "path": "raw/pages-build.log",
+      "bytes": 51769,
+      "sha256": "81e7fa619ebefba6c96b4f634fde5c6cdcbc777f8fb6221463f63fa144287ecd",
+      "gitBlob": "be23e83996f24b5086fabce3c2293377d7a4f1c0"
+    },
+    {
+      "path": "raw/pages-deploy.log",
+      "bytes": 3846,
+      "sha256": "0d7e828a12eac7acbf3bda6ef6ea0552b18cdd37bed9555981e46307e311968f",
+      "gitBlob": "a7478c00b865fe6128f12253515b65df3b170723"
+    },
+    {
+      "path": "adoption/source-custody.json",
+      "bytes": 8454,
+      "sha256": "0293c077ed0eb850ebc84966ca16667c1f92921651b17af7a85daa8ac54bb0c8",
+      "gitBlob": "492cc9d04072283829b6aa6e38690ddb0c33f451"
+    },
+    {
+      "path": "adoption/run.json",
+      "bytes": 31179,
+      "sha256": "94f33b2f81028257bb743cca95a621f6c29d00a05e63759d308d3e00bd2a6d53",
+      "gitBlob": "f8f34acc50c4352d6fb63557029a96deb4916aab"
+    },
+    {
+      "path": "adoption/run.log",
+      "bytes": 270,
+      "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34",
+      "gitBlob": "53606140926f5558e3d53be1d73b22d28d0ca920"
+    },
+    {
+      "path": "adoption/failed-display-actual-download.json",
+      "bytes": 1618,
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "gitBlob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b"
+    }
+  ],
+  "status": "Actual qualified main integrated, main112/112 and original3/3 passed, identical main artifacts received, ordinary source-bound Pages deployment succeeded.",
+  "nativeArchiveBoundary": "Pages zip digest/size are provider-reported; no independent zip transfer/decode or live-site browser claim."
+}

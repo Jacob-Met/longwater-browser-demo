@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "reviewer": "7879c2abc07f/github_execution",
+  "status": "Qualified source integrated and ordinary managed Pages publication received.",
+  "integration": {
+    "mergeCommit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "parents": [
+      "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+      "9eaa01d05db14895ef42dcc7fa1499db3df41021"
+    ],
+    "qualifiedLeaves": 256,
+    "sourceHead": "9eaa01d05db14895ef42dcc7fa1499db3df41021",
+    "sourceTreeExact": true,
+    "mergeMethod": "merge",
+    "expectedHeadGuardUsed": true,
+    "freshReadyAndBaseBoundaryVerified": true,
+    "mergedAt": "2026-10-08T16:21:30Z",
+    "prState": "closed",
+    "issueState": "closed",
+    "issueStateReason": "completed",
+    "issueClosedAt": "2026-10-08T16:21:31Z",
+    "actualMainLastRead": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "independentAcceptanceComment": "https://github.com/Jacob-Met/longwater-browser-demo/pull/19#issuecomment-6064266588",
+    "nativeCommentReadbackExact": true
+  },
+  "qualification": {
+    "finalPacketCommit": "aa40e277164f3f51b6666c5669510a194be365ba",
+    "finalPacketTree": "a5c47cef83af035d8d2309047e8f928ef83cf50d",
+    "finalReceiptBlob": "50edddea3c1b9047cb2c69f5d0d1c67b9954ff6b",
+    "finalReceiptSha256": "e4a61c80d0da822bba4511effad72e530e57c60b8860ba4599da86f460cdae36",
+    "complete287LeafPacketVerified": true,
+    "qualifiedSourceLeavesExact": 256,
+    "priorEvidenceFilesExact": 16,
+    "finalEvidenceFilesExact": 15,
+    "all14FinalPayloadFilesIndependentlyBoundFromNativeBytesToSha256AndGitSha1": true,
+    "indexSha256": "0cf32897ecd9263a2bdb0c3182fa2da7f340ff93c3174d4ee7873d76b43dd89c",
+    "sourceReconstructionAndActualHostedPackageBothAccepted": true,
+    "allThreeActualFinalPngsDirectlyViewed": true,
+    "originalCoupledNegativeAndFirstVisualFindingsRetained": true
+  },
+  "mainRun": {
+    "id": 37808152278,
+    "url": "https://github.com/Jacob-Met/longwater-browser-demo/actions/runs/37808152278",
+    "event": "push",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "head": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "actualCheckout": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "updatedAt": "2026-10-08T16:23:00Z",
+    "jobs": {
+      "browser": 113417756009,
+      "smoke": 113417756186
+    },
+    "totals": {
+      "tests": 112,
+      "passed": 112,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "fullLogsRead": true
+  },
+  "mainCoupledWitness": {
+    "commit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "passed": 3,
+    "failed": 0,
+    "original_runtime_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "actual_adapted_harness_sha256": "14f595721c69dcf2b1cc326f63d6f1443211f5c4f1b7fe2b82d14e88b177fd70",
+    "unchanged_inputs": true,
+    "exit_status": 0,
+    "node": "v22.23.3",
+    "browser": "151.0.7922.34",
+    "startedAt": "2026-10-08T16:22:40.751Z",
+    "finishedAt": "2026-10-08T16:22:42.293Z",
+    "all18PublishedRuntimePinsExactlyMatchOriginalAndServedCustody": true,
+    "originalWitnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+    "originalCaseBlockBytes": 7263,
+    "originalCaseBlockUnchanged": true,
+    "cases": [
+      {
+        "name": "preview_cancel_keeps_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": true,
+        "choiceVisibleAfter": true,
+        "choiceHtmlLengthAfter": 4477,
+        "choiceTideAfter": "1",
+        "controlsDisabledAfter": false
+      },
+      {
+        "name": "successful_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": false,
+        "choiceVisibleAfter": false,
+        "choiceHtmlLengthAfter": 0,
+        "choiceTideAfter": "3",
+        "controlsDisabledAfter": false,
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      {
+        "name": "failed_display_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": false,
+        "choiceVisibleAfter": false,
+        "choiceHtmlLengthAfter": 0,
+        "choiceTideAfter": "",
+        "controlsDisabledAfter": true,
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "actualDownloadedSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      }
+    ],
+    "authoredFailureBoundary": "Authored one-shot replayHistory refusal represents the already-qualified R2 post-adoption display failure. This is not a spontaneous device allocation failure."
+  },
+  "mainArtifacts": {
+    "meta": {
+      "bytes": 1900876,
+      "sha256": "fba6dd10c18f9b77e29f88963dd81a9084bbf74e9145518d842d699618c615cd",
+      "chunks": 619
+    },
+    "manifest": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363374,
+        "sha256": "ca5eaf2b704d7eadf4a2d94598d93e26bf66fe9053a3a7514486b68b20248b61"
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 383753,
+        "sha256": "0ccd3b23c105074e78637de8b163a0953ceed1b8432737f138b56924563589be"
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361375,
+        "sha256": "c766f1b3c5a6f9cdd3a0c502521b64f5ead2eb5fef6d4d213abeb5e558e644c6"
+      },
+      {
+        "path": "Longwater-choice.html",
+        "bytes": 316725,
+        "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908"
+      }
+    ],
+    "allBytesEqualToDirectlyViewedQualifiedArtifacts": true,
+    "receivedThroughOrdinaryNativeLogs": true,
+    "all619ChunksAndEndVerified": true,
+    "entireBundleByteExactToFinalQualifiedBundle": true,
+    "actualPngBytesMatchAllThreePersonallyViewedFinalCaptures": true,
+    "standalone": {
+      "bytes": 316725,
+      "gitBlob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c",
+      "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908",
+      "sourceSha256": "ea98bef4ccdb5b770152b023b8adf996da9c6eba602a4a0a8588e3e1645921e8",
+      "actualMainOutputEqualsQualifiedNativeArtifactAndIndependentReconstruction": true
+    }
+  },
+  "pages": {
+    "id": 37808151411,
+    "url": "https://github.com/Jacob-Met/longwater-browser-demo/actions/runs/37808151411",
+    "event": "dynamic",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "head": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "updatedAt": "2026-10-08T16:22:15Z",
+    "jobs": {
+      "build": 113417761496,
+      "reportBuildStatus": 113417822156,
+      "deploy": 113417822167
+    },
+    "allJobsCompletedSuccess": true,
+    "actualBuildCheckout": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "selectedExactPathsInArchiveListing": [
+      "index.html",
+      "game.js",
+      "watch-choice.js",
+      "watch-choice-model.js",
+      "watch-choice.css",
+      "pkg/longwater_web_bg.wasm",
+      "downloads/Longwater-Fourteen-Tides.html"
+    ],
+    "artifact": {
+      "id": 11563637457,
+      "reportedZipBytes": 11294206,
+      "reportedZipSha256": "9c70e6bb6346bc4bf694fa5cced544ca541e303af89287498e1547c1f91c6c45",
+      "digestBasis": "Actual native build log; this Pages zip was not independently transferred or decoded."
+    },
+    "deployment": {
+      "pagesBuildVersion": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+      "reportedSuccessAt": "2026-10-08T16:22:13.7247342Z",
+      "reportedEnvironmentUrl": "http://jacobmetoyer.com/longwater-browser-demo/",
+      "providerReportedSuccess": true
+    },
+    "fullBuildAndDeployLogsRead": true,
+    "noProviderRetryUsed": true
+  },
+  "nativePayloadFiles": [
+    {
+      "path": "raw/main-browser.log",
+      "bytes": 2705155,
+      "sha256": "23680832cd7afef1cafafb3d1e52613024ce66d25b81b112f55b17dcb942fa13",
+      "gitBlob": "4010fc59b2aa8542a41e281b153a17dbc2ed7b1b"
+    },
+    {
+      "path": "raw/main-smoke.log",
+      "bytes": 11575,
+      "sha256": "41149a5a1ce9c0a3116cda4c60492bef26f83c24e5e7e998170fee7a736e00a2",
+      "gitBlob": "c9ada728e263a9a1b7baafc1339997ac25077006"
+    },
+    {
+      "path": "raw/pages-build.log",
+      "bytes": 51769,
+      "sha256": "81e7fa619ebefba6c96b4f634fde5c6cdcbc777f8fb6221463f63fa144287ecd",
+      "gitBlob": "be23e83996f24b5086fabce3c2293377d7a4f1c0"
+    },
+    {
+      "path": "raw/pages-deploy.log",
+      "bytes": 3846,
+      "sha256": "0d7e828a12eac7acbf3bda6ef6ea0552b18cdd37bed9555981e46307e311968f",
+      "gitBlob": "a7478c00b865fe6128f12253515b65df3b170723"
+    },
+    {
+      "path": "adoption/source-custody.json",
+      "bytes": 8454,
+      "sha256": "0293c077ed0eb850ebc84966ca16667c1f92921651b17af7a85daa8ac54bb0c8",
+      "gitBlob": "492cc9d04072283829b6aa6e38690ddb0c33f451"
+    },
+    {
+      "path": "adoption/run.json",
+      "bytes": 31179,
+      "sha256": "94f33b2f81028257bb743cca95a621f6c29d00a05e63759d308d3e00bd2a6d53",
+      "gitBlob": "f8f34acc50c4352d6fb63557029a96deb4916aab"
+    },
+    {
+      "path": "adoption/run.log",
+      "bytes": 270,
+      "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34",
+      "gitBlob": "53606140926f5558e3d53be1d73b22d28d0ca920"
+    },
+    {
+      "path": "adoption/failed-display-actual-download.json",
+      "bytes": 1618,
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "gitBlob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b"
+    }
+  ],
+  "allNativePayloadsCreatedWithExpectedGitSha1AndReadBackByteExact": true,
+  "preservation": {
+    "previousEvidenceCommit": "aa40e277164f3f51b6666c5669510a194be365ba",
+    "previousEvidenceTree": "a5c47cef83af035d8d2309047e8f928ef83cf50d",
+    "all287PriorLeavesWillBeRetainedExactly": true,
+    "productionTreeNotChangedByThisDocumentationPacket": true
+  },
+  "scopeLimits": [
+    "The original post-adoption display refusal is authored fault injection, not a spontaneously observed allocation failure.",
+    "The Pages claim is the provider's actual source-bound deployment success, not a live-site browser or physical-device inspection.",
+    "One historical tide's consequences only; no alternate future replay, strategy recommendation, new cross-tab semantics or separately owned sound qualification."
+  ]
+}
