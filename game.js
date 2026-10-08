@@ -435,7 +435,8 @@ try {
   watch = new SavedWatch({ createSession: () => new BrowserSession(), getStorage: () => window.localStorage });
   state = JSON.parse(watch.snapshot);
   selected = watch.selected;
-  journal.start(state);
+  journal.restore(watch.replayHistory());
+  journal.setLifetime("Saved tides return with your watch. If saving is unavailable, keep this page open to keep the latest reports.");
   resize();
   announce();
   showSaveStatus();

@@ -55,12 +55,13 @@ export class WatchJournal {
     this.recap.setAttribute("aria-label", "Completed watch review");
     this.recap.hidden = true;
     this.empty = element("p", "Your first tide will appear here after you choose an action.", "journal-empty");
+    this.lifetime = element("p", "This journal stays in this tab until you reset the watch or reload the page.", "journal-lifetime");
     this.entries = element("ol", "", "journal-entries");
     this.entries.id = "journal-entries";
     this.details.append(
       toggle,
       element("p", "Revisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.", "journal-intro"),
-      element("p", "This journal stays in this tab until you reset the watch or reload the page.", "journal-lifetime"),
+      this.lifetime,
       this.recap,
       this.empty,
       this.entries,
@@ -68,7 +69,13 @@ export class WatchJournal {
     root.append(title, this.details);
   }
 
+  // A receiving save integration can describe its actual persistence behavior.
+  setLifetime(message) {
+    this.lifetime.textContent = message;
+  }
+
   start(state) {
+    if (state.day !== 0) throw new Error("Start the journal at day zero, or restore the complete native replay.");
     this.initial = structuredClone(state);
     this.entries.replaceChildren();
     this.recap.replaceChildren();
@@ -78,7 +85,28 @@ export class WatchJournal {
     this.root.hidden = false;
   }
 
+  /**
+   * The caller supplies native snapshot_json()/take_turn() strings from an
+   * accepted replay, starting at day zero. Saved measurements alone are not a
+   * replay. This checks sequence order, not the provenance of those strings.
+   */
+  restore(snapshots) {
+    if (!Array.isArray(snapshots) || snapshots.length < 1 || snapshots.length > 15) {
+      throw new Error("A journal replay must contain the opening snapshot and at most fourteen tides.");
+    }
+    const states = snapshots.map(snapshot => JSON.parse(snapshot));
+    if (states.some((state, index) => state.day !== index || (index > 0 && state.report?.day !== index))) {
+      throw new Error("A journal replay must contain every completed tide in order.");
+    }
+    // Reject incomplete/out-of-order histories before replacing the current UI.
+    this.start(states[0]);
+    for (let index = 1; index < states.length; index++) this.record(states[index - 1], states[index]);
+  }
+
   record(before, after) {
+    if (before.day !== this.entries.children.length || after.day !== before.day + 1 || after.day > 14 || after.report?.day !== after.day) {
+      throw new Error("Only the next completed native tide can be added to this journal.");
+    }
     // The report identifies the action and cell actually accepted by the sim.
     const report = after.report;
     const cell = after.cells.find(item => item.id === report.cell);

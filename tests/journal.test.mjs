@@ -183,3 +183,48 @@ test("a failed simulation startup offers no fabricated watch history", async () 
     assert.equal(await page.locator("#journal-entries > li").count(), 0);
   } finally { await context.close(); }
 });
+
+test("an accepted native replay restores its full history, and a missing tide cannot replace it", async () => {
+  const game = await open();
+  const { page } = game;
+  const replay = new BrowserSession();
+  try {
+    const snapshots = [replay.snapshot_json()];
+    snapshots.push(replay.take_turn("gate", "south"));
+    snapshots.push(replay.take_turn("shade", "heart"));
+    snapshots.push(replay.take_turn("seed", "north"));
+    await page.evaluate(async snapshots => {
+      const { WatchJournal } = await import("/journal.js");
+      const root = document.querySelector("#watch-journal");
+      root.replaceChildren();
+      globalThis.replayJournal = new WatchJournal(root);
+      globalThis.replayJournal.restore(snapshots);
+      globalThis.replayJournal.setLifetime("This journal was rebuilt from the accepted native replay.");
+    }, snapshots);
+    assert.equal(await page.locator("#journal-count").textContent(), "3 of 14 tides");
+    assert.equal(await page.locator(".journal-lifetime").textContent(), "This journal was rebuilt from the accepted native replay.");
+    for (let index = 1; index < snapshots.length; index++) {
+      const before = JSON.parse(snapshots[index - 1]);
+      const after = JSON.parse(snapshots[index]);
+      const entry = page.locator(`[data-tide="${index}"]`);
+      assert.deepEqual(await entry.locator(".journal-notes > li").allTextContents(), after.report.lines);
+      await assertCells(entry, before, after);
+    }
+    const original = await page.locator("#journal-entries").textContent();
+    const error = await page.evaluate(snapshots => {
+      try { globalThis.replayJournal.restore([snapshots[0], snapshots[2]]); }
+      catch (error) { return error.message; }
+    }, snapshots);
+    assert.match(error, /every completed tide in order/);
+    assert.equal(await page.locator("#journal-entries").textContent(), original);
+    const prematureStart = await page.evaluate(snapshot => {
+      try { globalThis.replayJournal.start(JSON.parse(snapshot)); }
+      catch (error) { return error.message; }
+    }, snapshots[3]);
+    assert.match(prematureStart, /day zero/);
+    assert.equal(await page.locator("#journal-entries").textContent(), original, "a resumed state alone cannot become a fabricated opening");
+  } finally {
+    replay.free();
+    await game.close();
+  }
+});

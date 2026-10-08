@@ -99,6 +99,26 @@ export class SavedWatch {
   get selected() { return this.#selected; }
   get status() { return { ...this.#status }; }
 
+  // Supply native snapshot strings to readers such as the journal, beginning
+  // with the true opening and including every successful tide in order.
+  // Replaying the already admitted actions never changes the active watch or
+  // writes storage, including when this tab currently cannot save its progress.
+  replayHistory() {
+    const replayed = this.#createSession();
+    try {
+      const snapshots = [replayed.snapshot_json()];
+      for (const turn of this.#turns) {
+        snapshots.push(replayed.take_turn(turn.action, turn.cell));
+      }
+      if (replayed.snapshot_json() !== this.snapshot) {
+        throw new Error("Watch history does not match the active simulation.");
+      }
+      return snapshots;
+    } finally {
+      replayed.free();
+    }
+  }
+
   #unavailable() {
     this.#status = {
       kind: "unavailable",

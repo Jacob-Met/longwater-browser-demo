@@ -41,9 +41,22 @@ comparison of the opening and final readings. Earlier tides remain expandable so
 you can trace how the watch developed. Tab and Enter operate the journal, and
 game shortcuts run only when a game control is focused.
 
-The journal stays in the current tab's memory. Reset starts a fresh journal;
-reloading or closing the page discards it. No account, storage or network request
-is added.
+Your saved tides return with the watch when you reload or come back later. The
+journal restores the complete reports and the original opening readings, so its
+final comparison still covers all fourteen tides. Reset starts a fresh journal.
+
+## Resume your watch
+
+The watch saves in this browser after a successful tide or a change of selected
+cell. Return to the same site in the same browser to resume the saved day, cell
+and full journal. No account or server is involved; the saved history contains
+only game actions and the resulting local simulation state.
+
+The progress message below the marsh shows whether the latest watch was saved.
+If saving fails, keep the page open and use **Try saving again**. An unreadable
+save or a save changed by another tab is kept while this page can continue
+without saving. **Reset** starts a new watch and replaces the saved one. It also
+clears the current journal.
 
 ## Screenshots
 
@@ -66,6 +79,9 @@ python3 -m http.server 8000
 - `game.js` — canvas UI: rendering, layout, input, screen-reader announcements
 - `journal.js` / `journal.css` — visible tide history and end-of-watch review,
   using the actual before/after WASM snapshots and reports
+- `watch-save.js` / `watch-save.css` — bounded local action history and visible
+  save status; the unchanged WASM validates saved state and rebuilds all journal
+  snapshots when the watch resumes
 - `pkg/` — prebuilt WebAssembly simulation plus its `wasm-bindgen` JS glue
   (`longwater_web.js`, `longwater_web.d.ts`) and the `.wasm` binary. The
   canvas talks to the sim through `BrowserSession`
@@ -85,6 +101,24 @@ selected with `LONGWATER_CHROME_PATH`. They play the actual bundled WebAssembly
 simulation. Journal acceptance compares its displayed reports and readings with
 a separate native WASM session, completes all fourteen tides, checks reset and
 unavailable actions, and captures desktop/phone views in `test-results/`.
+Composition tests cover a resumed partial/completed watch, the original final
+recap, failed-save retry, a corrupted native snapshot and two tabs with different
+progress. The save admission check does not create a transaction between
+simultaneous writes in different tabs.
+
+### Journal integration
+
+`WatchJournal.start(state)` accepts the day-zero native snapshot;
+`record(before, after)` adds the next successful native tide. On startup,
+`SavedWatch.replayHistory()` replays the already accepted action history in a
+separate native session and verifies its final snapshot against the active
+watch. It returns the opening `snapshot_json()` string followed by every
+successful `take_turn()` string, without changing the active watch or storage.
+`WatchJournal.restore(snapshots)` checks that the full sequence is in order before
+rebuilding the display. Its sequence checks do not authenticate arbitrary stored
+snapshots; the save module must admit the native replay first. A resumed state
+alone cannot become the journal's opening. `setLifetime(message)` supplies the
+visible notice about this integration's persistence behavior.
 
 ## License
 
