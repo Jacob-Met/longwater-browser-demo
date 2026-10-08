@@ -1,0 +1,51 @@
+{
+  "checkedReadings": 630,
+  "receipts": [
+    {
+      "offline": false,
+      "day": 3,
+      "finished": false,
+      "watchSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "reportFile": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-online-3.html",
+      "reportSha256": "2aa87ae72ecf810cf80280ce6d577d34fb39286b5308261e95fbd490ce42457c",
+      "reportBytes": 10435,
+      "filename": "Longwater-watch-tide-03.html",
+      "nativeSnapshots": 4
+    },
+    {
+      "offline": false,
+      "day": 14,
+      "finished": true,
+      "watchSha256": "a4ef2032b1933a7263fb8c03a226d6da5f675909a910faf349725ea944edaaed",
+      "reportFile": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-online-14.html",
+      "reportSha256": "d17a9f562744f309fd4a5552f433f018d6a8c5001e43f19866704565f87f632a",
+      "reportBytes": 32058,
+      "filename": "Longwater-watch-tide-14.html",
+      "nativeSnapshots": 15
+    },
+    {
+      "offline": true,
+      "day": 3,
+      "finished": false,
+      "watchSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "reportFile": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-offline-3.html",
+      "reportSha256": "2aa87ae72ecf810cf80280ce6d577d34fb39286b5308261e95fbd490ce42457c",
+      "reportBytes": 10435,
+      "filename": "Longwater-watch-tide-03.html",
+      "nativeSnapshots": 4
+    },
+    {
+      "offline": true,
+      "day": 14,
+      "finished": true,
+      "watchSha256": "a4ef2032b1933a7263fb8c03a226d6da5f675909a910faf349725ea944edaaed",
+      "reportFile": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-offline-14.html",
+      "reportSha256": "d17a9f562744f309fd4a5552f433f018d6a8c5001e43f19866704565f87f632a",
+      "reportBytes": 32058,
+      "filename": "Longwater-watch-tide-14.html",
+      "nativeSnapshots": 15
+    }
+  ],
+  "errors": [],
+  "unexpected": []
+}

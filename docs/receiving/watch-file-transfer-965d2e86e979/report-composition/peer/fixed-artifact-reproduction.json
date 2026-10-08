@@ -1,0 +1,15 @@
+{
+  "sourcePin": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "sourceTree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed/scripts/package.mjs",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed-reproduced.html"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"file\":\"/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed-reproduced.html\",\"bytes\":280929,\"sha256\":\"f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef\",\"sourceSha256\":\"6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a\",\"inputs\":[\"index.html\",\"style.css\",\"journal.css\",\"watch-trends.css\",\"watch-save.css\",\"watch-report.css\",\"watch-file.css\",\"game.js\",\"pkg/longwater_web.js\",\"journal.js\",\"watch-save.js\",\"watch-file.js\",\"watch-trends.js\",\"watch-report.js\",\"pkg/longwater_web_bg.wasm\"]}\n",
+  "stderr": "",
+  "artifactBytes": 280929,
+  "artifactSha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+  "equalsCommittedArtifact": true
+}

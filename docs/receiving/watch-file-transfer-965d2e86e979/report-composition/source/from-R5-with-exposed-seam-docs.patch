@@ -1,0 +1,824 @@
+diff --git a/README.md b/README.md
+index 3e7a7bd..e2b27ec 100644
+--- a/README.md
++++ b/README.md
+@@ -67,6 +67,25 @@ Your saved tides return with the watch when you reload or come back later. The
+ journal restores the complete reports and the original opening readings, so its
+ final comparison still covers all fourteen tides. Reset starts a fresh journal.
+ 
++### Keep a readable report
++
++After at least one accepted tide, choose **Download watch report** beside the
++journal. Open the downloaded HTML without the game or an internet connection,
++or print it using the browser's Print command. It retains the opening state,
++every completed action and tide event, the complete field notes, exact resource
++and cell readings, and the native outcome if the watch has closed.
++
++A partial watch is clearly marked with its completed tide count. The report is
++a one-time snapshot: later play does not update an existing download. It cannot
++resume a watch, and it contains no script, external resource or automatic action.
++Recorded from Longwater’s game simulation. Net changes include the action,
++the tide and dawn drift.
++
++Downloading leaves the game, selected cell, journal and saved-watch bytes
++unchanged. If preparation fails, keep playing or explicitly retry the download;
++the error does not clear progress. The browser's download settings determine
++where the file is saved.
++
+ ### Compare the marsh readings
+ 
+ **Watch trends**, inside the journal, plots the three cells together for one
+diff --git a/game.js b/game.js
+index ca0b5fa..763e849 100644
+--- a/game.js
++++ b/game.js
+@@ -515,6 +515,7 @@ try {
+         // The imported watch is already active. Keep its file/save recovery
+         // available, but do not accept play against a display that is stale.
+         state = null;
++        document.querySelector("#watch-journal").hidden = true;
+         [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
+         showSaveStatus();
+         throw error;
+diff --git a/index.html b/index.html
+index 30c92bf..03106e4 100644
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+   <title>Longwater: Fourteen Tides</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./journal.css">
++  <link rel="stylesheet" href="./watch-report.css">
+   <link rel="stylesheet" href="./watch-trends.css">
+   <link rel="stylesheet" href="./watch-save.css">
+   <link rel="stylesheet" href="./watch-file.css">
+diff --git a/journal.js b/journal.js
+index 3f23199..fe06c30 100644
+--- a/journal.js
++++ b/journal.js
+@@ -1,4 +1,5 @@
+ import { WatchTrends } from "./watch-trends.js";
++import { WatchReport } from "./watch-report.js";
+ 
+ const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
+ const readings = [
+@@ -62,6 +63,8 @@ export class WatchJournal {
+     this.entries.id = "journal-entries";
+     const trendsRoot = element("section");
+     this.trends = new WatchTrends(trendsRoot);
++    const reportRoot = element("section");
++    this.report = new WatchReport(reportRoot);
+     this.details.append(
+       toggle,
+       element("p", "Revisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.", "journal-intro"),
+@@ -71,7 +74,7 @@ export class WatchJournal {
+       trendsRoot,
+       this.entries,
+     );
+-    root.append(title, this.details);
++    root.append(title, reportRoot, this.details);
+   }
+ 
+   // A receiving save integration can describe its actual persistence behavior.
+@@ -89,6 +92,7 @@ export class WatchJournal {
+     this.count.textContent = "No tides yet";
+     this.root.hidden = false;
+     this.trends.start(state);
++    this.report.start(state);
+   }
+ 
+   /**
+@@ -151,5 +155,6 @@ export class WatchJournal {
+       this.details.open = true;
+     }
+     this.trends.record(before, after);
++    this.report.record(after);
+   }
+ }
+diff --git a/scripts/package.mjs b/scripts/package.mjs
+index 2449092..7fa202f 100644
+--- a/scripts/package.mjs
++++ b/scripts/package.mjs
+@@ -4,9 +4,9 @@ import { dirname, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ 
+ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+-const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-file.css"];
++const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-file.css"];
+ const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-file.js"];
+-const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "pkg/longwater_web_bg.wasm"];
++const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-report.js", "pkg/longwater_web_bg.wasm"];
+ const sourceHash = createHash("sha256");
+ const files = new Map();
+ for (const name of inputs) {
+@@ -26,7 +26,10 @@ function replaceOnce(source, needle, replacement) {
+ }
+ 
+ let game = text("game.js");
+-const journal = replaceOnce(text("journal.js"), JSON.stringify("./watch-trends.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-trends.js"))));
++let journal = text("journal.js");
++for (const dependency of ["watch-trends.js", "watch-report.js"]) {
++  journal = replaceOnce(journal, JSON.stringify("./" + dependency), JSON.stringify(dataUrl("text/javascript", files.get(dependency))));
++}
+ for (const name of modules) {
+   game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : files.get(name))));
+ }
+diff --git a/tests/browser.test.mjs b/tests/browser.test.mjs
+index 939418b..c1c1c85 100644
+--- a/tests/browser.test.mjs
++++ b/tests/browser.test.mjs
+@@ -37,6 +37,8 @@ test("the actual WASM watch exposes operable cells, actions, and complete readin
+   const { page, close } = await open();
+   try {
+     assert.equal(await page.locator("#playfield button").count(), 7);
++    assert.equal(await page.locator(".game-control").count(), 7);
++    assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);
+     const cells = page.getByRole("button", { name: /^Cell [123]:/ });
+     assert.equal(await cells.count(), 3);
+     assert.equal(await cells.nth(1).getAttribute("aria-pressed"), "true");
+diff --git a/tests/package.test.mjs b/tests/package.test.mjs
+index 1c4625b..e7a4379 100644
+--- a/tests/package.test.mjs
++++ b/tests/package.test.mjs
+@@ -29,6 +29,8 @@ test("the packaged watch plays and restores its complete journal offline", async
+   try {
+     let page = await open();
+     assert.equal(await page.locator("#playfield button").count(), 7);
++    assert.equal(await page.locator(".game-control").count(), 7);
++    assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);
+     assert.equal(await day(page), 0);
+     await page.getByRole("button", { name: /^Cell 3:/ }).click();
+     await page.getByRole("button", { name: /^Gate/ }).click();
+diff --git a/tests/watch-file-report.test.mjs b/tests/watch-file-report.test.mjs
+new file mode 100644
+index 0000000..58f30a1
+--- /dev/null
++++ b/tests/watch-file-report.test.mjs
+@@ -0,0 +1,188 @@
++import assert from "node:assert/strict";
++import { createHash } from "node:crypto";
++import { readFile, mkdir, writeFile } from "node:fs/promises";
++import { test } from "node:test";
++import { pathToFileURL } from "node:url";
++import { chromium } from "playwright";
++import { serve } from "./server.mjs";
++import { initSync, BrowserSession } from "../pkg/longwater_web.js";
++import { SIMULATION_REVISION, WATCH_SAVE_KEY } from "../watch-save.js";
++
++initSync({ module: await readFile(new URL("../pkg/longwater_web_bg.wasm", import.meta.url)) });
++const metrics = ["depth", "salinity", "oxygen", "biomass", "shade"];
++const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
++const sha256 = bytes => createHash("sha256").update(bytes).digest("hex");
++
++function nativeWatch(complete) {
++  const session = new BrowserSession();
++  const states = [JSON.parse(session.snapshot_json())], turns = [];
++  const take = (action, cell) => {
++    states.push(JSON.parse(session.take_turn(action, cell)));
++    turns.push({ action, cell });
++  };
++  try {
++    if (complete) {
++      while (!states.at(-1).finished) {
++        assert.ok(turns.length < 14);
++        const current = states.at(-1);
++        const index = current.cells.findIndex(cell => cell.shade < 3);
++        take(index >= 0 ? "shade" : current.freshwater > 0 ? "gate" : "seed",
++          current.cells[index < 0 ? 0 : index].id);
++      }
++    } else {
++      take("shade", "heart");
++      take("gate", "north");
++      take("seed", "south");
++    }
++    return { states, raw: JSON.stringify({
++      version: 1, simulation: SIMULATION_REVISION, turns,
++      selected: "south", snapshot: session.snapshot_json(),
++    }) };
++  } finally { session.free(); }
++}
++
++async function saved(page) {
++  return page.evaluate(key => localStorage.getItem(key), WATCH_SAVE_KEY);
++}
++
++async function reportDownload(page) {
++  const event = page.waitForEvent("download");
++  await page.getByRole("button", { name: "Download watch report", exact: true }).click();
++  const file = await event;
++  assert.equal(await file.failure(), null);
++  const chunks = [];
++  for await (const chunk of await file.createReadStream()) chunks.push(chunk);
++  return { filename: file.suggestedFilename(), bytes: Buffer.concat(chunks) };
++}
++
++async function inspectReport(browser, path, states) {
++  const context = await browser.newContext({ offline: true, javaScriptEnabled: false });
++  const page = await context.newPage(), requests = [];
++  const url = pathToFileURL(path).href;
++  page.on("request", request => requests.push(request.url()));
++  try {
++    await page.goto(url);
++    const actual = await page.evaluate(() => {
++      const section = node => ({
++        resources: node.querySelector(".resources").textContent,
++        cells: [...node.querySelectorAll("tbody tr")].map(row => ({
++          id: row.dataset.cellId,
++          name: row.querySelector("th").textContent,
++          readings: Object.fromEntries([...row.querySelectorAll("[data-reading]")].map(cell => [cell.dataset.reading, cell.textContent])),
++        })),
++      });
++      return {
++        status: document.querySelector("#report-status").textContent,
++        activeContent: document.querySelectorAll("script,iframe,form,img,link,object").length,
++        opening: section(document.querySelector("#report-opening")),
++        overview: section(document.querySelector("#report-overview")),
++        tides: [...document.querySelectorAll("section[data-tide]")].map(node => ({
++          day: Number(node.dataset.tide),
++          title: node.querySelector("h2").textContent,
++          event: node.querySelector(".event-name").textContent,
++          note: node.querySelector(".event-note").textContent,
++          lines: [...node.querySelectorAll(".notes li")].map(item => item.textContent),
++          ...section(node),
++        })),
++      };
++    });
++    const table = (before, after) => ({
++      resources: "Freshwater: " + (before ? before.freshwater + " → " + after.freshwater : after.freshwater)
++        + ". Seed packs: " + (before ? before.seedPacks + " → " + after.seedPacks : after.seedPacks) + ".",
++      cells: after.cells.map(cell => {
++        const previous = before?.cells.find(item => item.id === cell.id);
++        return {
++          id: cell.id, name: cell.name,
++          readings: Object.fromEntries(metrics.map(key => [key, previous ? previous[key] + " → " + cell[key] : String(cell[key])])),
++        };
++      }),
++    });
++    const last = states.at(-1);
++    const expected = {
++      status: last.finished ? "Watch closed · " + last.outcome : "Partial watch · " + last.day + " of 14 tides completed",
++      activeContent: 0,
++      opening: table(null, states[0]),
++      overview: table(states[0], last),
++      tides: states.slice(1).map((state, index) => ({
++        day: state.day,
++        title: "Tide " + state.day + " · " + actionNames[state.report.action] + " · " + state.cells.find(cell => cell.id === state.report.cell).name,
++        event: state.report.event.name,
++        note: state.report.event.note,
++        lines: state.report.lines,
++        ...table(states[index], state),
++      })),
++    };
++    assert.deepEqual(actual, expected, "the downloaded report contains exactly the adopted native replay");
++    assert.deepEqual(requests, [url], "the readable report requires no game or external resource");
++    return (states.length + 1) * 3 * metrics.length;
++  } finally { await context.close(); }
++}
++
++test("partial and completed watch-file adoption rebuilds exact downloadable reports online and offline", async () => {
++  const server = await serve();
++  const output = new URL("../test-results/", import.meta.url);
++  await mkdir(output, { recursive: true });
++  const browser = await chromium.launch({ headless: true, executablePath: process.env.LONGWATER_CHROME_PATH || undefined });
++  const errors = [], unexpected = [], receipts = [];
++  let checkedReadings = 0;
++  try {
++    for (const offline of [false, true]) {
++      const context = await browser.newContext({ offline, acceptDownloads: true });
++      const url = offline ? new URL("../downloads/Longwater-Fourteen-Tides.html", import.meta.url).href : server.url;
++      if (offline) context.on("request", request => {
++        if (request.url() !== url && !/^(data|blob):/.test(request.url())) unexpected.push(request.url());
++      });
++      try {
++        const page = await context.newPage();
++        page.setDefaultTimeout(7000);
++        page.on("pageerror", error => errors.push(error.message));
++        await page.goto(url);
++        await page.waitForFunction(() => !document.querySelector("#watch-file-open")?.disabled);
++        await page.locator('[data-action="gate"]').click();
++        let currentReport = await reportDownload(page);
++        for (const complete of [false, true]) {
++          const incoming = nativeWatch(complete), last = incoming.states.at(-1);
++          const previousSave = await saved(page);
++          const previousJournal = await page.locator("#journal-entries").textContent();
++          await page.locator("#watch-file-input").setInputFiles({
++            name: complete ? "completed-watch.json" : "partial-watch.json",
++            mimeType: "application/json", buffer: Buffer.from(incoming.raw),
++          });
++          await page.locator("#watch-file-preview").waitFor({ state: "visible" });
++          assert.equal(await saved(page), previousSave);
++          assert.equal(await page.locator("#journal-entries").textContent(), previousJournal);
++          const previewReport = await reportDownload(page);
++          assert.deepEqual(previewReport, currentReport, "preview alone cannot replace the current report");
++          assert.equal(await page.locator("#watch-file-preview").isVisible(), true);
++          await page.getByRole("button", { name: "Replace current watch", exact: true }).click();
++          await page.locator("#watch-file-preview").waitFor({ state: "hidden" });
++          assert.equal(await saved(page), incoming.raw);
++          assert.equal(await page.locator("#watch-journal").isVisible(), true);
++          assert.equal(await page.locator("#journal-entries > li").count(), last.day);
++          assert.equal(await page.locator("#watch-report-download").count(), 1);
++          assert.equal(await page.locator("#watch-report-download").isDisabled(), false);
++          currentReport = await reportDownload(page);
++          assert.equal(currentReport.filename, "Longwater-watch-tide-" + String(last.day).padStart(2, "0") + ".html");
++          const path = new URL("watch-file-report-" + (offline ? "offline-" : "online-") + last.day + ".html", output);
++          await writeFile(path, currentReport.bytes);
++          checkedReadings += await inspectReport(browser, path.pathname, incoming.states);
++          assert.equal(await saved(page), incoming.raw, "reading and downloading the adopted report preserve progress");
++          assert.equal(await page.locator('[data-cell="2"]').getAttribute("aria-pressed"), "true");
++          receipts.push({
++            offline, day: last.day, finished: last.finished,
++            watchSha256: sha256(incoming.raw), reportFile: path.pathname,
++            reportSha256: sha256(currentReport.bytes), reportBytes: currentReport.bytes.length,
++            filename: currentReport.filename, nativeSnapshots: incoming.states.length,
++          });
++        }
++      } finally { await context.close(); }
++    }
++    assert.equal(checkedReadings, 630, "every opening, overview and tide cell reading in four adopted reports");
++    assert.deepEqual(errors, []);
++    assert.deepEqual(unexpected, []);
++    await writeFile(new URL("watch-file-report-results.json", output), JSON.stringify({ checkedReadings, receipts, errors, unexpected }, null, 2) + "\n");
++  } finally {
++    await browser.close();
++    await server.close();
++  }
++});
+diff --git a/tests/watch-file.browser.test.mjs b/tests/watch-file.browser.test.mjs
+index 3adfc8d..54ddd8f 100644
+--- a/tests/watch-file.browser.test.mjs
++++ b/tests/watch-file.browser.test.mjs
+@@ -411,6 +411,8 @@ test("post-adoption display failure reports the opened watch, freezes stale cont
+     assert.match(status, /display could not be refreshed/);
+     assert.doesNotMatch(status, /current watch has been kept/);
+     assert.equal(await page.locator(".game-control:disabled").count(), 7, "stale display cannot accept more play");
++    assert.equal(await page.locator("#watch-journal").isVisible(), false, "stale journal and report are hidden after adoption");
++    assert.equal(await page.locator("#watch-report-download").isVisible(), false, "the previous watch cannot be downloaded as the active report");
+     assert.equal((await download(page)).raw, raw, "the actually opened watch remains downloadable");
+     assert.equal(await stored(page), unsaved ? prior : raw);
+     if (unsaved) {
+@@ -419,6 +421,14 @@ test("post-adoption display failure reports the opened watch, freezes stale cont
+       await page.getByRole("button", { name: "Try saving again", exact: true }).click();
+       assert.equal(await stored(page), raw);
+     } else assert.match(status, /saved in this browser.*Reload/);
++    // A deliberate same-page restore rebuilds the journal and reopens report access.
++    await preview(page, raw);
++    await replace(page);
++    assert.equal(await page.locator("#watch-journal").isVisible(), true);
++    assert.equal(await page.locator("#journal-entries > li").count(), 3);
++    assert.equal(await page.locator("#watch-report-download").isVisible(), true);
++    assert.equal(await page.locator("#watch-report-download").isDisabled(), false);
++    assert.equal(await page.locator(".game-control:disabled").count(), 0);
+     await page.reload();
+     await ready(page);
+     assert.equal(await day(page), 3);
+diff --git a/tests/watch-report.test.mjs b/tests/watch-report.test.mjs
+new file mode 100644
+index 0000000..d835b6f
+--- /dev/null
++++ b/tests/watch-report.test.mjs
+@@ -0,0 +1,251 @@
++import assert from "node:assert/strict";
++import { after, before, test } from "node:test";
++import { mkdtemp, readFile, rm, writeFile, mkdir } from "node:fs/promises";
++import { tmpdir } from "node:os";
++import { join, resolve } from "node:path";
++import { pathToFileURL } from "node:url";
++import { chromium } from "playwright";
++import { initSync, BrowserSession } from "../pkg/longwater_web.js";
++import { createWatchReport } from "../watch-report.js";
++import { serve } from "./server.mjs";
++
++let browser, server, temporary;
++const metrics = ["depth", "salinity", "oxygen", "biomass", "shade"];
++const actionLabels = {gate: "Gate", shade: "Shade", seed: "Seed"};
++before(async () => {
++  initSync({module: await readFile(new URL("../pkg/longwater_web_bg.wasm", import.meta.url))});
++  server = await serve();
++  browser = await chromium.launch({headless: true, executablePath: process.env.LONGWATER_CHROME_PATH || undefined});
++  temporary = await mkdtemp(join(tmpdir(), "longwater-report-"));
++  await mkdir("test-results", {recursive: true});
++});
++after(async () => {
++  await browser?.close();
++  await server?.close();
++  if (temporary) await rm(temporary, {recursive: true, force: true});
++});
++
++async function game(options = {}, url = server.url) {
++  const context = await browser.newContext({acceptDownloads: true, ...options});
++  const page = await context.newPage();
++  const errors = [];
++  page.on("pageerror", error => errors.push(error.message));
++  await page.goto(url);
++  await page.locator("#watch-journal").waitFor({state: "visible"});
++  const sim = new BrowserSession();
++  const states = [JSON.parse(sim.snapshot_json())];
++  return {page, context, states,
++    async turn(action, index) {
++      await page.locator('[data-cell="' + index + '"]').click();
++      await page.locator('[data-action="' + action + '"]').click();
++      states.push(JSON.parse(sim.take_turn(action, states.at(-1).cells[index].id)));
++      assert.equal(await page.locator("#journal-entries > li").count(), states.length - 1);
++    },
++    async close() {sim.free(); await context.close(); assert.deepEqual(errors, []);}
++  };
++}
++async function preserved(page) {
++  return page.evaluate(() => ({
++    storage: {...localStorage},
++    selected: [...document.querySelectorAll("[data-cell]")].map(node => node.getAttribute("aria-pressed")),
++    summary: document.querySelector("#state-summary").textContent,
++    journal: document.querySelector("#journal-entries").textContent,
++    save: document.querySelector("#watch-save-status").textContent,
++  }));
++}
++async function download(page, name) {
++  const control = page.getByRole("button", {name: "Download watch report", exact: true});
++  await control.focus();
++  const [file] = await Promise.all([page.waitForEvent("download"), page.keyboard.press("Enter")]);
++  assert.equal(await file.failure(), null);
++  const path = join(temporary, name);
++  await file.saveAs(path);
++  return {path, filename: file.suggestedFilename(), bytes: await readFile(path)};
++}
++async function readReport(path) {
++  const context = await browser.newContext({offline: true, javaScriptEnabled: false});
++  const page = await context.newPage(), requests = [];
++  page.on("request", request => requests.push(request.url()));
++  await page.goto(pathToFileURL(path).href);
++  return {page, async close() {
++    assert.deepEqual(requests, [pathToFileURL(path).href], "the report loads no script, WASM, stylesheet or remote resource");
++    await context.close();
++  }};
++}
++async function values(section, before, after) {
++  for (const cell of after.cells) {
++    const old = before?.cells.find(item => item.id === cell.id);
++    const record = section.locator('[data-cell-id="' + cell.id + '"]');
++    assert.equal(await record.locator("th").textContent(), cell.name);
++    for (const key of metrics) assert.equal(await record.locator('[data-reading="' + key + '"]').textContent(),
++      old ? old[key] + " → " + cell[key] : String(cell[key]));
++  }
++  assert.equal(await section.locator(".resources").textContent(),
++    "Freshwater: " + (before ? before.freshwater + " → " + after.freshwater : after.freshwater) +
++    ". Seed packs: " + (before ? before.seedPacks + " → " + after.seedPacks : after.seedPacks) + ".");
++}
++async function assertReport(page, states) {
++  const last = states.at(-1);
++  assert.equal(await page.locator("#report-status").textContent(),
++    last.finished ? "Watch closed · " + last.outcome : "Partial watch · " + last.day + " of 14 tides completed");
++  assert.match(await page.locator(".provenance").textContent(), /Recorded from Longwater’s game simulation/);
++  assert.equal(await page.locator("[data-tide]").count(), last.day);
++  assert.equal(await page.locator("script,iframe,form,img,link,object").count(), 0);
++  await values(page.locator("#report-opening"), null, states[0]);
++  await values(page.locator("#report-overview"), states[0], last);
++  for (let index = 1; index < states.length; index++) {
++    const before = states[index - 1], after = states[index], report = after.report;
++    const section = page.locator('[data-tide="' + index + '"]');
++    assert.equal(await section.locator("h2").textContent(),
++      "Tide " + index + " · " + actionLabels[report.action] + " · " + after.cells.find(cell => cell.id === report.cell).name);
++    assert.equal(await section.locator(".event-name").textContent(), report.event.name);
++    assert.equal(await section.locator(".event-note").textContent(), report.event.note);
++    assert.deepEqual(await section.locator(".notes li").allTextContents(), report.lines);
++    await values(section, before, after);
++  }
++}
++
++test("a partial actual watch downloads exact native readings without changing play or saved bytes", async () => {
++  const run = await game();
++  try {
++    assert.equal(await run.page.locator("#watch-report-download").isDisabled(), true);
++    await run.turn("gate", 0);
++    await run.turn("shade", 1);
++    await run.turn("seed", 2);
++    const before = await preserved(run.page);
++    const file = await download(run.page, "partial.html");
++    assert.equal(file.filename, "Longwater-watch-tide-03.html");
++    assert.deepEqual(await preserved(run.page), before);
++    const report = await readReport(file.path);
++    await assertReport(report.page, run.states);
++    await report.close();
++    await run.page.keyboard.press("r");
++    assert.deepEqual(await preserved(run.page), before, "report keyboard focus is not a game shortcut");
++    await run.page.reload();
++    await run.page.locator("#watch-journal").waitFor({state: "visible"});
++    const resumed = await download(run.page, "resumed.html");
++    assert.deepEqual(resumed.bytes, file.bytes, "the admitted native replay restores the exact whole report");
++    await run.turn("shade", 0);
++    assert.deepEqual(await readFile(file.path), file.bytes, "later play cannot rewrite an already downloaded snapshot");
++  } finally {await run.close();}
++});
++
++test("a complete watch retains all fourteen reports and reset cannot export the previous watch", async () => {
++  const run = await game();
++  try {
++    for (let cell = 0; cell < 3; cell++) for (let n = 0; n < 3; n++) await run.turn("shade", cell);
++    for (let n = 0; n < 5; n++) await run.turn("gate", 0);
++    assert.equal(run.states.at(-1).finished, true);
++    const before = await preserved(run.page), file = await download(run.page, "completed.html");
++    assert.deepEqual(await preserved(run.page), before);
++    const report = await readReport(file.path);
++    await assertReport(report.page, run.states);
++    await report.page.emulateMedia({media: "print"});
++    assert.equal(await report.page.locator("[data-tide]").count(), 14);
++    assert.equal(await report.page.locator('[data-tide="14"]').isVisible(), true);
++    await report.close();
++    await run.page.locator("#reset-control").click();
++    assert.equal(await run.page.getByRole("dialog", {name: "Start a new watch?"}).isVisible(), true);
++    assert.deepEqual(await preserved(run.page), before, "reviewing reset retains the completed watch");
++    await run.page.getByRole("button", {name: "Keep this watch", exact: true}).click();
++    assert.deepEqual(await preserved(run.page), before);
++    const kept = await download(run.page, "kept-completed.html");
++    assert.deepEqual(kept.bytes, file.bytes, "declining reset retains the exact completed report");
++    await run.page.locator("#reset-control").click();
++    await run.page.getByRole("button", {name: "Start new watch", exact: true}).click();
++    assert.equal(await run.page.locator("#watch-report-download").isDisabled(), true);
++    assert.equal(await run.page.locator("#journal-entries > li").count(), 0);
++    assert.match(await run.page.locator("#watch-report-status").textContent(), /Complete a tide/);
++    await run.page.locator('[data-action="seed"]').click();
++    const fresh = await download(run.page, "fresh.html");
++    const sim = new BrowserSession();
++    try {
++      const states = [JSON.parse(sim.snapshot_json()), JSON.parse(sim.take_turn("seed", "heart"))];
++      const opened = await readReport(fresh.path); await assertReport(opened.page, states); await opened.close();
++    } finally {sim.free();}
++  } finally {await run.close();}
++});
++
++test("preparation failure preserves the exact watch and allows an explicit successful retry", async () => {
++  const run = await game();
++  try {
++    await run.turn("gate", 0);
++    const before = await preserved(run.page);
++    await run.page.evaluate(() => {globalThis.originalReportURL = URL.createObjectURL; URL.createObjectURL = () => {throw new Error("authored refusal");};});
++    await run.page.locator("#watch-report-download").click();
++    assert.match(await run.page.locator("#watch-report-status").textContent(), /Could not prepare/);
++    assert.deepEqual(await preserved(run.page), before);
++    assert.equal(await run.page.locator('a[download^="Longwater-watch-tide-"]').count(), 0);
++    await run.page.evaluate(() => {URL.createObjectURL = globalThis.originalReportURL;});
++    const file = await download(run.page, "retry.html");
++    const opened = await readReport(file.path); await assertReport(opened.page, run.states); await opened.close();
++    assert.deepEqual(await preserved(run.page), before);
++  } finally {await run.close();}
++});
++
++test("the direct-open packaged game exposes the same report at phone width", async () => {
++  const run = await game({offline: true, viewport: {width: 320, height: 568}, isMobile: true, hasTouch: true},
++    pathToFileURL(resolve("downloads/Longwater-Fourteen-Tides.html")).href);
++  try {
++    await run.turn("shade", 2);
++    const control = run.page.locator("#watch-report-download"); await control.scrollIntoViewIfNeeded();
++    const box = await control.boundingBox(); assert.ok(box.width >= 44 && box.height >= 44);
++    assert.equal(await run.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
++    await run.page.locator("#watch-journal").screenshot({path: "test-results/watch-report-phone.png"});
++    const before = await preserved(run.page), file = await download(run.page, "offline.html");
++    assert.deepEqual(await preserved(run.page), before);
++    const opened = await readReport(file.path); await assertReport(opened.page, run.states);
++    await opened.page.setViewportSize({width: 320, height: 568});
++    assert.equal(await opened.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
++    const table = opened.page.locator("#report-overview .table-wrap");
++    assert.equal(await table.getAttribute("tabindex"), "0");
++    assert.equal(await table.evaluate(node => node.scrollWidth > node.clientWidth), true);
++    // Poll from the test process: this report deliberately disables page JavaScript.
++    const waitScroll = async predicate => {
++      for (let attempt = 0; attempt < 40; attempt++) {
++        if (predicate(await table.evaluate(node => node.scrollLeft))) return;
++        await new Promise(resolve => setTimeout(resolve, 25));
++      }
++      assert.fail("the focused report table did not respond to horizontal arrow keys");
++    };
++    await table.focus(); await table.press("ArrowRight");
++    await waitScroll(left => left > 0);
++    await table.press("ArrowLeft");
++    await waitScroll(left => left === 0);
++    await opened.page.screenshot({path: "test-results/watch-report-readable.png", fullPage: true});
++    await opened.close();
++  } finally {await run.close();}
++});
++
++test("renderer treats every name and note as literal text and never mutates its inputs", async () => {
++  const sim = new BrowserSession();
++  try {
++    const states = [JSON.parse(sim.snapshot_json()), JSON.parse(sim.take_turn("gate", "north"))];
++    const literal = '<img src="https://invalid.example/x" onerror="alert(1)"> 科学😀 & \'quoted\'';
++    for (const state of states) state.cells[0].name = literal;
++    states[1].report.event.name = literal;
++    states[1].report.event.note = literal;
++    states[1].report.lines = [literal, "First line\nSecond line"];
++    const before = structuredClone(states), result = createWatchReport(states);
++    assert.deepEqual(states, before);
++    assert.deepEqual(createWatchReport(states), result);
++    const path = join(temporary, "literal.html"); await writeFile(path, result.html);
++    const opened = await readReport(path); await assertReport(opened.page, states); await opened.close();
++  } finally {sim.free();}
++});
++
++test("incomplete or nonfinite snapshots cannot become a successful report", () => {
++  const sim = new BrowserSession();
++  try {
++    const states = [JSON.parse(sim.snapshot_json()), JSON.parse(sim.take_turn("gate", "north"))];
++    assert.throws(() => createWatchReport([states[0]]), /one to fourteen/);
++    const skipped = structuredClone(states); skipped[1].day = 2;
++    assert.throws(() => createWatchReport(skipped), /ordered native/);
++    const invalid = structuredClone(states); invalid[1].cells[0].biomass = NaN;
++    assert.throws(() => createWatchReport(invalid), /ordered native/);
++    const notes = structuredClone(states); delete notes[1].report.lines;
++    assert.throws(() => createWatchReport(notes), /accepted tide/);
++    const duplicate = structuredClone(states); duplicate[1].cells[1].id = duplicate[1].cells[0].id;
++    assert.throws(() => createWatchReport(duplicate), /ordered native/);
++  } finally {sim.free();}
++});
+diff --git a/tests/watch-save.browser.test.mjs b/tests/watch-save.browser.test.mjs
+index ccf9669..2ac1263 100644
+--- a/tests/watch-save.browser.test.mjs
++++ b/tests/watch-save.browser.test.mjs
+@@ -20,6 +20,8 @@ const files = new Map([
+   ["/journal.css", ["journal.css", "text/css"]],
+   ["/watch-trends.js", ["watch-trends.js", "text/javascript"]],
+   ["/watch-trends.css", ["watch-trends.css", "text/css"]],
++  ["/watch-report.js", ["watch-report.js", "text/javascript"]],
++  ["/watch-report.css", ["watch-report.css", "text/css"]],
+   ["/pkg/longwater_web.js", ["pkg/longwater_web.js", "text/javascript"]],
+   ["/pkg/longwater_web_bg.wasm", ["pkg/longwater_web_bg.wasm", "application/wasm"]],
+ ]);
+diff --git a/watch-report.css b/watch-report.css
+new file mode 100644
+index 0000000..b017c4c
+--- /dev/null
++++ b/watch-report.css
+@@ -0,0 +1,6 @@
++.watch-report { margin: 0 0 18px; padding: 12px 0; }
++.watch-report button { min-height: 44px; max-width: 100%; padding: 10px 16px; border: 1px solid #72e2b4; border-radius: 9px; background: #153b3c; color: #e6f0e5; font: inherit; font-weight: 650; cursor: pointer; }
++.watch-report button:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }
++.watch-report button:disabled { cursor: default; opacity: .55; }
++.watch-report p { margin: 6px 0 0; color: #c9d9ce; font-size: .9rem; overflow-wrap: anywhere; }
++.watch-report [role="status"]:empty { display: none; }
+diff --git a/watch-report.js b/watch-report.js
+new file mode 100644
+index 0000000..f1dd8b3
+--- /dev/null
++++ b/watch-report.js
+@@ -0,0 +1,163 @@
++const actions = { gate: "Gate", shade: "Shade", seed: "Seed" };
++const readings = [
++  ["Depth", "depth", "cm"], ["Salt", "salinity", "ppt"],
++  ["Oxygen", "oxygen", "%"], ["Life", "biomass", "%"], ["Canopy", "shade", "/ 3"],
++];
++const escape = value => String(value).replace(/[&<>"']/g, char => ({
++  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
++}[char]));
++const row = (tag, value, attributes = "") => "<" + tag + attributes + ">" + escape(value) + "</" + tag + ">";
++
++function checkSnapshots(states) {
++  if (!Array.isArray(states) || states.length < 2 || states.length > 15) {
++    throw new Error("A watch report needs its opening and one to fourteen completed tides.");
++  }
++  const ids = states[0]?.cells?.map(cell => cell.id);
++  if (!ids || ids.length !== 3 || new Set(ids).size !== 3) throw new Error("Missing opening cells.");
++  for (const [index, state] of states.entries()) {
++    if (state.day !== index || !Array.isArray(state.cells) || state.cells.length !== ids.length ||
++        new Set(state.cells.map(cell => cell.id)).size !== ids.length ||
++        state.cells.some(cell => !ids.includes(cell.id) || typeof cell.name !== "string" ||
++          readings.some(([, key]) => !Number.isFinite(cell[key]))) ||
++        !Number.isFinite(state.freshwater) || !Number.isFinite(state.seedPacks) ||
++        typeof state.finished !== "boolean" || (state.finished && index !== states.length - 1)) {
++      throw new Error("A watch report requires the complete ordered native snapshots.");
++    }
++    if (index > 0) {
++      const report = state.report;
++      if (report?.day !== index || !Object.hasOwn(actions, report.action) || !ids.includes(report.cell) ||
++          typeof report.event?.name !== "string" || typeof report.event?.note !== "string" ||
++          !Array.isArray(report.lines) || report.lines.some(line => typeof line !== "string")) {
++        throw new Error("Missing accepted tide report.");
++      }
++    }
++    if (state.finished && typeof state.outcome !== "string") throw new Error("Missing native outcome.");
++  }
++}
++
++function cellTable(before, after, caption) {
++  const headers = row("th", "Cell", ' scope="col"') +
++    readings.map(([label, , unit]) => row("th", label + " (" + unit + ")", ' scope="col"')).join("");
++  const body = after.cells.map(cell => {
++    const previous = before?.cells.find(item => item.id === cell.id);
++    return '<tr data-cell-id="' + escape(cell.id) + '">' + row("th", cell.name, ' scope="row"') +
++      readings.map(([, key]) => row("td", previous ? previous[key] + " → " + cell[key] : cell[key],
++        ' data-reading="' + key + '"')).join("") + "</tr>";
++  }).join("");
++  return '<div class="table-wrap" role="region" tabindex="0" aria-label="' + escape(caption) + '"><table><caption>' + escape(caption) +
++    "</caption><thead><tr>" + headers + "</tr></thead><tbody>" + body + "</tbody></table></div>";
++}
++
++function resources(before, after) {
++  return '<p class="resources">Freshwater: ' + escape(before ? before.freshwater + " → " + after.freshwater : after.freshwater) +
++    ". Seed packs: " + escape(before ? before.seedPacks + " → " + after.seedPacks : after.seedPacks) + ".</p>";
++}
++
++const reportStyle = [
++  ":root{color-scheme:light;font-family:system-ui,sans-serif;color:#18322d;background:#f7faf6;line-height:1.55}",
++  "body{max-width:70rem;margin:0 auto;padding:2rem}h1{margin-bottom:.3rem}h2{margin-top:2rem}",
++  ".provenance,.status{max-width:65ch}.status{font-weight:700}.tide{border-top:2px solid #92b4a3;margin-top:2rem;padding-top:.5rem;break-inside:avoid}",
++  ".table-wrap{overflow-x:auto}.table-wrap:focus-visible{outline:3px solid #346d50;outline-offset:3px}table{border-collapse:collapse;width:100%;min-width:32rem;margin:1rem 0;font-variant-numeric:tabular-nums}",
++  "caption{text-align:left;font-weight:700;margin-bottom:.5rem}th,td{text-align:left;padding:.5rem;border:1px solid #adc3b7;vertical-align:top}",
++  "thead{background:#e5efe7}p,li,th,td{overflow-wrap:anywhere}.notes{white-space:pre-wrap}footer{border-top:1px solid #adc3b7;margin-top:2rem;font-size:.9rem}",
++  "@media(max-width:40rem){body{padding:1rem}th,td{padding:.35rem;font-size:.85rem}}",
++  "@media print{:root{background:white;color:black}body{max-width:none;padding:0}.table-wrap{overflow:visible}table{min-width:0}thead{display:table-header-group}h2,h3{break-after:avoid}.tide{break-inside:auto}tr{break-inside:avoid}}",
++].join("\n");
++
++/** Render only accepted journal snapshots. This neither replays nor changes a watch. */
++export function createWatchReport(states) {
++  checkSnapshots(states);
++  const opening = states[0], last = states.at(-1);
++  const status = last.finished ? "Watch closed · " + last.outcome : "Partial watch · " + last.day + " of 14 tides completed";
++  const title = "Longwater watch report";
++  const openingHtml = '<section id="report-opening"><h2>Opening readings</h2>' +
++    resources(null, opening) + cellTable(null, opening, "Before the first tide") + "</section>";
++  const tides = states.slice(1).map((state, index) => {
++    const before = states[index], report = state.report;
++    const cell = state.cells.find(item => item.id === report.cell);
++    return '<section class="tide" data-tide="' + state.day + '"><h2>' +
++      escape("Tide " + state.day + " · " + actions[report.action] + " · " + cell.name) +
++      '</h2><h3 class="event-name">' + escape(report.event.name) + '</h3><p class="event-note">' +
++      escape(report.event.note) + '</p><h3>Full field notes</h3><ul class="notes">' +
++      report.lines.map(line => row("li", line)).join("") + "</ul>" +
++      resources(before, state) + cellTable(before, state, "Before → after tide " + state.day) + "</section>";
++  }).join("");
++  const overview = '<section id="report-overview"><h2>' +
++    (last.finished ? "Opening → final readings" : "Opening → current readings") + "</h2>" +
++    resources(opening, last) + cellTable(opening, last, last.finished ? "Across the completed watch" : "Across the completed tides so far") + "</section>";
++  const html = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">' +
++    '<meta name="viewport" content="width=device-width,initial-scale=1">' +
++    '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'unsafe-inline\'; base-uri \'none\'; form-action \'none\'">' +
++    "<title>" + title + "</title><style>" + reportStyle + "</style></head><body><header><h1>" + title +
++    '</h1><p id="report-status" class="status">' + escape(status) +
++    '</p><p class="provenance">A one-time snapshot of this Longwater game’s accepted journal. ' +
++    "Recorded from Longwater’s game simulation. " +
++    "Net changes include the action, the tide and dawn drift.</p>" +
++    "<p>This report can be read or printed without the game. It does not resume a watch or update when play continues.</p></header><main>" +
++    overview + openingHtml + tides + "</main><footer><p>" + escape(last.day + " of 14 tides recorded.") +
++    " Only completed tides are included. Print using your browser’s Print command.</p></footer></body></html>\n";
++  return { html, filename: "Longwater-watch-tide-" + String(last.day).padStart(2, "0") + ".html", day: last.day };
++}
++
++export class WatchReport {
++  constructor(root) {
++    this.states = [];
++    this.root = root;
++    root.className = "watch-report";
++    this.button = document.createElement("button");
++    this.button.id = "watch-report-download";
++    this.button.type = "button";
++    this.button.textContent = "Download watch report";
++    this.button.disabled = true;
++    const note = document.createElement("p");
++    note.id = "watch-report-note";
++    note.textContent = "Keep a readable, printable snapshot of this watch. This report cannot resume the game.";
++    this.button.setAttribute("aria-describedby", note.id);
++    this.status = document.createElement("p");
++    this.status.id = "watch-report-status";
++    this.status.setAttribute("role", "status");
++    this.status.setAttribute("aria-live", "polite");
++    root.append(this.button, note, this.status);
++    this.button.addEventListener("click", () => this.download());
++  }
++
++  start(state) {
++    this.states = [structuredClone(state)];
++    this.refresh();
++  }
++
++  record(state) {
++    this.states.push(structuredClone(state));
++    this.refresh();
++  }
++
++  refresh() {
++    this.button.disabled = this.states.length < 2;
++    this.status.textContent = this.button.disabled ? "Complete a tide to download a report." : "";
++  }
++
++  download() {
++    if (this.button.disabled) return;
++    let url, anchor;
++    try {
++      const report = createWatchReport(this.states);
++      url = URL.createObjectURL(new Blob([report.html], { type: "text/html;charset=utf-8" }));
++      anchor = document.createElement("a");
++      anchor.href = url;
++      anchor.download = report.filename;
++      document.body.append(anchor);
++      anchor.click();
++      anchor.remove();
++      anchor = null;
++      const completedUrl = url;
++      setTimeout(() => URL.revokeObjectURL(completedUrl), 1000);
++      url = null;
++      this.status.textContent = "Report download requested for tide " + report.day + " of 14. Your watch is unchanged.";
++    } catch {
++      this.status.textContent = "Could not prepare the report. Your watch is unchanged. Try Download watch report again.";
++    } finally {
++      anchor?.remove();
++      if (url) URL.revokeObjectURL(url);
++    }
++  }
++}

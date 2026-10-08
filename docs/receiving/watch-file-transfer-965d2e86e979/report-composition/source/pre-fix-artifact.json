@@ -1,0 +1,23 @@
+{
+  "file": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/downloads/Longwater-Fourteen-Tides.html",
+  "bytes": 280845,
+  "sha256": "9ab03be13a3f1d19be86a5e72c4ccaf84730aaa642d8bde8f937ecd6e17593d7",
+  "sourceSha256": "cec059a7e02d5c1aea077007292afa0b1cc40feeb3ea2edb7bbbf19b54bd9c9d",
+  "inputs": [
+    "index.html",
+    "style.css",
+    "journal.css",
+    "watch-trends.css",
+    "watch-save.css",
+    "watch-report.css",
+    "watch-file.css",
+    "game.js",
+    "pkg/longwater_web.js",
+    "journal.js",
+    "watch-save.js",
+    "watch-file.js",
+    "watch-trends.js",
+    "watch-report.js",
+    "pkg/longwater_web_bg.wasm"
+  ]
+}

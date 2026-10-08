@@ -1,0 +1,20 @@
+[
+  {
+    "path": "scripts/package.mjs",
+    "method": "exact incoming plus two file-transfer array members; inverse recovers entire incoming packager",
+    "before_sha256": "1fe4253fe8facf8689f6e89edaf864d86602a3e5b7abc3d38763f8e49269cc27",
+    "after_sha256": "185cf4125958cdeba4c7bffc180e1d0931eb3b0f302a61180c364e7863800d26"
+  },
+  {
+    "path": "tests/browser.test.mjs",
+    "method": "retain the original R5 playfield-count assertion and both incoming report assertions",
+    "before_sha256": "d50aa52ed058d3e936edbcbfdf2972c5d09472450777d862a13618c19d04a412",
+    "after_sha256": "246265735659711b9270dbabc2d5507514a40d0148a5ee93079a60706c0948e0"
+  },
+  {
+    "path": "tests/package.test.mjs",
+    "method": "retain the original R5 playfield-count assertion and both incoming report assertions",
+    "before_sha256": "1169a2cc1ab5125976e654c879229e2a1eefa836d9b8b8ba0b7ee805f1f3c5e8",
+    "after_sha256": "72c1f0c5575acb87fbaf32d3b99571dc7a4217714ee253700a5a934c66f31e0f"
+  }
+]

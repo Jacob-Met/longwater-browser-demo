@@ -1,0 +1,171 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
+import { createRequire } from "node:module";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+
+const [sourceArg, artifactReceiptArg, outputArg, siteArg] = process.argv.slice(2);
+assert(sourceArg && artifactReceiptArg && outputArg && siteArg,
+  "Usage: node receive-public-watch-transfer.mjs SOURCE ARTIFACT_RECEIPT NEW_OUTPUT_DIRECTORY SITE_URL");
+const source = path.resolve(sourceArg), output = path.resolve(outputArg);
+await mkdir(output);
+const sha = bytes => createHash("sha256").update(bytes).digest("hex");
+const artifact = JSON.parse(await readFile(artifactReceiptArg, "utf8"));
+const expected = new Map();
+const inputHash = createHash("sha256");
+for (const name of artifact.inputs) {
+  const bytes = await readFile(path.join(source, name));
+  expected.set(name, bytes);
+  inputHash.update(name).update("\0").update(bytes).update("\0");
+}
+assert.equal(inputHash.digest("hex"), artifact.sourceSha256, "native inputs match the qualified artifact receipt");
+const trackedArtifact = await readFile(path.join(source, "downloads/Longwater-Fourteen-Tides.html"));
+assert.equal(trackedArtifact.length, artifact.bytes);
+assert.equal(sha(trackedArtifact), artifact.sha256);
+const git = (...args) => execFileSync("git", args, { cwd: source, encoding: "utf8" }).trim();
+const sourceHead = git("rev-parse", "HEAD"), sourceTree = git("rev-parse", "HEAD^{tree}");
+const require = createRequire(path.join(source, "package.json"));
+const { chromium } = require("playwright");
+const { initSync, BrowserSession } = await import(pathToFileURL(path.join(source, "pkg/longwater_web.js")).href);
+const { WATCH_SAVE_KEY, SIMULATION_REVISION } = await import(pathToFileURL(path.join(source, "watch-save.js")).href);
+initSync({ module: expected.get("pkg/longwater_web_bg.wasm") });
+const turns = [
+  { action: "shade", cell: "heart" },
+  { action: "gate", cell: "north" },
+  { action: "seed", cell: "south" },
+];
+const oracle = new BrowserSession();
+let expectedWatch;
+try {
+  for (const { action, cell } of turns) oracle.take_turn(action, cell);
+  expectedWatch = JSON.stringify({
+    version: 1, simulation: SIMULATION_REVISION, turns, selected: "south", snapshot: oracle.snapshot_json(),
+  });
+} finally { oracle.free(); }
+
+const rootUrl = new URL(siteArg);
+assert(["http:", "https:"].includes(rootUrl.protocol));
+assert(!rootUrl.search && !rootUrl.hash && rootUrl.pathname.endsWith("/"), "site URL must identify the canonical directory");
+const assetName = value => {
+  const url = new URL(value);
+  if (url.origin !== rootUrl.origin || !url.pathname.startsWith(rootUrl.pathname)) return null;
+  return decodeURIComponent(url.pathname.slice(rootUrl.pathname.length)) || "index.html";
+};
+const pageErrors = [], assetErrors = [], assetTasks = [], received = new Map();
+let browser;
+const proof = {
+  state: "running", started: new Date().toISOString(), site: rootUrl.href,
+  sourceHead, sourceTree, node: process.version, playwright: require("playwright/package.json").version,
+  artifact: { bytes: artifact.bytes, sha256: artifact.sha256, sourceSha256: artifact.sourceSha256 },
+};
+const watchPage = page => {
+  page.setDefaultTimeout(15000);
+  page.on("pageerror", error => pageErrors.push(error.message));
+};
+const ready = page => page.waitForFunction(() => {
+  const control = document.querySelector("#watch-file-open");
+  return Boolean(control && !control.disabled);
+});
+const saved = page => page.evaluate(key => localStorage.getItem(key), WATCH_SAVE_KEY);
+const journal = page => page.locator("#journal-entries").textContent();
+async function downloaded(page, selector) {
+  const pending = page.waitForEvent("download");
+  await page.locator(selector).click();
+  const item = await pending, stream = await item.createReadStream(), chunks = [];
+  for await (const chunk of stream) chunks.push(chunk);
+  return { name: item.suggestedFilename(), bytes: Buffer.concat(chunks) };
+}
+async function adopt(page, bytes) {
+  const previous = await saved(page), previousJournal = await journal(page);
+  const chooser = page.waitForEvent("filechooser");
+  await page.locator("#watch-file-open").click();
+  await (await chooser).setFiles({ name: "received-public-watch.json", mimeType: "application/json", buffer: bytes });
+  await page.locator("#watch-file-preview").waitFor({ state: "visible" });
+  assert.match(await page.locator("#watch-file-summary").textContent(), /Day 3 of 14/);
+  assert.equal(await saved(page), previous, "preview does not overwrite the destination watch");
+  assert.equal(await journal(page), previousJournal);
+  await page.locator("#watch-file-confirm").click();
+  await page.locator("#watch-file-preview").waitFor({ state: "hidden" });
+  assert.match(await page.locator("#watch-file-status").textContent(), /Opened day 3/);
+  assert.equal(await saved(page), expectedWatch);
+  assert.equal(await page.locator('[data-cell="2"]').getAttribute("aria-pressed"), "true");
+}
+try {
+  browser = await chromium.launch({
+    headless: true, executablePath: process.env.LONGWATER_CHROME_PATH || undefined,
+  });
+  proof.chromium = browser.version();
+  const first = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await first.newPage();
+  watchPage(page);
+  page.on("response", response => {
+    const name = assetName(response.url());
+    if (!expected.has(name)) return;
+    assetTasks.push((async () => {
+      const bytes = await response.body();
+      assert.equal(response.status(), 200, name + " is served successfully");
+      assert(bytes.equals(expected.get(name)), name + " is the exact qualified native input");
+      received.set(name, { path: name, bytes: bytes.length, sha256: sha(bytes), url: response.url() });
+    })().catch(error => assetErrors.push(String(error))));
+  });
+  const live = new URL(rootUrl); live.searchParams.set("receiving", artifact.sourceSha256.slice(0, 16));
+  await page.goto(live.href, { waitUntil: "load" });
+  await ready(page);
+  await Promise.all(assetTasks);
+  assert.deepEqual(assetErrors, []);
+  assert.deepEqual([...received.keys()].sort(), [...expected.keys()].sort(), "every qualified runtime input was actually loaded");
+  for (const { action, cell } of turns) {
+    const index = ["north", "heart", "south"].indexOf(cell);
+    await page.locator('[data-cell="' + index + '"]').click();
+    await page.locator('[data-action="' + action + '"]').click();
+  }
+  const watch = await downloaded(page, "#watch-file-download");
+  assert.equal(watch.bytes.toString("utf8"), expectedWatch, "actual public download matches an independent native WASM watch");
+  await writeFile(path.join(output, "public-watch.json"), watch.bytes);
+  const second = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const otherPage = await second.newPage(); watchPage(otherPage);
+  await otherPage.goto(live.href); await ready(otherPage);
+  await adopt(otherPage, watch.bytes);
+  const restoredJournal = await journal(otherPage);
+  await otherPage.screenshot({ path: path.join(output, "public-restored-watch.png"), fullPage: true });
+  const offlineDownload = await downloaded(page, "#offline-download");
+  assert(offlineDownload.bytes.equals(trackedArtifact), "the public offline download is the exact qualified artifact");
+  const offlinePath = path.join(output, "Longwater-Fourteen-Tides.html");
+  await writeFile(offlinePath, offlineDownload.bytes);
+  const offline = await browser.newContext({ offline: true, viewport: { width: 1280, height: 900 } });
+  const offlineUrl = pathToFileURL(offlinePath).href, unexpectedOfflineRequests = [];
+  offline.on("request", request => {
+    if (request.url() !== offlineUrl && !/^(data|blob):/.test(request.url())) unexpectedOfflineRequests.push(request.url());
+  });
+  const offlinePage = await offline.newPage(); watchPage(offlinePage);
+  await offlinePage.goto(offlineUrl); await ready(offlinePage);
+  await adopt(offlinePage, watch.bytes);
+  assert.equal(await journal(offlinePage), restoredJournal, "the actual downloaded game restores the complete same journal");
+  const offlineWatch = await downloaded(offlinePage, "#watch-file-download");
+  assert(offlineWatch.bytes.equals(watch.bytes));
+  await offlinePage.reload(); await ready(offlinePage);
+  assert.equal(await saved(offlinePage), expectedWatch);
+  assert.equal(await journal(offlinePage), restoredJournal);
+  assert.deepEqual(unexpectedOfflineRequests, []);
+  assert.deepEqual(pageErrors, []);
+  const afterHash = createHash("sha256");
+  for (const name of artifact.inputs) afterHash.update(name).update("\0").update(await readFile(path.join(source, name))).update("\0");
+  assert.equal(afterHash.digest("hex"), artifact.sourceSha256, "native receiving inputs remain exact");
+  Object.assign(proof, {
+    state: "passed", inputs: [...received.values()], watch: { bytes: watch.bytes.length, sha256: sha(watch.bytes), filename: watch.name, day: 3 },
+    destinations: ["separate public-site browser context", "actual public offline download with networking disabled"],
+    fullJournalEqual: true, offlineReopenEqual: true, offlineRequests: unexpectedOfflineRequests, pageErrors,
+  });
+} catch (error) {
+  Object.assign(proof, { state: "failed", error: String(error), stack: error.stack, receivedInputs: [...received.values()], assetErrors, pageErrors });
+  process.exitCode = 1;
+} finally {
+  await browser?.close();
+  proof.finished = new Date().toISOString();
+  const text = JSON.stringify(proof, null, 2) + "\n";
+  const receiptPath = path.join(output, "receiving.json");
+  await writeFile(receiptPath, text);
+  console.log(JSON.stringify({ state: proof.state, sourceHead, sourceTree, inputSha256: artifact.sourceSha256, receiptPath, receiptSha256: sha(text), error: proof.error }));
+}

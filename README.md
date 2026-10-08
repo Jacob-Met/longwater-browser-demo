@@ -67,6 +67,25 @@ Your saved tides return with the watch when you reload or come back later. The
 journal restores the complete reports and the original opening readings, so its
 final comparison still covers all fourteen tides. Reset starts a fresh journal.
 
+### Keep a readable report
+
+After at least one accepted tide, choose **Download watch report** beside the
+journal. Open the downloaded HTML without the game or an internet connection,
+or print it using the browser's Print command. It retains the opening state,
+every completed action and tide event, the complete field notes, exact resource
+and cell readings, and the native outcome if the watch has closed.
+
+A partial watch is clearly marked with its completed tide count. The report is
+a one-time snapshot: later play does not update an existing download. It cannot
+resume a watch, and it contains no script, external resource or automatic action.
+Recorded from Longwater’s game simulation. Net changes include the action,
+the tide and dawn drift.
+
+Downloading leaves the game, selected cell, journal and saved-watch bytes
+unchanged. If preparation fails, keep playing or explicitly retry the download;
+the error does not clear progress. The browser's download settings determine
+where the file is saved.
+
 ### Compare the marsh readings
 
 **Watch trends**, inside the journal, plots the three cells together for one
@@ -120,6 +139,28 @@ If saving fails, keep the page open and use **Try saving again**. An unreadable
 save or a save changed by another tab is kept while this page can continue
 without saving. **Reset** starts a new watch and replaces the saved one. It also
 clears the current journal.
+
+## Carry the same watch between browsers
+
+Choose **Download watch** below the marsh to save your current day, selected cell
+and complete journal in a small JSON file. This also works when browser saving
+is unavailable, so you can keep the latest progress before closing the page.
+
+In another browser or the offline game, choose **Open watch file**. Longwater
+checks the file and shows its day, selected cell and completion status. Review
+the preview, then choose **Replace current watch** to open it. **Cancel** or
+Escape leaves the current watch and saved data alone. Download the current watch
+first if you want to keep both. Opening the file does not change the file itself.
+
+The file must come from this version of Longwater and be no larger than 32 KB.
+Its full action history must reproduce the exact state in the shipped simulation.
+Playing, selecting a different cell or resetting while a file is being read or
+reviewed cancels that pending replacement. A saved watch changed by another tab
+also requires a fresh review. If saving the opened watch fails, its full journal
+remains available in this page and **Download watch** can preserve it.
+
+A watch file contains progress; the separately packaged HTML contains the game.
+Use the watch-file controls in either copy to carry the same watch between them.
 
 ## Screenshots
 
@@ -194,6 +235,8 @@ could not be saved. Reset also replaces the saved offline watch.
 - `watch-save.js` / `watch-save.css` — bounded local action history and visible
   save status; the unchanged WASM validates saved state and rebuilds all journal
   snapshots when the watch resumes
+- `watch-file.js` / `watch-file.css` — local watch download, validated preview and
+  explicit replacement controls; input reading never changes the active watch
 - `pkg/` — prebuilt WebAssembly simulation plus its `wasm-bindgen` JS glue
   (`longwater_web.js`, `longwater_web.d.ts`) and the `.wasm` binary. The
   canvas talks to the sim through `BrowserSession`

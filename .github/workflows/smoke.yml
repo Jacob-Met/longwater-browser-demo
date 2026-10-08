@@ -42,6 +42,11 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Play and resume the real WASM watch, including offline packaging
         run: npm test
+      - name: Receive the original historical-choice file-adoption witness
+        run: node scripts/receive-watch-choice-adoption.mjs
+      - name: Emit the bounded authored historical-choice captures
+        if: always()
+        run: node scripts/emit-watch-choice-artifacts.mjs
       - name: Preserve historical-choice receiving artifacts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

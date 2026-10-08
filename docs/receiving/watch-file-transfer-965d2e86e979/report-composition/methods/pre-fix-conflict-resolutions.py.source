@@ -1,0 +1,67 @@
+import json,re,hashlib,subprocess,os,datetime,shutil
+from pathlib import Path
+root=Path('/Users/me/hamon-longwater-watch-file-r6-965d2e86e979');s=root/'source';inputs=root/'composition-inputs'
+resolutions=[]
+p=s/'scripts/package.mjs';before=p.read_bytes()
+incoming=(inputs/'incoming/scripts/package.mjs').read_text()
+new=incoming
+for old,replacement in [
+ ('"watch-report.css"];','"watch-report.css", "watch-file.css"];'),
+ ('"journal.js", "watch-save.js"];','"journal.js", "watch-save.js", "watch-file.js"];')
+]:
+ assert new.count(old)==1;new=new.replace(old,replacement)
+p.write_text(new)
+assert new.replace(', "watch-file.css"','').replace(', "watch-file.js"','')==incoming
+resolutions.append({'path':'scripts/package.mjs','method':'exact incoming plus two file-transfer array members; inverse recovers entire incoming packager','before_sha256':hashlib.sha256(before).hexdigest(),'after_sha256':hashlib.sha256(new.encode()).hexdigest()})
+for rel in ['tests/browser.test.mjs','tests/package.test.mjs']:
+ p=s/rel;old=p.read_text()
+ pattern=r'<<<<<<< [^\n]+\n(.*?)=======\n(.*?)>>>>>>> [^\n]+\n'
+ matches=list(re.finditer(pattern,old,re.S));assert len(matches)==1,rel
+ block=matches[0]
+ left,right=block.group(1),block.group(2)
+ assert '#playfield button' in right and 'Download watch report' in left and '.game-control' in left
+ new=old[:block.start()]+right+left+old[block.end():]
+ assert '<<<<<<<' not in new
+ p.write_text(new)
+ resolutions.append({'path':rel,'method':'retain the original R5 playfield-count assertion and both incoming report assertions','before_sha256':hashlib.sha256(old.encode()).hexdigest(),'after_sha256':hashlib.sha256(new.encode()).hexdigest()})
+test=(root/'watch-file-report.test.mjs').read_bytes()
+assert hashlib.sha256(test).hexdigest()=='5fa2f3cc6e131758b9556c4eb71d2a4a74157068fbcd035ccfa60a724a6e5557'
+(s/'tests/watch-file-report.test.mjs').write_bytes(test)
+assert not (s/'node_modules').exists()
+dependency=Path('/Users/me/hamon-work-longwater-delivery-c945953fdeb7/node_modules')
+assert (dependency/'playwright/package.json').is_file()
+(s/'node_modules').symlink_to(dependency,target_is_directory=True)
+node='/opt/homebrew/bin/node'
+pack=subprocess.run([node,'scripts/package.mjs','downloads/Longwater-Fourteen-Tides.html'],cwd=s,capture_output=True,text=True,timeout=30)
+(root/'prefixed-package.log').write_text(pack.stdout+pack.stderr)
+assert pack.returncode==0,pack.stderr
+artifact=json.loads(pack.stdout)
+(root/'prefixed-artifact.json').write_text(json.dumps(artifact,indent=2)+'\n')
+(root/'three-way-resolutions.json').write_text(json.dumps(resolutions,indent=2)+'\n')
+def g(*a):return subprocess.check_output(['git','--no-optional-locks','-C',str(s),*a],text=True)
+for item in json.loads((root/'r5-exposed-source-manifest.json').read_text()):
+ if item['path'].startswith('docs/receiving/watch-file-transfer-965d2e86e979/'):
+  b=(s/item['path']).read_bytes()
+  assert len(b)==item['bytes'] and hashlib.sha256(b).hexdigest()==item['sha256']
+for p in s.rglob('*'):
+ if p.is_file() and '.git' not in p.parts and p.suffix in ('.js','.mjs','.html','.md') and 'node_modules' not in p.parts:
+  assert not re.search(rb'^(<<<<<<<|=======|>>>>>>>)',p.read_bytes(),re.M),p
+subprocess.run(['git','-C',str(s),'add','-A'],check=True)
+tree=g('write-tree').strip()
+message='Compose watch-file transfer with landed printable watch reports\n\nSource receiving predecessor: unchanged R5 display-failure callback; exact common f321 tree. Preserve original and exposed R5 evidence plus all incoming report ownership. Add native file/report consumer test; no complete-suite claim yet.\n'
+env=dict(os.environ,GIT_AUTHOR_NAME='HAMON estate-965d2e86e979 receiving',GIT_AUTHOR_EMAIL='hamon-965d2e86e979@localhost',GIT_COMMITTER_NAME='HAMON estate-965d2e86e979 receiving',GIT_COMMITTER_EMAIL='hamon-965d2e86e979@localhost')
+head=subprocess.check_output(['git','-C',str(s),'commit-tree',tree,'-p','88484be670a2418ef62c072a8dd8c0b77378f9b5','-p','8bfa11fc68e4c6c5a2bb9ea9dec41dab66173165'],input=message.encode(),env=env).decode().strip()
+subprocess.run(['git','-C',str(s),'checkout','--detach',head],capture_output=True,text=True,check=True)
+assert not g('status','--porcelain')
+entries=[]
+for item in subprocess.check_output(['git','-C',str(s),'ls-tree','-rz','HEAD']).split(b'\0'):
+ if not item:continue
+ meta,name=item.split(b'\t');mode,kind,blob=meta.decode().split();assert kind=='blob';rel=name.decode();b=(s/rel).read_bytes()
+ assert hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()==blob
+ assert ('100755' if (s/rel).stat().st_mode&0o111 else '100644')==mode
+ entries.append({'path':rel,'mode':mode,'git_blob':blob,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+assert len(entries)==162,len(entries)
+manifest=(json.dumps(entries,indent=2)+'\n').encode();(root/'prefixed-source-manifest.json').write_bytes(manifest)
+receipt={'created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':str(s),'head':head,'tree':tree,'leaves':len(entries),'manifest_sha256':hashlib.sha256(manifest).hexdigest(),'game_sha256':hashlib.sha256((s/'game.js').read_bytes()).hexdigest(),'game_exact_R5':g('show','88484be670a2418ef62c072a8dd8c0b77378f9b5:game.js')==(s/'game.js').read_text(),'artifact':artifact,'tests_executed':False,'syntax_check_only':True}
+(root/'prefixed-source.json').write_text(json.dumps(receipt,indent=2)+'\n')
+print(json.dumps(receipt))

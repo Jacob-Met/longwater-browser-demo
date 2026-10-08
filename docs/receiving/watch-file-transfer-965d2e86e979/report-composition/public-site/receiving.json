@@ -1,0 +1,11 @@
+{
+  "received_at": "2026-10-08T15:08:36.986529+00:00",
+  "producer_path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/receive-public-watch-transfer.mjs",
+  "file": "receive-public-watch-transfer.mjs.source",
+  "bytes": 9892,
+  "sha256": "d77d0fdf16eec6d16856c843f5345f2c65a6eabe36f5ffc3a9a586f7cc719d77",
+  "received_exactly": true,
+  "executed": false,
+  "scope": "Root-owned post-deployment receiver preserved for future actual public-source qualification; excluded from project test discovery. Root alone will execute after merge/deployment.",
+  "prior_preflight": "Web access unavailable and native HEAD transport timed out; neither is a finding of site outage."
+}

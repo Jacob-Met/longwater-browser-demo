@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-08T14:06:24.103360+00:00",
+  "duration_s": 3.8301270420197397,
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/pr19-file-adoption-seam/receive-adoption-seam.mjs"
+  ],
+  "returncode": 1,
+  "stdout": "{\"name\":\"preview_cancel_keeps_comparison\",\"outcome\":\"pass\"}\n{\"name\":\"successful_adoption_clears_comparison\",\"outcome\":\"pass\"}\n{\"name\":\"failed_display_adoption_clears_comparison\",\"outcome\":\"fail\",\"error\":\"a replaced watch must not retain a visible comparison from its predecessor when display refresh fails\\n\\ntrue !== false\\n\"}\n{\"passed\":2,\"failed\":1,\"inputs_unchanged\":true,\"browser\":\"151.0.7922.34\"}\n",
+  "stderr": ""
+}

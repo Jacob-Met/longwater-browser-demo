@@ -1,0 +1,37 @@
+{
+  "snapshots": [
+    {
+      "label": "incoming-report",
+      "pin": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+      "tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+      "files": 135
+    },
+    {
+      "label": "prefixed",
+      "pin": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+      "tree": "8fc01dff05e01ba2f5764b269d7675976e699f73",
+      "files": 162
+    },
+    {
+      "label": "fixed",
+      "pin": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+      "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+      "files": 162
+    }
+  ],
+  "objects": 174,
+  "capsuleBytes": 5839677,
+  "capsuleSha256": "b013bb5754da946c6284961b0f3e85fa30d0d23b34cd692c58dc34f31fa97663",
+  "allObjectAndFileHashesVerified": true,
+  "fixedMaterializerCommand": [
+    "node",
+    "materialize-source.cjs",
+    "fixed",
+    "NEW_DIRECTORY"
+  ],
+  "materializeExit": 0,
+  "materializeStdout": "{\"label\":\"fixed\",\"sourcePin\":\"6483543d13e1f0dade3eca18e359d1080f05a1b6\",\"tree\":\"ee897713a77123186959e89e5d43a3e7b10aaa2b\",\"files\":162,\"target\":\"/Users/me/hamon-longwater-report-peer-965d2e86e979/packet-replay-fixed\"}\n",
+  "materializeStderr": "",
+  "freshGitWriteTree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "exactFixedTree": true
+}

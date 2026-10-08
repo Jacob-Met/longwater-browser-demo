@@ -1,0 +1,40 @@
+diff --git a/game.js b/game.js
+index ca0b5fa..763e849 100644
+--- a/game.js
++++ b/game.js
+@@ -515,6 +515,7 @@ try {
+         // The imported watch is already active. Keep its file/save recovery
+         // available, but do not accept play against a display that is stale.
+         state = null;
++        document.querySelector("#watch-journal").hidden = true;
+         [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
+         showSaveStatus();
+         throw error;
+diff --git a/tests/watch-file.browser.test.mjs b/tests/watch-file.browser.test.mjs
+index 3adfc8d..54ddd8f 100644
+--- a/tests/watch-file.browser.test.mjs
++++ b/tests/watch-file.browser.test.mjs
+@@ -411,6 +411,8 @@ test("post-adoption display failure reports the opened watch, freezes stale cont
+     assert.match(status, /display could not be refreshed/);
+     assert.doesNotMatch(status, /current watch has been kept/);
+     assert.equal(await page.locator(".game-control:disabled").count(), 7, "stale display cannot accept more play");
++    assert.equal(await page.locator("#watch-journal").isVisible(), false, "stale journal and report are hidden after adoption");
++    assert.equal(await page.locator("#watch-report-download").isVisible(), false, "the previous watch cannot be downloaded as the active report");
+     assert.equal((await download(page)).raw, raw, "the actually opened watch remains downloadable");
+     assert.equal(await stored(page), unsaved ? prior : raw);
+     if (unsaved) {
+@@ -419,6 +421,14 @@ test("post-adoption display failure reports the opened watch, freezes stale cont
+       await page.getByRole("button", { name: "Try saving again", exact: true }).click();
+       assert.equal(await stored(page), raw);
+     } else assert.match(status, /saved in this browser.*Reload/);
++    // A deliberate same-page restore rebuilds the journal and reopens report access.
++    await preview(page, raw);
++    await replace(page);
++    assert.equal(await page.locator("#watch-journal").isVisible(), true);
++    assert.equal(await page.locator("#journal-entries > li").count(), 3);
++    assert.equal(await page.locator("#watch-report-download").isVisible(), true);
++    assert.equal(await page.locator("#watch-report-download").isDisabled(), false);
++    assert.equal(await page.locator(".game-control:disabled").count(), 0);
+     await page.reload();
+     await ready(page);
+     assert.equal(await day(page), 3);

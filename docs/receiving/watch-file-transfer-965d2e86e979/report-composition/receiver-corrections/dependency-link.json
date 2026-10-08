@@ -1,0 +1,9 @@
+{
+  "failed_recording_commit": "3bd5e23ea676bcdd0fd4f9dd7ee95d820e614e2d",
+  "failed_recording_tree": "1c61029982175e46ecabca8d8f58b3f531c3593d",
+  "unintended_entry": "120000 blob c3bbd58ad1f0bdb480b37eee44fb45612149c0af\tnode_modules",
+  "preserved_ref": "refs/receiving/unqualified-dependency-link",
+  "failure": "Manifest receiver refused a dependency symlink as a directory before native tests. No other-owner dependency bytes were copied or changed.",
+  "correction": "Remove only the unintentionally indexed owned link; keep its read-only native resolution untracked via local excludes. Product/test/artifact bytes are unchanged. Recreate the intended source merge with both exact source parents.",
+  "tests_executed": false
+}

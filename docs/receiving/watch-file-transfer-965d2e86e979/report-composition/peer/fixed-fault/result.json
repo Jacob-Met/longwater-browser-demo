@@ -1,0 +1,362 @@
+{
+  "fixture": "one-shot authored post-adoption replayHistory refusal; actual browser, native WASM and file chooser",
+  "source": "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed",
+  "nativeInput": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "manifestSha256": "31b99bcbcf47753b42f16898e29a8c4b65f6ee913da3aedd03dfef0cc7af603b",
+  "harnessSha256": "fbf47095c6be617908931649e66f97aed3182c02e9316e51ea8ed9de2c607d41",
+  "runtime": {
+    "node": "v26.3.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "browserVersion": "151.0.7922.34"
+  },
+  "started": "2026-10-08T15:11:41.993Z",
+  "checks": [
+    {
+      "name": "native input is five accepted tides",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "name": "actual prior page is day 2",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "prior report is visible and enabled",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "actual previous report describes tide 2",
+      "actual": [
+        "Longwater-watch-tide-02.html",
+        true
+      ],
+      "expected": [
+        "Longwater-watch-tide-02.html",
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "review does not write the imported watch",
+      "actual": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"south\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":2,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":43,\\\"salinity\\\":40,\\\"oxygen\\\":68,\\\"biomass\\\":46,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":72,\\\"salinity\\\":26,\\\"oxygen\\\":56,\\\"biomass\\\":50,\\\"shade\\\":0},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":76,\\\"salinity\\\":43,\\\"oxygen\\\":47,\\\"biomass\\\":41,\\\"shade\\\":1}],\\\"freshwater\\\":4,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":2,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"south\\\",\\\"event\\\":{\\\"day\\\":2,\\\"name\\\":\\\"Neap ebb\\\",\\\"note\\\":\\\"A short, quiet ebb leaves pools exposed.\\\",\\\"depth\\\":-5,\\\"salt\\\":2,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · South Reach: canopy 0→1, salt 43→41 ppt, oxygen 40→44%, biomass 38→41%. Canopy blunts heat and drying.\\\",\\\"Neap ebb · all three cells: water -5 cm, salt +2 ppt; South Reach oxygen 44→47%. A short, quiet ebb leaves pools exposed.\\\",\\\"Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · South Reach: water 81→76 cm, salt 43→43 ppt, oxygen 40→47%, biomass 38→41%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "expected": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"south\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":2,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":43,\\\"salinity\\\":40,\\\"oxygen\\\":68,\\\"biomass\\\":46,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":72,\\\"salinity\\\":26,\\\"oxygen\\\":56,\\\"biomass\\\":50,\\\"shade\\\":0},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":76,\\\"salinity\\\":43,\\\"oxygen\\\":47,\\\"biomass\\\":41,\\\"shade\\\":1}],\\\"freshwater\\\":4,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":2,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"south\\\",\\\"event\\\":{\\\"day\\\":2,\\\"name\\\":\\\"Neap ebb\\\",\\\"note\\\":\\\"A short, quiet ebb leaves pools exposed.\\\",\\\"depth\\\":-5,\\\"salt\\\":2,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · South Reach: canopy 0→1, salt 43→41 ppt, oxygen 40→44%, biomass 38→41%. Canopy blunts heat and drying.\\\",\\\"Neap ebb · all three cells: water -5 cm, salt +2 ppt; South Reach oxygen 44→47%. A short, quiet ebb leaves pools exposed.\\\",\\\"Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · South Reach: water 81→76 cm, salt 43→43 ppt, oxygen 40→47%, biomass 38→41%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "pass": true
+    },
+    {
+      "name": "injection happened once after native adoption",
+      "actual": [
+        5,
+        1,
+        true
+      ],
+      "expected": [
+        5,
+        1,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "status identifies adopted day and refresh failure",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "stale game controls refuse input",
+      "actual": 7,
+      "expected": 7,
+      "pass": true
+    },
+    {
+      "name": "stale journal and downloadable report are hidden after adoption failure",
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "pass": true
+    },
+    {
+      "name": "actual watch download retains exact adopted day 5 file",
+      "actual": [
+        true,
+        "Longwater-watch-day-5.json"
+      ],
+      "expected": [
+        true,
+        "Longwater-watch-day-5.json"
+      ],
+      "pass": true
+    },
+    {
+      "name": "browser persistence retains exact adopted input",
+      "actual": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"heart\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":5,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":38,\\\"salinity\\\":31,\\\"oxygen\\\":90,\\\"biomass\\\":62,\\\"shade\\\":3},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":60,\\\"salinity\\\":29,\\\"oxygen\\\":71,\\\"biomass\\\":59,\\\"shade\\\":2},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":71,\\\"salinity\\\":42,\\\"oxygen\\\":45,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":5,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":5,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":5,\\\"name\\\":\\\"Slackwater\\\",\\\"note\\\":\\\"A gentle ebb gives the reed shelves room to breathe.\\\",\\\"depth\\\":-6,\\\"salt\\\":1,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · Heart Pool: canopy 1→2, salt 30→28 ppt, oxygen 62→66%, biomass 54→57%. Canopy blunts heat and drying.\\\",\\\"Slackwater · all three cells: water -6 cm, salt +1 ppt; Heart Pool oxygen 66→69%. A gentle ebb gives the reed shelves room to breathe.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +2, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 66→60 cm, salt 30→29 ppt, oxygen 62→71%, biomass 54→59%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "expected": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"heart\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":5,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":38,\\\"salinity\\\":31,\\\"oxygen\\\":90,\\\"biomass\\\":62,\\\"shade\\\":3},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":60,\\\"salinity\\\":29,\\\"oxygen\\\":71,\\\"biomass\\\":59,\\\"shade\\\":2},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":71,\\\"salinity\\\":42,\\\"oxygen\\\":45,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":5,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":5,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":5,\\\"name\\\":\\\"Slackwater\\\",\\\"note\\\":\\\"A gentle ebb gives the reed shelves room to breathe.\\\",\\\"depth\\\":-6,\\\"salt\\\":1,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · Heart Pool: canopy 1→2, salt 30→28 ppt, oxygen 62→66%, biomass 54→57%. Canopy blunts heat and drying.\\\",\\\"Slackwater · all three cells: water -6 cm, salt +1 ppt; Heart Pool oxygen 66→69%. A gentle ebb gives the reed shelves room to breathe.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +2, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 66→60 cm, salt 30→29 ppt, oxygen 62→71%, biomass 54→59%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "pass": true
+    },
+    {
+      "name": "reload opens the adopted watch and complete history",
+      "actual": [
+        5,
+        true
+      ],
+      "expected": [
+        5,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "fresh restored journal and report are accessible",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "restored actual report equals all six native snapshots",
+      "actual": [
+        true,
+        "Longwater-watch-tide-05.html",
+        true
+      ],
+      "expected": [
+        true,
+        "Longwater-watch-tide-05.html",
+        true
+      ],
+      "pass": true
+    },
+    {
+      "name": "download does not change adopted watch",
+      "actual": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"heart\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":5,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":38,\\\"salinity\\\":31,\\\"oxygen\\\":90,\\\"biomass\\\":62,\\\"shade\\\":3},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":60,\\\"salinity\\\":29,\\\"oxygen\\\":71,\\\"biomass\\\":59,\\\"shade\\\":2},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":71,\\\"salinity\\\":42,\\\"oxygen\\\":45,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":5,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":5,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":5,\\\"name\\\":\\\"Slackwater\\\",\\\"note\\\":\\\"A gentle ebb gives the reed shelves room to breathe.\\\",\\\"depth\\\":-6,\\\"salt\\\":1,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · Heart Pool: canopy 1→2, salt 30→28 ppt, oxygen 62→66%, biomass 54→57%. Canopy blunts heat and drying.\\\",\\\"Slackwater · all three cells: water -6 cm, salt +1 ppt; Heart Pool oxygen 66→69%. A gentle ebb gives the reed shelves room to breathe.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +2, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 66→60 cm, salt 30→29 ppt, oxygen 62→71%, biomass 54→59%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "expected": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"heart\"}],\"selected\":\"south\",\"snapshot\":\"{\\\"day\\\":5,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":38,\\\"salinity\\\":31,\\\"oxygen\\\":90,\\\"biomass\\\":62,\\\"shade\\\":3},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":60,\\\"salinity\\\":29,\\\"oxygen\\\":71,\\\"biomass\\\":59,\\\"shade\\\":2},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":71,\\\"salinity\\\":42,\\\"oxygen\\\":45,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":5,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":5,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":5,\\\"name\\\":\\\"Slackwater\\\",\\\"note\\\":\\\"A gentle ebb gives the reed shelves room to breathe.\\\",\\\"depth\\\":-6,\\\"salt\\\":1,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · Heart Pool: canopy 1→2, salt 30→28 ppt, oxygen 62→66%, biomass 54→57%. Canopy blunts heat and drying.\\\",\\\"Slackwater · all three cells: water -6 cm, salt +1 ppt; Heart Pool oxygen 66→69%. A gentle ebb gives the reed shelves room to breathe.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +2, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 66→60 cm, salt 30→29 ppt, oxygen 62→71%, biomass 54→59%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+      "pass": true
+    },
+    {
+      "name": "no uncaught browser error",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "name": "all page requests use exact local source",
+      "actual": [],
+      "expected": [],
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/style.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/journal.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-report.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-trends.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-save.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-file.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/game.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/pkg/longwater_web.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/journal.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-save.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-file.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-trends.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-report.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/pkg/longwater_web_bg.wasm"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/style.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/journal.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-report.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-trends.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-save.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-file.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/game.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/pkg/longwater_web.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/journal.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-save.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-file.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-trends.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/watch-report.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:61193/pkg/longwater_web_bg.wasm"
+    }
+  ],
+  "before": {
+    "files": 162,
+    "allBytesAndModesMatch": true
+  },
+  "nativeWasmSha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+  "input": {
+    "name": "incoming-day-5.json",
+    "bytes": 1653,
+    "sha256": "f2a2bec129b5032fbb23c8afd6bd52d24caa3d6865bb976cfdec4ed73ca6ddf7"
+  },
+  "nativeSnapshots": {
+    "name": "incoming-native-snapshots.json",
+    "bytes": 7387,
+    "sha256": "c6d97f976c6d262c0a7a059b53e57cefbd91e48acd9d760e1e2b12a8d8df667a"
+  },
+  "oldWatch": {
+    "name": "previous-day-2.json",
+    "bytes": 1513,
+    "sha256": "4ee23c623e41d2c0e578bb9837fe4b4b839fa83f8972fceaba22029e8a8f9d1e"
+  },
+  "priorReport": {
+    "suggestedFilename": "Longwater-watch-tide-02.html",
+    "name": "previous-report.html",
+    "bytes": 8419,
+    "sha256": "3938146316911b61d85ecda08a8a9351b18dd2f70cd57ecbf98c3a2c49fffb83"
+  },
+  "fault": {
+    "activeDay": 5,
+    "calls": 1,
+    "exportedSha256": "f2a2bec129b5032fbb23c8afd6bd52d24caa3d6865bb976cfdec4ed73ca6ddf7"
+  },
+  "postAdoptionStatus": "Opened day 5 of 14. The watch display could not be refreshed. It is saved in this browser. Reload this page to resume it.",
+  "postAdoptionVisibility": {
+    "journal": false,
+    "report": false,
+    "buttonEnabled": true
+  },
+  "activeDownload": {
+    "suggestedFilename": "Longwater-watch-day-5.json",
+    "name": "active-watch-after-fault.json",
+    "bytes": 1653,
+    "sha256": "f2a2bec129b5032fbb23c8afd6bd52d24caa3d6865bb976cfdec4ed73ca6ddf7"
+  },
+  "restoredReport": {
+    "suggestedFilename": "Longwater-watch-tide-05.html",
+    "name": "restored-day-5-report.html",
+    "bytes": 14385,
+    "sha256": "586b0fba2653360c6fbd3f6b19c640afde53091895fb80bc9933bc8846d922fc"
+  },
+  "childrenClosed": true,
+  "after": {
+    "files": 162,
+    "allBytesAndModesMatch": true
+  },
+  "finished": "2026-10-08T15:11:43.029Z",
+  "passed": 17,
+  "failed": 0,
+  "accepted": true
+}

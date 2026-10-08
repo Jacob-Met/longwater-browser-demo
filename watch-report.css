@@ -1,0 +1,6 @@
+.watch-report { margin: 0 0 18px; padding: 12px 0; }
+.watch-report button { min-height: 44px; max-width: 100%; padding: 10px 16px; border: 1px solid #72e2b4; border-radius: 9px; background: #153b3c; color: #e6f0e5; font: inherit; font-weight: 650; cursor: pointer; }
+.watch-report button:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }
+.watch-report button:disabled { cursor: default; opacity: .55; }
+.watch-report p { margin: 6px 0 0; color: #c9d9ce; font-size: .9rem; overflow-wrap: anywhere; }
+.watch-report [role="status"]:empty { display: none; }

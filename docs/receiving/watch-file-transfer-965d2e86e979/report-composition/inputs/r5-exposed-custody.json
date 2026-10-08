@@ -1,0 +1,24 @@
+{
+  "received_at": "2026-10-08T14:51:27.895329+00:00",
+  "native_head": "88484be670a2418ef62c072a8dd8c0b77378f9b5",
+  "tree": "bcd4c960a2d4840984969c9d23262fcf9419d5c2",
+  "all_prior120_unchanged": true,
+  "all134_bytes_modes_verified": true,
+  "added_paths": [
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/README.md",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/current-head-addendum.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/driver-result.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/failed-display-actual-download.json.source",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/files.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/github-source-summary.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr20.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/integration-seams-review.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/native-dependency.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.json",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.log",
+    "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/source-custody.json"
+  ],
+  "manifest_sha256": "d3d5b80e2e6a5488509c7c870ba3f00f1ba0492df3f113ea73c34fb0f8855195"
+}
