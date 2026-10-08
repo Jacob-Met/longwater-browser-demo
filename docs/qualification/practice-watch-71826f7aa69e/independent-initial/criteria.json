@@ -1,0 +1,30 @@
+{
+  "schema": "longwater-practice-independent-criteria/1",
+  "reviewer": "estate-71826f7aa69e/coordination",
+  "candidate": "source-cut1",
+  "source_js_sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+  "cases": [
+    {
+      "id": "future_live_isolation",
+      "criterion": "Resume an authored active watch. Interleave separate practice actions and restart, checking active visible state, all saved bytes and zero storage writes. After close, compare the entire next live native result with a separate shipped-WASM control that received only live actions."
+    },
+    {
+      "id": "native_dialog_keyboard",
+      "criterion": "Use actual reset and practice modal dialogs, native Tab/Enter/Space/Escape and live shortcut keys. Focus stays within the active dialog, practice controls never enter live handlers, reset review never opens from practice keys, and the exact live watch/save remains unchanged."
+    },
+    {
+      "id": "failure_and_pagehide",
+      "criterion": "Forward all component calls to real shipped-WASM sessions. Inject one constructor exception before allocation during Restart. Accepted practice state and its actual native session survive and remain usable; a later successful restart frees the predecessor once, and actual navigation/pagehide frees its successor once."
+    }
+  ],
+  "author_receiving_consumed_separately": [
+    "fourteen tides/end state",
+    "all three action/full table/report comparisons",
+    "unavailable native actions",
+    "queued-close/reopen free guard",
+    "failed showModal/open",
+    "offline deterministic complete package",
+    "phone touch/layout"
+  ],
+  "scope": "No product edits; own profile/temp/results; authored fresh browser data; exact source hashes before and after. The component lifetime fixture removes only the main bootstrap and supplies a forwarding real native factory. Its injected exception is not reported as a naturally observed WASM failure."
+}

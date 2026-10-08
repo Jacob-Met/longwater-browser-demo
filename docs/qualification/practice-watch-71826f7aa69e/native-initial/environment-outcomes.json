@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "outcomes": [
+    {
+      "stage": "Initial primary staging",
+      "result": "ENOSPC before source execution; primary and shm were already full",
+      "raw": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\nOSError: [Errno 28] No space left on device\n",
+      "action": "Used a new isolated native directory after verifying capacity; no other-worker cleanup."
+    },
+    {
+      "stage": "First runtime metadata read",
+      "result": "The actual unchanged-WASM sampling completed and its stdout/stderr were retained. A later flat playwright-core package metadata path failed.",
+      "raw": "[Reading 12 new lines (total: 12 lines)]\n\nTraceback (most recent call last):\n  File \"<string>\", line 17, in <module>\n    p=dep/name/'package.json'; b=p.read_bytes(); meta['packages'][name]={'version':json.loads(b)['version'],'sha256':hashlib.sha256(b).hexdigest()}\n                                 ~~~~~~~~~~~~^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_abc.py\", line 625, in read_bytes\n    with self.open(mode='rb') as f:\n         ~~~~~~~~~^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/me/workspace/estate/longwater-sound-45d4289ccf6c/source/node_modules/playwright-core/package.json'\n\n✅ Process completed with exit code 1 (runtime: 5.30s)\n\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]",
+      "action": "Resolved the existing Playwright dependency normally through its installed module path; retained baseline samples and recorded the actual runtime/package hashes in baseline-runtime.json."
+    },
+    {
+      "stage": "Inherited whole-project gate",
+      "result": "63/72 passed; 8 startup waits were due to the test fixture's missing new module route; 1 offline-download metadata error was caused by a Gitless partial native snapshot.",
+      "receipt": "full-cut1/receiving.json",
+      "action": "Added only two fixture MIME entries and a truthful local-only Git identity, then reran the 9 affected cases. Product runtime source stayed unchanged."
+    }
+  ]
+}

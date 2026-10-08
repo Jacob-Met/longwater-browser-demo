@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/offline-download.test.mjs",
+    "tests/watch-save.browser.test.mjs"
+  ],
+  "exit": 0,
+  "seconds": 8.323,
+  "localPartialSnapshot": "9a91fbe76c63e0c63b88aeb677198961e05021ea",
+  "canonicalBase": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "scope": "Only the previously failing offline-download metadata and explicit save-browser fixture routes; product runtime source unchanged",
+  "stdoutSha256": "4b099fa94b6019ef40abf95b76f06219bf5d3c43f014eb5b2cae17de89d4223f",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

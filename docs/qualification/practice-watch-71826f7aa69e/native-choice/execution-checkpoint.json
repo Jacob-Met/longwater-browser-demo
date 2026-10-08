@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "targetCommit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+  "sourceCutGit": "a36a02a3c9f0308bd40b541ccd24ac23935db075",
+  "sourceCutSha256": "1cedcbb4691a8bdfe84929f452903943f1dd73aaa5c4e536ff82cb032572be50",
+  "deviceId": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+  "nativeRoot": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e",
+  "requestedOperation": "Create owned evidence/run-qualification.py once, then execute complete current project suite, original adoption witness and artifact emitter.",
+  "launchError": "tool call error: tool call failed for `codex_apps/remote_desktop_commander.start_process`\n\nCaused by:\n    Mcp error: -32603: MCP request timed out",
+  "readOnlyChecks": [
+    {
+      "kind": "receipt",
+      "message": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:"
+    },
+    {
+      "kind": "runner",
+      "message": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:"
+    },
+    {
+      "kind": "project_tail",
+      "message": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:"
+    }
+  ],
+  "outcome": "Unknown. No PID or log/receipt bytes were received. The device was reported offline. No same-host write, probe, browser launch or qualification retry followed the three bounded read-only checks.",
+  "sourceBeforeLaunch": "54 exact source/runtime/test/fixture/offline files verified; five syntax checks, package regeneration, original witness/input hashes, runtime-manifest exact reversal, local-only partial Git identity and existing Chrome launcher resolution passed.",
+  "knownSuccesses": {
+    "priorCurrent43038": "98 of98 project cases and one independent transfer/practice case passed; separate frozen packet",
+    "current245": "Source preparation only. No current245 runtime pass claimed."
+  },
+  "nextBoundary": "Source/unknown-outcome records retained for hosted or another existing browser runtime receiving; no package install or native build.",
+  "rawLaunchResult": {
+    "content": [
+      {
+        "type": "text",
+        "text": "tool call error: tool call failed for `codex_apps/remote_desktop_commander.start_process`\n\nCaused by:\n    Mcp error: -32603: MCP request timed out"
+      }
+    ],
+    "isError": true
+  },
+  "rawReadOnlyResults": [
+    {
+      "tag": "receipt",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:\n- MSI (id: edc358ed-5ad6-4036-b7aa-8667bf0e14e0, last seen 24s ago)\n- hamon-thinkpad (id: d55b2499-5e82-4805-819a-d0d7ddea1efe, last seen 56s ago)\n- MSI (id: 9ea77fe9-bb87-46e0-a5a8-8b3e25f6ff7e, last seen 1m ago)\n- hamon-thinkpad (id: cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 84d4bd55-4047-47b0-ab85-1697ebf1e371, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 11a9b92d-f86b-4141-9b90-1f4c0d527454, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: f4f51afd-15a4-4841-9dda-eeba8fbd6855, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: be30fc1f-11b0-4956-aac2-b329f403ce73, last seen 5m ago)\n\nManage devices: https://mcp.desktopcommander.app/\nYou can view, add, or revoke devices there."
+          }
+        ],
+        "structuredContent": {
+          "error_code": "INVALID_ARGUMENT"
+        },
+        "isError": true
+      }
+    },
+    {
+      "tag": "runner",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:\n- MSI (id: edc358ed-5ad6-4036-b7aa-8667bf0e14e0, last seen 24s ago)\n- hamon-thinkpad (id: d55b2499-5e82-4805-819a-d0d7ddea1efe, last seen 56s ago)\n- MSI (id: 9ea77fe9-bb87-46e0-a5a8-8b3e25f6ff7e, last seen 1m ago)\n- hamon-thinkpad (id: cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 84d4bd55-4047-47b0-ab85-1697ebf1e371, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 11a9b92d-f86b-4141-9b90-1f4c0d527454, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: f4f51afd-15a4-4841-9dda-eeba8fbd6855, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: be30fc1f-11b0-4956-aac2-b329f403ce73, last seen 5m ago)\n\nManage devices: https://mcp.desktopcommander.app/\nYou can view, add, or revoke devices there."
+          }
+        ],
+        "structuredContent": {
+          "error_code": "INVALID_ARGUMENT"
+        },
+        "isError": true
+      }
+    },
+    {
+      "tag": "project_tail",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Device \"Mac.lan\" (0e3d582f-e25b-44b2-8418-9639fc4e4e33) is offline (last seen 16m ago). Online devices:\n- MSI (id: edc358ed-5ad6-4036-b7aa-8667bf0e14e0, last seen 24s ago)\n- hamon-thinkpad (id: d55b2499-5e82-4805-819a-d0d7ddea1efe, last seen 56s ago)\n- MSI (id: 9ea77fe9-bb87-46e0-a5a8-8b3e25f6ff7e, last seen 1m ago)\n- hamon-thinkpad (id: cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 84d4bd55-4047-47b0-ab85-1697ebf1e371, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: 11a9b92d-f86b-4141-9b90-1f4c0d527454, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: f4f51afd-15a4-4841-9dda-eeba8fbd6855, last seen 4m ago)\n- DESKTOP-LA7CMTA (id: be30fc1f-11b0-4956-aac2-b329f403ce73, last seen 5m ago)\n\nManage devices: https://mcp.desktopcommander.app/\nYou can view, add, or revoke devices there."
+          }
+        ],
+        "structuredContent": {
+          "error_code": "INVALID_ARGUMENT"
+        },
+        "isError": true
+      }
+    }
+  ],
+  "requestedMacRunner": "import pathlib,subprocess,os,json,time,hashlib,re,shutil,signal\nroot=pathlib.Path(\"/Users/me/hamon-longwater-practice-2451-71826f7aa69e\");source=root/\"source\";out=root/\"evidence\"/\"qualification\";out.mkdir()\ncutPath=root/\"evidence/source-cut.json\";cut=json.loads(cutPath.read_text())\ndef snapshot():\n rows=[]\n for f in cut[\"files\"]:\n  p=source/f[\"path\"];b=p.read_bytes();rows.append({\"path\":f[\"path\"],\"sha256\":hashlib.sha256(b).hexdigest(),\"expected\":f[\"sha256\"]})\n return rows\nbefore=snapshot();assert all(r[\"sha256\"]==r[\"expected\"] for r in before)\nfreeBefore=shutil.disk_usage(root).free\ntaskenv=os.environ.copy();taskenv[\"TMPDIR\"]=str(root/\"tmp\");taskenv[\"LONGWATER_CHROME_PATH\"]=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\";taskenv[\"PLAYWRIGHT_BROWSERS_PATH\"]=str(root/\"browser-cache\");taskenv[\"PATH\"]=\"/opt/homebrew/bin:\"+taskenv.get(\"PATH\",\"\")\nnode=\"/opt/homebrew/bin/node\";steps=[]\ndef execute(name,command,limit):\n start=time.monotonic();timeout=False\n with (out/(name+\".stdout.txt\")).open(\"xb\") as stdout,(out/(name+\".stderr.txt\")).open(\"xb\") as stderr:\n  p=subprocess.Popen(command,cwd=source,env=taskenv,stdout=stdout,stderr=stderr,start_new_session=True)\n  try:code=p.wait(timeout=limit)\n  except subprocess.TimeoutExpired:\n   timeout=True;os.killpg(p.pid,signal.SIGTERM);code=p.wait(timeout=10)\n stdout=(out/(name+\".stdout.txt\")).read_bytes();stderr=(out/(name+\".stderr.txt\")).read_bytes()\n r={\"name\":name,\"command\":command,\"exitCode\":code,\"timeout\":timeout,\"seconds\":round(time.monotonic()-start,3),\"stdoutBytes\":len(stdout),\"stderrBytes\":len(stderr),\"stdoutSha256\":hashlib.sha256(stdout).hexdigest(),\"stderrSha256\":hashlib.sha256(stderr).hexdigest()}\n steps.append(r);return r,stdout.decode(\"utf-8\",errors=\"replace\")\nstart=time.monotonic()\nfiles=[str(p.relative_to(source)) for p in sorted((source/\"tests\").glob(\"*.test.mjs\"))]\nfull,fullText=execute(\"project\",[node,\"--test\",\"--test-concurrency=1\"]+files,480)\nfull[\"testFiles\"]=len(files);full[\"counts\"]={k:int(m.group(1)) for k in [\"tests\",\"pass\",\"fail\",\"cancelled\",\"skipped\",\"todo\"] if (m:=re.search(r\"(?m)^ℹ \"+k+r\" (\\d+)$\",fullText))}\nwitnessResult=None;emitterResult=None\nif full[\"exitCode\"]==0:\n witness,witnessText=execute(\"adoption-witness\",[node,\"scripts/receive-watch-choice-adoption.mjs\"],120)\n authored=out/\"witness-authored\";authored.mkdir();members=[]\n for line in witnessText.splitlines():\n  marker=\"LONGWATER_ADOPTION_RECEIVING_FILE \"\n  if line.startswith(marker):\n   entry=json.loads(line[len(marker):]);assert entry[\"path\"] in [\"source-custody.json\",\"run.json\",\"run.log\",\"failed-display-actual-download.json\"]\n   data=entry[\"text\"].encode();assert len(data)==entry[\"bytes\"] and hashlib.sha256(data).hexdigest()==entry[\"sha256\"]\n   with (authored/entry[\"path\"]).open(\"xb\") as f:f.write(data)\n   members.append({k:v for k,v in entry.items() if k!=\"text\"})\n  if line.startswith(\"LONGWATER_ADOPTION_RECEIVING_RESULT \"):witnessResult=json.loads(line[len(\"LONGWATER_ADOPTION_RECEIVING_RESULT \"):])\n witness[\"authoredOutputs\"]=members;witness[\"result\"]=witnessResult\n emitter,emitterText=execute(\"choice-artifacts\",[node,\"scripts/emit-watch-choice-artifacts.mjs\"],30)\n for line in emitterText.splitlines():\n  if line.startswith(\"LONGWATER_CHOICE_BUNDLE_BEGIN \"):emitterResult=json.loads(line[len(\"LONGWATER_CHOICE_BUNDLE_BEGIN \"):])\n emitter[\"bundleHeader\"]=emitterResult;emitter[\"bundleEnd\"]=emitterText.rstrip().endswith(\"LONGWATER_CHOICE_BUNDLE_END\")\nafter=snapshot();unchanged=before==after\nreceipt={\"schema\":1,\"targetCommit\":cut[\"targetCommit\"],\"draftTree\":cut[\"draftTree\"],\"sourceCutSha256\":hashlib.sha256(cutPath.read_bytes()).hexdigest(),\"sourceRoot\":str(source),\"localPartialSnapshot\":cut[\"localSnapshot\"],\"steps\":steps,\"sourceBefore\":before,\"sourceAfter\":after,\"sourceUnchanged\":unchanged,\"passed\":len(steps)==3 and all(s[\"exitCode\"]==0 and not s[\"timeout\"] for s in steps) and unchanged and witnessResult is not None and witnessResult[\"passed\"]==3 and witnessResult[\"failed\"]==0,\"seconds\":round(time.monotonic()-start,3),\"diskFreeBytes\":{\"before\":freeBefore,\"after\":shutil.disk_usage(root).free},\"scope\":\"Complete current project test set with test-file concurrency one; original three adoption witness cases and original authored artifact emitter. Existing Chrome through owned browser-path launcher; no source/dependency edits, installs or native builds.\"}\np=out/\"receiving.json\"\nwith p.open(\"x\") as f:json.dump(receipt,f,indent=2);f.write(\"\\n\")\nprint(\"LW245GATE:\"+json.dumps({\"receipt\":str(p),\"sha256\":hashlib.sha256(p.read_bytes()).hexdigest(),\"passed\":receipt[\"passed\"],\"seconds\":receipt[\"seconds\"],\"sourceUnchanged\":unchanged,\"steps\":steps,\"projectTail\":fullText[-1800:]}),flush=True)\n",
+  "finalMaintainedCaseAddedAfterMacSnapshot": {
+    "path": "tests/practice-choice.browser.test.mjs",
+    "git": "a06933246de72b545a0bfa48a50f6176d8fea4b7",
+    "bytes": 8688,
+    "sha256": "7ec115758e3bd80ecced104dbd5126f723e0ca27519574bed6c0dc02a34cee28",
+    "note": "This is the11th source contribution path; it was not present in the54-file Mac snapshot. It is included in the55-file portable source receiving set."
+  },
+  "boundedFallbackFindings": {
+    "reportedBy": "/root/runtime, supported read-only RDC ThinkPad probes; no browser launched in capability discovery",
+    "deviceId": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "node": {
+      "path": "/usr/bin/node",
+      "version": "v22.22.1"
+    },
+    "chromium": {
+      "path": "/snap/bin/chromium",
+      "version": "153.0.8010.47"
+    },
+    "playwright": {
+      "path": "/home/jacob/hamon-b890f0b1bfcd/browser-tools/node_modules/playwright",
+      "version": "1.64.0",
+      "packageSha256": "76e7341a52a4dd154553c3514926a5f824da4374d000e88d9ac3c14ee6eadf84",
+      "coreSha256": "1d6b6f80ffb0c52865af0f9fe01abf2140df019e49ae6ac134605e462d583f3a",
+      "moduleLoadSucceeded": true,
+      "note": "Existing read-only alternate receiving dependency; differs from the project's locked1.62.1. Hosted locked-dependency gate remains separate."
+    },
+    "capacityReported": {
+      "homeAvailableGB": 24.28,
+      "tmpAvailableGB": 2.67,
+      "shmAvailableGB": 6.74
+    },
+    "searchBoundary": "A bounded depth8 package search timed out after12seconds with this positive discovery; no absence claim for other versions.",
+    "primaryLinux": {
+      "reportedBy": "/root/coordination",
+      "finding": "Existing Playwright found, but scratch and shm reported zero free bytes; no write or browser execution attempted."
+    },
+    "sourceBodiesRetained": {
+      "files": 55,
+      "bytes": 838084,
+      "custody": "All exact source bodies and native Git/SHA metadata retained in function memory; no additional Mac read required."
+    }
+  }
+}

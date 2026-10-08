@@ -21,6 +21,8 @@ const files = new Map([
   ["/watch-file.css", ["watch-file.css", "text/css"]],
   ["/watch-rewind.js", ["watch-rewind.js", "text/javascript"]],
   ["/watch-rewind.css", ["watch-rewind.css", "text/css"]],
+  ["/practice-watch.js", ["practice-watch.js", "text/javascript"]],
+  ["/practice-watch.css", ["practice-watch.css", "text/css"]],
   ["/journal.js", ["journal.js", "text/javascript"]],
   ["/journal.css", ["journal.css", "text/css"]],
   ["/watch-trends.js", ["watch-trends.js", "text/javascript"]],

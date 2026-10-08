@@ -3,9 +3,9 @@
   "runtime": [
     {
       "path": "index.html",
-      "bytes": 8277,
-      "gitBlob": "d8a036cb062c94b2857299c203b61c8173245cf8",
-      "sha256": "254611a6e919048ad5e03c0991feaae411467ba82f26ef524efe3c2a5d93a049"
+      "bytes": 10681,
+      "gitBlob": "bfda040212a3eb3ab2308018ff7c7c2360dcb60b",
+      "sha256": "21b3770e1c2b77a5d2ed319714f67e7b6137069ee699a3a706323cf418a1e001"
     },
     {
       "path": "style.css",
@@ -51,9 +51,9 @@
     },
     {
       "path": "game.js",
-      "bytes": 22218,
-      "gitBlob": "803d90cd37f23f4a1bcaba2d70bc140cfdd77fbd",
-      "sha256": "28b28d98c3bddd31f8840ad6547fea1055eb84acddc8df3bf36de3cdb7f14f74"
+      "bytes": 22405,
+      "gitBlob": "b7ae872c7a22996162c66bf605069ca30ceaa9ba",
+      "sha256": "a234821e1a6f601ebb0670fdccd5f7f21f38da99dfb788f898e4ddac1dfd1a96"
     },
     {
       "path": "pkg/longwater_web.js",
@@ -108,6 +108,18 @@
       "bytes": 71368,
       "gitBlob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
       "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "gitBlob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29"
+    },
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "gitBlob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18"
     },
     {
       "path": "watch-rewind.js",

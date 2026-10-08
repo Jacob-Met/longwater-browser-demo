@@ -44,6 +44,8 @@ jobs:
         run: npm test
       - name: Receive the original historical-choice file-adoption witness
         run: node scripts/receive-watch-choice-adoption.mjs
+      - name: Receive the frozen independent rewind and practice cases
+        run: node scripts/receive-watch-rewind.mjs
       - name: Emit the bounded authored historical-choice captures
         if: always()
         run: node scripts/emit-watch-choice-artifacts.mjs
@@ -52,6 +54,9 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: historical-choice-${{ github.sha }}
-          path: test-results/watch-choice
+          path: |
+            test-results/watch-choice
+            test-results/watch-rewind
+            test-results/watch-rewind-independent
           if-no-files-found: warn
           retention-days: 14

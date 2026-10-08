@@ -1,0 +1,20 @@
+{
+  "metadataExit": 0,
+  "stdout": "{\"paths\":{\"playwright\":\"/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright/package.json\",\"core\":\"/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright-core/package.json\"},\"versions\":{\"playwright\":\"1.62.1\",\"core\":\"1.62.1\"}}\n",
+  "stderr": "",
+  "node": "v26.3.0",
+  "chrome": "Google Chrome 154.0.8037.98",
+  "initialMetadataOutcome": "kept prior complete WASM stdout/stderr; first metadata read assumed flat playwright-core placement and failed FileNotFoundError",
+  "packages": {
+    "playwright": {
+      "path": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright/package.json",
+      "version": "1.62.1",
+      "sha256": "ca170ec143a88ed3043ac953eb3b2377b2b97304104f4e1e23316684ce2c35af"
+    },
+    "core": {
+      "path": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright-core/package.json",
+      "version": "1.62.1",
+      "sha256": "07c47543631fef9508760365dee9fbe958c562093ec8d122543949ed231f233f"
+    }
+  }
+}

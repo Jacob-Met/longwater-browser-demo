@@ -1,0 +1,289 @@
+{
+  "schema": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "scope": "Frozen initial native e4e9-based receiving; later composition is separate",
+  "payloadFiles": 40,
+  "payloadBytes": 397873,
+  "files": [
+    {
+      "path": "README.md",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/publication-initial/README.md",
+      "bytes": 9403,
+      "sha256": "6ea456fc3fbd6b6e64c8adec9b45fc0825a4cf5d786f96271989b43e4e9df414",
+      "git": "ab923422e2ba954609c9b4a92d91d3c8346b8d9d"
+    },
+    {
+      "path": "source-manifest.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/publication-initial/source-manifest.json",
+      "bytes": 7435,
+      "sha256": "d4a89f7ea0fbb6a31ea6c03b60c85c24ce4370d47bde3d76d1d019889de51764",
+      "git": "2104f554c35124a323910e2a6f9820aeeaa267c6"
+    },
+    {
+      "path": "environment-outcomes.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/publication-initial/environment-outcomes.json",
+      "bytes": 2383,
+      "sha256": "816d4623583e68ffe8b25f5f8e8e38a3e9f75bfe635d2c6acd3e6982c0e2363f",
+      "git": "a32ebc9601efc199e4ea6e277b0c755145dc7804"
+    },
+    {
+      "path": "baseline-wasm.mjs",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/baseline.mjs",
+      "bytes": 1043,
+      "sha256": "91bfe50e6af7749860af31b9c9ab0261092c3d734a32961ef01cec4be6246317",
+      "git": "5f513b8d85646f67628cf89509900107ececcc10"
+    },
+    {
+      "path": "baseline-ui.mjs",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/baseline-ui.mjs",
+      "bytes": 927,
+      "sha256": "71a559fe153b05ef8721ae70553a96c1890153e00987c61ebf9f80abdb302e0d",
+      "git": "90f834ceebf0f86399bf1ac0ba8e5a6d44703654"
+    },
+    {
+      "path": "baseline-constraints.mjs",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/baseline-constraints.mjs",
+      "bytes": 793,
+      "sha256": "89a0cf835a86c115e756d116c085d7d2a6ec65c43702cc6194f35e52b1d8d854",
+      "git": "fc3608874086d3420e8af92aa0868988babaa397"
+    },
+    {
+      "path": "baseline-wasm.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/baseline-wasm.stdout.json",
+      "bytes": 10561,
+      "sha256": "daab716b24fb359bb9fda5f13ee9703bd5cf01f3163277888b9b86278b66a094",
+      "git": "40243e3c3b859e908700890c6398b44715a9ab65"
+    },
+    {
+      "path": "baseline-wasm.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/baseline-wasm.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "baseline-ui.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/baseline-ui.json",
+      "bytes": 243,
+      "sha256": "165d94dae3a8a705a5899777501071ee629885a9494485b44091a8dcea86c59f",
+      "git": "4b9b22db1e807e10c335036c3d9c6d005e97796a"
+    },
+    {
+      "path": "baseline-constraints.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/baseline-constraints.json",
+      "bytes": 2106,
+      "sha256": "d28ab281342a85e7b08c92ae37c73981fe0ee9b5caec4dc512679430356cdb7d",
+      "git": "76d818d9a5e22ac27866fbe5d47f08c982e8cc61"
+    },
+    {
+      "path": "baseline-runtime.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/baseline-runtime.json",
+      "bytes": 1163,
+      "sha256": "7bef377bc12153f3089d4a3098b2b47af26445ebe4af1e971eb5e656d1256f0e",
+      "git": "a639cd5fa232b1e66088c1940cd1e168d7d23584"
+    },
+    {
+      "path": "source-cut1.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/source-cut1.json",
+      "bytes": 1449,
+      "sha256": "401dedd689c7bf670327f1a34cd9ed36660375a45ab81d556445fdc919e5ea8f",
+      "git": "6deac2f979c2c7d3bf2c5cc7c572918f62c6abda"
+    },
+    {
+      "path": "source-cut2.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/source-cut2.json",
+      "bytes": 257,
+      "sha256": "1138021a34c0ffdc724e19b0cf69ab56ed590a123901998dfd1e036b61dc6473",
+      "git": "1059869ddd89ccda974d82d90f04415f7b9ddf3c"
+    },
+    {
+      "path": "author-receiver-cut1.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-receiver-cut1.json",
+      "bytes": 213,
+      "sha256": "f5544feedf5b1f3ddab6ea61c948afba74a6495b680d4f1b6428915161d071e5",
+      "git": "09c72ed0cfddb25bf4504a8950ff37b02490696f"
+    },
+    {
+      "path": "partial-git-snapshot.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/partial-git-snapshot.json",
+      "bytes": 5308,
+      "sha256": "56216668f99c4ab136d51c140cc9f23133647ccc1af2413e310492052a2802b1",
+      "git": "355139a0e298fcf3285828177269501f4cd51674"
+    },
+    {
+      "path": "author-cut1/receiving.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/receiving.json",
+      "bytes": 9609,
+      "sha256": "c64324ba8da2480ca87fe8b0af8e9c37eddbcb07c62f880df7f31ae093bf005a",
+      "git": "640c989a0847bdb6917ce8ab3d98637a21eecdd2"
+    },
+    {
+      "path": "author-cut1/01.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/01.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/01.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/01.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/02.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/02.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/02.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/02.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/03.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/03.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/03.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/03.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/04.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/04.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/04.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/04.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/05.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/05.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/05.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/05.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/06.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/06.stdout.txt",
+      "bytes": 551,
+      "sha256": "32f17821c9991b672d84ae87fd41f895fb361d7c5c01ad9c013df6d694576786",
+      "git": "f9c6f8dbc10fc5786b2c3f7c63b52126b44b903b"
+    },
+    {
+      "path": "author-cut1/06.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/06.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "author-cut1/07.stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/07.stdout.txt",
+      "bytes": 755,
+      "sha256": "f56adf4db5ec65ba70ba0dc7cc2dfd7ba75ed818002483f06782e534aca748d7",
+      "git": "e0cce0090c803b4bff3a76ac73be6de366625e14"
+    },
+    {
+      "path": "author-cut1/07.stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/author-cut1/07.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "full-cut1/receiving.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/full-cut1/receiving.json",
+      "bytes": 680,
+      "sha256": "5e7d5e0c3ec5fa09b646a6ffc234d3814defb2927b5083a4312249cf26e9c6d2",
+      "git": "a8a14d18769cff84e019f4fb5afbe411629b8f87"
+    },
+    {
+      "path": "full-cut1/stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/full-cut1/stdout.txt",
+      "bytes": 13066,
+      "sha256": "675d45b109aaad3ea547239390a27a2e86177dd5cdca16a92b78dcaff7b81465",
+      "git": "fd5a9d18c9dfcd0d907caccb9c6e03a5659e9add"
+    },
+    {
+      "path": "full-cut1/stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/full-cut1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "repaired-fixtures/receiving.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/repaired-fixtures/receiving.json",
+      "bytes": 655,
+      "sha256": "02208c6c637d7d0b77e8e102d22b490b0f4604c3123cabed49324f60ae2586a9",
+      "git": "fce85e4cdb21ff6617a5dfd7476604e96ba2abb5"
+    },
+    {
+      "path": "repaired-fixtures/stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/repaired-fixtures/stdout.txt",
+      "bytes": 952,
+      "sha256": "4b099fa94b6019ef40abf95b76f06219bf5d3c43f014eb5b2cae17de89d4223f",
+      "git": "f1b3351cec10a6e2872865cd74c4b969db359ce7"
+    },
+    {
+      "path": "repaired-fixtures/stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/evidence/repaired-fixtures/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "actual-download/receipt.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/source/test-results/offline-download/receipt.json",
+      "bytes": 9104,
+      "sha256": "81ab72e986dc79cd5e3b4003a868598712fea1dda4eecb561b7a458f614c075c",
+      "git": "353642b6139758cfeae65fc414e997a484441e61"
+    },
+    {
+      "path": "screenshots/practice-opening.png",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/source/test-results/practice-opening.png",
+      "bytes": 128201,
+      "sha256": "fa4347651054a45faa75de20e935e4662cc56b34729b7a25894a0183afb04886",
+      "git": "b8db92843b37b0841bb64ad4fdbfaaa3c57cd4ad"
+    },
+    {
+      "path": "screenshots/practice-result.png",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/source/test-results/practice-result.png",
+      "bytes": 153239,
+      "sha256": "6b9d40823047de37489eb50dcaf1e2def22e5921924a4ad842e5a45494e27194",
+      "git": "4a0bc4cff3679701cbb653777568c790ea8a7e4b"
+    },
+    {
+      "path": "screenshots/practice-phone.png",
+      "nativePath": "/Users/me/hamon-longwater-practice-71826f7aa69e/source/test-results/practice-phone.png",
+      "bytes": 37777,
+      "sha256": "3213298f14eea9a9e8741f91f0a16600bebc84666437b46b356ac63a891e07f7",
+      "git": "94a51763295cde057e62881578dc2bef0d1203fe"
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "schema": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "targetCommit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+  "targetTree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+  "draftTree": "9de809adacecb53284472ce69820ca82afb89cdd",
+  "sourceRoot": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/source",
+  "files": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "bytes": 2242,
+      "sha256": "001e374e462e38abeaf4d192af26e8bc0e10becd63508bfb2bf1fe1b576a933a",
+      "git": "a30df84dc29eb06f27e2848e979ecf2396a70a61"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 34,
+      "sha256": "76a8c85c5cde609d309b74ba3cc9c08b776fe95457466c01f364baab341d6b3f",
+      "git": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16136,
+      "sha256": "9e197e700354a78119f6d701a57aa88f6509bd7becce6ee668ff59c6e0658537",
+      "git": "b1f4de22b45f51d8df9563940ff033bee6e14a53"
+    },
+    {
+      "path": "game.js",
+      "bytes": 22031,
+      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+      "git": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9627,
+      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+      "git": "4f5aafec0518dbf2075f72278d1b80670781eb8c"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "git": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1705,
+      "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+      "git": "7a89ee5d7b73496d9dafc85a93184182f6f14026"
+    },
+    {
+      "path": "package.json",
+      "bytes": 277,
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "git": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "bytes": 1975,
+      "sha256": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91",
+      "git": "b13d183c5d8982d689c33b4195a797bebff4ede5"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm.d.ts",
+      "bytes": 865,
+      "sha256": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e",
+      "git": "12f7f1826bc094fabfb3674665863d62884105bb"
+    },
+    {
+      "path": "scripts/emit-watch-choice-artifacts.mjs",
+      "bytes": 2310,
+      "sha256": "5d6a55ec86b5eb0afec33a6047dc1b7d81ecddf0dc93085c89ef8c405797d972",
+      "git": "75e7be22a567196845e22edd74ff6bdac3163a71"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3619,
+      "sha256": "ba2b3d7421cb7d3904b889374a7eef3e1cf13eb41dc1ae9604335c0abeb2128a",
+      "git": "27643c9a225536ecb6a87e13082c4e5d352d5ca5"
+    },
+    {
+      "path": "scripts/receive-watch-choice-adoption.mjs",
+      "bytes": 8892,
+      "sha256": "b0cf8472abe9f52c677484bc16c0408e8e77868aceffe26c55d89ef974ac784c",
+      "git": "74ad35fa8dac6fb7343d5bb4bbd4afa533297338"
+    },
+    {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "bytes": 4255,
+      "sha256": "274e02d2119f265b689327df2ee4f53fe3eed4181228d1423980da7e2dfb3732",
+      "git": "79c56b48239f6ee01f89518abec2b4eaca37bf1e"
+    },
+    {
+      "path": "style.css",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "git": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "bytes": 8301,
+      "sha256": "246265735659711b9270dbabc2d5507514a40d0148a5ee93079a60706c0948e0",
+      "git": "c1c1c85a404fad4d8894534187a884a6ded4de9f"
+    },
+    {
+      "path": "tests/journal.test.mjs",
+      "bytes": 11813,
+      "sha256": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+      "git": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6"
+    },
+    {
+      "path": "tests/new-watch.test.mjs",
+      "bytes": 16946,
+      "sha256": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+      "git": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10"
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "bytes": 8832,
+      "sha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+      "git": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "bytes": 3958,
+      "sha256": "72c1f0c5575acb87fbaf32d3b99571dc7a4217714ee253700a5a934c66f31e0f",
+      "git": "e7a43790537e085b85b69b8e4de60e56d415197a"
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "bytes": 11052,
+      "sha256": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+      "git": "d00a431b81d462ac2585c7fe3b7e661134c5952d"
+    },
+    {
+      "path": "tests/server.mjs",
+      "bytes": 1609,
+      "sha256": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6",
+      "git": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070"
+    },
+    {
+      "path": "tests/watch-choice-invalidation.browser.test.mjs",
+      "bytes": 6846,
+      "sha256": "04b63e09c877bd949aceb017cbd624f1a152cbed5d0575772ad708d01479dbb1",
+      "git": "500b9bf28087c71861743bf4d15993b4804fea93"
+    },
+    {
+      "path": "tests/watch-choice-model.test.mjs",
+      "bytes": 11772,
+      "sha256": "d8338d85b0f333c221bb1ff9bb7f45af034add50c078a59f1ab7b6d664eb57c9",
+      "git": "4eef83341f2b1b42c95b50d8d08b4447a9ae11d2"
+    },
+    {
+      "path": "tests/watch-choice.browser.test.mjs",
+      "bytes": 18434,
+      "sha256": "5a487709c55b7e210a2660082c05210efae58c9548315976f5c62c00056fc68f",
+      "git": "b2f246f78bf29cc7aaea5a7ccdb23615621d1731"
+    },
+    {
+      "path": "tests/watch-file-report.test.mjs",
+      "bytes": 9728,
+      "sha256": "5fa2f3cc6e131758b9556c4eb71d2a4a74157068fbcd035ccfa60a724a6e5557",
+      "git": "58f30a1a8355d78ca445fbe3ddb886839b15311c"
+    },
+    {
+      "path": "tests/watch-file-trends.test.mjs",
+      "bytes": 5772,
+      "sha256": "151d1704bd74ab6b4357503d1d8eaf6e41a92daf7caa8e3de5d52f8869445375",
+      "git": "e5232239004b54c17d160e1b3168c5331ba4fbe5"
+    },
+    {
+      "path": "tests/watch-file.browser.test.mjs",
+      "bytes": 24094,
+      "sha256": "524d691aa76a376647cf59e19171ee267d3a4b6d12ebab694590b69fc2cbe6fe",
+      "git": "54ddd8f212f3522d87257e515060e09fa15511b1"
+    },
+    {
+      "path": "tests/watch-file.test.mjs",
+      "bytes": 11099,
+      "sha256": "f71dc0c16fa7b0ffdf23f5bb7c66a397e359d0ee8074deaa464b8f7f6ab96a90",
+      "git": "6e377b2f6a2d748fbbc1c8e7e1d44a8ed44ef9af"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "bytes": 14191,
+      "sha256": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+      "git": "d835b6f14e0cd78b3a9c293d2ac3199ffcb82909"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "bytes": 12282,
+      "sha256": "4e1ac60276b2e108a9b017e442d6861883b4ee403ca4ee10904b41d96b73149b",
+      "git": "a931a956778867d759ebdb9bc0682a8f916d2be3"
+    },
+    {
+      "path": "tests/watch-save.test.mjs",
+      "bytes": 10647,
+      "sha256": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5",
+      "git": "05bd8b8b9fe277285afdacf391f08e9f792808cd"
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "bytes": 14059,
+      "sha256": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+      "git": "dab952c5f832c4b83492e47aaec8d42a4976cf0b"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "git": "06e2fb072ce281f032e9c5c455372ff0eb60badd"
+    },
+    {
+      "path": "watch-choice.css",
+      "bytes": 3741,
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+      "git": "1ce5b6c327978b953dcd9117162b03376fed31f3"
+    },
+    {
+      "path": "watch-choice.js",
+      "bytes": 12066,
+      "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+      "git": "c06835946ec99c7edd8eb16334d597356aada060"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git": "9aee526fc9225b5aea8242eed8fa543525574bef"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git": "34c8490804e696e500e1362c629bb05a51ab3040"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "git": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "git": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git": "b350738efe99cb89622105a8431483dc06ab6e41"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    },
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git": "e68f484848d9cf334a9eb35475973ffbe8a603b5"
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4"
+    },
+    {
+      "path": "tests/practice-watch.test.mjs",
+      "bytes": 15913,
+      "sha256": "91ba360b8c0a17b1d73d81635ad7a6d4cfcf1fb0a570c0326381185d1f151038",
+      "git": "47fecd0e58d345dcf89256fdf5fd65964b809a7a"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source",
+      "bytes": 12724,
+      "sha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+      "git": "07030061d214cfeb6875f13a4f4fca751c25428d"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json",
+      "bytes": 21046,
+      "sha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451",
+      "git": "760cea9c6a571311d35b925f1fc7e71c1dd60553"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 339166,
+      "sha256": "1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33",
+      "git": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f"
+    }
+  ],
+  "offlinePackage": {
+    "file": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/source/downloads/Longwater-Fourteen-Tides.html",
+    "bytes": 339166,
+    "sha256": "1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33",
+    "sourceSha256": "4f1e41dc2df1bea2556cf6f699737b3b77c8de3c461c4675d22c3918749e6fdf",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "watch-choice.css",
+      "practice-watch.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-choice.js",
+      "practice-watch.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "watch-choice-model.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "adoptionRuntimeProof": {
+    "schema": 1,
+    "targetCommit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+    "before": {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "bytes": 3828,
+      "sha256": "36b765ef1b3387801ec22330549d72732596674ec67bfc49c23667a8bb8f8013",
+      "git": "8b24b8d439dfb5eb34d2f87564cf7531c893f40a"
+    },
+    "after": {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "bytes": 4255,
+      "sha256": "274e02d2119f265b689327df2ee4f53fe3eed4181228d1423980da7e2dfb3732",
+      "git": "79c56b48239f6ee01f89518abec2b4eaca37bf1e"
+    },
+    "changedOriginalEntries": [
+      {
+        "path": "index.html",
+        "before": {
+          "path": "index.html",
+          "bytes": 7223,
+          "gitBlob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8",
+          "sha256": "207c415641f27d8adc478a41b859b27d9120d0d7b676c1a4febb657ee60d06d6"
+        },
+        "after": {
+          "path": "index.html",
+          "bytes": 9627,
+          "gitBlob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
+          "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208"
+        }
+      },
+      {
+        "path": "game.js",
+        "before": {
+          "path": "game.js",
+          "bytes": 21844,
+          "gitBlob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf",
+          "sha256": "b25c21a485aebbe5673abbe4b1d01b5a7209706726bd30cf9a5b54760ed155b4"
+        },
+        "after": {
+          "path": "game.js",
+          "bytes": 22031,
+          "gitBlob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
+          "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c"
+        }
+      }
+    ],
+    "addedEntries": [
+      {
+        "path": "practice-watch.css",
+        "bytes": 3650,
+        "gitBlob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+        "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29"
+      },
+      {
+        "path": "practice-watch.js",
+        "bytes": 8384,
+        "gitBlob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+        "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18"
+      }
+    ],
+    "originalRuntimeEntries": 18,
+    "unchangedOriginalEntries": 16,
+    "newRuntimeEntries": 20,
+    "allOtherEntriesByteExact": true,
+    "exactReversal": true,
+    "method": "Restore the two original index/game entries and remove only the two appended practice assets; serialized complete JSON equals exact target bytes."
+  },
+  "localSnapshot": {
+    "commit": "807a2264955948ead1e1e7b81741d364444f55e2",
+    "tree": "f9e3837c2c9d82847c6739c5bb49c7b955d627f1",
+    "scope": "Local-only partial runtime/test/fixture source identity; not canonical full repository history. No remote configured or shared ref changed."
+  },
+  "commands": [
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--input-type=module",
+        "-e",
+        "import {chromium} from \"playwright\";import {existsSync} from \"node:fs\";const p=chromium.executablePath();console.log(JSON.stringify({executable:p,exists:existsSync(p)}));"
+      ],
+      "exitCode": 0,
+      "seconds": 0.27,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/browser-route.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/browser-route.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "game.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.054,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-01.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-01.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "practice-watch.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.053,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-02.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-02.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "scripts/package.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.055,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-03.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-03.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "tests/practice-watch.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.054,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-04.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-04.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "--check",
+        "tests/watch-save.browser.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.051,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-05.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/syntax-05.stderr.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "scripts/package.mjs",
+        "downloads/Longwater-Fourteen-Tides.html"
+      ],
+      "exitCode": 0,
+      "seconds": 0.075,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/package.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/package.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "init",
+        "--initial-branch=receiving-2451"
+      ],
+      "exitCode": 0,
+      "seconds": 0.02,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-init.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-init.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "config",
+        "--local",
+        "user.name",
+        "HAMON estate receiving"
+      ],
+      "exitCode": 0,
+      "seconds": 0.013,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-name.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-name.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "config",
+        "--local",
+        "user.email",
+        "hamon-receiving@localhost"
+      ],
+      "exitCode": 0,
+      "seconds": 0.013,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-email.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-email.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "add",
+        "--",
+        ".github/workflows/smoke.yml",
+        ".gitignore",
+        ".nojekyll",
+        "README.md",
+        "game.js",
+        "index.html",
+        "journal.css",
+        "journal.js",
+        "package-lock.json",
+        "package.json",
+        "pkg/longwater_web.d.ts",
+        "pkg/longwater_web.js",
+        "pkg/longwater_web_bg.wasm",
+        "pkg/longwater_web_bg.wasm.d.ts",
+        "scripts/emit-watch-choice-artifacts.mjs",
+        "scripts/package.mjs",
+        "scripts/receive-watch-choice-adoption.mjs",
+        "scripts/watch-choice-adoption-runtime.json",
+        "style.css",
+        "tests/browser.test.mjs",
+        "tests/journal.test.mjs",
+        "tests/new-watch.test.mjs",
+        "tests/offline-download.test.mjs",
+        "tests/package.test.mjs",
+        "tests/resume-journal.test.mjs",
+        "tests/server.mjs",
+        "tests/watch-choice-invalidation.browser.test.mjs",
+        "tests/watch-choice-model.test.mjs",
+        "tests/watch-choice.browser.test.mjs",
+        "tests/watch-file-report.test.mjs",
+        "tests/watch-file-trends.test.mjs",
+        "tests/watch-file.browser.test.mjs",
+        "tests/watch-file.test.mjs",
+        "tests/watch-report.test.mjs",
+        "tests/watch-save.browser.test.mjs",
+        "tests/watch-save.test.mjs",
+        "tests/watch-trends.test.mjs",
+        "watch-choice-model.js",
+        "watch-choice.css",
+        "watch-choice.js",
+        "watch-file.css",
+        "watch-file.js",
+        "watch-report.css",
+        "watch-report.js",
+        "watch-save.css",
+        "watch-save.js",
+        "watch-trends.css",
+        "watch-trends.js",
+        "practice-watch.js",
+        "practice-watch.css",
+        "tests/practice-watch.test.mjs",
+        "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source",
+        "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json",
+        "downloads/Longwater-Fourteen-Tides.html"
+      ],
+      "exitCode": 0,
+      "seconds": 0.05,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-add.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-add.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "commit",
+        "-m",
+        "Local partial receiving snapshot of Longwater245 historical choice and practice"
+      ],
+      "exitCode": 0,
+      "seconds": 0.033,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-commit.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-commit.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exitCode": 0,
+      "seconds": 0.013,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-head.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-head.stderr.txt"
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "exitCode": 0,
+      "seconds": 0.013,
+      "stdout": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-tree.stdout.txt",
+      "stderr": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/evidence/prepare/git-tree.stderr.txt"
+    }
+  ],
+  "browserRoute": {
+    "initialProbe": {
+      "defaultPath": "/Users/me/.hamon-rdc-seats/seat-5/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+      "exists": false,
+      "explicitChrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "explicitExists": true
+    },
+    "environment": {
+      "PLAYWRIGHT_BROWSERS_PATH": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/browser-cache",
+      "LONGWATER_CHROME_PATH": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "wrapperPath": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/browser-cache/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "wrapperSha256": "44091fc37908b5e390dac7d43dfa12c04ef49305ef1ee3f3d5ede2d9471b262c",
+    "wrapperSource": "#!/bin/sh\nexec \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" \"$@\"\n",
+    "verifiedResolution": {
+      "executable": "/Users/me/hamon-longwater-practice-2451-71826f7aa69e/browser-cache/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+      "exists": true
+    },
+    "scope": "Owned launch shim selects existing Chrome through the normal Playwright browser-path environment. No browser download, dependency edit or receiver case change."
+  },
+  "reusedDependencies": {
+    "playwright": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright/package.json",
+    "playwrightSha256": "ca170ec143a88ed3043ac953eb3b2377b2b97304104f4e1e23316684ce2c35af",
+    "playwrightCore": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright-core/package.json",
+    "coreSha256": "07c47543631fef9508760365dee9fbe958c562093ec8d122543949ed231f233f"
+  },
+  "environment": {
+    "remainingFreeBytes": 159657984,
+    "earlierSourcesFrozen": true,
+    "peerFilesChanged": false
+  }
+}

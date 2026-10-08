@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/new-watch.test.mjs",
+    "tests/offline-download.test.mjs",
+    "tests/package.test.mjs",
+    "tests/practice-watch.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/watch-report.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs",
+    "tests/watch-trends.test.mjs"
+  ],
+  "exit": 1,
+  "seconds": 293.203,
+  "stdoutSha256": "675d45b109aaad3ea547239390a27a2e86177dd5cdca16a92b78dcaff7b81465",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
