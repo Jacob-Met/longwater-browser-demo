@@ -2,6 +2,10 @@ import init, { BrowserSession } from "./pkg/longwater_web.js";
 
 const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
+const playfield = document.querySelector("#playfield");
+const resetControl = document.querySelector("#reset-control");
+const cellControls = [...document.querySelectorAll("[data-cell]")];
+const actionControls = [...document.querySelectorAll("[data-action]")];
 const context = canvas.getContext("2d", { alpha: false });
 let session;
 let state;
@@ -188,9 +192,10 @@ function drawReport(l) {
   const r = l.report;
   rounded(r.x, r.y, r.w, r.h, 16, "rgba(11, 36, 41, .95)", "#244642");
   label("FIELD NOTES", r.x + 15, r.y + 22, 10, palette.mint, 750);
-  const lines = state.report?.lines ?? ["Pick a cell, then choose Gate, Shade, or Seed.", "Your action is resolved against the live Rust simulation."];
+  const lines = reportLines();
   const lineHeight = l.compact ? 16 : 18;
-  const maxLines = Math.max(2, Math.floor((r.h - 46) / lineHeight));
+  const footerSpace = message || state.finished ? 64 : 46;
+  const maxLines = Math.max(1, Math.floor((r.h - footerSpace) / lineHeight));
   let visible = [];
   for (const line of lines) visible.push(...wrap(line, r.w - 30, `${l.compact ? 11 : 12}px ui-sans-serif, system-ui`));
   visible = visible.slice(0, maxLines);
@@ -208,11 +213,7 @@ function drawReport(l) {
 
 function drawActions(l) {
   const r = l.actions;
-  const actions = [
-    { id: "gate", title: "GATE", sub: "spend 1 water", color: palette.water, disabled: state.freshwater < 1 },
-    { id: "shade", title: "SHADE", sub: "add a canopy", color: palette.mint, disabled: state.cells[selected].shade >= 3 },
-    { id: "seed", title: "SEED", sub: `use 1 seed · ${state.seedPacks} left`, color: palette.gold, disabled: state.seedPacks < 1 },
-  ];
+  const actions = availableActions();
   const gap = l.compact ? 7 : 12;
   const buttonW = (r.w - 2 * gap) / 3;
   actions.forEach((action, i) => {
@@ -239,9 +240,12 @@ function render() {
   state.cells.forEach((cell, i) => drawCell(cell, i, l.cards[i], l.compact));
   drawReport(l);
   drawActions(l);
+  syncControls(l);
 }
 
 function resize() {
+  // Keep the compact field notes above the action row even on short phones.
+  playfield.style.minHeight = playfield.clientWidth < 680 ? "740px" : "650px";
   const rect = canvas.getBoundingClientRect();
   if (!rect.width || !rect.height) return;
   width = rect.width;
@@ -249,19 +253,105 @@ function resize() {
   pixelRatio = Math.min(2, window.devicePixelRatio || 1);
   canvas.width = Math.round(width * pixelRatio);
   canvas.height = Math.round(height * pixelRatio);
-  context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  context?.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  positionControls(layout());
   render();
 }
 
-function announce() {
-  const last = state.report?.event?.name;
-  live.textContent = message || (state.finished
-    ? `Fourteen tides complete. Outcome: ${state.outcome}.`
-    : `Day ${state.day} of 14. ${last ? `${last}. ` : ""}Water ${state.freshwater}; seeds ${state.seedPacks}.`);
+function availableActions() {
+  return [
+    { id: "gate", title: "GATE", sub: "spend 1 water", color: palette.water,
+      disabled: state.freshwater < 1, reason: "Gate unavailable: no freshwater remains.",
+      name: `Gate. Spend 1 water on ${state.cells[selected].name}; ${state.freshwater} water left.` },
+    { id: "shade", title: "SHADE", sub: "add a canopy", color: palette.mint,
+      disabled: state.cells[selected].shade >= 3, reason: "Shade unavailable: this cell's canopy is already 3 of 3.",
+      name: `Shade. Add a canopy to ${state.cells[selected].name}.` },
+    { id: "seed", title: "SEED", sub: `use 1 seed · ${state.seedPacks} left`, color: palette.gold,
+      disabled: state.seedPacks < 1, reason: "Seed unavailable: no seed packs remain.",
+      name: `Seed. Plant life in ${state.cells[selected].name}; ${state.seedPacks} seed packs left.` },
+  ];
+}
+
+function cellReadings(cell) {
+  return `${cell.zone}; ${cell.material}. Depth ${cell.depth} centimetres. Salt ${cell.salinity} parts per thousand. Oxygen ${cell.oxygen} percent. Life ${cell.biomass} percent. Canopy ${cell.shade} of 3.`;
+}
+
+function summary() {
+  return `Day ${state.day} of 14. ${state.finished ? `Watch closed. Outcome: ${state.outcome}. ` : ""}Water ${state.freshwater}; seed packs ${state.seedPacks}.`;
+}
+
+function reportLines() {
+  return state.report?.lines ?? ["Pick a cell, then choose Gate, Shade, or Seed.", "Your action is resolved against the live Rust simulation."];
+}
+
+function positionControls(l) {
+  const place = (button, r) => {
+    button.style.left = `${r.x}px`;
+    button.style.top = `${r.y}px`;
+    button.style.width = `${r.w}px`;
+    button.style.height = `${r.h}px`;
+  };
+  place(resetControl, l.restart);
+  cellControls.forEach((button, i) => place(button, l.cards[i]));
+  const gap = l.compact ? 7 : 12;
+  const w = (l.actions.w - 2 * gap) / 3;
+  actionControls.forEach((button, i) => place(button, { ...l.actions, x: l.actions.x + i * (w + gap), w }));
+}
+
+function syncControls(l) {
+  positionControls(l);
+  resetControl.disabled = false;
+  cellControls.forEach((button, i) => {
+    button.disabled = false;
+    button.setAttribute("aria-label", `Cell ${i + 1}: ${state.cells[i].name}`);
+    button.setAttribute("aria-pressed", String(selected === i));
+    document.querySelector(`#cell-${i}-readings`).textContent = cellReadings(state.cells[i]);
+  });
+  availableActions().forEach((action, i) => {
+    const button = actionControls[i];
+    // aria-disabled keeps the focused action discoverable after a resource is
+    // spent. act() enforces the same availability used by the canvas and DOM.
+    button.disabled = false;
+    button.setAttribute("aria-disabled", String(action.disabled || state.finished));
+    button.setAttribute("aria-label", `${action.name}${state.finished ? " Watch complete." : action.disabled ? ` ${action.reason}` : ""}`);
+  });
+  document.querySelector("#state-summary").textContent = summary();
+  const event = state.report?.event;
+  document.querySelector("#event-notes").textContent = event
+    ? `${event.name}. ${event.note}`
+    : "The first tide is gathering. Choose a marsh cell, then take one action before the tide turns.";
+  document.querySelector("#report-lines").replaceChildren(...reportLines().map(line => {
+    const item = document.createElement("li");
+    item.textContent = line;
+    return item;
+  }));
+}
+
+function announce(includeReport = true) {
+  const cell = state.cells[selected];
+  const event = state.report?.event;
+  live.textContent = message || `${summary()} Cell ${selected + 1}: ${cell.name} selected. ${cellReadings(cell)}${includeReport ? ` ${event ? `${event.name}. ${event.note} ` : ""}${reportLines().join(" ")}` : ""}`;
+}
+
+function selectCell(index, focus = false) {
+  if (!state) return;
+  selected = index;
+  message = "";
+  render();
+  if (focus) cellControls[index].focus();
+  announce(false);
 }
 
 function act(action) {
-  if (!state || state.finished) return;
+  if (!state) return;
+  const choice = availableActions().find(item => item.id === action);
+  if (!choice) return;
+  if (state.finished || choice.disabled) {
+    message = state.finished ? "Watch complete. Reset to begin another watch." : choice.reason;
+    render();
+    announce();
+    return;
+  }
   try {
     state = JSON.parse(session.take_turn(action, state.cells[selected].id));
     message = "";
@@ -281,53 +371,34 @@ function reset() {
   announce();
 }
 
-function pointerUp(event) {
-  event.preventDefault();
-  const rect = canvas.getBoundingClientRect();
-  const x = (event.clientX - rect.left) * width / rect.width;
-  const y = (event.clientY - rect.top) * height / rect.height;
-  const l = layout();
-  if (x >= l.restart.x && x <= l.restart.x + l.restart.w && y >= l.restart.y && y <= l.restart.y + l.restart.h) {
-    reset();
-    return;
-  }
-  const cardIndex = l.cards.findIndex(card => x >= card.x && x <= card.x + card.w && y >= card.y && y <= card.y + card.h);
-  if (cardIndex >= 0) {
-    selected = cardIndex;
-    message = "";
-    render();
-    announce();
-    return;
-  }
-  const r = l.actions;
-  if (x < r.x || x > r.x + r.w || y < r.y || y > r.y + r.h) return;
-  const gap = l.compact ? 7 : 12;
-  const buttonW = (r.w - 2 * gap) / 3;
-  const index = Math.floor((x - r.x) / (buttonW + gap));
-  const localX = (x - r.x) - index * (buttonW + gap);
-  if (index < 0 || index > 2 || localX > buttonW) return;
-  act(["gate", "shade", "seed"][index]);
-}
-
-canvas.addEventListener("pointerup", pointerUp);
-canvas.addEventListener("keydown", event => {
-  const keys = { "1": 0, "2": 1, "3": 2 };
-  if (event.key in keys) {
-    selected = keys[event.key];
-    message = "";
-    render();
-    announce();
+resetControl.addEventListener("click", reset);
+cellControls.forEach((button, i) => button.addEventListener("click", () => selectCell(i)));
+actionControls.forEach(button => button.addEventListener("click", () => act(button.dataset.action)));
+playfield.addEventListener("keydown", event => {
+  if (!state || !event.target.closest(".game-control") || event.altKey || event.ctrlKey || event.metaKey || event.isComposing || event.repeat) return;
+  if (["1", "2", "3"].includes(event.key)) {
+    event.preventDefault();
+    selectCell(Number(event.key) - 1, true);
   } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-    selected = (selected + (event.key === "ArrowRight" ? 1 : 2)) % 3;
-    render();
-  } else if (event.key.toLowerCase() === "g") act("gate");
-  else if (event.key.toLowerCase() === "h") act("shade");
-  else if (event.key.toLowerCase() === "s") act("seed");
-  else if (event.key.toLowerCase() === "r") reset();
+    event.preventDefault();
+    selectCell((selected + (event.key === "ArrowRight" ? 1 : 2)) % 3, true);
+  } else {
+    const shortcuts = { g: "gate", h: "shade", s: "seed" };
+    const key = event.key.toLowerCase();
+    if (Object.hasOwn(shortcuts, key)) {
+      event.preventDefault();
+      act(shortcuts[key]);
+    } else if (key === "r") {
+      event.preventDefault();
+      reset();
+    }
+  }
 });
 window.addEventListener("resize", resize);
 
 try {
+  resize();
+  if (!context) throw new Error("This browser cannot create the game canvas.");
   await init();
   session = new BrowserSession();
   state = JSON.parse(session.snapshot_json());
@@ -335,8 +406,7 @@ try {
   announce();
 } catch (error) {
   live.textContent = `Longwater could not start: ${String(error)}`;
-  context.fillStyle = palette.night;
-  context.fillRect(0, 0, canvas.width, canvas.height);
-  label("LONGWATER COULD NOT START", 24, 44, 18, palette.rose, 700);
-  label(String(error), 24, 76, 12, palette.paper, 500);
+  const errorMessage = document.querySelector("#startup-error");
+  errorMessage.textContent = live.textContent;
+  errorMessage.hidden = false;
 }
