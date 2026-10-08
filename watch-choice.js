@@ -96,7 +96,20 @@ export class WatchChoice {
   // Every accepted state replacement gets a new token from the game's render path.
   // Cell selection, resize, dialog cancellation and comparison itself keep that token.
   synchronize(stateToken) {
-    if (!stateToken || stateToken === this.#stateToken) return;
+    if (!stateToken) {
+      // A replaced watch can be unavailable to the display. Retire its old
+      // comparison without reading history or allocating a native session.
+      this.#stateToken = undefined;
+      this.#history.length = 0;
+      this.#clearResult("");
+      this.tide.replaceChildren();
+      this.cell.replaceChildren();
+      this.details.open = false;
+      this.form.hidden = true;
+      this.root.hidden = true;
+      return;
+    }
+    if (stateToken === this.#stateToken) return;
     this.#stateToken = stateToken;
     try { this.#load(this.#readHistory()); }
     catch {
