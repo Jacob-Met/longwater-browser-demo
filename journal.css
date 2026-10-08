@@ -1,0 +1,36 @@
+.watch-journal { margin: 22px 0 12px; padding: 22px; border: 1px solid #2a5650; border-radius: 18px; background: #0b2429; line-height: 1.6; }
+.watch-journal h2 { margin: 0 0 12px; color: #e6f0e5; font-size: 1.25rem; }
+.watch-journal h3 { margin: 20px 0 8px; font-size: 1rem; color: #e6f0e5; }
+.watch-journal h4 { margin: 0 0 10px; font-size: .95rem; color: #72e2b4; }
+.watch-journal summary { cursor: pointer; min-height: 44px; padding: 10px 12px; border-radius: 9px; }
+.watch-journal summary:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }
+.watch-journal summary::marker { color: #72e2b4; }
+.journal-toggle { background: #153b3c; font-weight: 650; }
+.journal-count { display: inline-block; margin-left: 14px; color: #a8c1b4; font-size: .9rem; font-weight: 500; }
+.journal-intro, .journal-empty { margin: 16px 0 10px; color: #c9d9ce; }
+.journal-lifetime { margin: 8px 0 18px; color: #a8c1b4; font-size: .85rem; }
+.journal-entries { padding: 0; margin: 20px 0 0; list-style: none; }
+.journal-entries > li + li { margin-top: 10px; }
+.journal-tide { border: 1px solid #2a5650; border-radius: 11px; overflow-wrap: anywhere; }
+.journal-tide > summary { padding: 12px; background: #103238; }
+.journal-choice { font-weight: 650; }
+.journal-event { display: block; margin-left: 20px; color: #a8c1b4; font-size: .9rem; }
+.journal-tide-body { padding: 2px 16px 18px; }
+.journal-event-note { margin: 14px 0; color: #efcb83; }
+.journal-notes { padding-left: 22px; margin: 10px 0 20px; }
+.journal-notes li + li { margin-top: 10px; }
+.journal-resources { color: #c9d9ce; margin: 10px 0 14px; }
+.journal-cells { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.journal-cell { min-width: 0; padding: 14px; border-radius: 10px; background: #123238; }
+.journal-cell dl { margin: 0; font-size: .9rem; }
+.journal-cell dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 12px; margin: 4px 0; }
+.journal-cell dt { color: #a8c1b4; }
+.journal-cell dd { margin: 0; font-variant-numeric: tabular-nums; }
+.journal-recap { padding: 2px 16px 18px; border: 1px solid #7c7045; border-radius: 12px; }
+.journal-recap > h3 { color: #efcb83; }
+@media (max-width: 679px) {
+  .watch-journal { margin: 16px 10px; padding: 16px 12px; }
+  .journal-count { display: block; margin-left: 20px; }
+  .journal-cells { grid-template-columns: 1fr; }
+  .journal-tide-body, .journal-recap { padding-right: 12px; padding-left: 12px; }
+}

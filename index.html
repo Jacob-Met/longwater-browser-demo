@@ -8,6 +8,8 @@
   <meta name="description" content="A fourteen-tide marsh stewardship game. Keep the Longwater alive through the changing tides.">
   <title>Longwater: Fourteen Tides</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./journal.css">
+  <link rel="stylesheet" href="./watch-save.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -26,6 +28,12 @@
       </div>
       <p id="startup-error" hidden></p>
     </div>
+    <section id="watch-storage" aria-label="Watch progress">
+      <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
+      <button id="watch-save-retry" type="button" hidden>Try saving again</button>
+      <p class="save-note">Progress stays in this browser. Reset begins a new watch and replaces the saved one.</p>
+    </section>
+    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>
     <p id="state-summary" class="visually-hidden">The first tide is gathering.</p>
     <div class="visually-hidden" aria-label="Marsh readings">
       <p id="cell-0-readings"></p>
