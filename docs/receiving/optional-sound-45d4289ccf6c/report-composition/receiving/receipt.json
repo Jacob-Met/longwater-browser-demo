@@ -1,0 +1,401 @@
+{
+  "schema": "longwater.optional-sound.landed-report.native-cdp.v1",
+  "status": "passed",
+  "at": "2026-10-08T14:52:00.801Z",
+  "source": "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/source",
+  "sourceCustodySha256": "1bc425cdda07ba621ef6dc8da3c968e38fc0b3bbf7e1f2efa4f39a5e4270c412",
+  "base": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "baseTree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "originalAudioCommit": "0294898793e6a53ea13c21d90fc66d7f2158dc80",
+  "prospectiveTree": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "runtime": {
+    "node": "v22.22.1",
+    "nodePath": "/usr/bin/node",
+    "browserPath": "/snap/chromium/3537/usr/lib/chromium-browser/chrome",
+    "browserSha256": "5d4f4ce28120d4f6ab7566306c26b9a766227ca76da70f44ed322e4ee04b5bbb",
+    "dependencyInstall": false,
+    "profileRoot": "/home/jacob/lw45-r",
+    "transportProvenance": "/home/jacob/recallweave-binary-learner-45d4289ccf6c/packet/receive-binary-course.mjs at ab7be4320ecb22777778fbd06f4414a8165144dca28520245df67d324e4e7568",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/153.0.8010.47",
+      "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+      "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "jsVersion": "15.3.76.12"
+    }
+  },
+  "groups": [
+    {
+      "name": "desktop-http real report download preserves opted-in sound and watch",
+      "status": "passed",
+      "acceptedTurns": 2,
+      "actualDownloads": 1,
+      "nativeAudioContext": true,
+      "gameStateAndSaveUnchangedByDownload": true,
+      "optedInContextAndCueCountUnchangedByDownload": true,
+      "nextAcceptedTurnCued": true,
+      "downloadedReportRemainsImmutableAfterContinuation": true,
+      "downloadedReportSha256": "c3bc264f9d6ceb986acd38c7c32c655a5099dd1fad0de35b33514b74824852fc",
+      "stateCustodySha256": "4064192f3c35640ec705f3c2235fc05703e56e4cadea68abff2470d756761549",
+      "screenshotSha256": "51ea3aba3c2bf10ec83e01476fba84e05366f43f8e5316389813c2c801e4cda3",
+      "geometry": {
+        "viewport": 1280,
+        "documentWidth": 1265,
+        "sound": {
+          "left": 59.5,
+          "right": 179.6875,
+          "width": 120.1875,
+          "height": 44
+        },
+        "report": {
+          "left": 65.5,
+          "right": 287.71875,
+          "width": 222.21875,
+          "height": 47.59375
+        }
+      }
+    },
+    {
+      "name": "offline-320 real report download preserves opted-in sound and watch",
+      "status": "passed",
+      "acceptedTurns": 2,
+      "actualDownloads": 1,
+      "nativeAudioContext": true,
+      "gameStateAndSaveUnchangedByDownload": true,
+      "optedInContextAndCueCountUnchangedByDownload": true,
+      "nextAcceptedTurnCued": true,
+      "downloadedReportRemainsImmutableAfterContinuation": true,
+      "downloadedReportSha256": "c3bc264f9d6ceb986acd38c7c32c655a5099dd1fad0de35b33514b74824852fc",
+      "stateCustodySha256": "65078820ea40dfc501afcfb64f9817a81e665ade0ab3bdd28ca7bed44a8621e3",
+      "screenshotSha256": "8a8774e05e12212202c9d6474fc5eec4070527457e34ed9337ed7d4ba057f6f1",
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "sound": {
+          "left": 17,
+          "right": 137.1875,
+          "width": 120.1875,
+          "height": 44
+        },
+        "report": {
+          "left": 23,
+          "right": 245.21875,
+          "width": 222.21875,
+          "height": 47.59375
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/style.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/journal.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-report.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-trends.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-save.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-audio.css"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/game.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/pkg/longwater_web.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/journal.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-save.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-audio.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-trends.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/watch-report.js"
+    },
+    {
+      "session": "236234CAFCC38F0FC1B879B9AE4C2E47",
+      "url": "http://127.0.0.1:41913/pkg/longwater_web_bg.wasm"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "file:///home/jacob/longwater-sound-45d4289ccf6c/final-qualified/source/downloads/Longwater-Fourteen-Tides.html"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:e36b960ddbb7a9e026a3e1b856b1fa815066d387f96eb38c2f176547a1bb0c53;chars:4477]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:08cde7d7585f1ffced5d4292c29c13c486ac922dd7f1691f580a5b20eb945d48;chars:3309]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:ba8f562d457640c4541627c5b50f8bfae53b86b14282c7dd17d668484b8bece8;chars:785]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:e6dd3092848741c2420f3e621c9226e47b9170403b1c793f7c1ba90bdae9184b;chars:3745]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:489e47787a5e9e589ce1a8c27f44dfd77c0f0be7c52ccbfce7e94db7e0f80dba;chars:653]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:d09faf580ce12dc7c739bd43f0265860ae0f92e99dcec9e821553a3b0a37aef3;chars:1033]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:d5ba1f8126161ee3a25ed044de4924b1ecb12f145807027307a1174bdfa3e303;chars:253940]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:3ced15a166fc5654cd83e5a8474a2c22c07f4c20bd69e33843454f47eacd71c6;chars:11652]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:cb879e4a2d4b836cd57f08cd2068f6058d610d6d4e6373d2eb52b9d9430fb9dc;chars:45700]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:c1ad81e21fc87101ad5035f26e07c795a9a6a123daedd453cc4ed28e86669a70;chars:10020]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:245953bff6e2218c9cfd837383967cde19feeaf1632ddc12c9733cc66a71e88c;chars:7348]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:b29e51768ee4569444d0fc0609865bac2acdd293991b9d2dd6fb6f025f4061fc;chars:15192]"
+    },
+    {
+      "session": "1C83AB0990FDEDB7C3EE5CFE22E70F23",
+      "url": "data:[sha256:f3b3264f091c2c5aa825aa2904fce4f2d7bc4686d2173b55bf086e64d9202275;chars:12492]"
+    }
+  ],
+  "downloadEvents": [
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "FF2805C4585B5E99CE9E820B5AFBDACA",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "url": "blob:http://127.0.0.1:41913/800393e1-bc71-4e10-929a-1bece74e7255",
+      "suggestedFilename": "Longwater-watch-tide-01.html"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "209efe0c-6350-42a8-926a-a5495579ef67",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "completed",
+      "filePath": "/home/jacob/lw45-r/desktop-http-downloads/Longwater-watch-tide-01.html"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "FE850B0429D8191576D4AF7446A1AF29",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "url": "blob:null/df33fe53-e85f-4d45-9066-84193033f8be",
+      "suggestedFilename": "Longwater-watch-tide-01.html"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "09f23da0-2f66-43df-9bbf-56022045d063",
+      "totalBytes": 6480,
+      "receivedBytes": 6480,
+      "state": "completed",
+      "filePath": "/home/jacob/lw45-r/offline-320-downloads/Longwater-watch-tide-01.html"
+    }
+  ],
+  "sourceBefore": {
+    ".github/workflows/smoke.yml": "f67215979d54aae4a3b1150c5d669ddc4f0200db03ded79b967e4187eeff08cf",
+    ".gitignore": "76a8c85c5cde609d309b74ba3cc9c08b776fe95457466c01f364baab341d6b3f",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "57d6f48c14e544a60a4c2ed19dfb9aebf6bb9add87f75d3833590d1c9cc4ef42",
+    "downloads/Longwater-Fourteen-Tides.html": "9fda8d678b96eeaa1d7e2616bd1d9bbb1eb7d8a3420003dac441ec1b9a909f70",
+    "game.js": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+    "index.html": "11e666e695a002e9e0ea992dd52472af0c1993232a15b743a0fb25ab0f487cb0",
+    "journal.css": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+    "journal.js": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+    "package-lock.json": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+    "package.json": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+    "pkg/longwater_web.d.ts": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91",
+    "pkg/longwater_web.js": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "pkg/longwater_web_bg.wasm.d.ts": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e",
+    "scripts/package.mjs": "4aceeec048ef88c2fe755f6351a6bc0629155e04c5ad5c4d636e4708d10920c1",
+    "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+    "tests/browser.test.mjs": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+    "tests/journal.test.mjs": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+    "tests/new-watch.test.mjs": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+    "tests/offline-download.test.mjs": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+    "tests/package.test.mjs": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+    "tests/resume-journal.test.mjs": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+    "tests/server.mjs": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6",
+    "tests/watch-audio.test.mjs": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70",
+    "tests/watch-report.test.mjs": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+    "tests/watch-save.browser.test.mjs": "05b980b2d42b036a3f7cbabb86de4e5428d876b597956fed4eecd1ed3f646fbb",
+    "tests/watch-save.test.mjs": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5",
+    "tests/watch-trends.test.mjs": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+    "watch-audio.css": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5",
+    "watch-audio.js": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb",
+    "watch-report.css": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+    "watch-report.js": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+    "watch-save.css": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+    "watch-save.js": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+  },
+  "sourceAfter": {
+    ".github/workflows/smoke.yml": "f67215979d54aae4a3b1150c5d669ddc4f0200db03ded79b967e4187eeff08cf",
+    ".gitignore": "76a8c85c5cde609d309b74ba3cc9c08b776fe95457466c01f364baab341d6b3f",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "57d6f48c14e544a60a4c2ed19dfb9aebf6bb9add87f75d3833590d1c9cc4ef42",
+    "downloads/Longwater-Fourteen-Tides.html": "9fda8d678b96eeaa1d7e2616bd1d9bbb1eb7d8a3420003dac441ec1b9a909f70",
+    "game.js": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+    "index.html": "11e666e695a002e9e0ea992dd52472af0c1993232a15b743a0fb25ab0f487cb0",
+    "journal.css": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+    "journal.js": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+    "package-lock.json": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+    "package.json": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+    "pkg/longwater_web.d.ts": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91",
+    "pkg/longwater_web.js": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "pkg/longwater_web_bg.wasm.d.ts": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e",
+    "scripts/package.mjs": "4aceeec048ef88c2fe755f6351a6bc0629155e04c5ad5c4d636e4708d10920c1",
+    "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+    "tests/browser.test.mjs": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+    "tests/journal.test.mjs": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+    "tests/new-watch.test.mjs": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+    "tests/offline-download.test.mjs": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+    "tests/package.test.mjs": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+    "tests/resume-journal.test.mjs": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+    "tests/server.mjs": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6",
+    "tests/watch-audio.test.mjs": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70",
+    "tests/watch-report.test.mjs": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+    "tests/watch-save.browser.test.mjs": "05b980b2d42b036a3f7cbabb86de4e5428d876b597956fed4eecd1ed3f646fbb",
+    "tests/watch-save.test.mjs": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5",
+    "tests/watch-trends.test.mjs": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+    "watch-audio.css": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5",
+    "watch-audio.js": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb",
+    "watch-report.css": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+    "watch-report.js": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+    "watch-save.css": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+    "watch-save.js": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+  },
+  "cleanup": {
+    "browserExit": {
+      "code": 0,
+      "signal": null
+    },
+    "serverClosed": true,
+    "ownProfileRemoved": true,
+    "tempEntries": [],
+    "ownTempRootRemoved": true,
+    "sourceUnchanged": true
+  },
+  "finished": "2026-10-08T14:52:08.284Z",
+  "receiverSha256": "87d676f34d9292d5cca42dc25d4338b4f11a8ce5049df4adce2a415f4581ed31"
+}
