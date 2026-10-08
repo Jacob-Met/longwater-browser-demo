@@ -1,0 +1,29 @@
+{
+  "base": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "liveUrl": "https://jacobmetoyer.com/longwater-browser-demo/",
+  "existingPagesRun": {
+    "id": 37757226905,
+    "head_branch": "longwater-demo",
+    "head_sha": "b4c3b82e61c654d27c592c17ee161fd404602150",
+    "path": "dynamic/pages/pages-build-deployment",
+    "event": "dynamic",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "allowedDeploymentBranches": [
+    "gh-pages",
+    "longwater-demo"
+  ],
+  "anonymousPagesMetadata": {
+    "httpStatus": 404,
+    "interpretation": "API visibility limit, not absent hosting configuration"
+  },
+  "oldPackagerOutputLiveProbe": {
+    "url": "https://jacobmetoyer.com/longwater-browser-demo/dist/Longwater-Fourteen-Tides.html",
+    "httpStatus": 404
+  },
+  "releaseLatestProbe": {
+    "httpStatus": 404
+  },
+  "candidateServingAcceptance": "Pending merge and existing Pages delivery; local loopback download receiving does not establish live serving."
+}

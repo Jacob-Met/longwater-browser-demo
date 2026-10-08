@@ -1,0 +1,344 @@
+{
+  "owner": "estate-c945953fdeb7/product_delivery",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "base": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "baseTree": "5123f432300382718e4fc7294deddf6d30acd0a5",
+  "qualifiedNativeSource": "909e47d7b49e2b491d344ec7ddb338d48cc8855e",
+  "qualifiedNativeTree": "002e73b47293637ca66f0fd2eb1f4f6df8996bab",
+  "declaredFiles": {
+    "README.md": {
+      "base": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "48eccc6644e0d5b3917d2851f486dcec1fa8caea"
+      },
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "077d3f11059e276c55ef265d202df9bac796a687"
+      },
+      "sha256": "d65281019e4e73d6e73bdb864da3fab38d4893fa097e87574a72af041cbe8b30",
+      "bytes": 8859
+    },
+    "downloads/Longwater-Fourteen-Tides.html": {
+      "base": null,
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "66502482ed6ea0ad046afd1a6464d11ed92ff3e3"
+      },
+      "sha256": "3a0c502b44a2af8f6a2718041f4cbe95c6951a68475b58b711629f370d665407",
+      "bytes": 203432
+    },
+    "index.html": {
+      "base": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "f58865f845e42b4ea1b43cc3034b02d4c4a324ae"
+      },
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "0f0db4d79b4b6b8aa3ca64c6221685468ef8c3d3"
+      },
+      "sha256": "52cdded53082734166147cecb868630a3cb9ea552c075b1afe081dee571aeaff",
+      "bytes": 4948
+    },
+    "scripts/package.mjs": {
+      "base": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "6742cc2c3b7a6aab8458e7d998138aa9682197c1"
+      },
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "060f150956c49d01669350a44b090e80efac3fb3"
+      },
+      "sha256": "4cb8fe0bf6b7c3bd786e03ba66afe04b2ea4eb355ff9054c6394ed45a80578e4",
+      "bytes": 2912
+    },
+    "style.css": {
+      "base": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "321c5a7fc932eabfb438713cdfc0b9d45c88d3f3"
+      },
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8"
+      },
+      "sha256": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95",
+      "bytes": 2366
+    },
+    "tests/offline-download.test.mjs": {
+      "base": null,
+      "candidate": {
+        "mode": "100644",
+        "kind": "blob",
+        "blob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01"
+      },
+      "sha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+      "bytes": 8832
+    }
+  },
+  "unchangedParentLeaves": {
+    ".github/workflows/smoke.yml": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "5e591a2c783d26cae9c4e2b1986bbe4931257380"
+    },
+    ".gitignore": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7"
+    },
+    ".nojekyll": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/qualification/offline-watch-566d51f04b31/README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c2de3671bb713a310c948a1648281b5830043831"
+    },
+    "docs/qualification/offline-watch-566d51f04b31/joined-candidate-suite.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "8e5991bffb71b3a2f46d08c874990e99e0d03214"
+    },
+    "docs/qualification/offline-watch-566d51f04b31/old-packager-baseline.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "3cf543150fbe681dd2a98b542e4efd45db8339db"
+    },
+    "docs/qualification/offline-watch-566d51f04b31/run.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c23860b6c1c2136756b0ed2ee4393a12e23e67cd"
+    },
+    "docs/qualification/offline-watch-566d51f04b31/source-verification.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "b64f0247c98a843b21aca4eb4982698b4ad2a0c3"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "735a64c343b6ecdc9a80afb83e606d1fa73e2e79"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/author-inputs.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "50dbe0ebf4eae8c7dbf1ffb9b50a9cb985165bd7"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/before.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "47a41299286d672ff8a4d6c326e7108eb5a5ea4e"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/files.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "146d941833205329ac9e66364f7b37e2dc4db75f"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/receipts.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "4164e686771582d6795b4035d4cdb73da567a616"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/resumed-phone.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "71590f198d8e154883a01716ba1163ac8d9e18c7"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "03ee1e09c5c59619858f00c823c1a8bbdb1a7512"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/header-layouts.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "4f22de6d444a23d8ce2d4ebfa4cae61b23136e0b"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/transcript.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e07ba8bd61771b5f883cf6305bda1fc80d83aed1"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-1280.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "03562efc5ea475e712fdf9ea680db95c3c37dded"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-320.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d926b7fa8f15e4815c4576451ab10a79f4d75987"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-390.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "6912607a703132878b5779036255aa095ef76d57"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/final-project-tests.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "7cf1db419575dfe45f8b4590da0f6e31466891a2"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/late-received-inputs.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "98cd0f49877a021d6d23750a566238af8f5c3f2c"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/received-header.patch": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "41034cc1801127cfc4b3e17b4e5b6fc1b2b13dd7"
+    },
+    "docs/qualification/resume-journal-3e50c5ad22c5/source-and-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c17f4ca225170bfa452ae89100d90aeadf87baa3"
+    },
+    "game.js": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "eb0991d3bc70577a3864e8eb2eaf2a3ce9a7ec4a"
+    },
+    "journal.css": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    "journal.js": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "51ce5f52bdc74bf4e2c368e369961ed592099426"
+    },
+    "package-lock.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "7a89ee5d7b73496d9dafc85a93184182f6f14026"
+    },
+    "package.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    "pkg/longwater_web.d.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "b13d183c5d8982d689c33b4195a797bebff4ede5"
+    },
+    "pkg/longwater_web.js": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    "pkg/longwater_web_bg.wasm": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    "pkg/longwater_web_bg.wasm.d.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "12f7f1826bc094fabfb3674665863d62884105bb"
+    },
+    "screenshots/desktop.png": {
+      "mode": "100755",
+      "kind": "blob",
+      "blob": "e1954b199165b978dfdab2d9eaf1c5a245c37463"
+    },
+    "screenshots/phone.png": {
+      "mode": "100755",
+      "kind": "blob",
+      "blob": "57d7d16fada051808d0efe46e5057c4888071632"
+    },
+    "tests/browser.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "7ceb05040d243cf844f12c1aba157d14327894e0"
+    },
+    "tests/journal.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "fd21553c02b93ce04e45b4fb88a83c4b09af85ff"
+    },
+    "tests/package.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "5252cf7c6af4e3b625879d35ea99399dadd04c2b"
+    },
+    "tests/resume-journal.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "606b177e302414a465f2292452ae7caea3d792cf"
+    },
+    "tests/server.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070"
+    },
+    "tests/watch-save.browser.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "3e5321437110b99280b8b89099e507c046325a7e"
+    },
+    "tests/watch-save.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "05bd8b8b9fe277285afdacf391f08e9f792808cd"
+    },
+    "watch-save.css": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    "watch-save.js": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "cc802ddd6041b76c7a491b487463636b82fda508"
+    }
+  },
+  "unchangedParentLeafCount": 44,
+  "baselineAndCandidateReceiverSame": true,
+  "evidence": {
+    "baseline-receipt.json": {
+      "sha256": "b4392c5e7de3e2ca5a1c05e7535c2a28641368af9f41b3a9bc15ca58c3ec5ec4",
+      "bytes": 3744
+    },
+    "online-before-download.png": {
+      "sha256": "b9f43721a7769bccfbbfc9088a9833873b97dede234f29ce4120e7b093246d75",
+      "bytes": 161428
+    },
+    "candidate.log": {
+      "sha256": "aa300ce0d3a25e20a0e0272cef0d757a49102bf7d04844cc4a1b701be8baa9ba",
+      "bytes": 301
+    },
+    "downloaded-watch-reopened.png": {
+      "sha256": "73a7e0e68ccfd125afd296dce3674fb3b4f599cdb020eaeeba7ed1c68d6a6266",
+      "bytes": 157328
+    },
+    "download-phone.png": {
+      "sha256": "643f6f724a4e0f40245542d98836cfc4a76127aa3b8039e9d623881bb0fa23f8",
+      "bytes": 103624
+    },
+    "baseline.log": {
+      "sha256": "0acdbca4d548d6e66385b804e17667cf47644047a3d70dd1f8802b8f8148a1ca",
+      "bytes": 912
+    },
+    "candidate-receipt.json": {
+      "sha256": "5f11c3cc1dda93e8c29bf7a782674eaf8008257ff258f33f6212947d111e38fb",
+      "bytes": 8412
+    },
+    "artifact.json": {
+      "sha256": "78418f4e3021f561627de945184cc11fca18aba33825a2d2bac2c85fa993e901",
+      "bytes": 434
+    }
+  }
+}

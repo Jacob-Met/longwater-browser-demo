@@ -1,0 +1,7 @@
+{
+  "claim": "https://github.com/Jacob-Met/longwater-browser-demo/issues/11",
+  "sharedPackagerCoordination": "https://github.com/Jacob-Met/longwater-browser-demo/issues/10#issuecomment-6059293442",
+  "estateCoordination": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6059304752",
+  "priorOwnerCompletion": "https://github.com/Jacob-Met/longwater-browser-demo/issues/5#issuecomment-6057357629",
+  "sharedWork": "Watch trends #10 owns its modules/journal hooks and packager inclusion. Later runtime integration must regenerate the checked-in offline artifact and pass freshness receiving."
+}

@@ -31,6 +31,12 @@ for (const name of modules) {
 }
 game = replaceOnce(game, "await init();", `await init({ module_or_path: Uint8Array.from(atob(${JSON.stringify(files.get("pkg/longwater_web_bg.wasm").toString("base64"))}), c => c.charCodeAt(0)) });`);
 let html = text("index.html");
+const downloadPanels = html.match(/    <!-- offline-download:start -->[\s\S]*?    <!-- offline-download:end -->/g) ?? [];
+if (downloadPanels.length !== 1) throw new Error("Packaging expected exactly one online download panel.");
+html = replaceOnce(html, downloadPanels[0], `    <section id="offline-copy" class="offline-copy" aria-labelledby="offline-copy-title">
+      <h2 id="offline-copy-title">Your offline copy</h2>
+      <p>When the save message confirms success, reopen this same file in this browser to resume your watch and its journal.</p>
+    </section>`);
 for (const name of styles) {
   html = replaceOnce(html, `href="./${name}"`, `href="${dataUrl("text/css", files.get(name))}"`);
 }
