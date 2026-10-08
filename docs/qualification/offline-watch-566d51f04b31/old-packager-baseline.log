@@ -1,0 +1,33 @@
+✖ the packaged watch plays and restores its complete journal offline (5786.662459ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6038.71425
+
+✖ failing tests:
+
+test at tests/package.test.mjs:7:1
+✖ the packaged watch plays and restores its complete journal offline (5786.662459ms)
+  AssertionError [ERR_ASSERTION]: the embedded modules load without script errors
+  + actual - expected
+  
+  + [
+  +   `Failed to resolve module specifier "./journal.js". Invalid relative url or base scheme isn't hierarchical.`
+  + ]
+  - []
+  
+      at open (file:///Users/me/longwater-joined-author-566d51f04b31/tests/package.test.mjs:24:12)
+      at async TestContext.<anonymous> (file:///Users/me/longwater-joined-author-566d51f04b31/tests/package.test.mjs:30:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ `Failed to resolve module specifier "./journal.js". Invalid relative url or base scheme isn't hierarchical.` ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

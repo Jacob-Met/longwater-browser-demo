@@ -21,7 +21,7 @@ jobs:
           set -e
           # .nojekyll is legitimately empty; everything else must be non-empty.
           test -e .nojekyll || { echo "missing: .nojekyll"; exit 1; }
-          for f in index.html style.css game.js \
+          for f in index.html style.css game.js journal.js journal.css watch-save.js watch-save.css \
                    pkg/longwater_web.js pkg/longwater_web.d.ts \
                    pkg/longwater_web_bg.wasm pkg/longwater_web_bg.wasm.d.ts; do
             test -s "$f" || { echo "missing or empty: $f"; exit 1; }
@@ -30,3 +30,15 @@ jobs:
           grep -q '\./game.js' index.html
           grep -q '\./style.css' index.html
           echo "smoke OK"
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install browser test dependencies
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Play and resume the real WASM watch, including offline packaging
+        run: npm test

@@ -1,0 +1,19 @@
+# Longwater: offline distribution of the received watch
+
+The package builds the combined game received in PR #8 at `21bcaa69ee368b9feea60a053cd3bf2421b5d9a0`, tree `a04f177d3cb256673bfd8afcadec419cdd5ccc6b`. The native packaging commit is `5635fd30331e7848e6da68bdd2ef83954dc05ebf`, tree `824c2218f12558995e7b60cfc97788f1af8a145f`. Six files add deterministic packaging, its actual browser test, the browser CI gate and usage documentation. All product modules, styles and the original WASM remain unchanged from the received game.
+
+The receiving tree combines semantic controls from `chatgpt-566d51f04b31-root`, the narrow header correction from `estate-b0e250296538`, the Watch journal from `chatgpt-401c5d17da79-production`, and bounded browser saving from `chatgpt-ff300ccd4fe0-root`. `chatgpt-3e50c5ad22c5-production` received these sources and connected the admitted native replay to the journal. Original custody, the journal-restoration negative control and 39 project plus 6 independent receiving cases are retained in the adjacent `resume-journal-3e50c5ad22c5` directory. This child preserves that complete source and the `tests/*.test.mjs` test glob.
+
+## Actual package acceptance
+
+On 2026-10-08, an isolated real Git checkout of exact PR #8 received the six packaging files. The receiver verified all 43 final source and evidence blobs before and after running the full project suite with Node 26.3.0, Playwright 1.62.1 and installed Chrome 154.0.8037.98. All **40 tests passed**, exit 0, in 12.583 seconds. `joined-candidate-suite.log` preserves every case.
+
+The new offline case opens the single HTML through `file://` with networking disabled. It plays Gate on South Reach, verifies the saved day and native field notes, closes and reopens the page, checks exact restored readings and the complete journal text, resets, and reopens once more to confirm the reset was persisted. All assets must be embedded: requests to other files or the network fail the test. The journal stylesheet is also checked through its computed border. There are no uncaught script errors. Two independent builds must have the same SHA-256.
+
+The identical new test was first run against the earlier five-input packager. It failed with `Failed to resolve module specifier "./journal.js"`, because the joined source added journal and save dependencies. `old-packager-baseline.log` preserves this actual failure. The complete nine-input packager passes without changing the game. The original five-input build remains valid only for its original semantic-only source.
+
+The final single HTML is **202,301 bytes**, SHA-256 `73663a6dc3e341d249e852cf4bb5b614b83928c235ec27c5ecb428507d938145`. Its combined runtime-input SHA-256 is `d71c03d7b30ffeb3b456a3861cbdb729716aa53ff155065203f0610576e99613`. A separate local build matches the native Mac artifact byte-for-byte. The nine inputs and their file pins are in `run.json` and `source-verification.json`. The WASM retains SHA-256 `76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2`.
+
+The fresh 320-pixel touch screenshot was visually inspected: the separated header, cell readings, complete accessible report, action row, save status and journal fit without horizontal clipping. The full suite also repeats desktop controls, all fourteen tides, journal review, save failure/retry, corrupt saves, divergent tabs and startup refusal. Native complete evidence and screenshots remain at `/Users/me/longwater-joined-author-566d51f04b31-evidence` and the isolated checkout's `test-results` directory.
+
+Qualification covers this Chrome version and browser touch emulation. Physical phones and actual assistive-technology acceptance remain separate. Local-file save availability follows the browser's storage policy; the shipped interface reports failures. Cross-tab admission protects observed divergent saves but does not make simultaneous writes transactional. No subjective product or usability acceptance is inferred.
