@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-08T19:33:01.202169+00:00",
+  "pid": 828923,
+  "kind": "preparation source-inventory refusal",
+  "error": "KeyError: 'package-lock.json'",
+  "location": "build-hosted-adapter.py line17",
+  "cause": "Initial separately selected Git tree list mistakenly included pkg/longwater_web_bg.wasm.d.ts instead of package-lock.json. The immutable receiving manifest remained authoritative and the equality check stopped.",
+  "correction": "Use the exact28 paths of the existing frozen manifest when selecting publicGit tree entries. No receiving source, fixture, oracle, product or browser execution changed.",
+  "attempt_timestamp": "not captured by the remote process response"
+}
