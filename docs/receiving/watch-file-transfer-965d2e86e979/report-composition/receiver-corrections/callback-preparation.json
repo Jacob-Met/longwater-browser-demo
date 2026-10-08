@@ -1,0 +1,7 @@
+{
+  "failed_script_sha256": "ec76e31f4552cc2ea0816590a2edf4b27fbef0cd7a54d8d265ae2929de47b32a",
+  "failure": "The prepared mutation script expected six-space callback indentation; the exact source uses eight. Its single-occurrence assertion refused before any source write or test execution.",
+  "source_unchanged_at_refusal": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+  "correction": "Use the actually read eight-space span; retain the exact pre-fix source and failure receipt.",
+  "product_failure": false
+}

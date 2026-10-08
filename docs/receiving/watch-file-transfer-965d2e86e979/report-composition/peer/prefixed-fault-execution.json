@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/post-adoption-report-peer.mjs",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/prefixed",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/prefixed-receiving.json",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/prefixed-fault"
+  ],
+  "started": "2026-10-08T15:08:44.861Z",
+  "finished": "2026-10-08T15:08:46.190Z",
+  "status": 1,
+  "signal": null,
+  "error": null,
+  "stdout": "{\"accepted\":false,\"passed\":17,\"failed\":1,\"failingChecks\":[\"stale journal and downloadable report are hidden after adoption failure\"],\"resultSha256\":\"26ec832ea6784eecb66b3bd1893bf337ddbd9f96a1c0cd6b2853aff6aa1ff59a\",\"childrenClosed\":true}\n",
+  "stderr": ""
+}

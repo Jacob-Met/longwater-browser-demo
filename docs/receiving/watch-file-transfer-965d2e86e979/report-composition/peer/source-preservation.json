@@ -1,0 +1,38 @@
+{
+  "format": "hamon-independent-source-preservation/1",
+  "canonicalCommit": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "canonicalTree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "incomingFiles": 135,
+  "preservedIncomingFiles": 126,
+  "expectedR5CompositionOverlaps": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/browser.test.mjs",
+    "tests/package.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "watch-save.js"
+  ],
+  "preFix": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+  "fixed": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "preFixFiles": 162,
+  "fixedFiles": 162,
+  "changedAfterFault": [
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "tests/watch-file.browser.test.mjs"
+  ],
+  "exactR5Runtime": [
+    "game.js",
+    "watch-save.js",
+    "watch-file.js",
+    "watch-file.css"
+  ],
+  "singleLineGameInverse": true,
+  "originalFaultTestFullInverse": true,
+  "reportOwnerModuleTestAndEvidenceBytesPreserved": true,
+  "artifactReceipt": "fixed-artifact-reproduction.json",
+  "scope": "Independent exact source custody, report API compatibility and owned callback/test inverse. Existing owner report internals are received unchanged; full composition/browser acceptance is recorded separately by /root/receiving_verification."
+}

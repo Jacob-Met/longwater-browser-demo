@@ -1,0 +1,399 @@
+{
+  "created_at": "2026-10-08T15:11:28.316959+00:00",
+  "refs": {
+    "common": "436deface944e881543f2a71d27ba7c07d2f6f25",
+    "r5": "88484be670a2418ef62c072a8dd8c0b77378f9b5",
+    "report": "8bfa11fc68e4c6c5a2bb9ea9dec41dab66173165",
+    "prefixed": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+    "candidate": "6483543d13e1f0dade3eca18e359d1080f05a1b6"
+  },
+  "trees": {
+    "common": "b825a333b9d7f73a73b801f517b07c256aea5934",
+    "r5": "bcd4c960a2d4840984969c9d23262fcf9419d5c2",
+    "report": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+    "prefixed": "8fc01dff05e01ba2f5764b269d7675976e699f73",
+    "candidate": "ee897713a77123186959e89e5d43a3e7b10aaa2b"
+  },
+  "changed_existing_paths": {
+    "r5": [
+      "README.md",
+      "downloads/Longwater-Fourteen-Tides.html",
+      "game.js",
+      "index.html",
+      "journal.js",
+      "scripts/package.mjs",
+      "tests/browser.test.mjs",
+      "tests/package.test.mjs",
+      "tests/watch-file.browser.test.mjs",
+      "tests/watch-save.browser.test.mjs"
+    ],
+    "report": [
+      "README.md",
+      "downloads/Longwater-Fourteen-Tides.html",
+      "game.js",
+      "index.html",
+      "scripts/package.mjs",
+      "tests/browser.test.mjs",
+      "tests/package.test.mjs",
+      "tests/watch-save.browser.test.mjs",
+      "watch-save.js"
+    ],
+    "prefixed": [
+      "downloads/Longwater-Fourteen-Tides.html",
+      "game.js",
+      "tests/watch-file.browser.test.mjs"
+    ]
+  },
+  "preserved_existing_counts": {
+    "r5": 124,
+    "report": 126,
+    "prefixed": 159
+  },
+  "candidate_leaves": 162,
+  "game_one_line_inverse_to_R5": true,
+  "all12_original_R5_test_modules_and_statements_preserved": true,
+  "test_inverse_proofs": [
+    {
+      "path": "tests/browser.test.mjs",
+      "r5_git_blob": "939418bcd55cae9996c9f4173b022a029031b874",
+      "candidate_git_blob": "c1c1c85a404fad4d8894534187a884a6ded4de9f",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 2
+    },
+    {
+      "path": "tests/journal.test.mjs",
+      "r5_git_blob": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6",
+      "candidate_git_blob": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/new-watch.test.mjs",
+      "r5_git_blob": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10",
+      "candidate_git_blob": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "r5_git_blob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01",
+      "candidate_git_blob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "r5_git_blob": "1c4625b5d8a7dac5f18052be2a5b9bf4f3996d5c",
+      "candidate_git_blob": "e7a43790537e085b85b69b8e4de60e56d415197a",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 2
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "r5_git_blob": "d00a431b81d462ac2585c7fe3b7e661134c5952d",
+      "candidate_git_blob": "d00a431b81d462ac2585c7fe3b7e661134c5952d",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/watch-file-trends.test.mjs",
+      "r5_git_blob": "e5232239004b54c17d160e1b3168c5331ba4fbe5",
+      "candidate_git_blob": "e5232239004b54c17d160e1b3168c5331ba4fbe5",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/watch-file.browser.test.mjs",
+      "r5_git_blob": "3adfc8d1e99b5766cc2ed64df74946de26aac64d",
+      "candidate_git_blob": "54ddd8f212f3522d87257e515060e09fa15511b1",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 3
+    },
+    {
+      "path": "tests/watch-file.test.mjs",
+      "r5_git_blob": "6e377b2f6a2d748fbbc1c8e7e1d44a8ed44ef9af",
+      "candidate_git_blob": "6e377b2f6a2d748fbbc1c8e7e1d44a8ed44ef9af",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "r5_git_blob": "ccf9669fe1ae81ddd05bb401f700c03139e6afc5",
+      "candidate_git_blob": "2ac1263a95c72bf68607e4acf001b8e4437bdc20",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 2
+    },
+    {
+      "path": "tests/watch-save.test.mjs",
+      "r5_git_blob": "05bd8b8b9fe277285afdacf391f08e9f792808cd",
+      "candidate_git_blob": "05bd8b8b9fe277285afdacf391f08e9f792808cd",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "r5_git_blob": "dab952c5f832c4b83492e47aaec8d42a4976cf0b",
+      "candidate_git_blob": "dab952c5f832c4b83492e47aaec8d42a4976cf0b",
+      "exact_original_or_inverse": true,
+      "additive_blocks": 0
+    }
+  ],
+  "documentary_preservation": [
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/README.md",
+      "mode": "100644",
+      "git_blob": "acaabc12ded27ee044303d135c5181f210d90652"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/evidence.tar.gz",
+      "mode": "100644",
+      "git_blob": "af64ee6cddb1b46a4a3b416c9d2e1bb92cff1603"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/README.md",
+      "mode": "100644",
+      "git_blob": "0ceca3ed9e5ee39554c343a0dc59668cc738ca99"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/current-head-addendum.json",
+      "mode": "100644",
+      "git_blob": "bacf29358ba00ad7589b7419413588021dddb042"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/driver-result.json",
+      "mode": "100644",
+      "git_blob": "e76afd9c8fa2e71f93bfb2ff7fdd83a8fd6d0d30"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/failed-display-actual-download.json.source",
+      "mode": "100644",
+      "git_blob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/files.json",
+      "mode": "100644",
+      "git_blob": "338e0ec7e0748c4f05ce0129050f5081fa48f178"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/github-source-summary.json",
+      "mode": "100644",
+      "git_blob": "3cf65a431e812dd613889a791e1f53a2043a873f"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json",
+      "mode": "100644",
+      "git_blob": "760cea9c6a571311d35b925f1fc7e71c1dd60553"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr20.json",
+      "mode": "100644",
+      "git_blob": "4b2ae5a2c074c25acc278856742eaa11078efdb0"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/integration-seams-review.json",
+      "mode": "100644",
+      "git_blob": "75e5e47aa80715c18bdd1ccdad7c3c67cacedd80"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/native-dependency.json",
+      "mode": "100644",
+      "git_blob": "7da3226bb1058a270e061cd03bfb1231df23f116"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source",
+      "mode": "100644",
+      "git_blob": "07030061d214cfeb6875f13a4f4fca751c25428d"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.json",
+      "mode": "100644",
+      "git_blob": "82d7bb06ba5214679f1222ae136b1bc868d9ce3b"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.log",
+      "mode": "100644",
+      "git_blob": "83dfe53fe1a59b89da2ee8c4c478e54b8774d62b"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/source-custody.json",
+      "mode": "100644",
+      "git_blob": "cf13d48115d232522956e2c5716cf3877bcfa9d0"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/manifest.json",
+      "mode": "100644",
+      "git_blob": "6f42f0cfa67640ecb83401d7a424df56da88ea0b"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/peer-review/receiving.json",
+      "mode": "100644",
+      "git_blob": "e58398116853c6657673ae82cf762981cd53e22f"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/receiving.json",
+      "mode": "100644",
+      "git_blob": "8f99822097512cbe1bf935cc69e14bc49a34bd89"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/runtime-inputs.json",
+      "mode": "100644",
+      "git_blob": "29dba8f3d19b49b124d48daf1cd926a6153b836d"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/source-manifest.json",
+      "mode": "100644",
+      "git_blob": "ba6f95956cd98127011c40c8b18157ed35d23a08"
+    }
+  ],
+  "all21_R5_docs_exact": true,
+  "incoming_report_preservation": [
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/README.md",
+      "mode": "100644",
+      "git_blob": "a4e0fc15fa340d3db34a785330a37d8cb62555b3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-full-suite.json",
+      "mode": "100644",
+      "git_blob": "c810eb7c75a85bebe89f507d0b1698371ddb9925"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-full-suite.txt",
+      "mode": "100644",
+      "git_blob": "d38f2eeddd27f41e82eb4023bc9bc76923046cce"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-package.json",
+      "mode": "100644",
+      "git_blob": "c51b7437c8f1616aad8764803b84dd7ac91eeab3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/final-full-suite.json",
+      "mode": "100644",
+      "git_blob": "3ccba336039bc5701314c8f564638753bcd75324"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/final-full-suite.txt",
+      "mode": "100644",
+      "git_blob": "8df9ea5c18b2382cf34acc6369f267702ed7f4c0"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/full-suite.json",
+      "mode": "100644",
+      "git_blob": "de39641d6878186132479ad376215e99b37b3fdd"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/full-suite.txt",
+      "mode": "100644",
+      "git_blob": "1c9ae1a32f10ce6ade127ea708e7bc87d711b9ac"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/keyboard-diagnostic.json",
+      "mode": "100644",
+      "git_blob": "eafcfd45113bc9cb6da17ef541b8b85e39d8f909"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.json",
+      "mode": "100644",
+      "git_blob": "f4ee99039fb944bfc631fb83aa27f7edac03e96d"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.mjs",
+      "mode": "100644",
+      "git_blob": "ef4787b5e1ebe4d1983a1eaf82ce80d60aac381f"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/first-focused.txt",
+      "mode": "100644",
+      "git_blob": "d7aca9412fbfdd6d27d700777de12f0427450327"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.json",
+      "mode": "100644",
+      "git_blob": "8b8b12016e5777c3cf7c3c908aba7ca237c8f056"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.txt",
+      "mode": "100644",
+      "git_blob": "730e0b0ca167b120ef327f764f494968c5464e3f"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/source-freeze.json",
+      "mode": "100644",
+      "git_blob": "f1176395d4b850823a54875c69168b37f012552a"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/manifest.json",
+      "mode": "100644",
+      "git_blob": "5f0603f1642af5ba63e2069e0f73c336799b007e"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/native-bundle-verification.txt",
+      "mode": "100644",
+      "git_blob": "e3aac702de27a5bd0631cdb7b4c7d930d2184f85"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/native-source.bundle",
+      "mode": "100644",
+      "git_blob": "9a8ff1c6e41b200fbd0f771071aaa2dab5e7a57c"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/package.json",
+      "mode": "100644",
+      "git_blob": "a7efdc4a08c3e996ab0dc6fc4ef8c87a15a3e2f0"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze-0df34ae.json",
+      "mode": "100644",
+      "git_blob": "ef4d9b5678dba53dbbb4020aaa0d0fcc5fd0ada8"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze-260d00a.json",
+      "mode": "100644",
+      "git_blob": "e6c735fe62a39ee02fc2ca2ab604fd783452b4c3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze.json",
+      "mode": "100644",
+      "git_blob": "bf2f8bc39f0cccf8e99a977f2e640f9a27e7d8d6"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/watch-report-phone.png",
+      "mode": "100644",
+      "git_blob": "1afdbcdcf1f38b52fb3e6e25b19f5f239b7f9745"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/watch-report-readable.png",
+      "mode": "100644",
+      "git_blob": "07c011b61946a6520882fe1fbe1b91fb47114108"
+    },
+    {
+      "path": "journal.js",
+      "mode": "100644",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "mode": "100644",
+      "git_blob": "d835b6f14e0cd78b3a9c293d2ac3199ffcb82909"
+    },
+    {
+      "path": "watch-report.css",
+      "mode": "100644",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "mode": "100644",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    }
+  ],
+  "report_owner_runtime_and_evidence_exact": true,
+  "packager_inverse_to_incoming_exact": true,
+  "simulation_and_file_core_bytes_exact": true,
+  "README_index_three_way_proofs_unchanged": "prefixed-composition-proof.json",
+  "limitations": [
+    "Source and byte/mode proof only; actual native full-suite and independent browser fault results are separate receipts.",
+    "Historical-choice PR19 runtime is absent; its 14 historical seam witness files are preserved as evidence, not acceptance of that future composition."
+  ]
+}

@@ -29,6 +29,8 @@ test("the packaged watch plays and restores its complete journal offline", async
   try {
     let page = await open();
     assert.equal(await page.locator("#playfield button").count(), 7);
+    assert.equal(await page.locator(".game-control").count(), 7);
+    assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);
     assert.equal(await day(page), 0);
     await page.getByRole("button", { name: /^Cell 3:/ }).click();
     await page.getByRole("button", { name: /^Gate/ }).click();

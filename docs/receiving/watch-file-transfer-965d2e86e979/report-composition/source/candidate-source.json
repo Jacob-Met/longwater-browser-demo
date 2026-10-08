@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-08T15:10:24.054600+00:00",
+  "source": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source",
+  "head": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "predecessor": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+  "leaves": 162,
+  "manifest_sha256": "8841ce575aa8fe352d61ffa75ddba779ec2fbc1aa61ae3ab2a9e7ce1e4b821c5",
+  "artifact": {
+    "file": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/downloads/Longwater-Fourteen-Tides.html",
+    "bytes": 280929,
+    "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+    "sourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "changed_paths_from_prefixed": [
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "tests/watch-file.browser.test.mjs"
+  ],
+  "syntax_only": [
+    {
+      "path": "game.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "tests/watch-file.browser.test.mjs",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "tests/watch-file-report.test.mjs",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests_executed": false,
+  "game_inverse_exact": true,
+  "original_fault_test_statements_preserved": true,
+  "incoming_report_owner_modules_unchanged": true
+}

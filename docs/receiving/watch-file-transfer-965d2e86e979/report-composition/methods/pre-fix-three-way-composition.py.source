@@ -1,0 +1,55 @@
+import subprocess,json,hashlib,os,datetime
+from pathlib import Path
+root=Path('/Users/me/hamon-longwater-watch-file-r6-965d2e86e979');s=root/'source'
+base='436deface944e881543f2a71d27ba7c07d2f6f25';ours='88484be670a2418ef62c072a8dd8c0b77378f9b5';incoming='8bfa11fc68e4c6c5a2bb9ea9dec41dab66173165'
+def g(*a):return subprocess.check_output(['git','--no-optional-locks','-C',str(s),*a])
+assert g('rev-parse','HEAD').decode().strip()==ours
+assert not g('status','--porcelain')
+p=subprocess.run(['git','-C',str(s),'fetch','--no-tags','/Users/me/hamon-longwater-report-peer-965d2e86e979/report',incoming],capture_output=True,text=True,check=True)
+assert g('rev-parse',incoming+'^{tree}').decode().strip()=='1e07b279db3634a42e2ef5e7b72656529a2223c0'
+def entries(ref):
+ result={}
+ for line in g('ls-tree','-rz',ref).split(b'\0'):
+  if not line:continue
+  meta,path=line.split(b'\t');mode,kind,blob=meta.decode().split();assert kind=='blob'
+  result[path.decode()]=(mode,blob)
+ return result
+maps={key:entries(ref) for key,ref in [('base',base),('ours',ours),('incoming',incoming)]}
+cache={}
+def data(entry):
+ if entry is None:return b''
+ if entry[1] not in cache:cache[entry[1]]=g('cat-file','blob',entry[1])
+ return cache[entry[1]]
+overlap=root/'composition-inputs';overlap.mkdir(exist_ok=False)
+proof=[];conflicts=[]
+for path in sorted(set().union(*[set(x) for x in maps.values()])):
+ b,o,i=(maps[k].get(path) for k in ('base','ours','incoming'))
+ mode=(i or o or b)[0]
+ if o==i: selected=o;content=data(o);origin='same'
+ elif o==b:selected=i;content=data(i);origin='incoming'
+ elif i==b:selected=o;content=data(o);origin='ours'
+ else:
+  assert b and o and i and b[0]==o[0]==i[0]=='100644',path
+  files={}
+  for key,item in [('base',b),('ours',o),('incoming',i)]:
+   p=overlap/key/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data(item));files[key]=p
+  if path=='downloads/Longwater-Fourteen-Tides.html':
+   content=data(i);origin='generated_to_replace'
+  else:
+   merged=subprocess.run(['git','merge-file','-p',str(files['incoming']),str(files['base']),str(files['ours'])],capture_output=True)
+   assert merged.returncode in (0,1), (path,merged.stderr.decode())
+   content=merged.stdout;origin='three_way_clean' if merged.returncode==0 else 'three_way_conflict'
+   if merged.returncode:conflicts.append(path)
+  selected=(mode,'pending')
+  (overlap/'merge-results').mkdir(exist_ok=True)
+  p=overlap/'merge-results'/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(content)
+ target=s/path
+ if selected is None:
+  if target.exists() or target.is_symlink():target.unlink()
+ else:
+  assert mode in ('100644','100755')
+  target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(content);target.chmod(0o755 if mode=='100755' else 0o644)
+ proof.append({'path':path,'base':b,'ours':o,'incoming':i,'origin':origin,'result_sha256':hashlib.sha256(content).hexdigest() if selected else None})
+receipt={'created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base':base,'base_tree':'b825a333b9d7f73a73b801f517b07c256aea5934','ours':ours,'ours_tree':'bcd4c960a2d4840984969c9d23262fcf9419d5c2','incoming':incoming,'incoming_canonical':'e4e9bf82','incoming_tree':'1e07b279db3634a42e2ef5e7b72656529a2223c0','paths':proof,'conflicts':conflicts}
+(root/'three-way-composition-initial.json').write_text(json.dumps(receipt,indent=2)+'\n')
+print(json.dumps({'conflicts':conflicts,'overlap':[x['path'] for x in proof if x['origin'].startswith(('three_way','generated'))],'status':g('status','--short').decode()}))

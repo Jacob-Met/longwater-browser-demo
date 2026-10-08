@@ -1,0 +1,18 @@
+{
+  "received_at": "2026-10-08T15:17:27.111511+00:00",
+  "producer_directory": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence",
+  "files": [
+    {
+      "path": "r5-hosted-browser.log",
+      "bytes": 71017,
+      "sha256": "18017b4450b74f60e3c29d6da4e95cf9cb56d880e755d99ee419c48c9f4d5b1f"
+    },
+    {
+      "path": "r5-hosted-receiving.json",
+      "bytes": 8487,
+      "sha256": "e69389def8dd4c5ff8bd8e5e541c7c823e3d2bf7c90f3df1729ef63d99912928"
+    }
+  ],
+  "copied_unchanged": true,
+  "scope": "Historical R5 hosted CI evidence only. Actual checkout is the exact R5 runtime tree; this is not R6 hosted or public deployment acceptance."
+}

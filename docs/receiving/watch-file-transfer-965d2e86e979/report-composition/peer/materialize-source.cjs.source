@@ -1,0 +1,15 @@
+const fs=require("fs"),path=require("path"),zlib=require("zlib"),crypto=require("crypto"),assert=require("assert/strict");
+const [label,target]=process.argv.slice(2);
+assert.ok(label&&target,"label and a new target directory are required");
+assert.ok(!fs.existsSync(target),"target must not exist");
+const capsule=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(__dirname,"source-capsule.json.gz"))));
+const snapshot=capsule.snapshots.find(x=>x.label===label);assert.ok(snapshot,"unknown snapshot");
+fs.mkdirSync(target,{recursive:true});
+for(const entry of snapshot.files){
+ assert.ok(!path.isAbsolute(entry.path)&&!entry.path.split("/").some(x=>x===".."));
+ const bytes=Buffer.from(capsule.objects[entry.sha256],"base64");
+ assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"),entry.sha256);
+ assert.equal(crypto.createHash("sha1").update(Buffer.from("blob "+bytes.length+"\0")).update(bytes).digest("hex"),entry.git_blob);
+ const file=path.join(target,entry.path);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:"wx",mode:entry.mode==="100755"?0o755:0o644});
+}
+console.log(JSON.stringify({label,sourcePin:snapshot.sourcePin,tree:snapshot.tree,files:snapshot.files.length,target}));

@@ -37,6 +37,8 @@ test("the actual WASM watch exposes operable cells, actions, and complete readin
   const { page, close } = await open();
   try {
     assert.equal(await page.locator("#playfield button").count(), 7);
+    assert.equal(await page.locator(".game-control").count(), 7);
+    assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);
     const cells = page.getByRole("button", { name: /^Cell [123]:/ });
     assert.equal(await cells.count(), 3);
     assert.equal(await cells.nth(1).getAttribute("aria-pressed"), "true");

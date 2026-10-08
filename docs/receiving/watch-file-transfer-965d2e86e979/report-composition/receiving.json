@@ -1,0 +1,131 @@
+{
+  "schema": "longwater-report-file-receiving/1",
+  "nativeSource": {
+    "head": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+    "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+    "leaves": 162,
+    "manifestSha256": "8841ce575aa8fe352d61ffa75ddba779ec2fbc1aa61ae3ab2a9e7ce1e4b821c5"
+  },
+  "preFixSource": {
+    "head": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+    "tree": "8fc01dff05e01ba2f5764b269d7675976e699f73"
+  },
+  "canonicalReport": {
+    "commit": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+    "tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+    "nativeSurrogate": "8bfa11fc68e4c6c5a2bb9ea9dec41dab66173165",
+    "leaves": 135
+  },
+  "r5WithExposedSeamDocs": {
+    "nativeCommit": "88484be670a2418ef62c072a8dd8c0b77378f9b5",
+    "tree": "bcd4c960a2d4840984969c9d23262fcf9419d5c2",
+    "leaves": 134,
+    "preservedDocumentaryLeaves": 21
+  },
+  "commonAncestor": {
+    "canonicalCommit": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "nativeSurrogate": "436deface944e881543f2a71d27ba7c07d2f6f25",
+    "tree": "b825a333b9d7f73a73b801f517b07c256aea5934"
+  },
+  "nativeProject": {
+    "receipt": "qualification/native-result.json",
+    "log": "qualification/native.log",
+    "command": "node --test --test-concurrency=1 --test-reporter=tap tests/*.test.mjs",
+    "actualExpandedCommandInReceipt": true,
+    "tests": 92,
+    "passed": 92,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "elapsedSeconds": 44.770172958029434,
+    "returncode": 0,
+    "logBytes": 21994,
+    "logSha256": "2c2fb97150a7f88c2461b3db0f855e1f2caba273bf5af90000d96e02fa221c7c",
+    "allSourceBytesModesUnchanged": true,
+    "composition": "85 original R5 cases + 6 landed report cases + 1 new actual file/report consumer case",
+    "coupledReportReadings": 630,
+    "actualReportDownloads": 4,
+    "noDependencyInstall": true,
+    "runtime": {
+      "node": "v26.3.0",
+      "playwright": "1.62.1",
+      "chromium": "151.0.7922.34"
+    }
+  },
+  "artifact": {
+    "path": "downloads/Longwater-Fourteen-Tides.html",
+    "bytes": 280929,
+    "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+    "sourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a",
+    "receipt": "source/candidate-artifact.json",
+    "wasmSha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+  },
+  "sourcePreservation": {
+    "receipt": "source/preservation.json",
+    "sha256": "8dcd9b630b7a1a7a7401b0f0ec18b7c994c8892e18e589853bbfed4370327653",
+    "all12OriginalR5TestModulesAndStatementsPreserved": true,
+    "all21PreviousDocumentaryLeavesExact": true,
+    "incomingReportModulesTestsAndEvidenceExact": true,
+    "gameInverseToR5IsOneRemovedHideLine": true
+  },
+  "historicalR5Hosted": {
+    "receipt": "historical-r5-hosted/r5-hosted-receiving.json",
+    "receiptSha256": "e69389def8dd4c5ff8bd8e5e541c7c823e3d2bf7c90f3df1729ef63d99912928",
+    "logSha256": "18017b4450b74f60e3c29d6da4e95cf9cb56d880e755d99ee419c48c9f4d5b1f",
+    "run": 37793385665,
+    "browserJob": 113366377942,
+    "smokeJob": 113366378175,
+    "actualCheckout": "39c0f00fab85a304049432c18dada40ef9884e72",
+    "tree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+    "tests": 85,
+    "passed": 85,
+    "scope": "Historical R5 only; not R6 hosted acceptance."
+  },
+  "publicRuntime": {
+    "state": "not_executed",
+    "harness": "public-site/receive-public-watch-transfer.mjs.source",
+    "harnessSha256": "d77d0fdf16eec6d16856c843f5345f2c65a6eabe36f5ffc3a9a586f7cc719d77",
+    "harnessBytes": 9892,
+    "owner": "root after actual publication and deployment",
+    "preflightLimit": "Earlier web access and native HEAD transport timeout are not a finding of public-site outage."
+  },
+  "publication": {
+    "githubWritesByThisReceiver": false,
+    "hostedR6": "pending",
+    "publicDeployment": "pending",
+    "owner": "root"
+  },
+  "limitations": [
+    "Historical-choice PR19 runtime is absent; its exact fourteen historical witness documents remain preserved and do not imply its receiving acceptance.",
+    "Storage freshness checks are not a transaction across simultaneous browser tabs.",
+    "Source/native browser acceptance does not imply a physical phone, physical assistive technology or public deployment was tested.",
+    "Initial dependency-link recording and exact-guard indentation refusals were receiver/preparation failures before product tests or source writes, respectively; their records remain separate."
+  ],
+  "independentPeer": {
+    "directory": "peer",
+    "verdict": "ACCEPTED_BOUNDED_REPORT_FILE_COMPOSITION",
+    "manifestSha256": "9bbd14bb857c83939a53a9799afa731bdded27c0ae113b6e1a7b658460b040da",
+    "dispositionSha256": "9523e531a3ed0d03864e2d936d80087fd2e23eb90469b6bce25f0566259e70da",
+    "files": 34,
+    "bytes": 6147794,
+    "harnessSha256": "fbf47095c6be617908931649e66f97aed3182c02e9316e51ea8ed9de2c607d41",
+    "preFix": {
+      "passed": 17,
+      "failed": 1,
+      "resultSha256": "26ec832ea6784eecb66b3bd1893bf337ddbd9f96a1c0cd6b2853aff6aa1ff59a"
+    },
+    "fixed": {
+      "passed": 17,
+      "failed": 0,
+      "resultSha256": "8916df17a760be879928f35ff6cfe46047c45d404123954d9dabe9a886496560"
+    },
+    "countBoundary": "The pre-fix run additionally records its actually accessible stale-download branch; the identical fixed harness does not enter that branch.",
+    "artifactReproductionSha256": "1518d462b77a4437bb92624a2538283f6a9d970aec395ee6f19d7b2d82b2eaf1",
+    "sourceCapsuleSha256": "b013bb5754da946c6284961b0f3e85fa30d0d23b34cd692c58dc34f31fa97663",
+    "capsule": "Complete incoming, pre-fix and fixed trees, deduplicated into 174 objects; independent fixed materialization recreates tree ee897713 exactly.",
+    "scope": "Independent actual online failure witness, source-preservation review and native artifact reproduction. The separate full suite qualifies normal online/offline consumer behavior."
+  },
+  "sealed_at": "2026-10-08T15:27:33.404315+00:00",
+  "state": "ACCEPTED_NATIVE_R6_SOURCE_AND_ARTIFACT",
+  "documentation_only_addition": true
+}
