@@ -4,9 +4,9 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css"];
-const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js"];
-const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "pkg/longwater_web_bg.wasm"];
+const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-choice.css"];
+const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-choice.js"];
+const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-choice-model.js", "pkg/longwater_web_bg.wasm"];
 const sourceHash = createHash("sha256");
 const files = new Map();
 for (const name of inputs) {
@@ -27,8 +27,9 @@ function replaceOnce(source, needle, replacement) {
 
 let game = text("game.js");
 const journal = replaceOnce(text("journal.js"), JSON.stringify("./watch-trends.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-trends.js"))));
+const choice = replaceOnce(text("watch-choice.js"), JSON.stringify("./watch-choice-model.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-choice-model.js"))));
 for (const name of modules) {
-  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : files.get(name))));
+  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : name === "watch-choice.js" ? choice : files.get(name))));
 }
 game = replaceOnce(game, "await init();", `await init({ module_or_path: Uint8Array.from(atob(${JSON.stringify(files.get("pkg/longwater_web_bg.wasm").toString("base64"))}), c => c.charCodeAt(0)) });`);
 let html = text("index.html");

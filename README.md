@@ -74,6 +74,27 @@ neither your selected game cell nor the simulation or saved watch. Reset clears
 the graph to the native opening, and resume rebuilds it from the same verified
 native replay as the journal. The direct-open packaged game includes this view.
 
+## Try a different historical choice
+
+After completing a tide, open **Explore one completed tide** below the journal.
+Choose a **Completed tide**, an action and a cell, then **Compare this choice**.
+The recorded action starts selected, so you can first reproduce what happened
+and then try another choice.
+
+The comparison shows the exact resources and all three cells' readings before
+that tide, after the played choice and after the alternative. Both complete
+native field reports remain visible. These are the consequences of one full
+tide, including its event and dawn drift; later tides are not replayed and the
+panel does not recommend a strategy.
+
+Only completed tides from this watch are available. The game verifies their
+entire native history and runs the comparison in fresh, separate simulations.
+An unavailable action reports its native refusal without spending a live tide.
+Your current watch, selected game cell, journal and saved progress stay
+unchanged. A new live tide or a replaced watch clears the older comparison;
+reloading rebuilds the available history from the admitted save. The panel
+works when saving is unavailable and is included in the offline game.
+
 ## Resume your watch
 
 The watch saves in this browser after a successful tide or a change of selected

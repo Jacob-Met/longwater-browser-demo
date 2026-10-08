@@ -1,6 +1,7 @@
 import init, { BrowserSession } from "./pkg/longwater_web.js";
 import { WatchJournal } from "./journal.js";
 import { SavedWatch, WATCH_SAVE_KEY } from "./watch-save.js";
+import { WatchChoice } from "./watch-choice.js";
 
 const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
@@ -17,6 +18,10 @@ let message = "";
 let width = 0;
 let height = 0;
 let pixelRatio = 1;
+const historicalChoice = new WatchChoice(document.querySelector("#watch-choice"), {
+  readHistory: () => watch.replayHistory(),
+  createSession: () => new BrowserSession(),
+});
 
 const palette = {
   night: "#071b22", deep: "#0b2930", panel: "#102f35", card: "#11363a",
@@ -240,6 +245,7 @@ function drawActions(l) {
 }
 
 function render() {
+  historicalChoice.synchronize(state);
   if (!state || !context || width <= 0 || height <= 0) return;
   const l = layout();
   drawBackground();
