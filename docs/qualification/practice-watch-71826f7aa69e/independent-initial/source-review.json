@@ -1,0 +1,70 @@
+{
+  "schema": "longwater-practice-source-review/1",
+  "reviewer": "estate-71826f7aa69e/coordination",
+  "baseline": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "cut": "source-cut1",
+  "status": "accepted",
+  "files": [
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "manifest_exact": true,
+      "diff": null
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "manifest_exact": true,
+      "diff": null
+    },
+    {
+      "path": "index.html",
+      "bytes": 8085,
+      "sha256": "9b2ec5615fe3bfe435d22136c39bde79a52d09c8fff6f82bcc4e81c496030d09",
+      "git": "058b9a984d77443c7d4a53d46623da9a219b7c3a",
+      "manifest_exact": true,
+      "diff": "--- baseline/index.html\n+++ candidate/index.html\n@@ -12,6 +12,7 @@\n   <link rel=\"stylesheet\" href=\"./watch-report.css\">\n   <link rel=\"stylesheet\" href=\"./watch-trends.css\">\n   <link rel=\"stylesheet\" href=\"./watch-save.css\">\n+  <link rel=\"stylesheet\" href=\"./practice-watch.css\">\n </head>\n <body>\n   <main id=\"stage\" aria-labelledby=\"game-title\">\n@@ -30,6 +31,14 @@\n       </div>\n       <p id=\"startup-error\" hidden></p>\n     </div>\n+    <section class=\"practice-entry\" aria-labelledby=\"practice-entry-title\">\n+      <div>\n+        <h2 id=\"practice-entry-title\">Try a practice watch</h2>\n+        <p>Learn Gate, Shade, and Seed in a separate marsh. Your active watch and its saved progress stay as they are.</p>\n+      </div>\n+      <button id=\"practice-open\" type=\"button\" disabled>Open practice</button>\n+      <p id=\"practice-entry-status\" role=\"status\" aria-live=\"polite\"></p>\n+    </section>\n     <section id=\"watch-storage\" aria-label=\"Watch progress\">\n       <p id=\"watch-save-status\" role=\"status\" aria-live=\"polite\">Loading your saved watch…</p>\n       <button id=\"watch-save-retry\" type=\"button\" hidden>Try saving again</button>\n@@ -64,6 +73,38 @@\n         <button id=\"start-new-watch\" type=\"button\">Start new watch</button>\n       </div>\n     </dialog>\n+    <dialog id=\"practice-watch\" class=\"practice-watch\" aria-labelledby=\"practice-title\" aria-describedby=\"practice-note\">\n+      <header>\n+        <div>\n+          <p class=\"practice-label\">PRACTICE · SEPARATE WATCH</p>\n+          <h2 id=\"practice-title\">Learn the tides</h2>\n+        </div>\n+        <button type=\"button\" data-practice-close>Close practice</button>\n+      </header>\n+      <p id=\"practice-note\">Each practice action advances a whole tide in a fresh marsh. Practice never spends your active watch's resources or changes its progress. Closing discards this practice watch.</p>\n+      <fieldset>\n+        <legend>1. Select a practice cell</legend>\n+        <div class=\"practice-options\">\n+          <button type=\"button\" data-practice-cell=\"0\" aria-pressed=\"false\">North Bank</button>\n+          <button type=\"button\" data-practice-cell=\"1\" aria-pressed=\"true\">Heart Pool</button>\n+          <button type=\"button\" data-practice-cell=\"2\" aria-pressed=\"false\">South Reach</button>\n+        </div>\n+      </fieldset>\n+      <fieldset>\n+        <legend>2. Try one action and turn the tide</legend>\n+        <div class=\"practice-options\">\n+          <button type=\"button\" data-practice-action=\"gate\"><strong>Gate</strong><small>Spend 1 water</small></button>\n+          <button type=\"button\" data-practice-action=\"shade\"><strong>Shade</strong><small>Add canopy, up to 3</small></button>\n+          <button type=\"button\" data-practice-action=\"seed\"><strong>Seed</strong><small>Spend 1 seed pack</small></button>\n+        </div>\n+      </fieldset>\n+      <div class=\"practice-toolbar\">\n+        <p id=\"practice-summary\"></p>\n+        <button type=\"button\" data-practice-restart>Restart practice</button>\n+      </div>\n+      <p id=\"practice-status\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p>\n+      <section id=\"practice-output\" aria-label=\"Practice readings and tide result\"></section>\n+    </dialog>\n     <noscript>Longwater needs JavaScript enabled to run its local simulation.</noscript>\n   </main>\n   <script type=\"module\" src=\"./game.js\"></script>\n"
+    },
+    {
+      "path": "game.js",
+      "bytes": 20495,
+      "sha256": "3b22d84c1ab0b9ebc34ff56b989335482acbebe57f1b6b64ecbce593aa6870be",
+      "git": "71bbc54486004fb107e0a39162bfe209b133b383",
+      "manifest_exact": true,
+      "diff": "--- baseline/game.js\n+++ candidate/game.js\n@@ -1,6 +1,7 @@\n import init, { BrowserSession } from \"./pkg/longwater_web.js\";\n import { WatchJournal } from \"./journal.js\";\n import { SavedWatch, WATCH_SAVE_KEY } from \"./watch-save.js\";\n+import { PracticeWatch } from \"./practice-watch.js\";\n \n const canvas = document.querySelector(\"#game\");\n const live = document.querySelector(\"#live\");\n@@ -484,6 +485,7 @@\n   resize();\n   if (!context) throw new Error(\"This browser cannot create the game canvas.\");\n   await init();\n+  new PracticeWatch(document.querySelector(\"#practice-watch\"), document.querySelector(\"#practice-open\"), () => new BrowserSession());\n   watch = new SavedWatch({ createSession: () => new BrowserSession(), getStorage: () => window.localStorage });\n   state = JSON.parse(watch.snapshot);\n   selected = watch.selected;\n"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3306,
+      "sha256": "4ce122fbfd7418f049289c3c07c4a6de0cf33684ce30c8bad61f16ed83b38264",
+      "git": "779525352d550d872e46b229e88718d57829c886",
+      "manifest_exact": true,
+      "diff": "--- baseline/scripts/package.mjs\n+++ candidate/scripts/package.mjs\n@@ -4,8 +4,8 @@\n import { fileURLToPath } from \"node:url\";\n \n const root = resolve(dirname(fileURLToPath(import.meta.url)), \"..\");\n-const styles = [\"style.css\", \"journal.css\", \"watch-trends.css\", \"watch-save.css\", \"watch-report.css\"];\n-const modules = [\"pkg/longwater_web.js\", \"journal.js\", \"watch-save.js\"];\n+const styles = [\"style.css\", \"journal.css\", \"watch-trends.css\", \"watch-save.css\", \"watch-report.css\", \"practice-watch.css\"];\n+const modules = [\"pkg/longwater_web.js\", \"journal.js\", \"watch-save.js\", \"practice-watch.js\"];\n const inputs = [\"index.html\", ...styles, \"game.js\", ...modules, \"watch-trends.js\", \"watch-report.js\", \"pkg/longwater_web_bg.wasm\"];\n const sourceHash = createHash(\"sha256\");\n const files = new Map();\n"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "bytes": 8341,
+      "sha256": "3f767f72932b8ba95abda93ca0d42628fbca0916d4e06d59cc14e160561fbd47",
+      "git": "69458357ae0693590f934bf79f6f56981aace775",
+      "manifest_exact": true,
+      "diff": "--- baseline/tests/browser.test.mjs\n+++ candidate/tests/browser.test.mjs\n@@ -155,7 +155,8 @@\n     await page.route(\"**/*.wasm\", route => route.abort());\n     await page.goto(server.url);\n     await page.waitForFunction(() => document.querySelector(\"#live\")?.textContent.includes(\"could not start\"));\n-    assert.equal(await page.getByRole(\"button\").count(), 7);\n-    assert.equal(await page.getByRole(\"button\").evaluateAll(els => els.every(el => el.disabled)), true);\n+    assert.equal(await page.locator(\".game-control\").count(), 7);\n+    assert.equal(await page.locator(\".game-control\").evaluateAll(els => els.every(el => el.disabled)), true);\n+    assert.equal(await page.getByRole(\"button\", { name: \"Open practice\", exact: true }).isDisabled(), true);\n   } finally { await context.close(); }\n });\n"
+    }
+  ],
+  "findings": [
+    "All six native source/test files independently rehashed to exact source-cut1 pins.",
+    "Practice uses only its fresh native factory and scoped DOM; no live/save/journal/storage object is supplied.",
+    "Global live data-cell/data-action selectors remain isolated by distinct practice selectors and dialog placement outside playfield.",
+    "Direct import/init hook and deterministic packager module/style arrays are additive only.",
+    "Failed-WASM existing test retains all seven live controls disabled and now separately asserts the visible practice entry is disabled.",
+    "The original game, native/glue, save schema and peer components are untouched at this cut."
+  ],
+  "dynamic_receiving": "results/receiving-v2.json",
+  "limitations": [
+    "This is the frozen initial runtime cut; later test fixture repairs, docs and receiving-target composition must preserve these production bytes.",
+    "Native pagehide is observed through an explicitly isolated same-origin storage telemetry channel; no production storage reference is added."
+  ]
+}

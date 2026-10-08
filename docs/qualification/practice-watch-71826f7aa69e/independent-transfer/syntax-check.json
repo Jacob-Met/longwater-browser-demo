@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/node",
+    "--check",
+    "/Users/me/hamon-longwater-practice-review-71826f7aa69e/transfer-composition/receiver.mjs"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

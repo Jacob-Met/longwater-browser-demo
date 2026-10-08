@@ -1,0 +1,133 @@
+{
+  "schema": "longwater-practice-transfer-pins/1",
+  "target": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+  "draft_tree": "e75108b71639c83ba3783af4fa637b4af493794a",
+  "note": "Composed browser source closure and scoped hooks. Published offline HTML is intentionally excluded until production regenerates it; this one receiver does not claim offline delivery.",
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob": "9c32f9d71e902e5ff729f92d13dd6e2c3c0bfa1d",
+      "bytes": 14987
+    },
+    {
+      "path": "game.js",
+      "git_blob": "459726112693c73dcfcc78934c944057ce3f0e0b",
+      "bytes": 21722
+    },
+    {
+      "path": "index.html",
+      "git_blob": "5ea0785b2c6d9d76b7fa370db29bb9ff07d280c5",
+      "bytes": 9474
+    },
+    {
+      "path": "practice-watch.js",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "bytes": 8384
+    },
+    {
+      "path": "practice-watch.css",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "bytes": 3650
+    },
+    {
+      "path": "watch-file.js",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "bytes": 5475
+    },
+    {
+      "path": "watch-file.css",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "bytes": 1196
+    },
+    {
+      "path": "watch-save.js",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41",
+      "bytes": 9891
+    },
+    {
+      "path": "watch-save.css",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "bytes": 473
+    },
+    {
+      "path": "journal.js",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "bytes": 6603
+    },
+    {
+      "path": "journal.css",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "bytes": 2465
+    },
+    {
+      "path": "watch-report.js",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "bytes": 9346
+    },
+    {
+      "path": "watch-report.css",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "bytes": 571
+    },
+    {
+      "path": "watch-trends.js",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "bytes": 11372
+    },
+    {
+      "path": "watch-trends.css",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "bytes": 2791
+    },
+    {
+      "path": "style.css",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "bytes": 3342
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "bytes": 8716
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "bytes": 71368
+    },
+    {
+      "path": "package.json",
+      "git_blob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+      "bytes": 277
+    },
+    {
+      "path": "package-lock.json",
+      "git_blob": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+      "bytes": 1705
+    },
+    {
+      "path": "scripts/package.mjs",
+      "git_blob": "08735279a63b79e9f04abb1495d54d10f365d43b",
+      "bytes": 3341
+    },
+    {
+      "path": "tests/server.mjs",
+      "git_blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+      "bytes": 1609
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "git_blob": "c1c1c85a404fad4d8894534187a884a6ded4de9f",
+      "bytes": 8301
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "git_blob": "69c8efd5ca4f8fb1796b35bcae9650945bef3c2b",
+      "bytes": 12083
+    },
+    {
+      "path": "tests/practice-watch.test.mjs",
+      "git_blob": "47fecd0e58d345dcf89256fdf5fd65964b809a7a",
+      "bytes": 15913
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "purpose": "Local-only partial runtime/test source identity required by existing offline-download receiver; not a canonical full repository commit",
+  "canonicalBase": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "head": "9a91fbe76c63e0c63b88aeb677198961e05021ea",
+  "tree": "bc2c19c7ba9face58c48eec4d1fae89b38f2d69a",
+  "trackedPaths": [
+    ".github/workflows/smoke.yml",
+    ".gitignore",
+    ".nojekyll",
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "journal.css",
+    "journal.js",
+    "package-lock.json",
+    "package.json",
+    "pkg/longwater_web.d.ts",
+    "pkg/longwater_web.js",
+    "pkg/longwater_web_bg.wasm",
+    "pkg/longwater_web_bg.wasm.d.ts",
+    "practice-watch.css",
+    "practice-watch.js",
+    "scripts/package.mjs",
+    "style.css",
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/new-watch.test.mjs",
+    "tests/offline-download.test.mjs",
+    "tests/package.test.mjs",
+    "tests/practice-watch.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/server.mjs",
+    "tests/watch-report.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs",
+    "tests/watch-trends.test.mjs",
+    "watch-report.css",
+    "watch-report.js",
+    "watch-save.css",
+    "watch-save.js",
+    "watch-trends.css",
+    "watch-trends.js"
+  ],
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/git",
+        "init",
+        "--initial-branch=receiving"
+      ],
+      "exit": 0,
+      "stdout": "Initialized empty Git repository in /Users/me/hamon-longwater-practice-71826f7aa69e/source/.git/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "config",
+        "--local",
+        "user.name",
+        "HAMON estate receiving"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "config",
+        "--local",
+        "user.email",
+        "hamon-receiving@localhost"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "add",
+        "--",
+        ".github/workflows/smoke.yml",
+        ".gitignore",
+        ".nojekyll",
+        "README.md",
+        "game.js",
+        "index.html",
+        "journal.css",
+        "journal.js",
+        "package-lock.json",
+        "package.json",
+        "pkg/longwater_web.d.ts",
+        "pkg/longwater_web.js",
+        "pkg/longwater_web_bg.wasm",
+        "pkg/longwater_web_bg.wasm.d.ts",
+        "scripts/package.mjs",
+        "style.css",
+        "tests/browser.test.mjs",
+        "tests/journal.test.mjs",
+        "tests/new-watch.test.mjs",
+        "tests/offline-download.test.mjs",
+        "tests/package.test.mjs",
+        "tests/resume-journal.test.mjs",
+        "tests/server.mjs",
+        "tests/watch-report.test.mjs",
+        "tests/watch-save.browser.test.mjs",
+        "tests/watch-save.test.mjs",
+        "tests/watch-trends.test.mjs",
+        "watch-report.css",
+        "watch-report.js",
+        "watch-save.css",
+        "watch-save.js",
+        "watch-trends.css",
+        "watch-trends.js",
+        "practice-watch.js",
+        "practice-watch.css",
+        "tests/practice-watch.test.mjs",
+        "downloads/Longwater-Fourteen-Tides.html"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/git",
+        "commit",
+        "-m",
+        "Receive partial Longwater practice runtime snapshot on canonical e4e9bf82"
+      ],
+      "exit": 0,
+      "stdout": "[receiving (root-commit) 9a91fbe] Receive partial Longwater practice runtime snapshot on canonical e4e9bf82\n 37 files changed, 5254 insertions(+)\n create mode 100644 .github/workflows/smoke.yml\n create mode 100644 .gitignore\n create mode 100644 .nojekyll\n create mode 100644 README.md\n create mode 100644 downloads/Longwater-Fourteen-Tides.html\n create mode 100644 game.js\n create mode 100644 index.html\n create mode 100644 journal.css\n create mode 100644 journal.js\n create mode 100644 package-lock.json\n create mode 100644 package.json\n create mode 100644 pkg/longwater_web.d.ts\n create mode 100644 pkg/longwater_web.js\n create mode 100644 pkg/longwater_web_bg.wasm\n create mode 100644 pkg/longwater_web_bg.wasm.d.ts\n create mode 100644 practice-watch.css\n create mode 100644 practice-watch.js\n create mode 100644 scripts/package.mjs\n create mode 100644 style.css\n create mode 100644 tests/browser.test.mjs\n create mode 100644 tests/journal.test.mjs\n create mode 100644 tests/new-watch.test.mjs\n create mode 100644 tests/offline-download.test.mjs\n create mode 100644 tests/package.test.mjs\n create mode 100644 tests/practice-watch.test.mjs\n create mode 100644 tests/resume-journal.test.mjs\n create mode 100644 tests/server.mjs\n create mode 100644 tests/watch-report.test.mjs\n create mode 100644 tests/watch-save.browser.test.mjs\n create mode 100644 tests/watch-save.test.mjs\n create mode 100644 tests/watch-trends.test.mjs\n create mode 100644 watch-report.css\n create mode 100644 watch-report.js\n create mode 100644 watch-save.css\n create mode 100644 watch-save.js\n create mode 100644 watch-trends.css\n create mode 100644 watch-trends.js\n",
+      "stderr": ""
+    }
+  ]
+}

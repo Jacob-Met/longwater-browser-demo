@@ -1,0 +1,182 @@
+{
+  "schema": "longwater-independent-browser-telemetry-diagnostic/1",
+  "reset_focus": [
+    {
+      "id": "start-new-watch",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BODY",
+      "has_focus": false,
+      "inside": false,
+      "background_game": false
+    },
+    {
+      "id": "keep-watch",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "start-new-watch",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "keep-watch",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "start-new-watch",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    }
+  ],
+  "practice_focus": [
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BODY",
+      "has_focus": false,
+      "inside": false,
+      "background_game": false
+    },
+    {
+      "id": "practice-watch",
+      "tag": "DIALOG",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "practice-watch",
+      "tag": "DIALOG",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "has_focus": true,
+      "inside": true,
+      "background_game": false
+    }
+  ],
+  "console_events": [],
+  "durable_navigation_event": {
+    "event": "pagehide",
+    "persisted": false,
+    "practice_open": false
+  },
+  "same_origin_destination": "http://127.0.0.1:50134/review-next.html"
+}

@@ -50,6 +50,31 @@ remain inactive behind the review. An observed saved-watch change from another
 tab dismisses an open review, so you can inspect the new status before choosing
 again. This does not make simultaneous cross-tab storage writes transactional.
 
+## Try a practice watch
+
+Choose **Open practice** below the marsh to learn the controls in a fresh
+practice watch. The dialog is labeled **PRACTICE · SEPARATE WATCH** and always
+opens at tide zero with Heart Pool selected.
+
+Select North Bank, Heart Pool or South Reach, then try **Gate**, **Shade** or
+**Seed**. The cost is shown with each action. Every accepted action advances
+one complete practice tide. The readings compare the resources and all three
+cells before and after that tide, followed by its event and complete field
+notes. These changes include the action, the tide and dawn drift; they do not
+isolate the effect of the action alone.
+
+An unavailable action explains its reason and leaves the practice tide
+unchanged. Continue through the fourteen tides to see the simulation's
+outcome, or choose **Restart practice** to return to its opening state.
+**Close practice** or Escape returns focus to **Open practice**. Opening it
+again starts a new practice watch.
+
+Practice does not spend your active watch's water, seeds or tides, select a
+different game cell, add journal entries or write saved progress. Its own
+progress is temporary and is discarded on close, restart or page reload.
+The same practice controls are included in the downloaded offline game.
+Tab, Enter and Space operate the dialog's controls.
+
 ## Review your watch
 
 Open **Watch journal** below the marsh to revisit any completed tide. Each entry
@@ -243,6 +268,8 @@ could not be saved. Reset also replaces the saved offline watch.
   (`snapshot_json` / `take_turn` / `restart`).
 - `screenshots/` — desktop and phone captures
 - `.nojekyll` — GitHub Pages serves the site as-is from this branch
+- `practice-watch.js` / `practice-watch.css` — a temporary practice dialog with
+  its own fresh native session, complete whole-tide readings and no save writes
 - `scripts/package.mjs` — deterministic single-file offline distribution
 
 ## Verify

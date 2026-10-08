@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-practice-review-71826f7aa69e/transfer-composition/receiver.mjs",
+    "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/source",
+    "/Users/me/hamon-longwater-practice-review-71826f7aa69e/transfer-composition/source-pins.json"
+  ],
+  "cwd": "/Users/me/.npm/_npx/4b4c857f6efdfb61/node_modules/@wonderwhy-er/desktop-commander/dist",
+  "TMPDIR": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/transfer-composition/tmp",
+  "exit_code": 0,
+  "elapsed_seconds": 2.667844295501709,
+  "source_manifest_sha256": "602c490a0b7ca7796a1dcc6b4fa4767a8906df53d53bf9d5111ab2b374e604ed"
+}

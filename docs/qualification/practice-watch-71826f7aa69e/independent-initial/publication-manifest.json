@@ -1,0 +1,123 @@
+{
+  "schema": "longwater-practice-independent-manifest/1",
+  "reviewer": "estate-71826f7aa69e/coordination",
+  "source_cut": "source-cut1",
+  "created_utc": "2026-10-08T15:41:44.329166+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/README.md",
+      "bytes": 4941,
+      "sha256": "613cd0980f9056f30d4469eb1b44fe1fb3acb877f986375275f5b9c239555cba",
+      "git_blob": "8f7efba56bc1a05c29577bd2e5e7a80eb044f955"
+    },
+    {
+      "path": "source-review.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/source-review.json",
+      "bytes": 8935,
+      "sha256": "e793865b4d076e0489f912b46e00eb40ea97dcb76cecacbb5a66883fff482ea1",
+      "git_blob": "adfe5c8880ed0004ac50519f9fa8f9a7bd5de7cb"
+    },
+    {
+      "path": "criteria.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/criteria.json",
+      "bytes": 1955,
+      "sha256": "c9781cd13bda655fbba76abb5cd01e1cd7ac62af80fa6e0def8152b880f92228",
+      "git_blob": "9b8a6db671cb588f9034874f441f555612c8683a"
+    },
+    {
+      "path": "criteria-v2.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/criteria-v2.json",
+      "bytes": 2828,
+      "sha256": "36d7d226a838775bd5b852fc0a94ec8e3fc940c5d9370a9647ef0325054e590e",
+      "git_blob": "146d4425845765e9cafe896de111ec853a0dc0e6"
+    },
+    {
+      "path": "independent-receive.mjs",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/independent-receive.mjs",
+      "bytes": 18528,
+      "sha256": "39f53c00bbdb5ff3a34eb1c189fc939d7d208ce142193cb444b5e3683d99d3f4",
+      "git_blob": "732af349f6c5f43d120d83ad33835ea8cb969fda"
+    },
+    {
+      "path": "independent-receive-v2.mjs",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/independent-receive-v2.mjs",
+      "bytes": 20808,
+      "sha256": "2676836f77a00bdbcdd1f67ddf8a00510ae6acd187f8327a0ed73813d40973df",
+      "git_blob": "23334b8b16e159ea55d376859b0deaa7fc27630a"
+    },
+    {
+      "path": "browser-telemetry-diagnostic.mjs",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/browser-telemetry-diagnostic.mjs",
+      "bytes": 2623,
+      "sha256": "03710ec9ac0a884840c7c5b9c18623361ebb9634ded1cd06619d798279514824",
+      "git_blob": "3c0e32c562685c4c351981526d843dab082e2a4e"
+    },
+    {
+      "path": "results/syntax-check.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/syntax-check.json",
+      "bytes": 54,
+      "sha256": "6379c17d798191f995d43b0950ea7787779fe29c9af7354b25de37a514ff207d",
+      "git_blob": "a7d425255a3049a8b16db60ebf709fa7dae8ee2b"
+    },
+    {
+      "path": "results/syntax-check-v2.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/syntax-check-v2.json",
+      "bytes": 54,
+      "sha256": "6379c17d798191f995d43b0950ea7787779fe29c9af7354b25de37a514ff207d",
+      "git_blob": "a7d425255a3049a8b16db60ebf709fa7dae8ee2b"
+    },
+    {
+      "path": "results/run1.stdout",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/run1.stdout",
+      "bytes": 4796,
+      "sha256": "dfbeeaf98eeac3cb3508793401b09ab7eb44e71b551be9e62e4a8866006a4565",
+      "git_blob": "933a89831b75336f1f5bb0e2fd3f9e99e2f9bd05"
+    },
+    {
+      "path": "results/run1.stderr",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/run1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "results/run2.stdout",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/run2.stdout",
+      "bytes": 8500,
+      "sha256": "12cdf7106db95f69a3338211ee1de3052ad14a63b91bf1262fd0eef3e926d536",
+      "git_blob": "207fac66d4924c453db1ccaeab57788a9164002b"
+    },
+    {
+      "path": "results/run2.stderr",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/run2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "results/run1-receiving.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/run1-receiving.json",
+      "bytes": 6061,
+      "sha256": "01b5caec6778be550cb7dab5c691fcc0bdc7d12f56eda7013fe12443b1872823",
+      "git_blob": "20f088f445677ae6016985c692d0df5a20a8a30d"
+    },
+    {
+      "path": "results/receiving-v2.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/receiving-v2.json",
+      "bytes": 13054,
+      "sha256": "bbc321b980e6fce45557220c1e72413d6b538204a96b3861ac2d1087a383bf02",
+      "git_blob": "408183bdc0d52e957a19dc6756f3c8a657d7259d"
+    },
+    {
+      "path": "results/browser-telemetry-diagnostic.json",
+      "native_path": "/Users/me/hamon-longwater-practice-review-71826f7aa69e/results/browser-telemetry-diagnostic.json",
+      "bytes": 3542,
+      "sha256": "8bbc356122d5532e0a7ca4b0ac652a4c5f122e25c56f2288fb6e02b9ab51a5aa",
+      "git_blob": "63ba862ab651f013ec06890ae417d4952c08be3a"
+    }
+  ],
+  "total_bytes": 96679,
+  "status": "accepted-three-cases-with-original-first-case-preserved",
+  "runtime_receipt_sha256": "bbc321b980e6fce45557220c1e72413d6b538204a96b3861ac2d1087a383bf02"
+}

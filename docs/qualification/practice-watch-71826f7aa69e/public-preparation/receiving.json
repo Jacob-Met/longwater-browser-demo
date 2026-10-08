@@ -1,0 +1,29 @@
+{
+  "schema": "longwater.public-practice-receiver-preparation.v1",
+  "source_blob": "c08926c02e858b322473b924b960cd0083730891",
+  "source_sha256": "7ef1c0248e5d8979e7795ea56227dc446f8e7678ef3171b01376a43617ef7e68",
+  "bytes": 13547,
+  "native_path": "/Users/me/hamon-longwater-public-71826f7aa69e/receive-public-practice.mjs",
+  "native_syntax": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--check",
+      "/Users/me/hamon-longwater-public-71826f7aa69e/receive-public-practice.mjs"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "executed": false,
+  "prior_receiver_preserved": "2d60891656dc1fa4b1da8b931a9b628779865f06",
+  "differences": "Retains explicit qualified-local and live-loaded source gates, but narrows the public path to one temporary practice tide, native whole-tide readings/notes, close/reopen and active-watch/storage preservation. No watch adoption, game action, existing profile or production-source mutation.",
+  "manifest_contract": {
+    "sourceHead": "Final published commit, directly verified through Git",
+    "sourceTree": "That commit's complete tree",
+    "sourceSha256": "Packager's framed input hash",
+    "inputs": "Ordered runtime input records: path, bytes, sha256, git_blob; order matches the packager",
+    "artifact": "Same record fields for downloads/Longwater-Fourteen-Tides.html"
+  },
+  "browser_boundary": "Fresh owned persistent profile is created only after every anonymous live asset equals the pinned local bytes and has the expected MIME type. Browser responses are verified again before the first practice action.",
+  "pending": "Final current-target practice composition, source integration, exact published manifest, then one actual receiving invocation."
+}
