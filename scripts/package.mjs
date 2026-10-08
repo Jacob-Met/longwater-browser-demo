@@ -4,9 +4,9 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-file.css", "watch-choice.css", "practice-watch.css"];
-const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-file.js", "watch-choice.js", "practice-watch.js"];
-const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-report.js", "watch-choice-model.js", "pkg/longwater_web_bg.wasm"];
+const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-file.css", "watch-choice.css", "practice-watch.css", "watch-shelf.css"];
+const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-file.js", "watch-choice.js", "practice-watch.js", "watch-shelf.js"];
+const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-report.js", "watch-choice-model.js", "watch-shelf-model.js", "pkg/longwater_web_bg.wasm"];
 const sourceHash = createHash("sha256");
 const files = new Map();
 for (const name of inputs) {
@@ -31,8 +31,10 @@ for (const dependency of ["watch-trends.js", "watch-report.js"]) {
   journal = replaceOnce(journal, JSON.stringify("./" + dependency), JSON.stringify(dataUrl("text/javascript", files.get(dependency))));
 }
 const choice = replaceOnce(text("watch-choice.js"), JSON.stringify("./watch-choice-model.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-choice-model.js"))));
+const shelfModel = replaceOnce(text("watch-shelf-model.js"), JSON.stringify("./watch-save.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-save.js"))));
+const shelf = replaceOnce(text("watch-shelf.js"), JSON.stringify("./watch-shelf-model.js"), JSON.stringify(dataUrl("text/javascript", shelfModel)));
 for (const name of modules) {
-  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : name === "watch-choice.js" ? choice : files.get(name))));
+  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : name === "watch-choice.js" ? choice : name === "watch-shelf.js" ? shelf : files.get(name))));
 }
 game = replaceOnce(game, "await init();", `await init({ module_or_path: Uint8Array.from(atob(${JSON.stringify(files.get("pkg/longwater_web_bg.wasm").toString("base64"))}), c => c.charCodeAt(0)) });`);
 let html = text("index.html");
