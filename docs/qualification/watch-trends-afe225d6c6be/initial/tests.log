@@ -1,0 +1,15 @@
+✔ opening trends expose five correctly labelled metrics without inventing a completed tide (910.610176ms)
+✔ changed real WASM actions produce complete exact tables and separate cell series without changing the watch (1974.057348ms)
+✔ native keyboard controls retain earlier selection and focus while later tides arrive (675.856657ms)
+✔ selection and refused actions add no trend, and reset starts at the actual opening (851.778035ms)
+✔ partial and complete native replay retain the opening, all completed tides and the finished watch (2219.883058ms)
+✔ invalid journal replay cannot replace an existing trends history (340.676674ms)
+✔ direct-open packaging embeds the same trends and reopens native saved readings offline (735.34235ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8257.969951

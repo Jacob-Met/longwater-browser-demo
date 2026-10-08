@@ -1,0 +1,665 @@
+diff --git a/README.md b/README.md
+--- a/README.md
++++ b/README.md
+@@ -54,6 +54,26 @@
+ journal restores the complete reports and the original opening readings, so its
+ final comparison still covers all fourteen tides. Reset starts a fresh journal.
+ 
++### Compare the marsh readings
++
++**Watch trends**, inside the journal, plots the three cells together for one
++reading at a time: Depth (cm), Salt (ppt), Oxygen (%), Life (%), or Canopy (/ 3).
++The lines begin with the actual opening readings and extend only through tides
++you have completed. Their changes include your action, the tide and dawn drift;
++they do not isolate the effect of an action or predict a future tide.
++
++Choose a reading, then click the chart or move **Review tide** to inspect that
++opening or tide. The readout shows each cell's exact value and the accepted
++action and event. The slider works with the arrow keys, Home and End. Different
++line patterns distinguish the cells as well as color. **All readings for this
++metric** opens a complete table, including the opening and every completed tide.
++
++The view follows new tides while you are reviewing the latest one. If you choose
++an earlier tide, it keeps that selection during further play. Reviewing changes
++neither your selected game cell nor the simulation or saved watch. Reset clears
++the graph to the native opening, and resume rebuilds it from the same verified
++native replay as the journal. The direct-open packaged game includes this view.
++
+ ## Resume your watch
+ 
+ The watch saves in this browser after a successful tide or a change of selected
+@@ -108,6 +128,8 @@
+ - `game.js` — canvas UI: rendering, layout, input, screen-reader announcements
+ - `journal.js` / `journal.css` — visible tide history and end-of-watch review,
+   using the actual before/after WASM snapshots and reports
++- `watch-trends.js` / `watch-trends.css` — one-metric, three-cell trend chart,
++  keyboard tide readout and complete numeric table from those journal snapshots
+ - `watch-save.js` / `watch-save.css` — bounded local action history and visible
+   save status; the unchanged WASM validates saved state and rebuilds all journal
+   snapshots when the watch resumes
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+   <title>Longwater: Fourteen Tides</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./journal.css">
++  <link rel="stylesheet" href="./watch-trends.css">
+   <link rel="stylesheet" href="./watch-save.css">
+ </head>
+ <body>
+diff --git a/journal.js b/journal.js
+--- a/journal.js
++++ b/journal.js
+@@ -1,3 +1,5 @@
++import { WatchTrends } from "./watch-trends.js";
++
+ const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
+ const readings = [
+   ["Depth", "depth", "cm"],
+@@ -58,12 +60,15 @@
+     this.lifetime = element("p", "This journal stays in this tab until you reset the watch or reload the page.", "journal-lifetime");
+     this.entries = element("ol", "", "journal-entries");
+     this.entries.id = "journal-entries";
++    const trendsRoot = element("section");
++    this.trends = new WatchTrends(trendsRoot);
+     this.details.append(
+       toggle,
+       element("p", "Revisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.", "journal-intro"),
+       this.lifetime,
+       this.recap,
+       this.empty,
++      trendsRoot,
+       this.entries,
+     );
+     root.append(title, this.details);
+@@ -83,6 +88,7 @@
+     this.empty.hidden = false;
+     this.count.textContent = "No tides yet";
+     this.root.hidden = false;
++    this.trends.start(state);
+   }
+ 
+   /**
+@@ -144,5 +150,6 @@
+       this.recap.hidden = false;
+       this.details.open = true;
+     }
++    this.trends.record(before, after);
+   }
+ }
+diff --git a/scripts/package.mjs b/scripts/package.mjs
+--- a/scripts/package.mjs
++++ b/scripts/package.mjs
+@@ -4,9 +4,9 @@
+ import { fileURLToPath } from "node:url";
+ 
+ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+-const styles = ["style.css", "journal.css", "watch-save.css"];
++const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css"];
+ const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js"];
+-const inputs = ["index.html", ...styles, "game.js", ...modules, "pkg/longwater_web_bg.wasm"];
++const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "pkg/longwater_web_bg.wasm"];
+ const sourceHash = createHash("sha256");
+ const files = new Map();
+ for (const name of inputs) {
+@@ -26,8 +26,9 @@
+ }
+ 
+ let game = text("game.js");
++const journal = replaceOnce(text("journal.js"), JSON.stringify("./watch-trends.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-trends.js"))));
+ for (const name of modules) {
+-  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", files.get(name))));
++  game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : files.get(name))));
+ }
+ game = replaceOnce(game, "await init();", `await init({ module_or_path: Uint8Array.from(atob(${JSON.stringify(files.get("pkg/longwater_web_bg.wasm").toString("base64"))}), c => c.charCodeAt(0)) });`);
+ let html = text("index.html");
+diff --git a/tests/watch-save.browser.test.mjs b/tests/watch-save.browser.test.mjs
+--- a/tests/watch-save.browser.test.mjs
++++ b/tests/watch-save.browser.test.mjs
+@@ -16,6 +16,8 @@
+   ["/watch-save.css", ["watch-save.css", "text/css"]],
+   ["/journal.js", ["journal.js", "text/javascript"]],
+   ["/journal.css", ["journal.css", "text/css"]],
++  ["/watch-trends.js", ["watch-trends.js", "text/javascript"]],
++  ["/watch-trends.css", ["watch-trends.css", "text/css"]],
+   ["/pkg/longwater_web.js", ["pkg/longwater_web.js", "text/javascript"]],
+   ["/pkg/longwater_web_bg.wasm", ["pkg/longwater_web_bg.wasm", "application/wasm"]],
+ ]);
+diff --git a/tests/watch-trends.test.mjs b/tests/watch-trends.test.mjs
+new file mode 100644
+--- /dev/null
++++ b/tests/watch-trends.test.mjs
+@@ -0,0 +1,242 @@
++import assert from "node:assert/strict";
++import { after, before, test } from "node:test";
++import { execFile } from "node:child_process";
++import { mkdtemp, readFile } from "node:fs/promises";
++import { tmpdir } from "node:os";
++import { join } from "node:path";
++import { pathToFileURL } from "node:url";
++import { promisify } from "node:util";
++import { chromium } from "playwright";
++import { initSync, BrowserSession } from "../pkg/longwater_web.js";
++import { serve } from "./server.mjs";
++
++const metrics = [
++  ["depth", "Depth", "cm"], ["salinity", "Salt", "ppt"],
++  ["oxygen", "Oxygen", "%"], ["biomass", "Life", "%"], ["shade", "Canopy", "/ 3"],
++];
++const actions = [["gate", 2], ["shade", 0], ["seed", 1], ["shade", 2], ["gate", 0], ["shade", 1]];
++let browser;
++let server;
++
++before(async () => {
++  initSync({ module: await readFile(new URL("../pkg/longwater_web_bg.wasm", import.meta.url)) });
++  server = await serve();
++  browser = await chromium.launch({ headless: true, executablePath: process.env.LONGWATER_CHROME_PATH || undefined });
++});
++after(async () => { await browser?.close(); await server?.close(); });
++
++async function open(url = server.url, options = {}) {
++  const context = await browser.newContext(options);
++  const page = await context.newPage();
++  const errors = [];
++  page.on("pageerror", error => errors.push(error.message));
++  await page.goto(url);
++  await page.locator("#watch-journal").waitFor({ state: "visible" });
++  const sim = new BrowserSession();
++  const states = [JSON.parse(sim.snapshot_json())];
++  return {
++    context, page, states,
++    async expand() {
++      if (!await page.locator("#journal-details").evaluate(node => node.open)) await page.locator("#journal-details > summary").click();
++    },
++    async turn(action, index, keepFocus = false) {
++      const previous = states.at(-1);
++      const cell = page.locator(`[data-cell="${index}"]`);
++      const button = page.locator(`[data-action="${action}"]`);
++      if (keepFocus) { await cell.evaluate(node => node.click()); await button.evaluate(node => node.click()); }
++      else { await cell.click(); await button.click(); }
++      const next = JSON.parse(sim.take_turn(action, previous.cells[index].id));
++      if (next.day !== previous.day) states.push(next);
++      assert.equal(await page.locator("#journal-entries > li").count(), states.at(-1).day);
++    },
++    async close() { sim.free(); await context.close(); assert.deepEqual(errors, []); },
++  };
++}
++
++async function assertTable(page, states, metric) {
++  const [key, label, unit] = metrics.find(item => item[0] === metric);
++  await page.locator("#trend-metric").selectOption(key);
++  const table = page.locator("#trend-table");
++  assert.match(await table.locator("caption").textContent(), new RegExp(`${label}.*${unit.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
++  assert.deepEqual(await table.locator("thead th").allTextContents(), ["Tide", ...states[0].cells.map(cell => cell.name)]);
++  const actual = await table.locator("tbody tr").evaluateAll(rows => rows.map(row => [...row.children].map(cell => cell.textContent)));
++  assert.deepEqual(actual, states.map(state => [state.day === 0 ? "Opening" : `Tide ${state.day}`, ...state.cells.map(cell => String(cell[key]))]));
++  const points = await page.locator("#trend-chart polyline[data-trend-cell]").evaluateAll(lines => lines.map(line => ({
++    id: line.dataset.trendCell,
++    points: line.getAttribute("points").trim().split(/\s+/).map(point => point.split(",").map(Number)),
++  })));
++  assert.deepEqual(points.map(line => line.id), states[0].cells.map(cell => cell.id));
++  for (const line of points) {
++    assert.equal(line.points.length, states.length);
++    assert.ok(line.points.flat().every(Number.isFinite));
++    for (let index = 1; index < line.points.length; index++) {
++      assert.ok(line.points[index][0] > line.points[index - 1][0], "completed tides run left to right");
++      const oldValue = states[index - 1].cells.find(cell => cell.id === line.id)[key];
++      const value = states[index].cells.find(cell => cell.id === line.id)[key];
++      assert.equal(Math.sign(line.points[index][1] - line.points[index - 1][1]), Math.sign(oldValue - value), "actual plot direction follows the native change");
++    }
++  }
++}
++
++async function assertReadout(page, state, key) {
++  const values = await page.locator("#trend-values > div").evaluateAll(rows => rows.map(row => [row.querySelector("dt").textContent, row.querySelector("dd").textContent]));
++  const unit = metrics.find(metric => metric[0] === key)[2];
++  assert.deepEqual(values, state.cells.map(cell => [cell.name, `${cell[key]} ${unit}`]));
++  assert.match(await page.locator("#trend-selected").textContent(), new RegExp(state.day === 0 ? "Opening" : `Tide ${state.day}\\b`));
++  if (state.report) {
++    assert.match(await page.locator("#trend-context").textContent(), new RegExp(state.report.event.name));
++    assert.match(await page.locator("#trend-context").textContent(), new RegExp(state.cells.find(cell => cell.id === state.report.cell).name));
++  }
++}
++
++test("opening trends expose five correctly labelled metrics without inventing a completed tide", async () => {
++  const game = await open();
++  try {
++    await game.expand();
++    assert.equal(await game.page.locator("#watch-trends").count(), 1, "the completed journal needs its trends view");
++    assert.match(await game.page.locator("#trend-scope").textContent(), /No completed tides/);
++    assert.equal(await game.page.locator("#trend-tide").getAttribute("max"), "0");
++    for (const [key] of metrics) { await assertTable(game.page, game.states, key); await assertReadout(game.page, game.states[0], key); }
++    assert.equal(await game.page.locator("#journal-entries > li").count(), 0);
++  } finally { await game.close(); }
++});
++
++test("changed real WASM actions produce complete exact tables and separate cell series without changing the watch", async () => {
++  const game = await open();
++  try {
++    for (const [action, index] of actions) await game.turn(action, index);
++    await game.expand();
++    const before = await game.page.evaluate(() => ({ saved: { ...localStorage }, journal: document.querySelector("#journal-entries").innerHTML, state: document.querySelector("#state-summary").textContent }));
++    for (const [key] of metrics) {
++      await assertTable(game.page, game.states, key);
++      for (let day = 0; day < game.states.length; day++) {
++        await game.page.locator("#trend-tide").evaluate((input, day) => { input.value = String(day); input.dispatchEvent(new Event("input", { bubbles: true })); }, day);
++        await assertReadout(game.page, game.states[day], key);
++      }
++    }
++    const after = await game.page.evaluate(() => ({ saved: { ...localStorage }, journal: document.querySelector("#journal-entries").innerHTML, state: document.querySelector("#state-summary").textContent }));
++    assert.deepEqual(after, before, "reviewing trends does not write storage, alter journal entries, or advance the simulation");
++  } finally { await game.close(); }
++});
++
++test("native keyboard controls retain earlier selection and focus while later tides arrive", async () => {
++  const game = await open();
++  try {
++    for (const [action, index] of actions.slice(0, 3)) await game.turn(action, index);
++    await game.expand();
++    await game.page.locator("#trend-metric").focus();
++    await game.page.keyboard.press("Tab");
++    assert.equal(await game.page.evaluate(() => document.activeElement.id), "trend-tide");
++    await game.page.keyboard.press("Home");
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "0");
++    await game.page.keyboard.press("ArrowRight");
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "1");
++    await game.turn(...actions[3], true);
++    assert.equal(await game.page.evaluate(() => document.activeElement.id), "trend-tide");
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "1");
++    await game.page.keyboard.press("End");
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "4");
++    await game.turn(...actions[4], true);
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "5");
++    assert.equal(await game.page.evaluate(() => document.activeElement.id), "trend-tide");
++    await assertReadout(game.page, game.states.at(-1), "biomass");
++  } finally { await game.close(); }
++});
++
++test("selection and refused actions add no trend, and reset starts at the actual opening", async () => {
++  const game = await open();
++  try {
++    for (let index = 0; index < 3; index++) await game.turn("shade", 0);
++    await game.expand();
++    const history = await game.page.locator("#trend-table tbody").innerHTML();
++    await game.page.locator('[data-action="shade"]').evaluate(node => node.click());
++    await game.page.locator('[data-cell="2"]').click();
++    assert.equal(await game.page.locator("#trend-table tbody").innerHTML(), history);
++    await game.page.locator("#reset-control").click();
++    await game.expand();
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "0");
++    await assertTable(game.page, [game.states[0]], "biomass");
++    await assertReadout(game.page, game.states[0], "biomass");
++  } finally { await game.close(); }
++});
++
++test("clicking the chart selects the tide and leaves keyboard focus on its slider", async () => {
++  const game = await open();
++  try {
++    for (const [action, index] of actions.slice(0, 3)) await game.turn(action, index);
++    await game.expand();
++    await game.page.setViewportSize({ width: 390, height: 844 });
++    await game.page.locator("#trend-chart").scrollIntoViewIfNeeded();
++    const chart = await game.page.locator("#trend-chart").boundingBox();
++    await game.page.mouse.click(chart.x + 5, chart.y + chart.height / 2);
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "0");
++    assert.equal(await game.page.evaluate(() => document.activeElement.id), "trend-tide");
++    await game.page.mouse.click(chart.x + chart.width - 5, chart.y + chart.height / 2);
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "3");
++    assert.equal(await game.page.evaluate(() => document.activeElement.id), "trend-tide");
++    await game.page.keyboard.press("ArrowLeft");
++    assert.equal(await game.page.locator("#trend-tide").inputValue(), "2");
++    await assertReadout(game.page, game.states[2], "biomass");
++  } finally { await game.close(); }
++});
++
++test("partial and complete native replay retain the opening, all completed tides and the finished watch", async () => {
++  const game = await open();
++  try {
++    for (const [action, index] of actions) await game.turn(action, index);
++    await game.page.reload(); await game.page.locator("#watch-journal").waitFor({ state: "visible" }); await game.expand();
++    for (const [key] of metrics) await assertTable(game.page, game.states, key);
++    while (!game.states.at(-1).finished) {
++      const current = game.states.at(-1);
++      const cell = current.cells.findIndex(item => item.shade < 3);
++      await game.turn(cell >= 0 ? "shade" : current.freshwater > 0 ? "gate" : "seed", cell >= 0 ? cell : 1);
++    }
++    await game.page.reload(); await game.page.locator("#watch-journal").waitFor({ state: "visible" }); await game.expand();
++    assert.equal(game.states.length, 15);
++    assert.match(await game.page.locator("#trend-scope").textContent(), /14 completed tides/);
++    for (const [key] of metrics) await assertTable(game.page, game.states, key);
++    await game.page.setViewportSize({ width: 390, height: 844 });
++    await game.page.locator("#trend-table-details > summary").click();
++    assert.equal(await game.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
++    assert.equal(await game.page.locator("#trend-metric").isVisible(), true);
++    assert.equal(await game.page.locator("#trend-tide").isVisible(), true);
++  } finally { await game.close(); }
++});
++
++test("invalid journal replay cannot replace an existing trends history", async () => {
++  const game = await open();
++  try {
++    for (const [action, index] of actions.slice(0, 2)) await game.turn(action, index);
++    const snapshots = game.states.map(state => JSON.stringify(state));
++    const result = await game.page.evaluate(async snapshots => {
++      const { WatchJournal } = await import("./journal.js");
++      const root = document.createElement("section");
++      const journal = new WatchJournal(root);
++      journal.restore(snapshots);
++      const before = root.innerHTML;
++      try { journal.restore([snapshots[0], snapshots[2]]); return { refused: false }; }
++      catch { return { refused: true, unchanged: root.innerHTML === before }; }
++    }, snapshots);
++    assert.deepEqual(result, { refused: true, unchanged: true });
++  } finally { await game.close(); }
++});
++
++test("direct-open packaging embeds the same trends and reopens native saved readings offline", async () => {
++  const dir = await mkdtemp(join(tmpdir(), "longwater-trends-package-"));
++  const output = join(dir, "Longwater.html");
++  await promisify(execFile)(process.execPath, ["scripts/package.mjs", output]);
++  const first = await readFile(output);
++  await promisify(execFile)(process.execPath, ["scripts/package.mjs", output]);
++  assert.deepEqual(await readFile(output), first);
++  const game = await open(pathToFileURL(output).href, { viewport: { width: 390, height: 844 } });
++  const requests = [];
++  game.page.on("request", request => requests.push(request.url()));
++  try {
++    await game.context.setOffline(true);
++    for (const [action, index] of actions.slice(0, 3)) await game.turn(action, index);
++    await game.page.reload(); await game.page.locator("#watch-journal").waitFor({ state: "visible" }); await game.expand();
++    for (const [key] of metrics) await assertTable(game.page, game.states, key);
++    assert.ok(requests.every(url => url.startsWith("file:") || url.startsWith("data:")));
++    assert.equal(await game.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
++  } finally { await game.close(); }
++});
+diff --git a/watch-trends.css b/watch-trends.css
+new file mode 100644
+--- /dev/null
++++ b/watch-trends.css
+@@ -0,0 +1,35 @@
++.watch-trends { margin-top: 22px; padding: 2px 0 20px; border-bottom: 1px solid #2a5650; min-width: 0; }
++.trend-scope, .trend-help, .trend-context { color: #c9d9ce; font-size: .88rem; line-height: 1.6; }
++.trend-help { margin: 8px 0 14px; color: #a8c1b4; }
++.trend-controls { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(170px, 2fr); gap: 20px; margin: 18px 0 8px; }
++.trend-controls label { display: block; min-width: 0; color: #e6f0e5; font-size: .88rem; }
++.trend-controls select { display: block; width: 100%; min-height: 44px; margin-top: 6px; padding: 8px 10px; border: 1px solid #64897e; border-radius: 8px; background: #123238; color: #e6f0e5; font: inherit; }
++.trend-controls input { display: block; width: 100%; height: 44px; margin: 6px 0 0; accent-color: #72e2b4; cursor: pointer; }
++.trend-controls :is(select, input):focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }
++.trend-legend { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; padding: 0; margin: 14px 0 8px; font-size: .82rem; }
++.trend-legend li { display: flex; align-items: center; gap: 8px; }
++.trend-legend svg { width: 32px; height: 12px; flex-shrink: 0; }
++#trend-chart { display: block; width: 100%; height: 250px; border-radius: 8px; background: #082127; touch-action: pan-y; cursor: crosshair; }
++.trend-grid { stroke: #234641; stroke-width: 1; }
++.trend-axis { fill: #c9d9ce; font: 11px ui-sans-serif, system-ui, sans-serif; }
++.trend-cursor { stroke: #e6f0e5; stroke-width: 1; stroke-dasharray: 4 4; opacity: .8; }
++.trend-readout { margin: 14px 0; padding: 14px; border: 1px solid #2a5650; border-radius: 10px; background: #123238; }
++.trend-readout h4 { margin: 0; }
++.trend-context { margin: 4px 0 12px; }
++.trend-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; }
++.trend-values dt { color: #a8c1b4; font-size: .8rem; overflow-wrap: anywhere; }
++.trend-values dd { margin: 4px 0 0; color: #e6f0e5; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
++.trend-table-details { font-size: .88rem; }
++.trend-table-details summary { color: #72e2b4; }
++#trend-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .82rem; font-variant-numeric: tabular-nums; }
++#trend-table caption { padding: 10px 0; text-align: left; color: #c9d9ce; }
++#trend-table :is(th, td) { padding: 8px 6px; border-bottom: 1px solid #2a5650; text-align: right; overflow-wrap: anywhere; }
++#trend-table th { color: #c9d9ce; font-weight: 600; }
++#trend-table th:first-child { text-align: left; }
++@media (max-width: 520px) {
++  .trend-controls { grid-template-columns: 1fr; gap: 12px; }
++  .trend-legend { gap: 8px 14px; }
++  .trend-readout { padding: 12px 10px; }
++  .trend-values { gap: 8px; }
++  .trend-values dd { font-size: 1rem; }
++}
+diff --git a/watch-trends.js b/watch-trends.js
+new file mode 100644
+--- /dev/null
++++ b/watch-trends.js
+@@ -0,0 +1,245 @@
++const metrics = [
++  { key: "depth", name: "Depth", unit: "cm", minimumScale: 10 },
++  { key: "salinity", name: "Salt", unit: "ppt", minimumScale: 10 },
++  { key: "oxygen", name: "Oxygen", unit: "%", minimumScale: 100 },
++  { key: "biomass", name: "Life", unit: "%", minimumScale: 100 },
++  { key: "shade", name: "Canopy", unit: "/ 3", minimumScale: 3 },
++];
++const colors = ["#72e2b4", "#efcb83", "#a7c9ff"];
++const dashes = ["", "8 4", "2 4"];
++const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
++
++function element(tag, text = "", className = "") {
++  const node = document.createElement(tag);
++  node.textContent = text;
++  if (className) node.className = className;
++  return node;
++}
++
++function svg(tag, attributes = {}, text = "") {
++  const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
++  for (const [name, value] of Object.entries(attributes)) node.setAttribute(name, String(value));
++  node.textContent = text;
++  return node;
++}
++
++// Keep only displayed readings and accepted report identity, detached from the
++// caller's native snapshot. The journal supplies the complete admitted sequence.
++function reading(state) {
++  return {
++    day: state.day,
++    cells: state.cells.map(cell => ({
++      id: cell.id, name: cell.name,
++      ...Object.fromEntries(metrics.map(metric => [metric.key, cell[metric.key]])),
++    })),
++    report: state.report ? {
++      action: state.report.action, cell: state.report.cell, event: state.report.event.name,
++    } : null,
++  };
++}
++
++/** A read-only view of the journal's opening and completed native tides. */
++export class WatchTrends {
++  constructor(root) {
++    this.root = root;
++    this.history = [];
++    this.selected = 0;
++    root.id = "watch-trends";
++    root.className = "watch-trends";
++    const heading = element("h3", "Watch trends");
++    heading.id = "trends-title";
++    root.setAttribute("aria-labelledby", heading.id);
++    this.scope = element("p", "", "trend-scope");
++    this.scope.id = "trend-scope";
++    const controls = element("div", "", "trend-controls");
++    const metricLabel = element("label", "Compare a reading");
++    this.metric = element("select");
++    this.metric.id = "trend-metric";
++    metricLabel.htmlFor = this.metric.id;
++    for (const metric of metrics) {
++      const option = element("option", `${metric.name} (${metric.unit})`);
++      option.value = metric.key;
++      this.metric.append(option);
++    }
++    this.metric.value = "biomass";
++    metricLabel.append(this.metric);
++    const tideLabel = element("label", "Review tide");
++    this.range = element("input");
++    this.range.id = "trend-tide";
++    this.range.type = "range";
++    this.range.min = "0";
++    this.range.max = "0";
++    this.range.step = "1";
++    this.range.value = "0";
++    tideLabel.htmlFor = this.range.id;
++    tideLabel.append(this.range);
++    controls.append(metricLabel, tideLabel);
++    const help = element("p", "Choose a tide on the chart or use the slider. Arrow keys move one tide; Home returns to the opening and End to the latest completed tide.", "trend-help");
++    help.id = "trend-help";
++    this.range.setAttribute("aria-describedby", help.id);
++    this.legend = element("ul", "", "trend-legend");
++    this.chart = svg("svg", { id: "trend-chart", "aria-hidden": "true" });
++    const readout = element("div", "", "trend-readout");
++    readout.setAttribute("aria-live", "polite");
++    readout.setAttribute("aria-atomic", "true");
++    this.selectedTitle = element("h4");
++    this.selectedTitle.id = "trend-selected";
++    this.context = element("p", "", "trend-context");
++    this.context.id = "trend-context";
++    this.values = element("dl", "", "trend-values");
++    this.values.id = "trend-values";
++    readout.append(this.selectedTitle, this.context, this.values);
++    const details = element("details", "", "trend-table-details");
++    details.id = "trend-table-details";
++    details.append(element("summary", "All readings for this metric"));
++    this.table = element("table");
++    this.table.id = "trend-table";
++    this.caption = element("caption");
++    this.tableHead = element("thead");
++    this.tableBody = element("tbody");
++    this.table.append(this.caption, this.tableHead, this.tableBody);
++    details.append(this.table);
++    root.append(heading, this.scope, controls, help, this.legend, this.chart, readout, details);
++
++    this.metric.addEventListener("change", () => this.render());
++    this.range.addEventListener("input", () => {
++      this.selected = Number(this.range.value);
++      this.renderSelection();
++    });
++    this.chart.addEventListener("pointerdown", event => {
++      if (event.button !== 0 || this.history.length === 0) return;
++      const bounds = this.chart.getBoundingClientRect();
++      if (bounds.width === 0) return;
++      event.preventDefault();
++      const x = (event.clientX - bounds.left) * this.plot.width / bounds.width;
++      const fraction = Math.max(0, Math.min(1, (x - this.plot.left) / this.plot.span));
++      this.selected = Math.round(fraction * (this.history.length - 1));
++      this.range.value = String(this.selected);
++      this.renderSelection();
++      this.range.focus({ preventScroll: true });
++    });
++    this.resize = new ResizeObserver(() => {
++      if (this.history.length) { this.renderChart(); this.renderSelection(); }
++    });
++    this.resize.observe(this.chart);
++  }
++
++  start(state) {
++    this.history = [reading(state)];
++    this.selected = 0;
++    this.legend.replaceChildren();
++    for (const [index, cell] of this.history[0].cells.entries()) {
++      const item = element("li");
++      const sample = svg("svg", { viewBox: "0 0 32 12", "aria-hidden": "true" });
++      sample.append(svg("line", { x1: 0, y1: 6, x2: 32, y2: 6, stroke: colors[index], "stroke-width": 3, "stroke-dasharray": dashes[index] }));
++      item.append(sample, element("span", cell.name));
++      this.legend.append(item);
++    }
++    this.render();
++  }
++
++  record(before, after) {
++    if (before.day !== this.history.length - 1 || after.day !== before.day + 1 || after.day > 14) {
++      throw new Error("Trends need the next completed journal tide.");
++    }
++    const followLatest = this.selected === this.history.length - 1;
++    this.history.push(reading(after));
++    if (followLatest) this.selected = this.history.length - 1;
++    this.render();
++  }
++
++  render() {
++    if (this.history.length === 0) return;
++    const metric = metrics.find(item => item.key === this.metric.value);
++    const last = this.history.length - 1;
++    this.scope.textContent = last === 0
++      ? "No completed tides yet. These are the opening readings from your watch."
++      : `Opening + ${last} completed tide${last === 1 ? "" : "s"}. Changes include the action, tide and dawn drift.`;
++    this.range.max = String(last);
++    this.range.value = String(this.selected);
++    this.caption.textContent = `${metric.name} (${metric.unit}) · Opening and every completed tide`;
++    const headers = element("tr");
++    for (const title of ["Tide", ...this.history[0].cells.map(cell => cell.name)]) {
++      const th = element("th", title);
++      th.scope = "col";
++      headers.append(th);
++    }
++    this.tableHead.replaceChildren(headers);
++    this.tableBody.replaceChildren(...this.history.map(state => {
++      const row = element("tr");
++      const title = element("th", state.day === 0 ? "Opening" : `Tide ${state.day}`);
++      title.scope = "row";
++      row.append(title);
++      for (const cell of this.history[0].cells) {
++        row.append(element("td", String(state.cells.find(item => item.id === cell.id)[metric.key])));
++      }
++      return row;
++    }));
++    this.renderChart();
++    this.renderSelection();
++  }
++
++  renderChart() {
++    const metric = metrics.find(item => item.key === this.metric.value);
++    const last = this.history.length - 1;
++    const width = Math.max(260, Math.round(this.chart.clientWidth || 640));
++    const height = 250, left = 42, right = 20, top = 24, bottom = 44;
++    const span = width - left - right;
++    const values = this.history.flatMap(state => state.cells.map(cell => cell[metric.key]));
++    const largest = Math.max(metric.minimumScale, ...values);
++    const maximum = metric.key === "shade" ? Math.max(3, Math.ceil(largest)) : Math.ceil(largest / 10) * 10;
++    const x = day => left + (last ? day / last : 0) * span;
++    const y = value => height - bottom - value / maximum * (height - top - bottom);
++    this.plot = { width, left, span, x, y, top, bottom: height - bottom };
++    this.chart.setAttribute("viewBox", `0 0 ${width} ${height}`);
++    const children = [];
++    const divisions = metric.key === "shade" ? maximum : 4;
++    for (let tick = 0; tick <= divisions; tick++) {
++      const value = tick / divisions * maximum;
++      children.push(svg("line", { x1: left, y1: y(value), x2: width - right, y2: y(value), class: "trend-grid" }));
++      children.push(svg("text", { x: left - 8, y: y(value) + 4, "text-anchor": "end", class: "trend-axis" }, String(value)));
++    }
++    children.push(svg("text", { x: left, y: 14, class: "trend-axis" }, `${metric.name} (${metric.unit})`));
++    const tickStep = last > 6 ? Math.ceil(last / 4) : 1;
++    const ticks = new Set([0, last]);
++    for (let day = 0; day <= last; day += tickStep) ticks.add(day);
++    for (const day of [...ticks].sort((a, b) => a - b)) {
++      children.push(svg("text", { x: x(day), y: height - bottom + 19, "text-anchor": "middle", class: "trend-axis" }, String(day)));
++    }
++    children.push(svg("text", { x: left + span / 2, y: height - 6, "text-anchor": "middle", class: "trend-axis" }, "Completed tide · 0 = opening"));
++    for (const [index, cell] of this.history[0].cells.entries()) {
++      const series = this.history.map(state => ({ day: state.day, value: state.cells.find(item => item.id === cell.id)[metric.key] }));
++      children.push(svg("polyline", {
++        points: series.map(point => `${x(point.day)},${y(point.value)}`).join(" "),
++        fill: "none", stroke: colors[index], "stroke-width": 2.5,
++        "stroke-dasharray": dashes[index], "data-trend-cell": cell.id,
++      }));
++      for (const point of series) {
++        children.push(svg("circle", { cx: x(point.day), cy: y(point.value), r: 2.5, fill: colors[index] }));
++      }
++    }
++    this.cursor = svg("line", { class: "trend-cursor", y1: top, y2: height - bottom });
++    children.push(this.cursor);
++    this.chart.replaceChildren(...children);
++  }
++
++  renderSelection() {
++    const state = this.history[this.selected];
++    if (!state) return;
++    const metric = metrics.find(item => item.key === this.metric.value);
++    const title = state.day === 0 ? "Opening" : `Tide ${state.day}`;
++    this.selectedTitle.textContent = `${title} · ${metric.name} (${metric.unit})`;
++    this.range.setAttribute("aria-valuetext", `${title} of ${this.history.length - 1} completed tides`);
++    this.context.textContent = state.report
++      ? `${actionNames[state.report.action]} · ${state.cells.find(cell => cell.id === state.report.cell).name} · ${state.report.event}`
++      : "Before the first action and tide.";
++    this.values.replaceChildren(...this.history[0].cells.map(cell => {
++      const row = element("div");
++      row.append(element("dt", cell.name), element("dd", `${state.cells.find(item => item.id === cell.id)[metric.key]} ${metric.unit}`));
++      return row;
++    }));
++    const x = this.plot.x(this.selected);
++    this.cursor.setAttribute("x1", String(x));
++    this.cursor.setAttribute("x2", String(x));
++  }
++}

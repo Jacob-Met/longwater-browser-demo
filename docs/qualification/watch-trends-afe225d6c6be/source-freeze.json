@@ -1,0 +1,102 @@
+{
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "branch": "longwater-demo",
+  "issue": "https://github.com/Jacob-Met/longwater-browser-demo/issues/10",
+  "baseCommit": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "baseTree": "5123f432300382718e4fc7294deddf6d30acd0a5",
+  "sourceTree": "d17b78954373f1ffff0ad465deba799c372ae521",
+  "frozenAt": "2026-10-08T12:01:54.901Z",
+  "changed": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 8976,
+      "sha256": "4dc3ed3780be30cd6f6dd5c39ebcadaa5382a46c0ddd194e3ac8ebbac7800893",
+      "gitBlob": "815e15d482cfe0ef2f4ad42688127efe30f799c6",
+      "baseGitBlob": "48eccc6644e0d5b3917d2851f486dcec1fa8caea",
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/README.md"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "bytes": 4480,
+      "sha256": "33c50a1cb4d038830f877e387db09f952cb46c4a049ec99375b138cf385d01ed",
+      "gitBlob": "3706bb9e2ca2f147d36e4d0a0e201153d2211beb",
+      "baseGitBlob": "f58865f845e42b4ea1b43cc3034b02d4c4a324ae",
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/index.html"
+    },
+    {
+      "path": "journal.js",
+      "mode": "100644",
+      "bytes": 6391,
+      "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+      "gitBlob": "3f23199fa149f912930e9e2b6afad8c0b85752d0",
+      "baseGitBlob": "51ce5f52bdc74bf4e2c368e369961ed592099426",
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/journal.js"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "mode": "100644",
+      "bytes": 2577,
+      "sha256": "2237f7bd6cca397addddf912595504994feb48237cfacd5175ba53d466b1bf69",
+      "gitBlob": "4ffcc10eaf4c14433fdd3df5448e6c885b2d375a",
+      "baseGitBlob": "6742cc2c3b7a6aab8458e7d998138aa9682197c1",
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/scripts/package.mjs"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "mode": "100644",
+      "bytes": 11458,
+      "sha256": "60ac85ed74d4f134f36d480ef2e79a0235b8d07320063b399eea1463c11bb062",
+      "gitBlob": "f01f4c9fed11e1e73bcfd8ba228d8ea24272ccc7",
+      "baseGitBlob": "3e5321437110b99280b8b89099e507c046325a7e",
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/tests/watch-save.browser.test.mjs"
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "mode": "100644",
+      "bytes": 13968,
+      "sha256": "247cf28b66ea5414ec413c7afea6a8886e5943d71118a8c4face6aff380fe9eb",
+      "gitBlob": "d63f4884475077482b0bbbf2d9e457c61ad7ecef",
+      "baseGitBlob": null,
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/tests/watch-trends.test.mjs"
+    },
+    {
+      "path": "watch-trends.css",
+      "mode": "100644",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "gitBlob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "baseGitBlob": null,
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/watch-trends.css"
+    },
+    {
+      "path": "watch-trends.js",
+      "mode": "100644",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "gitBlob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "baseGitBlob": null,
+      "localPath": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source/watch-trends.js"
+    }
+  ],
+  "unownedBaseLeavesPreserved": 43,
+  "candidateSourceLeaves": 51,
+  "patch": {
+    "path": "/dev/shm/hamon-afe225d6c6be-engine-longwater/source.patch",
+    "bytes": 35062,
+    "sha256": "a06c50618300685e29f857cf8951c0aca265d41c7d41e65b3a90561df017c23a",
+    "isolatedApplyCheck": true,
+    "isolatedAppliedFilesVerified": 8
+  },
+  "qualification": {
+    "baselineInheritedTests": 40,
+    "qualifiedTests": 48,
+    "qualifiedFailed": 0,
+    "sourceUnchangedDuringTests": true,
+    "pointerFocusPredecessorFailureRetained": true,
+    "missingFixtureAssetsFailedRunRetained": true,
+    "desktopPhoneVisuallyInspected": true
+  },
+  "contractSha256": "68019f69f33962f020c517dd9ada093ef2da7c5d90dcaa7ca56e8d5f3d9085f7"
+}

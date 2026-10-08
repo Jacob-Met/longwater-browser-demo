@@ -1,0 +1,359 @@
+{
+  "archive": {
+    "bytes": 549635,
+    "gitBlob": "b835fd24e7b3e64861f8686479d0f09a8b6a7e43",
+    "manifestPayloads": 55,
+    "manifestSha256": "868d5ab164b9003461afdf0f93b4037fe98d4347ce65713732e2ac81fe644774",
+    "path": "/dev/longwater-root/composed/docs/qualification/watch-trends-afe225d6c6be/current-composition/native-evidence.tar.gz",
+    "sha256": "7becddc762684cac50a9b7ab1e9ad148986b7c675b68ebb807bd0d5e202165a2"
+  },
+  "bundle": {
+    "bytes": 106493,
+    "head": "ab649be8eeb9f7b98e8f9b7262058a48da42458f",
+    "nativeGitVerification": "passed",
+    "path": "/dev/longwater-root/Longwater-watch-trends-composition-afe225d6c6be.bundle",
+    "prerequisite": "40b689bdd266d7b53690ca5d667d8916b6815eaf",
+    "sha256": "536fd2303b686641727b579b5836195e6057aa4916b07606e1673985b3d27bc1"
+  },
+  "innerManifest": {
+    "baseCommit": "40b689bdd266d7b53690ca5d667d8916b6815eaf",
+    "files": [
+      {
+        "bytes": 19583,
+        "gitBlob": "052d5755b664dcc5f8bb287444a9b34182a89f51",
+        "path": "current-receiving/composition-receiver.mjs",
+        "sha256": "7d47b33064749ac9e92d5d27b1ad81e1816c3731bb36f72ccdad629259712a68"
+      },
+      {
+        "bytes": 6653,
+        "gitBlob": "3b34eae09deb8551965e74b429d3744f31462c8b",
+        "path": "current-receiving/full-suite-before-native-head.log",
+        "sha256": "7e8b555cff636ea98b6554ed700b60055dd8382d143285217e981798c705e518"
+      },
+      {
+        "bytes": 5091,
+        "gitBlob": "c3d4e4653a6fda46e3ffe2e853a4dba180b20c67",
+        "path": "current-receiving/full-suite.log",
+        "sha256": "276f98b3339b73e7e241b327e051f0fe4ab1bb20d8ef6751dc2bbd0526977a2a"
+      },
+      {
+        "bytes": 65525,
+        "gitBlob": "dbb3ac42da392ae6724aec4f34c05baeb0c8ac54",
+        "path": "current-receiving/independent-desktop.png",
+        "sha256": "40ee1ddfeb250c6855a7fb429807bcc25f0f2873fd6019d630d112c0b768171e"
+      },
+      {
+        "bytes": 54845,
+        "gitBlob": "03894ad49eadaa4019fdc607388300f3c0293cad",
+        "path": "current-receiving/independent-phone.png",
+        "sha256": "2bb31e48b72aa6437c41e7a7feebc151bb3b2d49df05881ff36e4811498f4e86"
+      },
+      {
+        "bytes": 6025,
+        "gitBlob": "c733c096683afe98e7435e239c4c555aac13afb7",
+        "path": "current-receiving/independent-receiving.json",
+        "sha256": "089a314b5d7b00c37b61e423a4262c0f52df39cdc3d0fc88175ee5b2339bb344"
+      },
+      {
+        "bytes": 2775,
+        "gitBlob": "cff376886e7bcc3c8065c6e953e79954ca197876",
+        "path": "current-receiving/independent-run.log",
+        "sha256": "4d62bdaa3b06c56fb38a3b541a79edbec4ff8921947a1e8d227bfd4e671bd2df"
+      },
+      {
+        "bytes": 544,
+        "gitBlob": "46e6b344241b5285aa4fead937b585b84d0a58bf",
+        "path": "current-receiving/native-head-receipt.json",
+        "sha256": "24c484f645beaec4ffb805153b240883c31e2584ca820c71c790d6a151abde45"
+      },
+      {
+        "bytes": 412,
+        "gitBlob": "8643b5f331aba5ddacce9b0f9cf42817679cfd08",
+        "path": "current-receiving/receiver-source-repin.json",
+        "sha256": "00a2c231b7a8bf7216246300b2c2a012c72cf9d4ec063a03c2b41ce65bf4523f"
+      },
+      {
+        "bytes": 273,
+        "gitBlob": "c617f09f7353f8cd422397810849ebd27ff322e6",
+        "path": "current-receiving/source-bundle-verification.log",
+        "sha256": "c0196a9871af3ae382834c6b89c9cd08c962e6ad164a0114aed39664aaeeea99"
+      },
+      {
+        "bytes": 36060,
+        "gitBlob": "2bdff82303c6f5d25c3d91b5c96f9fb2bd22dd5e",
+        "path": "current-receiving/source-freeze.json",
+        "sha256": "2558c6990f5a14f3ad7d9925791c9e2065ce21fcf37393bcc8f3d698106c3527"
+      },
+      {
+        "bytes": 775,
+        "gitBlob": "da3bd3386836df62ee088ab80370377850fa9afe",
+        "path": "current-receiving/visual-receiving.json",
+        "sha256": "6de0a0e5521b35fa928dee8fa2bcb8f156af9a2ba17bd03e914d0eecf96e69ee"
+      },
+      {
+        "bytes": 65531,
+        "gitBlob": "4eb33c8def1245be3c45cc38b53357b7747fe03f",
+        "path": "historical-root-receiving/independent-desktop.png",
+        "sha256": "4afdf82e3eb6f3fa90ee0df78eafc0c1bd6d563e13af2fe313dae32bed6caaa6"
+      },
+      {
+        "bytes": 54845,
+        "gitBlob": "03894ad49eadaa4019fdc607388300f3c0293cad",
+        "path": "historical-root-receiving/independent-phone.png",
+        "sha256": "2bb31e48b72aa6437c41e7a7feebc151bb3b2d49df05881ff36e4811498f4e86"
+      },
+      {
+        "bytes": 19511,
+        "gitBlob": "2e051736609aea9b71c9f2141c1bf4b3739bf379",
+        "path": "historical-root-receiving/independent-receiver.mjs",
+        "sha256": "c2e0e79e0bf163ca7b68b7fbff00dac28ed673dad19a5ee8761aef1a85a92438"
+      },
+      {
+        "bytes": 5960,
+        "gitBlob": "5f3c6e5f62c7dee4f3b3b11d74f8796caff70548",
+        "path": "historical-root-receiving/independent-receiving.json",
+        "sha256": "fdb0c5df078c9beafe16b5aeb4ee05a81b6f9e11fb48a80f6c01f4bc79c4669e"
+      },
+      {
+        "bytes": 2763,
+        "gitBlob": "cc30fbed7cfb45385c7d24f0965cc8f9e4d50582",
+        "path": "historical-root-receiving/independent-run.log",
+        "sha256": "fa3927c50f14bee7b404735e78b2318175e8451e4f6f0418ee10891b8c6694ab"
+      },
+      {
+        "bytes": 19463,
+        "gitBlob": "daed8ac2930bbc71e4900506140a6497d93092cf",
+        "path": "historical-root-receiving/receiver-before-keyboard-activation.mjs",
+        "sha256": "578b1628ff5c81fbf3b8c714cb9fd93ede196c3a089aa92f1c6005d2785c423e"
+      },
+      {
+        "bytes": 500,
+        "gitBlob": "2e945d388e6ad75dd36ef223bce0d0357a90a500",
+        "path": "historical-root-receiving/receiver-harness-correction.json",
+        "sha256": "09a75fdb82a9631fc12923c213efb0bb51b8b1ae1400206239a8f7b41d2699a2"
+      },
+      {
+        "bytes": 7341,
+        "gitBlob": "6876669c46f0e64385af0c36995d22c724ef7e72",
+        "path": "historical-root-receiving/receiving-before-keyboard-activation.json",
+        "sha256": "966ba75fabb51203343dbed1d837f1a863bd8ed7d13a9d5f706aa699f7ac02a5"
+      },
+      {
+        "bytes": 4508,
+        "gitBlob": "52c5800427286bb043d47352dd3cb9ed988720f0",
+        "path": "historical-root-receiving/run-before-keyboard-activation.log",
+        "sha256": "298fc93328acd5860619b0079d121b9db85558a8072564828184119b61590361"
+      },
+      {
+        "bytes": 106493,
+        "gitBlob": "4afe9776a9b6c3e0376346797f8164f06b9f1534",
+        "path": "native-source/Longwater-watch-trends-composition-afe225d6c6be.bundle",
+        "sha256": "536fd2303b686641727b579b5836195e6057aa4916b07606e1673985b3d27bc1"
+      },
+      {
+        "bytes": 6603,
+        "gitBlob": "8f2ddbd686c8ba899869fed90699a0883f50955e",
+        "path": "precandidate/freeze-inputs.mjs",
+        "sha256": "c838ce8b7042e219c3a147addbeb0c48ef68f735b4e176e28feee35315854cd4"
+      },
+      {
+        "bytes": 37824,
+        "gitBlob": "913785029a8823a7ba08c35ccf6da2eb52c15980",
+        "path": "precandidate/pre-candidate-inputs.json",
+        "sha256": "9d8378d140ed306354263850567cea0ff2e942e030f46148d8a6f6ef24430315"
+      },
+      {
+        "bytes": 564,
+        "gitBlob": "2e65be2c498f7ebff2ebe8ff32560741e1319246",
+        "path": "precandidate/receiving-clarification.json",
+        "sha256": "130927cc89f5b11fe8a3fe48d62e3f59a819ccf4c3adfddad19274e662dfb91a"
+      },
+      {
+        "bytes": 1624,
+        "gitBlob": "5e591a2c783d26cae9c4e2b1986bbe4931257380",
+        "path": "runtime/.github/workflows/smoke.yml",
+        "sha256": "f67215979d54aae4a3b1150c5d669ddc4f0200db03ded79b967e4187eeff08cf"
+      },
+      {
+        "bytes": 34,
+        "gitBlob": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7",
+        "path": "runtime/.gitignore",
+        "sha256": "76a8c85c5cde609d309b74ba3cc9c08b776fe95457466c01f364baab341d6b3f"
+      },
+      {
+        "bytes": 0,
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "path": "runtime/.nojekyll",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 10237,
+        "gitBlob": "6b026317062304db08cec6d87ccde0753f3dd5f1",
+        "path": "runtime/README.md",
+        "sha256": "e1d881d2e88459440f60d855f5c67476caffe48b21a34339c1add2124045f3c8"
+      },
+      {
+        "bytes": 234591,
+        "gitBlob": "2299afabea3a2f3d07845eae3ba8ed2521b2c5b5",
+        "path": "runtime/downloads/Longwater-Fourteen-Tides.html",
+        "sha256": "46baa81caa970435956c4ee57c1051514d9f4f9edef5820a3f901306d66f49a3"
+      },
+      {
+        "bytes": 18511,
+        "gitBlob": "eb0991d3bc70577a3864e8eb2eaf2a3ce9a7ec4a",
+        "path": "runtime/game.js",
+        "sha256": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145"
+      },
+      {
+        "bytes": 5000,
+        "gitBlob": "0adb874e390ea2d1098cdf802dfd5b5b10d6ace8",
+        "path": "runtime/index.html",
+        "sha256": "8ef93fe7e0db1fc49da8326d5c9b9ad629e12874c64cccecde3de7326db1982c"
+      },
+      {
+        "bytes": 2465,
+        "gitBlob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+        "path": "runtime/journal.css",
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+      },
+      {
+        "bytes": 6391,
+        "gitBlob": "3f23199fa149f912930e9e2b6afad8c0b85752d0",
+        "path": "runtime/journal.js",
+        "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b"
+      },
+      {
+        "bytes": 1705,
+        "gitBlob": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+        "path": "runtime/package-lock.json",
+        "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb"
+      },
+      {
+        "bytes": 277,
+        "gitBlob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+        "path": "runtime/package.json",
+        "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7"
+      },
+      {
+        "bytes": 1975,
+        "gitBlob": "b13d183c5d8982d689c33b4195a797bebff4ede5",
+        "path": "runtime/pkg/longwater_web.d.ts",
+        "sha256": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91"
+      },
+      {
+        "bytes": 8716,
+        "gitBlob": "50cef9486d91829183315c1a1fb31df1914d6316",
+        "path": "runtime/pkg/longwater_web.js",
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+      },
+      {
+        "bytes": 71368,
+        "gitBlob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+        "path": "runtime/pkg/longwater_web_bg.wasm",
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+      },
+      {
+        "bytes": 865,
+        "gitBlob": "12f7f1826bc094fabfb3674665863d62884105bb",
+        "path": "runtime/pkg/longwater_web_bg.wasm.d.ts",
+        "sha256": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e"
+      },
+      {
+        "bytes": 3145,
+        "gitBlob": "5168cde362b0518431c78e694e3a57af78f4ee48",
+        "path": "runtime/scripts/package.mjs",
+        "sha256": "18ae7eb02a9455af18411ddf2d7b18a670ae3eecbb0a54940dbd2140f0addd83"
+      },
+      {
+        "bytes": 2366,
+        "gitBlob": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8",
+        "path": "runtime/style.css",
+        "sha256": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95"
+      },
+      {
+        "bytes": 8014,
+        "gitBlob": "7ceb05040d243cf844f12c1aba157d14327894e0",
+        "path": "runtime/tests/browser.test.mjs",
+        "sha256": "d4de8ef80b22cf699fb87bdcca4607d31f830ae1f97c7a18fe5187b3fbb0ca0d"
+      },
+      {
+        "bytes": 11727,
+        "gitBlob": "fd21553c02b93ce04e45b4fb88a83c4b09af85ff",
+        "path": "runtime/tests/journal.test.mjs",
+        "sha256": "b260a10345e33148508f15b8db175fb7fc02c4fa2f64dea58472b7c1e81ca132"
+      },
+      {
+        "bytes": 8832,
+        "gitBlob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01",
+        "path": "runtime/tests/offline-download.test.mjs",
+        "sha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988"
+      },
+      {
+        "bytes": 3680,
+        "gitBlob": "5252cf7c6af4e3b625879d35ea99399dadd04c2b",
+        "path": "runtime/tests/package.test.mjs",
+        "sha256": "505dab35b247ac2af924d1dacd879f2d6544b6f3c3721eefa3758ca2b7036c09"
+      },
+      {
+        "bytes": 10880,
+        "gitBlob": "606b177e302414a465f2292452ae7caea3d792cf",
+        "path": "runtime/tests/resume-journal.test.mjs",
+        "sha256": "464113be777dbf11247271eed448481a7b0446e7f24e5320d8fa13a78176e4a9"
+      },
+      {
+        "bytes": 1609,
+        "gitBlob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+        "path": "runtime/tests/server.mjs",
+        "sha256": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6"
+      },
+      {
+        "bytes": 11458,
+        "gitBlob": "f01f4c9fed11e1e73bcfd8ba228d8ea24272ccc7",
+        "path": "runtime/tests/watch-save.browser.test.mjs",
+        "sha256": "60ac85ed74d4f134f36d480ef2e79a0235b8d07320063b399eea1463c11bb062"
+      },
+      {
+        "bytes": 10647,
+        "gitBlob": "05bd8b8b9fe277285afdacf391f08e9f792808cd",
+        "path": "runtime/tests/watch-save.test.mjs",
+        "sha256": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5"
+      },
+      {
+        "bytes": 13968,
+        "gitBlob": "d63f4884475077482b0bbbf2d9e457c61ad7ecef",
+        "path": "runtime/tests/watch-trends.test.mjs",
+        "sha256": "247cf28b66ea5414ec413c7afea6a8886e5943d71118a8c4face6aff380fe9eb"
+      },
+      {
+        "bytes": 473,
+        "gitBlob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+        "path": "runtime/watch-save.css",
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f"
+      },
+      {
+        "bytes": 7492,
+        "gitBlob": "cc802ddd6041b76c7a491b487463636b82fda508",
+        "path": "runtime/watch-save.js",
+        "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8"
+      },
+      {
+        "bytes": 2791,
+        "gitBlob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+        "path": "runtime/watch-trends.css",
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786"
+      },
+      {
+        "bytes": 11372,
+        "gitBlob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+        "path": "runtime/watch-trends.js",
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+      }
+    ],
+    "frozenInputSha256": "9d8378d140ed306354263850567cea0ff2e942e030f46148d8a6f6ef24430315",
+    "kind": "longwater-current-composition-native-receiving",
+    "nativeSourceCommit": "ab649be8eeb9f7b98e8f9b7262058a48da42458f",
+    "recorded_at_utc": "2026-10-08T12:55:40.586838+00:00",
+    "scope": "Runtime and test inputs for the exact composed source; original and corrected independent receiving, current49-test suite with the no-HEAD environment failure preserved, source freeze, native thin bundle, and exact captures. Unrelated historical qualification images are not duplicated.",
+    "sourceTree": "21a66561fa9300053ee0b35d2e2c1049ad29fd0d"
+  }
+}
