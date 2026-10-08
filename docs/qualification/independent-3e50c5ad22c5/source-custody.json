@@ -1,0 +1,173 @@
+{
+  "worker": "chatgpt-3e50c5ad22c5-production",
+  "date": "2026-10-08",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "original_commit": "b7905caa4998c48a7c2fcbb0edeb2bff587f4c33",
+  "local_candidate": "beee773c7b9ee3a5fae8c617e880be6816d57f1b",
+  "remote_candidate": "8a42c92a36611fc18004c5f4ca2bc91f155fe400",
+  "candidate_tree": "bfd15d5b96adac02ec9fb353757aecd48b05a63f",
+  "remote_tree_readback": "bfd15d5b96adac02ec9fb353757aecd48b05a63f",
+  "candidate_source_files": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "f87f20d463ca8e8139a4b2d8cc41b72eb8f6347e",
+      "sha256": "1006783cdb3e67f1f395365b80fc3b7adb7ccf00d8f4d43f07a09c2e2f5993eb"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ae2f5329ed137d246f989117d463b649c5471779",
+      "sha256": "6d54dc4153b2ddbc00996a60ad0cb0b2503b7e62466aa425bb95dfae51d5584c"
+    },
+    {
+      "path": ".nojekyll",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "449ea96564f5f979a99c84269add9aed43f98b28",
+      "sha256": "a9051002170bbdc3d594557cd0044c5c410cd2ac33d7b2e6b20582a9e1653065"
+    },
+    {
+      "path": "game.js",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "bbabb164472b22a826b0d7ad59377475ff31669d",
+      "sha256": "e0c64a37d8eec605bca8f131c404c9d7a8202e4a5d0e198acaf752fc7098108f"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "6e5d15d7b46a9a3a85c89b1603ffca147d76b720",
+      "sha256": "2c04d0ef8fbb135d640c074dcff8047e6bf51cb5f9d354de9a10d5cffa725aed"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+      "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "cb7c7eccaeb98ac59f6c7f0df691df9b6f5dd7a1",
+      "sha256": "387e2452a9eeb77f978228a2e2f272bdd96af3b67652b658d9d59bf51e2f4b87"
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "b13d183c5d8982d689c33b4195a797bebff4ede5",
+      "sha256": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "12f7f1826bc094fabfb3674665863d62884105bb",
+      "sha256": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e"
+    },
+    {
+      "path": "screenshots/desktop.png",
+      "mode": "100755",
+      "type": "blob",
+      "blob": "e1954b199165b978dfdab2d9eaf1c5a245c37463",
+      "sha256": "13e494ee9fbff84d744648937c5cffd5928fd52d9b2c8bbb8a31b47a545a72ef"
+    },
+    {
+      "path": "screenshots/phone.png",
+      "mode": "100755",
+      "type": "blob",
+      "blob": "57d7d16fada051808d0efe46e5057c4888071632",
+      "sha256": "53f08ff48cc198682031a28466cc5c436c812d903cfe26ae8f8d8afb5583cbbd"
+    },
+    {
+      "path": "style.css",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "321c5a7fc932eabfb438713cdfc0b9d45c88d3f3",
+      "sha256": "55eea103abc989cceaa76db37ff322e8cbc0973f77115102aa3a3d9714a196fb"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "7ceb05040d243cf844f12c1aba157d14327894e0",
+      "sha256": "d4de8ef80b22cf699fb87bdcca4607d31f830ae1f97c7a18fe5187b3fbb0ca0d"
+    },
+    {
+      "path": "tests/server.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+      "sha256": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6"
+    }
+  ],
+  "receiver": {
+    "path": "tests/receiving.test.mjs",
+    "sha256": "337830a40e03483e992c30cd098b0b9a6f2b739ac86234547fde9ba8c241033a"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "playwright": "1.62.1",
+    "platform": "linux",
+    "arch": "x64",
+    "chromium_version": "153.0.8010.0",
+    "chromium_sha256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0"
+  },
+  "proposal": {
+    "state": "yielded; unintegrated local proposal only",
+    "patch": "local-header-proposal.patch",
+    "patch_sha256": "91e5f0f31f85e7cdfdbf20a9bb9068856e1733284a926e9352d119edea9f4d2f",
+    "proposed_game_sha256": "4e80c8d10e08e1914c9faa2ce3f19117990d27c37c6e2c4e7f2426c6bb6dff95"
+  },
+  "results": {
+    "candidate": {
+      "passed": 5,
+      "failed": 1,
+      "known_failure": "pre-existing 320px canvas header overlap",
+      "log": "candidate.log"
+    },
+    "local_proposal": {
+      "independent_passed": 6,
+      "independent_failed": 0,
+      "authored_passed": 6,
+      "authored_failed": 0,
+      "logs": [
+        "fixed.log",
+        "authored-fixed.log"
+      ]
+    },
+    "negative_controls": {
+      "original": "expected missing semantic summary failure",
+      "stale-readings": "expected native depth mismatch",
+      "truncated-report": "expected missing native report lines",
+      "wrong-cell": "expected actual native cell state mismatch"
+    }
+  }
+}

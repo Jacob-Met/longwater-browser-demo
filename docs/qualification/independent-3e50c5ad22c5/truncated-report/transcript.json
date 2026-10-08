@@ -1,0 +1,101 @@
+{
+  "servedRoot": "/workspace/scratch/3e50c5ad22c5/production/longwater-review",
+  "mutation": "truncated-report",
+  "browser": "153.0.8010.0",
+  "transcript": [
+    {
+      "label": "initial",
+      "selected": 1,
+      "state": {
+        "day": 0,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 34,
+            "salinity": 34,
+            "oxygen": 64,
+            "biomass": 44,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 56,
+            "salinity": 30,
+            "oxygen": 55,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 67,
+            "salinity": 40,
+            "oxygen": 43,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 5,
+        "seedPacks": 5,
+        "report": null,
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-1",
+      "selected": 2,
+      "state": {
+        "day": 0,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 34,
+            "salinity": 34,
+            "oxygen": 64,
+            "biomass": 44,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 56,
+            "salinity": 30,
+            "oxygen": 55,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 67,
+            "salinity": 40,
+            "oxygen": 43,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 5,
+        "seedPacks": 5,
+        "report": null,
+        "finished": false,
+        "outcome": null
+      }
+    }
+  ]
+}

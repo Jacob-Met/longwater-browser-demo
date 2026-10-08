@@ -1,0 +1,28 @@
+✖ real canvas title, resource totals and reset stay readable without overlap on narrow screens (238.799067ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 576.045729
+
+✖ failing tests:
+
+test at tests/receiving.test.mjs:200:1
+✖ real canvas title, resource totals and reset stay readable without overlap on narrow screens (238.799067ms)
+  AssertionError [ERR_ASSERTION]: 320px: LONGWATER overlaps WATER 5: {"a":{"text":"LONGWATER","left":18,"right":171.978515625,"top":16,"bottom":34},"b":{"text":"WATER 5","left":158.6640625,"right":208,"top":21,"bottom":30}}
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:229:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

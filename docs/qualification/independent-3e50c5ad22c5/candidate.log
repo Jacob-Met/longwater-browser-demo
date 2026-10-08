@@ -1,0 +1,33 @@
+✔ every tide exposes the real independent WASM result, including all cell facts and untruncated events (2310.168917ms)
+✔ a failed WASM turn reports the exception, preserves public state and allows a subsequent real turn (289.493914ms)
+✔ a game shortcut stays local to its focused controls and refuses composed and modified input (185.535181ms)
+✔ 320px touch and desktop resizing retain separate reachable cell and action targets (792.674185ms)
+✖ real canvas title, resource totals and reset stay readable without overlap on narrow screens (116.823869ms)
+✔ canvas admission failure remains visible, names the reason and never enables a game control (121.149846ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4187.96275
+
+✖ failing tests:
+
+test at tests/receiving.test.mjs:200:1
+✖ real canvas title, resource totals and reset stay readable without overlap on narrow screens (116.823869ms)
+  AssertionError [ERR_ASSERTION]: 320px: LONGWATER overlaps WATER 5: {"a":{"text":"LONGWATER","left":18,"right":171.978515625,"top":16,"bottom":34},"b":{"text":"WATER 5","left":158.6640625,"right":208,"top":21,"bottom":30}}
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:229:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

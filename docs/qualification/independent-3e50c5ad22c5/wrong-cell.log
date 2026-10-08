@@ -1,0 +1,26 @@
+✖ every tide exposes the real independent WASM result, including all cell facts and untruncated events (612.639999ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1096.245721
+
+✖ failing tests:
+
+test at tests/receiving.test.mjs:101:1
+✖ every tide exposes the real independent WASM result, including all cell facts and untruncated events (612.639999ms)
+  AssertionError [ERR_ASSERTION]: tide-1: missing native fact Depth 48 centimetres.; received Upper reed shelf; peat & cordgrass. Depth 55 centimetres. Salt 28 parts per thousand. Oxygen 62 percent. Life 45 percent. Canopy 0 of 3.
+      at verifyPublicState (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:85:48)
+      at async TestContext.<anonymous> (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:121:7)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

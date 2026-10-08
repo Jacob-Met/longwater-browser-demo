@@ -1,0 +1,19 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> test
+> node --test tests/browser.test.mjs
+
+✔ the actual WASM watch exposes operable cells, actions, and complete readings (228.167366ms)
+✔ Tab, Enter, Space, arrows and shortcuts share one turn path (305.98766ms)
+✔ unavailable actions and modified/repeated shortcuts do not spend a tide (348.925761ms)
+✔ a player can finish all fourteen tides using only semantic controls and reset (2190.786243ms)
+✔ phone touch targets follow the canvas with separated notes and actions (316.385913ms)
+✔ failed WASM startup leaves an understandable error and no active controls (139.714587ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3908.5158

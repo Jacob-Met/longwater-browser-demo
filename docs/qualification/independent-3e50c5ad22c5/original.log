@@ -1,0 +1,29 @@
+✖ every tide exposes the real independent WASM result, including all cell facts and untruncated events (402.781244ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 977.031574
+
+✖ failing tests:
+
+test at tests/receiving.test.mjs:101:1
+✖ every tide exposes the real independent WASM result, including all cell facts and untruncated events (402.781244ms)
+  AssertionError [ERR_ASSERTION]: initial: the game exposes a semantic state summary
+  
+  0 !== 1
+  
+      at verifyPublicState (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:72:10)
+      at async TestContext.<anonymous> (file:///workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs:106:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
