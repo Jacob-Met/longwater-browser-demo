@@ -1,0 +1,135 @@
+{
+  "product": {
+    "local_commit": "edc2ff176661e799e249401b4abb239f7840e517",
+    "durable_commit": "addc7ebc8e8defc9df940c629806f28906f3f6e9",
+    "tree": "4a1a97efe9797340c17f957246a36f1ae9899d6a",
+    "files": [
+      {
+        "path": "README.md",
+        "git_blob": "b3b0971dac41ccacfdecb99ab13481670dc500ea",
+        "sha256": "78e7253a5272f87bb8871e57abe787af62a52b64ee161069b7bde28bad464060"
+      },
+      {
+        "path": "game.js",
+        "git_blob": "eb0991d3bc70577a3864e8eb2eaf2a3ce9a7ec4a",
+        "sha256": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145"
+      },
+      {
+        "path": "index.html",
+        "git_blob": "f58865f845e42b4ea1b43cc3034b02d4c4a324ae",
+        "sha256": "a21aafead0a6631082097e4da77ca33a891bfaab999d8a4829f9653cbd9e52fe"
+      },
+      {
+        "path": "style.css",
+        "git_blob": "321c5a7fc932eabfb438713cdfc0b9d45c88d3f3",
+        "sha256": "55eea103abc989cceaa76db37ff322e8cbc0973f77115102aa3a3d9714a196fb"
+      },
+      {
+        "path": "journal.js",
+        "git_blob": "51ce5f52bdc74bf4e2c368e369961ed592099426",
+        "sha256": "32f2af1b49d20262a40618b34b32c0908d11e261acc963ea9d71a8a7e6fa8b36"
+      },
+      {
+        "path": "journal.css",
+        "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+      },
+      {
+        "path": "watch-save.js",
+        "git_blob": "cc802ddd6041b76c7a491b487463636b82fda508",
+        "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8"
+      },
+      {
+        "path": "watch-save.css",
+        "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f"
+      },
+      {
+        "path": "package.json",
+        "git_blob": "895bb5a1b64ab05a4c329c88e99cb41e7a786754",
+        "sha256": "56b4021ac8f6778d82810393fe9e18efe8fdcc22abb542b3500465120363d6b1"
+      },
+      {
+        "path": "package-lock.json",
+        "git_blob": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+        "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb"
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+      },
+      {
+        "path": "tests/browser.test.mjs",
+        "git_blob": "7ceb05040d243cf844f12c1aba157d14327894e0",
+        "sha256": "d4de8ef80b22cf699fb87bdcca4607d31f830ae1f97c7a18fe5187b3fbb0ca0d"
+      },
+      {
+        "path": "tests/journal.test.mjs",
+        "git_blob": "fd21553c02b93ce04e45b4fb88a83c4b09af85ff",
+        "sha256": "b260a10345e33148508f15b8db175fb7fc02c4fa2f64dea58472b7c1e81ca132"
+      },
+      {
+        "path": "tests/watch-save.test.mjs",
+        "git_blob": "05bd8b8b9fe277285afdacf391f08e9f792808cd",
+        "sha256": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5"
+      },
+      {
+        "path": "tests/watch-save.browser.test.mjs",
+        "git_blob": "3e5321437110b99280b8b89099e507c046325a7e",
+        "sha256": "c278c67f8b45d144b111d291fc89543058b2f41fc2982946f7771993430f7c65"
+      },
+      {
+        "path": "tests/resume-journal.test.mjs",
+        "git_blob": "606b177e302414a465f2292452ae7caea3d792cf",
+        "sha256": "464113be777dbf11247271eed448481a7b0446e7f24e5320d8fa13a78176e4a9"
+      },
+      {
+        "path": "tests/server.mjs",
+        "git_blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+        "sha256": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6"
+      }
+    ]
+  },
+  "negative_control": {
+    "durable_commit": "212804514dbbc5ff42e6d9457f37e9a59964eb23",
+    "tree": "591c80068286a2a04f8d4ab64dd8883ac3de79bd",
+    "test_source_identical": true,
+    "command": "LONGWATER_CHROME_PATH=/workspace/scratch/3e50c5ad22c5/production/browser/chromium LONGWATER_COMPOSITION_OUTPUT=docs/qualification/resume-journal-3e50c5ad22c5/before node --test --test-name-pattern='a resumed watch' tests/resume-journal.test.mjs",
+    "expected": "one failure: 0 journal entries versus 6 native tides after reopening",
+    "log": "before.log"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "playwright": "1.62.1",
+    "chromium": "153.0.8010.0",
+    "chromium_path": "/workspace/scratch/3e50c5ad22c5/production/browser/chromium",
+    "chromium_sha256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0",
+    "platform": "linux",
+    "architecture": "x64"
+  },
+  "project_check": {
+    "cases": 39,
+    "passed": 39,
+    "failed": 0,
+    "command": "LONGWATER_CHROME_PATH=/workspace/scratch/3e50c5ad22c5/production/browser/chromium LONGWATER_COMPOSITION_OUTPUT=docs/qualification/resume-journal-3e50c5ad22c5/final-composition npm test",
+    "log": "final-project-tests.log"
+  },
+  "independent_check": {
+    "source": "/workspace/scratch/3e50c5ad22c5/production/longwater-review/tests/receiving.test.mjs",
+    "source_commit": "104ed56578f83c9e9171aa8078b518dfecc70a3a",
+    "source_sha256": "337830a40e03483e992c30cd098b0b9a6f2b739ac86234547fde9ba8c241033a",
+    "cases": 6,
+    "passed": 6,
+    "failed": 0,
+    "command": "LONGWATER_CHROME_PATH=/workspace/scratch/3e50c5ad22c5/production/browser/chromium LONGWATER_REVIEW_ROOT=/workspace/scratch/3e50c5ad22c5/production/longwater-composition LONGWATER_REVIEW_OUTPUT=/workspace/scratch/3e50c5ad22c5/production/longwater-composition/docs/qualification/resume-journal-3e50c5ad22c5/final-independent node --test tests/receiving.test.mjs",
+    "working_directory": "/workspace/scratch/3e50c5ad22c5/production/longwater-review",
+    "log": "final-independent.log",
+    "mutations": "none in this composed-source run"
+  }
+}

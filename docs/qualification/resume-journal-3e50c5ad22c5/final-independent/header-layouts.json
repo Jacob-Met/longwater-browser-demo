@@ -1,0 +1,202 @@
+[
+  {
+    "width": 320,
+    "labels": [
+      {
+        "text": "LONGWATER",
+        "left": 18,
+        "right": 171.978515625,
+        "top": 16,
+        "bottom": 34
+      },
+      {
+        "text": "FOURTEEN TIDES · FIELD SIM",
+        "left": 19,
+        "right": 165.77734375,
+        "top": 44,
+        "bottom": 52
+      },
+      {
+        "text": "WATER 5",
+        "left": 18,
+        "right": 67.3359375,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "SEED 5",
+        "left": 108,
+        "right": 147.6044921875,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "↻  RESET",
+        "left": 236.63623046875,
+        "right": 287.36376953125,
+        "top": 29,
+        "bottom": 38
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "labels": [
+      {
+        "text": "LONGWATER",
+        "left": 18,
+        "right": 171.978515625,
+        "top": 16,
+        "bottom": 34
+      },
+      {
+        "text": "FOURTEEN TIDES · FIELD SIM",
+        "left": 19,
+        "right": 165.77734375,
+        "top": 44,
+        "bottom": 52
+      },
+      {
+        "text": "WATER 5",
+        "left": 18,
+        "right": 67.3359375,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "SEED 5",
+        "left": 108,
+        "right": 147.6044921875,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "↻  RESET",
+        "left": 276.63623046875,
+        "right": 327.36376953125,
+        "top": 29,
+        "bottom": 38
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "labels": [
+      {
+        "text": "LONGWATER",
+        "left": 18,
+        "right": 171.978515625,
+        "top": 16,
+        "bottom": 34
+      },
+      {
+        "text": "FOURTEEN TIDES · FIELD SIM",
+        "left": 19,
+        "right": 165.77734375,
+        "top": 44,
+        "bottom": 52
+      },
+      {
+        "text": "WATER 5",
+        "left": 18,
+        "right": 67.3359375,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "SEED 5",
+        "left": 108,
+        "right": 147.6044921875,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "↻  RESET",
+        "left": 306.63623046875,
+        "right": 357.36376953125,
+        "top": 29,
+        "bottom": 38
+      }
+    ]
+  },
+  {
+    "width": 680,
+    "labels": [
+      {
+        "text": "LONGWATER",
+        "left": 18,
+        "right": 171.978515625,
+        "top": 16,
+        "bottom": 34
+      },
+      {
+        "text": "FOURTEEN TIDES · FIELD SIM",
+        "left": 19,
+        "right": 165.77734375,
+        "top": 44,
+        "bottom": 52
+      },
+      {
+        "text": "WATER 5",
+        "left": 18,
+        "right": 67.3359375,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "SEED 5",
+        "left": 108,
+        "right": 147.6044921875,
+        "top": 62,
+        "bottom": 71
+      },
+      {
+        "text": "↻  RESET",
+        "left": 570.63623046875,
+        "right": 621.36376953125,
+        "top": 29,
+        "bottom": 38
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "labels": [
+      {
+        "text": "LONGWATER",
+        "left": 34,
+        "right": 222.9736328125,
+        "top": 12,
+        "bottom": 34
+      },
+      {
+        "text": "FOURTEEN TIDES · FIELD SIM",
+        "left": 35,
+        "right": 181.77734375,
+        "top": 44,
+        "bottom": 52
+      },
+      {
+        "text": "WATER 5",
+        "left": 990.796875,
+        "right": 1050,
+        "top": 20,
+        "bottom": 30
+      },
+      {
+        "text": "SEED 5",
+        "left": 1002.474609375,
+        "right": 1050,
+        "top": 40,
+        "bottom": 50
+      },
+      {
+        "text": "↻  RESET",
+        "left": 1078.63623046875,
+        "right": 1129.36376953125,
+        "top": 29,
+        "bottom": 38
+      }
+    ]
+  }
+]
