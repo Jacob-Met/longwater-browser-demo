@@ -1,0 +1,121 @@
+{
+  "at": "2026-10-08T14:28:22.460094+00:00",
+  "reviewer": "ChatGPT github_receiving for estate-45d4289ccf6c",
+  "scope": "read-only exact composition and fixture source proof; no app/test runs",
+  "base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "product": "e9628acd0f977e42f7a5c062223976c199c10d16",
+  "head": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "parents": [
+    "e9628acd0f977e42f7a5c062223976c199c10d16"
+  ],
+  "base_leaf_count": 108,
+  "product_leaf_count": 111,
+  "final_leaf_count": 111,
+  "final_changed_paths": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/watch-audio.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "watch-audio.css",
+    "watch-audio.js"
+  ],
+  "unrelated_base_leaves_exact": 102,
+  "product_to_final_delta": [
+    "tests/watch-save.browser.test.mjs"
+  ],
+  "game_inverse_exact_base": true,
+  "game_base_sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+  "game_current_sha256": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+  "fixture_inverse_exact_base": true,
+  "fixture_base_sha256": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5",
+  "fixture_current_sha256": "303989848c868b23cd4f781f6e7711fbb38dc7085131f3ab7e093da353573e91",
+  "worktree_status": "",
+  "packets": {
+    "review-packet/production.patch": {
+      "bytes": 11392,
+      "sha256": "d93fe656bd06bdbc91816c9f7d19cb848c6dcc21cd76b3ef7cc845446a851a4f"
+    },
+    "review-packet/source-review-pins.json": {
+      "bytes": 2055,
+      "sha256": "6ef2d752f860dbd0126636efb545591d2e2c8b08e4701c6eb384bc6cf60e8082"
+    },
+    "review-packet/native-qualification-summary.json": {
+      "bytes": 3189,
+      "sha256": "fbeece22a4678e015552d8546b041b30e34f6f1fa33f5da47c5b421dfab2002e"
+    },
+    "evidence/fixture-server-followup/fixture-followup-receipt.json": {
+      "bytes": 1333,
+      "sha256": "b0d21e9314a6f8dd3da20424854ac540a342af192c31ad9ff85911f92ccd3642"
+    },
+    "evidence/fixture-server-followup/fixture-routes.patch": {
+      "bytes": 566,
+      "sha256": "fa286e90f54886302b40715e70e0a9527cdc4d3062ede90c51e13ffc21b589e1"
+    },
+    "evidence/thinkpad-cdp/receipt.json": {
+      "bytes": 347355,
+      "sha256": "4a616ee48e09046614ab33a370739b5ba139e18d3ccd6bf91739f81daf752abe",
+      "status": "passed",
+      "groups": 4,
+      "failure": null,
+      "cleanup": {
+        "browserExit": {
+          "code": 0,
+          "signal": null
+        },
+        "serverClosed": true,
+        "ownProfileRemoved": true,
+        "tempEntries": [],
+        "ownTempRootRemoved": true,
+        "sourceUnchanged": true
+      }
+    },
+    "evidence/composed-reset/receipt.json": {
+      "bytes": 10086,
+      "sha256": "bc91ef4dc708bd90c55dc34225e0084b1fa83eaa82d370659139b4e4bd2094c0",
+      "status": "failed",
+      "groups": 0,
+      "failure": {
+        "message": "Expected values to be strictly equal:\n\n1265 !== 1280\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1265 !== 1280\n\n    at file:///dev/shm/lw45-sound-composition/receive-composed-reset-cdp.mjs:190:14"
+      },
+      "cleanup": {
+        "browserExit": {
+          "code": 0,
+          "signal": null
+        },
+        "serverClosed": true,
+        "ownProfileRemoved": true,
+        "tempEntries": [],
+        "ownTempRootRemoved": true,
+        "sourceUnchanged": true
+      }
+    },
+    "evidence/composed-reset-v2/receipt.json": {
+      "bytes": 13708,
+      "sha256": "9bc6f37588e5dda811d29a2e119f056a892482951c5b97d9a2a4f239c7703600",
+      "status": "passed",
+      "groups": 2,
+      "failure": null,
+      "cleanup": {
+        "browserExit": {
+          "code": 0,
+          "signal": null
+        },
+        "serverClosed": true,
+        "ownProfileRemoved": true,
+        "tempEntries": [],
+        "ownTempRootRemoved": true,
+        "sourceUnchanged": true
+      }
+    }
+  },
+  "process_completion": {
+    "pid": 3161470,
+    "exit_code": 0,
+    "runtime_seconds": 0.15
+  }
+}
