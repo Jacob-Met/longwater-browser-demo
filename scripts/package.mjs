@@ -4,9 +4,9 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-audio.css"];
+const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-audio.css"];
 const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-audio.js"];
-const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "pkg/longwater_web_bg.wasm"];
+const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-report.js", "pkg/longwater_web_bg.wasm"];
 const sourceHash = createHash("sha256");
 const files = new Map();
 for (const name of inputs) {
@@ -26,7 +26,10 @@ function replaceOnce(source, needle, replacement) {
 }
 
 let game = text("game.js");
-const journal = replaceOnce(text("journal.js"), JSON.stringify("./watch-trends.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-trends.js"))));
+let journal = text("journal.js");
+for (const dependency of ["watch-trends.js", "watch-report.js"]) {
+  journal = replaceOnce(journal, JSON.stringify("./" + dependency), JSON.stringify(dataUrl("text/javascript", files.get(dependency))));
+}
 for (const name of modules) {
   game = replaceOnce(game, JSON.stringify(`./${name}`), JSON.stringify(dataUrl("text/javascript", name === "journal.js" ? journal : files.get(name))));
 }

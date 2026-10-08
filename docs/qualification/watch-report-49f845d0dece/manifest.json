@@ -1,0 +1,96 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 4946,
+      "sha256": "50c4b3619e5ad70f688f976edd399c8518d3e3dac5b7eccc30c7d02992987f77"
+    },
+    "composed-full-suite.json": {
+      "bytes": 689,
+      "sha256": "b37a5fa4675a07a0ca4b058b28df1389da5a1ed802962ccfc4b279f906be665c"
+    },
+    "composed-full-suite.txt": {
+      "bytes": 15514,
+      "sha256": "20d18c23c8ee32dee2b5d3248eaf171f22948ef9574472c547bcc6ddbac4c193"
+    },
+    "composed-package.json": {
+      "bytes": 496,
+      "sha256": "3e14214e90f57a3fb53ccae55770b7f075fae6d34ee328357a06f0b057ecaf89"
+    },
+    "final-full-suite.json": {
+      "bytes": 656,
+      "sha256": "d40c988304e72a3e9ed4d5da62648750b7fe94035a965202e1f8abc7dc7a16a5"
+    },
+    "final-full-suite.txt": {
+      "bytes": 12876,
+      "sha256": "a7acb91fa2d2ffb1acbf34fdb3be5e72d12d5943fba6cfa45135f93a7868ac02"
+    },
+    "full-suite.json": {
+      "bytes": 657,
+      "sha256": "ca422ad7bf85cf5d2acd6c930be19d4d6cbcc583bbdc7b551f44e10d54027a1b"
+    },
+    "full-suite.txt": {
+      "bytes": 13225,
+      "sha256": "ce9189ea1cdc6305d34574051d9244106580a46781f81d7f57146b4471402869"
+    },
+    "keyboard-diagnostic.json": {
+      "bytes": 449,
+      "sha256": "50b7b54b23307074761b1bf8d84cc063f906240b1420296045d15c7f3b127a9d"
+    },
+    "mac-initial/baseline-absence.json": {
+      "bytes": 5244,
+      "sha256": "ffb6bdca1d8437af54a88eee17b56dec4b611b2e607769132a660b24b517785a"
+    },
+    "mac-initial/baseline-absence.mjs": {
+      "bytes": 2857,
+      "sha256": "d33dec50eff9ec7d2b146ebf2963f6886ba41c3752217f97e06380d3cb932a18"
+    },
+    "mac-initial/first-focused.txt": {
+      "bytes": 714,
+      "sha256": "f9c2298bc1c0306c5465b0b4331096d21722f6b66ba5861acf43faa25c7e5ff1"
+    },
+    "mac-initial/full-suite.json": {
+      "bytes": 474,
+      "sha256": "ae4ad624d0c1b9b67f3b61cbf445992780e402cc6fb365abfddd6d4f0cf279c2"
+    },
+    "mac-initial/full-suite.txt": {
+      "bytes": 12191,
+      "sha256": "9e96ad868b4d7fd861db634553cdb7831d549a000005971462892614af39a37a"
+    },
+    "mac-initial/source-freeze.json": {
+      "bytes": 1649,
+      "sha256": "38949c6dbec6238c576236366173ad1e941230ac0a08110081541d94657ad5ec"
+    },
+    "native-bundle-verification.txt": {
+      "bytes": 430,
+      "sha256": "d443b3efb2fca11e8da08b714e6a0aac7c877363516f3544cbea02ff2d2e2204"
+    },
+    "native-source.bundle": {
+      "bytes": 140938,
+      "sha256": "0d8def785ebbbcbb8a1c54b41dcad77ae31b229631dbaa77ee3cb3d456c46c92"
+    },
+    "package.json": {
+      "bytes": 496,
+      "sha256": "0db533e2031f438f557032cace9f8628433cfa2fde0cb60c658a3853c864f64b"
+    },
+    "source-freeze-0df34ae.json": {
+      "bytes": 2258,
+      "sha256": "55921139a5283b9179a0870fde4d1ae1514ef5c8e4846df5c8537200dd3f350b"
+    },
+    "source-freeze-260d00a.json": {
+      "bytes": 2258,
+      "sha256": "66d92ed763008f3e72aabb36d1cf183ed75aff14d7e959fbbaa363e760338f93"
+    },
+    "source-freeze.json": {
+      "bytes": 2638,
+      "sha256": "ecd3de51a73b4b31c250e9ffae7fa52c83a545885e439700753dccbf90f88c10"
+    },
+    "watch-report-phone.png": {
+      "bytes": 18892,
+      "sha256": "c56786d86878422811d9646fe70ef7353113468f5714498fc5691debc478d508"
+    },
+    "watch-report-readable.png": {
+      "bytes": 161673,
+      "sha256": "043bb616d0254ab040362879d064ae83b0da954cdb49e259992220f9e59c07c8"
+    }
+  }
+}

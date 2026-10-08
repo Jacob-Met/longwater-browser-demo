@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/offline-download.test.mjs",
+    "tests/package.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/watch-report.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs",
+    "tests/watch-trends.test.mjs"
+  ],
+  "exit": 1,
+  "seconds": 301.67,
+  "head": "a67b89362208507e1f9f6a61248b504b4c5387ff"
+}

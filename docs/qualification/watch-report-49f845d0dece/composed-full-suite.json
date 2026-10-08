@@ -1,0 +1,22 @@
+{
+  "head": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "exit": 0,
+  "seconds": 109.16,
+  "command": [
+    "/usr/bin/node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/new-watch.test.mjs",
+    "tests/offline-download.test.mjs",
+    "tests/package.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/watch-report.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs",
+    "tests/watch-trends.test.mjs"
+  ],
+  "browser": "/home/jacob/.cache/puppeteer/chrome/linux-154.0.8037.57/chrome-linux64/chrome",
+  "temporary": "/dev/shm/lw49-report-author-evidence-49f845d0dece/browser-tmp"
+}

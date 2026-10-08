@@ -1,0 +1,14 @@
+✔ a partial actual watch downloads exact native readings without changing play or saved bytes (3117.13175ms)
+✔ a complete watch retains all fourteen reports and reset cannot export the previous watch (5957.583083ms)
+✔ preparation failure preserves the exact watch and allows an explicit successful retry (958.819125ms)
+✔ the direct-open packaged game exposes the same report at phone width (1189.671208ms)
+✔ renderer treats every name and note as literal text and never mutates its inputs (815.766125ms)
+✔ incomplete or nonfinite snapshots cannot become a successful report (2.5185ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12860.835292
