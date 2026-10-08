@@ -85,12 +85,7 @@ Extract the native archive. It contains `lw49-report-49f845d0dece/` (baseline/or
 From the latter extracted directory, run the following with a new output directory and your Chrome path:
 
 ```sh
-node receive-watch-report-composed.mjs \\
-  --root candidate-a8030e2 \\
-  --output replay-output \\
-  --manifest evidence/candidate-a8030e2-receipt.json \\
-  --native-inputs evidence/native-inputs.json \\
-  --browser /absolute/path/to/chrome
+node receive-watch-report-composed.mjs --root candidate-a8030e2 --output replay-output --manifest evidence/candidate-a8030e2-receipt.json --native-inputs evidence/native-inputs.json --browser /absolute/path/to/chrome
 ```
 
-The [final process receipt](runs/a8030e2/process-receipt.json) retains the exact original native command, paths, times and exit status. The [file manifest](receiving-file-manifest.json) binds this public packet to native SHA-256 and Git blob hashes. The frozen original contract and baseline evidence remain unchanged in the parent evidence commit.
+The [final process receipt](runs/a8030e2/process-receipt.json) retains the exact original native command, paths, times and exit status. The [original proof manifest at dcf501b5](https://github.com/Jacob-Met/longwater-browser-demo/blob/dcf501b59349c54e52ee1fe9e2eca81f4cd58a6f/docs/qualification/watch-report-independent-49f845d0dece/receiving-file-manifest.json) binds the original packet to native SHA-256 and Git blob hashes. This README-only successor corrects the copyable command above; every other proof file retains its original bytes. The frozen original contract and baseline evidence remain unchanged in the parent evidence commit.
