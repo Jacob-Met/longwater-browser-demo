@@ -1,0 +1,220 @@
+{
+  "startedAt": "2026-10-08T12:38:33.351Z",
+  "finishedAt": "2026-10-08T12:38:40.629Z",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "base": "40b689bdd266d7b53690ca5d667d8916b6815eaf",
+  "nativeInputBase": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "tree": "21a66561fa9300053ee0b35d2e2c1049ad29fd0d",
+  "sourcePaths": 65,
+  "frozenInputSha256": "9d8378d140ed306354263850567cea0ff2e942e030f46148d8a6f6ef24430315",
+  "driverSha256": "7d47b33064749ac9e92d5d27b1ad81e1816c3731bb36f72ccdad629259712a68",
+  "sourceUnchanged": true,
+  "passed": true,
+  "groups": [
+    {
+      "name": "opening-five-metrics-and-no-tide-on-cell-selection",
+      "passed": true,
+      "ms": 142,
+      "detail": {
+        "exactOpeningValues": 15,
+        "completedTides": 0
+      }
+    },
+    {
+      "name": "fourteen-native-turns-earlier-selection-latest-follow-and-focus",
+      "passed": true,
+      "ms": 1365,
+      "detail": {
+        "nativeSnapshotsExact": 14,
+        "distinctHistoryValues": 225,
+        "stateFinished": true
+      }
+    },
+    {
+      "name": "keyboard-pointer-readouts-and-read-only-storage",
+      "passed": true,
+      "ms": 623,
+      "detail": {
+        "selectedReadoutDays": [
+          0,
+          4,
+          7,
+          14
+        ],
+        "tableAndPlotValuesAgree": true,
+        "writesAdded": 0,
+        "pointerFocus": "trend-tide"
+      }
+    },
+    {
+      "name": "desktop-and-phone-layout",
+      "passed": true,
+      "ms": 291,
+      "detail": {
+        "desktop": {
+          "viewport": 1280,
+          "page": 1280,
+          "root": {
+            "x": 73,
+            "y": 183.65625,
+            "width": 1134,
+            "height": 736.65625,
+            "top": 183.65625,
+            "right": 1207,
+            "bottom": 920.3125,
+            "left": 73
+          },
+          "select": {
+            "x": 73,
+            "y": 314.359375,
+            "width": 371.328125,
+            "height": 44,
+            "top": 314.359375,
+            "right": 444.328125,
+            "bottom": 358.359375,
+            "left": 73
+          },
+          "slider": {
+            "x": 464.328125,
+            "y": 314.359375,
+            "width": 742.671875,
+            "height": 44,
+            "top": 314.359375,
+            "right": 1207,
+            "bottom": 358.359375,
+            "left": 464.328125
+          },
+          "chart": {
+            "x": 73,
+            "y": 431.875,
+            "width": 1134,
+            "height": 250,
+            "top": 431.875,
+            "right": 1207,
+            "bottom": 681.875,
+            "left": 73
+          }
+        },
+        "phone": {
+          "viewport": 390,
+          "page": 390,
+          "root": {
+            "x": 23,
+            "y": -0.125,
+            "width": 344,
+            "height": 911.171875,
+            "top": -0.125,
+            "right": 367,
+            "bottom": 911.046875,
+            "left": 23
+          },
+          "select": {
+            "x": 23,
+            "y": 153.09375,
+            "width": 344,
+            "height": 44,
+            "top": 153.09375,
+            "right": 367,
+            "bottom": 197.09375,
+            "left": 23
+          },
+          "slider": {
+            "x": 23,
+            "y": 237.609375,
+            "width": 344,
+            "height": 44,
+            "top": 237.609375,
+            "right": 367,
+            "bottom": 281.609375,
+            "left": 23
+          },
+          "chart": {
+            "x": 23,
+            "y": 429.15625,
+            "width": 344,
+            "height": 250,
+            "top": 429.15625,
+            "right": 367,
+            "bottom": 679.15625,
+            "left": 23
+          }
+        }
+      }
+    },
+    {
+      "name": "complete-reset-and-changed-first-turn",
+      "passed": true,
+      "ms": 238,
+      "detail": {
+        "openingOnlyAfterReset": true,
+        "changedFirstTurn": "shade heart"
+      }
+    },
+    {
+      "name": "rejected-fourth-shade-adds-no-history",
+      "passed": true,
+      "ms": 616,
+      "detail": {
+        "accepted": 3,
+        "rejected": 1,
+        "appendedAfterRejection": 0
+      }
+    },
+    {
+      "name": "independent-seven-and-fourteen-tide-saves-survive-reload",
+      "passed": true,
+      "ms": 1390,
+      "detail": [
+        {
+          "day": 7,
+          "storedBytesPreserved": true,
+          "restoredRows": 8
+        },
+        {
+          "day": 14,
+          "storedBytesPreserved": true,
+          "restoredRows": 15
+        }
+      ]
+    },
+    {
+      "name": "journal-invalid-order-rejected-before-view-replacement",
+      "passed": true,
+      "ms": 300,
+      "detail": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "deterministic-package-and-direct-file-native-parity",
+      "passed": true,
+      "ms": 1797,
+      "detail": {
+        "bytes": 234591,
+        "sha256": "46baa81caa970435956c4ee57c1051514d9f4f9edef5820a3f901306d66f49a3",
+        "sourceSha256": "054ca53bbebab69439870fb8401a6f2d2ef9af95e5298ece3b1af45c7b1c98c8",
+        "networkRequests": 0,
+        "exactFinalState": true,
+        "exactHistoryValues": 225
+      }
+    }
+  ],
+  "numericTableComparisons": 1725,
+  "requests": {
+    "totalLocal": 77,
+    "unexpected": []
+  },
+  "limitation": "Synthetic native game histories and fresh local browser contexts; no live site, device, screen-reader, or measured player-benefit claim.",
+  "selectionClarification": {
+    "frozen_input_sha256": "9d8378d140ed306354263850567cea0ff2e942e030f46148d8a6f6ef24430315",
+    "reason": "The frozen select-tide4 then accept5 retain4 wording contradicts the same frozen latest-follows requirement, because tide4 is latest before5. The source contract distinguishes earlier from latest selections.",
+    "correct_receiving_cases": [
+      "Latest tide4 follows accepted5.",
+      "Select tide4 while latest5, accept6, and retain4.",
+      "Select latest6, accept7, and follow7."
+    ],
+    "changes_to_production": false,
+    "original_input_retained": true
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "browser": "153.0.8010.0",
+  "source": "b4c3b82e + scoped trends candidate",
+  "actions": [
+    [
+      "shade",
+      "north"
+    ],
+    [
+      "shade",
+      "north"
+    ],
+    [
+      "shade",
+      "north"
+    ],
+    [
+      "shade",
+      "heart"
+    ],
+    [
+      "shade",
+      "heart"
+    ],
+    [
+      "shade",
+      "heart"
+    ],
+    [
+      "shade",
+      "south"
+    ],
+    [
+      "shade",
+      "south"
+    ],
+    [
+      "shade",
+      "south"
+    ],
+    [
+      "gate",
+      "north"
+    ],
+    [
+      "gate",
+      "heart"
+    ],
+    [
+      "gate",
+      "south"
+    ],
+    [
+      "gate",
+      "north"
+    ],
+    [
+      "gate",
+      "heart"
+    ]
+  ],
+  "finalState": {
+    "day": 14,
+    "cells": [
+      {
+        "id": "north",
+        "name": "North Bank",
+        "zone": "Upper reed shelf",
+        "material": "peat & cordgrass",
+        "depth": 100,
+        "salinity": 7,
+        "oxygen": 79,
+        "biomass": 65,
+        "shade": 3
+      },
+      {
+        "id": "heart",
+        "name": "Heart Pool",
+        "zone": "Inner tidal basin",
+        "material": "mud & glasswort",
+        "depth": 100,
+        "salinity": 4,
+        "oxygen": 54,
+        "biomass": 53,
+        "shade": 3
+      },
+      {
+        "id": "south",
+        "name": "South Reach",
+        "zone": "Outer brackish fringe",
+        "material": "silt & saltgrass",
+        "depth": 100,
+        "salinity": 17,
+        "oxygen": 25,
+        "biomass": 30,
+        "shade": 3
+      }
+    ],
+    "freshwater": 0,
+    "seedPacks": 5,
+    "report": {
+      "day": 14,
+      "action": "gate",
+      "cell": "heart",
+      "event": {
+        "day": 14,
+        "name": "Moon-pull tide",
+        "note": "A final high tide closes the fourteen-day watch.",
+        "depth": 16,
+        "salt": 5,
+        "oxygen": -5
+      },
+      "lines": [
+        "Freshwater gate · Heart Pool: water 100→100 cm, salt 6→0 ppt, oxygen 62→61%. Freshwater −1 (0 left).",
+        "Moon-pull tide · all three cells: water +16 cm, salt +5 ppt; Heart Pool oxygen 61→56%. A final high tide closes the fourteen-day watch.",
+        "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+        "Net · Heart Pool: water 100→100 cm, salt 6→4 ppt, oxygen 62→54%, biomass 55→53%."
+      ]
+    },
+    "finished": true,
+    "outcome": "resilient"
+  },
+  "opening": {
+    "day": 0,
+    "cells": [
+      {
+        "id": "north",
+        "name": "North Bank",
+        "zone": "Upper reed shelf",
+        "material": "peat & cordgrass",
+        "depth": 34,
+        "salinity": 34,
+        "oxygen": 64,
+        "biomass": 44,
+        "shade": 0
+      },
+      {
+        "id": "heart",
+        "name": "Heart Pool",
+        "zone": "Inner tidal basin",
+        "material": "mud & glasswort",
+        "depth": 56,
+        "salinity": 30,
+        "oxygen": 55,
+        "biomass": 49,
+        "shade": 0
+      },
+      {
+        "id": "south",
+        "name": "South Reach",
+        "zone": "Outer brackish fringe",
+        "material": "silt & saltgrass",
+        "depth": 67,
+        "salinity": 40,
+        "oxygen": 43,
+        "biomass": 38,
+        "shade": 0
+      }
+    ],
+    "freshwater": 5,
+    "seedPacks": 5,
+    "report": null,
+    "finished": false,
+    "outcome": null
+  },
+  "pointerSelection": [
+    0,
+    14
+  ],
+  "phoneWidth": 390,
+  "pageErrors": [],
+  "externalRequests": [],
+  "captures": [
+    {
+      "name": "trends-desktop.png",
+      "bytes": 77214,
+      "sha256": "6d56530adc7898344354be87bc8f8ff993247023e70b67f9a13cf8417f17ede9"
+    },
+    {
+      "name": "trends-phone.png",
+      "bytes": 95551,
+      "sha256": "4a605604d541d7fb2b00a379b4bc9b2e9ca32f11aabfcad6385896a2d3d1e185"
+    }
+  ]
+}

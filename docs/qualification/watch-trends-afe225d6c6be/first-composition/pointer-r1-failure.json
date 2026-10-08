@@ -1,0 +1,11 @@
+{
+  "kind": "Author real pointer receiving failure; production correction pending",
+  "sourceSha256": "572722e6b29a02d50b00d5f2e8648895f8ec42bf584460ca597fd319b59d2378",
+  "driverSha256": "6964c120ea362ae94c4295407e91940b469e7a581c5acba71ae8563608aa4123",
+  "observed": "At 390px, pointer selection correctly reaches Opening and Tide14, but document.activeElement.id is empty after the pointerdown listener focuses trend-tide; default pointer focus runs afterward.",
+  "assertion": {
+    "expected": "trend-tide",
+    "actual": ""
+  },
+  "accepted": false
+}

@@ -54,6 +54,26 @@ Your saved tides return with the watch when you reload or come back later. The
 journal restores the complete reports and the original opening readings, so its
 final comparison still covers all fourteen tides. Reset starts a fresh journal.
 
+### Compare the marsh readings
+
+**Watch trends**, inside the journal, plots the three cells together for one
+reading at a time: Depth (cm), Salt (ppt), Oxygen (%), Life (%), or Canopy (/ 3).
+The lines begin with the actual opening readings and extend only through tides
+you have completed. Their changes include your action, the tide and dawn drift;
+they do not isolate the effect of an action or predict a future tide.
+
+Choose a reading, then click the chart or move **Review tide** to inspect that
+opening or tide. The readout shows each cell's exact value and the accepted
+action and event. The slider works with the arrow keys, Home and End. Different
+line patterns distinguish the cells as well as color. **All readings for this
+metric** opens a complete table, including the opening and every completed tide.
+
+The view follows new tides while you are reviewing the latest one. If you choose
+an earlier tide, it keeps that selection during further play. Reviewing changes
+neither your selected game cell nor the simulation or saved watch. Reset clears
+the graph to the native opening, and resume rebuilds it from the same verified
+native replay as the journal. The direct-open packaged game includes this view.
+
 ## Resume your watch
 
 The watch saves in this browser after a successful tide or a change of selected
@@ -135,6 +155,8 @@ could not be saved. Reset also replaces the saved offline watch.
 - `game.js` — canvas UI: rendering, layout, input, screen-reader announcements
 - `journal.js` / `journal.css` — visible tide history and end-of-watch review,
   using the actual before/after WASM snapshots and reports
+- `watch-trends.js` / `watch-trends.css` — one-metric, three-cell trend chart,
+  keyboard tide readout and complete numeric table from those journal snapshots
 - `watch-save.js` / `watch-save.css` — bounded local action history and visible
   save status; the unchanged WASM validates saved state and rebuilds all journal
   snapshots when the watch resumes

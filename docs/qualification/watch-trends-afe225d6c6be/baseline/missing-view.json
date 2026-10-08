@@ -1,0 +1,8 @@
+{
+  "base": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "kind": "Absent new capability, not a claimed old-product regression",
+  "exit": 1,
+  "signal": null,
+  "logSha256": "c95b4f7d5a0841d4f9af9fde5af79d90f4094b6dda2f57b824a4c7748f3ec95d",
+  "testSha256": "a1111151b30963d46d6d8bbc6d5a099a63c7342a9fb38b0b5131c8f8b035056c"
+}

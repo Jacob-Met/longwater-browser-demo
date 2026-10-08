@@ -1,0 +1,10 @@
+{
+  "base": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "command": "node --test --test-concurrency=1 tests/browser.test.mjs tests/journal.test.mjs tests/package.test.mjs tests/resume-journal.test.mjs tests/watch-save.browser.test.mjs tests/watch-save.test.mjs",
+  "started": "2026-10-08T11:35:25.267Z",
+  "finished": "2026-10-08T11:35:46.834Z",
+  "node": "v24.19.0",
+  "exit": 0,
+  "signal": null,
+  "logSha256": "1dd299cda3de2b0ef3887ff167aa50ca29f221e2718cd4e862f1d270b14e6ddb"
+}

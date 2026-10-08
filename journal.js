@@ -1,3 +1,5 @@
+import { WatchTrends } from "./watch-trends.js";
+
 const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
 const readings = [
   ["Depth", "depth", "cm"],
@@ -58,12 +60,15 @@ export class WatchJournal {
     this.lifetime = element("p", "This journal stays in this tab until you reset the watch or reload the page.", "journal-lifetime");
     this.entries = element("ol", "", "journal-entries");
     this.entries.id = "journal-entries";
+    const trendsRoot = element("section");
+    this.trends = new WatchTrends(trendsRoot);
     this.details.append(
       toggle,
       element("p", "Revisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.", "journal-intro"),
       this.lifetime,
       this.recap,
       this.empty,
+      trendsRoot,
       this.entries,
     );
     root.append(title, this.details);
@@ -83,6 +88,7 @@ export class WatchJournal {
     this.empty.hidden = false;
     this.count.textContent = "No tides yet";
     this.root.hidden = false;
+    this.trends.start(state);
   }
 
   /**
@@ -144,5 +150,6 @@ export class WatchJournal {
       this.recap.hidden = false;
       this.details.open = true;
     }
+    this.trends.record(before, after);
   }
 }

@@ -1,0 +1,62 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> test
+> node --test tests/*.test.mjs
+
+✔ the actual WASM watch exposes operable cells, actions, and complete readings (2630.687378ms)
+✔ Tab, Enter, Space, arrows and shortcuts share one turn path (938.220389ms)
+✔ unavailable actions and modified/repeated shortcuts do not spend a tide (999.018104ms)
+✔ a player can finish all fourteen tides using only semantic controls and reset (3546.235965ms)
+✔ phone touch targets follow the canvas with separated notes and actions (646.626731ms)
+✔ failed WASM startup leaves an understandable error and no active controls (276.241945ms)
+✔ the journal preserves complete real WASM reports and all three cells across later choices (3445.737997ms)
+✔ unavailable choices create no journal entry and journal keyboard reading spends no tide (1301.99427ms)
+✔ all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal (2706.936246ms)
+✔ phone readers can expand every note and cell without horizontal overflow (932.379231ms)
+✔ a failed simulation startup offers no fabricated watch history (223.531774ms)
+✔ an accepted native replay restores its full history, and a missing tide cannot replace it (457.027724ms)
+✔ a visitor downloads the current game and resumes its complete journal offline (5035.9713ms)
+✔ the packaged watch plays and restores its complete journal offline (4053.841816ms)
+✔ a resumed watch reconstructs every earlier native report before accepting the next tide (5783.15583ms)
+✔ a completed saved watch retains fourteen reports and the actual opening-to-final recap (2644.463209ms)
+✔ failed saving keeps current reports and a successful explicit retry makes the whole journal resumable (951.83187ms)
+✔ a save that disagrees with real replay is protected and cannot fabricate a journal (457.876596ms)
+✔ another tab's saved branch stays authoritative while the local journal can continue unsaved (1008.689309ms)
+✔ closing and reopening the page resumes the same native watch and selected cell (3398.073699ms)
+✔ a fourteen-tide ending survives reload and explicit reset stores a fresh watch (2176.578617ms)
+✔ unavailable actions leave the saved history unchanged (694.948979ms)
+✔ failed replay preserves saved data while play continues until an explicit reset (1396.912122ms)
+✔ quota failure retains the running tide and the visible retry saves without advancing it (587.488479ms)
+✔ a blocked storage getter still allows a playable watch and later save retry (358.675077ms)
+✔ two tabs detect divergent storage and do not overwrite the other watch (679.27439ms)
+✔ failed WASM startup never replaces an existing saved watch (372.958858ms)
+✔ the save revision pins the actual shipped WASM bytes (1.649631ms)
+✔ a new watch does not write until the player chooses a cell or tide (2.803356ms)
+✔ reload replays actual accepted tides and restores the exact complete state and selection (2.399518ms)
+✔ a completed fourteen-tide watch and its outcome survive reopening (4.451044ms)
+✔ refused actions are absent from storage and do not change native state (0.853504ms)
+✔ explicit reset persists a fresh watch that cannot resurrect the old history (0.941987ms)
+✔ malformed, unsupported, overlong and tampered saves remain byte-for-byte intact (8.483749ms)
+✔ failed partial native replay frees its candidate and explicit reset replaces a protected save (2.162743ms)
+✔ a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide (0.759402ms)
+✔ an unavailable localStorage getter does not prevent play and can later recover (0.576967ms)
+✔ retry after unreadable storage never overwrites a previously unknown saved watch (0.453452ms)
+✔ a stale tab detects another saved watch before writing its divergent tide (0.662757ms)
+✔ storage change and clear notifications hold stale writes without mutating the current watch (0.572701ms)
+✔ a failed reset write reports the unsaved state and retry cannot restore old actions (0.966123ms)
+✔ opening trends expose five correctly labelled metrics without inventing a completed tide (2685.200775ms)
+✔ changed real WASM actions produce complete exact tables and separate cell series without changing the watch (3080.632799ms)
+✔ native keyboard controls retain earlier selection and focus while later tides arrive (838.799125ms)
+✔ selection and refused actions add no trend, and reset starts at the actual opening (928.307167ms)
+✔ clicking the chart selects the tide and leaves keyboard focus on its slider (866.854052ms)
+✔ partial and complete native replay retain the opening, all completed tides and the finished watch (2321.094936ms)
+✔ invalid journal replay cannot replace an existing trends history (365.553706ms)
+✔ direct-open packaging embeds the same trends and reopens native saved readings offline (825.095559ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12997.451725

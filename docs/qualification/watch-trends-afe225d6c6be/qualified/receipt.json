@@ -1,0 +1,20 @@
+{
+  "started": "2026-10-08T11:58:02.339Z",
+  "finished": "2026-10-08T11:58:33.029Z",
+  "node": "v24.19.0",
+  "command": "node --test --test-concurrency=1 tests/*.test.mjs",
+  "exit": 0,
+  "signal": null,
+  "pins": {
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "journal.js": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+    "index.html": "33c50a1cb4d038830f877e387db09f952cb46c4a049ec99375b138cf385d01ed",
+    "scripts/package.mjs": "2237f7bd6cca397addddf912595504994feb48237cfacd5175ba53d466b1bf69",
+    "tests/watch-trends.test.mjs": "247cf28b66ea5414ec413c7afea6a8886e5943d71118a8c4face6aff380fe9eb",
+    "tests/watch-save.browser.test.mjs": "60ac85ed74d4f134f36d480ef2e79a0235b8d07320063b399eea1463c11bb062",
+    "README.md": "4dc3ed3780be30cd6f6dd5c39ebcadaa5382a46c0ddd194e3ac8ebbac7800893"
+  },
+  "sourceUnchanged": true,
+  "logSha256": "f9b4e78e5b7c4920881517995c52a5fa84f9ace3a84bf6df065e8ffe52bfa1f8"
+}
