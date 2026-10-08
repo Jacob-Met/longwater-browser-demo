@@ -1,0 +1,44 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "rootVisualAcceptance": {
+    "acceptedBy": "estate-49f845d0dece/root",
+    "source": "Direct parent coordination after RDC inspection",
+    "boundRun": "260d00a",
+    "screenshots": [
+      {
+        "name": "modular-partial-desktop.png",
+        "bytes": 104697,
+        "sha256": "3f3cb92412a0509ea2b979c21c8a0933ac489b4f39d593caaa08a4e6bc1425bf"
+      },
+      {
+        "name": "packaged-completed-phone.png",
+        "bytes": 77911,
+        "sha256": "42a6e3fe215b751b1eb1889bd68e6a21a9023ce7b538ffc16bd4e0c411c144b2"
+      }
+    ],
+    "observation": "Contained horizontal tables are readable and visibly scrollable, with clear partial/completed provenance.",
+    "correspondence": "All PNG bytes are identical in the a8030e2 composed run."
+  },
+  "printHandoff": {
+    "owner": "estate-49f845d0dece/source_coordination",
+    "htmlSha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+    "htmlBytes": 32114,
+    "contractNativeCommit": "811646e5803e2dbc3b3fc2852c9bf5917f045c9f",
+    "contractSha256": "35fd034f25f2c53f8cd0b62aca5d4fd9bc29a6c4edd5a7293ab248f34e0741fd",
+    "reportedResult": "One actual Chrome154 A4 PDF; 11 pages; all14 tides,56 notes,16 resource paragraphs,48 rows/240 metrics and9,111 nonwhitespace characters exact. Separate print owner retains PDF execution/visual evidence.",
+    "pdfSha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a"
+  },
+  "historicalScope": {
+    "260": "260d00a final report presentation passed15/15 on c442 base; preserved after canonical advanced.",
+    "a67b893": "Original presentation/source gate passed15/15; preserved. Author separately observed original full-suite integration failures.",
+    "a803": "Actual f321 composition passes15/15 with one frozen reset admission-block adapter."
+  },
+  "failedStage": {
+    "file": "evidence/stage-final.stderr.log",
+    "cause": "Staging guard expected no untracked files, but the author had an untracked node_modules test dependency. No candidate file was copied by this failed stage. Original script/stdout/stderr retained.",
+    "resolution": "A distinct run02 requires zero tracked modifications and exactly the known node_modules entry; validates every copied file against committed Git blob and SHA256. No dependency files copied."
+  },
+  "preparationFailureWitness": "Each actual native game entrypoint intentionally throws once at URL.createObjectURL. No file appears; exact watch/saved/review witness remains identical; a real retry succeeds. This is an expected negative control, not a product failure.",
+  "workspaceSetupFailure": "The first RDC write into a not-yet-created unique /dev/shm receiver directory returned ENOENT. The directory was then created and the unchanged script written. No product file was touched.",
+  "authorSuiteResultsAttribution": "Author-reported maintained suite results are not independent executions: a67 focused6/6 and maintained45/10; 0df54/1; 260d55/55; a80366/66. Author owns raw suite failures, diagnostics and immutable bundle."
+}

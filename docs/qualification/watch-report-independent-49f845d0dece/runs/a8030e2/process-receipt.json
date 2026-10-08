@@ -1,0 +1,48 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "startedAt": "2026-10-08T14:17:57.590Z",
+  "candidate": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "steps": [
+    {
+      "name": "composed-receiver-syntax",
+      "command": "/usr/bin/node",
+      "args": [
+        "--check",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/receive-watch-report-composed.mjs"
+      ],
+      "startedAt": "2026-10-08T14:17:57.590Z",
+      "stdoutPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/composed-receiver-syntax.stdout.log",
+      "stderrPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/composed-receiver-syntax.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T14:17:57.738Z"
+    },
+    {
+      "name": "a8030e2-receiving",
+      "command": "/usr/bin/node",
+      "args": [
+        "/dev/shm/lw49-report-receiver-49f845d0dece/receive-watch-report-composed.mjs",
+        "--root",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/candidate-a8030e2",
+        "--output",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01",
+        "--manifest",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/candidate-a8030e2-receipt.json",
+        "--native-inputs",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/native-inputs.json",
+        "--browser",
+        "/home/jacob/.cache/puppeteer/chrome/linux-154.0.8037.57/chrome-linux64/chrome"
+      ],
+      "startedAt": "2026-10-08T14:17:57.742Z",
+      "stdoutPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/a8030e2-receiving.stdout.log",
+      "stderrPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/a8030e2-receiving.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T14:18:07.053Z"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-10-08T14:18:07.053Z"
+}

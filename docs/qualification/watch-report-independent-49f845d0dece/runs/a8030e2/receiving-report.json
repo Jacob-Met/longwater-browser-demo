@@ -1,0 +1,2294 @@
+{
+  "status": "passed",
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "startedAt": "2026-10-08T14:17:57.987Z",
+  "candidateHead": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "candidateTree": "8db39a069c3c856c2c555a9ca6f7d796ebfe9b86",
+  "base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "source": "/dev/shm/lw49-report-receiver-49f845d0dece/candidate-a8030e2",
+  "contractCommit": "38bb955d94bbf1032890307f7c4d04f0cb08f9be",
+  "contractSha256": "797f75ea07859c0d3f54c8943d7bbaf8e16909ca58dfe24f27db3162d017c7da",
+  "nativeInputSha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+  "receiverSha256": "f0a38d9b718637e36ff0b10c47e6bcebebc25044ebda0db300b12dc96c9d259d",
+  "helperSha256": "afdb405bedd25272f21166359f60ee0047ceaf7e0b3e58f63d62feeae5acf492",
+  "node": "v22.22.1",
+  "sourceBefore": {
+    "README.md": "4f34e4ec1cb78fa0b25022943c604984f2329507d98eef03848d539168fb8266",
+    "downloads/Longwater-Fourteen-Tides.html": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+    "game.js": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+    "index.html": "7231aa85cf1f106d8d7f91dfe725088794828617d29c081618fadf9d37c6dabb",
+    "journal.css": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+    "journal.js": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+    "package.json": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+    "pkg/longwater_web.js": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "scripts/package.mjs": "3624e9425971287a6e0dd26f61764c59281bc0940ca5dea477ced05a823310bc",
+    "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+    "tests/browser.test.mjs": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+    "tests/package.test.mjs": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+    "tests/watch-report.test.mjs": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+    "tests/watch-save.browser.test.mjs": "741eb2542c3f40c2892ab5b691267b0a1acf3a9dc2f3c93757017a320745d959",
+    "watch-report.css": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+    "watch-report.js": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+    "watch-save.css": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+    "watch-save.js": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+  },
+  "checks": [
+    "native repeated packager builds are deterministic and equal the frozen published offline artifact",
+    "modular: actual three-tide report uses accepted South Reach provenance despite current North Bank selection and Tide 1 review; all values/notes exact and no mutation",
+    "modular: one controlled real Blob-URL preparation failure leaves the watch intact; retry produces an actual readable report",
+    "modular: actual partial-watch reload restores original opening and all three native reports before export",
+    "modular: all fourteen actual tides and resilient outcome export exactly; old partial bytes and reopened content remain stable; print tables stay visible",
+    "modular: completed-watch replay exports all fourteen tides and the original opening/outcome",
+    "modular: existing reset clears report collection; a fresh Shade/South Reach watch exports one true tide without prior history/outcome",
+    "actual modular offline-game download matches the frozen candidate artifact without changing the online watch",
+    "packaged: actual three-tide report uses accepted South Reach provenance despite current North Bank selection and Tide 1 review; all values/notes exact and no mutation",
+    "packaged: one controlled real Blob-URL preparation failure leaves the watch intact; retry produces an actual readable report",
+    "packaged: actual partial-watch reload restores original opening and all three native reports before export",
+    "packaged: all fourteen actual tides and resilient outcome export exactly; old partial bytes and reopened content remain stable; print tables stay visible",
+    "packaged: completed-watch replay exports all fourteen tides and the original opening/outcome",
+    "packaged: existing reset clears report collection; a fresh Shade/South Reach watch exports one true tide without prior history/outcome",
+    "both entrypoints finish with exact unchanged product source, no page exceptions and no hosted application requests"
+  ],
+  "entries": [
+    {
+      "name": "modular",
+      "url": "http://127.0.0.1:41735/",
+      "width": 1280,
+      "turns": [
+        {
+          "day": 1,
+          "action": "gate",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 2,
+          "action": "shade",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 3,
+          "action": "seed",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 4,
+          "action": "shade",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 5,
+          "action": "shade",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 6,
+          "action": "gate",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 7,
+          "action": "seed",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 8,
+          "action": "shade",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 9,
+          "action": "seed",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 10,
+          "action": "shade",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 11,
+          "action": "gate",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 12,
+          "action": "shade",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 13,
+          "action": "seed",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 14,
+          "action": "gate",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        }
+      ],
+      "partialReport": {
+        "name": "modular-partial.html",
+        "guid": "9ad1bf12-2870-404e-aaaa-886fe3a3f618",
+        "suggestedFilename": "Longwater-watch-tide-03.html",
+        "bytes": 10435,
+        "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b"
+      },
+      "completedReport": {
+        "name": "modular-completed.html",
+        "guid": "acbc5cb8-7893-47ef-9588-3591e745a802",
+        "suggestedFilename": "Longwater-watch-tide-14.html",
+        "bytes": 32114,
+        "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7"
+      },
+      "resetReport": {
+        "name": "modular-new-watch.html",
+        "guid": "7bad6a9d-98fa-4fb8-899d-8b6dbe2aeca5",
+        "suggestedFilename": "Longwater-watch-tide-01.html",
+        "bytes": 6504,
+        "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef"
+      },
+      "partialWitness": {
+        "saved": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"seed\",\"cell\":\"south\"}],\"selected\":\"north\",\"snapshot\":\"{\\\"day\\\":3,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":42,\\\"salinity\\\":37,\\\"oxygen\\\":62,\\\"biomass\\\":45,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":57,\\\"salinity\\\":41,\\\"oxygen\\\":60,\\\"biomass\\\":54,\\\"shade\\\":1},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":68,\\\"salinity\\\":52,\\\"oxygen\\\":39,\\\"biomass\\\":49,\\\"shade\\\":0}],\\\"freshwater\\\":4,\\\"seedPacks\\\":4,\\\"report\\\":{\\\"day\\\":3,\\\"action\\\":\\\"seed\\\",\\\"cell\\\":\\\"south\\\",\\\"event\\\":{\\\"day\\\":3,\\\"name\\\":\\\"Heat pulse\\\",\\\"note\\\":\\\"Hot air accelerates evaporation and oxygen loss.\\\",\\\"depth\\\":-8,\\\"salt\\\":7,\\\"oxygen\\\":-7,\\\"heat\\\":true},\\\"lines\\\":[\\\"Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).\\\",\\\"Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+        "writes": 7,
+        "selected": [
+          "true",
+          "false",
+          "false"
+        ],
+        "state": "Day 3 of 14. Water 4; seed packs 4.",
+        "cells": [
+          "Upper reed shelf; peat & cordgrass. Depth 42 centimetres. Salt 37 parts per thousand. Oxygen 62 percent. Life 45 percent. Canopy 0 of 3.",
+          "Inner tidal basin; mud & glasswort. Depth 57 centimetres. Salt 41 parts per thousand. Oxygen 60 percent. Life 54 percent. Canopy 1 of 3.",
+          "Outer brackish fringe; silt & saltgrass. Depth 68 centimetres. Salt 52 parts per thousand. Oxygen 39 percent. Life 49 percent. Canopy 0 of 3."
+        ],
+        "journalEntries": "<li data-tide=\"1\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 1 · Gate · North Bank</span><span class=\"journal-event\">Spring tide</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">A long lunar push carries brine inland.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 5 → 4. Seed packs: 5 → 5.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>34 → 55 cm</dd></div><div><dt>Salt</dt><dd>34 → 28 ppt</dd></div><div><dt>Oxygen</dt><dd>64 → 62 %</dd></div><div><dt>Life</dt><dd>44 → 45 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>56 → 70 cm</dd></div><div><dt>Salt</dt><dd>30 → 34 ppt</dd></div><div><dt>Oxygen</dt><dd>55 → 54 %</dd></div><div><dt>Life</dt><dd>49 → 50 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>67 → 81 cm</dd></div><div><dt>Salt</dt><dd>40 → 43 ppt</dd></div><div><dt>Oxygen</dt><dd>43 → 40 %</dd></div><div><dt>Life</dt><dd>38 → 38 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li><li data-tide=\"2\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 2 · Shade · Heart Pool</span><span class=\"journal-event\">Neap ebb</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">A short, quiet ebb leaves pools exposed.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 34→32 ppt, oxygen 54→58%, biomass 50→53%. Canopy blunts heat and drying.</li><li>Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 58→61%. A short, quiet ebb leaves pools exposed.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 70→65 cm, salt 34→34 ppt, oxygen 54→63%, biomass 50→54%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 4 → 4. Seed packs: 5 → 5.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>55 → 50 cm</dd></div><div><dt>Salt</dt><dd>28 → 30 ppt</dd></div><div><dt>Oxygen</dt><dd>62 → 67 %</dd></div><div><dt>Life</dt><dd>45 → 46 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>70 → 65 cm</dd></div><div><dt>Salt</dt><dd>34 → 34 ppt</dd></div><div><dt>Oxygen</dt><dd>54 → 63 %</dd></div><div><dt>Life</dt><dd>50 → 54 %</dd></div><div><dt>Canopy</dt><dd>0 → 1 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>81 → 76 cm</dd></div><div><dt>Salt</dt><dd>43 → 45 ppt</dd></div><div><dt>Oxygen</dt><dd>40 → 43 %</dd></div><div><dt>Life</dt><dd>38 → 38 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li><li data-tide=\"3\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 3 · Seed · South Reach</span><span class=\"journal-event\">Heat pulse</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">Hot air accelerates evaporation and oxygen loss.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).</li><li>Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 4 → 4. Seed packs: 5 → 4.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>50 → 42 cm</dd></div><div><dt>Salt</dt><dd>30 → 37 ppt</dd></div><div><dt>Oxygen</dt><dd>67 → 62 %</dd></div><div><dt>Life</dt><dd>46 → 45 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>65 → 57 cm</dd></div><div><dt>Salt</dt><dd>34 → 41 ppt</dd></div><div><dt>Oxygen</dt><dd>63 → 60 %</dd></div><div><dt>Life</dt><dd>54 → 54 %</dd></div><div><dt>Canopy</dt><dd>1 → 1 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>76 → 68 cm</dd></div><div><dt>Salt</dt><dd>45 → 52 ppt</dd></div><div><dt>Oxygen</dt><dd>43 → 39 %</dd></div><div><dt>Life</dt><dd>38 → 49 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li>",
+        "recap": "",
+        "count": "3 of 14 tides",
+        "journalOpen": true,
+        "metric": "biomass",
+        "reviewTide": "1",
+        "trendReadout": "Tide 1 · Life (%)"
+      },
+      "resetReview": {
+        "ownerBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+        "initialFocus": "keep-watch",
+        "progress": "14 of 14 tides",
+        "openingPreservedExactWitness": true,
+        "keepPreservedExactWitness": true,
+        "explicitStartNewWatchActivated": true
+      }
+    },
+    {
+      "name": "packaged",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/actual-downloaded-offline-game.html",
+      "width": 390,
+      "turns": [
+        {
+          "day": 1,
+          "action": "gate",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 2,
+          "action": "shade",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 3,
+          "action": "seed",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 4,
+          "action": "shade",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 5,
+          "action": "shade",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 6,
+          "action": "gate",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 7,
+          "action": "seed",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 8,
+          "action": "shade",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 9,
+          "action": "seed",
+          "cell": "heart",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 10,
+          "action": "shade",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 11,
+          "action": "gate",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 12,
+          "action": "shade",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 13,
+          "action": "seed",
+          "cell": "south",
+          "snapshotMatchesFrozenNative": true
+        },
+        {
+          "day": 14,
+          "action": "gate",
+          "cell": "north",
+          "snapshotMatchesFrozenNative": true
+        }
+      ],
+      "partialReport": {
+        "name": "packaged-partial.html",
+        "guid": "269912c4-d12d-4f74-98da-abaa4a22d73a",
+        "suggestedFilename": "Longwater-watch-tide-03.html",
+        "bytes": 10435,
+        "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b"
+      },
+      "completedReport": {
+        "name": "packaged-completed.html",
+        "guid": "f5c391bd-576f-4318-9b3f-be33ec5b42fc",
+        "suggestedFilename": "Longwater-watch-tide-14.html",
+        "bytes": 32114,
+        "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7"
+      },
+      "resetReport": {
+        "name": "packaged-new-watch.html",
+        "guid": "0051b1f5-1cdb-4092-a6e8-d15693998ceb",
+        "suggestedFilename": "Longwater-watch-tide-01.html",
+        "bytes": 6504,
+        "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef"
+      },
+      "partialWitness": {
+        "saved": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"north\"},{\"action\":\"shade\",\"cell\":\"heart\"},{\"action\":\"seed\",\"cell\":\"south\"}],\"selected\":\"north\",\"snapshot\":\"{\\\"day\\\":3,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":42,\\\"salinity\\\":37,\\\"oxygen\\\":62,\\\"biomass\\\":45,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":57,\\\"salinity\\\":41,\\\"oxygen\\\":60,\\\"biomass\\\":54,\\\"shade\\\":1},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":68,\\\"salinity\\\":52,\\\"oxygen\\\":39,\\\"biomass\\\":49,\\\"shade\\\":0}],\\\"freshwater\\\":4,\\\"seedPacks\\\":4,\\\"report\\\":{\\\"day\\\":3,\\\"action\\\":\\\"seed\\\",\\\"cell\\\":\\\"south\\\",\\\"event\\\":{\\\"day\\\":3,\\\"name\\\":\\\"Heat pulse\\\",\\\"note\\\":\\\"Hot air accelerates evaporation and oxygen loss.\\\",\\\"depth\\\":-8,\\\"salt\\\":7,\\\"oxygen\\\":-7,\\\"heat\\\":true},\\\"lines\\\":[\\\"Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).\\\",\\\"Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}",
+        "writes": 7,
+        "selected": [
+          "true",
+          "false",
+          "false"
+        ],
+        "state": "Day 3 of 14. Water 4; seed packs 4.",
+        "cells": [
+          "Upper reed shelf; peat & cordgrass. Depth 42 centimetres. Salt 37 parts per thousand. Oxygen 62 percent. Life 45 percent. Canopy 0 of 3.",
+          "Inner tidal basin; mud & glasswort. Depth 57 centimetres. Salt 41 parts per thousand. Oxygen 60 percent. Life 54 percent. Canopy 1 of 3.",
+          "Outer brackish fringe; silt & saltgrass. Depth 68 centimetres. Salt 52 parts per thousand. Oxygen 39 percent. Life 49 percent. Canopy 0 of 3."
+        ],
+        "journalEntries": "<li data-tide=\"1\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 1 · Gate · North Bank</span><span class=\"journal-event\">Spring tide</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">A long lunar push carries brine inland.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 5 → 4. Seed packs: 5 → 5.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>34 → 55 cm</dd></div><div><dt>Salt</dt><dd>34 → 28 ppt</dd></div><div><dt>Oxygen</dt><dd>64 → 62 %</dd></div><div><dt>Life</dt><dd>44 → 45 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>56 → 70 cm</dd></div><div><dt>Salt</dt><dd>30 → 34 ppt</dd></div><div><dt>Oxygen</dt><dd>55 → 54 %</dd></div><div><dt>Life</dt><dd>49 → 50 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>67 → 81 cm</dd></div><div><dt>Salt</dt><dd>40 → 43 ppt</dd></div><div><dt>Oxygen</dt><dd>43 → 40 %</dd></div><div><dt>Life</dt><dd>38 → 38 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li><li data-tide=\"2\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 2 · Shade · Heart Pool</span><span class=\"journal-event\">Neap ebb</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">A short, quiet ebb leaves pools exposed.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 34→32 ppt, oxygen 54→58%, biomass 50→53%. Canopy blunts heat and drying.</li><li>Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 58→61%. A short, quiet ebb leaves pools exposed.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 70→65 cm, salt 34→34 ppt, oxygen 54→63%, biomass 50→54%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 4 → 4. Seed packs: 5 → 5.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>55 → 50 cm</dd></div><div><dt>Salt</dt><dd>28 → 30 ppt</dd></div><div><dt>Oxygen</dt><dd>62 → 67 %</dd></div><div><dt>Life</dt><dd>45 → 46 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>70 → 65 cm</dd></div><div><dt>Salt</dt><dd>34 → 34 ppt</dd></div><div><dt>Oxygen</dt><dd>54 → 63 %</dd></div><div><dt>Life</dt><dd>50 → 54 %</dd></div><div><dt>Canopy</dt><dd>0 → 1 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>81 → 76 cm</dd></div><div><dt>Salt</dt><dd>43 → 45 ppt</dd></div><div><dt>Oxygen</dt><dd>40 → 43 %</dd></div><div><dt>Life</dt><dd>38 → 38 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li><li data-tide=\"3\"><details class=\"journal-tide\"><summary><span class=\"journal-choice\">Tide 3 · Seed · South Reach</span><span class=\"journal-event\">Heat pulse</span></summary><div class=\"journal-tide-body\"><p class=\"journal-event-note\">Hot air accelerates evaporation and oxygen loss.</p><h3>Full field notes</h3><ul class=\"journal-notes\"><li>Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).</li><li>Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%.</li></ul><h3>Before → after this tide</h3><p class=\"journal-resources\">Freshwater: 4 → 4. Seed packs: 5 → 4.</p><div class=\"journal-cells\"><section class=\"journal-cell\" data-cell-id=\"north\"><h4>North Bank</h4><dl><div><dt>Depth</dt><dd>50 → 42 cm</dd></div><div><dt>Salt</dt><dd>30 → 37 ppt</dd></div><div><dt>Oxygen</dt><dd>67 → 62 %</dd></div><div><dt>Life</dt><dd>46 → 45 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><dl><div><dt>Depth</dt><dd>65 → 57 cm</dd></div><div><dt>Salt</dt><dd>34 → 41 ppt</dd></div><div><dt>Oxygen</dt><dd>63 → 60 %</dd></div><div><dt>Life</dt><dd>54 → 54 %</dd></div><div><dt>Canopy</dt><dd>1 → 1 / 3</dd></div></dl></section><section class=\"journal-cell\" data-cell-id=\"south\"><h4>South Reach</h4><dl><div><dt>Depth</dt><dd>76 → 68 cm</dd></div><div><dt>Salt</dt><dd>45 → 52 ppt</dd></div><div><dt>Oxygen</dt><dd>43 → 39 %</dd></div><div><dt>Life</dt><dd>38 → 49 %</dd></div><div><dt>Canopy</dt><dd>0 → 0 / 3</dd></div></dl></section></div></div></details></li>",
+        "recap": "",
+        "count": "3 of 14 tides",
+        "journalOpen": true,
+        "metric": "biomass",
+        "reviewTide": "1",
+        "trendReadout": "Tide 1 · Life (%)"
+      },
+      "resetReview": {
+        "ownerBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+        "initialFocus": "keep-watch",
+        "progress": "14 of 14 tides",
+        "openingPreservedExactWitness": true,
+        "keepPreservedExactWitness": true,
+        "explicitStartNewWatchActivated": true
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "name": "modular-partial.html",
+      "guid": "9ad1bf12-2870-404e-aaaa-886fe3a3f618",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "modular-retry.html",
+      "guid": "aa4da994-21ae-4d80-bcce-1ec2c0ce693b",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "modular-resumed-partial.html",
+      "guid": "02eadfd0-50e0-41e2-9576-823f54f647f0",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "modular-completed.html",
+      "guid": "acbc5cb8-7893-47ef-9588-3591e745a802",
+      "suggestedFilename": "Longwater-watch-tide-14.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "modular-resumed-completed.html",
+      "guid": "4d7009ba-c0ee-4c24-8463-746eea5a15a0",
+      "suggestedFilename": "Longwater-watch-tide-14.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "modular-new-watch.html",
+      "guid": "7bad6a9d-98fa-4fb8-899d-8b6dbe2aeca5",
+      "suggestedFilename": "Longwater-watch-tide-01.html",
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+      "entry": "modular",
+      "kind": "watch-report"
+    },
+    {
+      "name": "actual-downloaded-offline-game.html",
+      "guid": "aab291c5-c4c2-44a8-842d-61563e016fdd",
+      "suggestedFilename": "Longwater-Fourteen-Tides.html",
+      "bytes": 262291,
+      "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+      "entry": "modular",
+      "kind": "offline-game"
+    },
+    {
+      "name": "packaged-partial.html",
+      "guid": "269912c4-d12d-4f74-98da-abaa4a22d73a",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "packaged",
+      "kind": "watch-report"
+    },
+    {
+      "name": "packaged-retry.html",
+      "guid": "2a4446dc-553e-4407-aa76-59f42eef6e04",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "packaged",
+      "kind": "watch-report"
+    },
+    {
+      "name": "packaged-resumed-partial.html",
+      "guid": "2db3862b-5e45-489a-80fc-17c42462cf23",
+      "suggestedFilename": "Longwater-watch-tide-03.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "entry": "packaged",
+      "kind": "watch-report"
+    },
+    {
+      "name": "packaged-completed.html",
+      "guid": "f5c391bd-576f-4318-9b3f-be33ec5b42fc",
+      "suggestedFilename": "Longwater-watch-tide-14.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "entry": "packaged",
+      "kind": "watch-report"
+    },
+    {
+      "name": "packaged-resumed-completed.html",
+      "guid": "915bad64-0fa4-435a-9f4a-f60dfe8ce44e",
+      "suggestedFilename": "Longwater-watch-tide-14.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "entry": "packaged",
+      "kind": "watch-report"
+    },
+    {
+      "name": "packaged-new-watch.html",
+      "guid": "0051b1f5-1cdb-4092-a6e8-d15693998ceb",
+      "suggestedFilename": "Longwater-watch-tide-01.html",
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+      "entry": "packaged",
+      "kind": "watch-report"
+    }
+  ],
+  "reportDocuments": [
+    {
+      "name": "modular-partial",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html",
+      "width": 1280,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "modular-retry",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-retry.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-retry.html",
+      "width": 1280,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "modular-resumed-partial",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-partial.html",
+      "width": 1280,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "modular-completed",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-completed.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-completed.html",
+      "width": 1280,
+      "day": 14,
+      "finished": true,
+      "outcome": "resilient",
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach",
+        "Tide 4 · Shade · North Bank",
+        "Tide 5 · Shade · South Reach",
+        "Tide 6 · Gate · Heart Pool",
+        "Tide 7 · Seed · North Bank",
+        "Tide 8 · Shade · Heart Pool",
+        "Tide 9 · Seed · Heart Pool",
+        "Tide 10 · Shade · North Bank",
+        "Tide 11 · Gate · South Reach",
+        "Tide 12 · Shade · South Reach",
+        "Tide 13 · Seed · South Reach",
+        "Tide 14 · Gate · North Bank"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": {
+        "tables": [
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          }
+        ],
+        "sections": [
+          {
+            "id": "report-overview",
+            "tide": null,
+            "visible": true
+          },
+          {
+            "id": "report-opening",
+            "tide": null,
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "1",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "2",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "3",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "4",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "5",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "6",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "7",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "8",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "9",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "10",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "11",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "12",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "13",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "14",
+            "visible": true
+          }
+        ]
+      },
+      "requestCount": 1
+    },
+    {
+      "name": "modular-old-partial-after-completion",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html",
+      "width": 1280,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "modular-resumed-completed",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-completed.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-completed.html",
+      "width": 1280,
+      "day": 14,
+      "finished": true,
+      "outcome": "resilient",
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach",
+        "Tide 4 · Shade · North Bank",
+        "Tide 5 · Shade · South Reach",
+        "Tide 6 · Gate · Heart Pool",
+        "Tide 7 · Seed · North Bank",
+        "Tide 8 · Shade · Heart Pool",
+        "Tide 9 · Seed · Heart Pool",
+        "Tide 10 · Shade · North Bank",
+        "Tide 11 · Gate · South Reach",
+        "Tide 12 · Shade · South Reach",
+        "Tide 13 · Seed · South Reach",
+        "Tide 14 · Gate · North Bank"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "modular-new-watch",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-new-watch.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-new-watch.html",
+      "width": 1280,
+      "day": 1,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Shade · South Reach"
+      ],
+      "layout": {
+        "width": 1280,
+        "documentWidth": 1265,
+        "tables": [
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          },
+          {
+            "width": 1120,
+            "clientWidth": 1120,
+            "scrollWidth": 1120,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-partial",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+      "width": 390,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-retry",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-retry.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-retry.html",
+      "width": 390,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-resumed-partial",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-partial.html",
+      "width": 390,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-completed",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html",
+      "width": 390,
+      "day": 14,
+      "finished": true,
+      "outcome": "resilient",
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach",
+        "Tide 4 · Shade · North Bank",
+        "Tide 5 · Shade · South Reach",
+        "Tide 6 · Gate · Heart Pool",
+        "Tide 7 · Seed · North Bank",
+        "Tide 8 · Shade · Heart Pool",
+        "Tide 9 · Seed · Heart Pool",
+        "Tide 10 · Shade · North Bank",
+        "Tide 11 · Gate · South Reach",
+        "Tide 12 · Shade · South Reach",
+        "Tide 13 · Seed · South Reach",
+        "Tide 14 · Gate · North Bank"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": {
+        "tables": [
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          },
+          {
+            "visible": true,
+            "rows": 4,
+            "overflow": "visible"
+          }
+        ],
+        "sections": [
+          {
+            "id": "report-overview",
+            "tide": null,
+            "visible": true
+          },
+          {
+            "id": "report-opening",
+            "tide": null,
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "1",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "2",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "3",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "4",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "5",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "6",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "7",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "8",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "9",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "10",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "11",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "12",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "13",
+            "visible": true
+          },
+          {
+            "id": "",
+            "tide": "14",
+            "visible": true
+          }
+        ]
+      },
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-old-partial-after-completion",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+      "width": 390,
+      "day": 3,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-resumed-completed",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-completed.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-completed.html",
+      "width": 390,
+      "day": 14,
+      "finished": true,
+      "outcome": "resilient",
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Gate · North Bank",
+        "Tide 2 · Shade · Heart Pool",
+        "Tide 3 · Seed · South Reach",
+        "Tide 4 · Shade · North Bank",
+        "Tide 5 · Shade · South Reach",
+        "Tide 6 · Gate · Heart Pool",
+        "Tide 7 · Seed · North Bank",
+        "Tide 8 · Shade · Heart Pool",
+        "Tide 9 · Seed · Heart Pool",
+        "Tide 10 · Shade · North Bank",
+        "Tide 11 · Gate · South Reach",
+        "Tide 12 · Shade · South Reach",
+        "Tide 13 · Seed · South Reach",
+        "Tide 14 · Gate · North Bank"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    },
+    {
+      "name": "packaged-new-watch",
+      "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-new-watch.html",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-new-watch.html",
+      "width": 390,
+      "day": 1,
+      "finished": false,
+      "outcome": null,
+      "scriptExecutionDisabled": true,
+      "networkDisabled": true,
+      "allNativeCellsResourcesAndFullNotesExact": true,
+      "acceptedCells": [
+        "Tide 1 · Shade · South Reach"
+      ],
+      "layout": {
+        "width": 390,
+        "documentWidth": 375,
+        "tables": [
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          },
+          {
+            "width": 343,
+            "clientWidth": 343,
+            "scrollWidth": 512,
+            "overflowX": "auto"
+          }
+        ]
+      },
+      "printMedia": null,
+      "requestCount": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "modular-partial-desktop.png",
+      "bytes": 104697,
+      "sha256": "3f3cb92412a0509ea2b979c21c8a0933ac489b4f39d593caaa08a4e6bc1425bf"
+    },
+    {
+      "name": "packaged-completed-phone.png",
+      "bytes": 77911,
+      "sha256": "42a6e3fe215b751b1eb1889bd68e6a21a9023ce7b538ffc16bd4e0c411c144b2"
+    }
+  ],
+  "observedPreparationFailures": [
+    {
+      "entry": "modular",
+      "status": "Could not prepare the report. Your watch is unchanged. Try Download watch report again.",
+      "noDownload": true,
+      "unchangedSavedNativeAndReview": true
+    },
+    {
+      "entry": "packaged",
+      "status": "Could not prepare the report. Your watch is unchanged. Try Download watch report again.",
+      "noDownload": true,
+      "unchangedSavedNativeAndReview": true
+    }
+  ],
+  "qualificationNotes": [
+    "Native print-media visibility is checked; root directed that no extra PDF or screenshot suite is needed when the two existing report captures cover the rendered values. No PDF is claimed.",
+    "The native game exposes no arbitrary player text field. Literal native Unicode and full notes are compared; no synthetic string is labeled an authentic watch.",
+    "WatchReport has no detached snapshot getter. Its internal collection is not treated as a public save/admission format; old/new actual reports and existing start/restore/record boundaries are exercised."
+  ],
+  "packaging": {
+    "builds": [
+      {
+        "command": "/usr/bin/node",
+        "args": [
+          "/dev/shm/lw49-report-receiver-49f845d0dece/candidate-a8030e2/scripts/package.mjs",
+          "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/package-1.html"
+        ],
+        "startedAt": "2026-10-08T14:17:57.990Z",
+        "finishedAt": "2026-10-08T14:17:58.200Z",
+        "status": 0,
+        "stdout": "{\"file\":\"/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/package-1.html\",\"bytes\":262291,\"sha256\":\"4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737\",\"sourceSha256\":\"b371a4f0f8e9855595155b8c27687ad2bec0e91e110319008109ba5fb1396ab2\",\"inputs\":[\"index.html\",\"style.css\",\"journal.css\",\"watch-trends.css\",\"watch-save.css\",\"watch-report.css\",\"game.js\",\"pkg/longwater_web.js\",\"journal.js\",\"watch-save.js\",\"watch-trends.js\",\"watch-report.js\",\"pkg/longwater_web_bg.wasm\"]}\n",
+        "stderr": ""
+      },
+      {
+        "command": "/usr/bin/node",
+        "args": [
+          "/dev/shm/lw49-report-receiver-49f845d0dece/candidate-a8030e2/scripts/package.mjs",
+          "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/package-2.html"
+        ],
+        "startedAt": "2026-10-08T14:17:58.200Z",
+        "finishedAt": "2026-10-08T14:17:58.394Z",
+        "status": 0,
+        "stdout": "{\"file\":\"/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/package-2.html\",\"bytes\":262291,\"sha256\":\"4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737\",\"sourceSha256\":\"b371a4f0f8e9855595155b8c27687ad2bec0e91e110319008109ba5fb1396ab2\",\"inputs\":[\"index.html\",\"style.css\",\"journal.css\",\"watch-trends.css\",\"watch-save.css\",\"watch-report.css\",\"game.js\",\"pkg/longwater_web.js\",\"journal.js\",\"watch-save.js\",\"watch-trends.js\",\"watch-report.js\",\"pkg/longwater_web_bg.wasm\"]}\n",
+        "stderr": ""
+      }
+    ],
+    "bytes": 262291,
+    "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.57",
+    "revision": "@73c14f6228d7cd537c855007e8f88678969cc0eb",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "externalRequests": [],
+  "sourceAfter": {
+    "README.md": "4f34e4ec1cb78fa0b25022943c604984f2329507d98eef03848d539168fb8266",
+    "downloads/Longwater-Fourteen-Tides.html": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+    "game.js": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+    "index.html": "7231aa85cf1f106d8d7f91dfe725088794828617d29c081618fadf9d37c6dabb",
+    "journal.css": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+    "journal.js": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+    "package.json": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+    "pkg/longwater_web.js": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "scripts/package.mjs": "3624e9425971287a6e0dd26f61764c59281bc0940ca5dea477ced05a823310bc",
+    "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+    "tests/browser.test.mjs": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+    "tests/package.test.mjs": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+    "tests/watch-report.test.mjs": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+    "tests/watch-save.browser.test.mjs": "741eb2542c3f40c2892ab5b691267b0a1acf3a9dc2f3c93757017a320745d959",
+    "watch-report.css": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+    "watch-report.js": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+    "watch-save.css": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+    "watch-save.js": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+  },
+  "finishedAt": "2026-10-08T14:18:06.702Z",
+  "pageErrors": [],
+  "requests": [
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/style.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/game.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web_bg.wasm"
+    },
+    {
+      "sessionId": "91CB0DA7E2667EA59C57044E9C0E7C3D",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html"
+    },
+    {
+      "sessionId": "4A1F22C6116F9913E5D4F53590AE1A83",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-retry.html"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/style.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/game.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web_bg.wasm"
+    },
+    {
+      "sessionId": "4EBF5242B2077E8A729AF101AF520776",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-partial.html"
+    },
+    {
+      "sessionId": "BBC2A72D598317E4872C9E71E1B0D5C9",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-completed.html"
+    },
+    {
+      "sessionId": "0C7E6628E230D76181D4E5192982813A",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/style.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.css"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/game.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/journal.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-save.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-trends.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/watch-report.js"
+    },
+    {
+      "sessionId": "71AB631A954DFFB4953FDAB2959AA309",
+      "url": "http://127.0.0.1:41735/pkg/longwater_web_bg.wasm"
+    },
+    {
+      "sessionId": "EB3F2F1BBAB872C2F4382B2C96A7A0DA",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-completed.html"
+    },
+    {
+      "sessionId": "8650F096A42896F4E4085702F1B1CE02",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-new-watch.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/actual-downloaded-offline-game.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e36b960ddbb7a9e026a3e1b856b1fa815066d387f96eb38c2f176547a1bb0c53]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:08cde7d7585f1ffced5d4292c29c13c486ac922dd7f1691f580a5b20eb945d48]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:ba8f562d457640c4541627c5b50f8bfae53b86b14282c7dd17d668484b8bece8]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e6dd3092848741c2420f3e621c9226e47b9170403b1c793f7c1ba90bdae9184b]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:489e47787a5e9e589ce1a8c27f44dfd77c0f0be7c52ccbfce7e94db7e0f80dba]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:9c60840f3a6f1cf025f892599054c1cd05a7f10b37ac2185e3391187a5c0346d]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:3ced15a166fc5654cd83e5a8474a2c22c07f4c20bd69e33843454f47eacd71c6]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:cb879e4a2d4b836cd57f08cd2068f6058d610d6d4e6373d2eb52b9d9430fb9dc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:c1ad81e21fc87101ad5035f26e07c795a9a6a123daedd453cc4ed28e86669a70]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:b29e51768ee4569444d0fc0609865bac2acdd293991b9d2dd6fb6f025f4061fc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:f3b3264f091c2c5aa825aa2904fce4f2d7bc4686d2173b55bf086e64d9202275]"
+    },
+    {
+      "sessionId": "3ABEA8588FDE154910B04BF1238F8B22",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html"
+    },
+    {
+      "sessionId": "723CCDA714A79EF1D431F1B0FA56D9D6",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-retry.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/actual-downloaded-offline-game.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e36b960ddbb7a9e026a3e1b856b1fa815066d387f96eb38c2f176547a1bb0c53]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:08cde7d7585f1ffced5d4292c29c13c486ac922dd7f1691f580a5b20eb945d48]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:ba8f562d457640c4541627c5b50f8bfae53b86b14282c7dd17d668484b8bece8]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e6dd3092848741c2420f3e621c9226e47b9170403b1c793f7c1ba90bdae9184b]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:489e47787a5e9e589ce1a8c27f44dfd77c0f0be7c52ccbfce7e94db7e0f80dba]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:9c60840f3a6f1cf025f892599054c1cd05a7f10b37ac2185e3391187a5c0346d]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:3ced15a166fc5654cd83e5a8474a2c22c07f4c20bd69e33843454f47eacd71c6]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:cb879e4a2d4b836cd57f08cd2068f6058d610d6d4e6373d2eb52b9d9430fb9dc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:c1ad81e21fc87101ad5035f26e07c795a9a6a123daedd453cc4ed28e86669a70]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:b29e51768ee4569444d0fc0609865bac2acdd293991b9d2dd6fb6f025f4061fc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:f3b3264f091c2c5aa825aa2904fce4f2d7bc4686d2173b55bf086e64d9202275]"
+    },
+    {
+      "sessionId": "C1FDD2AD93AFCDC8F8A4150A32CD7FC5",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-partial.html"
+    },
+    {
+      "sessionId": "29574C0B1D22D21AC63F0F5343E9D0EC",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html"
+    },
+    {
+      "sessionId": "B0784184CE1F1BC602C3516651205376",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/actual-downloaded-offline-game.html"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e36b960ddbb7a9e026a3e1b856b1fa815066d387f96eb38c2f176547a1bb0c53]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:08cde7d7585f1ffced5d4292c29c13c486ac922dd7f1691f580a5b20eb945d48]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:ba8f562d457640c4541627c5b50f8bfae53b86b14282c7dd17d668484b8bece8]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:e6dd3092848741c2420f3e621c9226e47b9170403b1c793f7c1ba90bdae9184b]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/css;base64,[sha256:489e47787a5e9e589ce1a8c27f44dfd77c0f0be7c52ccbfce7e94db7e0f80dba]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:9c60840f3a6f1cf025f892599054c1cd05a7f10b37ac2185e3391187a5c0346d]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:3ced15a166fc5654cd83e5a8474a2c22c07f4c20bd69e33843454f47eacd71c6]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:cb879e4a2d4b836cd57f08cd2068f6058d610d6d4e6373d2eb52b9d9430fb9dc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:c1ad81e21fc87101ad5035f26e07c795a9a6a123daedd453cc4ed28e86669a70]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:b29e51768ee4569444d0fc0609865bac2acdd293991b9d2dd6fb6f025f4061fc]"
+    },
+    {
+      "sessionId": "64F4FB1F12077A8B612733C44D50BE3B",
+      "url": "data:text/javascript;base64,[sha256:f3b3264f091c2c5aa825aa2904fce4f2d7bc4686d2173b55bf086e64d9202275]"
+    },
+    {
+      "sessionId": "86DA291B45B6BBF699D67EBFB59634D9",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-completed.html"
+    },
+    {
+      "sessionId": "B14859795E8F421CD7503B9B429BC453",
+      "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-new-watch.html"
+    }
+  ]
+}

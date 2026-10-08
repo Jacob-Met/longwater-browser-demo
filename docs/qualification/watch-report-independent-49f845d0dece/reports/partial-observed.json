@@ -1,0 +1,486 @@
+{
+  "detail": {
+    "name": "packaged-partial",
+    "path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+    "url": "file:///dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+    "width": 390,
+    "day": 3,
+    "finished": false,
+    "outcome": null,
+    "scriptExecutionDisabled": true,
+    "networkDisabled": true,
+    "allNativeCellsResourcesAndFullNotesExact": true,
+    "acceptedCells": [
+      "Tide 1 · Gate · North Bank",
+      "Tide 2 · Shade · Heart Pool",
+      "Tide 3 · Seed · South Reach"
+    ],
+    "layout": {
+      "width": 390,
+      "documentWidth": 375,
+      "tables": [
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    "printMedia": null,
+    "requestCount": 1
+  },
+  "observed": {
+    "title": "Longwater watch report",
+    "heading": "Longwater watch report",
+    "status": "Partial watch · 3 of 14 tides completed",
+    "provenance": "A one-time snapshot of this Longwater game’s accepted journal. Recorded from Longwater’s game simulation. Net changes include the action, the tide and dawn drift.",
+    "opening": {
+      "resources": "Freshwater: 5. Seed packs: 5.",
+      "table": {
+        "caption": "Before the first tide",
+        "headers": [
+          {
+            "text": "Cell",
+            "scope": "col"
+          },
+          {
+            "text": "Depth (cm)",
+            "scope": "col"
+          },
+          {
+            "text": "Salt (ppt)",
+            "scope": "col"
+          },
+          {
+            "text": "Oxygen (%)",
+            "scope": "col"
+          },
+          {
+            "text": "Life (%)",
+            "scope": "col"
+          },
+          {
+            "text": "Canopy (/ 3)",
+            "scope": "col"
+          }
+        ],
+        "rows": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "scope": "row",
+            "values": {
+              "depth": "34",
+              "salinity": "34",
+              "oxygen": "64",
+              "biomass": "44",
+              "shade": "0"
+            }
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "scope": "row",
+            "values": {
+              "depth": "56",
+              "salinity": "30",
+              "oxygen": "55",
+              "biomass": "49",
+              "shade": "0"
+            }
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "scope": "row",
+            "values": {
+              "depth": "67",
+              "salinity": "40",
+              "oxygen": "43",
+              "biomass": "38",
+              "shade": "0"
+            }
+          }
+        ]
+      }
+    },
+    "overview": {
+      "heading": "Opening → current readings",
+      "resources": "Freshwater: 5 → 4. Seed packs: 5 → 4.",
+      "table": {
+        "caption": "Across the completed tides so far",
+        "headers": [
+          {
+            "text": "Cell",
+            "scope": "col"
+          },
+          {
+            "text": "Depth (cm)",
+            "scope": "col"
+          },
+          {
+            "text": "Salt (ppt)",
+            "scope": "col"
+          },
+          {
+            "text": "Oxygen (%)",
+            "scope": "col"
+          },
+          {
+            "text": "Life (%)",
+            "scope": "col"
+          },
+          {
+            "text": "Canopy (/ 3)",
+            "scope": "col"
+          }
+        ],
+        "rows": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "scope": "row",
+            "values": {
+              "depth": "34 → 42",
+              "salinity": "34 → 37",
+              "oxygen": "64 → 62",
+              "biomass": "44 → 45",
+              "shade": "0 → 0"
+            }
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "scope": "row",
+            "values": {
+              "depth": "56 → 57",
+              "salinity": "30 → 41",
+              "oxygen": "55 → 60",
+              "biomass": "49 → 54",
+              "shade": "0 → 1"
+            }
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "scope": "row",
+            "values": {
+              "depth": "67 → 68",
+              "salinity": "40 → 52",
+              "oxygen": "43 → 39",
+              "biomass": "38 → 49",
+              "shade": "0 → 0"
+            }
+          }
+        ]
+      }
+    },
+    "tides": [
+      {
+        "day": 1,
+        "heading": "Tide 1 · Gate · North Bank",
+        "event": "Spring tide",
+        "note": "A long lunar push carries brine inland.",
+        "lines": [
+          "Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).",
+          "Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.",
+          "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+          "Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%."
+        ],
+        "resources": "Freshwater: 5 → 4. Seed packs: 5 → 5.",
+        "table": {
+          "caption": "Before → after tide 1",
+          "headers": [
+            {
+              "text": "Cell",
+              "scope": "col"
+            },
+            {
+              "text": "Depth (cm)",
+              "scope": "col"
+            },
+            {
+              "text": "Salt (ppt)",
+              "scope": "col"
+            },
+            {
+              "text": "Oxygen (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Life (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Canopy (/ 3)",
+              "scope": "col"
+            }
+          ],
+          "rows": [
+            {
+              "id": "north",
+              "name": "North Bank",
+              "scope": "row",
+              "values": {
+                "depth": "34 → 55",
+                "salinity": "34 → 28",
+                "oxygen": "64 → 62",
+                "biomass": "44 → 45",
+                "shade": "0 → 0"
+              }
+            },
+            {
+              "id": "heart",
+              "name": "Heart Pool",
+              "scope": "row",
+              "values": {
+                "depth": "56 → 70",
+                "salinity": "30 → 34",
+                "oxygen": "55 → 54",
+                "biomass": "49 → 50",
+                "shade": "0 → 0"
+              }
+            },
+            {
+              "id": "south",
+              "name": "South Reach",
+              "scope": "row",
+              "values": {
+                "depth": "67 → 81",
+                "salinity": "40 → 43",
+                "oxygen": "43 → 40",
+                "biomass": "38 → 38",
+                "shade": "0 → 0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "day": 2,
+        "heading": "Tide 2 · Shade · Heart Pool",
+        "event": "Neap ebb",
+        "note": "A short, quiet ebb leaves pools exposed.",
+        "lines": [
+          "Reed-bed shade · Heart Pool: canopy 0→1, salt 34→32 ppt, oxygen 54→58%, biomass 50→53%. Canopy blunts heat and drying.",
+          "Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 58→61%. A short, quiet ebb leaves pools exposed.",
+          "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+          "Net · Heart Pool: water 70→65 cm, salt 34→34 ppt, oxygen 54→63%, biomass 50→54%."
+        ],
+        "resources": "Freshwater: 4 → 4. Seed packs: 5 → 5.",
+        "table": {
+          "caption": "Before → after tide 2",
+          "headers": [
+            {
+              "text": "Cell",
+              "scope": "col"
+            },
+            {
+              "text": "Depth (cm)",
+              "scope": "col"
+            },
+            {
+              "text": "Salt (ppt)",
+              "scope": "col"
+            },
+            {
+              "text": "Oxygen (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Life (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Canopy (/ 3)",
+              "scope": "col"
+            }
+          ],
+          "rows": [
+            {
+              "id": "north",
+              "name": "North Bank",
+              "scope": "row",
+              "values": {
+                "depth": "55 → 50",
+                "salinity": "28 → 30",
+                "oxygen": "62 → 67",
+                "biomass": "45 → 46",
+                "shade": "0 → 0"
+              }
+            },
+            {
+              "id": "heart",
+              "name": "Heart Pool",
+              "scope": "row",
+              "values": {
+                "depth": "70 → 65",
+                "salinity": "34 → 34",
+                "oxygen": "54 → 63",
+                "biomass": "50 → 54",
+                "shade": "0 → 1"
+              }
+            },
+            {
+              "id": "south",
+              "name": "South Reach",
+              "scope": "row",
+              "values": {
+                "depth": "81 → 76",
+                "salinity": "43 → 45",
+                "oxygen": "40 → 43",
+                "biomass": "38 → 38",
+                "shade": "0 → 0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "day": 3,
+        "heading": "Tide 3 · Seed · South Reach",
+        "event": "Heat pulse",
+        "note": "Hot air accelerates evaporation and oxygen loss.",
+        "lines": [
+          "Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).",
+          "Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.",
+          "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+          "Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%."
+        ],
+        "resources": "Freshwater: 4 → 4. Seed packs: 5 → 4.",
+        "table": {
+          "caption": "Before → after tide 3",
+          "headers": [
+            {
+              "text": "Cell",
+              "scope": "col"
+            },
+            {
+              "text": "Depth (cm)",
+              "scope": "col"
+            },
+            {
+              "text": "Salt (ppt)",
+              "scope": "col"
+            },
+            {
+              "text": "Oxygen (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Life (%)",
+              "scope": "col"
+            },
+            {
+              "text": "Canopy (/ 3)",
+              "scope": "col"
+            }
+          ],
+          "rows": [
+            {
+              "id": "north",
+              "name": "North Bank",
+              "scope": "row",
+              "values": {
+                "depth": "50 → 42",
+                "salinity": "30 → 37",
+                "oxygen": "67 → 62",
+                "biomass": "46 → 45",
+                "shade": "0 → 0"
+              }
+            },
+            {
+              "id": "heart",
+              "name": "Heart Pool",
+              "scope": "row",
+              "values": {
+                "depth": "65 → 57",
+                "salinity": "34 → 41",
+                "oxygen": "63 → 60",
+                "biomass": "54 → 54",
+                "shade": "1 → 1"
+              }
+            },
+            {
+              "id": "south",
+              "name": "South Reach",
+              "scope": "row",
+              "values": {
+                "depth": "76 → 68",
+                "salinity": "45 → 52",
+                "oxygen": "43 → 39",
+                "biomass": "38 → 49",
+                "shade": "0 → 0"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "scripts": 0,
+    "gameControls": 0,
+    "externalDependencies": [],
+    "bodyText": "Longwater watch report\n\nPartial watch · 3 of 14 tides completed\n\nA one-time snapshot of this Longwater game’s accepted journal. Recorded from Longwater’s game simulation. Net changes include the action, the tide and dawn drift.\n\nThis report can be read or printed without the game. It does not resume a watch or update when play continues.\n\nOpening → current readings\n\nFreshwater: 5 → 4. Seed packs: 5 → 4.\n\nAcross the completed tides so far\nCell\tDepth (cm)\tSalt (ppt)\tOxygen (%)\tLife (%)\tCanopy (/ 3)\nNorth Bank\t34 → 42\t34 → 37\t64 → 62\t44 → 45\t0 → 0\nHeart Pool\t56 → 57\t30 → 41\t55 → 60\t49 → 54\t0 → 1\nSouth Reach\t67 → 68\t40 → 52\t43 → 39\t38 → 49\t0 → 0\nOpening readings\n\nFreshwater: 5. Seed packs: 5.\n\nBefore the first tide\nCell\tDepth (cm)\tSalt (ppt)\tOxygen (%)\tLife (%)\tCanopy (/ 3)\nNorth Bank\t34\t34\t64\t44\t0\nHeart Pool\t56\t30\t55\t49\t0\nSouth Reach\t67\t40\t43\t38\t0\nTide 1 · Gate · North Bank\nSpring tide\n\nA long lunar push carries brine inland.\n\nFull field notes\nFreshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).\nSpring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.\nDawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\nNet · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%.\n\nFreshwater: 5 → 4. Seed packs: 5 → 5.\n\nBefore → after tide 1\nCell\tDepth (cm)\tSalt (ppt)\tOxygen (%)\tLife (%)\tCanopy (/ 3)\nNorth Bank\t34 → 55\t34 → 28\t64 → 62\t44 → 45\t0 → 0\nHeart Pool\t56 → 70\t30 → 34\t55 → 54\t49 → 50\t0 → 0\nSouth Reach\t67 → 81\t40 → 43\t43 → 40\t38 → 38\t0 → 0\nTide 2 · Shade · Heart Pool\nNeap ebb\n\nA short, quiet ebb leaves pools exposed.\n\nFull field notes\nReed-bed shade · Heart Pool: canopy 0→1, salt 34→32 ppt, oxygen 54→58%, biomass 50→53%. Canopy blunts heat and drying.\nNeap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 58→61%. A short, quiet ebb leaves pools exposed.\nDawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\nNet · Heart Pool: water 70→65 cm, salt 34→34 ppt, oxygen 54→63%, biomass 50→54%.\n\nFreshwater: 4 → 4. Seed packs: 5 → 5.\n\nBefore → after tide 2\nCell\tDepth (cm)\tSalt (ppt)\tOxygen (%)\tLife (%)\tCanopy (/ 3)\nNorth Bank\t55 → 50\t28 → 30\t62 → 67\t45 → 46\t0 → 0\nHeart Pool\t70 → 65\t34 → 34\t54 → 63\t50 → 54\t0 → 1\nSouth Reach\t81 → 76\t43 → 45\t40 → 43\t38 → 38\t0 → 0\nTide 3 · Seed · South Reach\nHeat pulse\n\nHot air accelerates evaporation and oxygen loss.\n\nFull field notes\nReseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left).\nHeat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss.\nDawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\nNet · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%.\n\nFreshwater: 4 → 4. Seed packs: 5 → 4.\n\nBefore → after tide 3\nCell\tDepth (cm)\tSalt (ppt)\tOxygen (%)\tLife (%)\tCanopy (/ 3)\nNorth Bank\t50 → 42\t30 → 37\t67 → 62\t46 → 45\t0 → 0\nHeart Pool\t65 → 57\t34 → 41\t63 → 60\t54 → 54\t1 → 1\nSouth Reach\t76 → 68\t45 → 52\t43 → 39\t38 → 49\t0 → 0\n\n3 of 14 tides recorded. Only completed tides are included. Print using your browser’s Print command.",
+    "layout": {
+      "width": 390,
+      "documentWidth": 375,
+      "tables": [
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        },
+        {
+          "width": 343,
+          "clientWidth": 343,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        }
+      ]
+    }
+  }
+}

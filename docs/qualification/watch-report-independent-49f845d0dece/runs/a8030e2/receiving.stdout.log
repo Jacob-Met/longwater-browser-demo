@@ -1,0 +1,16 @@
+PASS native repeated packager builds are deterministic and equal the frozen published offline artifact
+PASS modular: actual three-tide report uses accepted South Reach provenance despite current North Bank selection and Tide 1 review; all values/notes exact and no mutation
+PASS modular: one controlled real Blob-URL preparation failure leaves the watch intact; retry produces an actual readable report
+PASS modular: actual partial-watch reload restores original opening and all three native reports before export
+PASS modular: all fourteen actual tides and resilient outcome export exactly; old partial bytes and reopened content remain stable; print tables stay visible
+PASS modular: completed-watch replay exports all fourteen tides and the original opening/outcome
+PASS modular: existing reset clears report collection; a fresh Shade/South Reach watch exports one true tide without prior history/outcome
+PASS actual modular offline-game download matches the frozen candidate artifact without changing the online watch
+PASS packaged: actual three-tide report uses accepted South Reach provenance despite current North Bank selection and Tide 1 review; all values/notes exact and no mutation
+PASS packaged: one controlled real Blob-URL preparation failure leaves the watch intact; retry produces an actual readable report
+PASS packaged: actual partial-watch reload restores original opening and all three native reports before export
+PASS packaged: all fourteen actual tides and resilient outcome export exactly; old partial bytes and reopened content remain stable; print tables stay visible
+PASS packaged: completed-watch replay exports all fourteen tides and the original opening/outcome
+PASS packaged: existing reset clears report collection; a fresh Shade/South Reach watch exports one true tide without prior history/outcome
+PASS both entrypoints finish with exact unchanged product source, no page exceptions and no hosted application requests
+{"status":"passed","checks":15,"downloads":13,"screenshots":[{"name":"modular-partial-desktop.png","bytes":104697,"sha256":"3f3cb92412a0509ea2b979c21c8a0933ac489b4f39d593caaa08a4e6bc1425bf"},{"name":"packaged-completed-phone.png","bytes":77911,"sha256":"42a6e3fe215b751b1eb1889bd68e6a21a9023ce7b538ffc16bd4e0c411c144b2"}],"output":"/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01"}

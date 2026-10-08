@@ -1,0 +1,186 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "verifiedAt": "2026-10-08T14:19:10.904Z",
+  "status": "passed",
+  "currentSourceHead": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "currentSourceTree": "8db39a069c3c856c2c555a9ca6f7d796ebfe9b86",
+  "currentBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "previousSourceHead": "260d00a902cb5ab6e5e7cad1a909dbd609842b1c",
+  "previousReportSha256": "a57cb0d82fae4edc9e78e73ecc83a5e0960eab6a4ed2b186207968bdc5e07691",
+  "currentReportSha256": "cbba2bf50c3ac56c2046e17eb72fe77b54d06dca115f48d7e16705a9bd295424",
+  "adapterSha256": "f0a38d9b718637e36ff0b10c47e6bcebebc25044ebda0db300b12dc96c9d259d",
+  "actualDownloadedArtifact": {
+    "name": "actual-downloaded-offline-game.html",
+    "guid": "aab291c5-c4c2-44a8-842d-61563e016fdd",
+    "suggestedFilename": "Longwater-Fourteen-Tides.html",
+    "bytes": 262291,
+    "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+    "entry": "modular",
+    "kind": "offline-game"
+  },
+  "allTwelveActualReportDownloadsByteIdenticalTo260d": true,
+  "files": [
+    {
+      "name": "modular-partial.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "d05b3640-390c-46ba-9573-19f7b7958376",
+      "currentGuid": "9ad1bf12-2870-404e-aaaa-886fe3a3f618",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-partial.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-partial.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "modular-retry.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "9db54464-3611-49de-9f5c-eab9822a86e7",
+      "currentGuid": "aa4da994-21ae-4d80-bcce-1ec2c0ce693b",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-retry.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-retry.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "modular-resumed-partial.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "54f3f234-7a09-444c-bc33-f34a10299a94",
+      "currentGuid": "02eadfd0-50e0-41e2-9576-823f54f647f0",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-resumed-partial.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-partial.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "modular-completed.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "previousGuid": "f27d8162-fdcf-4f0d-aedb-c825151fc000",
+      "currentGuid": "acbc5cb8-7893-47ef-9588-3591e745a802",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-completed.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-completed.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "modular-resumed-completed.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "previousGuid": "cddeb535-3724-4dbf-8316-f4364941bead",
+      "currentGuid": "4d7009ba-c0ee-4c24-8463-746eea5a15a0",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-resumed-completed.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-resumed-completed.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "modular-new-watch.html",
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+      "previousGuid": "c351502d-a976-477c-bdb9-3f800c375416",
+      "currentGuid": "7bad6a9d-98fa-4fb8-899d-8b6dbe2aeca5",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/modular-new-watch.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/modular-new-watch.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-partial.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "6d4c6574-3141-447a-b9b5-482f69f3d3ce",
+      "currentGuid": "269912c4-d12d-4f74-98da-abaa4a22d73a",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-partial.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-retry.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "1fcd1ecd-bf3b-414f-8174-fd18a3c61e18",
+      "currentGuid": "2a4446dc-553e-4407-aa76-59f42eef6e04",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-retry.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-retry.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-resumed-partial.html",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "previousGuid": "7b056f3e-ee74-4d78-a598-2effee332f20",
+      "currentGuid": "2db3862b-5e45-489a-80fc-17c42462cf23",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-resumed-partial.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-partial.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-completed.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "previousGuid": "225f8f78-4e88-4cb7-b9f3-fab9ccd6e0f3",
+      "currentGuid": "f5c391bd-576f-4318-9b3f-be33ec5b42fc",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-completed.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-resumed-completed.html",
+      "bytes": 32114,
+      "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+      "previousGuid": "da4397ed-d3c2-4875-a539-b7f550732ecd",
+      "currentGuid": "915bad64-0fa4-435a-9f4a-f60dfe8ce44e",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-resumed-completed.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-resumed-completed.html",
+      "byteIdentical": true
+    },
+    {
+      "name": "packaged-new-watch.html",
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+      "previousGuid": "6b623e43-4a84-4796-a7f1-6be276d8790c",
+      "currentGuid": "0051b1f5-1cdb-4092-a6e8-d15693998ceb",
+      "previousPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-new-watch.html",
+      "currentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-new-watch.html",
+      "byteIdentical": true
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "modular-partial-desktop.png",
+      "bytes": 104697,
+      "sha256": "3f3cb92412a0509ea2b979c21c8a0933ac489b4f39d593caaa08a4e6bc1425bf",
+      "byteIdenticalToRootVisuallyAccepted260d": true
+    },
+    {
+      "name": "packaged-completed-phone.png",
+      "bytes": 77911,
+      "sha256": "42a6e3fe215b751b1eb1889bd68e6a21a9023ce7b538ffc16bd4e0c411c144b2",
+      "byteIdenticalToRootVisuallyAccepted260d": true
+    }
+  ],
+  "actualResetReview": [
+    {
+      "entry": "modular",
+      "ownerBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+      "initialFocus": "keep-watch",
+      "progress": "14 of 14 tides",
+      "openingPreservedExactWitness": true,
+      "keepPreservedExactWitness": true,
+      "explicitStartNewWatchActivated": true
+    },
+    {
+      "entry": "packaged",
+      "ownerBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+      "initialFocus": "keep-watch",
+      "progress": "14 of 14 tides",
+      "openingPreservedExactWitness": true,
+      "keepPreservedExactWitness": true,
+      "explicitStartNewWatchActivated": true
+    }
+  ],
+  "printHandoff": {
+    "sourcePath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-completed.html",
+    "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+    "bytes": 32114,
+    "receivedSeparatelyBy": "estate-49f845d0dece/source_coordination",
+    "correspondingCurrentPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html",
+    "sameBytes": true
+  }
+}

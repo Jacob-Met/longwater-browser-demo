@@ -1,0 +1,37 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "frozenAt": "2026-10-08T14:16:00.536Z",
+  "originalContractCommit": "38bb955d94bbf1032890307f7c4d04f0cb08f9be",
+  "originalReceiverSha256": "e2a11634487c953757cf69b7c27dde15f3200d0a237c6ecc4c773ce28e791d8a",
+  "canonicalOwnerBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "ownerInputs": [
+    {
+      "path": "game.js",
+      "sha": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a",
+      "bytes": 20308,
+      "sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312"
+    },
+    {
+      "path": "index.html",
+      "sha": "0bb5342ce1c885810f820a45626ce52510a73775",
+      "bytes": 5629,
+      "sha256": "da53cc1d9209f0ad86e6dacf350370f8a7fa94400c5eb5d6bfe0c8932633ebcf"
+    }
+  ],
+  "change": "Exactly one reset admission block; all surrounding receiver bytes are identical.",
+  "newReportCompositionInspected": false,
+  "files": [
+    {
+      "path": "composition-adapter.md",
+      "bytes": 2225,
+      "sha256": "c398b4c3aab66d2edf50b4fe01f78a32c4f4184108c050947241eb0cc27b7c98",
+      "gitBlobSha1": "46bc3eb44975b17032d0237fc8f0d99cfac3e902"
+    },
+    {
+      "path": "receive-watch-report-composed.mjs",
+      "bytes": 20594,
+      "sha256": "f0a38d9b718637e36ff0b10c47e6bcebebc25044ebda0db300b12dc96c9d259d",
+      "gitBlobSha1": "bf9d6340f40cf1c984fcd984dd4859cf87ff1a51"
+    }
+  ]
+}

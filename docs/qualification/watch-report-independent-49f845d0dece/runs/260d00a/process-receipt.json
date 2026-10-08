@@ -1,0 +1,48 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "startedAt": "2026-10-08T14:11:13.970Z",
+  "candidate": "260d00a902cb5ab6e5e7cad1a909dbd609842b1c",
+  "steps": [
+    {
+      "name": "report-receiver-syntax",
+      "command": "/usr/bin/node",
+      "args": [
+        "--check",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/receive-watch-report.mjs"
+      ],
+      "startedAt": "2026-10-08T14:11:13.971Z",
+      "stdoutPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/report-receiver-syntax.stdout.log",
+      "stderrPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/report-receiver-syntax.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T14:11:14.248Z"
+    },
+    {
+      "name": "260d00a-receiving",
+      "command": "/usr/bin/node",
+      "args": [
+        "/dev/shm/lw49-report-receiver-49f845d0dece/receive-watch-report.mjs",
+        "--root",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/candidate-260d00a",
+        "--output",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01",
+        "--manifest",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/candidate-260d00a-receipt.json",
+        "--native-inputs",
+        "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/native-inputs.json",
+        "--browser",
+        "/home/jacob/.cache/puppeteer/chrome/linux-154.0.8037.57/chrome-linux64/chrome"
+      ],
+      "startedAt": "2026-10-08T14:11:14.255Z",
+      "stdoutPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/260d00a-receiving.stdout.log",
+      "stderrPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/260d00a-receiving.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T14:11:24.790Z"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-10-08T14:11:24.790Z"
+}

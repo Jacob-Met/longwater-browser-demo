@@ -1,0 +1,135 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "receivedAt": "2026-10-08T13:50:26.255Z",
+  "candidateHead": "a67b89362208507e1f9f6a61248b504b4c5387ff",
+  "candidateTree": "4a618f499f5bfacbf8b5dd7675d7b71439e83694",
+  "base": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+  "authorNativeRoot": "/Users/me/workspace/estate/production-evidence-49f845d0dece/longwater-watch-report",
+  "copiedSourceRoot": "/tmp/lw49-report-49f845d0dece/candidate-a67b893",
+  "contractFrozenAt": "2026-10-08T13:46:13.989Z",
+  "contractSha256": "797f75ea07859c0d3f54c8943d7bbaf8e16909ca58dfe24f27db3162d017c7da",
+  "contractPublicCommit": "38bb955d94bbf1032890307f7c4d04f0cb08f9be",
+  "allEightFrozenChangedPathsMatchBothNativeHashes": true,
+  "baselineRuntimeFilesMatchExactBase": true,
+  "transport": "Read-only RDC text; only a missing terminal newline may be recovered, and both SHA-256 and Git blob SHA-1 must match the author before any file write.",
+  "recoveredTerminalNewlines": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "index.html",
+    "journal.js",
+    "scripts/package.mjs",
+    "tests/watch-report.test.mjs",
+    "watch-report.css",
+    "watch-report.js"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11301,
+      "sha256": "3a17613a5c6446e1268660a8efafd097b879a1e2ab07a0d39edd050115b123f4",
+      "gitBlobSha1": "9f74b24a8bc01ad4133a9c8e05353f91d66d8a1a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5052,
+      "sha256": "3961223eea7fc3692920ed94fe7283f549011e96179ec9ef19b86bece941ad1a",
+      "gitBlobSha1": "22d7d0109c011dd3ef5f3e1f8a64eb1165de49c3"
+    },
+    {
+      "path": "game.js",
+      "bytes": 18511,
+      "sha256": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145",
+      "gitBlobSha1": "eb0991d3bc70577a3864e8eb2eaf2a3ce9a7ec4a"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "gitBlobSha1": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 7492,
+      "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+      "gitBlobSha1": "cc802ddd6041b76c7a491b487463636b82fda508"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "gitBlobSha1": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "gitBlobSha1": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "package.json",
+      "bytes": 277,
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "gitBlobSha1": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "style.css",
+      "bytes": 2366,
+      "sha256": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95",
+      "gitBlobSha1": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "gitBlobSha1": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "gitBlobSha1": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "gitBlobSha1": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "gitBlobSha1": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 257714,
+      "sha256": "ba511ae2fb8f29f5aa39c2ace16307d7db8d3f2f3de72568be3e9c9ea04d98fb",
+      "gitBlobSha1": "ff1d904d7fddaced141c89a97b47d2e094dcaea5"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3263,
+      "sha256": "3624e9425971287a6e0dd26f61764c59281bc0940ca5dea477ced05a823310bc",
+      "gitBlobSha1": "a936acf9d0635fd6f774396adb03c3d1e40e6edd"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "bytes": 12734,
+      "sha256": "7241c392ddda4bfb64e193d15513167b8e8e3a7fbe67535330255c17f9805f74",
+      "gitBlobSha1": "224ba4815ebe8bd4f95987469ca94d31339bf642"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "gitBlobSha1": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9243,
+      "sha256": "a464a138f4e57b4b0ffdcdcb501220936eb0d345ee507cef6d9abddcfc6c0b5f",
+      "gitBlobSha1": "b1a4ba188307e40389bf06be1964306a41219259"
+    }
+  ]
+}

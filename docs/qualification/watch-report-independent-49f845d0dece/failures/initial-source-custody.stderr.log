@@ -1,0 +1,20 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '?? node_modules'
+- ''
+
+    at file:///dev/shm/lw49-report-receiver-49f845d0dece/stage-final.mjs:12:55 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '?? node_modules',
+  expected: '',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.1

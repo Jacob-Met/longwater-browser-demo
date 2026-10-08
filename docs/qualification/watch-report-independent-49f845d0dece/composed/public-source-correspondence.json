@@ -1,0 +1,744 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "status": "passed",
+  "publicPullRequest": 22,
+  "publicHead": "b00da99b0cfed7e738bf046d436cca88ceeef192",
+  "publicTree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "publicParent": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "qualifiedNativeHead": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "qualifiedNativeTree": "8db39a069c3c856c2c555a9ca6f7d796ebfe9b86",
+  "qualifiedBase": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "allTwentyOneReceivedLeafGitBlobsMatchPublicHead": true,
+  "allOneHundredOwnerBaseLeafBlobsAndModesPreserved": true,
+  "sourceFiles": [
+    {
+      "path": "README.md",
+      "bytes": 11991,
+      "sha256": "4f34e4ec1cb78fa0b25022943c604984f2329507d98eef03848d539168fb8266",
+      "gitBlobSha1": "0dc34c3ecfadb1275e886cc7264d7f0a069b117f"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 262291,
+      "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+      "gitBlobSha1": "389c3e21d1f216a7fb690675e77887935e47ee23"
+    },
+    {
+      "path": "game.js",
+      "bytes": 20308,
+      "sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+      "gitBlobSha1": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5681,
+      "sha256": "7231aa85cf1f106d8d7f91dfe725088794828617d29c081618fadf9d37c6dabb",
+      "gitBlobSha1": "5e7d5c7da5ecd89d12c2693824da15d6635e5992"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "gitBlobSha1": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "gitBlobSha1": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 277,
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "gitBlobSha1": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "gitBlobSha1": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "gitBlobSha1": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3263,
+      "sha256": "3624e9425971287a6e0dd26f61764c59281bc0940ca5dea477ced05a823310bc",
+      "gitBlobSha1": "a936acf9d0635fd6f774396adb03c3d1e40e6edd"
+    },
+    {
+      "path": "style.css",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "gitBlobSha1": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "bytes": 8222,
+      "sha256": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+      "gitBlobSha1": "5f3e260b13e48f80616fa19977a07225431db1d2"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "bytes": 3888,
+      "sha256": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+      "gitBlobSha1": "fc381bcc2d1887484f0afbb097ab8ad8f7f69b5a"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "bytes": 14191,
+      "sha256": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+      "gitBlobSha1": "d835b6f14e0cd78b3a9c293d2ac3199ffcb82909"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "bytes": 11837,
+      "sha256": "741eb2542c3f40c2892ab5b691267b0a1acf3a9dc2f3c93757017a320745d959",
+      "gitBlobSha1": "d78f9eb4ed4099b6f49f4acc1c99cd993d5ffeef"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "gitBlobSha1": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "gitBlobSha1": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "gitBlobSha1": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 7492,
+      "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+      "gitBlobSha1": "cc802ddd6041b76c7a491b487463636b82fda508"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "gitBlobSha1": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "gitBlobSha1": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    }
+  ],
+  "preservedOwnerLeaves": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e591a2c783d26cae9c4e2b1986bbe4931257380"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7"
+    },
+    {
+      "path": ".nojekyll",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af7159cae4317986e0265a42edd346f44326f48c"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/artifact.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1e244f01be12cbf6aa21d27bc47cb07a8f2ed7d"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/baseline-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1704f843beb057c8bd4540b8210a95a4b47efcb"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/baseline.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "389c5fa702340df9945f85b1fb3f6bba5d85bf18"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/candidate-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6089fac854ad302ed500309d5e4dc62610a5a28f"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/candidate.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a226fe8bc3afe0240be84e02007b7a5a300a9f8"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/coordination.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f34fadd4dc435f00a9a35afee0727cacc5b03e62"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/delivery-baseline.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d9fba66748805039a785519bad8ba11509f1a71"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/download-phone.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bcaaa48da042117968bba826cc8c60315b9c03a"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/downloaded-watch-reopened.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "762fad24ea530b4634715320be7b9c525dcf926c"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/online-before-download.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92f4ac748b81df99be698bf34b6bfd479167b41c"
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c214e4eb23cbaa12696c3ea413696e528ed837e2"
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2de3671bb713a310c948a1648281b5830043831"
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/joined-candidate-suite.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e5991bffb71b3a2f46d08c874990e99e0d03214"
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/old-packager-baseline.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cf543150fbe681dd2a98b542e4efd45db8339db"
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/run.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c23860b6c1c2136756b0ed2ee4393a12e23e67cd"
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/source-verification.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b64f0247c98a843b21aca4eb4982698b4ad2a0c3"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "735a64c343b6ecdc9a80afb83e606d1fa73e2e79"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/author-inputs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50dbe0ebf4eae8c7dbf1ffb9b50a9cb985165bd7"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/before.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a41299286d672ff8a4d6c326e7108eb5a5ea4e"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/files.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "146d941833205329ac9e66364f7b37e2dc4db75f"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/receipts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4164e686771582d6795b4035d4cdb73da567a616"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/resumed-phone.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71590f198d8e154883a01716ba1163ac8d9e18c7"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03ee1e09c5c59619858f00c823c1a8bbdb1a7512"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/header-layouts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f22de6d444a23d8ce2d4ebfa4cae61b23136e0b"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/transcript.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e07ba8bd61771b5f883cf6305bda1fc80d83aed1"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-1280.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03562efc5ea475e712fdf9ea680db95c3c37dded"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-320.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d926b7fa8f15e4815c4576451ab10a79f4d75987"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-390.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6912607a703132878b5779036255aa095ef76d57"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-project-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cf1db419575dfe45f8b4590da0f6e31466891a2"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/late-received-inputs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98cd0f49877a021d6d23750a566238af8f5c3f2c"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/received-header.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41034cc1801127cfc4b3e17b4e5b6fc1b2b13dd7"
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/source-and-runtime.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c17f4ca225170bfa452ae89100d90aeadf87baa3"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d045e0c7360bcfad9d5e390594384d0bc8440d"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/base-modes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42cc17766744bc4f1a04a247a7a1dadf73a34f8f"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/base-pins.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6744692bd4905f2243c78bc51cfc5791d5b26fbb"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef08c59eefe34d151c7b337dd32718a5e9850fe6"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "329cc2b2da3f9f5a1aaf988e43d8af944d9ccf89"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37749d4a19f0abfaef86f901d1b39c65372ad7e6"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b827d59fac0ea4c1da7f7b33717f1a32aee296f"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17104a26099c2d358ead0b82e462a1a1b19a65b6"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e1269dfb5dd7e500b4fc1670f08ea4c6f5b9e8"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/composition-receiver.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "052d5755b664dcc5f8bb287444a9b34182a89f51"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/evidence-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "482d0379b6ac46883a09099b44c1efe6d49196e9"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/full-suite.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3d4e4653a6fda46e3ffe2e853a4dba180b20c67"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/independent-receiving.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c733c096683afe98e7435e239c4c555aac13afb7"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/native-evidence.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b835fd24e7b3e64861f8686479d0f09a8b6a7e43"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/pre-candidate-inputs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "913785029a8823a7ba08c35ccf6da2eb52c15980"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/desktop.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbb3ac42da392ae6724aec4f34c05baeb0c8ac54"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/phone.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03894ad49eadaa4019fdc607388300f3c0293cad"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/source-freeze.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bdff82303c6f5d25c3d91b5c96f9fb2bd22dd5e"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/pointer-r1-failure.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "460d7cc9c1970e3193e9dd0edbd453c5a75afea1"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1276c05178ecac8d26b9361734f6b9a48e50665e"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "622d988476625deedba256ad498b7d86a26eae77"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "997d702ac0638001e969ee967095f7354045aca2"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05f0cfe851f0ec168c09a7323d5d251f895152dc"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/watch-trends-before-pointer.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fab3efaa8db3d05c06c623e0dafbebba760501a3"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/capture-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3f270c9f1df2349a37ae9a6c3f4415c4b68396"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/capture.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b15d61afa6a90a5e45b375dd99b60420a54458"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8339378f205c0178bdbea492d2c54dd779caa60"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93079219cfd70a01cf05cdccefadd4e5afd5ebc1"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/trends-desktop.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3acaf30f7d2173e9493a36dad3eaad2806c5aea3"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/trends-phone.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c410b6e58d066f2f3dfb89cf0d62e71c3d59a30e"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/source-freeze.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d55321083466dd76b3abf4aa8342374dcd54beac"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/source.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1065ca93ae52092ef14cebf18daaf5b05f72f409"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/stylesheet-addendum.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99eedddeba33d9ea0012a88f7a5d506b73646d3e"
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/test-fixture-addendum.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d29e00279a853a88a4b6a10f9f82169631f31b56"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49f50868e0ae23a51235e5aa76132c95b3b21ac8"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/evidence.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e60be31f6a0ee45a0754f8819c09b909521d761"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "439d818753b3ec7fbd14d6da9298919e3dd9ae3a"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae85f80d23da2b3eaf0e6160aa805ed8765ce28"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/artifact-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0529c31463ad8f162c27334a17d370b322cc2d8"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/corrected-0c08.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5d368eabc114969db8c7340d108d3e78323560"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/source-review.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47fdbfd7801af4ec32793b3806cc4dac48adcde7"
+    },
+    {
+      "path": "docs/receiving/new-watch-review-45d4289ccf6c/receiving.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9989beb43aba731a2cb5ca51bacb3a4094c9156e"
+    },
+    {
+      "path": "game.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a"
+    },
+    {
+      "path": "journal.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a89ee5d7b73496d9dafc85a93184182f6f14026"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b13d183c5d8982d689c33b4195a797bebff4ede5"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12f7f1826bc094fabfb3674665863d62884105bb"
+    },
+    {
+      "path": "screenshots/desktop.png",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e1954b199165b978dfdab2d9eaf1c5a245c37463"
+    },
+    {
+      "path": "screenshots/phone.png",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "57d7d16fada051808d0efe46e5057c4888071632"
+    },
+    {
+      "path": "style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+    },
+    {
+      "path": "tests/journal.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6"
+    },
+    {
+      "path": "tests/new-watch.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10"
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01"
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d00a431b81d462ac2585c7fe3b7e661134c5952d"
+    },
+    {
+      "path": "tests/server.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070"
+    },
+    {
+      "path": "tests/watch-save.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05bd8b8b9fe277285afdacf391f08e9f792808cd"
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dab952c5f832c4b83492e47aaec8d42a4976cf0b"
+    },
+    {
+      "path": "watch-save.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-save.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc802ddd6041b76c7a491b487463636b82fda508"
+    },
+    {
+      "path": "watch-trends.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-trends.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    }
+  ],
+  "publicSourceEvidenceUrl": "https://github.com/Jacob-Met/longwater-browser-demo/blob/b00da99b0cfed7e738bf046d436cca88ceeef192/docs/qualification/watch-report-49f845d0dece/README.md"
+}

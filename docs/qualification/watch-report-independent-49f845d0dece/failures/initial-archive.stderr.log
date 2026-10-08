@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: only regular owned evidence /dev/shm/lw49-report-receiver-49f845d0dece/evidence/org.chromium.Chromium.Gw66Cy/SingletonCookie
+    at walk (file:///dev/shm/lw49-report-public-49f845d0dece/build-packet.mjs:9:239)
+    at async walk (file:///dev/shm/lw49-report-public-49f845d0dece/build-packet.mjs:9:207)
+    at async walk (file:///dev/shm/lw49-report-public-49f845d0dece/build-packet.mjs:9:207)
+    at async file:///dev/shm/lw49-report-public-49f845d0dece/build-packet.mjs:11:68 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.22.1
