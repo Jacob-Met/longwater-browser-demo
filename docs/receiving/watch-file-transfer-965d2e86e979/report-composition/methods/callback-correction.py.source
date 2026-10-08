@@ -1,0 +1,64 @@
+import datetime,hashlib,json,os,subprocess
+from pathlib import Path
+root=Path('/Users/me/hamon-longwater-watch-file-r6-965d2e86e979');source=root/'source'
+def g(*args):return subprocess.check_output(['git','--no-optional-locks','-C',str(source),*args],text=True).strip()
+prefixed='0e9fd21a001527153f82b14a2183a7bf95ef2496'
+assert g('rev-parse','HEAD')==prefixed
+assert not g('status','--porcelain')
+preparation={'failed_script_sha256':'ec76e31f4552cc2ea0816590a2edf4b27fbef0cd7a54d8d265ae2929de47b32a','failure':'The prepared mutation script expected six-space callback indentation; the exact source uses eight. Its single-occurrence assertion refused before any source write or test execution.','source_unchanged_at_refusal':prefixed,'correction':'Use the actually read eight-space span; retain the exact pre-fix source and failure receipt.','product_failure':False}
+(root/'correction-preparation-refusal.json').write_text(json.dumps(preparation,indent=2)+'\n')
+game_path=source/'game.js';old_game=game_path.read_text()
+before='        state = null;\n        [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });'
+after='        state = null;\n        document.querySelector("#watch-journal").hidden = true;\n        [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });'
+assert old_game.count(before)==1
+new_game=old_game.replace(before,after)
+assert new_game.replace('        document.querySelector("#watch-journal").hidden = true;\n','',1)==old_game
+test_path=source/'tests/watch-file.browser.test.mjs';old_test=test_path.read_text()
+a='    assert.equal(await page.locator(".game-control:disabled").count(), 7, "stale display cannot accept more play");\n'
+b=a+'    assert.equal(await page.locator("#watch-journal").isVisible(), false, "stale journal and report are hidden after adoption");\n    assert.equal(await page.locator("#watch-report-download").isVisible(), false, "the previous watch cannot be downloaded as the active report");\n'
+assert old_test.count(a)==1
+new_test=old_test.replace(a,b)
+a2='    } else assert.match(status, /saved in this browser.*Reload/);\n    await page.reload();'
+addition='    // A deliberate same-page restore rebuilds the journal and reopens report access.\n    await preview(page, raw);\n    await replace(page);\n    assert.equal(await page.locator("#watch-journal").isVisible(), true);\n    assert.equal(await page.locator("#journal-entries > li").count(), 3);\n    assert.equal(await page.locator("#watch-report-download").isVisible(), true);\n    assert.equal(await page.locator("#watch-report-download").isDisabled(), false);\n    assert.equal(await page.locator(".game-control:disabled").count(), 0);\n'
+assert new_test.count(a2)==1
+new_test=new_test.replace(a2,'    } else assert.match(status, /saved in this browser.*Reload/);\n'+addition+'    await page.reload();')
+assert new_test.replace(b,a).replace(addition,'')==old_test
+game_path.write_text(new_game);test_path.write_text(new_test)
+node='/opt/homebrew/bin/node'
+syntax=[]
+for rel in ['game.js','tests/watch-file.browser.test.mjs','tests/watch-file-report.test.mjs']:
+ p=subprocess.run([node,'--check',rel],cwd=source,capture_output=True,text=True,timeout=20)
+ syntax.append({'path':rel,'returncode':p.returncode,'stdout':p.stdout,'stderr':p.stderr})
+ assert p.returncode==0,p.stderr
+package=subprocess.run([node,'scripts/package.mjs','downloads/Longwater-Fourteen-Tides.html'],cwd=source,capture_output=True,text=True,timeout=30)
+(root/'candidate-package.log').write_text(package.stdout+package.stderr)
+assert package.returncode==0,package.stderr
+artifact=json.loads(package.stdout)
+(root/'candidate-artifact.json').write_text(json.dumps(artifact,indent=2)+'\n')
+status=subprocess.check_output(['git','--no-optional-locks','-C',str(source),'diff','--name-only'],text=True).splitlines()
+assert sorted(status)==['downloads/Longwater-Fourteen-Tides.html','game.js','tests/watch-file.browser.test.mjs'],status
+subprocess.run(['git','-C',str(source),'add','--',*status],check=True)
+tree=g('write-tree')
+env=dict(os.environ,GIT_AUTHOR_NAME='HAMON estate-965d2e86e979 receiving',GIT_AUTHOR_EMAIL='hamon-965d2e86e979@localhost',GIT_COMMITTER_NAME='HAMON estate-965d2e86e979 receiving',GIT_COMMITTER_EMAIL='hamon-965d2e86e979@localhost')
+message='Hide stale journal and report after watch-file display failure\n\nA file can be committed before replay/display refresh fails. Keep its saved/file recovery, but hide the previous journal/report until a successful replay reopens the journal. Preserve all report-owner modules and original test statements; extend the existing fault case with hidden-report and same-page restoration assertions.\n'
+head=subprocess.check_output(['git','-C',str(source),'commit-tree',tree,'-p',prefixed],input=message.encode(),env=env).decode().strip()
+subprocess.run(['git','-C',str(source),'checkout','--detach',head],capture_output=True,text=True,check=True)
+assert not g('status','--porcelain')
+entries=[]
+for item in subprocess.check_output(['git','-C',str(source),'ls-tree','-rz','HEAD']).split(b'\0'):
+ if not item:continue
+ meta,name=item.split(b'\t');mode,kind,blob=meta.decode().split();assert kind=='blob'
+ rel=name.decode();p=source/rel
+ assert p.is_file() and not p.is_symlink() and mode in ('100644','100755')
+ data=p.read_bytes()
+ assert hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()==blob
+ assert ('100755' if p.stat().st_mode&0o111 else '100644')==mode
+ entries.append({'path':rel,'mode':mode,'git_blob':blob,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+assert len(entries)==162
+manifest=(json.dumps(entries,indent=2)+'\n').encode()
+(root/'candidate-source-manifest.json').write_bytes(manifest)
+receipt={'created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':str(source),'head':head,'tree':tree,'predecessor':prefixed,'leaves':len(entries),'manifest_sha256':hashlib.sha256(manifest).hexdigest(),'artifact':artifact,'changed_paths_from_prefixed':status,'syntax_only':syntax,'tests_executed':False,'game_inverse_exact':True,'original_fault_test_statements_preserved':True,'incoming_report_owner_modules_unchanged':True}
+(root/'candidate-source.json').write_text(json.dumps(receipt,indent=2)+'\n')
+patch=subprocess.check_output(['git','-C',str(source),'diff',prefixed,head,'--','game.js','tests/watch-file.browser.test.mjs'])
+(root/'callback-correction.patch').write_bytes(patch)
+print(json.dumps(receipt))

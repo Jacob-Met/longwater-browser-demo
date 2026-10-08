@@ -1,0 +1,7 @@
+{
+  "node": "v26.3.0",
+  "chrome": "Google Chrome for Testing 151.0.7922.34",
+  "playwright": "1.62.1",
+  "dependency_resolution": "/Users/me/hamon-work-longwater-delivery-c945953fdeb7/node_modules",
+  "no_install": true
+}

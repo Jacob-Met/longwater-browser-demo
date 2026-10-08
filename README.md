@@ -119,6 +119,28 @@ save or a save changed by another tab is kept while this page can continue
 without saving. **Reset** starts a new watch and replaces the saved one. It also
 clears the current journal.
 
+## Carry the same watch between browsers
+
+Choose **Download watch** below the marsh to save your current day, selected cell
+and complete journal in a small JSON file. This also works when browser saving
+is unavailable, so you can keep the latest progress before closing the page.
+
+In another browser or the offline game, choose **Open watch file**. Longwater
+checks the file and shows its day, selected cell and completion status. Review
+the preview, then choose **Replace current watch** to open it. **Cancel** or
+Escape leaves the current watch and saved data alone. Download the current watch
+first if you want to keep both. Opening the file does not change the file itself.
+
+The file must come from this version of Longwater and be no larger than 32 KB.
+Its full action history must reproduce the exact state in the shipped simulation.
+Playing, selecting a different cell or resetting while a file is being read or
+reviewed cancels that pending replacement. A saved watch changed by another tab
+also requires a fresh review. If saving the opened watch fails, its full journal
+remains available in this page and **Download watch** can preserve it.
+
+A watch file contains progress; the separately packaged HTML contains the game.
+Use the watch-file controls in either copy to carry the same watch between them.
+
 ## Screenshots
 
 ![Longwater on desktop](screenshots/desktop.png)
@@ -192,6 +214,8 @@ could not be saved. Reset also replaces the saved offline watch.
 - `watch-save.js` / `watch-save.css` — bounded local action history and visible
   save status; the unchanged WASM validates saved state and rebuilds all journal
   snapshots when the watch resumes
+- `watch-file.js` / `watch-file.css` — local watch download, validated preview and
+  explicit replacement controls; input reading never changes the active watch
 - `pkg/` — prebuilt WebAssembly simulation plus its `wasm-bindgen` JS glue
   (`longwater_web.js`, `longwater_web.d.ts`) and the `.wasm` binary. The
   canvas talks to the sim through `BrowserSession`

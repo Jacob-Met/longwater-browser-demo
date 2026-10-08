@@ -28,6 +28,7 @@ test("the packaged watch plays and restores its complete journal offline", async
   const day = async page => Number((await page.locator("#state-summary").textContent()).match(/Day (\d+)/)?.[1]);
   try {
     let page = await open();
+    assert.equal(await page.locator("#playfield button").count(), 7);
     assert.equal(await page.locator(".game-control").count(), 7);
     assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);
     assert.equal(await day(page), 0);

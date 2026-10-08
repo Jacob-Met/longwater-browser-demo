@@ -1,0 +1,198 @@
+{
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "pr": 21,
+  "run": 37793385665,
+  "head": "d1b7d5793bd758e2b213412c17f5e1d59901752e",
+  "actualCheckout": "39c0f00fab85a304049432c18dada40ef9884e72",
+  "actualTree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+  "checkout": {
+    "sha": "39c0f00fab85a304049432c18dada40ef9884e72",
+    "node_id": "C_kwDOU-wpSNoAKDM5YzBmMDBmYWI4NWEzMDQwNDk0MzJjMThkYWRhNDBlZjk4ODRlNzI",
+    "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/39c0f00fab85a304049432c18dada40ef9884e72",
+    "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/39c0f00fab85a304049432c18dada40ef9884e72",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-08T14:32:59Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-08T14:32:59Z"
+    },
+    "tree": {
+      "sha": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/trees/cfb8079b2abfa8defbf6d767d35e065d9ba5a8af"
+    },
+    "message": "Merge d1b7d5793bd758e2b213412c17f5e1d59901752e into f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "parents": [
+      {
+        "sha": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+        "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+        "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c"
+      },
+      {
+        "sha": "d1b7d5793bd758e2b213412c17f5e1d59901752e",
+        "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/d1b7d5793bd758e2b213412c17f5e1d59901752e",
+        "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/d1b7d5793bd758e2b213412c17f5e1d59901752e"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqx6mbCRC1aQ7uu5UhlAAA0K4QAJUVipuANTndprGsz/y+JOV+\nCG+Uk8N1Ihhgi4dKBjr3U48ySCfomiorGnpyGHUilGW5glPlJpVNqCyX8gJyjSy0\n4TARk/MdW8STismSD0YOZiXXaVeeY1dtiixxhv7+m3+RsVvGkLJQaWNuDVAJpxNk\nLKLPdAbpSMfmljVKfODeFdRnAnSeFfpHt5GmYUAaMGbTE+e7w31PqWM2KZ0D1AWZ\nYb3pg4CRv94AFVgzgdxY2F/E1xeBezKZeVlA5S9lqTTaz90V/Mf3k4W49mObXVNi\neC8fQa69OLNGOFMTUGmdnO/kXSu+fSYmhPTJyXdvVJCTo2roWa0jAn7bgswspGuX\nf1QB0xCtTNPTWiaM0IM1YDwX8PNoDBFzhdoiy/Ko/cVqv0OSsJnS+MT0oAI6+Xnk\nEC1Y+RJ23/Cw0W0q/So++32i+ksRryLpCIPhXcAjFoz/jshSQgl1GjHnF+JeDYYv\nkAKNKfsakK/H+t4wQbUgNz5bhpq+uLp6I1YmtcXjHqmTDUdEr1VZlpo8eIpaM0ze\nE+mYQe8UMJaNg73mqOfZOJEQLgd1AV2cGRio+pNHqwc0v/z6v2PH+PCPoWu1j4PK\nOz76TAcoDgOIitbGozotTsVlPCGF04F4StxNyL7RuzCdtuH8h8ldZWlI5jZGFaF4\n5U7HGFoQKBmgicosJjA7\n=IfXp\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree cfb8079b2abfa8defbf6d767d35e065d9ba5a8af\nparent f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c\nparent d1b7d5793bd758e2b213412c17f5e1d59901752e\nauthor Jacob Metoyer <150724801+Jacob-Met@users.noreply.github.com> 1791469979 +0000\ncommitter GitHub <noreply@github.com> 1791469979 +0000\n\nMerge d1b7d5793bd758e2b213412c17f5e1d59901752e into f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c\n",
+      "verified_at": "2026-10-08T14:33:01Z"
+    }
+  },
+  "jobs": [
+    {
+      "id": 113366377942,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T14:33:07Z",
+          "completed_at": "2026-10-08T14:33:07Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T14:33:07Z",
+          "completed_at": "2026-10-08T14:33:08Z"
+        },
+        {
+          "name": "Install browser test dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T14:33:08Z",
+          "completed_at": "2026-10-08T14:33:10Z"
+        },
+        {
+          "name": "Install Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T14:33:10Z",
+          "completed_at": "2026-10-08T14:33:36Z"
+        },
+        {
+          "name": "Play and resume the real WASM watch, including offline packaging",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-08T14:33:36Z",
+          "completed_at": "2026-10-08T14:34:05Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-08T14:34:05Z",
+          "completed_at": "2026-10-08T14:34:05Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-08T14:34:05Z",
+          "completed_at": "2026-10-08T14:34:05Z"
+        }
+      ]
+    },
+    {
+      "id": 113366378175,
+      "name": "smoke",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T14:33:06Z",
+          "completed_at": "2026-10-08T14:33:07Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T14:33:07Z",
+          "completed_at": "2026-10-08T14:33:08Z"
+        },
+        {
+          "name": "JS syntax check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T14:33:08Z",
+          "completed_at": "2026-10-08T14:33:09Z"
+        },
+        {
+          "name": "Referenced assets exist and are non-empty",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T14:33:09Z",
+          "completed_at": "2026-10-08T14:33:09Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-08T14:33:09Z",
+          "completed_at": "2026-10-08T14:33:09Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-08T14:33:09Z",
+          "completed_at": "2026-10-08T14:33:09Z"
+        }
+      ]
+    }
+  ],
+  "totals": [
+    "2026-10-08T14:34:05.0254477Z # tests 85",
+    "2026-10-08T14:34:05.0255030Z # pass 85",
+    "2026-10-08T14:34:05.0255313Z # fail 0",
+    "2026-10-08T14:34:05.0255572Z # cancelled 0",
+    "2026-10-08T14:34:05.0255813Z # skipped 0",
+    "2026-10-08T14:34:05.0256101Z # todo 0"
+  ],
+  "runtimeEvidence": [
+    "2026-10-08T14:33:25.9069732Z Downloading Chrome for Testing 151.0.7922.34 (playwright chromium v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-linux64.zip",
+    "2026-10-08T14:33:32.1299522Z Downloading Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-headless-shell-linux64.zip"
+  ],
+  "sourcePublications": {
+    "r5": "d1b7d5793bd758e2b213412c17f5e1d59901752e",
+    "firstPacket": "2ac9b032f4cccc6d693cf50f8f76c980b172bdd4",
+    "directSeamPacket": "8285f06196afca462c149921240dd5748478ef71"
+  },
+  "fullFirstPacketTree": {
+    "tree": "05c37cffccba28682e5aaa593011f147e7bf686f",
+    "leaves": 120,
+    "everyLeafModeTypeShaAndSizeEqual": true
+  },
+  "scope": "R5 actual hosted browser and smoke gate; report composition and later public deployment are separate",
+  "utc": "2026-10-08T15:12:05.149Z",
+  "log": {
+    "bytes": 71017,
+    "sha256": "18017b4450b74f60e3c29d6da4e95cf9cb56d880e755d99ee419c48c9f4d5b1f"
+  }
+}

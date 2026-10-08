@@ -1,0 +1,49 @@
+import datetime,hashlib,json,subprocess
+from pathlib import Path
+root=Path('/Users/me/hamon-longwater-watch-file-r6-965d2e86e979');s=root/'source'
+refs={'common':'436deface944e881543f2a71d27ba7c07d2f6f25','r5':'88484be670a2418ef62c072a8dd8c0b77378f9b5','report':'8bfa11fc68e4c6c5a2bb9ea9dec41dab66173165','prefixed':'0e9fd21a001527153f82b14a2183a7bf95ef2496','candidate':'6483543d13e1f0dade3eca18e359d1080f05a1b6'}
+def git(*args):return subprocess.check_output(['git','--no-optional-locks','-C',str(s),*args])
+def source(ref,path):return git('show',ref+':'+path)
+def entries(ref):
+ out={}
+ for x in git('ls-tree','-rz',ref).split(b'\0'):
+  if not x:continue
+  meta,name=x.split(b'\t');mode,kind,sha=meta.decode().split();assert kind=='blob'
+  out[name.decode()]={'mode':mode,'git_blob':sha}
+ return out
+maps={k:entries(v) for k,v in refs.items()}
+current=maps['candidate'];assert len(current)==162
+changed={k:sorted(p for p,v in m.items() if current.get(p)!=v) for k,m in maps.items() if k in ('r5','report','prefixed')}
+assert changed['prefixed']==['downloads/Longwater-Fourteen-Tides.html','game.js','tests/watch-file.browser.test.mjs']
+game=source(refs['candidate'],'game.js')
+hide=b'        document.querySelector("#watch-journal").hidden = true;\n'
+assert game.count(hide)==1 and game.replace(hide,b'',1)==source(refs['r5'],'game.js')
+proofs=[]
+for path in sorted(p for p in maps['r5'] if p.startswith('tests/') and p.endswith('.test.mjs')):
+ base=source(refs['r5'],path);result=source(refs['candidate'],path)
+ removes=[]
+ if path in ('tests/browser.test.mjs','tests/package.test.mjs'):
+  removes=[b'    assert.equal(await page.locator(".game-control").count(), 7);\n',b'    assert.equal(await page.getByRole("button", { name: "Download watch report", exact: true }).isDisabled(), true);\n']
+ elif path=='tests/watch-save.browser.test.mjs':
+  removes=[b'  ["/watch-report.js", ["watch-report.js", "text/javascript"]],\n',b'  ["/watch-report.css", ["watch-report.css", "text/css"]],\n']
+ elif path=='tests/watch-file.browser.test.mjs':
+  removes=[b'    assert.equal(await page.locator("#watch-journal").isVisible(), false, "stale journal and report are hidden after adoption");\n',b'    assert.equal(await page.locator("#watch-report-download").isVisible(), false, "the previous watch cannot be downloaded as the active report");\n',b'    // A deliberate same-page restore rebuilds the journal and reopens report access.\n    await preview(page, raw);\n    await replace(page);\n    assert.equal(await page.locator("#watch-journal").isVisible(), true);\n    assert.equal(await page.locator("#journal-entries > li").count(), 3);\n    assert.equal(await page.locator("#watch-report-download").isVisible(), true);\n    assert.equal(await page.locator("#watch-report-download").isDisabled(), false);\n    assert.equal(await page.locator(".game-control:disabled").count(), 0);\n']
+ restored=result
+ for part in removes:
+  assert restored.count(part)==1,(path,part)
+  restored=restored.replace(part,b'',1)
+ assert restored==base,path
+ proofs.append({'path':path,'r5_git_blob':maps['r5'][path]['git_blob'],'candidate_git_blob':current[path]['git_blob'],'exact_original_or_inverse':True,'additive_blocks':len(removes)})
+assert len(proofs)==12
+docpaths=sorted(p for p in maps['r5'] if p.startswith('docs/receiving/watch-file-transfer-965d2e86e979/'))
+assert len(docpaths)==21 and all(current[p]==maps['r5'][p] for p in docpaths)
+reportpaths=sorted(p for p in maps['report'] if p.startswith('docs/qualification/watch-report-49f845d0dece/') or p in ('journal.js','watch-report.js','watch-report.css','tests/watch-report.test.mjs'))
+assert all(current[p]==maps['report'][p] for p in reportpaths)
+package=source(refs['candidate'],'scripts/package.mjs')
+assert package.replace(b', "watch-file.css"',b'').replace(b', "watch-file.js"',b'')==source(refs['report'],'scripts/package.mjs')
+for path in ('README.md','index.html','tests/watch-save.browser.test.mjs'):
+ assert current[path]==maps['prefixed'][path]
+assert all(current[p]==maps['r5'][p] for p in ('watch-file.js','watch-file.css','watch-save.js','pkg/longwater_web.js','pkg/longwater_web_bg.wasm'))
+r={'created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'refs':refs,'trees':{k:git('rev-parse',v+'^{tree}').decode().strip() for k,v in refs.items()},'changed_existing_paths':changed,'preserved_existing_counts':{k:len(maps[k])-len(changed[k]) for k in changed},'candidate_leaves':162,'game_one_line_inverse_to_R5':True,'all12_original_R5_test_modules_and_statements_preserved':True,'test_inverse_proofs':proofs,'documentary_preservation':[dict(path=p,**current[p]) for p in docpaths],'all21_R5_docs_exact':True,'incoming_report_preservation':[dict(path=p,**current[p]) for p in reportpaths],'report_owner_runtime_and_evidence_exact':True,'packager_inverse_to_incoming_exact':True,'simulation_and_file_core_bytes_exact':True,'README_index_three_way_proofs_unchanged':'prefixed-composition-proof.json','limitations':['Source and byte/mode proof only; actual native full-suite and independent browser fault results are separate receipts.','Historical-choice PR19 runtime is absent; its 14 historical seam witness files are preserved as evidence, not acceptance of that future composition.']}
+b=(json.dumps(r,indent=2)+'\n').encode();(root/'candidate-source-preservation.json').write_bytes(b)
+print(json.dumps({'path':str(root/'candidate-source-preservation.json'),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'all12_original_R5_tests_preserved':True,'all21_R5_docs_exact':True,'incoming_report_paths_exact':len(reportpaths),'candidate_leaves':162,'preserved_existing_counts':r['preserved_existing_counts']}))

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/post-adoption-report-peer.mjs",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed-receiving.json",
+    "/Users/me/hamon-longwater-report-peer-965d2e86e979/fixed-fault"
+  ],
+  "started": "2026-10-08T15:11:41.913Z",
+  "finished": "2026-10-08T15:11:43.043Z",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "stdout": "{\"accepted\":true,\"passed\":17,\"failed\":0,\"failingChecks\":[],\"resultSha256\":\"8916df17a760be879928f35ff6cfe46047c45d404123954d9dabe9a886496560\",\"childrenClosed\":true}\n",
+  "stderr": ""
+}

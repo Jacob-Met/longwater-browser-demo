@@ -1,0 +1,86 @@
+{
+  "started_at": "2026-10-08T15:12:05.674549+00:00",
+  "finished_at": "2026-10-08T15:12:50.503959+00:00",
+  "elapsed_seconds": 44.770172958029434,
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/new-watch.test.mjs",
+    "tests/offline-download.test.mjs",
+    "tests/package.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/watch-file-report.test.mjs",
+    "tests/watch-file-trends.test.mjs",
+    "tests/watch-file.browser.test.mjs",
+    "tests/watch-file.test.mjs",
+    "tests/watch-report.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs",
+    "tests/watch-trends.test.mjs"
+  ],
+  "cwd": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source",
+  "environment_overrides": {
+    "LONGWATER_CHROME_PATH": "/Users/me/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "TMPDIR": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/full-current-suite/tmp",
+    "TZ": "UTC"
+  },
+  "runtime": {
+    "node": "v26.3.0",
+    "chrome": "Google Chrome for Testing 151.0.7922.34",
+    "playwright": "1.62.1",
+    "dependency_resolution": "/Users/me/hamon-work-longwater-delivery-c945953fdeb7/node_modules",
+    "no_install": true
+  },
+  "returncode": 0,
+  "timed_out": false,
+  "source_head": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "source_tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "source_leaves": 162,
+  "source_manifest_sha256": "8841ce575aa8fe352d61ffa75ddba779ec2fbc1aa61ae3ab2a9e7ce1e4b821c5",
+  "source_verification_errors": [],
+  "all_source_bytes_modes_unchanged": true,
+  "log_bytes": 21994,
+  "log_sha256": "2c2fb97150a7f88c2461b3db0f855e1f2caba273bf5af90000d96e02fa221c7c",
+  "totals": {
+    "tests": 92,
+    "suites": 0,
+    "pass": 92,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "file_report_artifacts": [
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-offline-14.html",
+      "bytes": 32058,
+      "sha256": "d17a9f562744f309fd4a5552f433f018d6a8c5001e43f19866704565f87f632a"
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-offline-3.html",
+      "bytes": 10435,
+      "sha256": "2aa87ae72ecf810cf80280ce6d577d34fb39286b5308261e95fbd490ce42457c"
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-online-14.html",
+      "bytes": 32058,
+      "sha256": "d17a9f562744f309fd4a5552f433f018d6a8c5001e43f19866704565f87f632a"
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-online-3.html",
+      "bytes": 10435,
+      "sha256": "2aa87ae72ecf810cf80280ce6d577d34fb39286b5308261e95fbd490ce42457c"
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/test-results/watch-file-report-results.json",
+      "bytes": 2049,
+      "sha256": "d794166f36e217283b47ac772e3efd6e9fa5eda875b632aa40bcb91dfb6ba3fa"
+    }
+  ],
+  "tests_expected": 92,
+  "scope": "One complete current native project suite after report/file composition and a concrete targeted callback correction; fourteen project-native test modules."
+}

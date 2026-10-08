@@ -1,0 +1,122 @@
+{
+  "public_watch_file": {
+    "pull": 21,
+    "head": "a84a42057a06a7e003ea02720f6b06c5b5b21091",
+    "tree": "e80a51351bcf46cb13b95faa081f39bf2466722b",
+    "same_tree_as_tested_local": "6ecfdde764cdb8754a01efa33cea099949e31175"
+  },
+  "current_pr19": {
+    "head": "5e975da11de1d57df6f8bd1407e9fd01bf862ca7",
+    "comparison_base": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+    "relationship": "ahead",
+    "changed_paths": [
+      {
+        "path": "README.md",
+        "sha": "34d6cd2fa688db20351c2505ab737f977bebdbc0",
+        "status": "modified"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/README.md",
+        "sha": "49f50868e0ae23a51235e5aa76132c95b3b21ac8",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/evidence.tar.gz",
+        "sha": "3e60be31f6a0ee45a0754f8819c09b909521d761",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/manifest.json",
+        "sha": "439d818753b3ec7fbd14d6da9298919e3dd9ae3a",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/README.md",
+        "sha": "6ae85f80d23da2b3eaf0e6160aa805ed8765ce28",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/artifact-manifest.json",
+        "sha": "c0529c31463ad8f162c27334a17d370b322cc2d8",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/corrected-0c08.test.mjs",
+        "sha": "6a5d368eabc114969db8c7340d108d3e78323560",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/peer-review/source-review.json",
+        "sha": "47fdbfd7801af4ec32793b3806cc4dac48adcde7",
+        "status": "added"
+      },
+      {
+        "path": "docs/receiving/new-watch-review-45d4289ccf6c/receiving.json",
+        "sha": "9989beb43aba731a2cb5ca51bacb3a4094c9156e",
+        "status": "added"
+      },
+      {
+        "path": "downloads/Longwater-Fourteen-Tides.html",
+        "sha": "b27ea398ecffef56cb491c8743d5f3dd3ecc2ba9",
+        "status": "modified"
+      },
+      {
+        "path": "game.js",
+        "sha": "417e8376a9c1fe899c9804e9e8b050464243db20",
+        "status": "modified"
+      },
+      {
+        "path": "index.html",
+        "sha": "825b6a58ce3d079507fad0a3495fd0acce64806d",
+        "status": "modified"
+      },
+      {
+        "path": "style.css",
+        "sha": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+        "status": "modified"
+      },
+      {
+        "path": "tests/browser.test.mjs",
+        "sha": "e06b81dfb4a29c774bc40398884444a3bfd3bf08",
+        "status": "modified"
+      },
+      {
+        "path": "tests/journal.test.mjs",
+        "sha": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6",
+        "status": "modified"
+      },
+      {
+        "path": "tests/new-watch.test.mjs",
+        "sha": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10",
+        "status": "added"
+      },
+      {
+        "path": "tests/package.test.mjs",
+        "sha": "59e85e9db58cab5f33f008f5c5fb1b3334cd001a",
+        "status": "modified"
+      },
+      {
+        "path": "tests/resume-journal.test.mjs",
+        "sha": "d00a431b81d462ac2585c7fe3b7e661134c5952d",
+        "status": "modified"
+      },
+      {
+        "path": "tests/watch-choice.browser.test.mjs",
+        "sha": "b2f246f78bf29cc7aaea5a7ccdb23615621d1731",
+        "status": "modified"
+      },
+      {
+        "path": "tests/watch-save.browser.test.mjs",
+        "sha": "8964dea891cea2ca97bd0aaa69a1090d8b06c1ce",
+        "status": "modified"
+      },
+      {
+        "path": "tests/watch-trends.test.mjs",
+        "sha": "dab952c5f832c4b83492e47aaec8d42a4976cf0b",
+        "status": "modified"
+      }
+    ],
+    "source_disposition": "This successor merges landed reset f321. WatchChoice controller/model/CSS are unchanged; game adds only the reset-review implementation. Its historical reset browser case now preserves comparison on Keep/Escape and uses explicit confirmation. The failed-display file-adoption seam is still present in the unchanged controller and hook.",
+    "execution_boundary": "The three native witness cases were executed only on the c44 PR19 additions composed in memory with exact 6ec source. No additional native execution is attributed to 5e975."
+  }
+}

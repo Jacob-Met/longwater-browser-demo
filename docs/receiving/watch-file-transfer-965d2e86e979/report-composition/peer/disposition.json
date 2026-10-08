@@ -1,0 +1,31 @@
+{
+  "format": "hamon-independent-receiving-disposition/1",
+  "reviewer": "/root/current_integration",
+  "verdict": "ACCEPTED_BOUNDED_REPORT_FILE_COMPOSITION",
+  "incomingSource": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "preFix": "0e9fd21a001527153f82b14a2183a7bf95ef2496",
+  "fixed": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "fixedTree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "harnessSha256": "fbf47095c6be617908931649e66f97aed3182c02e9316e51ea8ed9de2c607d41",
+  "negative": {
+    "assertionsPassed": 17,
+    "assertionsFailed": 1,
+    "resultSha256": "26ec832ea6784eecb66b3bd1893bf337ddbd9f96a1c0cd6b2853aff6aa1ff59a",
+    "meaning": "Actual day-5 file adoption persists and downloads correctly, while the visible previous report downloads byte-identical day-2 HTML after the one-shot authored replayHistory failure."
+  },
+  "positive": {
+    "assertionsPassed": 17,
+    "assertionsFailed": 0,
+    "resultSha256": "8916df17a760be879928f35ff6cfe46047c45d404123954d9dabe9a886496560",
+    "meaning": "Previous report and journal are hidden; exact adopted JSON and saved data remain available; reload reconstructs all five tides and actual report HTML equals the six native accepted snapshots."
+  },
+  "countExplanation": "Same unchanged coupled witness. The pre-fix run adds one conditional assertion to retain the actual accessible stale download; the fixed run skips that counterexample branch because the old report is hidden.",
+  "sourcePreservation": "source-preservation.json",
+  "artifactSha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+  "limitations": [
+    "The allocation/replay refusal is deliberately injected once at the existing post-adoption callback boundary; no naturally occurring browser allocation failure is claimed.",
+    "This packet receives one online native composition seam, not a public deployment. The separate producer 92-case current suite covers normal partial/complete online/offline report transfers and same-page recovery.",
+    "No report-owner source, native simulation, save-admission code, installed service or other worker tree was edited by this receiver."
+  ],
+  "utc": "2026-10-08T15:25:04.359Z"
+}

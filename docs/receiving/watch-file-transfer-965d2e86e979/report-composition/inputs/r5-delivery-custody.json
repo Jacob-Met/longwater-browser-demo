@@ -1,0 +1,38 @@
+{
+  "received_at": "2026-10-08T14:48:26.963214+00:00",
+  "source": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source",
+  "producer_readonly": "/Users/me/hamon-longwater-watch-file-965d2e86e979/reset-composition",
+  "native_head": "1c836b08f14f6f8bbcfea18ffb9090961ca18408",
+  "public_head": "2ac9b032f4cccc6d693cf50f8f76c980b172bdd4",
+  "tree": "05c37cffccba28682e5aaa593011f147e7bf686f",
+  "leaves": 120,
+  "manifest_sha256": "cc611074d5bd852d4d90d6a379cd0bd33acd8abf92e3d0e5e88bd08e172098d3",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/me/hamon-longwater-watch-file-965d2e86e979/reset-composition",
+        "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source'...\ndone.\n"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source",
+        "checkout",
+        "--detach",
+        "1c836b08f14f6f8bbcfea18ffb9090961ca18408"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "HEAD is now at 1c836b0 Preserve watch-file qualification and all received failure evidence\n"
+    }
+  ]
+}

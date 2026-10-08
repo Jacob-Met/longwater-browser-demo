@@ -59,6 +59,7 @@ export class SavedWatch {
   #readKnown = false;
   #blocked = false;
   #status;
+  #filePreview = null;
 
   constructor({ createSession, getStorage }) {
     this.#createSession = createSession;
@@ -98,6 +99,84 @@ export class SavedWatch {
   get snapshot() { return this.#session.snapshot_json(); }
   get selected() { return this.#selected; }
   get status() { return { ...this.#status }; }
+
+  // Files use the same bounded v1 contract as browser saves. Always serialize
+  // the active session, which may be newer than an unavailable browser store.
+  exportFile() {
+    const raw = JSON.stringify({
+      version: 1,
+      simulation: SIMULATION_REVISION,
+      turns: this.#turns,
+      selected: CELLS[this.#selected],
+      snapshot: this.snapshot,
+    });
+    if (raw.length > MAX_SAVE_LENGTH) throw new Error("Watch is too large to save.");
+    return raw;
+  }
+
+  previewFile(raw) {
+    this.cancelFile();
+    const value = decode(raw);
+    const candidate = replay(value, this.#createSession);
+    let state;
+    try {
+      state = JSON.parse(candidate.snapshot_json());
+    } finally {
+      candidate.free();
+    }
+    const selected = CELLS.indexOf(value.selected);
+    const preview = Object.freeze({
+      day: state.day,
+      selected,
+      cell: state.cells[selected].name,
+      finished: state.finished,
+      outcome: state.outcome,
+    });
+    let expected;
+    let readKnown = false;
+    try {
+      expected = this.#getStorage().getItem(WATCH_SAVE_KEY);
+      readKnown = true;
+    } catch {
+      // A valid file can still be reviewed and opened without browser storage.
+    }
+    this.#filePreview = { preview, value, expected, readKnown };
+    return preview;
+  }
+
+  cancelFile() { this.#filePreview = null; }
+
+  restoreFile(preview) {
+    const pending = this.#filePreview;
+    if (!pending || pending.preview !== preview) {
+      throw new Error("The watch changed. Open the file again to review it.");
+    }
+    this.cancelFile();
+    const candidate = replay(pending.value, this.#createSession);
+    let current;
+    let readable = false;
+    try {
+      current = this.#getStorage().getItem(WATCH_SAVE_KEY);
+      readable = true;
+    } catch {
+      // Keep the opened watch playable and exportable when saving is blocked.
+    }
+    if (pending.readKnown && readable && current !== pending.expected) {
+      candidate.free();
+      throw new Error("The saved watch changed in another tab. Open the file again to review replacement.");
+    }
+    this.#session.free();
+    this.#session = candidate;
+    this.#turns = pending.value.turns;
+    this.#selected = CELLS.indexOf(pending.value.selected);
+    this.#expected = pending.expected;
+    this.#readKnown = pending.readKnown;
+    this.#blocked = false;
+    // The existing admission check preserves a store that was unreadable at
+    // preview time, and rechecks observed storage before any attempted write.
+    this.save();
+    return this.snapshot;
+  }
 
   // Supply native snapshot strings to readers such as the journal, beginning
   // with the true opening and including every successful tide in order.
@@ -142,21 +221,14 @@ export class SavedWatch {
       const storage = this.#getStorage();
       const current = storage.getItem(WATCH_SAVE_KEY);
       // A previously unreadable store may already contain another watch. Only
-      // an explicit Reset may choose to replace that previously unknown data.
+      // an explicit Reset or confirmed file review may choose to replace it.
       if ((!this.#readKnown && current !== null) || (this.#readKnown && current !== this.#expected)) {
         this.#changed();
         return false;
       }
       this.#expected = current;
       this.#readKnown = true;
-      const raw = JSON.stringify({
-        version: 1,
-        simulation: SIMULATION_REVISION,
-        turns: this.#turns,
-        selected: CELLS[this.#selected],
-        snapshot: this.snapshot,
-      });
-      if (raw.length > MAX_SAVE_LENGTH) throw new Error("Watch is too large to save.");
+      const raw = this.exportFile();
       storage.setItem(WATCH_SAVE_KEY, raw);
       this.#expected = raw;
       this.#status = { kind: "saved", message: `Day ${this.#turns.length} of 14 saved in this browser.`, canRetry: false };
@@ -171,6 +243,7 @@ export class SavedWatch {
     if (!Number.isInteger(index) || index < 0 || index >= CELLS.length) throw new Error("Unknown marsh cell.");
     if (index === this.#selected) return;
     this.#selected = index;
+    this.cancelFile();
     this.save();
   }
 
@@ -181,12 +254,14 @@ export class SavedWatch {
     // only a successful call, so retrying a refused action never gains a tide.
     const snapshot = this.#session.take_turn(action, cell);
     this.#turns.push({ action, cell });
+    this.cancelFile();
     this.save();
     return snapshot;
   }
 
   reset() {
     const snapshot = this.#session.restart();
+    this.cancelFile();
     this.#turns = [];
     this.#selected = 1;
     this.#blocked = false;
@@ -213,5 +288,5 @@ export class SavedWatch {
     }
   }
 
-  free() { this.#session.free(); }
+  free() { this.cancelFile(); this.#session.free(); }
 }

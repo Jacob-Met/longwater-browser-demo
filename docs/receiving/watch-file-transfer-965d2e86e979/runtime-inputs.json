@@ -1,0 +1,111 @@
+{
+  "sourceHead": "a20308625b823a8947c20fc8060a438112904e42",
+  "sourceTree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+  "orderedInputSha256": "a60add18d42bf64b1bdf8b9f238315ab2834c728f689ca7d20975a04c94ef66f",
+  "inputs": [
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "30c92bf702f518e423609d0c4c24921560c20536",
+      "bytes": 7018,
+      "sha256": "eed455d171e0c956fe29fba81804a9acdfd7dd0d5828afc944d6d0e6838d6450"
+    },
+    {
+      "path": "style.css",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1"
+    },
+    {
+      "path": "journal.css",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+    },
+    {
+      "path": "watch-trends.css",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786"
+    },
+    {
+      "path": "watch-save.css",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f"
+    },
+    {
+      "path": "watch-file.css",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb"
+    },
+    {
+      "path": "game.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "ca0b5fa84dd9022bcafdf60d94efd34923e643b2",
+      "bytes": 21471,
+      "sha256": "0b906c5e68da65b8c279945a23190a80721f63541d0cb8396aaf063146cc1aff"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+    },
+    {
+      "path": "journal.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "3f23199fa149f912930e9e2b6afad8c0b85752d0",
+      "bytes": 6391,
+      "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b"
+    },
+    {
+      "path": "watch-save.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "b350738efe99cb89622105a8431483dc06ab6e41",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c"
+    },
+    {
+      "path": "watch-file.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6"
+    },
+    {
+      "path": "watch-trends.js",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "gitSha": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+    }
+  ]
+}
