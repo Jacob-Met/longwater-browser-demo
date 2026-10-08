@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "reviewer": "/root/github_execution",
+  "status": "Accepted exact qualified source, original coupled behavior, standalone package and actual desktop/phone/offline presentation; ordinary integration pending current native boundary.",
+  "source": {
+    "head": "9eaa01d05db14895ef42dcc7fa1499db3df41021",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "parent": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+    "leaves": 256,
+    "base": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "jointSourceReviewBlob": "6307868baaa959462ef47139030193f31f538c76",
+    "refinementSourceReviewBlob": "f6202d262229b4945cf9e09da8198a2642c7e82c",
+    "refinement": {
+      "status": "Static source bridge accepted and now qualified by the actual execution and pixels in this receipt.",
+      "previousTree": "434d35225b12e44ff93af208f96b38126282f476",
+      "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+      "leaves": 256,
+      "unchanged": 253,
+      "changes": [
+        {
+          "path": "downloads/Longwater-Fourteen-Tides.html",
+          "from": "636c142c7d640d275a60052954222383e5698e4e",
+          "to": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c"
+        },
+        {
+          "path": "scripts/watch-choice-adoption-runtime.json",
+          "from": "bb7b62abef1c971d0517d3d4c35d993327769ed1",
+          "to": "8b24b8d439dfb5eb34d2f87564cf7531c893f40a"
+        },
+        {
+          "path": "watch-choice.css",
+          "from": "6e569c23111531649147d47635b124ea604ea59b",
+          "to": "1ce5b6c327978b953dcd9117162b03376fed31f3"
+        }
+      ],
+      "cssInverse": "Exactly table-layout: fixed; to table-layout: auto; one occurrence",
+      "runtimePins": 18,
+      "otherRuntimePinsExact": 17,
+      "allTestsAdapterEmitterAndOtherFilesExact": true,
+      "standalone": {
+        "bytes": 316725,
+        "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908",
+        "gitBlob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c",
+        "sourceSha256": "ea98bef4ccdb5b770152b023b8adf996da9c6eba602a4a0a8588e3e1645921e8",
+        "completeReconstruction": true
+      }
+    }
+  },
+  "actual": {
+    "commit": "000bda4802cff6955e721c24513a007e9b65319e",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "parents": [
+      "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+      "9eaa01d05db14895ef42dcc7fa1499db3df41021"
+    ],
+    "run": 37806856102,
+    "jobs": {
+      "browser": 113413282612,
+      "smoke": 113413283024
+    },
+    "bothJobsCompletedSuccess": true,
+    "testTotals": {
+      "tests": 112,
+      "passed": 112,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "sourceTreeMatchesPublishedCandidate": true
+  },
+  "logs": {
+    "browser": {
+      "bytes": 2706154,
+      "sha256": "22c80975c60ad11c1c468948d4dae669d993a40cab67a5648e4a84631100bc4e",
+      "gitBlob": "1bd1f897b0eaa3be5850a6059c83744412997f24"
+    },
+    "smoke": {
+      "bytes": 12575,
+      "sha256": "9fa7e77a18ea128eb8ec30d747b357196010e251369fdfb3771b0d12dffcea48",
+      "gitBlob": "532c1bfc0af712d8a2efe18de028f198a7052b99"
+    }
+  },
+  "coupledWitness": {
+    "commit": "000bda4802cff6955e721c24513a007e9b65319e",
+    "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "passed": 3,
+    "failed": 0,
+    "original_runtime_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "actual_adapted_harness_sha256": "9dccc1559e167474ffa1fe536306f4e1dc692d2bc40f04f9182b4fae11511b1f",
+    "unchanged_inputs": true,
+    "exit_status": 0,
+    "node": "v22.23.3",
+    "browser": "151.0.7922.34",
+    "startedAt": "2026-10-08T16:12:44.807Z",
+    "finishedAt": "2026-10-08T16:12:46.783Z",
+    "originalWitnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+    "originalCaseBlockBytes": 7263,
+    "adapterSha256": "b0cf8472abe9f52c677484bc16c0408e8e77868aceffe26c55d89ef974ac784c",
+    "all18RuntimePinsMatchedOriginalAndServedCustody": true,
+    "originalAndServedRuntimeExact": true,
+    "cases": [
+      {
+        "name": "preview_cancel_keeps_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": true,
+        "choiceVisibleAfter": true,
+        "choiceHtmlLengthAfter": 4477,
+        "choiceTideAfter": "1",
+        "controlsDisabledAfter": false
+      },
+      {
+        "name": "successful_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": false,
+        "choiceVisibleAfter": false,
+        "choiceHtmlLengthAfter": 0,
+        "choiceTideAfter": "3",
+        "controlsDisabledAfter": false,
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      {
+        "name": "failed_display_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "oldComparisonRetained": false,
+        "choiceVisibleAfter": false,
+        "choiceHtmlLengthAfter": 0,
+        "choiceTideAfter": "",
+        "controlsDisabledAfter": true,
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "adoptedExportSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      }
+    ],
+    "files": [
+      {
+        "path": "source-custody.json",
+        "bytes": 8454,
+        "sha256": "0713d6d5d98a53e29661fda0985c4b0669d6eb45a0463a29345eab6700ee2860",
+        "gitBlob": "6b6280983db054c9b536b097226636f5bee0a8d4"
+      },
+      {
+        "path": "run.json",
+        "bytes": 31179,
+        "sha256": "58ebb39b08fbd016ce9cd723d0732bb267a042e3574bdc154692ecfe9aec6525",
+        "gitBlob": "7d5f4852046affab416240d7e6e54ec99a80b8e7"
+      },
+      {
+        "path": "run.log",
+        "bytes": 270,
+        "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34",
+        "gitBlob": "53606140926f5558e3d53be1d73b22d28d0ca920"
+      },
+      {
+        "path": "failed-display-actual-download.json",
+        "bytes": 1618,
+        "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "gitBlob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b"
+      }
+    ],
+    "authoredFailureBoundary": "Authored one-shot replayHistory refusal represents the already-qualified R2 post-adoption display failure. This is not a spontaneous device allocation failure."
+  },
+  "artifactDelivery": {
+    "bytes": 1900876,
+    "sha256": "fba6dd10c18f9b77e29f88963dd81a9084bbf74e9145518d842d699618c615cd",
+    "chunks": 619,
+    "allNumberedChunksAndEndVerified": true,
+    "allMemberLengthsAndSha256Verified": true,
+    "members": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363374,
+        "sha256": "ca5eaf2b704d7eadf4a2d94598d93e26bf66fe9053a3a7514486b68b20248b61"
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 383753,
+        "sha256": "0ccd3b23c105074e78637de8b163a0953ceed1b8432737f138b56924563589be"
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361375,
+        "sha256": "c766f1b3c5a6f9cdd3a0c502521b64f5ead2eb5fef6d4d213abeb5e558e644c6"
+      },
+      {
+        "path": "Longwater-choice.html",
+        "bytes": 316725,
+        "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908"
+      }
+    ]
+  },
+  "standalone": {
+    "bytes": 316725,
+    "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908",
+    "gitBlob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c",
+    "sourceSha256": "ea98bef4ccdb5b770152b023b8adf996da9c6eba602a4a0a8588e3e1645921e8",
+    "all18ActualPublishedInputsIndependentlyHashed": true,
+    "parentCompleteReconstructionExact": true,
+    "actualHostedOutputReceivedAndByteExact": true,
+    "nativeBuildPending": false
+  },
+  "presentation": {
+    "captures": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363374,
+        "sha256": "ca5eaf2b704d7eadf4a2d94598d93e26bf66fe9053a3a7514486b68b20248b61",
+        "gitBlob": "894f104a75faaa81f6691dd603b731ba3ed9878c",
+        "width": 1280,
+        "height": 2848,
+        "personallyViewed": true
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 383753,
+        "sha256": "0ccd3b23c105074e78637de8b163a0953ceed1b8432737f138b56924563589be",
+        "gitBlob": "00189394d7c5ad36ee620d10d51514deeed80916",
+        "width": 390,
+        "height": 4491,
+        "personallyViewed": true
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361375,
+        "sha256": "c766f1b3c5a6f9cdd3a0c502521b64f5ead2eb5fef6d4d213abeb5e558e644c6",
+        "gitBlob": "334adfa0d9fd85ad205446737fe19723136c1172",
+        "width": 1280,
+        "height": 2804,
+        "personallyViewed": true
+      }
+    ],
+    "accepted": true,
+    "observed": "The actual desktop and offline cell tables now keep Alternative intact; the actual 390px phone resource table keeps Freshwater intact. Resource and all cell values align under their headings, the phone form/cards/reports stay within their panel, and both complete native tide reports remain readable. No clipping or overlap observed within the historical-choice panel.",
+    "previousDefectsClosed": [
+      "Desktop/offline Alternative final-letter wrap",
+      "Phone Freshwater final-letter wrap"
+    ],
+    "minimumCorrection": "Only table-layout: fixed to table-layout: auto plus exact derived artifact/runtime pins; every assertion and original adapter unchanged.",
+    "remainingBlockingFindings": []
+  },
+  "priorPhases": {
+    "originalCoupledNegative": {
+      "passed": 2,
+      "failed": 1,
+      "packetCommit": "1172710ee28411369fe40df99cc340b66da7566c",
+      "preserved": true
+    },
+    "firstJoint": {
+      "sourceHead": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+      "tree": "434d35225b12e44ff93af208f96b38126282f476",
+      "run": 37805671289,
+      "testsPassed": 112,
+      "originalCasesPassed": 3,
+      "packetCommit": "122821c1ee62ce4072654cc73102656e4d863469",
+      "packetTree": "299fc5f3c4f5f3ed0495d25ce38fa86254d17a48",
+      "parentReviewBlob": "2f025c43b1c96cfbbf80808cd14fb1a78bcb0ef1",
+      "completePacketParentVerified": true,
+      "all256SourceLeavesAnd16EvidenceAdditionsVerified": true,
+      "all15PayloadMembersFromActualBytesBoundToNativeGitSha1AndSha256": true,
+      "visualDefectsPreserved": true
+    }
+  },
+  "scopeLimits": [
+    "One completed tide's native consequences; no alternate future replay or strategy recommendation.",
+    "The post-adoption display failure remains authored fault injection, not an observed spontaneous allocation failure.",
+    "Native saved/unsaved recovery and file/report behavior remain intact; separately owned sound is excluded.",
+    "No physical-device, screen-reader or current live-publication claim in this pre-integration receipt."
+  ]
+}

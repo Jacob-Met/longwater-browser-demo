@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "reviewer": "/root/github_execution",
+  "basis": "Personally fetched all three changed native blobs and the complete tree; independent pure V8 package reconstruction, no successor runtime claim.",
+  "status": "Only the requested owned presentation correction; actual successor runtime and pixels pending",
+  "previousTree": "434d35225b12e44ff93af208f96b38126282f476",
+  "tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+  "leaves": 256,
+  "unchanged": 253,
+  "changes": [
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "from": "636c142c7d640d275a60052954222383e5698e4e",
+      "to": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c"
+    },
+    {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "from": "bb7b62abef1c971d0517d3d4c35d993327769ed1",
+      "to": "8b24b8d439dfb5eb34d2f87564cf7531c893f40a"
+    },
+    {
+      "path": "watch-choice.css",
+      "from": "6e569c23111531649147d47635b124ea604ea59b",
+      "to": "1ce5b6c327978b953dcd9117162b03376fed31f3"
+    }
+  ],
+  "cssInverse": "Exactly table-layout: fixed; to table-layout: auto; one occurrence",
+  "runtimePins": 18,
+  "otherRuntimePinsExact": 17,
+  "allTestsAdapterEmitterAndOtherFilesExact": true,
+  "standalone": {
+    "bytes": 316725,
+    "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908",
+    "gitBlob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c",
+    "sourceSha256": "ea98bef4ccdb5b770152b023b8adf996da9c6eba602a4a0a8588e3e1645921e8",
+    "completeReconstruction": true
+  }
+}

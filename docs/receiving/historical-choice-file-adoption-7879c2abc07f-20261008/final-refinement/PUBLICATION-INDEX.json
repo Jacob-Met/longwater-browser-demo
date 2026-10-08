@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "sourceHead": "9eaa01d05db14895ef42dcc7fa1499db3df41021",
+  "sourceTree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+  "sourceLeaves": 256,
+  "priorPacketCommit": "122821c1ee62ce4072654cc73102656e4d863469",
+  "priorEvidenceFiles": 16,
+  "priorEvidenceUnchanged": true,
+  "packetRoot": "docs/receiving/historical-choice-file-adoption-7879c2abc07f-20261008/final-refinement",
+  "payloadFiles": [
+    {
+      "path": "README.md",
+      "bytes": 3503,
+      "gitBlob": "461b674148e6fedb5952ae84fed1ccced39c1be8",
+      "sha256": "fd7ae9b2db3e3b7880db98f38386fa3887883893d46dfb4e5492699b0a6f0e9d"
+    },
+    {
+      "path": "QUALIFICATION.json",
+      "bytes": 12005,
+      "gitBlob": "e0d607ecbe0158f2844958f8fe492333fbfd1d3f",
+      "sha256": "662aac334c839826fcfbc1d39fa18e8f543358ee338dd9539320f461f385e567"
+    },
+    {
+      "path": "parent-refinement-source-review.json",
+      "bytes": 1605,
+      "gitBlob": "f6202d262229b4945cf9e09da8198a2642c7e82c",
+      "sha256": "c3797ee701a6e7ec0c7eaf7c48ca2c03c7d5eb62dcf1d5597ca81a6f260fb4a3"
+    },
+    {
+      "path": "parent-final-review.json",
+      "bytes": 10925,
+      "gitBlob": "50edddea3c1b9047cb2c69f5d0d1c67b9954ff6b",
+      "sha256": "e4a61c80d0da822bba4511effad72e530e57c60b8860ba4599da86f460cdae36"
+    },
+    {
+      "path": "raw/browser.log",
+      "bytes": 2706154,
+      "gitBlob": "1bd1f897b0eaa3be5850a6059c83744412997f24",
+      "sha256": "22c80975c60ad11c1c468948d4dae669d993a40cab67a5648e4a84631100bc4e"
+    },
+    {
+      "path": "raw/smoke.log",
+      "bytes": 12575,
+      "gitBlob": "532c1bfc0af712d8a2efe18de028f198a7052b99",
+      "sha256": "9fa7e77a18ea128eb8ec30d747b357196010e251369fdfb3771b0d12dffcea48"
+    },
+    {
+      "path": "adoption/source-custody.json",
+      "bytes": 8454,
+      "gitBlob": "6b6280983db054c9b536b097226636f5bee0a8d4",
+      "sha256": "0713d6d5d98a53e29661fda0985c4b0669d6eb45a0463a29345eab6700ee2860"
+    },
+    {
+      "path": "adoption/run.json",
+      "bytes": 31179,
+      "gitBlob": "7d5f4852046affab416240d7e6e54ec99a80b8e7",
+      "sha256": "58ebb39b08fbd016ce9cd723d0732bb267a042e3574bdc154692ecfe9aec6525"
+    },
+    {
+      "path": "adoption/run.log",
+      "bytes": 270,
+      "gitBlob": "53606140926f5558e3d53be1d73b22d28d0ca920",
+      "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34"
+    },
+    {
+      "path": "adoption/failed-display-actual-download.json",
+      "bytes": 1618,
+      "gitBlob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b",
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+    },
+    {
+      "path": "artifacts/desktop-comparison.png",
+      "bytes": 363374,
+      "gitBlob": "894f104a75faaa81f6691dd603b731ba3ed9878c",
+      "sha256": "ca5eaf2b704d7eadf4a2d94598d93e26bf66fe9053a3a7514486b68b20248b61"
+    },
+    {
+      "path": "artifacts/phone-comparison.png",
+      "bytes": 383753,
+      "gitBlob": "00189394d7c5ad36ee620d10d51514deeed80916",
+      "sha256": "0ccd3b23c105074e78637de8b163a0953ceed1b8432737f138b56924563589be"
+    },
+    {
+      "path": "artifacts/offline-comparison.png",
+      "bytes": 361375,
+      "gitBlob": "334adfa0d9fd85ad205446737fe19723136c1172",
+      "sha256": "c766f1b3c5a6f9cdd3a0c502521b64f5ead2eb5fef6d4d213abeb5e558e644c6"
+    },
+    {
+      "path": "artifacts/Longwater-choice.html",
+      "bytes": 316725,
+      "gitBlob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c",
+      "sha256": "cbede6fe867d5e91b565258ec7f37c4037c5597a93a86a8cf233483f353ca908"
+    }
+  ],
+  "payloadCount": 14,
+  "payloadBytes": 4213515,
+  "status": "Accepted final native112/112, original witness3/3, exact hosted HTML and all three directly inspected refined captures.",
+  "scope": "Source/runtime/visual qualification; ordinary integration is a separate coordinated action."
+}

@@ -24,7 +24,7 @@
 .choice-result-title { margin: 0 0 14px; font-size: 18px; color: #efcb83; }
 .choice-played-label, .choice-alternative-label { margin: 4px 0; font-size: 13px; }
 .choice-alternative-label { color: #72e2b4; }
-.choice-result table { width: 100%; border-collapse: collapse; table-layout: fixed; font-variant-numeric: tabular-nums; }
+.choice-result table { width: 100%; border-collapse: collapse; table-layout: auto; font-variant-numeric: tabular-nums; }
 .choice-result caption { text-align: left; color: #d3e9df; font-weight: 700; margin: 0 0 8px; }
 .choice-result th, .choice-result td { padding: 8px 7px; border-bottom: 1px solid #294b43; vertical-align: top; text-align: right; overflow-wrap: anywhere; }
 .choice-result th:first-child { text-align: left; }

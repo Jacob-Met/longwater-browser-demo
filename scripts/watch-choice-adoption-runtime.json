@@ -45,9 +45,9 @@
     },
     {
       "path": "watch-choice.css",
-      "bytes": 3742,
-      "gitBlob": "6e569c23111531649147d47635b124ea604ea59b",
-      "sha256": "384d24905d8e9fe0beb45c0ec9c700274cd041c54916228612281d865d70ad7e"
+      "bytes": 3741,
+      "gitBlob": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9"
     },
     {
       "path": "game.js",
