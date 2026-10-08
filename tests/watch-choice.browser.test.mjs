@@ -247,11 +247,34 @@ test("reset invalidates a comparison even when canvas geometry temporarily disap
   try {
     await play(page);
     await compare(page, 2, "seed", "heart");
+    const retained = await facts(page);
+    const comparison = await page.locator("#watch-choice").evaluate(root => ({
+      html: root.innerHTML,
+      choices: [...root.querySelectorAll("select")].map(node => [node.id, node.value]),
+    }));
+    await page.locator("#reset-control").click();
+    assert.equal(await page.locator("#new-watch-review").isVisible(), true);
+    await page.locator("#keep-watch").click();
+    assert.deepEqual(await facts(page), retained, "Keep retains the exact live watch and saved bytes");
+    assert.deepEqual(await page.locator("#watch-choice").evaluate(root => ({
+      html: root.innerHTML,
+      choices: [...root.querySelectorAll("select")].map(node => [node.id, node.value]),
+    })), comparison, "Keep retains the entire current comparison and its selected alternative");
+    await page.locator("#reset-control").press("r");
+    assert.equal(await page.locator("#new-watch-review").isVisible(), true);
+    await page.keyboard.press("Escape");
+    assert.equal(await page.locator("#new-watch-review").isVisible(), false);
+    assert.deepEqual(await facts(page), retained, "Escape retains the exact live watch and saved bytes");
+    assert.deepEqual(await page.locator("#watch-choice").evaluate(root => ({
+      html: root.innerHTML,
+      choices: [...root.querySelectorAll("select")].map(node => [node.id, node.value]),
+    })), comparison, "Escape retains the entire current comparison and its selected alternative");
     await page.evaluate(() => {
       document.querySelector("#playfield").style.display = "none";
       window.dispatchEvent(new Event("resize"));
     });
     await page.locator("#reset-control").evaluate(node => node.click());
+    await page.locator("#start-new-watch").click();
     assert.equal(await page.locator("#watch-choice").isVisible(), false);
     assert.equal(await page.locator("#choice-result").textContent(), "", "reset removes the retained comparison while the playfield is hidden");
     assert.equal(JSON.parse((await facts(page)).saved).turns.length, 0);

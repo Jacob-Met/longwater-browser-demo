@@ -48,6 +48,7 @@ test("the packaged watch plays and restores its complete journal offline", async
     assert.equal(await page.locator("#journal-entries").textContent(), report, "the complete native tide report returns with the watch");
     assert.match(await page.locator("#watch-save-status").textContent(), /Resumed your saved watch/);
     await page.getByRole("button", { name: "Reset watch" }).click();
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.equal(await day(page), 0);
     assert.equal(await page.locator("#journal-entries > li").count(), 0);
     await page.close();

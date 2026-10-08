@@ -110,6 +110,7 @@ test("a completed saved watch retains fourteen reports and the actual opening-to
       assert.ok(facts.includes(`${old.depth} → ${cell.depth} cm`));
     }
     await page.locator("#reset-control").click();
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.equal(await page.locator("#journal-entries > li").count(), 0);
     assert.equal(await recap.isVisible(), false);
     await reload(page);
@@ -171,6 +172,7 @@ test("a save that disagrees with real replay is protected and cannot fabricate a
     assert.equal(await page.locator("#journal-entries > li").count(), 0);
     assert.equal(await page.evaluate(key => localStorage.getItem(key), key), corrupt);
     await page.locator("#reset-control").click();
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.notEqual(await page.evaluate(key => localStorage.getItem(key), key), corrupt);
     receipts.push({ case: "corrupt-native-snapshot", preserved_until_explicit_reset: true, fabricated_reports: 0 });
   } finally { native.free(); await context.close(); }

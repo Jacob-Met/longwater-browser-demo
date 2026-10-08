@@ -132,6 +132,7 @@ test("a fourteen-tide ending survives reload and explicit reset stores a fresh w
   assert.equal(await day(page), 14);
   assert.match(await page.locator("#live").textContent(), new RegExp(JSON.parse(expected.snapshot_json()).outcome));
   await key(page, "r");
+  await page.getByRole("button", { name: "Start new watch", exact: true }).click();
   assert.equal(await day(page), 0);
   assert.deepEqual((await saved(page)).turns, []);
   await page.reload();
@@ -173,6 +174,7 @@ test("failed replay preserves saved data while play continues until an explicit 
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     await page.screenshot({ path: new URL("../test-results/watch-recovery-phone.png", import.meta.url).pathname, fullPage: true });
     await key(page, "r");
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.equal((await saved(page)).turns.length, 0);
   }
 });
@@ -243,6 +245,7 @@ test("two tabs detect divergent storage and do not overwrite the other watch", a
   await key(second, "g");
   assert.equal(await raw(second), winning);
   await key(second, "r");
+  await second.getByRole("button", { name: "Start new watch", exact: true }).click();
   assert.deepEqual((await saved(second)).turns, []);
   await first.waitForFunction(() => document.querySelector("#watch-save-status").textContent.includes("another tab"));
   await key(first, "g");

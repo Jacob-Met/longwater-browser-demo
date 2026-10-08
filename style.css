@@ -28,3 +28,33 @@ noscript { display: block; margin: 1rem; color: #d7f0df; }
 .offline-copy a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px; border: 1px solid #72e2b4; border-radius: 9px; color: #e7f1e8; font-weight: 600; text-underline-offset: 3px; }
 .offline-copy a:hover { background: #123b3c; }
 .offline-copy a:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }
+
+#new-watch-review {
+  box-sizing: border-box;
+  width: min(28rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  overflow: auto;
+  padding: 1.5rem;
+  border: 1px solid #72e2b4;
+  border-radius: 1rem;
+  background: #102f35;
+  color: #e6f0e5;
+  box-shadow: 0 1.5rem 5rem #0008;
+}
+#new-watch-review::backdrop { background: #031218c9; }
+#new-watch-review h2 { margin: 0 0 1rem; font-size: 1.3rem; }
+#new-watch-review p { margin: .75rem 0; line-height: 1.5; }
+#new-watch-review .new-watch-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+#new-watch-review button {
+  min-height: 44px;
+  flex: 1 1 10rem;
+  padding: .65rem .8rem;
+  border: 1px solid #72e2b4;
+  border-radius: .65rem;
+  background: #183c3d;
+  color: #e6f0e5;
+  font: inherit;
+  cursor: pointer;
+}
+#new-watch-review #keep-watch { background: #72e2b4; color: #071b22; font-weight: 700; }
+#new-watch-review button:focus-visible { outline: 3px solid #efcb83; outline-offset: 3px; }
