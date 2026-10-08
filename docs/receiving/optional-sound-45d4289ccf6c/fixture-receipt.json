@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-08T14:21:20.557996+00:00",
+  "source_commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "parent": "e9628acd0f977e42f7a5c062223976c199c10d16",
+  "file": "tests/watch-save.browser.test.mjs",
+  "baseline_blob": "a34b702b8c88bef24d9fc7cdfcb54dce49fe289c",
+  "candidate_blob": "14df0d0ec1fe2a13b2079ed4bf4516f331df4777",
+  "baseline_sha256": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5",
+  "candidate_sha256": "303989848c868b23cd4f781f6e7711fbb38dc7085131f3ab7e093da353573e91",
+  "exact_added_routes": {
+    "/watch-audio.js": [
+      "watch-audio.js",
+      "text/javascript"
+    ],
+    "/watch-audio.css": [
+      "watch-audio.css",
+      "text/css"
+    ]
+  },
+  "inverse_remove_only_those_two_rows_reconstructs_exact_base": true,
+  "all_existing_assertions_and_server_behavior_preserved": true,
+  "all_eight_received_product_and_audio_test_pins_unchanged": true,
+  "node_syntax_check_exit": 0,
+  "reason": "Actual imported module/style were absent from the maintained private server allowlist; without these routes its save-browser cases could not start the current page.",
+  "validation_scope": "Source/map custody and syntax; actual headed maintained browser suite remains pending. No unchanged native core or browser cases rerun."
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "longwater.sound.publication-manifest.v1",
+  "at": "2026-10-08T14:32:10.827059+00:00",
+  "source_commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "source_tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "payload_files": 15,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 8193,
+      "sha256": "42fd27ddc7220d4ea58a4e7c03ed8f2e1d404da2eb33064b4e5b438a91088867"
+    },
+    {
+      "path": "artifact-manifest.json",
+      "bytes": 10165,
+      "sha256": "075fa6be225cf3f1f1b4371e420f2b19eac9144ba0045e5048f24531d859df34"
+    },
+    {
+      "path": "evidence.tar.gz",
+      "bytes": 769798,
+      "sha256": "023fd87952452355e114b9219e328a325a8b675ac69ef9ef7456a6ddb24cedd1"
+    },
+    {
+      "path": "fixture-receipt.json",
+      "bytes": 1333,
+      "sha256": "b0d21e9314a6f8dd3da20424854ac540a342af192c31ad9ff85911f92ccd3642"
+    },
+    {
+      "path": "fixture-routes.patch",
+      "bytes": 566,
+      "sha256": "fa286e90f54886302b40715e70e0a9527cdc4d3062ede90c51e13ffc21b589e1"
+    },
+    {
+      "path": "native-persistence-receipt.json",
+      "bytes": 555,
+      "sha256": "5613d047f791b3787bc36c3894a62d86a36c2aa71362e5ebea99315e2ab6aeb1"
+    },
+    {
+      "path": "native-qualification.json",
+      "bytes": 3189,
+      "sha256": "fbeece22a4678e015552d8546b041b30e34f6f1fa33f5da47c5b421dfab2002e"
+    },
+    {
+      "path": "package-receipt.json",
+      "bytes": 381,
+      "sha256": "9af772bce5750729af1ce430d3e84ac45169589f9f10b8a497118be2c3c5d5b2"
+    },
+    {
+      "path": "peer-review/README.md",
+      "bytes": 1287,
+      "sha256": "882cb754817d22e65725d1516a82a3fe55547cdf37970690f52f9351adc4f74f"
+    },
+    {
+      "path": "peer-review/artifact-manifest.json",
+      "bytes": 688,
+      "sha256": "ae11a7b9f4331d945be1a42729325d20a8fe85d909edc0a027139a803eb520b1"
+    },
+    {
+      "path": "peer-review/native-source-proof.json",
+      "bytes": 4143,
+      "sha256": "f2766517aba7b69224bdbb211e1f56f99aa7ded1b00bf23e14daa1986f23d9a1"
+    },
+    {
+      "path": "peer-review/native-source-proof.py",
+      "bytes": 3804,
+      "sha256": "d421f2d8a392004c5956dae9c05c73bdaa5cd7b695c61f64d94ad545e561a714"
+    },
+    {
+      "path": "peer-review/source-review.json",
+      "bytes": 6552,
+      "sha256": "8d696f385dce56eb608ef8cddb03da2ca3b0e460b188f975b8974747c7a52e33"
+    },
+    {
+      "path": "preview-offline-320.png",
+      "bytes": 112761,
+      "sha256": "4c6e5af4f5ddcf7fce21805bd8ac9fa0ce8791d2473bb8700b6b8af1c85be880"
+    },
+    {
+      "path": "source-receipt.json",
+      "bytes": 2681,
+      "sha256": "88b1b0351e4444b53c35807df864fcb0ddb8efc6d029407085d112c4dc9a5461"
+    }
+  ],
+  "scope": "Additive native source/evidence and independent source review; hosted CI pending."
+}

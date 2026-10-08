@@ -1,0 +1,44 @@
+{
+  "preflight": {
+    "at": "2026-10-08T14:52:00.327420+00:00",
+    "memory_available": 2121834496,
+    "profile_filesystem_available": 42194206720,
+    "profile_parent": "/home/jacob",
+    "browser_shared_memory_fallback": "owned TMPDIR via --disable-dev-shm-usage"
+  },
+  "command": [
+    "/usr/bin/node",
+    "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/receive-composed-report-disk-cdp.mjs",
+    "--root",
+    "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified",
+    "--source",
+    "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/source",
+    "--output",
+    "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/evidence/composed-report-v3",
+    "--temporary-root",
+    "/home/jacob/lw45-r",
+    "--browser",
+    "/snap/chromium/3537/usr/lib/chromium-browser/chrome"
+  ],
+  "cwd": "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/source",
+  "receiver_sha256": "87d676f34d9292d5cca42dc25d4338b4f11a8ce5049df4adce2a415f4581ed31",
+  "exit_code": 0,
+  "elapsed_seconds": 7.714061922975816,
+  "tree_before": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "tree_after": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "source_tree_unchanged": true,
+  "status": "passed",
+  "groups": 2,
+  "cleanup": {
+    "browserExit": {
+      "code": 0,
+      "signal": null
+    },
+    "serverClosed": true,
+    "ownProfileRemoved": true,
+    "tempEntries": [],
+    "ownTempRootRemoved": true,
+    "sourceUnchanged": true
+  },
+  "receipt_sha256": "3368763097df12cb35fcda940001d02f1df51e8d74fdd7dbc1021828efaefb6f"
+}

@@ -4,8 +4,8 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css"];
-const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js"];
+const styles = ["style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-audio.css"];
+const modules = ["pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-audio.js"];
 const inputs = ["index.html", ...styles, "game.js", ...modules, "watch-trends.js", "watch-report.js", "pkg/longwater_web_bg.wasm"];
 const sourceHash = createHash("sha256");
 const files = new Map();

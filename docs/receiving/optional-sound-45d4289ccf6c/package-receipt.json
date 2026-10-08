@@ -1,0 +1,9 @@
+{
+  "archive": "/dev/shm/lw45-sound-composition/audio-native-evidence.tar.gz",
+  "archive_bytes": 769798,
+  "archive_sha256": "023fd87952452355e114b9219e328a325a8b675ac69ef9ef7456a6ddb24cedd1",
+  "manifest_sha256": "075fa6be225cf3f1f1b4371e420f2b19eac9144ba0045e5048f24531d859df34",
+  "payload_files": 55,
+  "payload_bytes": 1844505,
+  "all_archived_bytes_read_back_exact": true
+}
