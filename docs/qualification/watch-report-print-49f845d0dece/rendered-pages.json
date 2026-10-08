@@ -1,0 +1,90 @@
+{
+  "pdf_sha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a",
+  "dpi": 110,
+  "pages": [
+    {
+      "page": 1,
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-f",
+        "1",
+        "-l",
+        "1",
+        "-singlefile",
+        "-r",
+        "110",
+        "-png",
+        "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+        "/dev/shm/lw49-report-print-49f845d0dece/rendered-pages/page-01"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "file": "rendered-pages/page-01.png",
+      "bytes": 116876,
+      "sha256": "afa2094d1c5b5e6921395edb806eae7238dc08992e8b8bd6c1af341f60fe2bd6"
+    },
+    {
+      "page": 9,
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-f",
+        "9",
+        "-l",
+        "9",
+        "-singlefile",
+        "-r",
+        "110",
+        "-png",
+        "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+        "/dev/shm/lw49-report-print-49f845d0dece/rendered-pages/page-09"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "file": "rendered-pages/page-09.png",
+      "bytes": 160759,
+      "sha256": "9eb8ed3625638e5c7e658a5f15089d67f48f118a7c2c461cd5a37547c082513b"
+    },
+    {
+      "page": 10,
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-f",
+        "10",
+        "-l",
+        "10",
+        "-singlefile",
+        "-r",
+        "110",
+        "-png",
+        "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+        "/dev/shm/lw49-report-print-49f845d0dece/rendered-pages/page-10"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "file": "rendered-pages/page-10.png",
+      "bytes": 139079,
+      "sha256": "f74efeb0e3020468bee4129d156d31c0df9690aec9f7fd338179f97d4f28d70d"
+    },
+    {
+      "page": 11,
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-f",
+        "11",
+        "-l",
+        "11",
+        "-singlefile",
+        "-r",
+        "110",
+        "-png",
+        "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+        "/dev/shm/lw49-report-print-49f845d0dece/rendered-pages/page-11"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "file": "rendered-pages/page-11.png",
+      "bytes": 99663,
+      "sha256": "b90f3acf3e9ec134a488186568b20bdb27845ea63def7bb9b39868ea0dbf8ac5"
+    }
+  ]
+}

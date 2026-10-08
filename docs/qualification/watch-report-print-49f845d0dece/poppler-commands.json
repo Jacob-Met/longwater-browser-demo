@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "/usr/bin/pdfinfo",
+      "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf"
+    ],
+    "exit_code": 0,
+    "stdout": "Title:           Longwater watch report\nCreator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36\nProducer:        Skia/PDF m154\nCreationDate:    Thu Oct  8 14:13:50 2026 UTC\nModDate:         Thu Oct  8 14:13:50 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       595.92 x 841.92 pts (A4)\nPage rot:        0\nFile size:       266728 bytes\nOptimized:       no\nPDF version:     1.4\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/pdftotext",
+      "-layout",
+      "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+      "/dev/shm/lw49-report-print-49f845d0dece/completed-report.layout.txt"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/pdftotext",
+      "-bbox-layout",
+      "/dev/shm/lw49-report-print-49f845d0dece/completed-report.pdf",
+      "/dev/shm/lw49-report-print-49f845d0dece/completed-report.bbox.xhtml"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

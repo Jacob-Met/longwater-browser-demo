@@ -1,0 +1,29 @@
+{
+  "source_repository": "Jacob-Met/longwater-browser-demo",
+  "printed_source_head": "260d00a902cb5ab6e5e7cad1a909dbd609842b1c",
+  "final_composed_source_head": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "final_base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "source_trees": {
+    "260d00a902cb5ab6e5e7cad1a909dbd609842b1c": "e0e9091f1473fde33efd44a24df955cad30db9a9",
+    "a8030e23c6bef1fc4e7220150a72ae0273053f3e": "8db39a069c3c856c2c555a9ca6f7d796ebfe9b86"
+  },
+  "module": {
+    "path": "watch-report.js",
+    "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+    "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+    "printed_and_final_equal": true
+  },
+  "final_actual_download": {
+    "original_path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-completed.html",
+    "bytes": 32114,
+    "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+    "equal_printed_html_bytes": true
+  },
+  "peer_correspondence": {
+    "original_path": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/composition-correspondence.json",
+    "sha256": "99f0977434dd0bae34835647a236760f50bcee6a2a961b21a8cafce8ec73e022"
+  },
+  "pdf_carried_by_exact_html_correspondence": true,
+  "pdf_reprinted": false,
+  "pdf_sha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a"
+}

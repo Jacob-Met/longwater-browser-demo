@@ -1,0 +1,19 @@
+Title:           Longwater watch report
+Creator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36
+Producer:        Skia/PDF m154
+CreationDate:    Thu Oct  8 14:13:50 2026 UTC
+ModDate:         Thu Oct  8 14:13:50 2026 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           11
+Encrypted:       no
+Page size:       595.92 x 841.92 pts (A4)
+Page rot:        0
+File size:       266728 bytes
+Optimized:       no
+PDF version:     1.4

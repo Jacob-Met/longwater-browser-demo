@@ -1,0 +1,800 @@
+{
+  "status": "pass",
+  "pages": 11,
+  "tides": 14,
+  "tables": 16,
+  "table_rows": 48,
+  "reading_cells": 240,
+  "resource_paragraphs": 16,
+  "field_notes": 56,
+  "native_event_titles": 14,
+  "native_event_descriptions": 14,
+  "ordered_semantic_units": 199,
+  "ordered_nonwhitespace_characters": 9111,
+  "ordered_pdf_text_equal_native_expectation": true,
+  "word_overlaps": 0,
+  "table_headers": 17,
+  "table_continuations": [
+    {
+      "caption": "Before → after tide 12",
+      "headers": [
+        {
+          "page": 9,
+          "y": 702.671971,
+          "starts": [
+            34.499999,
+            137.882807,
+            231.09374,
+            310.687487,
+            406.371081,
+            475.664043
+          ]
+        },
+        {
+          "page": 10,
+          "y": 35.171999,
+          "starts": [
+            34.499999,
+            137.882807,
+            231.09374,
+            310.687487,
+            406.371081,
+            475.664043
+          ]
+        }
+      ]
+    }
+  ],
+  "row_receipts": [
+    {
+      "caption": "Across the completed watch",
+      "cell": "North Bank",
+      "page": 1,
+      "y": 389.171984,
+      "values": [
+        "34 → 100",
+        "34 → 9",
+        "64 → 64",
+        "44 → 63",
+        "0 → 2"
+      ]
+    },
+    {
+      "caption": "Across the completed watch",
+      "cell": "Heart Pool",
+      "page": 1,
+      "y": 420.671982,
+      "values": [
+        "56 → 100",
+        "30 → 10",
+        "55 → 42",
+        "49 → 54",
+        "0 → 2"
+      ]
+    },
+    {
+      "caption": "Across the completed watch",
+      "cell": "South Reach",
+      "page": 1,
+      "y": 452.171981,
+      "values": [
+        "67 → 100",
+        "40 → 19",
+        "43 → 19",
+        "38 → 46",
+        "0 → 2"
+      ]
+    },
+    {
+      "caption": "Before the first tide",
+      "cell": "North Bank",
+      "page": 1,
+      "y": 637.421973,
+      "values": [
+        "34",
+        "34",
+        "64",
+        "44",
+        "0"
+      ]
+    },
+    {
+      "caption": "Before the first tide",
+      "cell": "Heart Pool",
+      "page": 1,
+      "y": 668.921972,
+      "values": [
+        "56",
+        "30",
+        "55",
+        "49",
+        "0"
+      ]
+    },
+    {
+      "caption": "Before the first tide",
+      "cell": "South Reach",
+      "page": 1,
+      "y": 700.421971,
+      "values": [
+        "67",
+        "40",
+        "43",
+        "38",
+        "0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 1",
+      "cell": "North Bank",
+      "page": 2,
+      "y": 442.421982,
+      "values": [
+        "34 → 55",
+        "34 → 28",
+        "64 → 62",
+        "44 → 45",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 1",
+      "cell": "Heart Pool",
+      "page": 2,
+      "y": 473.92198,
+      "values": [
+        "56 → 70",
+        "30 → 34",
+        "55 → 54",
+        "49 → 50",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 1",
+      "cell": "South Reach",
+      "page": 2,
+      "y": 505.421979,
+      "values": [
+        "67 → 81",
+        "40 → 43",
+        "43 → 40",
+        "38 → 38",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 2",
+      "cell": "North Bank",
+      "page": 3,
+      "y": 189.671992,
+      "values": [
+        "55 → 50",
+        "28 → 30",
+        "62 → 67",
+        "45 → 46",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 2",
+      "cell": "Heart Pool",
+      "page": 3,
+      "y": 221.171991,
+      "values": [
+        "70 → 65",
+        "34 → 34",
+        "54 → 63",
+        "50 → 54",
+        "0 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 2",
+      "cell": "South Reach",
+      "page": 3,
+      "y": 251.92199,
+      "values": [
+        "81 → 76",
+        "43 → 45",
+        "40 → 43",
+        "38 → 38",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 3",
+      "cell": "North Bank",
+      "page": 3,
+      "y": 715.42197,
+      "values": [
+        "50 → 42",
+        "30 → 37",
+        "67 → 62",
+        "46 → 45",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 3",
+      "cell": "Heart Pool",
+      "page": 3,
+      "y": 746.921969,
+      "values": [
+        "65 → 57",
+        "34 → 41",
+        "63 → 60",
+        "54 → 54",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 3",
+      "cell": "South Reach",
+      "page": 3,
+      "y": 778.421968,
+      "values": [
+        "76 → 68",
+        "45 → 52",
+        "43 → 39",
+        "38 → 49",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 4",
+      "cell": "North Bank",
+      "page": 4,
+      "y": 442.421982,
+      "values": [
+        "42 → 51",
+        "37 → 24",
+        "62 → 70",
+        "45 → 49",
+        "0 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 4",
+      "cell": "Heart Pool",
+      "page": 4,
+      "y": 473.92198,
+      "values": [
+        "57 → 66",
+        "41 → 30",
+        "60 → 64",
+        "54 → 55",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 4",
+      "cell": "South Reach",
+      "page": 4,
+      "y": 505.421979,
+      "values": [
+        "68 → 77",
+        "52 → 41",
+        "39 → 41",
+        "49 → 49",
+        "0 → 0"
+      ]
+    },
+    {
+      "caption": "Before → after tide 5",
+      "cell": "North Bank",
+      "page": 5,
+      "y": 189.671992,
+      "values": [
+        "51 → 45",
+        "24 → 25",
+        "70 → 75",
+        "49 → 50",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 5",
+      "cell": "Heart Pool",
+      "page": 5,
+      "y": 221.171991,
+      "values": [
+        "66 → 60",
+        "30 → 31",
+        "64 → 69",
+        "55 → 56",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 5",
+      "cell": "South Reach",
+      "page": 5,
+      "y": 251.92199,
+      "values": [
+        "77 → 71",
+        "41 → 40",
+        "41 → 50",
+        "49 → 53",
+        "0 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 6",
+      "cell": "North Bank",
+      "page": 5,
+      "y": 715.42197,
+      "values": [
+        "45 → 63",
+        "25 → 30",
+        "75 → 71",
+        "50 → 51",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 6",
+      "cell": "Heart Pool",
+      "page": 5,
+      "y": 746.921969,
+      "values": [
+        "60 → 85",
+        "31 → 25",
+        "69 → 60",
+        "56 → 56",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 6",
+      "cell": "South Reach",
+      "page": 5,
+      "y": 778.421968,
+      "values": [
+        "71 → 89",
+        "40 → 44",
+        "50 → 42",
+        "53 → 51",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 7",
+      "cell": "North Bank",
+      "page": 6,
+      "y": 442.421982,
+      "values": [
+        "63 → 64",
+        "30 → 29",
+        "71 → 78",
+        "51 → 64",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 7",
+      "cell": "Heart Pool",
+      "page": 6,
+      "y": 473.92198,
+      "values": [
+        "85 → 86",
+        "25 → 23",
+        "60 → 62",
+        "56 → 56",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 7",
+      "cell": "South Reach",
+      "page": 6,
+      "y": 505.421979,
+      "values": [
+        "89 → 90",
+        "44 → 42",
+        "42 → 44",
+        "51 → 49",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 8",
+      "cell": "North Bank",
+      "page": 7,
+      "y": 189.671992,
+      "values": [
+        "64 → 57",
+        "29 → 35",
+        "78 → 77",
+        "64 → 64",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 8",
+      "cell": "Heart Pool",
+      "page": 7,
+      "y": 221.171991,
+      "values": [
+        "86 → 79",
+        "23 → 26",
+        "62 → 65",
+        "56 → 59",
+        "1 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 8",
+      "cell": "South Reach",
+      "page": 7,
+      "y": 251.92199,
+      "values": [
+        "90 → 83",
+        "42 → 47",
+        "44 → 39",
+        "49 → 48",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 9",
+      "cell": "North Bank",
+      "page": 7,
+      "y": 715.42197,
+      "values": [
+        "57 → 67",
+        "35 → 25",
+        "77 → 80",
+        "64 → 65",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 9",
+      "cell": "Heart Pool",
+      "page": 7,
+      "y": 746.921969,
+      "values": [
+        "79 → 89",
+        "26 → 15",
+        "65 → 65",
+        "59 → 65",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 9",
+      "cell": "South Reach",
+      "page": 7,
+      "y": 778.421968,
+      "values": [
+        "83 → 93",
+        "47 → 36",
+        "39 → 38",
+        "48 → 46",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 10",
+      "cell": "North Bank",
+      "page": 8,
+      "y": 442.421982,
+      "values": [
+        "67 → 82",
+        "25 → 26",
+        "80 → 80",
+        "65 → 68",
+        "1 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 10",
+      "cell": "Heart Pool",
+      "page": 8,
+      "y": 473.92198,
+      "values": [
+        "89 → 100",
+        "15 → 18",
+        "65 → 59",
+        "65 → 63",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 10",
+      "cell": "South Reach",
+      "page": 8,
+      "y": 505.421979,
+      "values": [
+        "93 → 100",
+        "36 → 39",
+        "38 → 32",
+        "46 → 44",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 11",
+      "cell": "North Bank",
+      "page": 9,
+      "y": 208.421991,
+      "values": [
+        "82 → 87",
+        "26 → 20",
+        "80 → 75",
+        "68 → 67",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 11",
+      "cell": "Heart Pool",
+      "page": 9,
+      "y": 239.17199,
+      "values": [
+        "100 → 100",
+        "18 → 12",
+        "59 → 54",
+        "63 → 60",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 11",
+      "cell": "South Reach",
+      "page": 9,
+      "y": 270.671989,
+      "values": [
+        "100 → 100",
+        "39 → 23",
+        "32 → 26",
+        "44 → 41",
+        "1 → 1"
+      ]
+    },
+    {
+      "caption": "Before → after tide 12",
+      "cell": "North Bank",
+      "page": 9,
+      "y": 734.171969,
+      "values": [
+        "87 → 78",
+        "20 → 28",
+        "75 → 72",
+        "67 → 67",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 12",
+      "cell": "Heart Pool",
+      "page": 9,
+      "y": 765.671968,
+      "values": [
+        "100 → 91",
+        "12 → 19",
+        "54 → 49",
+        "60 → 58",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 12",
+      "cell": "South Reach",
+      "page": 10,
+      "y": 66.671997,
+      "values": [
+        "100 → 91",
+        "23 → 28",
+        "26 → 25",
+        "41 → 42",
+        "1 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 13",
+      "cell": "North Bank",
+      "page": 10,
+      "y": 530.171978,
+      "values": [
+        "78 → 90",
+        "28 → 15",
+        "72 → 72",
+        "67 → 65",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 13",
+      "cell": "Heart Pool",
+      "page": 10,
+      "y": 560.921977,
+      "values": [
+        "91 → 100",
+        "19 → 6",
+        "49 → 49",
+        "58 → 56",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 13",
+      "cell": "South Reach",
+      "page": 10,
+      "y": 592.421975,
+      "values": [
+        "91 → 100",
+        "28 → 15",
+        "25 → 26",
+        "42 → 48",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 14",
+      "cell": "North Bank",
+      "page": 11,
+      "y": 299.921988,
+      "values": [
+        "90 → 100",
+        "15 → 9",
+        "72 → 64",
+        "65 → 63",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 14",
+      "cell": "Heart Pool",
+      "page": 11,
+      "y": 330.671986,
+      "values": [
+        "100 → 100",
+        "6 → 10",
+        "49 → 42",
+        "56 → 54",
+        "2 → 2"
+      ]
+    },
+    {
+      "caption": "Before → after tide 14",
+      "cell": "South Reach",
+      "page": 11,
+      "y": 362.171985,
+      "values": [
+        "100 → 100",
+        "15 → 19",
+        "26 → 19",
+        "48 → 46",
+        "2 → 2"
+      ]
+    }
+  ],
+  "page_geometry": [
+    {
+      "page": 1,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 176,
+      "xMin": 27.749999,
+      "xMax": 546.248168,
+      "yMin": 45.593998,
+      "yMax": 716.76597
+    },
+    {
+      "page": 2,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 230,
+      "xMin": 27.749999,
+      "xMax": 559.914916,
+      "yMin": 61.007997,
+      "yMax": 805.265966
+    },
+    {
+      "page": 3,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 284,
+      "xMin": 27.749999,
+      "xMax": 559.37489,
+      "yMin": 28.421999,
+      "yMax": 794.765967
+    },
+    {
+      "page": 4,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 236,
+      "xMin": 27.749999,
+      "xMax": 567.150948,
+      "yMin": 61.007997,
+      "yMax": 805.265966
+    },
+    {
+      "page": 5,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 283,
+      "xMin": 27.749999,
+      "xMax": 559.182957,
+      "yMin": 28.421999,
+      "yMax": 794.765967
+    },
+    {
+      "page": 6,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 243,
+      "xMin": 27.749999,
+      "xMax": 553.470889,
+      "yMin": 61.007997,
+      "yMax": 805.265966
+    },
+    {
+      "page": 7,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 283,
+      "xMin": 27.749999,
+      "xMax": 565.194889,
+      "yMin": 28.421999,
+      "yMax": 794.765967
+    },
+    {
+      "page": 8,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 240,
+      "xMin": 27.749999,
+      "xMax": 565.194889,
+      "yMin": 61.007997,
+      "yMax": 805.265966
+    },
+    {
+      "page": 9,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 271,
+      "xMin": 27.749999,
+      "xMax": 566.046942,
+      "yMin": 28.421999,
+      "yMax": 782.015967
+    },
+    {
+      "page": 10,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 221,
+      "xMin": 27.749999,
+      "xMax": 566.046942,
+      "yMin": 35.171999,
+      "yMax": 768.515968
+    },
+    {
+      "page": 11,
+      "width": 595.91998,
+      "height": 841.91998,
+      "words": 171,
+      "xMin": 27.749999,
+      "xMax": 553.470889,
+      "yMin": 29.249257,
+      "yMax": 437.414382
+    }
+  ],
+  "input_hashes": {
+    "print-contract.md": "35fd034f25f2c53f8cd0b62aca5d4fd9bc29a6c4edd5a7293ab248f34e0741fd",
+    "native-inputs.json": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+    "completed-report.html": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+    "completed-report.pdf": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a",
+    "completed-report.layout.txt": "3956b7f3661afaf7a1ffb90d3f45d9740ecce38258642a419597aacd23696ce9",
+    "completed-report.bbox.xhtml": "5b459dcf695e85fae277a3b30adc570eaca61994c64f0457f6e3595e7d11671e",
+    "verify-printed-report.py": "a5b38694709f2d445e9b43f0b3c108f0df218be6e2be90f775c18a0bd7e0d5b9"
+  },
+  "limits": [
+    "One A4 portrait report at the recorded native Chrome version.",
+    "Whitespace introduced by line wrapping is ignored; all other extracted characters and ordered native values must match.",
+    "Word geometry and exact text do not replace the separately retained rendered-page visual review."
+  ]
+}

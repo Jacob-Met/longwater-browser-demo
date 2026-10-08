@@ -1,0 +1,1411 @@
+{
+  "oracle_sha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+  "units": [
+    {
+      "kind": "title",
+      "text": "Longwater watch report"
+    },
+    {
+      "kind": "status",
+      "text": "Watch closed · resilient"
+    },
+    {
+      "kind": "provenance",
+      "text": "A one-time snapshot of this Longwater game’s accepted journal. Recorded from Longwater’s game simulation. Net changes include the action, the tide and dawn drift."
+    },
+    {
+      "kind": "purpose",
+      "text": "This report can be read or printed without the game. It does not resume a watch or update when play continues."
+    },
+    {
+      "kind": "heading",
+      "text": "Opening → final readings"
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 5 → 1. Seed packs: 5 → 1."
+    },
+    {
+      "kind": "caption",
+      "text": "Across the completed watch"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 34 → 100 34 → 9 64 → 64 44 → 63 0 → 2",
+      "caption": "Across the completed watch"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 56 → 100 30 → 10 55 → 42 49 → 54 0 → 2",
+      "caption": "Across the completed watch"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 67 → 100 40 → 19 43 → 19 38 → 46 0 → 2",
+      "caption": "Across the completed watch"
+    },
+    {
+      "kind": "heading",
+      "text": "Opening readings"
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 5. Seed packs: 5."
+    },
+    {
+      "kind": "caption",
+      "text": "Before the first tide"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 34 34 64 44 0",
+      "caption": "Before the first tide"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 56 30 55 49 0",
+      "caption": "Before the first tide"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 67 40 43 38 0",
+      "caption": "Before the first tide"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 1 · Gate · North Bank"
+    },
+    {
+      "kind": "event",
+      "text": "Spring tide"
+    },
+    {
+      "kind": "event_note",
+      "text": "A long lunar push carries brine inland."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 5 → 4. Seed packs: 5 → 5."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 1"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 34 → 55 34 → 28 64 → 62 44 → 45 0 → 0",
+      "caption": "Before → after tide 1"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 56 → 70 30 → 34 55 → 54 49 → 50 0 → 0",
+      "caption": "Before → after tide 1"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 67 → 81 40 → 43 43 → 40 38 → 38 0 → 0",
+      "caption": "Before → after tide 1"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 2 · Shade · Heart Pool"
+    },
+    {
+      "kind": "event",
+      "text": "Neap ebb"
+    },
+    {
+      "kind": "event_note",
+      "text": "A short, quiet ebb leaves pools exposed."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · Heart Pool: canopy 0→1, salt 34→32 ppt, oxygen 54→58%, biomass 50→53%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 58→61%. A short, quiet ebb leaves pools exposed."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · Heart Pool: water 70→65 cm, salt 34→34 ppt, oxygen 54→63%, biomass 50→54%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 4 → 4. Seed packs: 5 → 5."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 2"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 55 → 50 28 → 30 62 → 67 45 → 46 0 → 0",
+      "caption": "Before → after tide 2"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 70 → 65 34 → 34 54 → 63 50 → 54 0 → 1",
+      "caption": "Before → after tide 2"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 81 → 76 43 → 45 40 → 43 38 → 38 0 → 0",
+      "caption": "Before → after tide 2"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 3 · Seed · South Reach"
+    },
+    {
+      "kind": "event",
+      "text": "Heat pulse"
+    },
+    {
+      "kind": "event_note",
+      "text": "Hot air accelerates evaporation and oxygen loss."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reseeding · South Reach: biomass 38→50% (+12; deep-water settling rule not triggered), oxygen 43→44%. Seed satchels −1 (4 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Heat pulse · all three cells: water -8 cm, salt +7 ppt; South Reach oxygen 44→37% (canopy relief +0). Hot air accelerates evaporation and oxygen loss."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · South Reach: water 76→68 cm, salt 45→52 ppt, oxygen 43→39%, biomass 38→49%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 4 → 4. Seed packs: 5 → 4."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 3"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 50 → 42 30 → 37 67 → 62 46 → 45 0 → 0",
+      "caption": "Before → after tide 3"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 65 → 57 34 → 41 63 → 60 54 → 54 1 → 1",
+      "caption": "Before → after tide 3"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 76 → 68 45 → 52 43 → 39 38 → 49 0 → 0",
+      "caption": "Before → after tide 3"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 4 · Shade · North Bank"
+    },
+    {
+      "kind": "event",
+      "text": "Runoff plume"
+    },
+    {
+      "kind": "event_note",
+      "text": "Fresh upland runoff dilutes the channel edge."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · North Bank: canopy 0→1, salt 37→35 ppt, oxygen 62→66%, biomass 45→48%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Runoff plume · all three cells: water +9 cm, salt -11 ppt; North Bank oxygen 66→68%. Fresh upland runoff dilutes the channel edge."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · North Bank: water 42→51 cm, salt 37→24 ppt, oxygen 62→70%, biomass 45→49%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 4 → 4. Seed packs: 4 → 4."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 4"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 42 → 51 37 → 24 62 → 70 45 → 49 0 → 1",
+      "caption": "Before → after tide 4"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 57 → 66 41 → 30 60 → 64 54 → 55 1 → 1",
+      "caption": "Before → after tide 4"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 68 → 77 52 → 41 39 → 41 49 → 49 0 → 0",
+      "caption": "Before → after tide 4"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 5 · Shade · South Reach"
+    },
+    {
+      "kind": "event",
+      "text": "Slackwater"
+    },
+    {
+      "kind": "event_note",
+      "text": "A gentle ebb gives the reed shelves room to breathe."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · South Reach: canopy 0→1, salt 41→39 ppt, oxygen 41→45%, biomass 49→52%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Slackwater · all three cells: water -6 cm, salt +1 ppt; South Reach oxygen 45→48%. A gentle ebb gives the reed shelves room to breathe."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · South Reach: water 77→71 cm, salt 41→40 ppt, oxygen 41→50%, biomass 49→53%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 4 → 4. Seed packs: 4 → 4."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 5"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 51 → 45 24 → 25 70 → 75 49 → 50 1 → 1",
+      "caption": "Before → after tide 5"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 66 → 60 30 → 31 64 → 69 55 → 56 1 → 1",
+      "caption": "Before → after tide 5"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 77 → 71 41 → 40 41 → 50 49 → 53 0 → 1",
+      "caption": "Before → after tide 5"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 6 · Gate · Heart Pool"
+    },
+    {
+      "kind": "event",
+      "text": "King tide"
+    },
+    {
+      "kind": "event_note",
+      "text": "An unusually high tide presses across the low marsh."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Freshwater gate · Heart Pool: water 60→67 cm, salt 31→21 ppt, oxygen 69→68%. Freshwater −1 (3 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "King tide · all three cells: water +18 cm, salt +5 ppt; Heart Pool oxygen 68→62%. An unusually high tide presses across the low marsh."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · Heart Pool: water 60→85 cm, salt 31→25 ppt, oxygen 69→60%, biomass 56→56%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 4 → 3. Seed packs: 4 → 4."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 6"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 45 → 63 25 → 30 75 → 71 50 → 51 1 → 1",
+      "caption": "Before → after tide 6"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 60 → 85 31 → 25 69 → 60 56 → 56 1 → 1",
+      "caption": "Before → after tide 6"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 71 → 89 40 → 44 50 → 42 53 → 51 1 → 1",
+      "caption": "Before → after tide 6"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 7 · Seed · North Bank"
+    },
+    {
+      "kind": "event",
+      "text": "Fog veil"
+    },
+    {
+      "kind": "event_note",
+      "text": "Cool fog slows drying and softens the morning light."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reseeding · North Bank: biomass 51→63% (+12; deep-water settling rule not triggered), oxygen 71→72%. Seed satchels −1 (3 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Fog veil · all three cells: water +1 cm, salt -1 ppt; North Bank oxygen 72→76%. Cool fog slows drying and softens the morning light."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · North Bank: water 63→64 cm, salt 30→29 ppt, oxygen 71→78%, biomass 51→64%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 3 → 3. Seed packs: 4 → 3."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 7"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 63 → 64 30 → 29 71 → 78 51 → 64 1 → 1",
+      "caption": "Before → after tide 7"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 85 → 86 25 → 23 60 → 62 56 → 56 1 → 1",
+      "caption": "Before → after tide 7"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 89 → 90 44 → 42 42 → 44 51 → 49 1 → 1",
+      "caption": "Before → after tide 7"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 8 · Shade · Heart Pool"
+    },
+    {
+      "kind": "event",
+      "text": "Dry wind"
+    },
+    {
+      "kind": "event_note",
+      "text": "A warm offshore wind pulls water from the pools."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · Heart Pool: canopy 1→2, salt 23→21 ppt, oxygen 62→66%, biomass 56→59%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dry wind · all three cells: water -7 cm, salt +6 ppt; Heart Pool oxygen 66→65% (canopy relief +4). A warm offshore wind pulls water from the pools."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · Heart Pool: water 86→79 cm, salt 23→26 ppt, oxygen 62→65%, biomass 56→59%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 3 → 3. Seed packs: 3 → 3."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 8"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 64 → 57 29 → 35 78 → 77 64 → 64 1 → 1",
+      "caption": "Before → after tide 8"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 86 → 79 23 → 26 62 → 65 56 → 59 1 → 2",
+      "caption": "Before → after tide 8"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 90 → 83 42 → 47 44 → 39 49 → 48 1 → 1",
+      "caption": "Before → after tide 8"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 9 · Seed · Heart Pool"
+    },
+    {
+      "kind": "event",
+      "text": "Runoff pulse"
+    },
+    {
+      "kind": "event_note",
+      "text": "A second freshwater pulse pushes through the inlet."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reseeding · Heart Pool: biomass 59→67% (+8; deep-water settling rule applied), oxygen 65→66%. Seed satchels −1 (2 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Runoff pulse · all three cells: water +10 cm, salt -10 ppt; Heart Pool oxygen 66→67%. A second freshwater pulse pushes through the inlet."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · Heart Pool: water 79→89 cm, salt 26→15 ppt, oxygen 65→65%, biomass 59→65%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 3 → 3. Seed packs: 3 → 2."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 9"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 57 → 67 35 → 25 77 → 80 64 → 65 1 → 1",
+      "caption": "Before → after tide 9"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 79 → 89 26 → 15 65 → 65 59 → 65 2 → 2",
+      "caption": "Before → after tide 9"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 83 → 93 47 → 36 39 → 38 48 → 46 1 → 1",
+      "caption": "Before → after tide 9"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 10 · Shade · North Bank"
+    },
+    {
+      "kind": "event",
+      "text": "Spring tide"
+    },
+    {
+      "kind": "event_note",
+      "text": "The next spring tide reaches the lower reed line."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · North Bank: canopy 1→2, salt 25→23 ppt, oxygen 80→84%, biomass 65→68%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Spring tide · all three cells: water +15 cm, salt +4 ppt; North Bank oxygen 84→80%. The next spring tide reaches the lower reed line."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · North Bank: water 67→82 cm, salt 25→26 ppt, oxygen 80→80%, biomass 65→68%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 3 → 3. Seed packs: 2 → 2."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 10"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 67 → 82 25 → 26 80 → 80 65 → 68 1 → 2",
+      "caption": "Before → after tide 10"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 89 → 100 15 → 18 65 → 59 65 → 63 2 → 2",
+      "caption": "Before → after tide 10"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 93 → 100 36 → 39 38 → 32 46 → 44 1 → 1",
+      "caption": "Before → after tide 10"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 11 · Gate · South Reach"
+    },
+    {
+      "kind": "event",
+      "text": "Silt ribbon"
+    },
+    {
+      "kind": "event_note",
+      "text": "Fine silt clouds the water before settling on the flats."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Freshwater gate · South Reach: water 100→100 cm, salt 39→29 ppt, oxygen 32→31%. Freshwater −1 (2 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Silt ribbon · all three cells: water +5 cm, salt -5 ppt; South Reach oxygen 31→28%. Fine silt clouds the water before settling on the flats."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · South Reach: water 100→100 cm, salt 39→23 ppt, oxygen 32→26%, biomass 44→41%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 3 → 2. Seed packs: 2 → 2."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 11"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 82 → 87 26 → 20 80 → 75 68 → 67 2 → 2",
+      "caption": "Before → after tide 11"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 100 → 100 18 → 12 59 → 54 63 → 60 2 → 2",
+      "caption": "Before → after tide 11"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 100 → 100 39 → 23 32 → 26 44 → 41 1 → 1",
+      "caption": "Before → after tide 11"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 12 · Shade · South Reach"
+    },
+    {
+      "kind": "event",
+      "text": "Heat pulse"
+    },
+    {
+      "kind": "event_note",
+      "text": "A second hot spell tests every shaded cell."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reed-bed shade · South Reach: canopy 1→2, salt 23→21 ppt, oxygen 26→30%, biomass 41→44%. Canopy blunts heat and drying."
+    },
+    {
+      "kind": "field_note",
+      "text": "Heat pulse · all three cells: water -9 cm, salt +8 ppt; South Reach oxygen 30→27% (canopy relief +4). A second hot spell tests every shaded cell."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · South Reach: water 100→91 cm, salt 23→28 ppt, oxygen 26→25%, biomass 41→42%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 2 → 2. Seed packs: 2 → 2."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 12"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 87 → 78 20 → 28 75 → 72 67 → 67 2 → 2",
+      "caption": "Before → after tide 12"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 100 → 91 12 → 19 54 → 49 60 → 58 2 → 2",
+      "caption": "Before → after tide 12"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 100 → 91 23 → 28 26 → 25 41 → 42 1 → 2",
+      "caption": "Before → after tide 12"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 13 · Seed · South Reach"
+    },
+    {
+      "kind": "event",
+      "text": "Freshwater pulse"
+    },
+    {
+      "kind": "event_note",
+      "text": "The last runoff pulse clears a narrow freshwater lane."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Reseeding · South Reach: biomass 42→50% (+8; deep-water settling rule applied), oxygen 25→26%. Seed satchels −1 (1 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Freshwater pulse · all three cells: water +12 cm, salt -12 ppt; South Reach oxygen 26→28%. The last runoff pulse clears a narrow freshwater lane."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · South Reach: water 91→100 cm, salt 28→15 ppt, oxygen 25→26%, biomass 42→48%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 2 → 2. Seed packs: 2 → 1."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 13"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 78 → 90 28 → 15 72 → 72 67 → 65 2 → 2",
+      "caption": "Before → after tide 13"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 91 → 100 19 → 6 49 → 49 58 → 56 2 → 2",
+      "caption": "Before → after tide 13"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 91 → 100 28 → 15 25 → 26 42 → 48 2 → 2",
+      "caption": "Before → after tide 13"
+    },
+    {
+      "kind": "tide",
+      "text": "Tide 14 · Gate · North Bank"
+    },
+    {
+      "kind": "event",
+      "text": "Moon-pull tide"
+    },
+    {
+      "kind": "event_note",
+      "text": "A final high tide closes the fourteen-day watch."
+    },
+    {
+      "kind": "notes_heading",
+      "text": "Full field notes"
+    },
+    {
+      "kind": "field_note",
+      "text": "Freshwater gate · North Bank: water 90→97 cm, salt 15→5 ppt, oxygen 72→71%. Freshwater −1 (1 left)."
+    },
+    {
+      "kind": "field_note",
+      "text": "Moon-pull tide · all three cells: water +16 cm, salt +5 ppt; North Bank oxygen 71→66%. A final high tide closes the fourteen-day watch."
+    },
+    {
+      "kind": "field_note",
+      "text": "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt."
+    },
+    {
+      "kind": "field_note",
+      "text": "Net · North Bank: water 90→100 cm, salt 15→9 ppt, oxygen 72→64%, biomass 65→63%."
+    },
+    {
+      "kind": "resources",
+      "text": "Freshwater: 2 → 1. Seed packs: 1 → 1."
+    },
+    {
+      "kind": "caption",
+      "text": "Before → after tide 14"
+    },
+    {
+      "kind": "row",
+      "text": "North Bank 90 → 100 15 → 9 72 → 64 65 → 63 2 → 2",
+      "caption": "Before → after tide 14"
+    },
+    {
+      "kind": "row",
+      "text": "Heart Pool 100 → 100 6 → 10 49 → 42 56 → 54 2 → 2",
+      "caption": "Before → after tide 14"
+    },
+    {
+      "kind": "row",
+      "text": "South Reach 100 → 100 15 → 19 26 → 19 48 → 46 2 → 2",
+      "caption": "Before → after tide 14"
+    },
+    {
+      "kind": "footer",
+      "text": "14 of 14 tides recorded. Only completed tides are included. Print using your browser’s Print command."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Across the completed watch",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "34 → 100",
+            "34 → 9",
+            "64 → 64",
+            "44 → 63",
+            "0 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "56 → 100",
+            "30 → 10",
+            "55 → 42",
+            "49 → 54",
+            "0 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "67 → 100",
+            "40 → 19",
+            "43 → 19",
+            "38 → 46",
+            "0 → 2"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before the first tide",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "34",
+            "34",
+            "64",
+            "44",
+            "0"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "56",
+            "30",
+            "55",
+            "49",
+            "0"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "67",
+            "40",
+            "43",
+            "38",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 1",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "34 → 55",
+            "34 → 28",
+            "64 → 62",
+            "44 → 45",
+            "0 → 0"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "56 → 70",
+            "30 → 34",
+            "55 → 54",
+            "49 → 50",
+            "0 → 0"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "67 → 81",
+            "40 → 43",
+            "43 → 40",
+            "38 → 38",
+            "0 → 0"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 2",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "55 → 50",
+            "28 → 30",
+            "62 → 67",
+            "45 → 46",
+            "0 → 0"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "70 → 65",
+            "34 → 34",
+            "54 → 63",
+            "50 → 54",
+            "0 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "81 → 76",
+            "43 → 45",
+            "40 → 43",
+            "38 → 38",
+            "0 → 0"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 3",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "50 → 42",
+            "30 → 37",
+            "67 → 62",
+            "46 → 45",
+            "0 → 0"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "65 → 57",
+            "34 → 41",
+            "63 → 60",
+            "54 → 54",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "76 → 68",
+            "45 → 52",
+            "43 → 39",
+            "38 → 49",
+            "0 → 0"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 4",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "42 → 51",
+            "37 → 24",
+            "62 → 70",
+            "45 → 49",
+            "0 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "57 → 66",
+            "41 → 30",
+            "60 → 64",
+            "54 → 55",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "68 → 77",
+            "52 → 41",
+            "39 → 41",
+            "49 → 49",
+            "0 → 0"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 5",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "51 → 45",
+            "24 → 25",
+            "70 → 75",
+            "49 → 50",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "66 → 60",
+            "30 → 31",
+            "64 → 69",
+            "55 → 56",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "77 → 71",
+            "41 → 40",
+            "41 → 50",
+            "49 → 53",
+            "0 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 6",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "45 → 63",
+            "25 → 30",
+            "75 → 71",
+            "50 → 51",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "60 → 85",
+            "31 → 25",
+            "69 → 60",
+            "56 → 56",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "71 → 89",
+            "40 → 44",
+            "50 → 42",
+            "53 → 51",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 7",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "63 → 64",
+            "30 → 29",
+            "71 → 78",
+            "51 → 64",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "85 → 86",
+            "25 → 23",
+            "60 → 62",
+            "56 → 56",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "89 → 90",
+            "44 → 42",
+            "42 → 44",
+            "51 → 49",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 8",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "64 → 57",
+            "29 → 35",
+            "78 → 77",
+            "64 → 64",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "86 → 79",
+            "23 → 26",
+            "62 → 65",
+            "56 → 59",
+            "1 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "90 → 83",
+            "42 → 47",
+            "44 → 39",
+            "49 → 48",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 9",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "57 → 67",
+            "35 → 25",
+            "77 → 80",
+            "64 → 65",
+            "1 → 1"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "79 → 89",
+            "26 → 15",
+            "65 → 65",
+            "59 → 65",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "83 → 93",
+            "47 → 36",
+            "39 → 38",
+            "48 → 46",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 10",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "67 → 82",
+            "25 → 26",
+            "80 → 80",
+            "65 → 68",
+            "1 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "89 → 100",
+            "15 → 18",
+            "65 → 59",
+            "65 → 63",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "93 → 100",
+            "36 → 39",
+            "38 → 32",
+            "46 → 44",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 11",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "82 → 87",
+            "26 → 20",
+            "80 → 75",
+            "68 → 67",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "100 → 100",
+            "18 → 12",
+            "59 → 54",
+            "63 → 60",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "100 → 100",
+            "39 → 23",
+            "32 → 26",
+            "44 → 41",
+            "1 → 1"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 12",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "87 → 78",
+            "20 → 28",
+            "75 → 72",
+            "67 → 67",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "100 → 91",
+            "12 → 19",
+            "54 → 49",
+            "60 → 58",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "100 → 91",
+            "23 → 28",
+            "26 → 25",
+            "41 → 42",
+            "1 → 2"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 13",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "78 → 90",
+            "28 → 15",
+            "72 → 72",
+            "67 → 65",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "91 → 100",
+            "19 → 6",
+            "49 → 49",
+            "58 → 56",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "91 → 100",
+            "28 → 15",
+            "25 → 26",
+            "42 → 48",
+            "2 → 2"
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Before → after tide 14",
+      "rows": [
+        {
+          "cell": "North Bank",
+          "values": [
+            "90 → 100",
+            "15 → 9",
+            "72 → 64",
+            "65 → 63",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "Heart Pool",
+          "values": [
+            "100 → 100",
+            "6 → 10",
+            "49 → 42",
+            "56 → 54",
+            "2 → 2"
+          ]
+        },
+        {
+          "cell": "South Reach",
+          "values": [
+            "100 → 100",
+            "15 → 19",
+            "26 → 19",
+            "48 → 46",
+            "2 → 2"
+          ]
+        }
+      ]
+    }
+  ]
+}

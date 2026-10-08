@@ -1,0 +1,17 @@
+{
+  "pdfinfo": {
+    "path": "/usr/bin/pdfinfo",
+    "version": "pdfinfo version 26.01.0",
+    "exit_code": 0
+  },
+  "pdftotext": {
+    "path": "/usr/bin/pdftotext",
+    "version": "pdftotext version 26.01.0",
+    "exit_code": 0
+  },
+  "pdftoppm": {
+    "path": "/usr/bin/pdftoppm",
+    "version": "pdftoppm version 26.01.0",
+    "exit_code": 0
+  }
+}

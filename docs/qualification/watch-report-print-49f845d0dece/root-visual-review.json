@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root",
+  "role": "independent integration reviewer",
+  "verdict": "accept",
+  "pdf": {
+    "path": "completed-report.pdf",
+    "sha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a"
+  },
+  "inspectedPages": [
+    1,
+    9,
+    10
+  ],
+  "observations": [
+    "Readable A4 tables.",
+    "No visible clipping or overlap on inspected pages.",
+    "All six headings repeat cleanly across the Tide 12 split."
+  ],
+  "scope": "Actual rendered pages from this exact Chrome-generated PDF; full-document text and geometry are separately checked by the native receiver.",
+  "source": "Direct team message from /root during this receiving task."
+}

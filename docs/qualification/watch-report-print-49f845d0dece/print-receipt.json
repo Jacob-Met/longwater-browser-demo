@@ -1,0 +1,69 @@
+{
+  "startedAt": "2026-10-08T14:13:49.115Z",
+  "sourceHead": "260d00a902cb5ab6e5e7cad1a909dbd609842b1c",
+  "runtimeHead": "0df34ae888c6ca9655ef93f6ca4c03fce477f3a4",
+  "module": {
+    "path": "/dev/shm/lw49-report-author-49f845d0dece/watch-report.js",
+    "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25"
+  },
+  "nativeOracle": {
+    "sha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163"
+  },
+  "html": {
+    "originalPath": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-260d00a-run-01/packaged-completed.html",
+    "path": "completed-report.html",
+    "bytes": 32114,
+    "sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7"
+  },
+  "reusedHelper": {
+    "sha256": "afdb405bedd25272f21166359f60ee0047ceaf7e0b3e58f63d62feeae5acf492"
+  },
+  "node": "v22.22.1",
+  "printCommand": "Page.printToPDF",
+  "parameters": {
+    "landscape": false,
+    "displayHeaderFooter": false,
+    "printBackground": true,
+    "scale": 1,
+    "paperWidth": 8.267716535433072,
+    "paperHeight": 11.692913385826772,
+    "marginTop": 0.3937007874015748,
+    "marginBottom": 0.3937007874015748,
+    "marginLeft": 0.3937007874015748,
+    "marginRight": 0.3937007874015748,
+    "preferCSSPageSize": false,
+    "transferMode": "ReturnAsBase64"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.57",
+    "revision": "@73c14f6228d7cd537c855007e8f88678969cc0eb",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "printLayout": {
+    "media": true,
+    "tables": 16,
+    "minWidths": [
+      "0px"
+    ],
+    "headers": [
+      "table-header-group"
+    ],
+    "scripts": 0,
+    "images": 0
+  },
+  "pdf": {
+    "path": "completed-report.pdf",
+    "bytes": 266728,
+    "sha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a"
+  },
+  "requests": [
+    {
+      "sessionId": "596359604340BAB209B2828046749E75",
+      "url": "file:///dev/shm/lw49-report-print-49f845d0dece/completed-report.html"
+    }
+  ],
+  "status": "printed",
+  "completedAt": "2026-10-08T14:13:50.809Z"
+}
