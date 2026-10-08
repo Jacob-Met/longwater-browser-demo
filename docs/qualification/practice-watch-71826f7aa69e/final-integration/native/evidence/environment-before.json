@@ -1,0 +1,13 @@
+{
+  "root": "/home/jacob/hamon-longwater-practice-2451-71826f7aa69e",
+  "uid": 1000,
+  "node": "v22.22.1",
+  "chromium": "Chromium 153.0.8010.47 snap",
+  "playwrightVersion": "1.64.0",
+  "playwrightPackage": "/home/jacob/hamon-b890f0b1bfcd/browser-tools/node_modules/playwright/package.json",
+  "playwrightPackageSha256": "76e7341a52a4dd154553c3514926a5f824da4374d000e88d9ac3c14ee6eadf84",
+  "coreSha256": "1d6b6f80ffb0c52865af0f9fe01abf2140df019e49ae6ac134605e462d583f3a",
+  "git": "git version 2.53.0",
+  "freeBytes": 17695145984,
+  "dependencyBoundary": "Existing read-only Playwright1.64.0 differs from project locked1.62.1; hosted lock-based gate remains separate. No installation or owner modification."
+}

@@ -1,0 +1,19 @@
+{
+  "receiver": {
+    "bytes": 13547,
+    "git": "c08926c02e858b322473b924b960cd0083730891",
+    "sha256": "7ef1c0248e5d8979e7795ea56227dc446f8e7678ef3171b01376a43617ef7e68"
+  },
+  "syntax": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "browserExecuted": false,
+  "source": "/home/jacob/hamon-longwater-practice-2451-71826f7aa69e/source",
+  "environment": {
+    "LONGWATER_CHROME_PATH": "/snap/bin/chromium",
+    "TMPDIR": "/home/jacob/hamon-longwater-public-71826f7aa69e/tmp"
+  },
+  "scope": "Preparation only; final integrated manifest and deployment receiving precede one browser case."
+}

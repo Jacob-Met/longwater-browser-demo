@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-08T18:48:59.013Z",
+  "finished_at": "2026-10-08T18:49:25.091Z",
+  "command": [
+    "/usr/bin/node",
+    "/home/jacob/hamon-longwater-public-71826f7aa69e/receive-public-practice.mjs",
+    "/home/jacob/hamon-longwater-practice-2451-71826f7aa69e/source",
+    "/home/jacob/hamon-longwater-public-71826f7aa69e/published-manifest-9407f172.json",
+    "/home/jacob/hamon-longwater-public-71826f7aa69e/public-9407f172",
+    "https://jacobmetoyer.com/longwater-browser-demo/"
+  ],
+  "environment": {
+    "LONGWATER_CHROME_PATH": "/snap/bin/chromium",
+    "TMPDIR": "/home/jacob/hamon-longwater-public-71826f7aa69e/tmp"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "launches": 1
+}

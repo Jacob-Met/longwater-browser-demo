@@ -1,0 +1,821 @@
+{
+  "schema": "longwater.public-practice-receiving.v1",
+  "state": "passed",
+  "phase": "complete",
+  "startedAt": "2026-10-08T18:49:00.333Z",
+  "site": "https://jacobmetoyer.com/longwater-browser-demo/",
+  "sourceHead": "9407f172518d0d6b19146e2431bcabbb2c307241",
+  "sourceTree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+  "sourceSha256": "4f1e41dc2df1bea2556cf6f699737b3b77c8de3c461c4675d22c3918749e6fdf",
+  "manifestSha256": "33d770da5cf15554f06f2bc0a28b9c343a8cd58d23bca6cbed23ea7ed42a0e9b",
+  "nativeSourceRoot": "/home/jacob/hamon-longwater-practice-2451-71826f7aa69e/source",
+  "browserLaunched": true,
+  "scope": "One temporary practice tide in a fresh owned profile; no active-watch actions or file adoption",
+  "preflight": [
+    {
+      "path": "index.html",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/index.html",
+      "status": 200,
+      "bytes": 9627,
+      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+      "git_blob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
+      "contentType": "text/html; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "style.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css",
+      "status": 200,
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "journal.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css",
+      "status": 200,
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-trends.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css",
+      "status": 200,
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-save.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css",
+      "status": 200,
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-report.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css",
+      "status": 200,
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-file.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.css",
+      "status": 200,
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-choice.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice.css",
+      "status": 200,
+      "bytes": 3741,
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+      "git_blob": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "practice-watch.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/practice-watch.css",
+      "status": 200,
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "contentType": "text/css; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "game.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js",
+      "status": 200,
+      "bytes": 22031,
+      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+      "git_blob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js",
+      "status": 200,
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "journal.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js",
+      "status": 200,
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-save.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js",
+      "status": 200,
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-file.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.js",
+      "status": 200,
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-choice.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice.js",
+      "status": 200,
+      "bytes": 12066,
+      "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+      "git_blob": "c06835946ec99c7edd8eb16334d597356aada060",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "practice-watch.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/practice-watch.js",
+      "status": 200,
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-trends.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js",
+      "status": 200,
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-report.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js",
+      "status": 200,
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "watch-choice-model.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice-model.js",
+      "status": 200,
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "contentType": "application/javascript; charset=utf-8",
+      "exact": true
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm",
+      "status": 200,
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "contentType": "application/wasm",
+      "exact": true
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/downloads/Longwater-Fourteen-Tides.html",
+      "status": 200,
+      "bytes": 339166,
+      "sha256": "1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33",
+      "git_blob": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f",
+      "contentType": "text/html; charset=utf-8",
+      "exact": true
+    }
+  ],
+  "loadedInputs": [
+    {
+      "path": "style.css",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9627,
+      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+      "git_blob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css"
+    },
+    {
+      "path": "watch-choice.css",
+      "bytes": 3741,
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+      "git_blob": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice.css"
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/practice-watch.css"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.css"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css"
+    },
+    {
+      "path": "game.js",
+      "bytes": 22031,
+      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+      "git_blob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js"
+    },
+    {
+      "path": "watch-choice.js",
+      "bytes": 12066,
+      "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+      "git_blob": "c06835946ec99c7edd8eb16334d597356aada060",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice.js"
+    },
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/practice-watch.js"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-choice-model.js"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.js"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "assetErrors": [],
+  "playwright": "1.64.0",
+  "oracle": {
+    "action": "gate",
+    "cell": "north",
+    "opening": {
+      "day": 0,
+      "cells": [
+        {
+          "id": "north",
+          "name": "North Bank",
+          "zone": "Upper reed shelf",
+          "material": "peat & cordgrass",
+          "depth": 34,
+          "salinity": 34,
+          "oxygen": 64,
+          "biomass": 44,
+          "shade": 0
+        },
+        {
+          "id": "heart",
+          "name": "Heart Pool",
+          "zone": "Inner tidal basin",
+          "material": "mud & glasswort",
+          "depth": 56,
+          "salinity": 30,
+          "oxygen": 55,
+          "biomass": 49,
+          "shade": 0
+        },
+        {
+          "id": "south",
+          "name": "South Reach",
+          "zone": "Outer brackish fringe",
+          "material": "silt & saltgrass",
+          "depth": 67,
+          "salinity": 40,
+          "oxygen": 43,
+          "biomass": 38,
+          "shade": 0
+        }
+      ],
+      "freshwater": 5,
+      "seedPacks": 5,
+      "report": null,
+      "finished": false,
+      "outcome": null
+    },
+    "afterGate": {
+      "day": 1,
+      "cells": [
+        {
+          "id": "north",
+          "name": "North Bank",
+          "zone": "Upper reed shelf",
+          "material": "peat & cordgrass",
+          "depth": 55,
+          "salinity": 28,
+          "oxygen": 62,
+          "biomass": 45,
+          "shade": 0
+        },
+        {
+          "id": "heart",
+          "name": "Heart Pool",
+          "zone": "Inner tidal basin",
+          "material": "mud & glasswort",
+          "depth": 70,
+          "salinity": 34,
+          "oxygen": 54,
+          "biomass": 50,
+          "shade": 0
+        },
+        {
+          "id": "south",
+          "name": "South Reach",
+          "zone": "Outer brackish fringe",
+          "material": "silt & saltgrass",
+          "depth": 81,
+          "salinity": 43,
+          "oxygen": 40,
+          "biomass": 38,
+          "shade": 0
+        }
+      ],
+      "freshwater": 4,
+      "seedPacks": 5,
+      "report": {
+        "day": 1,
+        "action": "gate",
+        "cell": "north",
+        "event": {
+          "day": 1,
+          "name": "Spring tide",
+          "note": "A long lunar push carries brine inland.",
+          "depth": 14,
+          "salt": 4,
+          "oxygen": -3
+        },
+        "lines": [
+          "Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).",
+          "Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.",
+          "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+          "Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%."
+        ]
+      },
+      "finished": false,
+      "outcome": null
+    }
+  },
+  "freshProfile": "/home/jacob/hamon-longwater-public-71826f7aa69e/public-9407f172/browser-profile",
+  "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "activeWatchBefore": {
+    "summary": "Day 0 of 14. Water 5; seed packs 5.",
+    "readings": [
+      "Upper reed shelf; peat & cordgrass. Depth 34 centimetres. Salt 34 parts per thousand. Oxygen 64 percent. Life 44 percent. Canopy 0 of 3.",
+      "Inner tidal basin; mud & glasswort. Depth 56 centimetres. Salt 30 parts per thousand. Oxygen 55 percent. Life 49 percent. Canopy 0 of 3.",
+      "Outer brackish fringe; silt & saltgrass. Depth 67 centimetres. Salt 40 parts per thousand. Oxygen 43 percent. Life 38 percent. Canopy 0 of 3."
+    ],
+    "selected": [
+      "false",
+      "true",
+      "false"
+    ],
+    "journal": "Watch journalDownload watch reportKeep a readable, printable snapshot of this watch. This report cannot resume the game.Complete a tide to download a report.Review this watchNo tides yetRevisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.Saved tides return with your watch, including watches opened from a file. If saving is unavailable, download your watch before closing to keep the latest reports.Your first tide will appear here after you choose an action.Watch trendsNo completed tides yet. These are the opening readings from your watch.Compare a readingDepth (cm)Salt (ppt)Oxygen (%)Life (%)Canopy (/ 3)Review tideChoose a tide on the chart or use the slider. Arrow keys move one tide; Home returns to the opening and End to the latest completed tide.North BankHeart PoolSouth Reach0255075100Life (%)0Completed tide · 0 = openingOpening · Life (%)Before the first action and tide.North Bank44 %Heart Pool49 %South Reach38 %All readings for this metricLife (%) · Opening and every completed tideTideNorth BankHeart PoolSouth ReachOpening444938",
+    "notes": "Pick a cell, then choose Gate, Shade, or Seed.Your action is resolved against the live Rust simulation.",
+    "event": "The first tide is gathering. Choose a marsh cell, then take one action before the tide turns.",
+    "announcement": "Day 0 of 14. Water 5; seed packs 5. Cell 2: Heart Pool selected. Inner tidal basin; mud & glasswort. Depth 56 centimetres. Salt 30 parts per thousand. Oxygen 55 percent. Life 49 percent. Canopy 0 of 3. Pick a cell, then choose Gate, Shade, or Seed. Your action is resolved against the live Rust simulation.",
+    "saved": {}
+  },
+  "practiceOpening": {
+    "summary": "Practice tide 0 / 14 · Water 5 · Seed packs 5",
+    "resources": [
+      [
+        "Water",
+        "5"
+      ],
+      [
+        "Seed packs",
+        "5"
+      ]
+    ],
+    "cells": [
+      {
+        "name": "North Bank",
+        "readings": [
+          [
+            "Depth (cm)",
+            "34"
+          ],
+          [
+            "Salt (ppt)",
+            "34"
+          ],
+          [
+            "Oxygen (%)",
+            "64"
+          ],
+          [
+            "Life (%)",
+            "44"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "Heart Pool",
+        "readings": [
+          [
+            "Depth (cm)",
+            "56"
+          ],
+          [
+            "Salt (ppt)",
+            "30"
+          ],
+          [
+            "Oxygen (%)",
+            "55"
+          ],
+          [
+            "Life (%)",
+            "49"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "South Reach",
+        "readings": [
+          [
+            "Depth (cm)",
+            "67"
+          ],
+          [
+            "Salt (ppt)",
+            "40"
+          ],
+          [
+            "Oxygen (%)",
+            "43"
+          ],
+          [
+            "Life (%)",
+            "38"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "notes": null
+  },
+  "practiceAfterGate": {
+    "summary": "Practice tide 1 / 14 · Water 4 · Seed packs 5",
+    "resources": [
+      [
+        "Water",
+        "5",
+        "4"
+      ],
+      [
+        "Seed packs",
+        "5",
+        "5"
+      ]
+    ],
+    "cells": [
+      {
+        "name": "North Bank",
+        "readings": [
+          [
+            "Depth (cm)",
+            "34",
+            "55"
+          ],
+          [
+            "Salt (ppt)",
+            "34",
+            "28"
+          ],
+          [
+            "Oxygen (%)",
+            "64",
+            "62"
+          ],
+          [
+            "Life (%)",
+            "44",
+            "45"
+          ],
+          [
+            "Canopy (of 3)",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "Heart Pool",
+        "readings": [
+          [
+            "Depth (cm)",
+            "56",
+            "70"
+          ],
+          [
+            "Salt (ppt)",
+            "30",
+            "34"
+          ],
+          [
+            "Oxygen (%)",
+            "55",
+            "54"
+          ],
+          [
+            "Life (%)",
+            "49",
+            "50"
+          ],
+          [
+            "Canopy (of 3)",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "South Reach",
+        "readings": [
+          [
+            "Depth (cm)",
+            "67",
+            "81"
+          ],
+          [
+            "Salt (ppt)",
+            "40",
+            "43"
+          ],
+          [
+            "Oxygen (%)",
+            "43",
+            "40"
+          ],
+          [
+            "Life (%)",
+            "38",
+            "38"
+          ],
+          [
+            "Canopy (of 3)",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "notes": {
+      "event": "Spring tide",
+      "explanation": "A long lunar push carries brine inland.",
+      "lines": [
+        "Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).",
+        "Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.",
+        "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+        "Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%."
+      ]
+    }
+  },
+  "practiceReopened": {
+    "summary": "Practice tide 0 / 14 · Water 5 · Seed packs 5",
+    "resources": [
+      [
+        "Water",
+        "5"
+      ],
+      [
+        "Seed packs",
+        "5"
+      ]
+    ],
+    "cells": [
+      {
+        "name": "North Bank",
+        "readings": [
+          [
+            "Depth (cm)",
+            "34"
+          ],
+          [
+            "Salt (ppt)",
+            "34"
+          ],
+          [
+            "Oxygen (%)",
+            "64"
+          ],
+          [
+            "Life (%)",
+            "44"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "Heart Pool",
+        "readings": [
+          [
+            "Depth (cm)",
+            "56"
+          ],
+          [
+            "Salt (ppt)",
+            "30"
+          ],
+          [
+            "Oxygen (%)",
+            "55"
+          ],
+          [
+            "Life (%)",
+            "49"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      },
+      {
+        "name": "South Reach",
+        "readings": [
+          [
+            "Depth (cm)",
+            "67"
+          ],
+          [
+            "Salt (ppt)",
+            "40"
+          ],
+          [
+            "Oxygen (%)",
+            "43"
+          ],
+          [
+            "Life (%)",
+            "38"
+          ],
+          [
+            "Canopy (of 3)",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "notes": null
+  },
+  "activeWatchAfter": {
+    "summary": "Day 0 of 14. Water 5; seed packs 5.",
+    "readings": [
+      "Upper reed shelf; peat & cordgrass. Depth 34 centimetres. Salt 34 parts per thousand. Oxygen 64 percent. Life 44 percent. Canopy 0 of 3.",
+      "Inner tidal basin; mud & glasswort. Depth 56 centimetres. Salt 30 parts per thousand. Oxygen 55 percent. Life 49 percent. Canopy 0 of 3.",
+      "Outer brackish fringe; silt & saltgrass. Depth 67 centimetres. Salt 40 parts per thousand. Oxygen 43 percent. Life 38 percent. Canopy 0 of 3."
+    ],
+    "selected": [
+      "false",
+      "true",
+      "false"
+    ],
+    "journal": "Watch journalDownload watch reportKeep a readable, printable snapshot of this watch. This report cannot resume the game.Complete a tide to download a report.Review this watchNo tides yetRevisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.Saved tides return with your watch, including watches opened from a file. If saving is unavailable, download your watch before closing to keep the latest reports.Your first tide will appear here after you choose an action.Watch trendsNo completed tides yet. These are the opening readings from your watch.Compare a readingDepth (cm)Salt (ppt)Oxygen (%)Life (%)Canopy (/ 3)Review tideChoose a tide on the chart or use the slider. Arrow keys move one tide; Home returns to the opening and End to the latest completed tide.North BankHeart PoolSouth Reach0255075100Life (%)0Completed tide · 0 = openingOpening · Life (%)Before the first action and tide.North Bank44 %Heart Pool49 %South Reach38 %All readings for this metricLife (%) · Opening and every completed tideTideNorth BankHeart PoolSouth ReachOpening444938",
+    "notes": "Pick a cell, then choose Gate, Shade, or Seed.Your action is resolved against the live Rust simulation.",
+    "event": "The first tide is gathering. Choose a marsh cell, then take one action before the tide turns.",
+    "announcement": "Day 0 of 14. Water 5; seed packs 5. Cell 2: Heart Pool selected. Inner tidal basin; mud & glasswort. Depth 56 centimetres. Salt 30 parts per thousand. Oxygen 55 percent. Life 49 percent. Canopy 0 of 3. Pick a cell, then choose Gate, Shade, or Seed. Your action is resolved against the live Rust simulation.",
+    "saved": {}
+  },
+  "activeWatchUnchanged": true,
+  "practiceTidesAccepted": 1,
+  "reopenedAtTideZero": true,
+  "finishedAt": "2026-10-08T18:49:25.023Z"
+}

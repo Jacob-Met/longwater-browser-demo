@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "source": {
+    "merge": "9407f172518d0d6b19146e2431bcabbb2c307241",
+    "tree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+    "parents": [
+      "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+      "e4c8f9327349d2207def24903f40858329abac31"
+    ],
+    "pull_request": 30
+  },
+  "deployment": {
+    "run": 37826925668,
+    "event": "dynamic",
+    "path": "dynamic/pages/pages-build-deployment",
+    "build_job": 113482058997,
+    "deploy_job": 113482145572,
+    "report_job": 113482145672,
+    "artifact": 11572430702,
+    "conclusion": "success",
+    "actual_checkout": "9407f172518d0d6b19146e2431bcabbb2c307241",
+    "reported_success_at": "2026-10-08T18:47:23.5506071Z",
+    "reported_url": "http://jacobmetoyer.com/longwater-browser-demo/",
+    "mechanism": "Existing branch-based GitHub Pages deployment. No hosting, settings, DNS, credentials or service changes."
+  },
+  "postmerge_hosted": {
+    "run": 37826926958,
+    "event": "push",
+    "attempt": 1,
+    "browser_job": 113482055594,
+    "smoke_job": 113482055801,
+    "conclusion": "success",
+    "actual_checkout": "9407f172518d0d6b19146e2431bcabbb2c307241",
+    "project_passed": 119,
+    "project_failed": 0,
+    "witness_passed": 3,
+    "witness_failed": 0,
+    "original_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "adapted_harness_sha256": "97570a6cf376cebe368a2667b2254bddfcd32ce42e9a74127c20cb1e4397ea98",
+    "all_steps_success": true,
+    "dependency_boundary": "Successful npm ci uses the unchanged Playwright1.62.1 lock; separate native/public receiving uses existing1.64.0."
+  },
+  "public": {
+    "site": "https://jacobmetoyer.com/longwater-browser-demo/",
+    "receiver_git": "c08926c02e858b322473b924b960cd0083730891",
+    "receiver_sha256": "7ef1c0248e5d8979e7795ea56227dc446f8e7678ef3171b01376a43617ef7e68",
+    "command_invocations": 1,
+    "browser_profiles": 1,
+    "exit_code": 0,
+    "started_at": "2026-10-08T18:49:00.333Z",
+    "finished_at": "2026-10-08T18:49:25.023Z",
+    "preflight_assets": 21,
+    "loaded_runtime_assets": 20,
+    "assets_exact": true,
+    "all_status_200": true,
+    "mime_verified": true,
+    "practice_tides": 1,
+    "practice_action": "Gate at North Bank",
+    "fresh_reopen_tide": 0,
+    "active_watch_unchanged": true,
+    "saved_contents_unchanged": true,
+    "errors": [],
+    "input_files_unchanged": true,
+    "playwright": "1.64.0",
+    "node": "22.22.1",
+    "chromium": "153.0.8010.47",
+    "source_root": "/home/jacob/hamon-longwater-practice-2451-71826f7aa69e/source",
+    "fresh_profile": "/home/jacob/hamon-longwater-public-71826f7aa69e/public-9407f172/browser-profile",
+    "receipt": "public-9407f172/receiving.json",
+    "receipt_sha256": "1b34e4d6ea07f26dc842f9af86bad3dfb7d4ea470c4130ed81eca01ee5673f81"
+  },
+  "limits": [
+    "Storage assertions establish unchanged contents before/after the practice actions, not instrumentation proving no transient storage writes.",
+    "The active watch is a fresh Day0 watch in an exclusively owned profile. No existing visitor profile, watch-file adoption or active-watch action is exercised.",
+    "Public receiving is one North Bank Gate tide and fresh reopen; broader119project/3originalwitness behavior is separately qualified in hosted and native runs.",
+    "Screenshots show the captured viewport; all resources, cell readings and complete event/field-note comparisons are in the structured DOM/native oracle receipt.",
+    "Mac qualification launch was previously unknown and was not retried here.",
+    "No Commons process probe/reload or new native coordination continuation was performed."
+  ]
+}

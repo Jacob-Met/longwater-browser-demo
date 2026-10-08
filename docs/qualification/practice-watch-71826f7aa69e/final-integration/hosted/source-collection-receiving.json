@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "engine": {
+    "repository": "Jacob-Met/hamon-engine",
+    "pr": 236,
+    "source": "ea4b7cb48d862ec9334b75567a05b3dcdeaa0be6",
+    "source_tree": "61512e3e97f2c47049545d5b022b8bfd69336911",
+    "tested_merge": "186ebf7a272d49b5274e8dd5c93f5ca3bef2c1ff",
+    "tested_merge_tree": "4764775872ce4d400825a637d23cf62057684893",
+    "tested_merge_parents": [
+      "3323ae0cf8e23f59bdfbfafa609304b691bf0029",
+      "ea4b7cb48d862ec9334b75567a05b3dcdeaa0be6"
+    ],
+    "actual_merge_reported_by_root": "e9a6d80abdf5bfb55d4ff9449d930afbe563b887",
+    "actual_merge_tree_reported_by_root": "4764775872ce4d400825a637d23cf62057684893",
+    "conclusion": "All four automatic PR236 runs succeeded on attempt1; no manual rerun.",
+    "checkout_boundary": "Focused and push use ea4; ordinary PR and bench use 186eb. The tested merge tree equals the actual merge tree reported by root.",
+    "bench_limit": "Expected PNG gate explicitly skipped because no expected PNGs existed; no golden screenshot comparison is claimed.",
+    "prior_merged_main": {
+      "source": "a2d77378f9074f19470177f0ec4b5171199edd8d",
+      "material_run": 37814420669,
+      "audio_run": 37814420854,
+      "ordinary_run": 37814420668,
+      "ordinary_conclusion": "cancelled",
+      "ordinary_jobs": [],
+      "ordinary_updated_at": "2026-10-08T17:16:26Z",
+      "boundary": "Focused and hosted private ALSA output receiving pass. Ordinary run had no job or executed checkout. No physical speaker listening claim."
+    }
+  },
+  "longwater": {
+    "repository": "Jacob-Met/longwater-browser-demo",
+    "pr": 30,
+    "source": "e4c8f9327349d2207def24903f40858329abac31",
+    "source_tree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+    "actual_checkout": "bbeb29f37bd2609fa987175cbc34292ce9f32ccb",
+    "checkout_tree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+    "checkout_parents": [
+      "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+      "e4c8f9327349d2207def24903f40858329abac31"
+    ],
+    "run": 37820101652,
+    "attempt": 1,
+    "browser_job": 113458617616,
+    "smoke_job": 113458618204,
+    "conclusion": "success",
+    "node": "22.23.3",
+    "playwright": "1.62.1",
+    "dependency_receiving": "npm ci succeeded against pinned package-lock.json. Version is bound by lockfile and successful frozen install, not an explicit npm ls line.",
+    "chromium": "151.0.7922.34",
+    "project": {
+      "passed": 119,
+      "failed": 0,
+      "maintained_case": "practice preserves a populated historical comparison and later choices still match the native replay",
+      "case_number": 26
+    },
+    "witness": {
+      "passed": 3,
+      "failed": 0,
+      "inputs_unchanged": true,
+      "original_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+      "adapted_harness_sha256": "af731046f48ff737c5f41633cd29d2799e4338e69ad1c6a7f3efc5c63131ebe5"
+    },
+    "artifact": {
+      "id": 11569485478,
+      "bytes": 1246523
+    },
+    "public_browser_executed": false,
+    "distinct_native_environment": "ThinkPad Node22.22.1 / installed Playwright1.64.0 / Chromium153 receiving is independent and was performed by production."
+  },
+  "operational_limits": [
+    "No source change, manual workflow rerun, native renderer rerun, inspector comment retry, or repeated native continuation.",
+    "Native continuation4626 already completed once; this receipt makes no fresh Commons backend receiving claim.",
+    "Public deployment and public practice receiving remain separate from hosted source qualification."
+  ],
+  "expected_log_integrity": [
+    {
+      "path": "longwater-browser.log",
+      "code_units": 2856705,
+      "fnv1a_code_units": "fd66ee27",
+      "bom": true
+    },
+    {
+      "path": "longwater-smoke.log",
+      "code_units": 12578,
+      "fnv1a_code_units": "6e8f41f2",
+      "bom": true
+    },
+    {
+      "path": "engine-ci-push.log",
+      "run_id": 37815800670,
+      "job_id": 113443987123,
+      "checkout": "ea4b7cb48d862ec9334b75567a05b3dcdeaa0be6",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 760407,
+      "fnv1a_code_units": "9a7b3772",
+      "bom": true
+    },
+    {
+      "path": "engine-material-editor.log",
+      "run_id": 37817312422,
+      "job_id": 113449121813,
+      "checkout": "ea4b7cb48d862ec9334b75567a05b3dcdeaa0be6",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 52483,
+      "fnv1a_code_units": "d71c6e9",
+      "bom": true
+    },
+    {
+      "path": "engine-test-bench.log",
+      "run_id": 37817312322,
+      "job_id": 113449121879,
+      "checkout": "186ebf7a272d49b5274e8dd5c93f5ca3bef2c1ff",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 63172,
+      "fnv1a_code_units": "87ced0c4",
+      "bom": true
+    },
+    {
+      "path": "engine-ci-pr.log",
+      "run_id": 37817312250,
+      "job_id": 113449124935,
+      "checkout": "186ebf7a272d49b5274e8dd5c93f5ca3bef2c1ff",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 764307,
+      "fnv1a_code_units": "9ad36572",
+      "bom": true
+    },
+    {
+      "path": "engine-main-material-editor.log",
+      "run_id": 37814420669,
+      "job_id": 113439258748,
+      "checkout": "a2d77378f9074f19470177f0ec4b5171199edd8d",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 52452,
+      "fnv1a_code_units": "f7b5d295",
+      "bom": true
+    },
+    {
+      "path": "engine-main-audio.log",
+      "run_id": 37814420854,
+      "job_id": 113439255918,
+      "checkout": "a2d77378f9074f19470177f0ec4b5171199edd8d",
+      "run_attempt": 1,
+      "conclusion": "success",
+      "code_units": 32120,
+      "fnv1a_code_units": "23669a61",
+      "bom": true
+    }
+  ]
+}
