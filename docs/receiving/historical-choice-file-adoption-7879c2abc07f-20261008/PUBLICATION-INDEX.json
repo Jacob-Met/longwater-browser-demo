@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "sourceHead": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+  "sourceTree": "434d35225b12e44ff93af208f96b38126282f476",
+  "sourceLeaves": 256,
+  "packetRoot": "docs/receiving/historical-choice-file-adoption-7879c2abc07f-20261008",
+  "payloadFiles": [
+    {
+      "path": "README.md",
+      "bytes": 4157,
+      "gitBlob": "3864733965c4484df17491589b9e5a0ae172f692",
+      "sha256": "7f94524edbf3ae630cf02da66853ec36f15643cea797806a4f8eb5de41417658"
+    },
+    {
+      "path": "QUALIFICATION.json",
+      "bytes": 15531,
+      "gitBlob": "760ec68c9e2d7d72b3434d5f3c47efb24f5789fe",
+      "sha256": "5f6d75d00900027ff1116070a8ad3aad633e1d9c3bec997e88c30c817babc6e3"
+    },
+    {
+      "path": "parent-source-review.json",
+      "bytes": 4454,
+      "gitBlob": "6307868baaa959462ef47139030193f31f538c76",
+      "sha256": "d2b92c93ac26f9c51de40677b8a68cc47b56fc2ac15e07472b0560e67b478877"
+    },
+    {
+      "path": "parent-joint-review.json",
+      "bytes": 12890,
+      "gitBlob": "2f025c43b1c96cfbbf80808cd14fb1a78bcb0ef1",
+      "sha256": "f6f23cdd71e8cc04f7d99b287f9bddaf7c0a048061341dee49b19629bd4b04f1"
+    },
+    {
+      "path": "source-composition-proof.json",
+      "bytes": 20230,
+      "gitBlob": "1ec2c179e402529f38343081a283793381d04873",
+      "sha256": "7ed77e96c847adbc1d987c629dbf7042d34bf1a9ed56416bceedba5cc28bed06"
+    },
+    {
+      "path": "raw/browser.log",
+      "bytes": 2709552,
+      "gitBlob": "09d9cd71ad51493dfa0b6247c9430da855eb1537",
+      "sha256": "3ad6a602edb0ee63ec278095ab03ff709094e23dcc7ee5d0fa5fa7e1c58ef515"
+    },
+    {
+      "path": "raw/smoke.log",
+      "bytes": 12572,
+      "gitBlob": "9fe24dfb925636e71b4be9ed0b10a09d55a76fd2",
+      "sha256": "7570386b8fac3ed9f1152a81ac97196676750094f14795f00cebc7910d47b490"
+    },
+    {
+      "path": "adoption/source-custody.json",
+      "bytes": 8454,
+      "gitBlob": "ec0a98205d1dde395788ffdd91af61887e704484",
+      "sha256": "74199b23beb64926270df61f141733327baa73983383eac940c6761ce424175a"
+    },
+    {
+      "path": "adoption/run.json",
+      "bytes": 31179,
+      "gitBlob": "43cb1628791a88b00dadd5166edccd4403e6525a",
+      "sha256": "cb7d2ae6886c7b4b65a28a0a029e7060d54e1e9d418b0d468e5221978346d2e8"
+    },
+    {
+      "path": "adoption/run.log",
+      "bytes": 270,
+      "gitBlob": "53606140926f5558e3d53be1d73b22d28d0ca920",
+      "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34"
+    },
+    {
+      "path": "adoption/failed-display-actual-download.json",
+      "bytes": 1618,
+      "gitBlob": "a5f138cb22bf3e48195591f27392fe6c87cdb49b",
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+    },
+    {
+      "path": "artifacts/desktop-comparison.png",
+      "bytes": 363707,
+      "gitBlob": "bf87866d593d400b7e0d36c633ec6b8f9b425e8b",
+      "sha256": "ad524cb76e33069a8f0a505a105c4225156905fec74aa3e9089384e6317c68a4"
+    },
+    {
+      "path": "artifacts/phone-comparison.png",
+      "bytes": 385049,
+      "gitBlob": "8a19d3b15fa50471601a63ddd900e71d11e2679c",
+      "sha256": "315c4b8ddd83695ae8eff43d7005aa3a59f73e2065e46a0c46e172b314947828"
+    },
+    {
+      "path": "artifacts/offline-comparison.png",
+      "bytes": 361608,
+      "gitBlob": "7d927fbc279e2916505c1f1163fd377dd2942b60",
+      "sha256": "b4532547feadce1c5fe73de8de1da9cb016638eb0e94618db2bee4f02288dad1"
+    },
+    {
+      "path": "artifacts/Longwater-choice.html",
+      "bytes": 316729,
+      "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+      "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+    }
+  ],
+  "payloadCount": 15,
+  "payloadBytes": 4248000,
+  "status": "Functional112/112 and original witness3/3 received; actual captures preserve the scoped table-layout visual defect. Successor not yet executed.",
+  "readbackPolicy": "Text artifacts are directly byte/hash checked. Binary PNG identities bind the independently decoded actual native bytes through their Git blob and SHA256; the UTF-8-only Git blob reader is not misrepresented as binary decoding."
+}

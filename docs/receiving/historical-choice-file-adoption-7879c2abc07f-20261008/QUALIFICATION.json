@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "status": "Functional and exact-package receiving passed; actual screenshots require the recorded one-declaration table-layout refinement.",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "source": {
+    "head": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+    "tree": "434d35225b12e44ff93af208f96b38126282f476",
+    "parents": [
+      "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+      "43038d28b08562a5f1c143b2773d925b4d28ca7d"
+    ],
+    "leaves": 256
+  },
+  "actualCheckout": {
+    "sha": "b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "node_id": "C_kwDOU-wpSNoAKGI5ODU0YjhkNGM0MzJjZGE5YTNkNTFjOTE1N2VjNWY5YmM1ZmQzYmU",
+    "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-08T16:02:38Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-08T16:02:38Z"
+    },
+    "tree": {
+      "sha": "434d35225b12e44ff93af208f96b38126282f476",
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/trees/434d35225b12e44ff93af208f96b38126282f476"
+    },
+    "message": "Merge 0ad3a1b2d851627dacf255a0991b63010cc897b8 into 43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "parents": [
+      {
+        "sha": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+        "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/43038d28b08562a5f1c143b2773d925b4d28ca7d",
+        "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/43038d28b08562a5f1c143b2773d925b4d28ca7d"
+      },
+      {
+        "sha": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+        "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/commits/0ad3a1b2d851627dacf255a0991b63010cc897b8",
+        "html_url": "https://github.com/Jacob-Met/longwater-browser-demo/commit/0ad3a1b2d851627dacf255a0991b63010cc897b8"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqx76eCRC1aQ7uu5UhlAAAH3sQAA3cIH0NZM3DU7y1ST9e+JNc\n+lxLQYISb/xwBJelfk4uaGf0SxNhsjHIpGwlPlOzNevjQNPMAhL5/OPb3doV6k23\nVG5Sz9bDyV4bgx8KgHM/tC3grULuUbXONWFNBxDaD+P6yK6Gh66RbM65qndqmlNq\n9HitjEWE4hzi7Wi9jdN91UGz6loVIPhwA5h6Qx7twF8VoC80ajbqrZcNVUCKXQ6T\nK0z18g8NjISSEGfhvtiTmjFa+vPSarjQutHQlyc09fKYV0dfglqAOyEyLXpMQRbP\nscck0J7JUFKO9rijTVjGglGtbVMhzCv+BG5K0tItCzuriLHzj4LezEUmUfxHRKmP\nt7n31uSq888WsK5wrkwjttMFH0z/TJ9BmJ58gMvVC0l1DqACcQdUJ2PzYS/V7x3e\naSg4oL93AjYy3EZImxPINK/TtNKsURr4Cd16bt4dpqHJtfY9FKipMpgFtBizRN6c\nLFJCTKbDF2vpFrY5k+wnCZ9dBzoHQKZR/Opz6LX2E/9Hg3mnI0eTOYWs/RWQ3Pzt\nW8yRSngBNY2RKKoqKhnyOQT9Zcz5vx/UVBZkPmxHYcdzS31QdVnMxJWOZXZOpDUj\n3LUAUgRKV3ftqCXemtsLDKOmUD2sj6F9TFClcHjqw4uIUBLUYDY0KkjoWhc/piyn\nxp6tZvDTtEWg5rFXUPNT\n=aGRL\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 434d35225b12e44ff93af208f96b38126282f476\nparent 43038d28b08562a5f1c143b2773d925b4d28ca7d\nparent 0ad3a1b2d851627dacf255a0991b63010cc897b8\nauthor Jacob Metoyer <150724801+Jacob-Met@users.noreply.github.com> 1791475358 +0000\ncommitter GitHub <noreply@github.com> 1791475358 +0000\n\nMerge 0ad3a1b2d851627dacf255a0991b63010cc897b8 into 43038d28b08562a5f1c143b2773d925b4d28ca7d\n",
+      "verified_at": "2026-10-08T16:02:38Z"
+    }
+  },
+  "native": {
+    "run": 37805671289,
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "tests": 112,
+    "passed": 112,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "durationMs": 40099.959096,
+    "logs": {
+      "browser": {
+        "job": 113409166241,
+        "bytes": 2709552,
+        "sha256": "3ad6a602edb0ee63ec278095ab03ff709094e23dcc7ee5d0fa5fa7e1c58ef515",
+        "gitBlob": "09d9cd71ad51493dfa0b6247c9430da855eb1537"
+      },
+      "smoke": {
+        "job": 113409166497,
+        "bytes": 12572,
+        "sha256": "7570386b8fac3ed9f1152a81ac97196676750094f14795f00cebc7910d47b490"
+      }
+    }
+  },
+  "coupledWitness": {
+    "original": {
+      "passed": 2,
+      "failed": 1,
+      "packet": "https://github.com/Jacob-Met/longwater-browser-demo/blob/1172710ee28411369fe40df99cc340b66da7566c/docs/receiving/historical-choice-invalidation-7879c2abc07f-20261008/README.md"
+    },
+    "current": {
+      "commit": "b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+      "tree": "434d35225b12e44ff93af208f96b38126282f476",
+      "passed": 3,
+      "failed": 0,
+      "original_runtime_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+      "actual_adapted_harness_sha256": "ebddbf23dcad8bc9f64fe263a1d38b3094f028fd52d55232a1e54f486c767cee",
+      "unchanged_inputs": true,
+      "exit_status": 0
+    },
+    "node": "v22.23.3",
+    "browser": "151.0.7922.34",
+    "startedAt": "2026-10-08T16:03:51.023Z",
+    "finishedAt": "2026-10-08T16:03:54.039Z",
+    "cases": [
+      {
+        "name": "preview_cancel_keeps_comparison",
+        "outcome": "pass",
+        "errors": []
+      },
+      {
+        "name": "successful_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      {
+        "name": "failed_display_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "adoptedExportSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "unchangedOldComparison": false
+      }
+    ],
+    "files": [
+      {
+        "path": "source-custody.json",
+        "bytes": 8454,
+        "sha256": "74199b23beb64926270df61f141733327baa73983383eac940c6761ce424175a"
+      },
+      {
+        "path": "run.json",
+        "bytes": 31179,
+        "sha256": "cb7d2ae6886c7b4b65a28a0a029e7060d54e1e9d418b0d468e5221978346d2e8"
+      },
+      {
+        "path": "run.log",
+        "bytes": 270,
+        "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34"
+      },
+      {
+        "path": "failed-display-actual-download.json",
+        "bytes": 1618,
+        "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      }
+    ],
+    "frozenSource": {
+      "files": [
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/README.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0ceca3ed9e5ee39554c343a0dc59668cc738ca99",
+          "bytes": 1942
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/current-head-addendum.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bacf29358ba00ad7589b7419413588021dddb042",
+          "bytes": 4426
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/driver-result.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e76afd9c8fa2e71f93bfb2ff7fdd83a8fd6d0d30",
+          "bytes": 750
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/failed-display-actual-download.json.source",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a5f138cb22bf3e48195591f27392fe6c87cdb49b",
+          "bytes": 1618
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/files.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "338e0ec7e0748c4f05ce0129050f5081fa48f178",
+          "bytes": 2103
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/github-source-summary.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3cf65a431e812dd613889a791e1f53a2043a873f",
+          "bytes": 16139
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "760cea9c6a571311d35b925f1fc7e71c1dd60553",
+          "bytes": 21046
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr20.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4b2ae5a2c074c25acc278856742eaa11078efdb0",
+          "bytes": 31664
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/integration-seams-review.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "75e5e47aa80715c18bdd1ccdad7c3c67cacedd80",
+          "bytes": 6464
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/native-dependency.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7da3226bb1058a270e061cd03bfb1231df23f116",
+          "bytes": 300
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "07030061d214cfeb6875f13a4f4fca751c25428d",
+          "bytes": 12724
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "82d7bb06ba5214679f1222ae136b1bc868d9ce3b",
+          "bytes": 34601
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.log",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "83dfe53fe1a59b89da2ee8c4c478e54b8774d62b",
+          "bytes": 402
+        },
+        {
+          "path": "docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/source-custody.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cf13d48115d232522956e2c5716cf3877bcfa9d0",
+          "bytes": 6686
+        }
+      ],
+      "totalBytes": 140865,
+      "caseBlockBytes": 7263,
+      "caseBlockSha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+      "incomingBytes": 21046,
+      "incomingSha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451",
+      "adapterGitBlob": "74ad35fa8dac6fb7343d5bb4bbd4afa533297338"
+    }
+  },
+  "artifacts": {
+    "bundle": {
+      "bytes": 1903364,
+      "sha256": "eb1ff1421e6d7fe7623a5f60ec50e8c7f00f6a74120bc5eccbf1e252a1e72277",
+      "chunks": 620
+    },
+    "files": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363707,
+        "gitBlob": "bf87866d593d400b7e0d36c633ec6b8f9b425e8b",
+        "sha256": "ad524cb76e33069a8f0a505a105c4225156905fec74aa3e9089384e6317c68a4",
+        "width": 1280,
+        "height": 2926
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 385049,
+        "gitBlob": "8a19d3b15fa50471601a63ddd900e71d11e2679c",
+        "sha256": "315c4b8ddd83695ae8eff43d7005aa3a59f73e2065e46a0c46e172b314947828",
+        "width": 390,
+        "height": 4708
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361608,
+        "gitBlob": "7d927fbc279e2916505c1f1163fd377dd2942b60",
+        "sha256": "b4532547feadce1c5fe73de8de1da9cb016638eb0e94618db2bee4f02288dad1",
+        "width": 1280,
+        "height": 2882
+      },
+      {
+        "path": "Longwater-choice.html",
+        "bytes": 316729,
+        "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+        "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+      }
+    ],
+    "completeNumberedChunksReceived": true,
+    "actualHtmlByteExactWithTrackedDownload": true
+  },
+  "presentation": {
+    "directlyInspected": [
+      "desktop-comparison.png",
+      "phone-comparison.png",
+      "offline-comparison.png"
+    ],
+    "receiver": "github_execution",
+    "findings": [
+      "At 1280 desktop/offline width, each cell-table Alternative heading wraps its final e onto a new line.",
+      "At 390 phone width, the resources-table Freshwater label wraps its final r onto a new line."
+    ],
+    "allContentVisible": true,
+    "disposition": "Hold integration for only table-layout: fixed → auto in watch-choice.css and its two derived files; no test/assertion/adapter changes.",
+    "authorAlsoInspected": [
+      "desktop-comparison.png",
+      "phone-comparison.png"
+    ],
+    "successorSourceTree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+    "successorRuntime": "not yet executed"
+  },
+  "sourceReview": {
+    "gitBlob": "6307868baaa959462ef47139030193f31f538c76",
+    "bytes": 4454,
+    "sha256": "d2b92c93ac26f9c51de40677b8a68cc47b56fc2ac15e07472b0560e67b478877"
+  },
+  "independentRuntimeReview": {
+    "gitBlob": "2f025c43b1c96cfbbf80808cd14fb1a78bcb0ef1",
+    "bytes": 12890,
+    "sha256": "f6f23cdd71e8cc04f7d99b287f9bddaf7c0a048061341dee49b19629bd4b04f1"
+  },
+  "packageProof": {
+    "original": {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 280929,
+      "gitBlob": "f58260eeae1aad8681a05cc68ef13aa3199ff60f",
+      "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef"
+    },
+    "originalInputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "pkg/longwater_web_bg.wasm"
+    ],
+    "originalSourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a",
+    "originalByteExact": true,
+    "candidate": {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 316729,
+      "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+      "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+    },
+    "candidateInputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "watch-choice.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-choice.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "watch-choice-model.js",
+      "pkg/longwater_web_bg.wasm"
+    ],
+    "candidateSourceSha256": "09cc5897a88a7274bf7dffac251826fd5cf15b106e0133697e2e5736b9b57ded",
+    "nativeBuildPending": true
+  },
+  "limits": [
+    "The injected one-shot replayHistory refusal is authored; no spontaneous native allocation failure is claimed.",
+    "The received positive coupled source does not erase the preserved original 2-pass/1-fail source and witness.",
+    "One historical tide is compared; no later alternate watch or strategy recommendation.",
+    "No physical device or screen reader qualification. Optional sound remains outside this source.",
+    "All artifacts are exact authored native outputs. No local/Mac copy, new build, provider retry, or image recreation is used."
+  ]
+}

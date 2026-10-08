@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "status": "Frozen candidate source objects; ref and native execution pending independent source review.",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "base": {
+    "commit": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "parents": [
+      "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+      "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c"
+    ],
+    "leaves": 247
+  },
+  "qualifiedOwnedHead": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+  "candidateTree": "434d35225b12e44ff93af208f96b38126282f476",
+  "leaves": 256,
+  "currentInheritedExact": 240,
+  "changed": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "from": "5e591a2c783d26cae9c4e2b1986bbe4931257380",
+      "to": "a30df84dc29eb06f27e2848e979ecf2396a70a61",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "README.md",
+      "from": "e2b27ec6f5a87e5e54f6e633c8952faf135650b8",
+      "to": "642dc1fa3405bee45371094c560c26f2c986bd6d",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "from": "f58260eeae1aad8681a05cc68ef13aa3199ff60f",
+      "to": "636c142c7d640d275a60052954222383e5698e4e",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "game.js",
+      "from": "763e8495650c27f5cae785d952341b5cfb721f7e",
+      "to": "af0ae1eed760355f38ed6b22ae774f5fb53134cf",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "index.html",
+      "from": "03106e4e214605d1358f1475482da07851838daa",
+      "to": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "from": "7fa202fd7cdfaa269725cd8f299d1bb288029b1c",
+      "to": "bb2a137fb0630f40d3d88b91983536c89cae52a5",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "from": "2ac1263a95c72bf68607e4acf001b8e4437bdc20",
+      "to": "e25727035334c7662402fe81d787733dae2cf0f9",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "added": [
+    {
+      "path": "scripts/emit-watch-choice-artifacts.mjs",
+      "sha": "75e7be22a567196845e22edd74ff6bdac3163a71",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "scripts/receive-watch-choice-adoption.mjs",
+      "sha": "74ad35fa8dac6fb7343d5bb4bbd4afa533297338",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "sha": "bb7b62abef1c971d0517d3d4c35d993327769ed1",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-choice-invalidation.browser.test.mjs",
+      "sha": "500b9bf28087c71861743bf4d15993b4804fea93",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-choice-model.test.mjs",
+      "sha": "4eef83341f2b1b42c95b50d8d08b4447a9ae11d2",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-choice.browser.test.mjs",
+      "sha": "b2f246f78bf29cc7aaea5a7ccdb23615621d1731",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "sha": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice.css",
+      "sha": "6e569c23111531649147d47635b124ea604ea59b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice.js",
+      "sha": "c06835946ec99c7edd8eb16334d597356aada060",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "removed": [],
+  "allPreservedOwnAdditions": [
+    {
+      "path": "tests/watch-choice-invalidation.browser.test.mjs",
+      "sha": "500b9bf28087c71861743bf4d15993b4804fea93",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-choice-model.test.mjs",
+      "sha": "4eef83341f2b1b42c95b50d8d08b4447a9ae11d2",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "tests/watch-choice.browser.test.mjs",
+      "sha": "b2f246f78bf29cc7aaea5a7ccdb23615621d1731",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "sha": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice.css",
+      "sha": "6e569c23111531649147d47635b124ea604ea59b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "watch-choice.js",
+      "sha": "c06835946ec99c7edd8eb16334d597356aada060",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "edits": {
+    "game.js": [
+      {
+        "before": "import { SavedWatch, WATCH_SAVE_KEY, MAX_SAVE_LENGTH } from \"./watch-save.js\";\n",
+        "after": "import { SavedWatch, WATCH_SAVE_KEY, MAX_SAVE_LENGTH } from \"./watch-save.js\";\nimport { WatchChoice } from \"./watch-choice.js\";\n"
+      },
+      {
+        "before": "let pixelRatio = 1;\n",
+        "after": "let pixelRatio = 1;\nconst historicalChoice = new WatchChoice(document.querySelector(\"#watch-choice\"), {\n  readHistory: () => watch.replayHistory(),\n  createSession: () => new BrowserSession(),\n});\n"
+      },
+      {
+        "before": "function render() {\n",
+        "after": "function render() {\n  historicalChoice.synchronize(state);\n"
+      },
+      {
+        "before": "        state = null;\n",
+        "after": "        state = null;\n        historicalChoice.synchronize(null);\n"
+      }
+    ],
+    "index.html": [
+      {
+        "before": "  <link rel=\"stylesheet\" href=\"./watch-save.css\">\n",
+        "after": "  <link rel=\"stylesheet\" href=\"./watch-save.css\">\n  <link rel=\"stylesheet\" href=\"./watch-choice.css\">\n"
+      },
+      {
+        "before": "    <section id=\"watch-journal\" class=\"watch-journal\" aria-labelledby=\"journal-title\" hidden></section>\n",
+        "after": "    <section id=\"watch-journal\" class=\"watch-journal\" aria-labelledby=\"journal-title\" hidden></section>\n    <section id=\"watch-choice\" class=\"watch-choice\" aria-labelledby=\"choice-title\" hidden></section>\n"
+      }
+    ],
+    "README.md": [
+      {
+        "before": "## Resume your watch\n",
+        "after": "## Try a different historical choice\n\nAfter completing a tide, open **Explore one completed tide** below the journal.\nChoose a **Completed tide**, an action and a cell, then **Compare this choice**.\nThe recorded action starts selected, so you can first reproduce what happened\nand then try another choice.\n\nThe comparison shows the exact resources and all three cells' readings before\nthat tide, after the played choice and after the alternative. Both complete\nnative field reports remain visible. These are the consequences of one full\ntide, including its event and dawn drift; later tides are not replayed and the\npanel does not recommend a strategy.\n\nOnly completed tides from this watch are available. The game verifies their\nentire native history and runs the comparison in fresh, separate simulations.\nAn unavailable action reports its native refusal without spending a live tide.\nYour current watch, selected game cell, journal and saved progress stay\nunchanged. A new live tide or a replaced watch clears the older comparison;\nreloading rebuilds the available history from the admitted save. The panel\nworks when saving is unavailable and is included in the offline game.\n\n## Resume your watch\n"
+      }
+    ],
+    "tests/watch-save.browser.test.mjs": [
+      {
+        "before": "  [\"/watch-save.css\", [\"watch-save.css\", \"text/css\"]],\n",
+        "after": "  [\"/watch-save.css\", [\"watch-save.css\", \"text/css\"]],\n  [\"/watch-choice.js\", [\"watch-choice.js\", \"text/javascript\"]],\n  [\"/watch-choice-model.js\", [\"watch-choice-model.js\", \"text/javascript\"]],\n  [\"/watch-choice.css\", [\"watch-choice.css\", \"text/css\"]],\n"
+      }
+    ],
+    "scripts/package.mjs": [
+      {
+        "before": "\"watch-report.css\", \"watch-file.css\"];",
+        "after": "\"watch-report.css\", \"watch-file.css\", \"watch-choice.css\"];"
+      },
+      {
+        "before": "\"watch-save.js\", \"watch-file.js\"];",
+        "after": "\"watch-save.js\", \"watch-file.js\", \"watch-choice.js\"];"
+      },
+      {
+        "before": "...modules, \"watch-trends.js\", \"watch-report.js\", \"pkg/longwater_web_bg.wasm\"]",
+        "after": "...modules, \"watch-trends.js\", \"watch-report.js\", \"watch-choice-model.js\", \"pkg/longwater_web_bg.wasm\"]"
+      },
+      {
+        "before": "for (const name of modules) {\n",
+        "after": "const choice = replaceOnce(text(\"watch-choice.js\"), JSON.stringify(\"./watch-choice-model.js\"), JSON.stringify(dataUrl(\"text/javascript\", files.get(\"watch-choice-model.js\"))));\nfor (const name of modules) {\n"
+      },
+      {
+        "before": "name === \"journal.js\" ? journal : files.get(name)",
+        "after": "name === \"journal.js\" ? journal : name === \"watch-choice.js\" ? choice : files.get(name)"
+      }
+    ],
+    ".github/workflows/smoke.yml": [
+      {
+        "before": "        run: npm test\n",
+        "after": "        run: npm test\n      - name: Receive the original historical-choice file-adoption witness\n        run: node scripts/receive-watch-choice-adoption.mjs\n      - name: Emit the bounded authored historical-choice captures\n        if: always()\n        run: node scripts/emit-watch-choice-artifacts.mjs\n      - name: Preserve historical-choice receiving artifacts\n        if: always()\n        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4\n        with:\n          name: historical-choice-${{ github.sha }}\n          path: test-results/watch-choice\n          if-no-files-found: warn\n          retention-days: 14\n"
+      }
+    ]
+  },
+  "inverseProof": "For every edited text file except the generated download, applying each exact after→before substitution in reverse order reconstructs the complete current base file. All replacements have exactly one occurrence. The workflow retains the entire current gate and adds only the original artifact step plus the frozen witness invocation. The final preview corrects only the new null-call indentation and adds a separate fixed-output artifact emitter; no test or adapter body changes.",
+  "packageProof": {
+    "original": {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 280929,
+      "gitBlob": "f58260eeae1aad8681a05cc68ef13aa3199ff60f",
+      "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef"
+    },
+    "originalInputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "pkg/longwater_web_bg.wasm"
+    ],
+    "originalSourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a",
+    "originalByteExact": true,
+    "candidate": {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 316729,
+      "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+      "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+    },
+    "candidateInputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "watch-file.css",
+      "watch-choice.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-choice.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "watch-choice-model.js",
+      "pkg/longwater_web_bg.wasm"
+    ],
+    "candidateSourceSha256": "09cc5897a88a7274bf7dffac251826fd5cf15b106e0133697e2e5736b9b57ded",
+    "nativeBuildPending": true
+  },
+  "sourcePins": [
+    {
+      "path": "game.js",
+      "bytes": 21844,
+      "gitBlob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf",
+      "sha256": "b25c21a485aebbe5673abbe4b1d01b5a7209706726bd30cf9a5b54760ed155b4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7223,
+      "gitBlob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8",
+      "sha256": "207c415641f27d8adc478a41b859b27d9120d0d7b676c1a4febb657ee60d06d6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14649,
+      "gitBlob": "642dc1fa3405bee45371094c560c26f2c986bd6d",
+      "sha256": "8e102edbc7646e3bac8ff98bada76d42e11e5bf720623a2dc2e3e53a8ae2cb24"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "bytes": 12151,
+      "gitBlob": "e25727035334c7662402fe81d787733dae2cf0f9",
+      "sha256": "7fc7b541e98bf556340e85740722a3e4059fc08156c9915c5db78e026cf4caf8"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3576,
+      "gitBlob": "bb2a137fb0630f40d3d88b91983536c89cae52a5",
+      "sha256": "e139a037c6179404ef7b316755d829372a1c3cf77a9c00c563bae8447450b711"
+    },
+    {
+      "path": ".github/workflows/smoke.yml",
+      "bytes": 2242,
+      "gitBlob": "a30df84dc29eb06f27e2848e979ecf2396a70a61",
+      "sha256": "001e374e462e38abeaf4d192af26e8bc0e10becd63508bfb2bf1fe1b576a933a"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 316729,
+      "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+      "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+    },
+    {
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "bytes": 3828,
+      "gitBlob": "bb7b62abef1c971d0517d3d4c35d993327769ed1",
+      "sha256": "1d1328370625d939364d6fe5abfd808cc01c6dcb182f9e92403c2fdb78eca3a5"
+    },
+    {
+      "path": "scripts/emit-watch-choice-artifacts.mjs",
+      "bytes": 2310,
+      "gitBlob": "75e7be22a567196845e22edd74ff6bdac3163a71",
+      "sha256": "5d6a55ec86b5eb0afec33a6047dc1b7d81ecddf0dc93085c89ef8c405797d972"
+    }
+  ],
+  "runtimeManifest": {
+    "version": 1,
+    "runtime": [
+      {
+        "path": "index.html",
+        "bytes": 7223,
+        "gitBlob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8",
+        "sha256": "207c415641f27d8adc478a41b859b27d9120d0d7b676c1a4febb657ee60d06d6"
+      },
+      {
+        "path": "style.css",
+        "bytes": 3342,
+        "gitBlob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1"
+      },
+      {
+        "path": "journal.css",
+        "bytes": 2465,
+        "gitBlob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+      },
+      {
+        "path": "watch-trends.css",
+        "bytes": 2791,
+        "gitBlob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786"
+      },
+      {
+        "path": "watch-save.css",
+        "bytes": 473,
+        "gitBlob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f"
+      },
+      {
+        "path": "watch-file.css",
+        "bytes": 1196,
+        "gitBlob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb"
+      },
+      {
+        "path": "watch-report.css",
+        "bytes": 571,
+        "gitBlob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5"
+      },
+      {
+        "path": "watch-choice.css",
+        "bytes": 3742,
+        "gitBlob": "6e569c23111531649147d47635b124ea604ea59b",
+        "sha256": "384d24905d8e9fe0beb45c0ec9c700274cd041c54916228612281d865d70ad7e"
+      },
+      {
+        "path": "game.js",
+        "bytes": 21844,
+        "gitBlob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf",
+        "sha256": "b25c21a485aebbe5673abbe4b1d01b5a7209706726bd30cf9a5b54760ed155b4"
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "bytes": 8716,
+        "gitBlob": "50cef9486d91829183315c1a1fb31df1914d6316",
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+      },
+      {
+        "path": "journal.js",
+        "bytes": 6603,
+        "gitBlob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+        "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30"
+      },
+      {
+        "path": "watch-save.js",
+        "bytes": 9891,
+        "gitBlob": "b350738efe99cb89622105a8431483dc06ab6e41",
+        "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c"
+      },
+      {
+        "path": "watch-file.js",
+        "bytes": 5475,
+        "gitBlob": "34c8490804e696e500e1362c629bb05a51ab3040",
+        "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6"
+      },
+      {
+        "path": "watch-trends.js",
+        "bytes": 11372,
+        "gitBlob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a"
+      },
+      {
+        "path": "watch-report.js",
+        "bytes": 9346,
+        "gitBlob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+        "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25"
+      },
+      {
+        "path": "watch-choice.js",
+        "bytes": 12066,
+        "gitBlob": "c06835946ec99c7edd8eb16334d597356aada060",
+        "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d"
+      },
+      {
+        "path": "watch-choice-model.js",
+        "bytes": 3694,
+        "gitBlob": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+        "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747"
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "bytes": 71368,
+        "gitBlob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+      }
+    ]
+  },
+  "witness": {
+    "adapterGitBlob": "74ad35fa8dac6fb7343d5bb4bbd4afa533297338",
+    "adapterSha256": "b0cf8472abe9f52c677484bc16c0408e8e77868aceffe26c55d89ef974ac784c",
+    "originalWitnessGitBlob": "07030061d214cfeb6875f13a4f4fca751c25428d",
+    "originalWitnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+    "originalCaseBlockBytes": 7263,
+    "originalCaseBlockSha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "originalResult": {
+      "passed": 2,
+      "failed": 1
+    },
+    "all14OriginalWitnessFilesUnchanged": true,
+    "newResult": "pending"
+  },
+  "authorization": "https://github.com/Jacob-Met/longwater-browser-demo/issues/17#issuecomment-6062580108",
+  "scopeLimits": [
+    "One tide's native consequences only; no alternate future replay or recommendation.",
+    "No live watch, save schema, engine, WASM, package/lock, file admission, ordinary preview/cancel or landed report algorithm changes.",
+    "The only new file-owner callback line is historicalChoice.synchronize(null) immediately after state=null; hide journal, disabled controls, save/file recovery and rethrow remain exact.",
+    "Direct pixel acceptance remains separate from existing functional/artifact generation receipts."
+  ],
+  "initialUnexecutedPreview": {
+    "tree": "a9d54151535c00a35503297ce5aed5ed946eff24",
+    "proofBlob": "5c04497d9d84bc00f5e85a42b21c68057b166255"
+  },
+  "presentationDelivery": {
+    "helperGitBlob": "75e7be22a567196845e22edd74ff6bdac3163a71",
+    "fixedDirectory": "test-results/watch-choice",
+    "fixedNames": [
+      "desktop-comparison.png",
+      "phone-comparison.png",
+      "offline-comparison.png",
+      "Longwater-choice.html"
+    ],
+    "regularFilesOnly": true,
+    "maximumPerFileBytes": 2097152,
+    "maximumTotalBytes": 2097152,
+    "maximumPayloadBytes": 4194304,
+    "numberedBase64ChunkChars": 4096,
+    "emits": "LONGWATER_CHOICE_BUNDLE_BEGIN / LONGWATER_CHOICE_BUNDLE_CHUNK / LONGWATER_CHOICE_BUNDLE_END",
+    "testsUnchanged": true,
+    "directPixels": "pending actual native run and independent inspection"
+  }
+}

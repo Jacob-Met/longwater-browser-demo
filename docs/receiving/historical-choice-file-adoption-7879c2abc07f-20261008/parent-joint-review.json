@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "reviewer": "/root/github_execution",
+  "status": "Joint source functionality accepted; minimum owned table presentation correction requested before integration.",
+  "candidate": {
+    "commit": "0ad3a1b2d851627dacf255a0991b63010cc897b8",
+    "tree": "434d35225b12e44ff93af208f96b38126282f476",
+    "parents": [
+      "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+      "43038d28b08562a5f1c143b2773d925b4d28ca7d"
+    ]
+  },
+  "actual": {
+    "commit": "b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "tree": "434d35225b12e44ff93af208f96b38126282f476",
+    "parents": [
+      "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+      "0ad3a1b2d851627dacf255a0991b63010cc897b8"
+    ],
+    "run": 37805671289,
+    "jobs": {
+      "browser": 113409166241,
+      "smoke": 113409166497
+    },
+    "completedJobsBothSuccess": true
+  },
+  "sourceProof": {
+    "gitBlob": "6307868baaa959462ef47139030193f31f538c76",
+    "bytes": 4454,
+    "sha256": "d2b92c93ac26f9c51de40677b8a68cc47b56fc2ac15e07472b0560e67b478877",
+    "readbackExact": true
+  },
+  "logs": {
+    "browser": {
+      "bytes": 2709552,
+      "sha256": "3ad6a602edb0ee63ec278095ab03ff709094e23dcc7ee5d0fa5fa7e1c58ef515",
+      "fullCompletedLogReceived": true
+    },
+    "smoke": {
+      "bytes": 12572,
+      "sha256": "7570386b8fac3ed9f1152a81ac97196676750094f14795f00cebc7910d47b490"
+    },
+    "testSummary": [
+      "2026-10-08T16:03:50.1309796Z # tests 112",
+      "2026-10-08T16:03:50.1310106Z # suites 0",
+      "2026-10-08T16:03:50.1310421Z # pass 112",
+      "2026-10-08T16:03:50.1310700Z # fail 0",
+      "2026-10-08T16:03:50.1310972Z # cancelled 0",
+      "2026-10-08T16:03:50.1311274Z # skipped 0",
+      "2026-10-08T16:03:50.1311585Z # todo 0"
+    ]
+  },
+  "adoption": {
+    "commit": "b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "tree": "434d35225b12e44ff93af208f96b38126282f476",
+    "passed": 3,
+    "failed": 0,
+    "original_runtime_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "actual_adapted_harness_sha256": "ebddbf23dcad8bc9f64fe263a1d38b3094f028fd52d55232a1e54f486c767cee",
+    "unchanged_inputs": true,
+    "exit_status": 0,
+    "node": "v22.23.3",
+    "browser": "151.0.7922.34",
+    "startedAt": "2026-10-08T16:03:51.023Z",
+    "finishedAt": "2026-10-08T16:03:54.039Z",
+    "cases": [
+      {
+        "name": "preview_cancel_keeps_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "after": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": true,
+          "choice_html": "<h3 class=\"choice-result-title\" tabindex=\"-1\">Tide 1 · Played and alternative</h3><p class=\"choice-played-label\">Played: Gate · Heart Pool</p><p class=\"choice-alternative-label\">Alternative: Shade · Heart Pool</p><table class=\"choice-resources\"><caption>Resources at this tide</caption><thead><tr><th scope=\"col\">Resource</th><th scope=\"col\">Before tide</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-resource=\"freshwater\"><th scope=\"row\">Freshwater</th><td>5</td><td>4</td><td>5</td></tr><tr data-resource=\"seedPacks\"><th scope=\"row\">Seed packs</th><td>5</td><td>5</td><td>5</td></tr></tbody></table><div class=\"choice-cells\"><section class=\"choice-cell\" data-cell-id=\"north\"><h4>North Bank</h4><table><caption class=\"visually-hidden\">North Bank · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>34</td><td>48</td><td>48</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>34</td><td>38</td><td>38</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>64</td><td>63</td><td>63</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>44</td><td>45</td><td>45</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><table><caption class=\"visually-hidden\">Heart Pool · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>56</td><td>77</td><td>70</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>30</td><td>24</td><td>32</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>55</td><td>51</td><td>58</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>49</td><td>49</td><td>53</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>1</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"south\"><h4>South Reach</h4><table><caption class=\"visually-hidden\">South Reach · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>67</td><td>81</td><td>81</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>40</td><td>43</td><td>43</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>43</td><td>40</td><td>40</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>38</td><td>38</td><td>38</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section></div><div class=\"choice-reports\"><section class=\"choice-report\" data-kind=\"played\"><h4>Played tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.</li><li>Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.</li></ul></section><section class=\"choice-report\" data-kind=\"alternative\"><h4>Alternative tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 30→28 ppt, oxygen 55→59%, biomass 49→52%. Canopy blunts heat and drying.</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 59→56%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→70 cm, salt 30→32 ppt, oxygen 55→58%, biomass 49→53%.</li></ul></section></div>",
+          "choice_tide": "1",
+          "choice_status": "Historical comparison ready. Your live watch, selected cell and saved progress are unchanged.",
+          "file_status": "No watch was replaced.",
+          "controls_disabled": false
+        }
+      },
+      {
+        "name": "successful_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "after": {
+          "summary": "Day 3 of 14. Water 4; seed packs 4.",
+          "choice_visible": false,
+          "choice_html": "",
+          "choice_tide": "3",
+          "choice_status": "Choose a completed tide. Its recorded action is selected for comparison.",
+          "file_status": "Opened day 3 of 14 with its complete journal. This watch is saved in this browser.",
+          "controls_disabled": false
+        },
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      {
+        "name": "failed_display_adoption_clears_comparison",
+        "outcome": "pass",
+        "errors": [],
+        "after": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": false,
+          "choice_html": "",
+          "choice_tide": "",
+          "choice_status": "",
+          "file_status": "Opened day 3 of 14. The watch display could not be refreshed. It is saved in this browser. Reload this page to resume it.",
+          "controls_disabled": true
+        },
+        "acceptedStoreSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "adoptedExportSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      }
+    ],
+    "note": "Authored one-shot replayHistory refusal represents the already-qualified R2 post-adoption display failure. This is not a spontaneous device allocation failure.",
+    "files": [
+      {
+        "path": "source-custody.json",
+        "bytes": 8454,
+        "sha256": "74199b23beb64926270df61f141733327baa73983383eac940c6761ce424175a"
+      },
+      {
+        "path": "run.json",
+        "bytes": 31179,
+        "sha256": "cb7d2ae6886c7b4b65a28a0a029e7060d54e1e9d418b0d468e5221978346d2e8"
+      },
+      {
+        "path": "run.log",
+        "bytes": 270,
+        "sha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34"
+      },
+      {
+        "path": "failed-display-actual-download.json",
+        "bytes": 1618,
+        "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      }
+    ],
+    "originalCaseBlockExact": true,
+    "originalCausalNegativeRetained": true
+  },
+  "bundle": {
+    "bytes": 1903364,
+    "sha256": "eb1ff1421e6d7fe7623a5f60ec50e8c7f00f6a74120bc5eccbf1e252a1e72277",
+    "chunks": 620,
+    "allChunksAndMembersVerified": true,
+    "members": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363707,
+        "sha256": "ad524cb76e33069a8f0a505a105c4225156905fec74aa3e9089384e6317c68a4"
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 385049,
+        "sha256": "315c4b8ddd83695ae8eff43d7005aa3a59f73e2065e46a0c46e172b314947828"
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361608,
+        "sha256": "b4532547feadce1c5fe73de8de1da9cb016638eb0e94618db2bee4f02288dad1"
+      },
+      {
+        "path": "Longwater-choice.html",
+        "bytes": 316729,
+        "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9"
+      }
+    ]
+  },
+  "package": {
+    "bytes": 316729,
+    "sha256": "4279d935362a26ba050b3ec2a209490f862de2f9865b957574871680812b89d9",
+    "gitBlob": "636c142c7d640d275a60052954222383e5698e4e",
+    "hostedOutputExactToNativePublishedArtifact": true,
+    "parentIndependentlyReconstructedFromAll18Inputs": true
+  },
+  "visual": {
+    "captures": [
+      {
+        "path": "desktop-comparison.png",
+        "bytes": 363707,
+        "sha256": "ad524cb76e33069a8f0a505a105c4225156905fec74aa3e9089384e6317c68a4",
+        "width": 1280,
+        "height": 2926,
+        "personallyViewed": true
+      },
+      {
+        "path": "phone-comparison.png",
+        "bytes": 385049,
+        "sha256": "315c4b8ddd83695ae8eff43d7005aa3a59f73e2065e46a0c46e172b314947828",
+        "width": 390,
+        "height": 4708,
+        "personallyViewed": true
+      },
+      {
+        "path": "offline-comparison.png",
+        "bytes": 361608,
+        "sha256": "b4532547feadce1c5fe73de8de1da9cb016638eb0e94618db2bee4f02288dad1",
+        "width": 1280,
+        "height": 2882,
+        "personallyViewed": true
+      }
+    ],
+    "observed": "All three actual complete captures display the comparison, full resources and cell readings, both complete tide reports, ordinary watch-file controls and journal. The phone form/cards/reports stack within the viewport. No clipping or overlap observed in the choice panel.",
+    "remainingDefect": "Fixed equal-width columns unnecessarily split Alternative into Alternativ/e on desktop and offline cell tables, and Freshwater into Freshwate/r in the phone resource table.",
+    "requestedCorrection": "Change only the minimum owned table CSS and derived standalone/runtime pins; keep every functional test and the original witness adapter exact, then receive the resulting captures.",
+    "physicalDeviceOrLivePublicationClaim": false
+  },
+  "scope": "One completed tide only. The post-adoption exception is authored fault injection, not a spontaneously observed allocation failure. Existing saved/unsaved recovery, report download and owner callback behavior remain owned by their native work."
+}

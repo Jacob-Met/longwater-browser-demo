@@ -1,0 +1,322 @@
+{
+  "started_at": "2026-10-08T16:03:51.023Z",
+  "node": "v22.23.3",
+  "browser": "151.0.7922.34",
+  "source": {
+    "basis": "Actual frozen joint Git source served directly; no production rewrite or owner ref mutation.",
+    "commit": "b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be",
+    "tree": "434d35225b12e44ff93af208f96b38126282f476",
+    "original_witness_sha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+    "original_runtime_case_block_sha256": "21b3d34694853ec0072e9c051bd62e3a1ee1b5591b6bee62c5371c8076d55994",
+    "manifest_sha256": "1d1328370625d939364d6fe5abfd808cc01c6dcb182f9e92403c2fdb78eca3a5",
+    "adapter_sha256": "b0cf8472abe9f52c677484bc16c0408e8e77868aceffe26c55d89ef974ac784c",
+    "original_runtime": [
+      {
+        "path": "index.html",
+        "bytes": 7223,
+        "sha256": "207c415641f27d8adc478a41b859b27d9120d0d7b676c1a4febb657ee60d06d6",
+        "git_blob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8"
+      },
+      {
+        "path": "style.css",
+        "bytes": 3342,
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+        "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+      },
+      {
+        "path": "journal.css",
+        "bytes": 2465,
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+        "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+      },
+      {
+        "path": "watch-trends.css",
+        "bytes": 2791,
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+        "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+      },
+      {
+        "path": "watch-save.css",
+        "bytes": 473,
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+        "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+      },
+      {
+        "path": "watch-file.css",
+        "bytes": 1196,
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+        "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef"
+      },
+      {
+        "path": "watch-report.css",
+        "bytes": 571,
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+        "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+      },
+      {
+        "path": "watch-choice.css",
+        "bytes": 3742,
+        "sha256": "384d24905d8e9fe0beb45c0ec9c700274cd041c54916228612281d865d70ad7e",
+        "git_blob": "6e569c23111531649147d47635b124ea604ea59b"
+      },
+      {
+        "path": "game.js",
+        "bytes": 21844,
+        "sha256": "b25c21a485aebbe5673abbe4b1d01b5a7209706726bd30cf9a5b54760ed155b4",
+        "git_blob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf"
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "bytes": 8716,
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+        "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+      },
+      {
+        "path": "journal.js",
+        "bytes": 6603,
+        "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+        "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+      },
+      {
+        "path": "watch-save.js",
+        "bytes": 9891,
+        "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+        "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+      },
+      {
+        "path": "watch-file.js",
+        "bytes": 5475,
+        "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+        "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040"
+      },
+      {
+        "path": "watch-trends.js",
+        "bytes": 11372,
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+        "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+      },
+      {
+        "path": "watch-report.js",
+        "bytes": 9346,
+        "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+        "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+      },
+      {
+        "path": "watch-choice.js",
+        "bytes": 12066,
+        "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+        "git_blob": "c06835946ec99c7edd8eb16334d597356aada060"
+      },
+      {
+        "path": "watch-choice-model.js",
+        "bytes": 3694,
+        "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+        "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd"
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "bytes": 71368,
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+        "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+      }
+    ],
+    "served_runtime": [
+      {
+        "path": "index.html",
+        "bytes": 7223,
+        "sha256": "207c415641f27d8adc478a41b859b27d9120d0d7b676c1a4febb657ee60d06d6",
+        "git_blob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8"
+      },
+      {
+        "path": "style.css",
+        "bytes": 3342,
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+        "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+      },
+      {
+        "path": "journal.css",
+        "bytes": 2465,
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+        "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+      },
+      {
+        "path": "watch-trends.css",
+        "bytes": 2791,
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+        "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+      },
+      {
+        "path": "watch-save.css",
+        "bytes": 473,
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+        "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+      },
+      {
+        "path": "watch-file.css",
+        "bytes": 1196,
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+        "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef"
+      },
+      {
+        "path": "watch-report.css",
+        "bytes": 571,
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+        "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+      },
+      {
+        "path": "watch-choice.css",
+        "bytes": 3742,
+        "sha256": "384d24905d8e9fe0beb45c0ec9c700274cd041c54916228612281d865d70ad7e",
+        "git_blob": "6e569c23111531649147d47635b124ea604ea59b"
+      },
+      {
+        "path": "game.js",
+        "bytes": 21844,
+        "sha256": "b25c21a485aebbe5673abbe4b1d01b5a7209706726bd30cf9a5b54760ed155b4",
+        "git_blob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf"
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "bytes": 8716,
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+        "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+      },
+      {
+        "path": "journal.js",
+        "bytes": 6603,
+        "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+        "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+      },
+      {
+        "path": "watch-save.js",
+        "bytes": 9891,
+        "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+        "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+      },
+      {
+        "path": "watch-file.js",
+        "bytes": 5475,
+        "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+        "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040"
+      },
+      {
+        "path": "watch-trends.js",
+        "bytes": 11372,
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+        "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+      },
+      {
+        "path": "watch-report.js",
+        "bytes": 9346,
+        "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+        "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+      },
+      {
+        "path": "watch-choice.js",
+        "bytes": 12066,
+        "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+        "git_blob": "c06835946ec99c7edd8eb16334d597356aada060"
+      },
+      {
+        "path": "watch-choice-model.js",
+        "bytes": 3694,
+        "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+        "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd"
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "bytes": 71368,
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+        "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+      }
+    ],
+    "harness_sha256": "ebddbf23dcad8bc9f64fe263a1d38b3094f028fd52d55232a1e54f486c767cee",
+    "incoming_file_sha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451"
+  },
+  "cases": [
+    {
+      "name": "preview_cancel_keeps_comparison",
+      "observations": {
+        "before": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": true,
+          "choice_html": "<h3 class=\"choice-result-title\" tabindex=\"-1\">Tide 1 · Played and alternative</h3><p class=\"choice-played-label\">Played: Gate · Heart Pool</p><p class=\"choice-alternative-label\">Alternative: Shade · Heart Pool</p><table class=\"choice-resources\"><caption>Resources at this tide</caption><thead><tr><th scope=\"col\">Resource</th><th scope=\"col\">Before tide</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-resource=\"freshwater\"><th scope=\"row\">Freshwater</th><td>5</td><td>4</td><td>5</td></tr><tr data-resource=\"seedPacks\"><th scope=\"row\">Seed packs</th><td>5</td><td>5</td><td>5</td></tr></tbody></table><div class=\"choice-cells\"><section class=\"choice-cell\" data-cell-id=\"north\"><h4>North Bank</h4><table><caption class=\"visually-hidden\">North Bank · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>34</td><td>48</td><td>48</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>34</td><td>38</td><td>38</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>64</td><td>63</td><td>63</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>44</td><td>45</td><td>45</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><table><caption class=\"visually-hidden\">Heart Pool · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>56</td><td>77</td><td>70</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>30</td><td>24</td><td>32</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>55</td><td>51</td><td>58</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>49</td><td>49</td><td>53</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>1</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"south\"><h4>South Reach</h4><table><caption class=\"visually-hidden\">South Reach · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>67</td><td>81</td><td>81</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>40</td><td>43</td><td>43</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>43</td><td>40</td><td>40</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>38</td><td>38</td><td>38</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section></div><div class=\"choice-reports\"><section class=\"choice-report\" data-kind=\"played\"><h4>Played tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.</li><li>Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.</li></ul></section><section class=\"choice-report\" data-kind=\"alternative\"><h4>Alternative tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 30→28 ppt, oxygen 55→59%, biomass 49→52%. Canopy blunts heat and drying.</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 59→56%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→70 cm, salt 30→32 ppt, oxygen 55→58%, biomass 49→53%.</li></ul></section></div>",
+          "choice_tide": "1",
+          "choice_status": "Historical comparison ready. Your live watch, selected cell and saved progress are unchanged.",
+          "file_status": "",
+          "controls_disabled": false
+        },
+        "after": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": true,
+          "choice_html": "<h3 class=\"choice-result-title\" tabindex=\"-1\">Tide 1 · Played and alternative</h3><p class=\"choice-played-label\">Played: Gate · Heart Pool</p><p class=\"choice-alternative-label\">Alternative: Shade · Heart Pool</p><table class=\"choice-resources\"><caption>Resources at this tide</caption><thead><tr><th scope=\"col\">Resource</th><th scope=\"col\">Before tide</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-resource=\"freshwater\"><th scope=\"row\">Freshwater</th><td>5</td><td>4</td><td>5</td></tr><tr data-resource=\"seedPacks\"><th scope=\"row\">Seed packs</th><td>5</td><td>5</td><td>5</td></tr></tbody></table><div class=\"choice-cells\"><section class=\"choice-cell\" data-cell-id=\"north\"><h4>North Bank</h4><table><caption class=\"visually-hidden\">North Bank · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>34</td><td>48</td><td>48</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>34</td><td>38</td><td>38</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>64</td><td>63</td><td>63</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>44</td><td>45</td><td>45</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><table><caption class=\"visually-hidden\">Heart Pool · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>56</td><td>77</td><td>70</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>30</td><td>24</td><td>32</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>55</td><td>51</td><td>58</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>49</td><td>49</td><td>53</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>1</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"south\"><h4>South Reach</h4><table><caption class=\"visually-hidden\">South Reach · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>67</td><td>81</td><td>81</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>40</td><td>43</td><td>43</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>43</td><td>40</td><td>40</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>38</td><td>38</td><td>38</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section></div><div class=\"choice-reports\"><section class=\"choice-report\" data-kind=\"played\"><h4>Played tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.</li><li>Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.</li></ul></section><section class=\"choice-report\" data-kind=\"alternative\"><h4>Alternative tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 30→28 ppt, oxygen 55→59%, biomass 49→52%. Canopy blunts heat and drying.</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 59→56%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→70 cm, salt 30→32 ppt, oxygen 55→58%, biomass 49→53%.</li></ul></section></div>",
+          "choice_tide": "1",
+          "choice_status": "Historical comparison ready. Your live watch, selected cell and saved progress are unchanged.",
+          "file_status": "No watch was replaced.",
+          "controls_disabled": false
+        }
+      },
+      "errors": [],
+      "outcome": "pass"
+    },
+    {
+      "name": "successful_adoption_clears_comparison",
+      "observations": {
+        "before": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": true,
+          "choice_html": "<h3 class=\"choice-result-title\" tabindex=\"-1\">Tide 1 · Played and alternative</h3><p class=\"choice-played-label\">Played: Gate · Heart Pool</p><p class=\"choice-alternative-label\">Alternative: Shade · Heart Pool</p><table class=\"choice-resources\"><caption>Resources at this tide</caption><thead><tr><th scope=\"col\">Resource</th><th scope=\"col\">Before tide</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-resource=\"freshwater\"><th scope=\"row\">Freshwater</th><td>5</td><td>4</td><td>5</td></tr><tr data-resource=\"seedPacks\"><th scope=\"row\">Seed packs</th><td>5</td><td>5</td><td>5</td></tr></tbody></table><div class=\"choice-cells\"><section class=\"choice-cell\" data-cell-id=\"north\"><h4>North Bank</h4><table><caption class=\"visually-hidden\">North Bank · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>34</td><td>48</td><td>48</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>34</td><td>38</td><td>38</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>64</td><td>63</td><td>63</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>44</td><td>45</td><td>45</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><table><caption class=\"visually-hidden\">Heart Pool · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>56</td><td>77</td><td>70</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>30</td><td>24</td><td>32</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>55</td><td>51</td><td>58</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>49</td><td>49</td><td>53</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>1</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"south\"><h4>South Reach</h4><table><caption class=\"visually-hidden\">South Reach · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>67</td><td>81</td><td>81</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>40</td><td>43</td><td>43</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>43</td><td>40</td><td>40</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>38</td><td>38</td><td>38</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section></div><div class=\"choice-reports\"><section class=\"choice-report\" data-kind=\"played\"><h4>Played tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.</li><li>Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.</li></ul></section><section class=\"choice-report\" data-kind=\"alternative\"><h4>Alternative tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 30→28 ppt, oxygen 55→59%, biomass 49→52%. Canopy blunts heat and drying.</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 59→56%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→70 cm, salt 30→32 ppt, oxygen 55→58%, biomass 49→53%.</li></ul></section></div>",
+          "choice_tide": "1",
+          "choice_status": "Historical comparison ready. Your live watch, selected cell and saved progress are unchanged.",
+          "file_status": "",
+          "controls_disabled": false
+        },
+        "after": {
+          "summary": "Day 3 of 14. Water 4; seed packs 4.",
+          "choice_visible": false,
+          "choice_html": "",
+          "choice_tide": "3",
+          "choice_status": "Choose a completed tide. Its recorded action is selected for comparison.",
+          "file_status": "Opened day 3 of 14 with its complete journal. This watch is saved in this browser.",
+          "controls_disabled": false
+        },
+        "accepted_store_sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      "errors": [],
+      "outcome": "pass"
+    },
+    {
+      "name": "failed_display_adoption_clears_comparison",
+      "observations": {
+        "before": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": true,
+          "choice_html": "<h3 class=\"choice-result-title\" tabindex=\"-1\">Tide 1 · Played and alternative</h3><p class=\"choice-played-label\">Played: Gate · Heart Pool</p><p class=\"choice-alternative-label\">Alternative: Shade · Heart Pool</p><table class=\"choice-resources\"><caption>Resources at this tide</caption><thead><tr><th scope=\"col\">Resource</th><th scope=\"col\">Before tide</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-resource=\"freshwater\"><th scope=\"row\">Freshwater</th><td>5</td><td>4</td><td>5</td></tr><tr data-resource=\"seedPacks\"><th scope=\"row\">Seed packs</th><td>5</td><td>5</td><td>5</td></tr></tbody></table><div class=\"choice-cells\"><section class=\"choice-cell\" data-cell-id=\"north\"><h4>North Bank</h4><table><caption class=\"visually-hidden\">North Bank · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>34</td><td>48</td><td>48</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>34</td><td>38</td><td>38</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>64</td><td>63</td><td>63</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>44</td><td>45</td><td>45</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"heart\"><h4>Heart Pool</h4><table><caption class=\"visually-hidden\">Heart Pool · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>56</td><td>77</td><td>70</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>30</td><td>24</td><td>32</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>55</td><td>51</td><td>58</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>49</td><td>49</td><td>53</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>1</td></tr></tbody></table></section><section class=\"choice-cell\" data-cell-id=\"south\"><h4>South Reach</h4><table><caption class=\"visually-hidden\">South Reach · exact native readings</caption><thead><tr><th scope=\"col\">Reading</th><th scope=\"col\">Before</th><th scope=\"col\">Played</th><th scope=\"col\">Alternative</th></tr></thead><tbody><tr data-reading=\"depth\"><th scope=\"row\">Depth (cm)</th><td>67</td><td>81</td><td>81</td></tr><tr data-reading=\"salinity\"><th scope=\"row\">Salt (ppt)</th><td>40</td><td>43</td><td>43</td></tr><tr data-reading=\"oxygen\"><th scope=\"row\">Oxygen (%)</th><td>43</td><td>40</td><td>40</td></tr><tr data-reading=\"biomass\"><th scope=\"row\">Life (%)</th><td>38</td><td>38</td><td>38</td></tr><tr data-reading=\"shade\"><th scope=\"row\">Canopy (/ 3)</th><td>0</td><td>0</td><td>0</td></tr></tbody></table></section></div><div class=\"choice-reports\"><section class=\"choice-report\" data-kind=\"played\"><h4>Played tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.</li><li>Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.</li></ul></section><section class=\"choice-report\" data-kind=\"alternative\"><h4>Alternative tide</h4><p class=\"choice-event\">Spring tide</p><p class=\"choice-event-note\">A long lunar push carries brine inland.</p><ul class=\"choice-notes\"><li>Reed-bed shade · Heart Pool: canopy 0→1, salt 30→28 ppt, oxygen 55→59%, biomass 49→52%. Canopy blunts heat and drying.</li><li>Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 59→56%. A long lunar push carries brine inland.</li><li>Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.</li><li>Net · Heart Pool: water 56→70 cm, salt 30→32 ppt, oxygen 55→58%, biomass 49→53%.</li></ul></section></div>",
+          "choice_tide": "1",
+          "choice_status": "Historical comparison ready. Your live watch, selected cell and saved progress are unchanged.",
+          "file_status": "",
+          "controls_disabled": false
+        },
+        "after": {
+          "summary": "Day 1 of 14. Water 4; seed packs 5.",
+          "choice_visible": false,
+          "choice_html": "",
+          "choice_tide": "",
+          "choice_status": "",
+          "file_status": "Opened day 3 of 14. The watch display could not be refreshed. It is saved in this browser. Reload this page to resume it.",
+          "controls_disabled": true
+        },
+        "accepted_store_sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "adopted_export_sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+        "unchanged_old_comparison": false
+      },
+      "errors": [],
+      "outcome": "pass"
+    }
+  ],
+  "note": "Authored one-shot replayHistory refusal represents the already-qualified R2 post-adoption display failure. This is not a spontaneous device allocation failure.",
+  "inputs_unchanged": true,
+  "finished_at": "2026-10-08T16:03:54.039Z",
+  "passed": 3,
+  "failed": 0
+}

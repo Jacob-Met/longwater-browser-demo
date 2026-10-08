@@ -1,0 +1,158 @@
+﻿2026-10-08T16:02:43.7327737Z Current runner version: '2.337.0'
+2026-10-08T16:02:43.7353736Z ##[group]Runner Image Provisioner
+2026-10-08T16:02:43.7354746Z Hosted Compute Agent
+2026-10-08T16:02:43.7355422Z Version: 20261002.596
+2026-10-08T16:02:43.7356071Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T16:02:43.7356870Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T16:02:43.7357610Z Worker ID: {47976f6f-aecb-40cf-950c-a84face49056}
+2026-10-08T16:02:43.7358321Z Region: eastus
+2026-10-08T16:02:43.7359033Z Cloud: Azure
+2026-10-08T16:02:43.7359582Z ##[endgroup]
+2026-10-08T16:02:43.7361136Z ##[group]Operating System
+2026-10-08T16:02:43.7361880Z Ubuntu
+2026-10-08T16:02:43.7362408Z 24.04.5
+2026-10-08T16:02:43.7363496Z LTS
+2026-10-08T16:02:43.7364063Z ##[endgroup]
+2026-10-08T16:02:43.7364682Z ##[group]Runner Image
+2026-10-08T16:02:43.7365348Z Image: ubuntu-24.04
+2026-10-08T16:02:43.7365933Z Version: 20261004.327.1
+2026-10-08T16:02:43.7367250Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T16:02:43.7368932Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T16:02:43.7369988Z ##[endgroup]
+2026-10-08T16:02:43.7371279Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T16:02:43.7373858Z Contents: read
+2026-10-08T16:02:43.7374490Z Metadata: read
+2026-10-08T16:02:43.7375152Z Packages: read
+2026-10-08T16:02:43.7375765Z ##[endgroup]
+2026-10-08T16:02:43.7377981Z Secret source: Actions
+2026-10-08T16:02:43.7378945Z Cache mode: write
+2026-10-08T16:02:43.7379947Z Prepare workflow directory
+2026-10-08T16:02:43.7715661Z Prepare all required actions
+2026-10-08T16:02:43.7765574Z Getting action download info
+2026-10-08T16:02:43.9954433Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T16:02:44.2060388Z Complete job name: smoke
+2026-10-08T16:02:44.2917680Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-08T16:02:44.2918883Z with:
+2026-10-08T16:02:44.2919413Z   repository: Jacob-Met/longwater-browser-demo
+2026-10-08T16:02:44.2923819Z   token: ***
+2026-10-08T16:02:44.2924282Z   ssh-strict: true
+2026-10-08T16:02:44.2924738Z   ssh-user: git
+2026-10-08T16:02:44.2925210Z   persist-credentials: true
+2026-10-08T16:02:44.2925712Z   clean: true
+2026-10-08T16:02:44.2926182Z   sparse-checkout-cone-mode: true
+2026-10-08T16:02:44.2926734Z   fetch-depth: 1
+2026-10-08T16:02:44.2927184Z   fetch-tags: false
+2026-10-08T16:02:44.2927645Z   show-progress: true
+2026-10-08T16:02:44.2928103Z   lfs: false
+2026-10-08T16:02:44.2928536Z   submodules: false
+2026-10-08T16:02:44.2928996Z   set-safe-directory: true
+2026-10-08T16:02:44.2929519Z   allow-unsafe-pr-checkout: false
+2026-10-08T16:02:44.2930332Z ##[endgroup]
+2026-10-08T16:02:44.4001396Z Syncing repository: Jacob-Met/longwater-browser-demo
+2026-10-08T16:02:44.4004045Z ##[group]Getting Git version info
+2026-10-08T16:02:44.4005084Z Working directory is '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T16:02:44.4006431Z [command]/usr/bin/git version
+2026-10-08T16:02:44.4113816Z git version 2.55.0
+2026-10-08T16:02:44.4142012Z ##[endgroup]
+2026-10-08T16:02:44.4158148Z Temporarily overriding HOME='/home/runner/work/_temp/c53fa1ef-f4af-4227-9d6c-87762cdf42c6' before making global git config changes
+2026-10-08T16:02:44.4160483Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:02:44.4165943Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T16:02:44.4226545Z Deleting the contents of '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T16:02:44.4231474Z ##[group]Initializing the repository
+2026-10-08T16:02:44.4236616Z [command]/usr/bin/git init /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T16:02:44.4401177Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T16:02:44.4403602Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T16:02:44.4405635Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T16:02:44.4407028Z hint: call:
+2026-10-08T16:02:44.4408509Z hint:
+2026-10-08T16:02:44.4409613Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T16:02:44.4410944Z hint:
+2026-10-08T16:02:44.4412123Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T16:02:44.4414505Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T16:02:44.4416169Z hint:
+2026-10-08T16:02:44.4416951Z hint: 	git branch -m <name>
+2026-10-08T16:02:44.4417851Z hint:
+2026-10-08T16:02:44.4419062Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T16:02:44.4421259Z Initialized empty Git repository in /home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/
+2026-10-08T16:02:44.4425137Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T16:02:44.4481160Z ##[endgroup]
+2026-10-08T16:02:44.4482489Z ##[group]Disabling automatic garbage collection
+2026-10-08T16:02:44.4486688Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T16:02:44.4528566Z ##[endgroup]
+2026-10-08T16:02:44.4530250Z ##[group]Setting up auth
+2026-10-08T16:02:44.4538910Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:02:44.4578789Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:02:44.4988428Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:02:44.5028164Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:02:44.5254859Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:02:44.5294512Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:02:44.5525715Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T16:02:44.5568835Z ##[endgroup]
+2026-10-08T16:02:44.5569839Z ##[group]Fetching the repository
+2026-10-08T16:02:44.5580357Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be:refs/remotes/pull/19/merge
+2026-10-08T16:02:45.7402372Z From https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T16:02:45.7403926Z  * [new ref]         b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be -> pull/19/merge
+2026-10-08T16:02:45.7418929Z ##[endgroup]
+2026-10-08T16:02:45.7419529Z ##[group]Determining the checkout info
+2026-10-08T16:02:45.7421770Z ##[endgroup]
+2026-10-08T16:02:45.7426778Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T16:02:45.7486470Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T16:02:45.7518438Z ##[group]Checking out the ref
+2026-10-08T16:02:45.7522074Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/19/merge
+2026-10-08T16:02:45.8011813Z Note: switching to 'refs/remotes/pull/19/merge'.
+2026-10-08T16:02:45.8012253Z 
+2026-10-08T16:02:45.8012519Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T16:02:45.8013818Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T16:02:45.8014863Z state without impacting any branches by switching back to a branch.
+2026-10-08T16:02:45.8015532Z 
+2026-10-08T16:02:45.8016049Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T16:02:45.8017015Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T16:02:45.8017828Z 
+2026-10-08T16:02:45.8018054Z   git switch -c <new-branch-name>
+2026-10-08T16:02:45.8018428Z 
+2026-10-08T16:02:45.8018650Z Or undo this operation with:
+2026-10-08T16:02:45.8019010Z 
+2026-10-08T16:02:45.8019195Z   git switch -
+2026-10-08T16:02:45.8019463Z 
+2026-10-08T16:02:45.8019959Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T16:02:45.8020571Z 
+2026-10-08T16:02:45.8021229Z HEAD is now at b9854b8 Merge 0ad3a1b2d851627dacf255a0991b63010cc897b8 into 43038d28b08562a5f1c143b2773d925b4d28ca7d
+2026-10-08T16:02:45.8028747Z ##[endgroup]
+2026-10-08T16:02:45.8079099Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T16:02:45.8107908Z b9854b8d4c432cda9a3d51c9157ec5f9bc5fd3be
+2026-10-08T16:02:45.8340445Z ##[group]Run node --check game.js
+2026-10-08T16:02:45.8340899Z [36;1mnode --check game.js[0m
+2026-10-08T16:02:45.8649210Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:02:45.8649645Z ##[endgroup]
+2026-10-08T16:02:47.6542514Z ##[group]Run set -e
+2026-10-08T16:02:47.6543224Z [36;1mset -e[0m
+2026-10-08T16:02:47.6543650Z [36;1m# .nojekyll is legitimately empty; everything else must be non-empty.[0m
+2026-10-08T16:02:47.6544218Z [36;1mtest -e .nojekyll || { echo "missing: .nojekyll"; exit 1; }[0m
+2026-10-08T16:02:47.6544825Z [36;1mfor f in index.html style.css game.js journal.js journal.css watch-save.js watch-save.css \[0m
+2026-10-08T16:02:47.6545445Z [36;1m         pkg/longwater_web.js pkg/longwater_web.d.ts \[0m
+2026-10-08T16:02:47.6545934Z [36;1m         pkg/longwater_web_bg.wasm pkg/longwater_web_bg.wasm.d.ts; do[0m
+2026-10-08T16:02:47.6546430Z [36;1m  test -s "$f" || { echo "missing or empty: $f"; exit 1; }[0m
+2026-10-08T16:02:47.6546795Z [36;1mdone[0m
+2026-10-08T16:02:47.6547084Z [36;1mgrep -q '\./pkg/longwater_web.js' game.js[0m
+2026-10-08T16:02:47.6547460Z [36;1mgrep -q '\./game.js' index.html[0m
+2026-10-08T16:02:47.6547795Z [36;1mgrep -q '\./style.css' index.html[0m
+2026-10-08T16:02:47.6548179Z [36;1mecho "smoke OK"[0m
+2026-10-08T16:02:47.6614658Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:02:47.6615005Z ##[endgroup]
+2026-10-08T16:02:47.6737522Z smoke OK
+2026-10-08T16:02:47.6940363Z Post job cleanup.
+2026-10-08T16:02:47.7805394Z [command]/usr/bin/git version
+2026-10-08T16:02:47.7850110Z git version 2.55.0
+2026-10-08T16:02:47.7891441Z Temporarily overriding HOME='/home/runner/work/_temp/29c2a94c-de09-44ca-91ec-dc73991f70af' before making global git config changes
+2026-10-08T16:02:47.7893298Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:02:47.7898585Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T16:02:47.7939390Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:02:47.7975402Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:02:47.8225477Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:02:47.8255138Z http.https://github.com/.extraheader
+2026-10-08T16:02:47.8267811Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T16:02:47.8309412Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:02:47.8572907Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:02:47.8616424Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:02:47.9013764Z Cleaning up orphan processes
+2026-10-08T16:02:47.9328133Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
