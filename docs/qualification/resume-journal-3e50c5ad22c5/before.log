@@ -1,0 +1,29 @@
+✖ a resumed watch reconstructs every earlier native report before accepting the next tide (1360.115813ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1725.314414
+
+✖ failing tests:
+
+test at tests/resume-journal.test.mjs:61:1
+✖ a resumed watch reconstructs every earlier native report before accepting the next tide (1360.115813ms)
+  AssertionError [ERR_ASSERTION]: every native tide survives closing and reopening the page
+  
+  0 !== 6
+  
+      at checkJournal (file:///workspace/scratch/3e50c5ad22c5/production/longwater-composition/tests/resume-journal.test.mjs:43:10)
+      at async TestContext.<anonymous> (file:///workspace/scratch/3e50c5ad22c5/production/longwater-composition/tests/resume-journal.test.mjs:79:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

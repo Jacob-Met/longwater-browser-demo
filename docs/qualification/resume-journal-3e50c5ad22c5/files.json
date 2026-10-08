@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6878,
+      "sha256": "abbda7d4aa31975a0fa3ec29a23af60ffbc8a1fc7348b6196717d1d11218ca38"
+    },
+    {
+      "path": "author-inputs.json",
+      "bytes": 2062,
+      "sha256": "d56c0549f896dc2c0e5bfb273484257ef3a8fcdcde282011c3820a20c9c2b69b"
+    },
+    {
+      "path": "late-received-inputs.json",
+      "bytes": 997,
+      "sha256": "4a6095c93ad144614d9b80b11892194ff865f99c0f61dc87aa0ee3b9dd19e755"
+    },
+    {
+      "path": "source-and-runtime.json",
+      "bytes": 5980,
+      "sha256": "d0805fe9faa5cb6026e17f4551558c660a2cebb4bb050c6816e61d31264c2424"
+    },
+    {
+      "path": "received-header.patch",
+      "bytes": 1453,
+      "sha256": "b3871e54f481a90d456399d2d60425a20e2ad50e4d0bbff74d0b48bb4b4918c3"
+    },
+    {
+      "path": "before.log",
+      "bytes": 1074,
+      "sha256": "084e2c799c77aafb323f9076e24940686661a90470a1d63140cb5c42453efaa5"
+    },
+    {
+      "path": "final-project-tests.log",
+      "bytes": 4061,
+      "sha256": "3fe98aa23c6157840a06a8ab67c53d143aca95404d17a79125a67f4c69f8c181"
+    },
+    {
+      "path": "final-independent.log",
+      "bytes": 792,
+      "sha256": "892f8665b475e903a821e08d79ebd490b994b2425cfd4b10a2b0a8ef5af7c794"
+    },
+    {
+      "path": "final-composition/receipts.json",
+      "bytes": 19561,
+      "sha256": "4cec7dda68eac6e9bc943ab4cec9b483cbdf956d433762b0be1f166132f54d8a"
+    },
+    {
+      "path": "final-composition/resumed-phone.png",
+      "bytes": 682035,
+      "sha256": "bb35c76594c8cf0eeac8e39701a0bd8f024b770c7d287415c5b91a2f118c8b96"
+    },
+    {
+      "path": "final-independent/transcript.json",
+      "bytes": 61047,
+      "sha256": "94d19f952aa5dc5c89f2dc0c9a68e47085a24585beaa829edb4324cca8b25505"
+    },
+    {
+      "path": "final-independent/header-layouts.json",
+      "bytes": 3835,
+      "sha256": "691ba1663033106184402d3006d570b497e8e3dfd2ee70615e93d8373e9fb3da"
+    },
+    {
+      "path": "final-independent/viewport-1280.png",
+      "bytes": 280517,
+      "sha256": "08a8b8f66cedf0cf32858df87605e8bb9f64cd2ff703868e16a8751f7d4a5537"
+    },
+    {
+      "path": "final-independent/viewport-320.png",
+      "bytes": 218016,
+      "sha256": "fa03a4caf82d726bd8e5ec1167f7bf3892a9ccb8412cdc6aa5219674126edfc9"
+    },
+    {
+      "path": "final-independent/viewport-390.png",
+      "bytes": 236632,
+      "sha256": "8c44da58a460adfb4d3c804df41a22add7da6c2242ada2ffc1ca7d0dea32b74d"
+    }
+  ]
+}

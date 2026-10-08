@@ -1,0 +1,5 @@
+#watch-storage { padding: 14px 18px 18px; font-size: 14px; line-height: 1.5; }
+#watch-save-status { margin: 0; color: #c5e6d3; }
+#watch-save-retry { margin-top: 10px; min-height: 44px; padding: 8px 16px; border: 1px solid #72e2b4; border-radius: 10px; background: #143d3c; color: #e7f1e8; font: inherit; cursor: pointer; }
+#watch-save-retry:focus-visible { outline: 3px solid #e7f1e8; outline-offset: 3px; }
+.save-note { margin: 6px 0 0; color: #a8c1b4; font-size: 12px; }

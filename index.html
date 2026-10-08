@@ -8,11 +8,44 @@
   <meta name="description" content="A fourteen-tide marsh stewardship game. Keep the Longwater alive through the changing tides.">
   <title>Longwater: Fourteen Tides</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./journal.css">
+  <link rel="stylesheet" href="./watch-save.css">
 </head>
 <body>
-  <main id="stage">
-    <canvas id="game" aria-label="Longwater marsh stewardship game. Select a marsh cell, then choose Gate, Shade, or Seed." tabindex="0"></canvas>
-    <p id="live" class="visually-hidden" role="status" aria-live="polite">Loading Longwater…</p>
+  <main id="stage" aria-labelledby="game-title">
+    <h1 id="game-title" class="visually-hidden">Longwater: Fourteen Tides</h1>
+    <p id="instructions" class="visually-hidden">Steward three marsh cells through fourteen tides. Use Tab to reach each control and Enter or Space to activate it. With a game control focused, 1, 2, 3 or the arrow keys select a cell. G opens its gate, H adds shade, S plants seeds, and R resets the watch. Read each cell's description for its current measurements and Field notes for the complete tide report.</p>
+    <div id="playfield" role="group" aria-label="Marsh stewardship controls" aria-describedby="instructions">
+      <canvas id="game" aria-hidden="true"></canvas>
+      <div id="controls">
+        <button id="reset-control" class="game-control" type="button" aria-keyshortcuts="R" disabled><span class="visually-hidden">Reset watch</span></button>
+        <button data-cell="0" class="game-control" type="button" aria-pressed="false" aria-describedby="cell-0-readings" aria-keyshortcuts="1" disabled><span class="visually-hidden">Cell 1</span></button>
+        <button data-cell="1" class="game-control" type="button" aria-pressed="false" aria-describedby="cell-1-readings" aria-keyshortcuts="2" disabled><span class="visually-hidden">Cell 2</span></button>
+        <button data-cell="2" class="game-control" type="button" aria-pressed="false" aria-describedby="cell-2-readings" aria-keyshortcuts="3" disabled><span class="visually-hidden">Cell 3</span></button>
+        <button data-action="gate" class="game-control" type="button" aria-keyshortcuts="G" disabled><span class="visually-hidden">Gate</span></button>
+        <button data-action="shade" class="game-control" type="button" aria-keyshortcuts="H" disabled><span class="visually-hidden">Shade</span></button>
+        <button data-action="seed" class="game-control" type="button" aria-keyshortcuts="S" disabled><span class="visually-hidden">Seed</span></button>
+      </div>
+      <p id="startup-error" hidden></p>
+    </div>
+    <section id="watch-storage" aria-label="Watch progress">
+      <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
+      <button id="watch-save-retry" type="button" hidden>Try saving again</button>
+      <p class="save-note">Progress stays in this browser. Reset begins a new watch and replaces the saved one.</p>
+    </section>
+    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>
+    <p id="state-summary" class="visually-hidden">The first tide is gathering.</p>
+    <div class="visually-hidden" aria-label="Marsh readings">
+      <p id="cell-0-readings"></p>
+      <p id="cell-1-readings"></p>
+      <p id="cell-2-readings"></p>
+    </div>
+    <section class="visually-hidden" role="region" aria-labelledby="notes-title">
+      <h2 id="notes-title">Field notes</h2>
+      <p id="event-notes"></p>
+      <ul id="report-lines"></ul>
+    </section>
+    <p id="live" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true">Loading Longwater…</p>
     <noscript>Longwater needs JavaScript enabled to run its local simulation.</noscript>
   </main>
   <script type="module" src="./game.js"></script>

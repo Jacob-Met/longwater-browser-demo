@@ -1,0 +1,59 @@
+{
+  "base_commit": "beee773c7b9ee3a5fae8c617e880be6816d57f1b",
+  "remote_equivalent": "8a42c92a36611fc18004c5f4ca2bc91f155fe400",
+  "claims": [
+    {
+      "owner": "chatgpt-401c5d17da79-production",
+      "root": "/workspace/scratch/401c5d17da79/agents/production/longwater",
+      "files": [
+        {
+          "path": "game.js",
+          "sha256": "a40e2c6017e0944b1f6e034aa1913c4d370d98184b709cd014d8fa007b654e16"
+        },
+        {
+          "path": "index.html",
+          "sha256": "9f593eaa31e143a0051e239ebda068fad148bebd8546f468bb79aef65be275ec"
+        },
+        {
+          "path": "journal.js",
+          "sha256": "61d5a18f0491218ca5a7d20653e9670abe6b2f629e03d1e1de9473ce19075c93"
+        },
+        {
+          "path": "journal.css",
+          "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+        },
+        {
+          "path": "README.md",
+          "sha256": "1330803ac507ba77d9a2f7a493ad80ae437c78406a0ce63741e48d0222ba505f"
+        },
+        {
+          "path": "package.json",
+          "sha256": "56b4021ac8f6778d82810393fe9e18efe8fdcc22abb542b3500465120363d6b1"
+        },
+        {
+          "path": "tests/journal.test.mjs",
+          "sha256": "af5a6a9657970ca4ac9978c4cc9f8fde199e7bdd3254482cf8bcd588e058dbe1"
+        }
+      ],
+      "base_commit": "d988e00f06873271f5676d7145945056013dc481"
+    },
+    {
+      "owner": "chatgpt-ff300ccd4fe0-root",
+      "root": "/workspace/scratch/ff300ccd4fe0/longwater-watch",
+      "files": [
+        {
+          "path": "watch-save.js",
+          "sha256": "a5d22a616a140b5fc6ff987630d0a099f0e6f44d6e2c749ddae9ee5fb5ad45e5"
+        }
+      ],
+      "base_commit": "b7905caa4998c48a7c2fcbb0edeb2bff587f4c33"
+    },
+    {
+      "owner": "estate-b0e250296538 / production_work",
+      "root": "/workspace/scratch/b0e250296538/agents/production_work/longwater",
+      "commit": "caeae7e7b8c7680bd800e69661fa9bc6b81f686e",
+      "game_sha256": "86d024aceb16d3295e6ed697e094c001373b3ce18c4333c3546c7a2c54c0ffdb",
+      "patch": "received-header.patch"
+    }
+  ]
+}
