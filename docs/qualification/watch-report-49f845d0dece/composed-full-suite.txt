@@ -1,0 +1,406 @@
+TAP version 13
+# Subtest: the actual WASM watch exposes operable cells, actions, and complete readings
+ok 1 - the actual WASM watch exposes operable cells, actions, and complete readings
+  ---
+  duration_ms: 2449.93591
+  type: 'test'
+  ...
+# Subtest: Tab, Enter, Space, arrows and shortcuts share one turn path
+ok 2 - Tab, Enter, Space, arrows and shortcuts share one turn path
+  ---
+  duration_ms: 1254.113272
+  type: 'test'
+  ...
+# Subtest: unavailable actions and modified/repeated shortcuts do not spend a tide
+ok 3 - unavailable actions and modified/repeated shortcuts do not spend a tide
+  ---
+  duration_ms: 1213.182542
+  type: 'test'
+  ...
+# Subtest: a player can finish all fourteen tides using only semantic controls and reset
+ok 4 - a player can finish all fourteen tides using only semantic controls and reset
+  ---
+  duration_ms: 3940.803927
+  type: 'test'
+  ...
+# Subtest: phone touch targets follow the canvas with separated notes and actions
+ok 5 - phone touch targets follow the canvas with separated notes and actions
+  ---
+  duration_ms: 870.224458
+  type: 'test'
+  ...
+# Subtest: failed WASM startup leaves an understandable error and no active controls
+ok 6 - failed WASM startup leaves an understandable error and no active controls
+  ---
+  duration_ms: 564.07957
+  type: 'test'
+  ...
+# Subtest: the journal preserves complete real WASM reports and all three cells across later choices
+ok 7 - the journal preserves complete real WASM reports and all three cells across later choices
+  ---
+  duration_ms: 1291.552999
+  type: 'test'
+  ...
+# Subtest: unavailable choices create no journal entry and journal keyboard reading spends no tide
+ok 8 - unavailable choices create no journal entry and journal keyboard reading spends no tide
+  ---
+  duration_ms: 677.035167
+  type: 'test'
+  ...
+# Subtest: all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal
+ok 9 - all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal
+  ---
+  duration_ms: 2212.680912
+  type: 'test'
+  ...
+# Subtest: phone readers can expand every note and cell without horizontal overflow
+ok 10 - phone readers can expand every note and cell without horizontal overflow
+  ---
+  duration_ms: 854.023105
+  type: 'test'
+  ...
+# Subtest: a failed simulation startup offers no fabricated watch history
+ok 11 - a failed simulation startup offers no fabricated watch history
+  ---
+  duration_ms: 329.398556
+  type: 'test'
+  ...
+# Subtest: an accepted native replay restores its full history, and a missing tide cannot replace it
+ok 12 - an accepted native replay restores its full history, and a missing tide cannot replace it
+  ---
+  duration_ms: 503.495861
+  type: 'test'
+  ...
+# Subtest: Reset reviews replacement before changing a native watch; cancel retains exact saved state and journal
+ok 13 - Reset reviews replacement before changing a native watch; cancel retains exact saved state and journal
+  ---
+  duration_ms: 2093.174043
+  type: 'test'
+  ...
+# Subtest: R uses the same review; Escape and the initially focused Enter action keep the watch
+ok 14 - R uses the same review; Escape and the initially focused Enter action keep the watch
+  ---
+  duration_ms: 1189.131902
+  type: 'test'
+  ...
+# Subtest: confirming starts exactly the native opening and resets the saved journal once
+ok 15 - confirming starts exactly the native opening and resets the saved journal once
+  ---
+  duration_ms: 1253.740242
+  type: 'test'
+  ...
+# Subtest: completed fourteen-tide outcome and full history survive a declined new watch
+ok 16 - completed fourteen-tide outcome and full history survive a declined new watch
+  ---
+  duration_ms: 1913.718846
+  type: 'test'
+  ...
+# Subtest: phone touch can cancel then deliberately confirm without horizontal overflow
+ok 17 - phone touch can cancel then deliberately confirm without horizontal overflow
+  ---
+  duration_ms: 1012.876604
+  type: 'test'
+  ...
+# Subtest: the review blocks background game controls and ignores their keyboard shortcuts
+ok 18 - the review blocks background game controls and ignores their keyboard shortcuts
+  ---
+  duration_ms: 1181.2101
+  type: 'test'
+  ...
+# Subtest: a saved-watch change from another tab invalidates an already open replacement review
+ok 19 - a saved-watch change from another tab invalidates an already open replacement review
+  ---
+  duration_ms: 1457.764832
+  type: 'test'
+  ...
+# Subtest: unavailable browser storage still lets the player decline then explicitly start a fresh watch
+ok 20 - unavailable browser storage still lets the player decline then explicitly start a fresh watch
+  ---
+  duration_ms: 1091.672647
+  type: 'test'
+  ...
+# Subtest: modified or held R and R while reading the journal remain inert
+ok 21 - modified or held R and R while reading the journal remain inert
+  ---
+  duration_ms: 902.405806
+  type: 'test'
+  ...
+# Subtest: ordinary actions still advance exactly the existing native simulation
+ok 22 - ordinary actions still advance exactly the existing native simulation
+  ---
+  duration_ms: 745.652429
+  type: 'test'
+  ...
+# Subtest: the assembled offline file preserves a declined watch and saves only an explicitly confirmed new watch
+ok 23 - the assembled offline file preserves a declined watch and saves only an explicitly confirmed new watch
+  ---
+  duration_ms: 1445.437147
+  type: 'test'
+  ...
+# Subtest: a visitor downloads the current game and resumes its complete journal offline
+ok 24 - a visitor downloads the current game and resumes its complete journal offline
+  ---
+  duration_ms: 2399.769459
+  type: 'test'
+  ...
+# Subtest: the packaged watch plays and restores its complete journal offline
+ok 25 - the packaged watch plays and restores its complete journal offline
+  ---
+  duration_ms: 2337.751043
+  type: 'test'
+  ...
+# Subtest: a resumed watch reconstructs every earlier native report before accepting the next tide
+ok 26 - a resumed watch reconstructs every earlier native report before accepting the next tide
+  ---
+  duration_ms: 2666.309606
+  type: 'test'
+  ...
+# Subtest: a completed saved watch retains fourteen reports and the actual opening-to-final recap
+ok 27 - a completed saved watch retains fourteen reports and the actual opening-to-final recap
+  ---
+  duration_ms: 2468.821077
+  type: 'test'
+  ...
+# Subtest: failed saving keeps current reports and a successful explicit retry makes the whole journal resumable
+ok 28 - failed saving keeps current reports and a successful explicit retry makes the whole journal resumable
+  ---
+  duration_ms: 1063.314999
+  type: 'test'
+  ...
+# Subtest: a save that disagrees with real replay is protected and cannot fabricate a journal
+ok 29 - a save that disagrees with real replay is protected and cannot fabricate a journal
+  ---
+  duration_ms: 740.472494
+  type: 'test'
+  ...
+# Subtest: another tab's saved branch stays authoritative while the local journal can continue unsaved
+ok 30 - another tab's saved branch stays authoritative while the local journal can continue unsaved
+  ---
+  duration_ms: 8463.1559
+  type: 'test'
+  ...
+# Subtest: a partial actual watch downloads exact native readings without changing play or saved bytes
+ok 31 - a partial actual watch downloads exact native readings without changing play or saved bytes
+  ---
+  duration_ms: 4374.784638
+  type: 'test'
+  ...
+# Subtest: a complete watch retains all fourteen reports and reset cannot export the previous watch
+ok 32 - a complete watch retains all fourteen reports and reset cannot export the previous watch
+  ---
+  duration_ms: 6598.250364
+  type: 'test'
+  ...
+# Subtest: preparation failure preserves the exact watch and allows an explicit successful retry
+ok 33 - preparation failure preserves the exact watch and allows an explicit successful retry
+  ---
+  duration_ms: 1691.361752
+  type: 'test'
+  ...
+# Subtest: the direct-open packaged game exposes the same report at phone width
+ok 34 - the direct-open packaged game exposes the same report at phone width
+  ---
+  duration_ms: 2149.997311
+  type: 'test'
+  ...
+# Subtest: renderer treats every name and note as literal text and never mutates its inputs
+ok 35 - renderer treats every name and note as literal text and never mutates its inputs
+  ---
+  duration_ms: 911.674413
+  type: 'test'
+  ...
+# Subtest: incomplete or nonfinite snapshots cannot become a successful report
+ok 36 - incomplete or nonfinite snapshots cannot become a successful report
+  ---
+  duration_ms: 5.172747
+  type: 'test'
+  ...
+# Subtest: closing and reopening the page resumes the same native watch and selected cell
+ok 37 - closing and reopening the page resumes the same native watch and selected cell
+  ---
+  duration_ms: 3144.59554
+  type: 'test'
+  ...
+# Subtest: a fourteen-tide ending survives reload and explicit reset stores a fresh watch
+ok 38 - a fourteen-tide ending survives reload and explicit reset stores a fresh watch
+  ---
+  duration_ms: 3276.127923
+  type: 'test'
+  ...
+# Subtest: unavailable actions leave the saved history unchanged
+ok 39 - unavailable actions leave the saved history unchanged
+  ---
+  duration_ms: 1890.765993
+  type: 'test'
+  ...
+# Subtest: failed replay preserves saved data while play continues until an explicit reset
+ok 40 - failed replay preserves saved data while play continues until an explicit reset
+  ---
+  duration_ms: 4645.392386
+  type: 'test'
+  ...
+# Subtest: quota failure retains the running tide and the visible retry saves without advancing it
+ok 41 - quota failure retains the running tide and the visible retry saves without advancing it
+  ---
+  duration_ms: 1369.907027
+  type: 'test'
+  ...
+# Subtest: a blocked storage getter still allows a playable watch and later save retry
+ok 42 - a blocked storage getter still allows a playable watch and later save retry
+  ---
+  duration_ms: 1051.967671
+  type: 'test'
+  ...
+# Subtest: two tabs detect divergent storage and do not overwrite the other watch
+ok 43 - two tabs detect divergent storage and do not overwrite the other watch
+  ---
+  duration_ms: 2127.207748
+  type: 'test'
+  ...
+# Subtest: failed WASM startup never replaces an existing saved watch
+ok 44 - failed WASM startup never replaces an existing saved watch
+  ---
+  duration_ms: 878.744241
+  type: 'test'
+  ...
+# Subtest: the save revision pins the actual shipped WASM bytes
+ok 45 - the save revision pins the actual shipped WASM bytes
+  ---
+  duration_ms: 5.034721
+  type: 'test'
+  ...
+# Subtest: a new watch does not write until the player chooses a cell or tide
+ok 46 - a new watch does not write until the player chooses a cell or tide
+  ---
+  duration_ms: 7.338921
+  type: 'test'
+  ...
+# Subtest: reload replays actual accepted tides and restores the exact complete state and selection
+ok 47 - reload replays actual accepted tides and restores the exact complete state and selection
+  ---
+  duration_ms: 5.550232
+  type: 'test'
+  ...
+# Subtest: a completed fourteen-tide watch and its outcome survive reopening
+ok 48 - a completed fourteen-tide watch and its outcome survive reopening
+  ---
+  duration_ms: 5.635411
+  type: 'test'
+  ...
+# Subtest: refused actions are absent from storage and do not change native state
+ok 49 - refused actions are absent from storage and do not change native state
+  ---
+  duration_ms: 2.751038
+  type: 'test'
+  ...
+# Subtest: explicit reset persists a fresh watch that cannot resurrect the old history
+ok 50 - explicit reset persists a fresh watch that cannot resurrect the old history
+  ---
+  duration_ms: 1.325421
+  type: 'test'
+  ...
+# Subtest: malformed, unsupported, overlong and tampered saves remain byte-for-byte intact
+ok 51 - malformed, unsupported, overlong and tampered saves remain byte-for-byte intact
+  ---
+  duration_ms: 5.914803
+  type: 'test'
+  ...
+# Subtest: failed partial native replay frees its candidate and explicit reset replaces a protected save
+ok 52 - failed partial native replay frees its candidate and explicit reset replaces a protected save
+  ---
+  duration_ms: 1.993755
+  type: 'test'
+  ...
+# Subtest: a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide
+ok 53 - a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide
+  ---
+  duration_ms: 1.625072
+  type: 'test'
+  ...
+# Subtest: an unavailable localStorage getter does not prevent play and can later recover
+ok 54 - an unavailable localStorage getter does not prevent play and can later recover
+  ---
+  duration_ms: 0.998404
+  type: 'test'
+  ...
+# Subtest: retry after unreadable storage never overwrites a previously unknown saved watch
+ok 55 - retry after unreadable storage never overwrites a previously unknown saved watch
+  ---
+  duration_ms: 0.797397
+  type: 'test'
+  ...
+# Subtest: a stale tab detects another saved watch before writing its divergent tide
+ok 56 - a stale tab detects another saved watch before writing its divergent tide
+  ---
+  duration_ms: 2.321423
+  type: 'test'
+  ...
+# Subtest: storage change and clear notifications hold stale writes without mutating the current watch
+ok 57 - storage change and clear notifications hold stale writes without mutating the current watch
+  ---
+  duration_ms: 0.902933
+  type: 'test'
+  ...
+# Subtest: a failed reset write reports the unsaved state and retry cannot restore old actions
+ok 58 - a failed reset write reports the unsaved state and retry cannot restore old actions
+  ---
+  duration_ms: 0.921121
+  type: 'test'
+  ...
+# Subtest: opening trends expose five correctly labelled metrics without inventing a completed tide
+ok 59 - opening trends expose five correctly labelled metrics without inventing a completed tide
+  ---
+  duration_ms: 1653.680853
+  type: 'test'
+  ...
+# Subtest: changed real WASM actions produce complete exact tables and separate cell series without changing the watch
+ok 60 - changed real WASM actions produce complete exact tables and separate cell series without changing the watch
+  ---
+  duration_ms: 2233.979444
+  type: 'test'
+  ...
+# Subtest: native keyboard controls retain earlier selection and focus while later tides arrive
+ok 61 - native keyboard controls retain earlier selection and focus while later tides arrive
+  ---
+  duration_ms: 847.759114
+  type: 'test'
+  ...
+# Subtest: selection and refused actions add no trend, and reset starts at the actual opening
+ok 62 - selection and refused actions add no trend, and reset starts at the actual opening
+  ---
+  duration_ms: 1062.272606
+  type: 'test'
+  ...
+# Subtest: clicking the chart selects the tide and leaves keyboard focus on its slider
+ok 63 - clicking the chart selects the tide and leaves keyboard focus on its slider
+  ---
+  duration_ms: 762.982498
+  type: 'test'
+  ...
+# Subtest: partial and complete native replay retain the opening, all completed tides and the finished watch
+ok 64 - partial and complete native replay retain the opening, all completed tides and the finished watch
+  ---
+  duration_ms: 2675.289004
+  type: 'test'
+  ...
+# Subtest: invalid journal replay cannot replace an existing trends history
+ok 65 - invalid journal replay cannot replace an existing trends history
+  ---
+  duration_ms: 638.378061
+  type: 'test'
+  ...
+# Subtest: direct-open packaging embeds the same trends and reopens native saved readings offline
+ok 66 - direct-open packaging embeds the same trends and reopens native saved readings offline
+  ---
+  duration_ms: 1948.013076
+  type: 'test'
+  ...
+1..66
+# tests 66
+# suites 0
+# pass 66
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 108727.075991

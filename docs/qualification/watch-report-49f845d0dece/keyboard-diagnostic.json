@@ -1,0 +1,30 @@
+{
+  "before": {
+    "left": 0,
+    "width": 288,
+    "scroll": 512,
+    "active": false,
+    "tag": "BODY"
+  },
+  "afterRight": {
+    "left": 40,
+    "width": 288,
+    "scroll": 512,
+    "active": true,
+    "tag": "DIV"
+  },
+  "afterHome": {
+    "left": 40,
+    "width": 288,
+    "scroll": 512,
+    "active": true,
+    "tag": "DIV"
+  },
+  "afterLeft": {
+    "left": 0,
+    "width": 288,
+    "scroll": 512,
+    "active": true,
+    "tag": "DIV"
+  }
+}

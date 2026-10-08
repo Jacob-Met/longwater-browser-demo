@@ -1,4 +1,5 @@
 import { WatchTrends } from "./watch-trends.js";
+import { WatchReport } from "./watch-report.js";
 
 const actionNames = { gate: "Gate", shade: "Shade", seed: "Seed" };
 const readings = [
@@ -62,6 +63,8 @@ export class WatchJournal {
     this.entries.id = "journal-entries";
     const trendsRoot = element("section");
     this.trends = new WatchTrends(trendsRoot);
+    const reportRoot = element("section");
+    this.report = new WatchReport(reportRoot);
     this.details.append(
       toggle,
       element("p", "Revisit each choice, the complete field notes and every cell’s readings before and after the tide. Net changes include your action, the tide and dawn drift.", "journal-intro"),
@@ -71,7 +74,7 @@ export class WatchJournal {
       trendsRoot,
       this.entries,
     );
-    root.append(title, this.details);
+    root.append(title, reportRoot, this.details);
   }
 
   // A receiving save integration can describe its actual persistence behavior.
@@ -89,6 +92,7 @@ export class WatchJournal {
     this.count.textContent = "No tides yet";
     this.root.hidden = false;
     this.trends.start(state);
+    this.report.start(state);
   }
 
   /**
@@ -151,5 +155,6 @@ export class WatchJournal {
       this.details.open = true;
     }
     this.trends.record(before, after);
+    this.report.record(after);
   }
 }

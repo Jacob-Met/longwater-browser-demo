@@ -1,0 +1,8 @@
+The bundle contains these 2 refs:
+a8030e23c6bef1fc4e7220150a72ae0273053f3e HEAD
+a67b89362208507e1f9f6a61248b504b4c5387ff refs/heads/native-report-original
+The bundle requires these 2 refs:
+f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c 
+c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3 
+The bundle uses this hash algorithm: sha1
+/dev/shm/lw49-report-author-49f845d0dece/docs/qualification/watch-report-49f845d0dece/native-source.bundle is okay

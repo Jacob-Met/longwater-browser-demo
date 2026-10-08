@@ -18,6 +18,8 @@ const files = new Map([
   ["/journal.css", ["journal.css", "text/css"]],
   ["/watch-trends.js", ["watch-trends.js", "text/javascript"]],
   ["/watch-trends.css", ["watch-trends.css", "text/css"]],
+  ["/watch-report.js", ["watch-report.js", "text/javascript"]],
+  ["/watch-report.css", ["watch-report.css", "text/css"]],
   ["/pkg/longwater_web.js", ["pkg/longwater_web.js", "text/javascript"]],
   ["/pkg/longwater_web_bg.wasm", ["pkg/longwater_web_bg.wasm", "application/wasm"]],
 ]);
