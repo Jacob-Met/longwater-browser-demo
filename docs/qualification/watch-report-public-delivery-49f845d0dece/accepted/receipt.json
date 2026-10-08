@@ -1,0 +1,348 @@
+{
+  "owner": "estate-49f845d0dece/root",
+  "started_at": "2026-10-08T14:50:11.613Z",
+  "merge": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "node": "v22.22.1",
+  "contract_sha256": "b6f493c162c7a1e9ff47b2ab2d6624c79de650b891cfe79e63025c4b10226d26",
+  "source_sha256": "f0eb6c9f198560aee94574e387955a185080f2a11dde82c3cfc0c96a66437231",
+  "served": [
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/downloads/Longwater-Fourteen-Tides.html",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/downloads/Longwater-Fourteen-Tides.html",
+      "status": 200,
+      "bytes": 262291,
+      "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+      "git_blob": "389c3e21d1f216a7fb690675e77887935e47ee23",
+      "expected_git_blob": "389c3e21d1f216a7fb690675e77887935e47ee23",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "game.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/game.js",
+      "status": 200,
+      "bytes": 20308,
+      "sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+      "git_blob": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a",
+      "expected_git_blob": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "index.html",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/",
+      "status": 200,
+      "bytes": 5681,
+      "sha256": "7231aa85cf1f106d8d7f91dfe725088794828617d29c081618fadf9d37c6dabb",
+      "git_blob": "5e7d5c7da5ecd89d12c2693824da15d6635e5992",
+      "expected_git_blob": "5e7d5c7da5ecd89d12c2693824da15d6635e5992",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "journal.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css",
+      "status": 200,
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "expected_git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "journal.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js",
+      "status": 200,
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "expected_git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm",
+      "status": 200,
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "expected_git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/wasm"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js",
+      "status": 200,
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "expected_git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "style.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/style.css",
+      "status": 200,
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "expected_git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "watch-report.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css",
+      "status": 200,
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "expected_git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "watch-report.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js",
+      "status": 200,
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "expected_git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "watch-save.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css",
+      "status": 200,
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "expected_git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "watch-save.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js",
+      "status": 200,
+      "bytes": 7492,
+      "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+      "git_blob": "cc802ddd6041b76c7a491b487463636b82fda508",
+      "expected_git_blob": "cc802ddd6041b76c7a491b487463636b82fda508",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "watch-trends.css",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css",
+      "status": 200,
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "expected_git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "watch-trends.js",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js",
+      "response_url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js",
+      "status": 200,
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "expected_git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "last_modified": "Thu, 08 Oct 2026 14:36:20 GMT",
+      "content_type": "application/javascript; charset=utf-8"
+    }
+  ],
+  "groups": [
+    {
+      "name": "public runtime and downloadable artifact",
+      "outcome": "pass",
+      "files": 14
+    },
+    {
+      "name": "actual public game and two browser downloads",
+      "outcome": "pass",
+      "accepted_actions": [
+        "Gate/North Bank",
+        "Shade/Heart Pool",
+        "Seed/South Reach"
+      ],
+      "selected_cell": "North Bank",
+      "report_matches_independent_file": true
+    },
+    {
+      "name": "public partial report direct-open",
+      "outcome": "pass",
+      "tides": 3,
+      "status": "Partial watch · 3 of 14 tides completed",
+      "requests": [
+        "file:///home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/downloads/public-three-tide-report.html"
+      ],
+      "javaScriptEnabled": false,
+      "offline": true
+    },
+    {
+      "name": "actual public download plays offline",
+      "outcome": "pass",
+      "accepted_action": "Shade/South Reach",
+      "offline": true
+    },
+    {
+      "name": "offline new-watch report direct-open",
+      "outcome": "pass",
+      "tides": 1,
+      "status": "Partial watch · 1 of 14 tides completed",
+      "requests": [
+        "file:///home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/downloads/offline-one-tide-report.html"
+      ],
+      "javaScriptEnabled": false,
+      "offline": true
+    }
+  ],
+  "downloads": [
+    {
+      "label": "public partial report",
+      "filename": "public-three-tide-report.html",
+      "suggested_filename": "Longwater-watch-tide-03.html",
+      "url": "blob:https://jacobmetoyer.com/695a435a-b00c-4c75-8abb-aea7e7af4dac",
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "git_blob": "f40493b27a6a4ac087eca6ba2c49866d421ddf91",
+      "saved_witness_unchanged": true
+    },
+    {
+      "label": "public offline game",
+      "filename": "Longwater-Fourteen-Tides.html",
+      "suggested_filename": "Longwater-Fourteen-Tides.html",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 262291,
+      "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+      "git_blob": "389c3e21d1f216a7fb690675e77887935e47ee23",
+      "saved_witness_unchanged": true
+    },
+    {
+      "label": "public artifact offline report",
+      "filename": "offline-one-tide-report.html",
+      "suggested_filename": "Longwater-watch-tide-01.html",
+      "url": "blob:null/f1eef4e4-4d21-4e60-ab2b-9dc7a15590a0",
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+      "git_blob": "650d49b3c94231a734dc70b2e304a54af915427e",
+      "saved_witness_unchanged": true
+    }
+  ],
+  "page_errors": [],
+  "page_requests": [
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js",
+      "method": "GET"
+    },
+    {
+      "page": "public-game",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm",
+      "method": "GET"
+    },
+    {
+      "page": "public partial report direct-open",
+      "url": "file:///home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/downloads/public-three-tide-report.html",
+      "method": "GET"
+    },
+    {
+      "page": "downloaded-offline-game",
+      "url": "file:///home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/downloads/Longwater-Fourteen-Tides.html",
+      "method": "GET"
+    },
+    {
+      "page": "offline new-watch report direct-open",
+      "url": "file:///home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/downloads/offline-one-tide-report.html",
+      "method": "GET"
+    }
+  ],
+  "assertions": [
+    "no page exceptions",
+    "no HTTP requests from either direct-open report or offline game"
+  ],
+  "outcome": "pass",
+  "oracle_sha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+  "browser": "154.0.8037.57",
+  "finished_at": "2026-10-08T14:50:25.756Z"
+}

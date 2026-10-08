@@ -1,0 +1,150 @@
+{
+  "owner": "estate-49f845d0dece/root",
+  "recorded_at": "2026-10-08 14:55:31 UTC",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "pull_request": 22,
+  "issue": 18,
+  "head": "b00da99b0cfed7e738bf046d436cca88ceeef192",
+  "native_qualified_source": "a8030e23c6bef1fc4e7220150a72ae0273053f3e",
+  "native_packaging": "b2ee8fe0a372b49add14423f878ae2fe2562f7ba",
+  "merged_commit": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "merged_tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "actual_parents": [
+    "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "b00da99b0cfed7e738bf046d436cca88ceeef192"
+  ],
+  "hosted_tested_merge": "f2b8c27ca9345caad2518cfa9d98df50e5a4833b",
+  "tree_correspondence": "native packaging, published PR, hosted tested merge and actual merge have the same complete tree",
+  "preservation": {
+    "base_leaves": 108,
+    "merged_leaves": 135,
+    "unowned_base_leaves_preserved": 100,
+    "changed_paths": 35,
+    "scoped_source_test_paths": 11,
+    "source_evidence_paths": 24,
+    "removed": 0,
+    "errors": 0
+  },
+  "gates": {
+    "native_suite": {
+      "passed": 66,
+      "failed": 0,
+      "skipped": 0,
+      "source": "a8030e23c6bef1fc4e7220150a72ae0273053f3e"
+    },
+    "hosted_pull_request": {
+      "run": 37792220716,
+      "head": "b00da99b0cfed7e738bf046d436cca88ceeef192",
+      "jobs": [
+        {
+          "id": 113362316450,
+          "name": "browser",
+          "conclusion": "success"
+        },
+        {
+          "id": 113362316147,
+          "name": "smoke",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "hosted_push": {
+      "run": 37793786965,
+      "head": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+      "conclusion": "success"
+    },
+    "pages": {
+      "run": 37793786312,
+      "head": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+      "conclusion": "success"
+    }
+  },
+  "independent_browser": {
+    "groups_passed": 15,
+    "original_packet": "dcf501b59349c54e52ee1fe9e2eca81f4cd58a6f",
+    "readme_only_successor": "30c2105346c8fdaf8829d827880e8496dd0d2a1b",
+    "public_received_leaves": 21,
+    "preserved_base_leaves": 100,
+    "acceptance_comment": 6062243297
+  },
+  "independent_print": {
+    "packet": "dc81c57ed9d990543b0fb30fdfb30f0c01493bc3",
+    "html_sha256": "f9ff6f51fae8e285aadc2ffbf2fa226781814fe0782dd2a5d225dddbd2a284e7",
+    "pdf_sha256": "44a574b234c59ad0c6192436a156c80a0aa0ebe91080b87349f249630c11d92a",
+    "pages": 11,
+    "native_nonwhitespace_characters": 9111,
+    "full_notes": 56,
+    "metric_cells": 240,
+    "root_visual_review_pages": [
+      1,
+      9,
+      10
+    ],
+    "acceptance_comment": 6062083736
+  },
+  "public_delivery": {
+    "url": "https://jacobmetoyer.com/longwater-browser-demo/",
+    "started_at": "2026-10-08T14:50:11.613Z",
+    "finished_at": "2026-10-08T14:50:25.756Z",
+    "outcome": "pass",
+    "groups": 5,
+    "served_files": 14,
+    "browser_downloads": 3,
+    "page_exceptions": 0,
+    "receiver_sha256": "f0eb6c9f198560aee94574e387955a185080f2a11dde82c3cfc0c96a66437231",
+    "contract_sha256": "b6f493c162c7a1e9ff47b2ab2d6624c79de650b891cfe79e63025c4b10226d26",
+    "downloads": [
+      {
+        "label": "public partial report",
+        "bytes": 10435,
+        "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+        "git_blob": "f40493b27a6a4ac087eca6ba2c49866d421ddf91",
+        "saved_witness_unchanged": true
+      },
+      {
+        "label": "public offline game",
+        "bytes": 262291,
+        "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737",
+        "git_blob": "389c3e21d1f216a7fb690675e77887935e47ee23",
+        "saved_witness_unchanged": true
+      },
+      {
+        "label": "public artifact offline report",
+        "bytes": 6504,
+        "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef",
+        "git_blob": "650d49b3c94231a734dc70b2e304a54af915427e",
+        "saved_witness_unchanged": true
+      }
+    ]
+  },
+  "preserved_negative_evidence": [
+    {
+      "attempt": 1,
+      "kind": "receiving driver",
+      "fact": "Accepted Tide 1 existed inside the intentionally collapsed journal; visibility wait timed out. Changed only wait admission to attached; exact counts, bytes and state assertions retained."
+    },
+    {
+      "attempt": 2,
+      "kind": "native browser setup",
+      "fact": "All14 served blobs matched, then Chrome aborted before page creation because the generated SingletonSocket path exceeded the UNIX socket path limit. Changed only the isolated browser temp path."
+    }
+  ],
+  "limitations": [
+    "The actual public delivery is an observation at its recorded time, not a guarantee about later site revisions.",
+    "The complete-watch and A4 print qualification reuse the pinned independent receipts; the public path exercised three accepted online tides and one accepted offline tide.",
+    "No authenticated account, pre-existing browser profile, installed service, physical printer, alternate browser engine or hosting configuration was changed."
+  ],
+  "continuation": {
+    "report_source_scope": "integrated and delivered at the recorded merge",
+    "other_longwater_owners_preserved": [
+      "issue12 watch transfer",
+      "issue16 sound",
+      "issue17 alternative choices"
+    ],
+    "next_team_scopes": [
+      "TasteTable issue29 saved-week comparison and independent real producer receiving",
+      "ReturnBy owner-coordinated Undo/CSV composition receiving"
+    ]
+  },
+  "native_custody": "/home/jacob/longwater-public-delivery-49f845d0dece"
+}

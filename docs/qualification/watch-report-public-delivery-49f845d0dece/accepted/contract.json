@@ -1,0 +1,99 @@
+{
+  "owner": "estate-49f845d0dece/root",
+  "created_at": "2026-10-08 14:41:23 UTC",
+  "merge": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "base_url": "https://jacobmetoyer.com/longwater-browser-demo/",
+  "files": [
+    {
+      "path": "index.html",
+      "git_blob": "5e7d5c7da5ecd89d12c2693824da15d6635e5992",
+      "mode": "100644"
+    },
+    {
+      "path": "style.css",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "mode": "100644"
+    },
+    {
+      "path": "journal.css",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-trends.css",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-save.css",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-report.css",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "mode": "100644"
+    },
+    {
+      "path": "game.js",
+      "git_blob": "9ba88135b0862e44e58cfd0bb4af4ede4dba925a",
+      "mode": "100644"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "mode": "100644"
+    },
+    {
+      "path": "journal.js",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-save.js",
+      "git_blob": "cc802ddd6041b76c7a491b487463636b82fda508",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-trends.js",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "mode": "100644"
+    },
+    {
+      "path": "watch-report.js",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "mode": "100644"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "mode": "100644"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "git_blob": "389c3e21d1f216a7fb690675e77887935e47ee23",
+      "mode": "100644"
+    }
+  ],
+  "expected": {
+    "offline": {
+      "bytes": 262291,
+      "sha256": "4a243c96843a719cea40e46174643771dcbed622bcaea8156f85561e5e797737"
+    },
+    "partial": {
+      "bytes": 10435,
+      "sha256": "6e2121284341761c5fc7c8d78b0cd98d51e8931b8acfb834560d48028c7dd20b",
+      "file": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/receiving-a8030e2-run-01/packaged-partial.html"
+    },
+    "fresh": {
+      "bytes": 6504,
+      "sha256": "f800049d5beca5613f6ef414aaedbcb851db1a54494db15dda373b37f91fbeef"
+    },
+    "oracle": {
+      "sha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+      "file": "/dev/shm/lw49-report-receiver-49f845d0dece/evidence/native-inputs.json"
+    }
+  },
+  "receiving": "One clean public browser context plays Gate/North, Shade/Heart, Seed/South and downloads the exact qualified partial report and offline game; the actual downloaded game opens offline, accepts Shade/South and downloads the exact qualified new-watch report. Both reports open without JavaScript or network. Compare all fourteen served runtime/download Git blobs, actual download bytes, unchanged game/saved witness and page errors. Reuse frozen independent outputs; do not repeat the earlier complete-watch/print matrix."
+}

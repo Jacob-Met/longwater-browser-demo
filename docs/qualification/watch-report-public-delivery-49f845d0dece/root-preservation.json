@@ -1,0 +1,226 @@
+{
+  "observed_at": "2026-10-08 14:33:22 UTC",
+  "base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "head": "b00da99b0cfed7e738bf046d436cca88ceeef192",
+  "base_tree": "b825a333b9d7f73a73b801f517b07c256aea5934",
+  "head_tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "base_leaves": 108,
+  "head_leaves": 135,
+  "preserved_unowned_leaves": 100,
+  "source_manifest_count": 11,
+  "changes": [
+    {
+      "path": "README.md",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "0dc34c3ecfadb1275e886cc7264d7f0a069b117f"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/README.md",
+      "status": "added",
+      "mode": "100644",
+      "sha": "a4e0fc15fa340d3db34a785330a37d8cb62555b3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-full-suite.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "c810eb7c75a85bebe89f507d0b1698371ddb9925"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-full-suite.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "d38f2eeddd27f41e82eb4023bc9bc76923046cce"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/composed-package.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "c51b7437c8f1616aad8764803b84dd7ac91eeab3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/final-full-suite.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "3ccba336039bc5701314c8f564638753bcd75324"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/final-full-suite.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "8df9ea5c18b2382cf34acc6369f267702ed7f4c0"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/full-suite.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "de39641d6878186132479ad376215e99b37b3fdd"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/full-suite.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "1c9ae1a32f10ce6ade127ea708e7bc87d711b9ac"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/keyboard-diagnostic.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "eafcfd45113bc9cb6da17ef541b8b85e39d8f909"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "f4ee99039fb944bfc631fb83aa27f7edac03e96d"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.mjs",
+      "status": "added",
+      "mode": "100644",
+      "sha": "ef4787b5e1ebe4d1983a1eaf82ce80d60aac381f"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/first-focused.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "d7aca9412fbfdd6d27d700777de12f0427450327"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "8b8b12016e5777c3cf7c3c908aba7ca237c8f056"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "730e0b0ca167b120ef327f764f494968c5464e3f"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/mac-initial/source-freeze.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "f1176395d4b850823a54875c69168b37f012552a"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/manifest.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "5f0603f1642af5ba63e2069e0f73c336799b007e"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/native-bundle-verification.txt",
+      "status": "added",
+      "mode": "100644",
+      "sha": "e3aac702de27a5bd0631cdb7b4c7d930d2184f85"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/native-source.bundle",
+      "status": "added",
+      "mode": "100644",
+      "sha": "9a8ff1c6e41b200fbd0f771071aaa2dab5e7a57c"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/package.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "a7efdc4a08c3e996ab0dc6fc4ef8c87a15a3e2f0"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze-0df34ae.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "ef4d9b5678dba53dbbb4020aaa0d0fcc5fd0ada8"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze-260d00a.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "e6c735fe62a39ee02fc2ca2ab604fd783452b4c3"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/source-freeze.json",
+      "status": "added",
+      "mode": "100644",
+      "sha": "bf2f8bc39f0cccf8e99a977f2e640f9a27e7d8d6"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/watch-report-phone.png",
+      "status": "added",
+      "mode": "100644",
+      "sha": "1afdbcdcf1f38b52fb3e6e25b19f5f239b7f9745"
+    },
+    {
+      "path": "docs/qualification/watch-report-49f845d0dece/watch-report-readable.png",
+      "status": "added",
+      "mode": "100644",
+      "sha": "07c011b61946a6520882fe1fbe1b91fb47114108"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "389c3e21d1f216a7fb690675e77887935e47ee23"
+    },
+    {
+      "path": "index.html",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "5e7d5c7da5ecd89d12c2693824da15d6635e5992"
+    },
+    {
+      "path": "journal.js",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "a936acf9d0635fd6f774396adb03c3d1e40e6edd"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "5f3e260b13e48f80616fa19977a07225431db1d2"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "fc381bcc2d1887484f0afbb097ab8ad8f7f69b5a"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "status": "added",
+      "mode": "100644",
+      "sha": "d835b6f14e0cd78b3a9c293d2ac3199ffcb82909"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "status": "modified",
+      "mode": "100644",
+      "sha": "d78f9eb4ed4099b6f49f4acc1c99cd993d5ffeef"
+    },
+    {
+      "path": "watch-report.css",
+      "status": "added",
+      "mode": "100644",
+      "sha": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "status": "added",
+      "mode": "100644",
+      "sha": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    }
+  ],
+  "removed": [],
+  "errors": [],
+  "accepted": true
+}

@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-10-08T14:50:09.446Z",
+  "finished_at": "2026-10-08T14:50:25.868Z",
+  "command": [
+    "/usr/bin/node",
+    "/home/jacob/longwater-public-delivery-49f845d0dece/attempt-03/receive-public-delivery.mjs"
+  ],
+  "cwd": "/home/jacob/longwater-public-delivery-49f845d0dece/attempt-03",
+  "status": 0,
+  "signal": null,
+  "error": null
+}
