@@ -1,0 +1,145 @@
+--- historical/receiver.mjs
++++ receiver.mjs
+@@ -1,9 +1,8 @@
+ import assert from 'node:assert/strict';
+ import { createHash } from 'node:crypto';
+ import { execFileSync } from 'node:child_process';
+-import { createServer } from 'node:http';
+ import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+-import { dirname, extname, join, resolve } from 'node:path';
++import { dirname, join, resolve } from 'node:path';
+ import { fileURLToPath, pathToFileURL } from 'node:url';
+ 
+ const root = resolve(process.argv[2] || join(dirname(fileURLToPath(import.meta.url)), 'source'));
+@@ -17,7 +16,7 @@
+ const sha256 = value => createHash('sha256').update(value).digest('hex');
+ const key = 'longwater.watch.v1';
+ const turns = [[2, 'gate'], [0, 'seed'], [1, 'shade'], [2, 'seed'], [0, 'gate'], [1, 'seed'], [2, 'shade'], [0, 'shade'], [1, 'gate'], [2, 'gate'], [0, 'seed'], [1, 'shade'], [2, 'seed'], [0, 'gate']];
+-const sourceNames = ['game.js', 'index.html', 'journal.js', 'journal.css', 'watch-save.js', 'watch-save.css', 'style.css', 'scripts/package.mjs', 'pkg/longwater_web.js', 'pkg/longwater_web_bg.wasm'];
++const sourceNames = ["index.html", "style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-report.css", "watch-file.css", "watch-choice.css", "practice-watch.css", "game.js", "pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-file.js", "watch-choice.js", "practice-watch.js", "watch-trends.js", "watch-report.js", "watch-choice-model.js", "pkg/longwater_web_bg.wasm", "scripts/package.mjs", "package.json"];
+ const sourceBefore = {};
+ for (const name of sourceNames) sourceBefore[name] = sha256(await readFile(join(root, name)));
+ await mkdir(output, { recursive: true });
+@@ -28,6 +27,10 @@
+   chromium_path: chromiumPath,
+   wasm_sha256: sha256(wasm),
+   source_before: sourceBefore,
++  source_commit: '9407f172518d0d6b19146e2431bcabbb2c307241',
++  source_tree: '213c1143ca58a170dc4d22525e5e8a6f0c62061b',
++  scope: 'Current-source three-process offline completed-watch persistence only; BFCache is not executed.',
++  historical_receipt_sha256: '43982f39dbc77565455e0f1d303a4495cd51032f97654d0466ebfbc764d17cb1',
+   cases: [],
+ };
+ 
+@@ -80,6 +83,12 @@
+   receipt.cases.push(result);
+   const packaged = JSON.parse(execFileSync(process.execPath, [join(root, 'scripts/package.mjs'), join(output, 'Longwater-Fourteen-Tides.html')], { encoding: 'utf8' }));
+   result.package = packaged;
++  const packagedBytes = await readFile(packaged.file);
++  const packageBlob = createHash('sha1').update(Buffer.from('blob ' + packagedBytes.length + '\0')).update(packagedBytes).digest('hex');
++  result.published_artifact_git_blob = packageBlob;
++  assert.equal(packageBlob, '4c9b109de95b7e7bd62a9919bc2862040fc1dc6f', 'current native packager reproduces exact immutable published download');
++  assert.equal(packagedBytes.length, 339166);
++  assert.equal(sha256(packagedBytes), '1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33');
+   const url = pathToFileURL(packaged.file).href;
+   const profile = await mkdtemp(join(output, 'owned-offline-profile-'));
+   const native = new BrowserSession();
+@@ -148,98 +157,10 @@
+   }
+ }
+ 
+-async function backForwardCacheAfterOtherTabReset() {
+-  const result = { name: 'back-forward restored watch preserves another tab reset and subsequent tide', status: 'running', errors: [], unexpected_requests: [], not_restored_reasons: [] };
+-  receipt.cases.push(result);
+-  const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.wasm': 'application/wasm' };
+-  const runtimePaths = new Set(sourceNames.filter(name => !name.startsWith('scripts/')));
+-  const server = createServer(async (request, response) => {
+-    const pathname = new URL(request.url, 'http://127.0.0.1').pathname;
+-    if (pathname === '/away.html') {
+-      response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' }).end('<!doctype html><title>Other local page</title><h1>Other local page</h1>');
+-      return;
+-    }
+-    const name = pathname === '/' ? 'index.html' : pathname.slice(1);
+-    if (!runtimePaths.has(name)) { response.writeHead(404).end(); return; }
+-    try {
+-      response.writeHead(200, { 'content-type': mime[extname(name)] });
+-      response.end(await readFile(join(root, name)));
+-    } catch { response.writeHead(500).end(); }
+-  });
+-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+-  const url = `http://127.0.0.1:${server.address().port}`;
+-  let browser;
+-  const nativeA = new BrowserSession();
+-  const statesA = [JSON.parse(nativeA.snapshot_json())];
+-  const nativeB = new BrowserSession();
+-  const statesB = [JSON.parse(nativeB.snapshot_json())];
+-  try {
+-    browser = await chromium.launch({
+-      headless: true, executablePath: chromiumPath,
+-      // Playwright's normal automation args turn this browser feature off.
+-      // Removing only that argument lets actual pageshow.persisted establish it.
+-      ignoreDefaultArgs: ['--disable-back-forward-cache'],
+-    });
+-    receipt.chromium = browser.version();
+-    const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+-    context.on('request', request => {
+-      if (!request.url().startsWith(`${url}/`) && !request.url().startsWith('data:')) result.unexpected_requests.push(request.url());
+-    });
+-    await context.addInitScript(() => {
+-      window.receivingLifecycle = { identity: crypto.randomUUID(), events: [] };
+-      addEventListener('pageshow', event => window.receivingLifecycle.events.push({ event: 'pageshow', persisted: event.persisted }));
+-      addEventListener('pagehide', event => window.receivingLifecycle.events.push({ event: 'pagehide', persisted: event.persisted }));
+-    });
+-    const a = await context.newPage();
+-    const b = await context.newPage();
+-    for (const page of [a, b]) { page.setDefaultTimeout(10000); page.on('pageerror', error => result.errors.push(error.message)); }
+-    const cdp = await context.newCDPSession(a);
+-    await cdp.send('Page.enable');
+-    cdp.on('Page.backForwardCacheNotUsed', event => result.not_restored_reasons.push(event));
+-    await ready(a, url);
+-    for (const turn of turns.slice(0, 3)) await act(a, nativeA, statesA, turn);
+-    result.before_navigation = await a.evaluate(() => window.receivingLifecycle);
+-    await a.goto(`${url}/away.html`);
+-    await ready(b, url);
+-    await b.locator('#reset-control').click();
+-    await act(b, nativeB, statesB, [0, 'shade']);
+-    const otherSaved = await rawSave(b);
+-    result.other_tab_saved_sha256 = sha256(otherSaved);
+-    result.other_tab_native_states = statesB;
+-    await a.goBack({ waitUntil: 'commit' });
+-    await a.waitForFunction(() => /Day \d+ of 14/.test(document.querySelector('#state-summary')?.textContent));
+-    result.after_back = await a.evaluate(() => window.receivingLifecycle);
+-    assert.equal(result.after_back.identity, result.before_navigation.identity, 'Back returns the same suspended document, rather than a reload control');
+-    assert.ok(result.after_back.events.some(event => event.event === 'pageshow' && event.persisted), 'the actual browser confirms a BFCache restoration');
+-    await a.waitForFunction(() => document.querySelector('#watch-save-status').textContent.includes('another tab'));
+-    result.after_back_status = await a.locator('#watch-save-status').textContent();
+-    await assertNativeJournal(a, statesA);
+-    assert.equal(await rawSave(a), otherSaved);
+-    await act(a, nativeA, statesA, [2, 'gate']);
+-    await assertNativeJournal(a, statesA);
+-    assert.equal(await rawSave(a), otherSaved, 'continued local play after Back does not overwrite the other tab watch');
+-    result.local_unsaved_native_states = statesA;
+-    await a.reload();
+-    await a.waitForFunction(() => document.querySelector('#watch-save-status').textContent.includes('Resumed'));
+-    await assertNativeJournal(a, statesB);
+-    assert.equal(await rawSave(a), otherSaved, 'explicit reload receives exactly the newer saved branch without rewriting it');
+-    assert.deepEqual(result.errors, []);
+-    assert.deepEqual(result.unexpected_requests, []);
+-    result.status = 'passed';
+-    await context.close();
+-  } catch (error) {
+-    result.status = 'failed'; result.failure = String(error.stack || error); throw error;
+-  } finally {
+-    nativeA.free(); nativeB.free();
+-    await browser?.close();
+-    await new Promise(resolve => server.close(resolve));
+-  }
+-}
+ 
+ try {
+   await offlineProcessRestart();
+   await writeFile(join(output, 'receipt.json'), JSON.stringify(receipt, null, 2) + '\n');
+-  await backForwardCacheAfterOtherTabReset();
+ } catch (error) {
+   receipt.failure = String(error.stack || error);
+   process.exitCode = 1;
