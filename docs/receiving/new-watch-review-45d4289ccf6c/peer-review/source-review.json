@@ -1,0 +1,293 @@
+{
+  "schema": "longwater.new-watch.independent-source-review.v1",
+  "reviewer": "chatgpt-45d4289ccf6c/github_receiving",
+  "reviewed_at": "2026-10-08T13:48:30.497654+00:00",
+  "disposition": "accepted exact reset source and maintained receiving; no material source finding",
+  "source_commit": "3710126f722d7552d93dcd655a6aa400f77c7d74",
+  "source_tree": "e76bf9c70abd23d6a0fb494698dc8e2cd8576a6f",
+  "base_commit": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+  "base_tree": "83c3d5e74377ff6403d1a531718d0674de02d9d2",
+  "source_sha256": {
+    "game.js": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+    "index.html": "da53cc1d9209f0ad86e6dacf350370f8a7fa94400c5eb5d6bfe0c8932633ebcf",
+    "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+    "README.md": "2ee9e2e53e8635ecdfe014e45a868e5ef70046466442305422082175787852ea",
+    "downloads/Longwater-Fourteen-Tides.html": "3d279c685e3715a975c0bfbf5da882d18d55045163bd886f878e91d7437c60bb",
+    "tests/new-watch.test.mjs": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+    "tests/browser.test.mjs": "1e27769e0337d984254b8fd85158094043f7461e37915cee9a52b28310aa6cfb",
+    "tests/journal.test.mjs": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+    "tests/resume-journal.test.mjs": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+    "tests/watch-trends.test.mjs": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+    "tests/package.test.mjs": "17c4ba863a6d981c07d5615f1f1bd6e90c9d239f61b33979c3248bf9d17bd99c",
+    "tests/watch-save.browser.test.mjs": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5"
+  },
+  "independent_checks": {
+    "manifest_stages": [
+      {
+        "stage": "initial",
+        "manifest_sha256": "d7b267ba47ebdd6a84e013351122f63f667ff4f78f093ecc170c793bf5022066",
+        "payload_files": 20,
+        "files": [
+          {
+            "path": "source/game.js",
+            "sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+            "bytes": 20308
+          },
+          {
+            "path": "source/index.html",
+            "sha256": "da53cc1d9209f0ad86e6dacf350370f8a7fa94400c5eb5d6bfe0c8932633ebcf",
+            "bytes": 5629
+          },
+          {
+            "path": "source/style.css",
+            "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+            "bytes": 3342
+          },
+          {
+            "path": "source/README.md",
+            "sha256": "2ee9e2e53e8635ecdfe014e45a868e5ef70046466442305422082175787852ea",
+            "bytes": 10981
+          },
+          {
+            "path": "source/tests/new-watch.test.mjs",
+            "sha256": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+            "bytes": 16946
+          },
+          {
+            "path": "source/tests/browser.test.mjs",
+            "sha256": "1e27769e0337d984254b8fd85158094043f7461e37915cee9a52b28310aa6cfb",
+            "bytes": 8100
+          },
+          {
+            "path": "source/tests/journal.test.mjs",
+            "sha256": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+            "bytes": 11813
+          },
+          {
+            "path": "source/tests/resume-journal.test.mjs",
+            "sha256": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+            "bytes": 11052
+          },
+          {
+            "path": "source/tests/watch-trends.test.mjs",
+            "sha256": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+            "bytes": 14059
+          },
+          {
+            "path": "source/tests/package.test.mjs",
+            "sha256": "17c4ba863a6d981c07d5615f1f1bd6e90c9d239f61b33979c3248bf9d17bd99c",
+            "bytes": 3766
+          },
+          {
+            "path": "evidence/baseline/receipt.json",
+            "sha256": "de91953462b7cf06c9dd2fb9034164f950c08c53fc49fc45c5e179748e8dfa8f",
+            "bytes": 3285
+          },
+          {
+            "path": "evidence/candidate-v1/receipt.json",
+            "sha256": "1e38059a6bbd2d59912886116b3887ab86b27672b7867fc729b2f8e7f47ecb9b",
+            "bytes": 3676
+          },
+          {
+            "path": "evidence/baseline-corrected/receipt.json",
+            "sha256": "aed880f5cf42f712769326e81fb034f4f3a1bc3cf565805eee27d0ca5e45abc0",
+            "bytes": 3223
+          },
+          {
+            "path": "evidence/candidate-corrected/receipt.json",
+            "sha256": "cca1cfefc263717ed2f9a2a543641dc14570d48e7b3d8ab305e497494d433359",
+            "bytes": 3179
+          },
+          {
+            "path": "evidence/receiver-correction/adaptation.json",
+            "sha256": "8808f3b98e2dbfb13d9cb8967aee3f5195e0ba86d3421e0f14243287a50e7ecf",
+            "bytes": 985
+          },
+          {
+            "path": "evidence/receiver-correction/diagnostic.json",
+            "sha256": "15a2d79a35ba208db0c4e238edc9fda15ba902b78c369ec4592c91ec1a8cfe93",
+            "bytes": 2039
+          },
+          {
+            "path": "evidence/receiver-correction/caret-initial/diagnostic.json",
+            "sha256": "a53c9ba345bdbf3868215b69161db7a1e8c759caa0214f3c47d9db0f0d26ebb9",
+            "bytes": 1966
+          },
+          {
+            "path": "evidence/receiver-correction/receiver-adaptation.patch",
+            "sha256": "eec23a9516ce0c9b4bf34e7ad0059e69759ee5510f46f6fa6e72399e2d2160a5",
+            "bytes": 2884
+          },
+          {
+            "path": "evidence/offline-extension-baseline/receipt.json",
+            "sha256": "a0fbe35b09e1fed7b907792bece1d19780be9c3f1d0a85a34a3a6adad3d765ee",
+            "bytes": 822
+          },
+          {
+            "path": "source.patch",
+            "sha256": "69141b24c41787c7694b651c86b7d02d69a73b88756f9dfd2308a1b5a08ca8ca",
+            "bytes": 14496
+          }
+        ]
+      },
+      {
+        "stage": "final",
+        "manifest_sha256": "9e34dc5bcc952a987dda6ccf986c89e6485255c3047f7376c158bcf75b7e187e",
+        "payload_files": 11,
+        "files": [
+          {
+            "path": "evidence/native-full/receipt.json",
+            "sha256": "46e8ee8738f3bbcd58919ac23d64602ae614b7895308f379ef3345449cad81c4",
+            "bytes": 9718
+          },
+          {
+            "path": "evidence/native-full/node-test.log",
+            "sha256": "8b3c66be2cf34ba4431efe20ee0f31088cb3f381158b211b224d32b64d75439a",
+            "bytes": 16351
+          },
+          {
+            "path": "evidence/native-npm/receipt.json",
+            "sha256": "5216d93e405ebc921a35c404d7c5292cf63ecd3dc2b4b84e655202388d1bd1df",
+            "bytes": 10227
+          },
+          {
+            "path": "evidence/native-npm/npm-test.log",
+            "sha256": "d0f455e2cc43647f29e46047ca4a585adf6c43ca9aa8e70581c06e6407b6e568",
+            "bytes": 6149
+          },
+          {
+            "path": "evidence/native-npm/offline-download/receipt.json",
+            "sha256": "cb622c94537a1c87d5bc9b4e0ae435cdc3a29237f97cddf16079e44d0c9f368e",
+            "bytes": 8640
+          },
+          {
+            "path": "evidence/save-test-composition/receipt.json",
+            "sha256": "69f22384566756ccc987760b7e6d474314ca16725315d136238b863aa852854b",
+            "bytes": 543
+          },
+          {
+            "path": "evidence/save-test-composition/test-adaptation.patch",
+            "sha256": "74efd4755e4d4100e763fcb87c2b729b5600184e6690277c02e4fba909c7e01c",
+            "bytes": 1326
+          },
+          {
+            "path": "evidence/native-source/receipt.json",
+            "sha256": "dd65e25bc0d2b686ff918f2bae2f155c821cc2b2b43b00f14bba392ee1949ba5",
+            "bytes": 3099
+          },
+          {
+            "path": "source/tests/watch-save.browser.test.mjs",
+            "sha256": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5",
+            "bytes": 11714
+          },
+          {
+            "path": "receiver-extension.patch",
+            "sha256": "b9741961c07aeec7bfaaf8708c83ca0e5fb27c1ff1421e3d3a331748340f2f6c",
+            "bytes": 3375
+          },
+          {
+            "path": "source.patch",
+            "sha256": "98b48db0698ad9a17d8b09fba3ccb3911b68bb1b19080061ed3120aa822c2529",
+            "bytes": 33657
+          }
+        ]
+      }
+    ],
+    "git_commit_hash_with_canonical_final_newline": "3710126f722d7552d93dcd655a6aa400f77c7d74",
+    "baseline_runtime_reconstructed_from_reverse_patch": {
+      "game.js": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145",
+      "index.html": "8ef93fe7e0db1fc49da8326d5c9b9ad629e12874c64cccecde3de7326db1982c",
+      "style.css": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95"
+    },
+    "receiver_extension_reverse_sha256": "0c08c4c7612235d048755401814a8b621f8acf16dcea1315c7a6562546acea37",
+    "actual_final_log_sha256": "d0f455e2cc43647f29e46047ca4a585adf6c43ca9aa8e70581c06e6407b6e568",
+    "actual_final_log_summary": {
+      "tests": 60,
+      "pass": 60,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "new_case_names_in_actual_log": [
+      "Reset reviews replacement before changing a native watch; cancel retains exact saved state and journal",
+      "R uses the same review; Escape and the initially focused Enter action keep the watch",
+      "confirming starts exactly the native opening and resets the saved journal once",
+      "completed fourteen-tide outcome and full history survive a declined new watch",
+      "phone touch can cancel then deliberately confirm without horizontal overflow",
+      "the review blocks background game controls and ignores their keyboard shortcuts",
+      "a saved-watch change from another tab invalidates an already open replacement review",
+      "unavailable browser storage still lets the player decline then explicitly start a fresh watch",
+      "modified or held R and R while reading the journal remain inert",
+      "ordinary actions still advance exactly the existing native simulation",
+      "the assembled offline file preserves a declined watch and saves only an explicitly confirmed new watch"
+    ],
+    "save_test_changes": {
+      "additions": [
+        "  await page.getByRole(\"button\", { name: \"Start new watch\", exact: true }).click();",
+        "    await page.getByRole(\"button\", { name: \"Start new watch\", exact: true }).click();",
+        "  await second.getByRole(\"button\", { name: \"Start new watch\", exact: true }).click();"
+      ],
+      "removed_lines": 0
+    }
+  },
+  "source_findings": [
+    "Reset and R now request a native modal review; Keep is initially focused. Original reset, simulation, journal and save implementation remains unchanged.",
+    "Cancel and Escape retain watch state, save and journal. Confirm rejects a stale captured watch/snapshot/selection before invoking original reset.",
+    "Observed cross-tab storage events dismiss the open review. Native modal inertness blocks background game controls. README retains the nontransactional cross-tab limitation.",
+    "Failed showModal retains the current watch with an explicit notice. Existing test assertions remain intact with explicit confirmation of reset.",
+    "Receiver correction preserves strict journal equality with screenshot caret initial, tests both dialog controls and background inertness, and permits only actual browser-chrome focus while the native dialog remains modal.",
+    "Offline extension adapts the helper allow-list and navigation to exact file URL plus data requests, then tests decline/confirm/reload with actual packaged WASM. Default HTTP allow-list remains equivalent."
+  ],
+  "preserved_receiving_stages": [
+    {
+      "stage": "initial baseline",
+      "passed": 2,
+      "failed": 8,
+      "receiver": "606c5b2659b570dc03865bf0c53f340c118382fe90a8226dc1f160440a2d00fb"
+    },
+    {
+      "stage": "initial candidate",
+      "passed": 7,
+      "failed": 3,
+      "scope": "receiver screenshot/focus assumptions; runtime unchanged"
+    },
+    {
+      "stage": "corrected baseline",
+      "passed": 2,
+      "failed": 8,
+      "receiver": "0c08c4c7612235d048755401814a8b621f8acf16dcea1315c7a6562546acea37"
+    },
+    {
+      "stage": "corrected candidate",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "stage": "offline-only baseline",
+      "passed": 0,
+      "failed": 1,
+      "receiver": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344"
+    },
+    {
+      "stage": "first full candidate",
+      "passed": 57,
+      "failed": 3,
+      "scope": "three pre-existing watch-save tests required new explicit confirmation"
+    },
+    {
+      "stage": "final npm test",
+      "passed": 60,
+      "failed": 0,
+      "skipped": 0,
+      "new_cases": 11,
+      "log_sha256": "d0f455e2cc43647f29e46047ca4a585adf6c43ca9aa8e70581c06e6407b6e568"
+    }
+  ],
+  "limits": [
+    "Independent source and evidence review; no browser/application tests rerun and no author source or evidence changed.",
+    "Commit payload is independently hashed with its canonical final newline. Full native tree leaf preservation and bundle qualification are supplied author receipts, not a second independent full native fetch.",
+    "Actual browser fixture evidence does not establish physical-device, browser-wide or production-deployment qualification.",
+    "Documented cross-tab storage check is best-effort; no transactional cross-tab guarantee is claimed."
+  ]
+}

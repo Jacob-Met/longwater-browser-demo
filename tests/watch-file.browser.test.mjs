@@ -192,10 +192,11 @@ test("late file reads cannot replace subsequent play, selection, reset or a newe
   const mutate = [
     () => page.locator('[data-action="gate"]').click(),
     () => page.locator('[data-cell="0"]').click(),
-    () => page.locator("#reset-control").click(),
+    async () => { await page.locator("#reset-control").click(); await page.locator("#start-new-watch").click(); },
   ];
   for (let index = 0; index < mutate.length; index++) {
     await page.locator("#reset-control").click();
+    await page.locator("#start-new-watch").click();
     await choose(page, raw, "delayed-" + index + ".json");
     await page.waitForFunction(count => window.watchFileReads.length === count, index + 1);
     await mutate[index]();
@@ -224,9 +225,10 @@ test("play and reset invalidate an already visible preview and cancellation keep
   for (const mutate of [
     () => page.locator('[data-action="gate"]').click(),
     () => page.locator('[data-cell="0"]').click(),
-    () => page.locator("#reset-control").click(),
+    async () => { await page.locator("#reset-control").click(); await page.locator("#start-new-watch").click(); },
   ]) {
     await page.locator("#reset-control").click();
+    await page.locator("#start-new-watch").click();
     await preview(page, raw);
     await mutate();
     assert.equal(await page.locator("#watch-file-preview").isVisible(), false);
@@ -422,5 +424,39 @@ test("post-adoption display failure reports the opened watch, freezes stale cont
     assert.equal(await day(page), 3);
     assert.equal(await page.locator("#journal-entries > li").count(), 3);
     assert.equal(await page.locator(".game-control:disabled").count(), 0);
+  }
+});
+
+test("new-watch Keep and Escape preserve a file preview until deliberate replacement online and offline", async t => {
+  for (const offline of [false, true]) {
+    const context = await browser.newContext({ offline });
+    t.after(() => context.close());
+    const page = await context.newPage();
+    await page.goto(offline ? pathToFileURL(packaged.file).href : server.url);
+    await ready(page);
+    await page.locator('[data-action="gate"]').click();
+    const original = { raw: await stored(page), day: await day(page), journal: await journal(page) };
+    const incoming = nativeFile();
+    await preview(page, incoming.raw);
+    for (const cancel of ["keep", "escape"]) {
+      await page.locator("#reset-control").click();
+      assert.equal(await page.locator("#new-watch-review").isVisible(), true);
+      assert.equal(await page.locator("#keep-watch").evaluate(node => node === document.activeElement), true);
+      if (cancel === "keep") await page.locator("#keep-watch").press("Enter");
+      else await page.locator("#keep-watch").press("Escape");
+      assert.equal(await page.locator("#new-watch-review").isVisible(), false);
+      assert.equal(await page.locator("#watch-file-preview").isVisible(), true);
+      assert.deepEqual({ raw: await stored(page), day: await day(page), journal: await journal(page) }, original);
+    }
+    await replace(page);
+    assert.equal(await stored(page), incoming.raw);
+    assert.equal(await day(page), 3);
+    await page.locator("#reset-control").press("r");
+    assert.match(await page.locator("#new-watch-progress").textContent(), /3 of 14/);
+    await page.locator("#start-new-watch").click();
+    assert.equal(await day(page), 0);
+    assert.equal(JSON.parse(await stored(page)).turns.length, 0);
+    assert.equal(await page.locator("#journal-entries").textContent(), "");
+    assert.equal(await page.locator("#watch-file-preview").isVisible(), false);
   }
 });
