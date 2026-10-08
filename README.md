@@ -22,11 +22,20 @@ WebAssembly. Survive all fourteen tides to close the watch.
 
 - **Mouse / touch** — tap a cell card to select it, tap an action button to act,
   tap the reset button (top right) to start a new watch
-- **Keyboard** — `1` `2` `3` select a cell, `←` `→` move selection,
-  `G` gate, `H` shade, `S` seed, `R` reset
+- **Keyboard** — `Tab` moves between the reset, cell, and action buttons;
+  `Enter` or `Space` activates the focused control. With a game control focused,
+  `1` `2` `3` select a cell, `←` `→` move selection, `G` gates, `H` shades,
+  `S` seeds, and `R` resets. Browser modifier chords and held-key repeats do
+  not trigger game shortcuts.
+- **Screen-reader access** — native buttons expose selection, action availability,
+  and each cell's depth, salt, oxygen, life, and canopy readings. The Field notes
+  region contains the complete tide report. The status region announces the
+  selected cell and action results. An unavailable action stays focusable so
+  its reason can be read, and never spends a tide.
 
 The interface is responsive (compact stacked layout under 680px), supports
-HiDPI canvases, and announces game state through an ARIA live region.
+HiDPI canvases, and gives focused controls a visible outline. Short phone
+screens scroll vertically so the field notes and action row remain separate.
 
 ## Review your watch
 
@@ -65,13 +74,33 @@ clears the current journal.
 
 ## Run locally
 
-Serve the directory with any static server — the WebAssembly module is loaded
-as an ES module, so `file://` won't work:
+With Node installed, serve the source directory:
 
 ```sh
-python3 -m http.server 8000
+npm start
 # open http://localhost:8000/
 ```
+
+Any static server that serves `.wasm` with `application/wasm` also works. The
+source `index.html` needs a server because it loads separate ES modules.
+
+For a portable review copy, build a single file:
+
+```sh
+npm run package
+# open dist/Longwater-Fourteen-Tides.html directly in a browser
+```
+
+The generated HTML embeds the same interface, journal, saved-watch module,
+styles and WASM bytes. It needs no server, internet connection, npm packages or
+installation to play. Packaging itself uses only Node's built-in modules and
+prints the artifact and source SHA-256 checksums. Identical runtime inputs
+generate identical bytes.
+
+Reopening the same file in the same browser restores the saved watch and full
+journal when local-file storage is available. The visible progress message
+reports whether saving succeeded; keep the page open if it says the watch
+could not be saved. Reset also replaces the saved offline watch.
 
 ## How it's built
 
@@ -88,11 +117,13 @@ python3 -m http.server 8000
   (`snapshot_json` / `take_turn` / `restart`).
 - `screenshots/` — desktop and phone captures
 - `.nojekyll` — GitHub Pages serves the site as-is from this branch
+- `scripts/package.mjs` — deterministic single-file offline distribution
 
 ## Verify
 
 ```sh
 npm ci
+npx playwright install chromium
 npm test
 ```
 
@@ -105,6 +136,14 @@ Composition tests cover a resumed partial/completed watch, the original final
 recap, failed-save retry, a corrupted native snapshot and two tabs with different
 progress. The save admission check does not create a transaction between
 simultaneous writes in different tabs.
+
+The offline packaging case opens the single HTML through `file://` with
+networking disabled, plays a real tide, closes and reopens the page, compares
+the complete restored journal and readings, resets the saved watch, and
+requires all assets to be embedded. It also verifies byte-identical builds.
+
+Browser qualification covers desktop Chrome and Chrome's touch emulation;
+physical-device and actual screen-reader acceptance remain separate.
 
 ### Journal integration
 

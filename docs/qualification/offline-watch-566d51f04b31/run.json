@@ -1,0 +1,37 @@
+{
+  "base": "21bcaa69ee368b9feea60a053cd3bf2421b5d9a0",
+  "started": "2026-10-08T08:59:46.554Z",
+  "finished": "2026-10-08T08:59:59.208Z",
+  "node": "v26.3.0",
+  "chrome": "Google Chrome 154.0.8037.98",
+  "baseline_status": 1,
+  "baseline_signal": null,
+  "candidate_status": 0,
+  "candidate_signal": null,
+  "tests": [
+    "tests/browser.test.mjs",
+    "tests/journal.test.mjs",
+    "tests/package.test.mjs",
+    "tests/resume-journal.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "tests/watch-save.test.mjs"
+  ],
+  "source_files": 43,
+  "artifact": {
+    "file": "/Users/me/longwater-joined-author-566d51f04b31-evidence/Longwater-Fourteen-Tides.html",
+    "bytes": 202301,
+    "sha256": "73663a6dc3e341d249e852cf4bb5b614b83928c235ec27c5ecb428507d938145",
+    "sourceSha256": "d71c03d7b30ffeb3b456a3861cbdb729716aa53ff155065203f0610576e99613",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-save.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  }
+}
