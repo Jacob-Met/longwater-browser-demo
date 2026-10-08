@@ -1,0 +1,84 @@
+{
+  "schema": "longwater.independent.watch-report-contract-freeze.v1",
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "frozenAt": "2026-10-08T13:46:13.989Z",
+  "candidateInspected": false,
+  "base": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+  "baseTree": "83c3d5e74377ff6403d1a531718d0674de02d9d2",
+  "nativeWasmSha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+  "nativeBaselinePassed": true,
+  "allFourteenActualTidesMatchIndependentWasm": true,
+  "allFifteenBaseFilesUnchanged": true,
+  "contractSha256": "797f75ea07859c0d3f54c8943d7bbaf8e16909ca58dfe24f27db3162d017c7da",
+  "nativeInputsSha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+  "baselineReceiverSha256": "6d2ce3abbdc4aa03c3b1a12d8fa6b0011768076439f31f8b829e597e54e99215",
+  "browserHelperSha256": "afdb405bedd25272f21166359f60ee0047ceaf7e0b3e58f63d62feeae5acf492",
+  "files": [
+    {
+      "path": "contract.md",
+      "bytes": 12840,
+      "sha256": "797f75ea07859c0d3f54c8943d7bbaf8e16909ca58dfe24f27db3162d017c7da",
+      "gitBlobSha1": "3e06de56c954b853dffacb530a9d4d5f75ded0bc"
+    },
+    {
+      "path": "baseline/base-source-manifest.json",
+      "bytes": 3492,
+      "sha256": "6c3e6d08babbea02646d1081f061ab85729c393d2d8c0474d5ed888e3e65ab15",
+      "gitBlobSha1": "43d57e0a668a1c2968424893267dfae67028219a"
+    },
+    {
+      "path": "baseline/native-inputs.json",
+      "bytes": 21358,
+      "sha256": "2e5aef1f4269c17dc763796a6109c072c0a6a835b14f1b0012ba9bfb61670163",
+      "gitBlobSha1": "3a64c60e7246fd86d3138898b8ff4d864a026b29"
+    },
+    {
+      "path": "baseline/baseline-report.json",
+      "bytes": 45958,
+      "sha256": "ce9bbe0b93a3f0aa37ba02f5e34fde70c21a7090f5f6f496ff11885822bc05b1",
+      "gitBlobSha1": "c655e5e94b1b2feed8fb9b1bc4220168bf3a58ab"
+    },
+    {
+      "path": "baseline/baseline-native.mjs",
+      "bytes": 6907,
+      "sha256": "6d2ce3abbdc4aa03c3b1a12d8fa6b0011768076439f31f8b829e597e54e99215",
+      "gitBlobSha1": "b72c04893a010d5505bea7ea375e433000ecb7af"
+    },
+    {
+      "path": "baseline/receiving-browser.mjs",
+      "bytes": 9641,
+      "sha256": "afdb405bedd25272f21166359f60ee0047ceaf7e0b3e58f63d62feeae5acf492",
+      "gitBlobSha1": "c3410d4f19a593275d6b3fe672424a94fdb8d2a7"
+    },
+    {
+      "path": "baseline/native-process-receipt.json",
+      "bytes": 1872,
+      "sha256": "86456387fd599a70d0a8ef5c06171886becd8613c4ea5477510860a2e265fa68",
+      "gitBlobSha1": "9b4cf1d88b662032ed2d76d85e8291bed6d9bacf"
+    },
+    {
+      "path": "baseline/native.stdout.log",
+      "bytes": 111,
+      "sha256": "334144648b5af193d5c81eecd6a4f60b3c2d8c992e272e7ebe8ebddf76cdfdf8",
+      "gitBlobSha1": "dcdf9d8bec4c0d6610b5df6b423df68342af0af0"
+    },
+    {
+      "path": "baseline/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobSha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "baseline/browser.stderr.log",
+      "bytes": 3898,
+      "sha256": "cf7a4351def3f976d2b7088ac88b29266c03be92eee7a708322b582cbd3a294c",
+      "gitBlobSha1": "2a981f3a5ff28352cb803c67e79b83c199f43484"
+    },
+    {
+      "path": "baseline/baseline-partial-journal.png",
+      "bytes": 86125,
+      "sha256": "6cc2afa81c04e743331bd0942d232c23824126727cf5faf71d7177cfd4174cb7",
+      "gitBlobSha1": "d2b80b1715a8b01dcf7356202b6e470b426165fa"
+    }
+  ]
+}

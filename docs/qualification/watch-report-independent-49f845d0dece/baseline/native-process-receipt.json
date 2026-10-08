@@ -1,0 +1,55 @@
+{
+  "owner": "estate-49f845d0dece/recall_import_receiving",
+  "startedAt": "2026-10-08T13:40:23.072Z",
+  "candidateInspected": false,
+  "steps": [
+    {
+      "name": "helper-syntax",
+      "command": "/usr/bin/node",
+      "args": [
+        "--check",
+        "/tmp/lw49-report-49f845d0dece/receiving-browser.mjs"
+      ],
+      "startedAt": "2026-10-08T13:40:23.073Z",
+      "stdoutPath": "/tmp/lw49-report-49f845d0dece/evidence/helper-syntax.stdout.log",
+      "stderrPath": "/tmp/lw49-report-49f845d0dece/evidence/helper-syntax.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T13:40:23.281Z"
+    },
+    {
+      "name": "baseline-syntax",
+      "command": "/usr/bin/node",
+      "args": [
+        "--check",
+        "/tmp/lw49-report-49f845d0dece/baseline-native.mjs"
+      ],
+      "startedAt": "2026-10-08T13:40:23.288Z",
+      "stdoutPath": "/tmp/lw49-report-49f845d0dece/evidence/baseline-syntax.stdout.log",
+      "stderrPath": "/tmp/lw49-report-49f845d0dece/evidence/baseline-syntax.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T13:40:23.478Z"
+    },
+    {
+      "name": "native-baseline",
+      "command": "/usr/bin/node",
+      "args": [
+        "/tmp/lw49-report-49f845d0dece/baseline-native.mjs",
+        "/tmp/lw49-report-49f845d0dece/baseline-source",
+        "/tmp/lw49-report-49f845d0dece/evidence/baseline-run-01"
+      ],
+      "startedAt": "2026-10-08T13:40:23.479Z",
+      "stdoutPath": "/tmp/lw49-report-49f845d0dece/evidence/native-baseline.stdout.log",
+      "stderrPath": "/tmp/lw49-report-49f845d0dece/evidence/native-baseline.stderr.log",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "finishedAt": "2026-10-08T13:40:27.759Z"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-10-08T13:40:27.759Z"
+}
