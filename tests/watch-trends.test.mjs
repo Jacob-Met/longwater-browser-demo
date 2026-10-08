@@ -153,6 +153,7 @@ test("selection and refused actions add no trend, and reset starts at the actual
     await game.page.locator('[data-cell="2"]').click();
     assert.equal(await game.page.locator("#trend-table tbody").innerHTML(), history);
     await game.page.locator("#reset-control").click();
+    await game.page.getByRole("button", { name: "Start new watch", exact: true }).click();
     await game.expand();
     assert.equal(await game.page.locator("#trend-tide").inputValue(), "0");
     await assertTable(game.page, [game.states[0]], "biomass");
