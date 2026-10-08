@@ -1,0 +1,20 @@
+{
+  "schema": "longwater.new-watch.peer-packet.v1",
+  "files": [
+    {
+      "path": "source-review.json",
+      "bytes": 13465,
+      "sha256": "a7cab14890552ba0ab4a29e113b2bff5b97501faca406d2908598b45ea02cf79"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1036,
+      "sha256": "12bf64d593486407c0db62d7a20d48782067dacde0ef7a71efac5afe66c45fc2"
+    },
+    {
+      "path": "corrected-0c08.test.mjs",
+      "bytes": 14955,
+      "sha256": "0c08c4c7612235d048755401814a8b621f8acf16dcea1315c7a6562546acea37"
+    }
+  ]
+}
