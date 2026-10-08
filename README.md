@@ -140,6 +140,16 @@ save or a save changed by another tab is kept while this page can continue
 without saving. **Reset** starts a new watch and replaces the saved one. It also
 clears the current journal.
 
+## Rewind one tide
+
+Use **Rewind one tide** beside the save message to review the latest completed tide. The review names its action and cell, shows the day and resources that will return, and explains what happens to the saved watch. **Keep this watch** is focused first; it and Escape leave your watch, journal, saved progress and any pending watch-file review unchanged.
+
+Choose **Rewind tide N** to remove that one whole tide, including its action and tide event. All earlier cell readings, resources and field notes return through the shipped simulation. Your currently selected cell stays selected. A finished watch returns to day 13 and can continue; rewinding the first tide returns to the opening. Each further rewind needs a new review. There is no automatic redo; the next action continues from the shorter history.
+
+The shorter watch is saved through the existing save checks. A protected or newer saved watch is kept; unavailable saving leaves the rewound watch active on this page with the existing save warning and retry. Download watch to keep an unsaved result, or download before confirming if you want to keep the original too. Rewind never gains file import or Reset's authority to replace protected data. A confirmed rewind retires an older pending file review, so reopen that file before replacing the watch.
+
+The review closes when its active watch changes or an observed saved-watch event arrives. Rejected actions and choosing the same cell do not change the reviewed tide. Rewind is unavailable before the first tide. The same controls and recovery work in the downloadable offline game.
+
 ## Carry the same watch between browsers
 
 Choose **Download watch** below the marsh to save your current day, selected cell

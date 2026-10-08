@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./watch-save.css">
   <link rel="stylesheet" href="./watch-choice.css">
   <link rel="stylesheet" href="./watch-file.css">
+  <link rel="stylesheet" href="./watch-rewind.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -36,6 +37,22 @@
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
       <button id="watch-save-retry" type="button" hidden>Try saving again</button>
       <p class="save-note">Progress stays in this browser. Reset asks before starting a new watch and replacing the saved one.</p>
+      <div id="watch-rewind" class="watch-rewind">
+        <button id="watch-rewind-open" type="button" aria-describedby="watch-rewind-hint" disabled>Rewind one tide</button>
+        <p id="watch-rewind-hint">Complete a tide to review a rewind.</p>
+        <p id="watch-rewind-status" role="status" aria-live="polite" tabindex="-1"></p>
+        <dialog id="watch-rewind-review" aria-labelledby="watch-rewind-title" aria-describedby="watch-rewind-summary watch-rewind-effect watch-rewind-save-note">
+          <h2 id="watch-rewind-title">Rewind one tide?</h2>
+          <p id="watch-rewind-summary"></p>
+          <p id="watch-rewind-effect"></p>
+          <p id="watch-rewind-resources"></p>
+          <p id="watch-rewind-save-note"></p>
+          <div class="rewind-actions">
+            <button id="watch-rewind-keep" type="button" autofocus>Keep this watch</button>
+            <button id="watch-rewind-confirm" type="button">Rewind one tide</button>
+          </div>
+        </dialog>
+      </div>
     </section>
     <!-- offline-download:start -->
     <section id="offline-copy" class="offline-copy" aria-labelledby="offline-copy-title">
