@@ -72,6 +72,19 @@ clears the current journal.
 ![Longwater on desktop](screenshots/desktop.png)
 ![Longwater on a phone](screenshots/phone.png)
 
+## Play offline
+
+Use **Download offline game** below the marsh on the
+[live game page](https://jacobmetoyer.com/longwater-browser-demo/). Save the HTML
+file, then open that downloaded file to play without a server or internet
+connection. It starts a separate watch; your existing online watch stays in
+that browser's site storage.
+
+The file includes the complete simulation, controls, saved-watch module and
+journal. When its save message confirms success, reopen the same file in the
+same browser to resume. File storage follows browser policy, so keep the game
+open and use **Try saving again** if it reports that progress was not saved.
+
 ## Run locally
 
 With Node installed, serve the source directory:
@@ -96,6 +109,20 @@ styles and WASM bytes. It needs no server, internet connection, npm packages or
 installation to play. Packaging itself uses only Node's built-in modules and
 prints the artifact and source SHA-256 checksums. Identical runtime inputs
 generate identical bytes.
+
+The website's download is committed at
+`downloads/Longwater-Fourteen-Tides.html` so the existing branch-based Pages
+deployment serves it alongside the game. After changing any runtime input,
+regenerate that published copy with the same packager:
+
+```sh
+npm run package -- downloads/Longwater-Fourteen-Tides.html
+```
+
+The actual-download browser check compares the downloaded bytes with a fresh
+build before opening them offline. A stale published copy fails `npm test`.
+The packager replaces the online download panel with an offline-copy note;
+the saved game does not retain a link to a missing neighbouring artifact.
 
 Reopening the same file in the same browser restores the saved watch and full
 journal when local-file storage is available. The visible progress message

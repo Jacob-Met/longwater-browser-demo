@@ -22,3 +22,9 @@ noscript { display: block; margin: 1rem; color: #d7f0df; }
   #stage { width: 100%; }
   #playfield { height: 100svh; border: 0; border-radius: 0; }
 }
+.offline-copy { margin: 16px 0; padding: 18px; border: 1px solid rgba(156, 210, 184, .22); border-radius: 16px; background: #071b22; }
+.offline-copy h2 { margin: 0; color: #72e2b4; font-size: 1rem; }
+.offline-copy p { max-width: 70ch; margin: 8px 0 14px; color: #c1d6ca; line-height: 1.5; }
+.offline-copy a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px; border: 1px solid #72e2b4; border-radius: 9px; color: #e7f1e8; font-weight: 600; text-underline-offset: 3px; }
+.offline-copy a:hover { background: #123b3c; }
+.offline-copy a:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 3px; }

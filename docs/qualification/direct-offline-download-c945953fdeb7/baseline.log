@@ -1,0 +1,28 @@
+✖ a visitor downloads the current game and resumes its complete journal offline (1148.689ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1432.95275
+
+✖ failing tests:
+
+test at tests/offline-download.test.mjs:14:1
+✖ a visitor downloads the current game and resumes its complete journal offline (1148.689ms)
+  AssertionError [ERR_ASSERTION]: the existing game page must expose one native offline download link
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/me/hamon-work-longwater-delivery-c945953fdeb7/tests/offline-download.test.mjs:64:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

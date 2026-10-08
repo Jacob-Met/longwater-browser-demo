@@ -1,0 +1,80 @@
+{
+  "startedAt": "2026-10-08T11:36:26.317Z",
+  "sourceCommit": "b4c3b82e61c654d27c592c17ee161fd404602150",
+  "driverSha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+  "packaged": {
+    "bytes": 202301,
+    "sha256": "73663a6dc3e341d249e852cf4bb5b614b83928c235ec27c5ecb428507d938145",
+    "sourceSha256": "d71c03d7b30ffeb3b456a3861cbdb729716aa53ff155065203f0610576e99613",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-save.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:55619/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/style.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/journal.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/watch-save.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/game.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/pkg/longwater_web.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/journal.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/watch-save.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55619/pkg/longwater_web_bg.wasm",
+      "status": 200
+    }
+  ],
+  "offOrigin": [],
+  "offlineRequests": [],
+  "stages": {
+    "onlineBeforeDownload": {
+      "summary": "Day 1 of 14. Water 4; seed packs 5.",
+      "notes": "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.",
+      "journal": "Tide 1 · Gate · South ReachSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 70 cmSalt30 → 34 pptOxygen55 → 54 %Life49 → 50 %Canopy0 → 0 / 3South ReachDepth67 → 88 cmSalt40 → 33 pptOxygen43 → 37 %Life38 → 38 %Canopy0 → 0 / 3",
+      "journalEntries": 1,
+      "save": "Day 1 of 14 saved in this browser."
+    }
+  },
+  "passed": false,
+  "browserVersion": "154.0.8037.98",
+  "error": {
+    "phase": "native-download",
+    "message": "AssertionError [ERR_ASSERTION]: the existing game page must expose one native offline download link\n\n0 !== 1\n",
+    "stack": "AssertionError [ERR_ASSERTION]: the existing game page must expose one native offline download link\n\n0 !== 1\n\n    at TestContext.<anonymous> (file:///Users/me/hamon-work-longwater-delivery-c945953fdeb7/tests/offline-download.test.mjs:64:12)\n    at async Test.run (node:internal/test_runner/test:1389:7)\n    at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)"
+  },
+  "finishedAt": "2026-10-08T11:36:27.390Z"
+}
