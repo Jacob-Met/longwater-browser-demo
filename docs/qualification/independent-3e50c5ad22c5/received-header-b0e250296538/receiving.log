@@ -1,0 +1,14 @@
+✔ every tide exposes the real independent WASM result, including all cell facts and untruncated events (3443.547205ms)
+✔ a failed WASM turn reports the exception, preserves public state and allows a subsequent real turn (353.1337ms)
+✔ a game shortcut stays local to its focused controls and refuses composed and modified input (197.239956ms)
+✔ 320px touch and desktop resizing retain separate reachable cell and action targets (713.209729ms)
+✔ real canvas title, resource totals and reset stay readable without overlap on narrow screens (321.188661ms)
+✔ canvas admission failure remains visible, names the reason and never enables a game control (111.074944ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5561.691536

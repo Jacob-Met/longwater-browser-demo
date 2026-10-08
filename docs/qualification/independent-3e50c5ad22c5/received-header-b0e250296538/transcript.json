@@ -1,0 +1,1976 @@
+{
+  "servedRoot": "/workspace/scratch/3e50c5ad22c5/production/longwater-header-receiver",
+  "mutation": "",
+  "browser": "153.0.8010.0",
+  "transcript": [
+    {
+      "label": "initial",
+      "selected": 1,
+      "state": {
+        "day": 0,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 34,
+            "salinity": 34,
+            "oxygen": 64,
+            "biomass": 44,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 56,
+            "salinity": 30,
+            "oxygen": 55,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 67,
+            "salinity": 40,
+            "oxygen": 43,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 5,
+        "seedPacks": 5,
+        "report": null,
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-1",
+      "selected": 2,
+      "state": {
+        "day": 0,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 34,
+            "salinity": 34,
+            "oxygen": 64,
+            "biomass": 44,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 56,
+            "salinity": 30,
+            "oxygen": 55,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 67,
+            "salinity": 40,
+            "oxygen": 43,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 5,
+        "seedPacks": 5,
+        "report": null,
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-1",
+      "selected": 2,
+      "state": {
+        "day": 1,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 48,
+            "salinity": 38,
+            "oxygen": 63,
+            "biomass": 45,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 70,
+            "salinity": 34,
+            "oxygen": 54,
+            "biomass": 50,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 88,
+            "salinity": 33,
+            "oxygen": 37,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 5,
+        "report": {
+          "day": 1,
+          "action": "gate",
+          "cell": "south",
+          "event": {
+            "day": 1,
+            "name": "Spring tide",
+            "note": "A long lunar push carries brine inland.",
+            "depth": 14,
+            "salt": 4,
+            "oxygen": -3
+          },
+          "lines": [
+            "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).",
+            "Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-2",
+      "selected": 0,
+      "state": {
+        "day": 1,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 48,
+            "salinity": 38,
+            "oxygen": 63,
+            "biomass": 45,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 70,
+            "salinity": 34,
+            "oxygen": 54,
+            "biomass": 50,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 88,
+            "salinity": 33,
+            "oxygen": 37,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 5,
+        "report": {
+          "day": 1,
+          "action": "gate",
+          "cell": "south",
+          "event": {
+            "day": 1,
+            "name": "Spring tide",
+            "note": "A long lunar push carries brine inland.",
+            "depth": 14,
+            "salt": 4,
+            "oxygen": -3
+          },
+          "lines": [
+            "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).",
+            "Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-2",
+      "selected": 0,
+      "state": {
+        "day": 2,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 43,
+            "salinity": 40,
+            "oxygen": 69,
+            "biomass": 58,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 65,
+            "salinity": 36,
+            "oxygen": 59,
+            "biomass": 51,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 83,
+            "salinity": 34,
+            "oxygen": 38,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 4,
+        "report": {
+          "day": 2,
+          "action": "seed",
+          "cell": "north",
+          "event": {
+            "day": 2,
+            "name": "Neap ebb",
+            "note": "A short, quiet ebb leaves pools exposed.",
+            "depth": -5,
+            "salt": 2,
+            "oxygen": 3
+          },
+          "lines": [
+            "Reseeding · North Bank: biomass 45→57% (+12; deep-water settling rule not triggered), oxygen 63→64%. Seed satchels −1 (4 left).",
+            "Neap ebb · all three cells: water -5 cm, salt +2 ppt; North Bank oxygen 64→67%. A short, quiet ebb leaves pools exposed.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 48→43 cm, salt 38→40 ppt, oxygen 63→69%, biomass 45→58%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-3",
+      "selected": 1,
+      "state": {
+        "day": 2,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 43,
+            "salinity": 40,
+            "oxygen": 69,
+            "biomass": 58,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 65,
+            "salinity": 36,
+            "oxygen": 59,
+            "biomass": 51,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 83,
+            "salinity": 34,
+            "oxygen": 38,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 4,
+        "report": {
+          "day": 2,
+          "action": "seed",
+          "cell": "north",
+          "event": {
+            "day": 2,
+            "name": "Neap ebb",
+            "note": "A short, quiet ebb leaves pools exposed.",
+            "depth": -5,
+            "salt": 2,
+            "oxygen": 3
+          },
+          "lines": [
+            "Reseeding · North Bank: biomass 45→57% (+12; deep-water settling rule not triggered), oxygen 63→64%. Seed satchels −1 (4 left).",
+            "Neap ebb · all three cells: water -5 cm, salt +2 ppt; North Bank oxygen 64→67%. A short, quiet ebb leaves pools exposed.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 48→43 cm, salt 38→40 ppt, oxygen 63→69%, biomass 45→58%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-3",
+      "selected": 1,
+      "state": {
+        "day": 3,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 35,
+            "salinity": 47,
+            "oxygen": 64,
+            "biomass": 57,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 57,
+            "salinity": 41,
+            "oxygen": 60,
+            "biomass": 54,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 75,
+            "salinity": 41,
+            "oxygen": 31,
+            "biomass": 36,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 4,
+        "report": {
+          "day": 3,
+          "action": "shade",
+          "cell": "heart",
+          "event": {
+            "day": 3,
+            "name": "Heat pulse",
+            "note": "Hot air accelerates evaporation and oxygen loss.",
+            "depth": -8,
+            "salt": 7,
+            "oxygen": -7,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · Heart Pool: canopy 0→1, salt 36→34 ppt, oxygen 59→63%, biomass 51→54%. Canopy blunts heat and drying.",
+            "Heat pulse · all three cells: water -8 cm, salt +7 ppt; Heart Pool oxygen 63→58% (canopy relief +2). Hot air accelerates evaporation and oxygen loss.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · Heart Pool: water 65→57 cm, salt 36→41 ppt, oxygen 59→60%, biomass 51→54%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-4",
+      "selected": 2,
+      "state": {
+        "day": 3,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 35,
+            "salinity": 47,
+            "oxygen": 64,
+            "biomass": 57,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 57,
+            "salinity": 41,
+            "oxygen": 60,
+            "biomass": 54,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 75,
+            "salinity": 41,
+            "oxygen": 31,
+            "biomass": 36,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 4,
+        "report": {
+          "day": 3,
+          "action": "shade",
+          "cell": "heart",
+          "event": {
+            "day": 3,
+            "name": "Heat pulse",
+            "note": "Hot air accelerates evaporation and oxygen loss.",
+            "depth": -8,
+            "salt": 7,
+            "oxygen": -7,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · Heart Pool: canopy 0→1, salt 36→34 ppt, oxygen 59→63%, biomass 51→54%. Canopy blunts heat and drying.",
+            "Heat pulse · all three cells: water -8 cm, salt +7 ppt; Heart Pool oxygen 63→58% (canopy relief +2). Hot air accelerates evaporation and oxygen loss.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · Heart Pool: water 65→57 cm, salt 36→41 ppt, oxygen 59→60%, biomass 51→54%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-4",
+      "selected": 2,
+      "state": {
+        "day": 4,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 44,
+            "salinity": 36,
+            "oxygen": 68,
+            "biomass": 58,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 66,
+            "salinity": 30,
+            "oxygen": 64,
+            "biomass": 55,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 84,
+            "salinity": 29,
+            "oxygen": 32,
+            "biomass": 48,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 3,
+        "report": {
+          "day": 4,
+          "action": "seed",
+          "cell": "south",
+          "event": {
+            "day": 4,
+            "name": "Runoff plume",
+            "note": "Fresh upland runoff dilutes the channel edge.",
+            "depth": 9,
+            "salt": -11,
+            "oxygen": 2
+          },
+          "lines": [
+            "Reseeding · South Reach: biomass 36→48% (+12; deep-water settling rule not triggered), oxygen 31→32%. Seed satchels −1 (3 left).",
+            "Runoff plume · all three cells: water +9 cm, salt -11 ppt; South Reach oxygen 32→34%. Fresh upland runoff dilutes the channel edge.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 75→84 cm, salt 41→29 ppt, oxygen 31→32%, biomass 36→48%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-5",
+      "selected": 0,
+      "state": {
+        "day": 4,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 44,
+            "salinity": 36,
+            "oxygen": 68,
+            "biomass": 58,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 66,
+            "salinity": 30,
+            "oxygen": 64,
+            "biomass": 55,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 84,
+            "salinity": 29,
+            "oxygen": 32,
+            "biomass": 48,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 3,
+        "report": {
+          "day": 4,
+          "action": "seed",
+          "cell": "south",
+          "event": {
+            "day": 4,
+            "name": "Runoff plume",
+            "note": "Fresh upland runoff dilutes the channel edge.",
+            "depth": 9,
+            "salt": -11,
+            "oxygen": 2
+          },
+          "lines": [
+            "Reseeding · South Reach: biomass 36→48% (+12; deep-water settling rule not triggered), oxygen 31→32%. Seed satchels −1 (3 left).",
+            "Runoff plume · all three cells: water +9 cm, salt -11 ppt; South Reach oxygen 32→34%. Fresh upland runoff dilutes the channel edge.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 75→84 cm, salt 41→29 ppt, oxygen 31→32%, biomass 36→48%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-5",
+      "selected": 0,
+      "state": {
+        "day": 5,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 45,
+            "salinity": 27,
+            "oxygen": 72,
+            "biomass": 59,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 60,
+            "salinity": 31,
+            "oxygen": 69,
+            "biomass": 56,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 78,
+            "salinity": 30,
+            "oxygen": 35,
+            "biomass": 48,
+            "shade": 0
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 3,
+        "report": {
+          "day": 5,
+          "action": "gate",
+          "cell": "north",
+          "event": {
+            "day": 5,
+            "name": "Slackwater",
+            "note": "A gentle ebb gives the reed shelves room to breathe.",
+            "depth": -6,
+            "salt": 1,
+            "oxygen": 3
+          },
+          "lines": [
+            "Freshwater gate · North Bank: water 44→51 cm, salt 36→26 ppt, oxygen 68→67%. Freshwater −1 (3 left).",
+            "Slackwater · all three cells: water -6 cm, salt +1 ppt; North Bank oxygen 67→70%. A gentle ebb gives the reed shelves room to breathe.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 44→45 cm, salt 36→27 ppt, oxygen 68→72%, biomass 58→59%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-6",
+      "selected": 1,
+      "state": {
+        "day": 5,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 45,
+            "salinity": 27,
+            "oxygen": 72,
+            "biomass": 59,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 60,
+            "salinity": 31,
+            "oxygen": 69,
+            "biomass": 56,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 78,
+            "salinity": 30,
+            "oxygen": 35,
+            "biomass": 48,
+            "shade": 0
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 3,
+        "report": {
+          "day": 5,
+          "action": "gate",
+          "cell": "north",
+          "event": {
+            "day": 5,
+            "name": "Slackwater",
+            "note": "A gentle ebb gives the reed shelves room to breathe.",
+            "depth": -6,
+            "salt": 1,
+            "oxygen": 3
+          },
+          "lines": [
+            "Freshwater gate · North Bank: water 44→51 cm, salt 36→26 ppt, oxygen 68→67%. Freshwater −1 (3 left).",
+            "Slackwater · all three cells: water -6 cm, salt +1 ppt; North Bank oxygen 67→70%. A gentle ebb gives the reed shelves room to breathe.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 44→45 cm, salt 36→27 ppt, oxygen 68→72%, biomass 58→59%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-6",
+      "selected": 1,
+      "state": {
+        "day": 6,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 63,
+            "salinity": 32,
+            "oxygen": 68,
+            "biomass": 60,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 78,
+            "salinity": 36,
+            "oxygen": 64,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 96,
+            "salinity": 34,
+            "oxygen": 27,
+            "biomass": 46,
+            "shade": 0
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 6,
+          "action": "seed",
+          "cell": "heart",
+          "event": {
+            "day": 6,
+            "name": "King tide",
+            "note": "An unusually high tide presses across the low marsh.",
+            "depth": 18,
+            "salt": 5,
+            "oxygen": -6
+          },
+          "lines": [
+            "Reseeding · Heart Pool: biomass 56→68% (+12; deep-water settling rule not triggered), oxygen 69→70%. Seed satchels −1 (2 left).",
+            "King tide · all three cells: water +18 cm, salt +5 ppt; Heart Pool oxygen 70→64%. An unusually high tide presses across the low marsh.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · Heart Pool: water 60→78 cm, salt 31→36 ppt, oxygen 69→64%, biomass 56→68%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-7",
+      "selected": 2,
+      "state": {
+        "day": 6,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 63,
+            "salinity": 32,
+            "oxygen": 68,
+            "biomass": 60,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 78,
+            "salinity": 36,
+            "oxygen": 64,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 96,
+            "salinity": 34,
+            "oxygen": 27,
+            "biomass": 46,
+            "shade": 0
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 6,
+          "action": "seed",
+          "cell": "heart",
+          "event": {
+            "day": 6,
+            "name": "King tide",
+            "note": "An unusually high tide presses across the low marsh.",
+            "depth": 18,
+            "salt": 5,
+            "oxygen": -6
+          },
+          "lines": [
+            "Reseeding · Heart Pool: biomass 56→68% (+12; deep-water settling rule not triggered), oxygen 69→70%. Seed satchels −1 (2 left).",
+            "King tide · all three cells: water +18 cm, salt +5 ppt; Heart Pool oxygen 70→64%. An unusually high tide presses across the low marsh.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · Heart Pool: water 60→78 cm, salt 31→36 ppt, oxygen 69→64%, biomass 56→68%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-7",
+      "selected": 2,
+      "state": {
+        "day": 7,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 64,
+            "salinity": 31,
+            "oxygen": 74,
+            "biomass": 61,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 79,
+            "salinity": 34,
+            "oxygen": 68,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 97,
+            "salinity": 30,
+            "oxygen": 33,
+            "biomass": 47,
+            "shade": 1
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 7,
+          "action": "shade",
+          "cell": "south",
+          "event": {
+            "day": 7,
+            "name": "Fog veil",
+            "note": "Cool fog slows drying and softens the morning light.",
+            "depth": 1,
+            "salt": -1,
+            "oxygen": 4
+          },
+          "lines": [
+            "Reed-bed shade · South Reach: canopy 0→1, salt 34→32 ppt, oxygen 27→31%, biomass 46→49%. Canopy blunts heat and drying.",
+            "Fog veil · all three cells: water +1 cm, salt -1 ppt; South Reach oxygen 31→35%. Cool fog slows drying and softens the morning light.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 96→97 cm, salt 34→30 ppt, oxygen 27→33%, biomass 46→47%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-8",
+      "selected": 0,
+      "state": {
+        "day": 7,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 64,
+            "salinity": 31,
+            "oxygen": 74,
+            "biomass": 61,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 79,
+            "salinity": 34,
+            "oxygen": 68,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 97,
+            "salinity": 30,
+            "oxygen": 33,
+            "biomass": 47,
+            "shade": 1
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 7,
+          "action": "shade",
+          "cell": "south",
+          "event": {
+            "day": 7,
+            "name": "Fog veil",
+            "note": "Cool fog slows drying and softens the morning light.",
+            "depth": 1,
+            "salt": -1,
+            "oxygen": 4
+          },
+          "lines": [
+            "Reed-bed shade · South Reach: canopy 0→1, salt 34→32 ppt, oxygen 27→31%, biomass 46→49%. Canopy blunts heat and drying.",
+            "Fog veil · all three cells: water +1 cm, salt -1 ppt; South Reach oxygen 31→35%. Cool fog slows drying and softens the morning light.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 96→97 cm, salt 34→30 ppt, oxygen 27→33%, biomass 46→47%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-8",
+      "selected": 0,
+      "state": {
+        "day": 8,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 57,
+            "salinity": 35,
+            "oxygen": 77,
+            "biomass": 64,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 72,
+            "salinity": 40,
+            "oxygen": 67,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 90,
+            "salinity": 35,
+            "oxygen": 28,
+            "biomass": 44,
+            "shade": 1
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 8,
+          "action": "shade",
+          "cell": "north",
+          "event": {
+            "day": 8,
+            "name": "Dry wind",
+            "note": "A warm offshore wind pulls water from the pools.",
+            "depth": -7,
+            "salt": 6,
+            "oxygen": -5,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · North Bank: canopy 0→1, salt 31→29 ppt, oxygen 74→78%, biomass 61→64%. Canopy blunts heat and drying.",
+            "Dry wind · all three cells: water -7 cm, salt +6 ppt; North Bank oxygen 78→75% (canopy relief +2). A warm offshore wind pulls water from the pools.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 64→57 cm, salt 31→35 ppt, oxygen 74→77%, biomass 61→64%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-9",
+      "selected": 1,
+      "state": {
+        "day": 8,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 57,
+            "salinity": 35,
+            "oxygen": 77,
+            "biomass": 64,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 72,
+            "salinity": 40,
+            "oxygen": 67,
+            "biomass": 68,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 90,
+            "salinity": 35,
+            "oxygen": 28,
+            "biomass": 44,
+            "shade": 1
+          }
+        ],
+        "freshwater": 3,
+        "seedPacks": 2,
+        "report": {
+          "day": 8,
+          "action": "shade",
+          "cell": "north",
+          "event": {
+            "day": 8,
+            "name": "Dry wind",
+            "note": "A warm offshore wind pulls water from the pools.",
+            "depth": -7,
+            "salt": 6,
+            "oxygen": -5,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · North Bank: canopy 0→1, salt 31→29 ppt, oxygen 74→78%, biomass 61→64%. Canopy blunts heat and drying.",
+            "Dry wind · all three cells: water -7 cm, salt +6 ppt; North Bank oxygen 78→75% (canopy relief +2). A warm offshore wind pulls water from the pools.",
+            "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · North Bank: water 64→57 cm, salt 31→35 ppt, oxygen 74→77%, biomass 61→64%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-9",
+      "selected": 1,
+      "state": {
+        "day": 9,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 67,
+            "salinity": 25,
+            "oxygen": 80,
+            "biomass": 65,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 89,
+            "salinity": 19,
+            "oxygen": 65,
+            "biomass": 66,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 24,
+            "oxygen": 27,
+            "biomass": 42,
+            "shade": 1
+          }
+        ],
+        "freshwater": 2,
+        "seedPacks": 2,
+        "report": {
+          "day": 9,
+          "action": "gate",
+          "cell": "heart",
+          "event": {
+            "day": 9,
+            "name": "Runoff pulse",
+            "note": "A second freshwater pulse pushes through the inlet.",
+            "depth": 10,
+            "salt": -10,
+            "oxygen": 1
+          },
+          "lines": [
+            "Freshwater gate · Heart Pool: water 72→79 cm, salt 40→30 ppt, oxygen 67→66%. Freshwater −1 (2 left).",
+            "Runoff pulse · all three cells: water +10 cm, salt -10 ppt; Heart Pool oxygen 66→67%. A second freshwater pulse pushes through the inlet.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · Heart Pool: water 72→89 cm, salt 40→19 ppt, oxygen 67→65%, biomass 68→66%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-10",
+      "selected": 2,
+      "state": {
+        "day": 9,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 67,
+            "salinity": 25,
+            "oxygen": 80,
+            "biomass": 65,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 89,
+            "salinity": 19,
+            "oxygen": 65,
+            "biomass": 66,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 24,
+            "oxygen": 27,
+            "biomass": 42,
+            "shade": 1
+          }
+        ],
+        "freshwater": 2,
+        "seedPacks": 2,
+        "report": {
+          "day": 9,
+          "action": "gate",
+          "cell": "heart",
+          "event": {
+            "day": 9,
+            "name": "Runoff pulse",
+            "note": "A second freshwater pulse pushes through the inlet.",
+            "depth": 10,
+            "salt": -10,
+            "oxygen": 1
+          },
+          "lines": [
+            "Freshwater gate · Heart Pool: water 72→79 cm, salt 40→30 ppt, oxygen 67→66%. Freshwater −1 (2 left).",
+            "Runoff pulse · all three cells: water +10 cm, salt -10 ppt; Heart Pool oxygen 66→67%. A second freshwater pulse pushes through the inlet.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · Heart Pool: water 72→89 cm, salt 40→19 ppt, oxygen 67→65%, biomass 68→66%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-10",
+      "selected": 2,
+      "state": {
+        "day": 10,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 82,
+            "salinity": 28,
+            "oxygen": 76,
+            "biomass": 65,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 22,
+            "oxygen": 59,
+            "biomass": 64,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 17,
+            "oxygen": 20,
+            "biomass": 40,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 2,
+        "report": {
+          "day": 10,
+          "action": "gate",
+          "cell": "south",
+          "event": {
+            "day": 10,
+            "name": "Spring tide",
+            "note": "The next spring tide reaches the lower reed line.",
+            "depth": 15,
+            "salt": 4,
+            "oxygen": -4
+          },
+          "lines": [
+            "Freshwater gate · South Reach: water 100→100 cm, salt 24→14 ppt, oxygen 27→26%. Freshwater −1 (1 left).",
+            "Spring tide · all three cells: water +15 cm, salt +4 ppt; South Reach oxygen 26→22%. The next spring tide reaches the lower reed line.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 100→100 cm, salt 24→17 ppt, oxygen 27→20%, biomass 42→40%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-11",
+      "selected": 0,
+      "state": {
+        "day": 10,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 82,
+            "salinity": 28,
+            "oxygen": 76,
+            "biomass": 65,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 22,
+            "oxygen": 59,
+            "biomass": 64,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 17,
+            "oxygen": 20,
+            "biomass": 40,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 2,
+        "report": {
+          "day": 10,
+          "action": "gate",
+          "cell": "south",
+          "event": {
+            "day": 10,
+            "name": "Spring tide",
+            "note": "The next spring tide reaches the lower reed line.",
+            "depth": 15,
+            "salt": 4,
+            "oxygen": -4
+          },
+          "lines": [
+            "Freshwater gate · South Reach: water 100→100 cm, salt 24→14 ppt, oxygen 27→26%. Freshwater −1 (1 left).",
+            "Spring tide · all three cells: water +15 cm, salt +4 ppt; South Reach oxygen 26→22%. The next spring tide reaches the lower reed line.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 100→100 cm, salt 24→17 ppt, oxygen 27→20%, biomass 42→40%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-11",
+      "selected": 0,
+      "state": {
+        "day": 11,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 87,
+            "salinity": 22,
+            "oxygen": 72,
+            "biomass": 72,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 16,
+            "oxygen": 54,
+            "biomass": 61,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 11,
+            "oxygen": 15,
+            "biomass": 37,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 1,
+        "report": {
+          "day": 11,
+          "action": "seed",
+          "cell": "north",
+          "event": {
+            "day": 11,
+            "name": "Silt ribbon",
+            "note": "Fine silt clouds the water before settling on the flats.",
+            "depth": 5,
+            "salt": -5,
+            "oxygen": -3,
+            "silt": true
+          },
+          "lines": [
+            "Reseeding · North Bank: biomass 65→73% (+8; deep-water settling rule applied), oxygen 76→77%. Seed satchels −1 (1 left).",
+            "Silt ribbon · all three cells: water +5 cm, salt -5 ppt; North Bank oxygen 77→74%. Fine silt clouds the water before settling on the flats.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · North Bank: water 82→87 cm, salt 28→22 ppt, oxygen 76→72%, biomass 65→72%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-12",
+      "selected": 1,
+      "state": {
+        "day": 11,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 87,
+            "salinity": 22,
+            "oxygen": 72,
+            "biomass": 72,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 16,
+            "oxygen": 54,
+            "biomass": 61,
+            "shade": 1
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 11,
+            "oxygen": 15,
+            "biomass": 37,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 1,
+        "report": {
+          "day": 11,
+          "action": "seed",
+          "cell": "north",
+          "event": {
+            "day": 11,
+            "name": "Silt ribbon",
+            "note": "Fine silt clouds the water before settling on the flats.",
+            "depth": 5,
+            "salt": -5,
+            "oxygen": -3,
+            "silt": true
+          },
+          "lines": [
+            "Reseeding · North Bank: biomass 65→73% (+8; deep-water settling rule applied), oxygen 76→77%. Seed satchels −1 (1 left).",
+            "Silt ribbon · all three cells: water +5 cm, salt -5 ppt; North Bank oxygen 77→74%. Fine silt clouds the water before settling on the flats.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · North Bank: water 82→87 cm, salt 28→22 ppt, oxygen 76→72%, biomass 65→72%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-12",
+      "selected": 1,
+      "state": {
+        "day": 12,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 78,
+            "salinity": 30,
+            "oxygen": 67,
+            "biomass": 71,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 91,
+            "salinity": 21,
+            "oxygen": 53,
+            "biomass": 62,
+            "shade": 2
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 91,
+            "salinity": 18,
+            "oxygen": 8,
+            "biomass": 34,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 1,
+        "report": {
+          "day": 12,
+          "action": "shade",
+          "cell": "heart",
+          "event": {
+            "day": 12,
+            "name": "Heat pulse",
+            "note": "A second hot spell tests every shaded cell.",
+            "depth": -9,
+            "salt": 8,
+            "oxygen": -7,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · Heart Pool: canopy 1→2, salt 16→14 ppt, oxygen 54→58%, biomass 61→64%. Canopy blunts heat and drying.",
+            "Heat pulse · all three cells: water -9 cm, salt +8 ppt; Heart Pool oxygen 58→55% (canopy relief +4). A second hot spell tests every shaded cell.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · Heart Pool: water 100→91 cm, salt 16→21 ppt, oxygen 54→53%, biomass 61→62%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-13",
+      "selected": 2,
+      "state": {
+        "day": 12,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 78,
+            "salinity": 30,
+            "oxygen": 67,
+            "biomass": 71,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 91,
+            "salinity": 21,
+            "oxygen": 53,
+            "biomass": 62,
+            "shade": 2
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 91,
+            "salinity": 18,
+            "oxygen": 8,
+            "biomass": 34,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 1,
+        "report": {
+          "day": 12,
+          "action": "shade",
+          "cell": "heart",
+          "event": {
+            "day": 12,
+            "name": "Heat pulse",
+            "note": "A second hot spell tests every shaded cell.",
+            "depth": -9,
+            "salt": 8,
+            "oxygen": -7,
+            "heat": true
+          },
+          "lines": [
+            "Reed-bed shade · Heart Pool: canopy 1→2, salt 16→14 ppt, oxygen 54→58%, biomass 61→64%. Canopy blunts heat and drying.",
+            "Heat pulse · all three cells: water -9 cm, salt +8 ppt; Heart Pool oxygen 58→55% (canopy relief +4). A second hot spell tests every shaded cell.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · Heart Pool: water 100→91 cm, salt 16→21 ppt, oxygen 54→53%, biomass 61→62%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-13",
+      "selected": 2,
+      "state": {
+        "day": 13,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 90,
+            "salinity": 17,
+            "oxygen": 67,
+            "biomass": 69,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 8,
+            "oxygen": 53,
+            "biomass": 60,
+            "shade": 2
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 5,
+            "oxygen": 9,
+            "biomass": 40,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 0,
+        "report": {
+          "day": 13,
+          "action": "seed",
+          "cell": "south",
+          "event": {
+            "day": 13,
+            "name": "Freshwater pulse",
+            "note": "The last runoff pulse clears a narrow freshwater lane.",
+            "depth": 12,
+            "salt": -12,
+            "oxygen": 2
+          },
+          "lines": [
+            "Reseeding · South Reach: biomass 34→42% (+8; deep-water settling rule applied), oxygen 8→9%. Seed satchels −1 (0 left).",
+            "Freshwater pulse · all three cells: water +12 cm, salt -12 ppt; South Reach oxygen 9→11%. The last runoff pulse clears a narrow freshwater lane.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 91→100 cm, salt 18→5 ppt, oxygen 8→9%, biomass 34→40%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "selected-14",
+      "selected": 0,
+      "state": {
+        "day": 13,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 90,
+            "salinity": 17,
+            "oxygen": 67,
+            "biomass": 69,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 8,
+            "oxygen": 53,
+            "biomass": 60,
+            "shade": 2
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 5,
+            "oxygen": 9,
+            "biomass": 40,
+            "shade": 1
+          }
+        ],
+        "freshwater": 1,
+        "seedPacks": 0,
+        "report": {
+          "day": 13,
+          "action": "seed",
+          "cell": "south",
+          "event": {
+            "day": 13,
+            "name": "Freshwater pulse",
+            "note": "The last runoff pulse clears a narrow freshwater lane.",
+            "depth": 12,
+            "salt": -12,
+            "oxygen": 2
+          },
+          "lines": [
+            "Reseeding · South Reach: biomass 34→42% (+8; deep-water settling rule applied), oxygen 8→9%. Seed satchels −1 (0 left).",
+            "Freshwater pulse · all three cells: water +12 cm, salt -12 ppt; South Reach oxygen 9→11%. The last runoff pulse clears a narrow freshwater lane.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · South Reach: water 91→100 cm, salt 18→5 ppt, oxygen 8→9%, biomass 34→40%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "tide-14",
+      "selected": 0,
+      "state": {
+        "day": 14,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 100,
+            "salinity": 11,
+            "oxygen": 59,
+            "biomass": 67,
+            "shade": 1
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 100,
+            "salinity": 12,
+            "oxygen": 46,
+            "biomass": 58,
+            "shade": 2
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 100,
+            "salinity": 9,
+            "oxygen": 2,
+            "biomass": 38,
+            "shade": 1
+          }
+        ],
+        "freshwater": 0,
+        "seedPacks": 0,
+        "report": {
+          "day": 14,
+          "action": "gate",
+          "cell": "north",
+          "event": {
+            "day": 14,
+            "name": "Moon-pull tide",
+            "note": "A final high tide closes the fourteen-day watch.",
+            "depth": 16,
+            "salt": 5,
+            "oxygen": -5
+          },
+          "lines": [
+            "Freshwater gate · North Bank: water 90→97 cm, salt 17→7 ppt, oxygen 67→66%. Freshwater −1 (0 left).",
+            "Moon-pull tide · all three cells: water +16 cm, salt +5 ppt; North Bank oxygen 66→61%. A final high tide closes the fourteen-day watch.",
+            "Dawn drift · stress boundary reached → biomass -2, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.",
+            "Net · North Bank: water 90→100 cm, salt 17→11 ppt, oxygen 67→59%, biomass 69→67%."
+          ]
+        },
+        "finished": true,
+        "outcome": "strained"
+      }
+    },
+    {
+      "label": "reset",
+      "selected": 1,
+      "state": {
+        "day": 0,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 34,
+            "salinity": 34,
+            "oxygen": 64,
+            "biomass": 44,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 56,
+            "salinity": 30,
+            "oxygen": 55,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 67,
+            "salinity": 40,
+            "oxygen": 43,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 5,
+        "seedPacks": 5,
+        "report": null,
+        "finished": false,
+        "outcome": null
+      }
+    },
+    {
+      "label": "recovered-turn",
+      "selected": 1,
+      "state": {
+        "day": 1,
+        "cells": [
+          {
+            "id": "north",
+            "name": "North Bank",
+            "zone": "Upper reed shelf",
+            "material": "peat & cordgrass",
+            "depth": 48,
+            "salinity": 38,
+            "oxygen": 63,
+            "biomass": 45,
+            "shade": 0
+          },
+          {
+            "id": "heart",
+            "name": "Heart Pool",
+            "zone": "Inner tidal basin",
+            "material": "mud & glasswort",
+            "depth": 77,
+            "salinity": 24,
+            "oxygen": 51,
+            "biomass": 49,
+            "shade": 0
+          },
+          {
+            "id": "south",
+            "name": "South Reach",
+            "zone": "Outer brackish fringe",
+            "material": "silt & saltgrass",
+            "depth": 81,
+            "salinity": 43,
+            "oxygen": 40,
+            "biomass": 38,
+            "shade": 0
+          }
+        ],
+        "freshwater": 4,
+        "seedPacks": 5,
+        "report": {
+          "day": 1,
+          "action": "gate",
+          "cell": "heart",
+          "event": {
+            "day": 1,
+            "name": "Spring tide",
+            "note": "A long lunar push carries brine inland.",
+            "depth": 14,
+            "salt": 4,
+            "oxygen": -3
+          },
+          "lines": [
+            "Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).",
+            "Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.",
+            "Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.",
+            "Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%."
+          ]
+        },
+        "finished": false,
+        "outcome": null
+      }
+    }
+  ]
+}

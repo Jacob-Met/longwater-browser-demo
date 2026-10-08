@@ -80,6 +80,27 @@ preserve the proposal and its results as **unintegrated evidence**. They are not
 an assertion that the separate worker's eventual patch has been received.
 The receiving tests can qualify that worker's exact source when it is available.
 
+## Separate header author's source received
+
+The separate worker's header source was subsequently copied into an immutable
+receiving snapshot over the same `beee773` candidate. Its `game.js` SHA-256 is
+`86d024aceb16d3295e6ed697e094c001373b3ce18c4333c3546c7a2c54c0ffdb`.
+The author-source and copied-source hashes matched. Only this file differed from
+the pinned candidate; its complete bytes are retained as
+`received-header-b0e250296538/game.js.source`.
+
+The unchanged independent receiver passes **6/6 groups** on this exact source,
+including all fourteen native-WASM turns, reset, exception recovery, local input
+admission, narrow touch target separation, and the canvas header bounds check at
+all five viewports. Its actual 320px capture was visually inspected. The log,
+full native-state transcript, text bounds and screenshots are retained in
+`received-header-b0e250296538/`.
+
+This is qualification of that independently authored snapshot, not the yielded
+local proposal. At capture time the header change was not yet committed in its
+author's checkout. A later receiving/publishing step should match this exact
+source hash; deployment and author-branch integration remain with their owners.
+
 ## Replay
 
 Install the repository's dev dependencies and make Chromium available through

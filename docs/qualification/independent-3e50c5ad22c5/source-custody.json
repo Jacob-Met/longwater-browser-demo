@@ -169,5 +169,17 @@
       "truncated-report": "expected missing native report lines",
       "wrong-cell": "expected actual native cell state mismatch"
     }
+  },
+  "received_header": {
+    "author": "estate-b0e250296538 / production_work",
+    "source_state": "uncommitted exact author snapshot over beee773 at capture",
+    "game_sha256": "86d024aceb16d3295e6ed697e094c001373b3ce18c4333c3546c7a2c54c0ffdb",
+    "source_archive": "received-header-b0e250296538/game.js.source",
+    "receiver_sha256": "337830a40e03483e992c30cd098b0b9a6f2b739ac86234547fde9ba8c241033a",
+    "independent_passed": 6,
+    "independent_failed": 0,
+    "log": "received-header-b0e250296538/receiving.log",
+    "receiving_root": "/workspace/scratch/3e50c5ad22c5/production/longwater-header-receiver",
+    "production_branch_modified": false
   }
 }

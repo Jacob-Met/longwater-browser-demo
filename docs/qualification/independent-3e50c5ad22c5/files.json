@@ -1,8 +1,8 @@
 [
   {
     "path": "docs/qualification/independent-3e50c5ad22c5/README.md",
-    "bytes": 6235,
-    "sha256": "1805b44e9d9dc5c9904a900054c7e07248df0872c8640e8681659062fd72dc91"
+    "bytes": 7434,
+    "sha256": "dba6d6fec759d5345497318d77dfea25070ced56bf83aceba908f897dc57a7ea"
   },
   {
     "path": "docs/qualification/independent-3e50c5ad22c5/authored-fixed.log",
@@ -90,9 +90,44 @@
     "sha256": "1f36ebf1da7948d0aaeb710885208ef6503be04055aaf9f9a036b5c7b6736ffc"
   },
   {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/game.js.source",
+    "bytes": 17215,
+    "sha256": "86d024aceb16d3295e6ed697e094c001373b3ce18c4333c3546c7a2c54c0ffdb"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/header-layouts.json",
+    "bytes": 3835,
+    "sha256": "691ba1663033106184402d3006d570b497e8e3dfd2ee70615e93d8373e9fb3da"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/receiving.log",
+    "bytes": 789,
+    "sha256": "5c7e860580af846d8ff39636f4d26430de22537e5c64e9786337714769a99ae8"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/transcript.json",
+    "bytes": 61051,
+    "sha256": "4ff8c14c1a030a88e73e60f0015a552911d54fcc7e3e64297d7a797b0f980c76"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/viewport-1280.png",
+    "bytes": 252538,
+    "sha256": "1cb9f09e234b2aa72036ac8b1bb24c08c47de4233c57d2485fe00adfdc66e7d4"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/viewport-320.png",
+    "bytes": 164325,
+    "sha256": "4b22e3840863c27243f4bc3e2475d9d71486968c5c63b5dc2359f6453d3f09a8"
+  },
+  {
+    "path": "docs/qualification/independent-3e50c5ad22c5/received-header-b0e250296538/viewport-390.png",
+    "bytes": 182843,
+    "sha256": "64fe49f56e957bace1adcfea29e7e74eb70645671c6e7f76ac1afd2570cdd58e"
+  },
+  {
     "path": "docs/qualification/independent-3e50c5ad22c5/source-custody.json",
-    "bytes": 5867,
-    "sha256": "fcafc1b9486800974baa4de50c2c19c63b42333723f1b521d06ac1d01aa8229f"
+    "bytes": 6527,
+    "sha256": "e1dbb5744c6770446c775b2f4a550ee9a89cd3bea0ba53ca2b539e255928292a"
   },
   {
     "path": "docs/qualification/independent-3e50c5ad22c5/stale-readings.log",
