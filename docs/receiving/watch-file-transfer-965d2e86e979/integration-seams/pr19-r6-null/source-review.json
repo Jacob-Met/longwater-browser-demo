@@ -1,0 +1,47 @@
+{
+  "format": "hamon-pr19-r6-null-seam-source-review/1",
+  "verdict": "ACCEPTED_BOUNDED_RUNTIME_COMPOSITION",
+  "r6": {
+    "commit": "57ab2e1ac2a27648cae3a9fc50aff7154ffa7f16",
+    "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+    "qualifiedNativeCommit": "6483543d13e1f0dade3eca18e359d1080f05a1b6"
+  },
+  "owner": {
+    "commit": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+    "tree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+    "moduleSha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d"
+  },
+  "negative": {
+    "commit": "e630f725f05b7910446e8da1e129a60617ae8e19",
+    "tree": "c87baca24a832d99837a182564713eba138f86b5"
+  },
+  "positive": {
+    "commit": "d3a3502536e76b2c9860efe5ada73199c4a643bf",
+    "tree": "2c603b7355e27218024902961a1ee0c02753fbd5"
+  },
+  "sourceFiles": 165,
+  "preservedR6Leaves": 158,
+  "ownerModules": [
+    "watch-choice.js",
+    "watch-choice-model.js",
+    "watch-choice.css"
+  ],
+  "exactR6Runtime": [
+    "watch-save.js",
+    "watch-file.js",
+    "watch-file.css",
+    "journal.js",
+    "watch-report.js",
+    "watch-report.css",
+    "watch-trends.js",
+    "pkg/longwater_web.js",
+    "pkg/longwater_web_bg.wasm"
+  ],
+  "onlyPositiveRuntimeDelta": "historicalChoice.synchronize(null) immediately after catch state=null and before existing R6 journal hide",
+  "unchangedAdmissionExportAndNativeSimulation": true,
+  "allOwnerGameIndexPackageTransformsReproduceTheirEntireD40FilesOnCommonAncestor": true,
+  "caseBodiesByteExact": true,
+  "bootstrapInverseExact": true,
+  "allocationReview": "The exact d40 null branch clears its retained token/history/result/status and selectors, closes details, hides form/root, and returns before readHistory or createSession. The owned callback calls this supplied API, then retains the accepted report-hiding line and disabled game controls.",
+  "scope": "Runtime receiving only. No owner branch edit, current-PR rebase, original test assertion relaxation, broad current-project suite, installed rollout or hosted-site claim."
+}

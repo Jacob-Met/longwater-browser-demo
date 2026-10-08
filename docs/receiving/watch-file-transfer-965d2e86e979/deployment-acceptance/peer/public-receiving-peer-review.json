@@ -1,0 +1,69 @@
+{
+  "format": "hamon-independent-public-receiving-review/1",
+  "reviewer": "/root/current_integration",
+  "verdict": "ACCEPTED_SOURCE_RECEIPT_AND_CAPTURE",
+  "site": "https://jacobmetoyer.com/longwater-browser-demo/",
+  "executionWindow": {
+    "started": "2026-10-08T15:51:54.553Z",
+    "finished": "2026-10-08T15:51:57.999Z"
+  },
+  "publicCommit": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+  "nativeDelivery": "4fe0901a53f153ef2729ba72e287ece2fcb14001",
+  "deliveryTree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+  "qualifiedRuntime": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "inspected": {
+    "driver": {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/receive-public-watch-transfer.mjs",
+      "sha256": "d77d0fdf16eec6d16856c843f5345f2c65a6eabe36f5ffc3a9a586f7cc719d77",
+      "bytes": 9892
+    },
+    "receipt": {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/public-43038d28-receiving/receiving.json",
+      "sha256": "fa20fcb35d472b353d43221a0cd100e2751cec444e333eed9b07908a6a7114c3",
+      "bytes": 4442
+    },
+    "watch": {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/public-43038d28-receiving/public-watch.json",
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "bytes": 1618,
+      "day": 3
+    },
+    "screenshot": {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/public-43038d28-receiving/public-restored-watch.png",
+      "sha256": "3bbe34ba6c5a944e71fc940b414b4e2242f7f0d706116bfdd2bc003481675720",
+      "bytes": 171881,
+      "width": 390,
+      "height": 1707
+    },
+    "offline": {
+      "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+      "bytes": 280929
+    },
+    "all15ObservedInputsMatchIndependentlyReceivedR6": true
+  },
+  "sourceAndReceiptFindings": [
+    "The driver binds native package inputs and generated HTML to the accepted artifact before browser work. It observes actual first-context public HTTP response bodies and requires status 200, exact byte equality and the complete set of all 15 expected inputs.",
+    "This reviewer independently compared each of the 15 recorded path/length/SHA256 entries with its separately received exact R6 manifest; every entry matches.",
+    "The watch oracle uses the shipped native WASM for the exact three recorded actions and frees its session. The actual public JSON download equals that oracle; the retained file is 1618 bytes and contains day 3 with South Reach selected.",
+    "A separate 390px public browser context reviews and confirms that actual file, with preview storage/journal preservation and exact adopted data. The offline HTML is an actual public download and must equal the accepted 280929-byte artifact.",
+    "The downloaded HTML is then opened with browser networking disabled, adopts the same watch, preserves the full journal and exact JSON export, and reloads with the same stored watch/journal. The receipt records no extra offline requests or page errors; the driver closes the browser in finally.",
+    "This reviewer separately hashed the retained watch, offline HTML and image. The watch and artifact match the receipt and previously qualified inputs."
+  ],
+  "pixelReview": {
+    "image": "public-restored-watch.png",
+    "width": 390,
+    "height": 1707,
+    "observations": [
+      "The supplied full-page screenshot visibly shows Day 3 / 14, Heat pulse, water 4 and seed 4, with South Reach selected.",
+      "Displayed North/Heart/South readings agree with the retained JSON: depth 42/57/68, salt 37/41/52, oxygen 62/60/39, life 45/54/49 and canopy 0/1/0.",
+      "Carry your watch shows both download/open buttons and the successful day-3 adoption/saved message. The journal shows its report-download control and 3 of 14 tides.",
+      "At this recorded width the visible text and controls fit the page, wrap legibly and have no observed horizontal clipping or overlap. The capture is consistent with the successful separate-public-context state."
+    ]
+  },
+  "attributionAndLimits": [
+    "Independent read-only source, receipt, retained-file and pixel review of root's completed execution. This reviewer made no new public request, browser launch, native simulation run or broader suite replay.",
+    "The screenshot qualifies this one recorded 390px viewport state. It does not establish physical-device, screen-reader or all-breakpoint behavior.",
+    "The reviewed execution establishes the recorded public delivery and actual downloaded offline recovery at its timestamp. PR19 historical-choice integration and future hosted changes retain their separate receiving gates.",
+    "The driver hash identifies the supplied file inspected here; the raw execution and original artifact/source receipts remain with root."
+  ]
+}

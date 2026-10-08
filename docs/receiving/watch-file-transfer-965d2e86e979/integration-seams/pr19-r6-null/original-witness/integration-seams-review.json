@@ -1,0 +1,72 @@
+{
+  "disposition": "ONE_CONFIRMED_PENDING_COMPOSITION_DEFECT; RESET_SOURCE_SEAMS_REVIEWED",
+  "scope": "Read-only review of exact PR20 and PR19 against accepted 6ecfdde7. Only one targeted three-case real-browser composition witness; no owner source or branch edits and no broad suite repeat.",
+  "accepted_watch_file": {
+    "commit": "6ecfdde764cdb8754a01efa33cea099949e31175",
+    "tree": "e80a51351bcf46cb13b95faa081f39bf2466722b",
+    "packet_manifest_sha256": "aa413159a594c45e040ae6b318c0c44c356f6404c9517f38686fb55f92e36cdd"
+  },
+  "reset": {
+    "pull": 20,
+    "head": "7f5ab3080f01e4529c3499a1f1a4a2e8f8378ef6",
+    "merged_at": "2026-10-08T13:57:54Z",
+    "main": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "tree": "b825a333b9d7f73a73b801f517b07c256aea5934",
+    "source_disposition": "No consequential reset/file lifecycle conflict found in the reviewed normal-path source composition; reset/browser behavior was not independently rerun.",
+    "preserved_operations": [
+      "Keep/Escape/requestReset do not change the watch or call WatchFile.invalidate; current file preview or queued read may remain valid until an accepted watch change.",
+      "Confirmed reset must retain the accepted reset() body's WatchFile.invalidate, which increments the read generation and cancels the preview token.",
+      "The storage listener must retain both WatchFile.invalidate and closeResetReview; their messages address distinct controls.",
+      "Native modal inertness prevents direct file confirmation while the reset review is open. No queued file read adopts a watch automatically.",
+      "Reset's snapshot/selection guard remains useful; ordinary successful file adoption constructs a fresh state object."
+    ],
+    "concrete_composition": [
+      "Preserve PR20 game request/close handlers, Reset/R wiring, dialog markup and appended CSS; retain all R4 file lifecycle and display-failure code.",
+      "Preserve the nine landed explicit-confirmation additions across browser, journal, package, resume-journal, watch-save.browser and watch-trends fixtures.",
+      "Adapt four immediate-reset expressions in tests/watch-file.browser.test.mjs: two mutate callbacks and two loop setup calls (6ec lines 195,198,227,229), adding Start new watch after requesting Reset and retaining the existing assertions.",
+      "Regenerate the offline artifact using the combined index, style and module inputs."
+    ]
+  },
+  "historical_choice": {
+    "pull": 19,
+    "head": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+    "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+    "state_at_read": "open",
+    "normal_source_disposition": "An accepted ordinary restore/reset creates a new state object; render synchronizes before geometry checks and clears the prior comparison. A preview or cancellation leaves the active state token unchanged.",
+    "finding": {
+      "id": "adopted-file-display-failure-retains-predecessor-choice",
+      "classification": "Confirmed defect in the isolated PR19 + accepted watch-file composition, not a claim of failure in either standalone qualified tree.",
+      "trigger": "Have a visible day-1 historical comparison, adopt a valid native day-3 file, then inject the already documented one-shot SavedWatch.replayHistory refusal in the post-adoption display callback.",
+      "mechanism": "The R2 callback catch sets state=null and disables game controls without rendering. Incoming WatchChoice synchronizes only from render and synchronize(null) returns immediately. Its private history and visible result therefore remain from the old watch.",
+      "observed": "The active imported day-3 watch is saved and actually exported byte-for-byte; the old day-1 comparison remains visible and identical while all game controls are disabled.",
+      "consequence": "The historical panel presents a predecessor watch's output after replacement and has not followed the advertised accepted-state invalidation boundary.",
+      "minimal_coordinated_remedy": "Add an explicit WatchChoice invalidation/null-token path that clears private history and result and hides/disables its panel without native replay allocation. Invoke it from the accepted-adoption display-failure catch. Existing synchronize(null) alone is insufficient.",
+      "required_owner_boundary": "#17 retains WatchChoice implementation; #12 retains file admission/restore. Root should coordinate the minimal composition interface with that owner. No remedy is implemented by this receiver."
+    },
+    "concrete_other_composition": [
+      "Preserve the three game additions and two index additions exactly; the witness verifies they reconstruct complete PR19 game/index from the canonical c442 parent.",
+      "Append watch-choice.css, outer watch-choice.js and nested watch-choice-model.js to the accepted package inputs while retaining outer watch-file and nested watch-trends embedding.",
+      "Keep PR19's three new private save-browser routes together with the two R4 file routes and two canonical trends routes.",
+      "Retain its existing CI artifact-upload stanza and native model/browser fixtures; actual merged-successor qualification stays with the receiving owner."
+    ]
+  },
+  "native_receiving": {
+    "harness": "receive-adoption-seam.mjs",
+    "harness_sha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+    "incoming_file_sha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451",
+    "execution": "Node 26.3.0, installed Playwright 1.62.1, Chromium 151.0.7922.34, actual shipped WASM, fresh isolated contexts and an in-memory HTTP composition.",
+    "results": {
+      "pass": 2,
+      "fail": 1,
+      "skip": 0
+    },
+    "positive_controls": [
+      "Preview/cancel preserves the exact visible historical comparison and stored bytes.",
+      "Successful adoption clears the old result and loads the new day-3 history."
+    ],
+    "negative": "Post-adoption display refusal must clear the old comparison; actual assertion fails after independent saved/exported identity and disabled-game checks pass.",
+    "fault_attribution": "One authored replayHistory throw, not a spontaneous hardware or allocation failure.",
+    "preserved": "All captured native runtime Git blobs, incoming sources, harness and input bytes verified unchanged after execution.",
+    "boundaries": "No full browser/core/model-suite rerun; no standalone offline artifact qualification here. Root R4 73/73 remains separate."
+  }
+}

@@ -1,0 +1,13 @@
+const fs=require("fs"),cp=require("child_process"),crypto=require("crypto"),assert=require("assert/strict");
+const p="/Users/me/hamon-longwater-choice-peer-965d2e86e979",mode=process.argv[2];
+assert.ok(["negative","positive"].includes(mode));
+const resultPath=p+"/"+mode+"-execution.json";assert.ok(!fs.existsSync(resultPath),"already run");
+const sha=b=>crypto.createHash("sha256").update(b).digest("hex"),composition=JSON.parse(fs.readFileSync(p+"/composition.json"));
+function custody(){for(const f of composition.files){const b=fs.readFileSync(p+"/source/"+f.path);assert.equal(sha(b),f.sha256,f.path);assert.equal((fs.statSync(p+"/source/"+f.path).mode&0o111)?"100755":"100644",f.mode);}for(const f of composition.upstreamFiles){assert.equal(sha(fs.readFileSync(p+"/upstream/"+f.path)),f.sha256,f.path);}return{composedFiles:composition.files.length,canonicalOwnerFiles:composition.upstreamFiles.length,allMatch:true};}
+const before=custody(),space=fs.statfsSync(p);assert.ok(space.bavail*space.bsize>30000000);
+const command=["/opt/homebrew/bin/node",p+"/"+mode+"-witness/receive-adoption-seam.mjs"],started=new Date().toISOString(),r=cp.spawnSync(command[0],command.slice(1),{encoding:"utf8",timeout:90000,maxBuffer:2000000});
+fs.writeFileSync(p+"/"+mode+".stdout",r.stdout||"");fs.writeFileSync(p+"/"+mode+".stderr",r.stderr||"");
+let run=null;if(fs.existsSync(p+"/"+mode+"-witness/run.json"))run=JSON.parse(fs.readFileSync(p+"/"+mode+"-witness/run.json"));
+const after=custody(),receipt={mode,sourcePin:composition[mode].commit,sourceTree:composition[mode].tree,command,started,finished:new Date().toISOString(),exit:r.status,signal:r.signal,error:r.error?String(r.error):null,before,after,stdoutSha256:sha(Buffer.from(r.stdout||"")),stderrSha256:sha(Buffer.from(r.stderr||"")),resultSha256:run?sha(fs.readFileSync(p+"/"+mode+"-witness/run.json")):null,caseOutcomes:run?.cases.map(c=>({name:c.name,outcome:c.outcome,error:c.error?.message})),passed:run?.passed,failed:run?.failed};
+fs.writeFileSync(resultPath,JSON.stringify(receipt,null,2)+"\n");
+console.log(JSON.stringify(receipt));process.exitCode=r.status===null?2:r.status;

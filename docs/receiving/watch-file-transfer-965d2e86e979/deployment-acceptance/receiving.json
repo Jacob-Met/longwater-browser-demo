@@ -1,0 +1,343 @@
+{
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "claim": 12,
+  "pr": 21,
+  "merge": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+  "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+  "parents": [
+    "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+    "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c"
+  ],
+  "nativeDelivery": "4fe0901a53f153ef2729ba72e287ece2fcb14001",
+  "nativeQualifiedSource": "6483543d13e1f0dade3eca18e359d1080f05a1b6",
+  "nativeQualifiedTree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  "mergeReceiving": {
+    "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "leaves": 247,
+    "allPathsModesTypesBlobsSizesEqual": true
+  },
+  "nativeTests": {
+    "passed": 92,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "logSha256": "2c2fb97150a7f88c2461b3db0f855e1f2caba273bf5af90000d96e02fa221c7c"
+  },
+  "prGate": {
+    "repository": "Jacob-Met/longwater-browser-demo",
+    "pr": 21,
+    "run": 37802239407,
+    "head": "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c",
+    "checkout": "6653464c3b28ae08bdfdfa17c55db5323fe1fc44",
+    "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "parents": [
+      "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+      "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c"
+    ],
+    "jobs": [
+      {
+        "id": 113397155209,
+        "name": "browser",
+        "conclusion": "success"
+      },
+      {
+        "id": 113397154626,
+        "name": "smoke",
+        "conclusion": "success"
+      }
+    ],
+    "totals": {
+      "tests": 92,
+      "passed": 92,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "sourceReceiving": {
+      "commit": "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c",
+      "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+      "parents": [
+        "8285f06196afca462c149921240dd5748478ef71",
+        "e4e9bf82f6ebb363896559507a2fb5af07b490f5"
+      ],
+      "leaves": 247,
+      "allPathsModesTypesBlobsSizesEqual": true,
+      "receivedAt": "2026-10-08T15:36:58.670Z"
+    },
+    "scope": "Actual R6 hosted browser and smoke gate; merge and public deployment remain separate.",
+    "receivedAt": "2026-10-08T15:43:55.741Z"
+  },
+  "pushGate": {
+    "run": 37803445957,
+    "browserJob": 113401386360,
+    "smokeJob": 113401386780,
+    "actualCheckout": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "tests": 92,
+    "passed": 92,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "pages": {
+    "run": 37803444620,
+    "buildJob": 113401388929,
+    "deployJob": 113401495251,
+    "head": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 113401388929,
+        "name": "build",
+        "conclusion": "success",
+        "started": "2026-10-08T15:46:07Z",
+        "completed": "2026-10-08T15:46:16Z"
+      },
+      {
+        "id": 113401495207,
+        "name": "report-build-status",
+        "conclusion": "success",
+        "started": "2026-10-08T15:46:19Z",
+        "completed": "2026-10-08T15:46:23Z"
+      },
+      {
+        "id": 113401495251,
+        "name": "deploy",
+        "conclusion": "success",
+        "started": "2026-10-08T15:46:20Z",
+        "completed": "2026-10-08T15:46:39Z"
+      }
+    ]
+  },
+  "public": {
+    "state": "passed",
+    "started": "2026-10-08T15:51:54.553Z",
+    "site": "https://jacobmetoyer.com/longwater-browser-demo/",
+    "sourceHead": "4fe0901a53f153ef2729ba72e287ece2fcb14001",
+    "sourceTree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "node": "v26.3.0",
+    "playwright": "1.62.1",
+    "artifact": {
+      "bytes": 280929,
+      "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+      "sourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a"
+    },
+    "chromium": "151.0.7922.34",
+    "inputs": [
+      {
+        "path": "index.html",
+        "bytes": 7070,
+        "sha256": "bdfdf3139cfdcf8dc8a39e406c1d83608d94b9ede28b59472700d7d0a66f976d",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/?receiving=6562c889c64c0e70"
+      },
+      {
+        "path": "style.css",
+        "bytes": 3342,
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css"
+      },
+      {
+        "path": "watch-file.css",
+        "bytes": 1196,
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.css"
+      },
+      {
+        "path": "game.js",
+        "bytes": 21535,
+        "sha256": "43d7ab8d71924fe4b2c34747c8f1e58dc1f0ddc45671bb7dc3c92f9db8c60982",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js"
+      },
+      {
+        "path": "watch-report.css",
+        "bytes": 571,
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css"
+      },
+      {
+        "path": "watch-trends.css",
+        "bytes": 2791,
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css"
+      },
+      {
+        "path": "journal.css",
+        "bytes": 2465,
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css"
+      },
+      {
+        "path": "journal.js",
+        "bytes": 6603,
+        "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js"
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "bytes": 8716,
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js"
+      },
+      {
+        "path": "watch-file.js",
+        "bytes": 5475,
+        "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.js"
+      },
+      {
+        "path": "watch-save.js",
+        "bytes": 9891,
+        "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js"
+      },
+      {
+        "path": "watch-save.css",
+        "bytes": 473,
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css"
+      },
+      {
+        "path": "watch-trends.js",
+        "bytes": 11372,
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js"
+      },
+      {
+        "path": "watch-report.js",
+        "bytes": 9346,
+        "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js"
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "bytes": 71368,
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+        "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm"
+      }
+    ],
+    "watch": {
+      "bytes": 1618,
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "filename": "Longwater-watch-day-3.json",
+      "day": 3
+    },
+    "destinations": [
+      "separate public-site browser context",
+      "actual public offline download with networking disabled"
+    ],
+    "fullJournalEqual": true,
+    "offlineReopenEqual": true,
+    "offlineRequests": [],
+    "pageErrors": [],
+    "finished": "2026-10-08T15:51:57.999Z"
+  },
+  "independentPublicReview": {
+    "path": "peer/public-receiving-peer-review.json",
+    "bytes": 4835,
+    "sha256": "a61057b2066bfeb8d5efb49fdc2904c1551c41626b94365b316bb71d6514206c",
+    "scope": "Source, exact receipts and retained files, plus supplied 390x1707 capture; no extra runtime execution."
+  },
+  "claimState": "closed",
+  "audioCoordinationComment": 6063507642,
+  "historicalChoiceHandoff": {
+    "ownerHead": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+    "qualifiedIsolatedSource": "d3a3502536e76b2c9860efe5ada73199c4a643bf",
+    "qualifiedIsolatedTree": "2c603b7355e27218024902961a1ee0c02753fbd5",
+    "originalCaseBodyBytes": 5402,
+    "negative": {
+      "passed": 2,
+      "failed": 1
+    },
+    "positive": {
+      "passed": 3,
+      "failed": 0
+    },
+    "publicBaseline": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "reconstructedTree": "d05bcfd0a09cc6a1502b899c76ae232cfdb64368",
+    "reconstructedLeaves": 250,
+    "packetManifest": "993f755c2f3248ea1d306259f5eb9bec852e5731d010d196103a797908164048",
+    "runtimeAppliedToMain": false
+  },
+  "scope": "Completed file-transfer integration and actual public receiving; additional historical-choice evidence is an owner handoff only.",
+  "recordedAt": "2026-10-08T16:05:20.143Z",
+  "retainedFiles": [
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-receiving.json",
+      "bytes": 1661,
+      "sha256": "0cd417be61f232d11233e1ff4a3273433f82290949575f38ef6c7f3d6ea011ac",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-browser.log",
+      "bytes": 73904,
+      "sha256": "f012107daa049a9e0d5015669e49be0e5301e2e473419a4026f7c65d0d9308b9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-smoke.log",
+      "bytes": 12572,
+      "sha256": "165dbb24905c9dd26aa15a9cba831d84c6e4f1b5f8db0749640dcf452b205000",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/push-browser.log",
+      "bytes": 72905,
+      "sha256": "b2355d0402e66e09055c7f8db06ce264076c983d1fd1d1d2c98137c353d261d5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/pages-build.log",
+      "bytes": 51190,
+      "sha256": "c54cbfd4d2ff3e76c4b40f429c53ca8778e099362da2ff89e245bf9f1ad1973a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/pages-deploy.log",
+      "bytes": 3711,
+      "sha256": "633e65179c9034083a91a8e3cf4c1213c0b441212b65a99d9063821c143553a9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/receiving.json",
+      "bytes": 4442,
+      "sha256": "fa20fcb35d472b353d43221a0cd100e2751cec444e333eed9b07908a6a7114c3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/public-watch.json",
+      "bytes": 1618,
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/public-restored-watch.png",
+      "bytes": 171881,
+      "sha256": "3bbe34ba6c5a944e71fc940b414b4e2242f7f0d706116bfdd2bc003481675720",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/methods/receive-public-watch-transfer.mjs.source",
+      "bytes": 9892,
+      "sha256": "d77d0fdf16eec6d16856c843f5345f2c65a6eabe36f5ffc3a9a586f7cc719d77",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/peer/public-receiving-peer-review.json",
+      "bytes": 4835,
+      "sha256": "a61057b2066bfeb8d5efb49fdc2904c1551c41626b94365b316bb71d6514206c",
+      "mode": "100644"
+    }
+  ],
+  "actualOfflineDownload": {
+    "bytes": 280929,
+    "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+    "byteIdenticalToTrackedArtifact": true,
+    "canonicalPath": "downloads/Longwater-Fourteen-Tides.html"
+  },
+  "preparation": {
+    "freeBytesBefore": 1373687808,
+    "newBareObjectStore": "/Users/me/hamon-longwater-watch-file-965d2e86e979/acceptance-git",
+    "sourceObjectsReadOnly": "/Users/me/hamon-longwater-watch-file-r6-965d2e86e979/source/.git/objects",
+    "fullSourceCheckoutCreated": false
+  }
+}

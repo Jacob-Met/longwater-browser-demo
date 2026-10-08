@@ -1,0 +1,41 @@
+const fs=require("fs"),path=require("path"),cp=require("child_process"),crypto=require("crypto"),assert=require("assert/strict");
+const p="/Users/me/hamon-longwater-choice-peer-965d2e86e979",original=fs.readFileSync(p+"/original-witness/receive-adoption-seam.mjs.source","utf8"),composition=JSON.parse(fs.readFileSync(p+"/composition.json"));
+const sha=b=>crypto.createHash("sha256").update(b).digest("hex"),git=(...args)=>cp.execFileSync("/usr/bin/git",["-C",p+"/source",...args],{maxBuffer:20000000});
+const changes=[];
+let adapted=original;
+function edit(needle,replacement,reason,count=1){assert.equal(adapted.split(needle).length-1,count,reason);changes.push({needle,replacement,reason,occurrences:count});adapted=adapted.split(needle).join(replacement);}
+edit('const source = "/Users/me/hamon-longwater-watch-file-965d2e86e979/final-composition";','const source = '+JSON.stringify(p+"/source")+';',"Bind read-only Git source to the isolated receiver repository.");
+edit('const commit = "6ecfdde764cdb8754a01efa33cea099949e31175";','const commit = '+JSON.stringify(composition.r6.commit)+';',"Bind source to exact accepted R6 tree.");
+edit("e80a51351bcf46cb13b95faa081f39bf2466722b",composition.r6.tree,"Update both exact source tree provenance guards to R6.",2);
+edit("83c3d5e74377ff6403d1a531718d0674de02d9d2",composition.common.tree,"Use exact landed f321 common ancestor for the unchanged owner-transform oracle.");
+edit('"watch-save.css", "watch-file.css",','"watch-save.css", "watch-file.css", "watch-report.css",',"Add the newly required report stylesheet route.");
+edit('"watch-trends.js", "pkg/longwater_web_bg.wasm",','"watch-trends.js", "watch-report.js", "pkg/longwater_web_bg.wasm",',"Add the newly required report module route.");
+const added='// Receiver-only source binding. Both variants must equal their frozen composed Git source.\n'
++'if (input.nullInvalidation) {\n'
++'  served.set("game.js", Buffer.from(once(served.get("game.js").toString(),\n'
++'    \'        state = null;\\n        document.querySelector("#watch-journal").hidden = true;\\n\',\n'
++'    \'        state = null;\\n        historicalChoice.synchronize(null);\\n        document.querySelector("#watch-journal").hidden = true;\\n\')));\n'
++'}\n'
++'assert.equal(git(["rev-parse", input.composedPin + "^{tree}"]).toString().trim(), input.composedTree);\n'
++'for (const [path, bytes] of served) assert.deepEqual(bytes, raw(input.composedPin, path), "served current composition: " + path);\n';
+edit("const sourceReceipt = {",added+"const sourceReceipt = {","Add the exact receiving-only catch composition and stricter served-source checks.");
+edit('  incoming: input.ref, exact_incoming_game_and_index_reconstructed: true,','  incoming: input.ref, exact_incoming_game_and_index_reconstructed: true,\n  composed_pin: input.composedPin, composed_tree: input.composedTree, null_invalidation: input.nullInvalidation,',"Record the actual served composed pin/tree, separate from R6 input.");
+const chrome="/Users/me/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing";
+assert.ok(fs.existsSync(chrome),"frozen browser runtime must exist");
+let restored=adapted;
+for(const item of [...changes].reverse()){assert.equal(restored.split(item.replacement).length-1,item.occurrences,item.reason+" inverse");restored=restored.split(item.replacement).join(item.needle);}
+assert.equal(restored,original,"complete bootstrap inverse");
+const begin='try {\n  for (const mode of ["preview_cancel_keeps_comparison", "successful_adoption_clears_comparison", "failed_display_adoption_clears_comparison"]) {';
+const cases=original.slice(original.indexOf(begin),original.indexOf("\n} finally {\n  await browser.close();"));
+const casesNew=adapted.slice(adapted.indexOf(begin),adapted.indexOf("\n} finally {\n  await browser.close();"));
+assert.ok(cases.length>5000);assert.equal(casesNew,cases,"all three cases and every behavioral assertion remain exact");
+const ownerFiles=["watch-choice-model.js","watch-choice.js","watch-choice.css"].map(name=>{const b=fs.readFileSync(p+"/upstream/"+name);return{path:name,text:b.toString(),sha256:sha(b),git:crypto.createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex")};});
+const inputBase={ref:"d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",oracle:{game:"417e8376a9c1fe899c9804e9e8b050464243db20",index:"825b6a58ce3d079507fad0a3495fd0acce64806d"},files:ownerFiles};
+for(const mode of["negative","positive"]){
+ const out=p+"/"+mode+"-witness";assert.ok(!fs.existsSync(out));fs.mkdirSync(out);
+ fs.writeFileSync(out+"/receive-adoption-seam.mjs",adapted);
+ fs.writeFileSync(out+"/incoming-pr19.json",JSON.stringify({...inputBase,nullInvalidation:mode==="positive",composedPin:composition[mode].commit,composedTree:composition[mode].tree},null,2)+"\n");
+}
+const receipt={format:"hamon-bounded-witness-fixture-adapter/1",originalHarnessSha256:sha(Buffer.from(original)),adaptedHarnessSha256:sha(Buffer.from(adapted)),sameAdaptedBytesInBothRuns:true,threeCaseBodySha256:sha(Buffer.from(cases)),caseBytes:Buffer.byteLength(cases),allThreeBehavioralCaseBodiesAndAssertionsByteExact:true,completeOriginalRecoveredByInverse:true,changes,sourceScope:"Only fixture source/commit/tree bindings, two required current report routes, exact frozen composition binding and recorded provenance. Original composition functions, three cases and all behavioral assertions remain byte-exact.",browserRuntimeUnchanged:chrome};
+fs.writeFileSync(p+"/fixture-adapter.json",JSON.stringify(receipt,null,2)+"\n");
+console.log(JSON.stringify({original:receipt.originalHarnessSha256,adapted:receipt.adaptedHarnessSha256,caseBytes:receipt.caseBytes,caseSha256:receipt.threeCaseBodySha256,changes:changes.length,receiptSha256:sha(fs.readFileSync(p+"/fixture-adapter.json"))}));

@@ -1,0 +1,43 @@
+{
+  "mode": "positive",
+  "sourcePin": "d3a3502536e76b2c9860efe5ada73199c4a643bf",
+  "sourceTree": "2c603b7355e27218024902961a1ee0c02753fbd5",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-choice-peer-965d2e86e979/positive-witness/receive-adoption-seam.mjs"
+  ],
+  "started": "2026-10-08T15:44:55.853Z",
+  "finished": "2026-10-08T15:45:01.751Z",
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "before": {
+    "composedFiles": 165,
+    "canonicalOwnerFiles": 114,
+    "allMatch": true
+  },
+  "after": {
+    "composedFiles": 165,
+    "canonicalOwnerFiles": 114,
+    "allMatch": true
+  },
+  "stdoutSha256": "eb50b101a20e7eee959553c0436f6d96fe3f98adb6546f60e9b891669ebe8f34",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "resultSha256": "a28a95d41136f2bab4dd9bc17a6439cc913f84af819b5110562d99ca0e795252",
+  "caseOutcomes": [
+    {
+      "name": "preview_cancel_keeps_comparison",
+      "outcome": "pass"
+    },
+    {
+      "name": "successful_adoption_clears_comparison",
+      "outcome": "pass"
+    },
+    {
+      "name": "failed_display_adoption_clears_comparison",
+      "outcome": "pass"
+    }
+  ],
+  "passed": 3,
+  "failed": 0
+}

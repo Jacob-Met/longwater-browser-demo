@@ -1,0 +1,83 @@
+{
+  "scope": "Deployment acceptance members; this files.json excludes itself",
+  "files": [
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/README.md",
+      "bytes": 5455,
+      "sha256": "77d1e7e44ce56609f865281647b4f4c6ec3b39d7a7c357649fd4d9ebdb4cfefa",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/pages-build.log",
+      "bytes": 51190,
+      "sha256": "c54cbfd4d2ff3e76c4b40f429c53ca8778e099362da2ff89e245bf9f1ad1973a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/pages-deploy.log",
+      "bytes": 3711,
+      "sha256": "633e65179c9034083a91a8e3cf4c1213c0b441212b65a99d9063821c143553a9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/deployment/push-browser.log",
+      "bytes": 72905,
+      "sha256": "b2355d0402e66e09055c7f8db06ce264076c983d1fd1d1d2c98137c353d261d5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-browser.log",
+      "bytes": 73904,
+      "sha256": "f012107daa049a9e0d5015669e49be0e5301e2e473419a4026f7c65d0d9308b9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-receiving.json",
+      "bytes": 1661,
+      "sha256": "0cd417be61f232d11233e1ff4a3273433f82290949575f38ef6c7f3d6ea011ac",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/hosted/pr-smoke.log",
+      "bytes": 12572,
+      "sha256": "165dbb24905c9dd26aa15a9cba831d84c6e4f1b5f8db0749640dcf452b205000",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/methods/receive-public-watch-transfer.mjs.source",
+      "bytes": 9892,
+      "sha256": "d77d0fdf16eec6d16856c843f5345f2c65a6eabe36f5ffc3a9a586f7cc719d77",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/peer/public-receiving-peer-review.json",
+      "bytes": 4835,
+      "sha256": "a61057b2066bfeb8d5efb49fdc2904c1551c41626b94365b316bb71d6514206c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/public-restored-watch.png",
+      "bytes": 171881,
+      "sha256": "3bbe34ba6c5a944e71fc940b414b4e2242f7f0d706116bfdd2bc003481675720",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/public-watch.json",
+      "bytes": 1618,
+      "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/public/receiving.json",
+      "bytes": 4442,
+      "sha256": "fa20fcb35d472b353d43221a0cd100e2751cec444e333eed9b07908a6a7114c3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/deployment-acceptance/receiving.json",
+      "bytes": 12563,
+      "sha256": "e2195de1faa230f37f30b43d73865258dcb6026372b9221e2b564a255f88bee5",
+      "mode": "100644"
+    }
+  ]
+}

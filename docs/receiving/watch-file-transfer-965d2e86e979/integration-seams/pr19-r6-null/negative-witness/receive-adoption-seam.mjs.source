@@ -1,0 +1,215 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
+import { createServer } from "node:http";
+import { readFile, writeFile } from "node:fs/promises";
+import { pathToFileURL, fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+const here = dirname(fileURLToPath(import.meta.url));
+const source = "/Users/me/hamon-longwater-choice-peer-965d2e86e979/source";
+const commit = "57ab2e1ac2a27648cae3a9fc50aff7154ffa7f16";
+const inputPath = join(here, "incoming-pr19.json");
+const inputBytes = await readFile(inputPath);
+const input = JSON.parse(inputBytes);
+const harnessBefore = await readFile(fileURLToPath(import.meta.url));
+const sha = b => createHash("sha256").update(b).digest("hex");
+const blob = b => createHash("sha1").update(Buffer.from("blob " + b.length + "\0")).update(b).digest("hex");
+const git = args => execFileSync("git", ["--no-optional-locks", "-C", source, ...args]);
+const raw = (ref, path) => git(["show", ref + ":" + path]);
+assert.equal(git(["rev-parse", commit + "^{tree}"]).toString().trim(), "ee897713a77123186959e89e5d43a3e7b10aaa2b");
+assert.equal(git(["rev-parse", commit + "^" + "^{tree}"]).toString().trim(), "b825a333b9d7f73a73b801f517b07c256aea5934");
+
+function once(text, needle, value) {
+  assert.equal(text.split(needle).length, 2, "unique additive source span: " + needle);
+  return text.replace(needle, value);
+}
+function composeGame(original) {
+  let s = once(original, "\n\nconst canvas", '\nimport { WatchChoice } from "./watch-choice.js";\n\nconst canvas');
+  s = once(s, "let pixelRatio = 1;\n", "let pixelRatio = 1;\n"
+    + 'const historicalChoice = new WatchChoice(document.querySelector("#watch-choice"), {\n'
+    + "  readHistory: () => watch.replayHistory(),\n"
+    + "  createSession: () => new BrowserSession(),\n"
+    + "});\n");
+  return once(s, "function render() {\n", "function render() {\n  historicalChoice.synchronize(state);\n");
+}
+function composeIndex(original) {
+  let s = once(original, '  <link rel="stylesheet" href="./watch-save.css">\n',
+    '  <link rel="stylesheet" href="./watch-save.css">\n  <link rel="stylesheet" href="./watch-choice.css">\n');
+  return once(s, '    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>\n',
+    '    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>\n'
+    + '    <section id="watch-choice" class="watch-choice" aria-labelledby="choice-title" hidden></section>\n');
+}
+// The exact same additive spans reconstruct both complete incoming PR19 files.
+assert.equal(blob(Buffer.from(composeGame(raw(commit + "^", "game.js").toString()))), input.oracle.game);
+assert.equal(blob(Buffer.from(composeIndex(raw(commit + "^", "index.html").toString()))), input.oracle.index);
+const names = [
+  "index.html", "style.css", "journal.css", "watch-trends.css", "watch-save.css", "watch-file.css", "watch-report.css",
+  "game.js", "pkg/longwater_web.js", "journal.js", "watch-save.js", "watch-file.js",
+  "watch-trends.js", "watch-report.js", "pkg/longwater_web_bg.wasm",
+];
+const originals = new Map(names.map(path => [path, raw(commit, path)]));
+const served = new Map(originals);
+served.set("game.js", Buffer.from(composeGame(originals.get("game.js").toString())));
+served.set("index.html", Buffer.from(composeIndex(originals.get("index.html").toString())));
+for (const file of input.files) {
+  const bytes = Buffer.from(file.text);
+  assert.equal(sha(bytes), file.sha256);
+  assert.equal(blob(bytes), file.git);
+  served.set(file.path, bytes);
+}
+// Receiver-only source binding. Both variants must equal their frozen composed Git source.
+if (input.nullInvalidation) {
+  served.set("game.js", Buffer.from(once(served.get("game.js").toString(),
+    '        state = null;\n        document.querySelector("#watch-journal").hidden = true;\n',
+    '        state = null;\n        historicalChoice.synchronize(null);\n        document.querySelector("#watch-journal").hidden = true;\n')));
+}
+assert.equal(git(["rev-parse", input.composedPin + "^{tree}"]).toString().trim(), input.composedTree);
+for (const [path, bytes] of served) assert.deepEqual(bytes, raw(input.composedPin, path), "served current composition: " + path);
+const sourceReceipt = {
+  basis: "Isolated in-memory runtime composition only; owner source and Git refs are read-only.",
+  commit, tree: "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+  incoming: input.ref, exact_incoming_game_and_index_reconstructed: true,
+  composed_pin: input.composedPin, composed_tree: input.composedTree, null_invalidation: input.nullInvalidation,
+  original_runtime: [...originals].map(([path, bytes]) => ({ path, bytes: bytes.length, sha256: sha(bytes), git_blob: blob(bytes) })),
+  served_runtime: [...served].map(([path, bytes]) => ({ path, bytes: bytes.length, sha256: sha(bytes), git_blob: blob(bytes) })),
+  harness_sha256: sha(harnessBefore), incoming_file_sha256: sha(inputBytes),
+};
+await writeFile(join(here, "source-custody.json"), JSON.stringify(sourceReceipt, null, 2) + "\n");
+const mime = path => path.endsWith(".html") ? "text/html" : path.endsWith(".css") ? "text/css"
+  : path.endsWith(".wasm") ? "application/wasm" : "text/javascript";
+const server = createServer((request, response) => {
+  const path = decodeURIComponent(new URL(request.url, "http://127.0.0.1").pathname).replace(/^\//, "") || "index.html";
+  if (path === "favicon.ico") { response.writeHead(204); response.end(); return; }
+  const body = served.get(path);
+  response.writeHead(body ? 200 : 404, { "Content-Type": mime(path), "Cache-Control": "no-store" });
+  response.end(body || "unknown receiver route");
+});
+await new Promise((resolve, reject) => { server.once("error", reject); server.listen(0, "127.0.0.1", resolve); });
+const url = "http://127.0.0.1:" + server.address().port + "/";
+const { chromium } = await import(pathToFileURL("/Users/me/hamon-work-longwater-delivery-c945953fdeb7/node_modules/playwright/index.mjs"));
+const browser = await chromium.launch({
+  headless: true,
+  executablePath: "/Users/me/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+});
+const result = {
+  started_at: new Date().toISOString(), node: process.version, browser: browser.version(),
+  source: sourceReceipt, cases: [], note: "Authored one-shot replayHistory refusal represents the already-qualified R2 post-adoption display failure. This is not a spontaneous device allocation failure.",
+};
+const log = [];
+const emit = value => { const line = JSON.stringify(value); log.push(line); console.log(line); };
+const snapshot = async page => page.evaluate(() => ({
+  summary: document.querySelector("#state-summary").textContent,
+  choice_visible: !document.querySelector("#choice-result").hidden,
+  choice_html: document.querySelector("#choice-result").innerHTML,
+  choice_tide: document.querySelector("#choice-tide").value,
+  choice_status: document.querySelector("#choice-status").textContent,
+  file_status: document.querySelector("#watch-file-status").textContent,
+  controls_disabled: [...document.querySelectorAll(".game-control")].every(node => node.disabled),
+}));
+try {
+  for (const mode of ["preview_cancel_keeps_comparison", "successful_adoption_clears_comparison", "failed_display_adoption_clears_comparison"]) {
+    const context = await browser.newContext({ viewport: { width: 1200, height: 900 } });
+    const page = await context.newPage();
+    page.setDefaultTimeout(7000);
+    const errors = [];
+    page.on("pageerror", error => errors.push(String(error)));
+    const one = { name: mode, observations: {}, errors };
+    try {
+      await page.goto(url);
+      await page.waitForFunction(() => document.querySelector("#watch-file-open")?.disabled === false);
+      assert.equal(await page.locator("#startup-error").isVisible(), false);
+      await page.locator('[data-action="gate"]').click();
+      await page.locator("#choice-details > summary").click();
+      await page.locator("#choice-action").selectOption("shade");
+      await page.locator("#choice-run").click();
+      await page.locator("#choice-result").waitFor({ state: "visible" });
+      const before = await snapshot(page);
+      assert.equal(before.choice_tide, "1");
+      const native = await page.evaluate(async () => {
+        const { BrowserSession } = await import("/pkg/longwater_web.js");
+        const { SIMULATION_REVISION, WATCH_SAVE_KEY } = await import("/watch-save.js");
+        const session = new BrowserSession();
+        try {
+          const turns = [{ action: "shade", cell: "heart" }, { action: "gate", cell: "north" }, { action: "seed", cell: "south" }];
+          for (const turn of turns) session.take_turn(turn.action, turn.cell);
+          const raw = JSON.stringify({ version: 1, simulation: SIMULATION_REVISION, turns, selected: "south", snapshot: session.snapshot_json() });
+          return { raw, key: WATCH_SAVE_KEY, before: localStorage.getItem(WATCH_SAVE_KEY) };
+        } finally { session.free(); }
+      });
+      await page.locator("#watch-file-input").setInputFiles({ name: "actual-native-day-3.json", mimeType: "application/json", buffer: Buffer.from(native.raw) });
+      await page.locator("#watch-file-preview").waitFor({ state: "visible" });
+      assert.equal((await snapshot(page)).choice_html, before.choice_html, "a preview must keep the active historical comparison");
+      if (mode === "preview_cancel_keeps_comparison") {
+        await page.locator("#watch-file-cancel").click();
+        const after = await snapshot(page);
+        one.observations = { before, after };
+        assert.equal(after.choice_visible, true);
+        assert.equal(after.choice_html, before.choice_html);
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), native.key), native.before);
+      } else {
+        if (mode === "failed_display_adoption_clears_comparison") {
+          await page.evaluate(async () => {
+            const { SavedWatch } = await import("/watch-save.js");
+            const original = SavedWatch.prototype.replayHistory;
+            window.receiverReplayRefusals = 0;
+            SavedWatch.prototype.replayHistory = function () {
+              SavedWatch.prototype.replayHistory = original;
+              window.receiverReplayRefusals++;
+              throw new Error("Authored post-adoption native allocation refusal");
+            };
+          });
+        }
+        await page.locator("#watch-file-confirm").click();
+        await page.locator("#watch-file-preview").waitFor({ state: "hidden" });
+        const after = await snapshot(page);
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), native.key), native.raw, "accepted incoming watch is saved exactly");
+        one.observations = { before, after, accepted_store_sha256: sha(Buffer.from(native.raw)) };
+        if (mode === "successful_adoption_clears_comparison") {
+          assert.match(after.summary, /Day 3 of 14/);
+          assert.equal(after.choice_tide, "3");
+          assert.equal(after.choice_visible, false);
+        } else {
+          assert.equal(await page.evaluate(() => window.receiverReplayRefusals), 1);
+          assert.match(after.file_status, /Opened day 3.*display could not be refreshed/);
+          assert.equal(after.controls_disabled, true);
+          const waiting = page.waitForEvent("download");
+          await page.locator("#watch-file-download").click();
+          const download = await waiting;
+          const stream = await download.createReadStream();
+          const chunks = [];
+          for await (const chunk of stream) chunks.push(chunk);
+          const exported = Buffer.concat(chunks);
+          assert.equal(exported.toString(), native.raw, "active adopted watch remains exactly exportable");
+          await writeFile(join(here, "failed-display-actual-download.json"), exported);
+          one.observations.adopted_export_sha256 = sha(exported);
+          one.observations.unchanged_old_comparison = after.choice_html === before.choice_html;
+          assert.equal(after.choice_visible, false, "a replaced watch must not retain a visible comparison from its predecessor when display refresh fails");
+        }
+      }
+      assert.deepEqual(errors, []);
+      one.outcome = "pass";
+    } catch (error) {
+      one.outcome = "fail";
+      one.error = { name: error.name, message: error.message, stack: error.stack };
+    } finally {
+      await context.close();
+      result.cases.push(one);
+      emit({ name: one.name, outcome: one.outcome, error: one.error?.message });
+    }
+  }
+} finally {
+  await browser.close();
+  await new Promise(resolve => server.close(resolve));
+  assert.equal(sha(await readFile(inputPath)), sha(inputBytes));
+  assert.equal(sha(await readFile(fileURLToPath(import.meta.url))), sha(harnessBefore));
+  for (const [path, bytes] of originals) assert.equal(sha(raw(commit, path)), sha(bytes));
+  result.inputs_unchanged = true;
+  result.finished_at = new Date().toISOString();
+  result.passed = result.cases.filter(x => x.outcome === "pass").length;
+  result.failed = result.cases.filter(x => x.outcome === "fail").length;
+  await writeFile(join(here, "run.json"), JSON.stringify(result, null, 2) + "\n");
+  emit({ passed: result.passed, failed: result.failed, inputs_unchanged: true, browser: result.browser });
+  await writeFile(join(here, "run.log"), log.join("\n") + "\n");
+  process.exitCode = result.failed ? 1 : 0;
+}

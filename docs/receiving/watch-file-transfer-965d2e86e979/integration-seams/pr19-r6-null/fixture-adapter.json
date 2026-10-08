@@ -1,0 +1,62 @@
+{
+  "format": "hamon-bounded-witness-fixture-adapter/1",
+  "originalHarnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+  "adaptedHarnessSha256": "a464778ac428b3727a7bf41e79744250a4b7288735aa90567e028982af53833c",
+  "sameAdaptedBytesInBothRuns": true,
+  "threeCaseBodySha256": "10430e930088658ddb01a24ab451870490cc8e8eb390826addf28c34f09db816",
+  "caseBytes": 5402,
+  "allThreeBehavioralCaseBodiesAndAssertionsByteExact": true,
+  "completeOriginalRecoveredByInverse": true,
+  "changes": [
+    {
+      "needle": "const source = \"/Users/me/hamon-longwater-watch-file-965d2e86e979/final-composition\";",
+      "replacement": "const source = \"/Users/me/hamon-longwater-choice-peer-965d2e86e979/source\";",
+      "reason": "Bind read-only Git source to the isolated receiver repository.",
+      "occurrences": 1
+    },
+    {
+      "needle": "const commit = \"6ecfdde764cdb8754a01efa33cea099949e31175\";",
+      "replacement": "const commit = \"57ab2e1ac2a27648cae3a9fc50aff7154ffa7f16\";",
+      "reason": "Bind source to exact accepted R6 tree.",
+      "occurrences": 1
+    },
+    {
+      "needle": "e80a51351bcf46cb13b95faa081f39bf2466722b",
+      "replacement": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+      "reason": "Update both exact source tree provenance guards to R6.",
+      "occurrences": 2
+    },
+    {
+      "needle": "83c3d5e74377ff6403d1a531718d0674de02d9d2",
+      "replacement": "b825a333b9d7f73a73b801f517b07c256aea5934",
+      "reason": "Use exact landed f321 common ancestor for the unchanged owner-transform oracle.",
+      "occurrences": 1
+    },
+    {
+      "needle": "\"watch-save.css\", \"watch-file.css\",",
+      "replacement": "\"watch-save.css\", \"watch-file.css\", \"watch-report.css\",",
+      "reason": "Add the newly required report stylesheet route.",
+      "occurrences": 1
+    },
+    {
+      "needle": "\"watch-trends.js\", \"pkg/longwater_web_bg.wasm\",",
+      "replacement": "\"watch-trends.js\", \"watch-report.js\", \"pkg/longwater_web_bg.wasm\",",
+      "reason": "Add the newly required report module route.",
+      "occurrences": 1
+    },
+    {
+      "needle": "const sourceReceipt = {",
+      "replacement": "// Receiver-only source binding. Both variants must equal their frozen composed Git source.\nif (input.nullInvalidation) {\n  served.set(\"game.js\", Buffer.from(once(served.get(\"game.js\").toString(),\n    '        state = null;\\n        document.querySelector(\"#watch-journal\").hidden = true;\\n',\n    '        state = null;\\n        historicalChoice.synchronize(null);\\n        document.querySelector(\"#watch-journal\").hidden = true;\\n')));\n}\nassert.equal(git([\"rev-parse\", input.composedPin + \"^{tree}\"]).toString().trim(), input.composedTree);\nfor (const [path, bytes] of served) assert.deepEqual(bytes, raw(input.composedPin, path), \"served current composition: \" + path);\nconst sourceReceipt = {",
+      "reason": "Add the exact receiving-only catch composition and stricter served-source checks.",
+      "occurrences": 1
+    },
+    {
+      "needle": "  incoming: input.ref, exact_incoming_game_and_index_reconstructed: true,",
+      "replacement": "  incoming: input.ref, exact_incoming_game_and_index_reconstructed: true,\n  composed_pin: input.composedPin, composed_tree: input.composedTree, null_invalidation: input.nullInvalidation,",
+      "reason": "Record the actual served composed pin/tree, separate from R6 input.",
+      "occurrences": 1
+    }
+  ],
+  "sourceScope": "Only fixture source/commit/tree bindings, two required current report routes, exact frozen composition binding and recorded provenance. Original composition functions, three cases and all behavioral assertions remain byte-exact.",
+  "browserRuntimeUnchanged": "/Users/me/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+}

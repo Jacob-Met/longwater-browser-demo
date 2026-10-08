@@ -1,0 +1,4 @@
+{"name":"preview_cancel_keeps_comparison","outcome":"pass"}
+{"name":"successful_adoption_clears_comparison","outcome":"pass"}
+{"name":"failed_display_adoption_clears_comparison","outcome":"pass"}
+{"passed":3,"failed":0,"inputs_unchanged":true,"browser":"151.0.7922.34"}

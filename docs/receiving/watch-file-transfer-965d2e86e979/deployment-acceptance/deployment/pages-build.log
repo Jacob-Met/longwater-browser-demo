@@ -1,0 +1,520 @@
+﻿2026-10-08T15:46:07.9775636Z Current runner version: '2.337.0'
+2026-10-08T15:46:07.9800969Z ##[group]Runner Image Provisioner
+2026-10-08T15:46:07.9801898Z Hosted Compute Agent
+2026-10-08T15:46:07.9802570Z Version: 20261002.596
+2026-10-08T15:46:07.9803183Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T15:46:07.9803990Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T15:46:07.9804730Z Worker ID: {13fc70f3-246b-441b-93da-8cb51aa587c8}
+2026-10-08T15:46:07.9805472Z Region: westus
+2026-10-08T15:46:07.9806036Z Cloud: Azure
+2026-10-08T15:46:07.9806569Z ##[endgroup]
+2026-10-08T15:46:07.9808776Z ##[group]Operating System
+2026-10-08T15:46:07.9809485Z Ubuntu
+2026-10-08T15:46:07.9809999Z 24.04.5
+2026-10-08T15:46:07.9810650Z LTS
+2026-10-08T15:46:07.9811159Z ##[endgroup]
+2026-10-08T15:46:07.9811794Z ##[group]Runner Image
+2026-10-08T15:46:07.9812396Z Image: ubuntu-24.04
+2026-10-08T15:46:07.9812948Z Version: 20261004.327.1
+2026-10-08T15:46:07.9814258Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T15:46:07.9815900Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T15:46:07.9816894Z ##[endgroup]
+2026-10-08T15:46:07.9818478Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T15:46:07.9820609Z Contents: read
+2026-10-08T15:46:07.9821216Z Metadata: read
+2026-10-08T15:46:07.9821934Z Pages: write
+2026-10-08T15:46:07.9822498Z ##[endgroup]
+2026-10-08T15:46:07.9824589Z Secret source: Actions
+2026-10-08T15:46:07.9825584Z Cache mode: read
+2026-10-08T15:46:07.9826350Z Prepare workflow directory
+2026-10-08T15:46:08.0159958Z Prepare all required actions
+2026-10-08T15:46:08.0209547Z Getting action download info
+2026-10-08T15:46:08.3744954Z Download action repository 'actions/checkout@v7.0.1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T15:46:08.4677322Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-10-08T15:46:08.7756581Z Getting action download info
+2026-10-08T15:46:08.9172923Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T15:46:09.0523063Z Complete job name: build
+2026-10-08T15:46:09.1280836Z ##[group]Run actions/checkout@v7.0.1
+2026-10-08T15:46:09.1281747Z with:
+2026-10-08T15:46:09.1282201Z   ref: longwater-demo
+2026-10-08T15:46:09.1282682Z   submodules: recursive
+2026-10-08T15:46:09.1283219Z   repository: Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:09.1286940Z   token: ***
+2026-10-08T15:46:09.1287375Z   ssh-strict: true
+2026-10-08T15:46:09.1287817Z   ssh-user: git
+2026-10-08T15:46:09.1288473Z   persist-credentials: true
+2026-10-08T15:46:09.1288975Z   clean: true
+2026-10-08T15:46:09.1289411Z   sparse-checkout-cone-mode: true
+2026-10-08T15:46:09.1289928Z   fetch-depth: 1
+2026-10-08T15:46:09.1290358Z   fetch-tags: false
+2026-10-08T15:46:09.1290801Z   show-progress: true
+2026-10-08T15:46:09.1291250Z   lfs: false
+2026-10-08T15:46:09.1291727Z   set-safe-directory: true
+2026-10-08T15:46:09.1292252Z   allow-unsafe-pr-checkout: false
+2026-10-08T15:46:09.1293042Z ##[endgroup]
+2026-10-08T15:46:09.2270360Z Syncing repository: Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:09.2273244Z ##[group]Getting Git version info
+2026-10-08T15:46:09.2274249Z Working directory is '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T15:46:09.2276177Z [command]/usr/bin/git version
+2026-10-08T15:46:09.2344464Z git version 2.55.0
+2026-10-08T15:46:09.2367880Z ##[endgroup]
+2026-10-08T15:46:09.2383861Z Temporarily overriding HOME='/home/runner/work/_temp/7fa3ebd0-55d4-484a-ae86-23877c2436c4' before making global git config changes
+2026-10-08T15:46:09.2385916Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:46:09.2387749Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:09.2444648Z Deleting the contents of '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T15:46:09.2449154Z ##[group]Determining repository object format
+2026-10-08T15:46:09.6906502Z ##[endgroup]
+2026-10-08T15:46:09.6910950Z ##[group]Initializing the repository
+2026-10-08T15:46:09.6915072Z [command]/usr/bin/git init /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:09.7031297Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T15:46:09.7033522Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T15:46:09.7035440Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T15:46:09.7037727Z hint: call:
+2026-10-08T15:46:09.7039345Z hint:
+2026-10-08T15:46:09.7040978Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T15:46:09.7042721Z hint:
+2026-10-08T15:46:09.7044354Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T15:46:09.7047092Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T15:46:09.7049732Z hint:
+2026-10-08T15:46:09.7051094Z hint: 	git branch -m <name>
+2026-10-08T15:46:09.7052554Z hint:
+2026-10-08T15:46:09.7054411Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T15:46:09.7057909Z Initialized empty Git repository in /home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/
+2026-10-08T15:46:09.7063937Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:09.7124181Z ##[endgroup]
+2026-10-08T15:46:09.7126974Z ##[group]Disabling automatic garbage collection
+2026-10-08T15:46:09.7129682Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T15:46:09.7173226Z ##[endgroup]
+2026-10-08T15:46:09.7175918Z ##[group]Setting up auth
+2026-10-08T15:46:09.7178250Z Removing SSH command configuration
+2026-10-08T15:46:09.7181015Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:46:09.7222108Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:46:09.7561386Z Removing HTTP extra header
+2026-10-08T15:46:09.7573662Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:46:09.7612497Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:46:09.7835777Z Removing includeIf entries pointing to credentials config files
+2026-10-08T15:46:09.7839670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:46:09.7879022Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:46:09.8107879Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T15:46:09.8207323Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git.path /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:09.8248259Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:09.8289292Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:09.8329953Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:09.8365501Z ##[endgroup]
+2026-10-08T15:46:09.8368334Z ##[group]Fetching the repository
+2026-10-08T15:46:09.8375242Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/longwater-demo*:refs/remotes/origin/longwater-demo* +refs/tags/longwater-demo*:refs/tags/longwater-demo*
+2026-10-08T15:46:11.4502905Z From https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:11.4504026Z  * [new branch]      longwater-demo -> origin/longwater-demo
+2026-10-08T15:46:11.4508647Z ##[endgroup]
+2026-10-08T15:46:11.4509612Z ##[group]Determining the checkout info
+2026-10-08T15:46:11.4516702Z [command]/usr/bin/git branch --list --remote origin/longwater-demo
+2026-10-08T15:46:11.4551869Z   origin/longwater-demo
+2026-10-08T15:46:11.4556229Z ##[endgroup]
+2026-10-08T15:46:11.4560293Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T15:46:11.4618706Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T15:46:11.4661390Z ##[group]Checking out the ref
+2026-10-08T15:46:11.4666675Z [command]/usr/bin/git checkout --progress --force -B longwater-demo refs/remotes/origin/longwater-demo
+2026-10-08T15:46:11.5165598Z Switched to a new branch 'longwater-demo'
+2026-10-08T15:46:11.5171608Z branch 'longwater-demo' set up to track 'origin/longwater-demo'.
+2026-10-08T15:46:11.5179712Z ##[endgroup]
+2026-10-08T15:46:11.5180237Z ##[group]Setting up auth for fetching submodules
+2026-10-08T15:46:11.5209741Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T15:46:11.5236829Z [command]/usr/bin/git config --global include.path /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:11.5278071Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-08T15:46:11.5316000Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-08T15:46:11.5359126Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-150724801@github.com:
+2026-10-08T15:46:11.5394011Z ##[endgroup]
+2026-10-08T15:46:11.5394480Z ##[group]Fetching submodules
+2026-10-08T15:46:11.5399260Z [command]/usr/bin/git submodule sync --recursive
+2026-10-08T15:46:11.5635478Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2026-10-08T15:46:11.5878577Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2026-10-08T15:46:11.6105506Z ##[endgroup]
+2026-10-08T15:46:11.6106441Z ##[group]Persisting credentials for submodules
+2026-10-08T15:46:11.6113997Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2026-10-08T15:46:11.6346514Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:46:11.6598926Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2026-10-08T15:46:11.6874234Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-150724801@github.com:'
+2026-10-08T15:46:11.7140628Z ##[endgroup]
+2026-10-08T15:46:11.7184849Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T15:46:11.7216884Z 43038d28b08562a5f1c143b2773d925b4d28ca7d
+2026-10-08T15:46:11.7483876Z ##[group]Run actions/upload-pages-artifact@v3
+2026-10-08T15:46:11.7484209Z with:
+2026-10-08T15:46:11.7484402Z   path: .
+2026-10-08T15:46:11.7484598Z   name: github-pages
+2026-10-08T15:46:11.7484819Z   retention-days: 1
+2026-10-08T15:46:11.7485030Z ##[endgroup]
+2026-10-08T15:46:11.7547494Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+2026-10-08T15:46:11.7671952Z ##[group]Run echo ::group::Archive artifact
+2026-10-08T15:46:11.7672337Z [36;1mecho ::group::Archive artifact[0m
+2026-10-08T15:46:11.7672609Z [36;1mtar \[0m
+2026-10-08T15:46:11.7672863Z [36;1m  --dereference --hard-dereference \[0m
+2026-10-08T15:46:11.7673189Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-10-08T15:46:11.7673502Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-10-08T15:46:11.7673787Z [36;1m  --exclude=.git \[0m
+2026-10-08T15:46:11.7674031Z [36;1m  --exclude=.github \[0m
+2026-10-08T15:46:11.7674261Z [36;1m  .[0m
+2026-10-08T15:46:11.7674507Z [36;1mecho ::endgroup::[0m
+2026-10-08T15:46:11.7704187Z shell: /usr/bin/sh -e {0}
+2026-10-08T15:46:11.7704437Z env:
+2026-10-08T15:46:11.7704629Z   INPUT_PATH: .
+2026-10-08T15:46:11.7704836Z ##[endgroup]
+2026-10-08T15:46:11.7764699Z ##[group]Archive artifact
+2026-10-08T15:46:11.7783630Z ./
+2026-10-08T15:46:11.7783999Z ./package-lock.json
+2026-10-08T15:46:11.7784392Z ./watch-report.js
+2026-10-08T15:46:11.7784786Z ./watch-file.css
+2026-10-08T15:46:11.7788705Z ./journal.js
+2026-10-08T15:46:11.7798818Z ./watch-trends.js
+2026-10-08T15:46:11.7799315Z ./watch-save.js
+2026-10-08T15:46:11.7799722Z ./.nojekyll
+2026-10-08T15:46:11.7800094Z ./journal.css
+2026-10-08T15:46:11.7800380Z ./.gitignore
+2026-10-08T15:46:11.7800634Z ./watch-report.css
+2026-10-08T15:46:11.7800901Z ./index.html
+2026-10-08T15:46:11.7801148Z ./pkg/
+2026-10-08T15:46:11.7801400Z ./pkg/longwater_web_bg.wasm
+2026-10-08T15:46:11.7801714Z ./pkg/longwater_web.js
+2026-10-08T15:46:11.7802015Z ./pkg/longwater_web_bg.wasm.d.ts
+2026-10-08T15:46:11.7802364Z ./pkg/longwater_web.d.ts
+2026-10-08T15:46:11.7802647Z ./scripts/
+2026-10-08T15:46:11.7802897Z ./scripts/package.mjs
+2026-10-08T15:46:11.7803313Z ./tests/
+2026-10-08T15:46:11.7803692Z ./tests/server.mjs
+2026-10-08T15:46:11.7804127Z ./tests/resume-journal.test.mjs
+2026-10-08T15:46:11.7804649Z ./tests/watch-trends.test.mjs
+2026-10-08T15:46:11.7805179Z ./tests/watch-save.browser.test.mjs
+2026-10-08T15:46:11.7805729Z ./tests/journal.test.mjs
+2026-10-08T15:46:11.7806187Z ./tests/browser.test.mjs
+2026-10-08T15:46:11.7806668Z ./tests/watch-file-trends.test.mjs
+2026-10-08T15:46:11.7807166Z ./tests/watch-file-report.test.mjs
+2026-10-08T15:46:11.7807510Z ./tests/new-watch.test.mjs
+2026-10-08T15:46:11.7807830Z ./tests/watch-file.browser.test.mjs
+2026-10-08T15:46:11.7808394Z ./tests/watch-file.test.mjs
+2026-10-08T15:46:11.7808713Z ./tests/watch-report.test.mjs
+2026-10-08T15:46:11.7809032Z ./tests/watch-save.test.mjs
+2026-10-08T15:46:11.7809339Z ./tests/package.test.mjs
+2026-10-08T15:46:11.7809661Z ./tests/offline-download.test.mjs
+2026-10-08T15:46:11.7809978Z ./watch-save.css
+2026-10-08T15:46:11.7810219Z ./watch-trends.css
+2026-10-08T15:46:11.7810470Z ./README.md
+2026-10-08T15:46:11.7810731Z ./downloads/
+2026-10-08T15:46:11.7810996Z ./downloads/Longwater-Fourteen-Tides.html
+2026-10-08T15:46:11.7811343Z ./style.css
+2026-10-08T15:46:11.7811568Z ./package.json
+2026-10-08T15:46:11.7811806Z ./watch-file.js
+2026-10-08T15:46:11.7812049Z ./docs/
+2026-10-08T15:46:11.7812267Z ./docs/receiving/
+2026-10-08T15:46:11.7812557Z ./docs/receiving/new-watch-review-45d4289ccf6c/
+2026-10-08T15:46:11.7813010Z ./docs/receiving/new-watch-review-45d4289ccf6c/manifest.json
+2026-10-08T15:46:11.7813504Z ./docs/receiving/new-watch-review-45d4289ccf6c/peer-review/
+2026-10-08T15:46:11.7814096Z ./docs/receiving/new-watch-review-45d4289ccf6c/peer-review/corrected-0c08.test.mjs
+2026-10-08T15:46:11.7814736Z ./docs/receiving/new-watch-review-45d4289ccf6c/peer-review/README.md
+2026-10-08T15:46:11.7815840Z ./docs/receiving/new-watch-review-45d4289ccf6c/peer-review/artifact-manifest.json
+2026-10-08T15:46:11.7816815Z ./docs/receiving/new-watch-review-45d4289ccf6c/peer-review/source-review.json
+2026-10-08T15:46:11.7817418Z ./docs/receiving/new-watch-review-45d4289ccf6c/receiving.json
+2026-10-08T15:46:11.7818154Z ./docs/receiving/new-watch-review-45d4289ccf6c/evidence.tar.gz
+2026-10-08T15:46:11.7818861Z ./docs/receiving/new-watch-review-45d4289ccf6c/README.md
+2026-10-08T15:46:11.7819672Z ./docs/receiving/watch-file-transfer-965d2e86e979/
+2026-10-08T15:46:11.7820104Z ./docs/receiving/watch-file-transfer-965d2e86e979/manifest.json
+2026-10-08T15:46:11.7820559Z ./docs/receiving/watch-file-transfer-965d2e86e979/peer-review/
+2026-10-08T15:46:11.7821041Z ./docs/receiving/watch-file-transfer-965d2e86e979/peer-review/receiving.json
+2026-10-08T15:46:11.7821562Z ./docs/receiving/watch-file-transfer-965d2e86e979/source-manifest.json
+2026-10-08T15:46:11.7822033Z ./docs/receiving/watch-file-transfer-965d2e86e979/receiving.json
+2026-10-08T15:46:11.7822478Z ./docs/receiving/watch-file-transfer-965d2e86e979/evidence.tar.gz
+2026-10-08T15:46:11.7822938Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/
+2026-10-08T15:46:11.7823430Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/
+2026-10-08T15:46:11.7824031Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/source-capsule.json.gz
+2026-10-08T15:46:11.7863511Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/source-capsule-receipt.json
+2026-10-08T15:46:11.7864809Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault.stderr
+2026-10-08T15:46:11.7865949Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/
+2026-10-08T15:46:11.7867156Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/previous-report.html
+2026-10-08T15:46:11.7868617Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/incoming-native-snapshots.json
+2026-10-08T15:46:11.7869984Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/previous-day-2.json
+2026-10-08T15:46:11.7871080Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/incoming-day-5.json
+2026-10-08T15:46:11.7872202Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/active-watch-after-fault.json
+2026-10-08T15:46:11.7873441Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/restored-day-5-report.html
+2026-10-08T15:46:11.7874416Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault/result.json
+2026-10-08T15:46:11.7875351Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-receiving.json
+2026-10-08T15:46:11.7876239Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/source-preservation.json
+2026-10-08T15:46:11.7877107Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/base-receiving.json
+2026-10-08T15:46:11.7878327Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/materialize-source.cjs.source
+2026-10-08T15:46:11.7879443Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/disposition.json
+2026-10-08T15:46:11.7880375Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault.stderr
+2026-10-08T15:46:11.7881642Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault-execution.json
+2026-10-08T15:46:11.7882926Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/post-adoption-report-peer.mjs.source
+2026-10-08T15:46:11.7884296Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault-execution.json
+2026-10-08T15:46:11.7885194Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/
+2026-10-08T15:46:11.7886724Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/previous-report.html
+2026-10-08T15:46:11.7888211Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/stale-report-after-day-5-adoption.html
+2026-10-08T15:46:11.7889265Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/incoming-native-snapshots.json
+2026-10-08T15:46:11.7890365Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/previous-day-2.json
+2026-10-08T15:46:11.7891910Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/incoming-day-5.json
+2026-10-08T15:46:11.7893041Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/active-watch-after-fault.json
+2026-10-08T15:46:11.7894386Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/restored-day-5-report.html
+2026-10-08T15:46:11.7895654Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault/result.json
+2026-10-08T15:46:11.7896620Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-fault.stdout
+2026-10-08T15:46:11.7897611Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/canonical-report-receiving.json
+2026-10-08T15:46:11.7898943Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/fixed-artifact-reproduction.json
+2026-10-08T15:46:11.7899675Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/README.md
+2026-10-08T15:46:11.7900760Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-receiving.json
+2026-10-08T15:46:11.7901699Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/prefixed-fault.stdout
+2026-10-08T15:46:11.7902808Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/peer/files.json
+2026-10-08T15:46:11.7903619Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/receiving.json
+2026-10-08T15:46:11.7904596Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/
+2026-10-08T15:46:11.7905647Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/r5-exposed-source-manifest.json
+2026-10-08T15:46:11.7906777Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/r5-delivery-custody.json
+2026-10-08T15:46:11.7908129Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/r5-delivery-source-manifest.json
+2026-10-08T15:46:11.7909262Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/canonical-report-receiving.json
+2026-10-08T15:46:11.7910605Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/inputs/r5-exposed-custody.json
+2026-10-08T15:46:11.7911574Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/
+2026-10-08T15:46:11.7912901Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/callback-correction.py.source
+2026-10-08T15:46:11.7914025Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/pre-fix-three-way-composition.py.source
+2026-10-08T15:46:11.7915396Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/pre-fix-conflict-resolutions.py.source
+2026-10-08T15:46:11.7916309Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/dependency-link-receiving-correction.py.source
+2026-10-08T15:46:11.7917236Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/source-preservation.py.source
+2026-10-08T15:46:11.7918764Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/methods/callback-initial-refused.py.source
+2026-10-08T15:46:11.7920009Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/
+2026-10-08T15:46:11.7920975Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix/
+2026-10-08T15:46:11.7922047Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix/tests/
+2026-10-08T15:46:11.7923066Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix/tests/watch-file-report.test.mjs.source
+2026-10-08T15:46:11.7924026Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix/tests/watch-file.browser.test.mjs.source
+2026-10-08T15:46:11.7925409Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix/game.js.source
+2026-10-08T15:46:11.7926267Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate-artifact.json
+2026-10-08T15:46:11.7926947Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/preservation.json
+2026-10-08T15:46:11.7927624Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate-source.json
+2026-10-08T15:46:11.7928589Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix-source.json
+2026-10-08T15:46:11.7929282Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate-package.log
+2026-10-08T15:46:11.7929981Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/callback-correction.patch
+2026-10-08T15:46:11.7930716Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate-source-manifest.json
+2026-10-08T15:46:11.7931427Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix-package.log
+2026-10-08T15:46:11.7932579Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/from-canonical-report.patch
+2026-10-08T15:46:11.7933304Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix-artifact.json
+2026-10-08T15:46:11.7934017Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/pre-fix-source-manifest.json
+2026-10-08T15:46:11.7934687Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate/
+2026-10-08T15:46:11.7935315Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate/tests/
+2026-10-08T15:46:11.7936088Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate/tests/watch-file-report.test.mjs.source
+2026-10-08T15:46:11.7936989Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate/tests/watch-file.browser.test.mjs.source
+2026-10-08T15:46:11.7937791Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/candidate/game.js.source
+2026-10-08T15:46:11.7939259Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/source/from-R5-with-exposed-seam-docs.patch
+2026-10-08T15:46:11.7940302Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/receiver-corrections/
+2026-10-08T15:46:11.7941045Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/receiver-corrections/callback-preparation.json
+2026-10-08T15:46:11.7941869Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/receiver-corrections/dependency-link.json
+2026-10-08T15:46:11.7942553Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/public-site/
+2026-10-08T15:46:11.7943165Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/public-site/receiving.json
+2026-10-08T15:46:11.7943942Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/public-site/receive-public-watch-transfer.mjs.source
+2026-10-08T15:46:11.7944700Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/historical-r5-hosted/
+2026-10-08T15:46:11.7945417Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/historical-r5-hosted/r5-hosted-receiving.json
+2026-10-08T15:46:11.7946187Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/historical-r5-hosted/custody.json
+2026-10-08T15:46:11.7946938Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/historical-r5-hosted/r5-hosted-browser.log
+2026-10-08T15:46:11.7947771Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/composition/
+2026-10-08T15:46:11.7948921Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/composition/three-way-resolutions.json
+2026-10-08T15:46:11.7950006Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/composition/prefixed-composition-proof.json
+2026-10-08T15:46:11.7950825Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/composition/three-way-composition-initial.json
+2026-10-08T15:46:11.7951911Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/
+2026-10-08T15:46:11.7952934Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/runtime.json
+2026-10-08T15:46:11.7953597Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/native.log
+2026-10-08T15:46:11.7954271Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/native-result.json
+2026-10-08T15:46:11.7954947Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/
+2026-10-08T15:46:11.7955713Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/watch-file-report-online-14.html
+2026-10-08T15:46:11.7956601Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/watch-file-report-results.json
+2026-10-08T15:46:11.7957480Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/watch-file-report-online-3.html
+2026-10-08T15:46:11.7958511Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/watch-file-report-offline-3.html
+2026-10-08T15:46:11.7959402Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/downloads/watch-file-report-offline-14.html
+2026-10-08T15:46:11.7960225Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/qualification/run-full-suite.py.source
+2026-10-08T15:46:11.7960875Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/README.md
+2026-10-08T15:46:11.7961412Z ./docs/receiving/watch-file-transfer-965d2e86e979/report-composition/files.json
+2026-10-08T15:46:11.7961919Z ./docs/receiving/watch-file-transfer-965d2e86e979/runtime-inputs.json
+2026-10-08T15:46:11.7962372Z ./docs/receiving/watch-file-transfer-965d2e86e979/README.md
+2026-10-08T15:46:11.7962801Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/
+2026-10-08T15:46:11.7963290Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/
+2026-10-08T15:46:11.7963839Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.json
+2026-10-08T15:46:11.7964390Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/run.log
+2026-10-08T15:46:11.7965016Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/github-source-summary.json
+2026-10-08T15:46:11.7965730Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/integration-seams-review.json
+2026-10-08T15:46:11.7966426Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr20.json
+2026-10-08T15:46:11.7967660Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/current-head-addendum.json
+2026-10-08T15:46:11.7968922Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/incoming-pr19.json
+2026-10-08T15:46:11.7969588Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/native-dependency.json
+2026-10-08T15:46:11.7970496Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/driver-result.json
+2026-10-08T15:46:11.7971170Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/source-custody.json
+2026-10-08T15:46:11.7971793Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/README.md
+2026-10-08T15:46:11.7972490Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/failed-display-actual-download.json.source
+2026-10-08T15:46:11.7973458Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/receive-adoption-seam.mjs.source
+2026-10-08T15:46:11.7974128Z ./docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19/files.json
+2026-10-08T15:46:11.7974554Z ./docs/qualification/
+2026-10-08T15:46:11.7974812Z ./docs/qualification/offline-watch-566d51f04b31/
+2026-10-08T15:46:11.7975168Z ./docs/qualification/offline-watch-566d51f04b31/run.json
+2026-10-08T15:46:11.7975723Z ./docs/qualification/offline-watch-566d51f04b31/joined-candidate-suite.log
+2026-10-08T15:46:11.7976231Z ./docs/qualification/offline-watch-566d51f04b31/old-packager-baseline.log
+2026-10-08T15:46:11.7976672Z ./docs/qualification/offline-watch-566d51f04b31/README.md
+2026-10-08T15:46:11.7977099Z ./docs/qualification/offline-watch-566d51f04b31/source-verification.json
+2026-10-08T15:46:11.7977512Z ./docs/qualification/watch-report-49f845d0dece/
+2026-10-08T15:46:11.7977879Z ./docs/qualification/watch-report-49f845d0dece/manifest.json
+2026-10-08T15:46:11.7979075Z ./docs/qualification/watch-report-49f845d0dece/keyboard-diagnostic.json
+2026-10-08T15:46:11.7979917Z ./docs/qualification/watch-report-49f845d0dece/source-freeze-0df34ae.json
+2026-10-08T15:46:11.7980413Z ./docs/qualification/watch-report-49f845d0dece/source-freeze.json
+2026-10-08T15:46:11.7980852Z ./docs/qualification/watch-report-49f845d0dece/full-suite.txt
+2026-10-08T15:46:11.7981321Z ./docs/qualification/watch-report-49f845d0dece/watch-report-readable.png
+2026-10-08T15:46:11.7981786Z ./docs/qualification/watch-report-49f845d0dece/full-suite.json
+2026-10-08T15:46:11.7982214Z ./docs/qualification/watch-report-49f845d0dece/final-full-suite.txt
+2026-10-08T15:46:11.7982674Z ./docs/qualification/watch-report-49f845d0dece/composed-package.json
+2026-10-08T15:46:11.7983137Z ./docs/qualification/watch-report-49f845d0dece/final-full-suite.json
+2026-10-08T15:46:11.7983596Z ./docs/qualification/watch-report-49f845d0dece/composed-full-suite.txt
+2026-10-08T15:46:11.7984030Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/
+2026-10-08T15:46:11.7984507Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.json
+2026-10-08T15:46:11.7985039Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/first-focused.txt
+2026-10-08T15:46:11.7985555Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/source-freeze.json
+2026-10-08T15:46:11.7986060Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.txt
+2026-10-08T15:46:11.7986581Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/baseline-absence.mjs
+2026-10-08T15:46:11.7987099Z ./docs/qualification/watch-report-49f845d0dece/mac-initial/full-suite.json
+2026-10-08T15:46:11.7987547Z ./docs/qualification/watch-report-49f845d0dece/README.md
+2026-10-08T15:46:11.7988130Z ./docs/qualification/watch-report-49f845d0dece/composed-full-suite.json
+2026-10-08T15:46:11.7988616Z ./docs/qualification/watch-report-49f845d0dece/watch-report-phone.png
+2026-10-08T15:46:11.7989057Z ./docs/qualification/watch-report-49f845d0dece/package.json
+2026-10-08T15:46:11.7989527Z ./docs/qualification/watch-report-49f845d0dece/native-bundle-verification.txt
+2026-10-08T15:46:11.7990038Z ./docs/qualification/watch-report-49f845d0dece/source-freeze-260d00a.json
+2026-10-08T15:46:11.7990513Z ./docs/qualification/watch-report-49f845d0dece/native-source.bundle
+2026-10-08T15:46:11.7990913Z ./docs/qualification/resume-journal-3e50c5ad22c5/
+2026-10-08T15:46:11.7991327Z ./docs/qualification/resume-journal-3e50c5ad22c5/before.log
+2026-10-08T15:46:11.7991776Z ./docs/qualification/resume-journal-3e50c5ad22c5/late-received-inputs.json
+2026-10-08T15:46:11.7992262Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-composition/
+2026-10-08T15:46:11.7992775Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-composition/resumed-phone.png
+2026-10-08T15:46:11.7993348Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-composition/receipts.json
+2026-10-08T15:46:11.7993865Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-project-tests.log
+2026-10-08T15:46:11.7994520Z ./docs/qualification/resume-journal-3e50c5ad22c5/source-and-runtime.json
+2026-10-08T15:46:11.7995031Z ./docs/qualification/resume-journal-3e50c5ad22c5/received-header.patch
+2026-10-08T15:46:11.7995469Z ./docs/qualification/resume-journal-3e50c5ad22c5/README.md
+2026-10-08T15:46:11.7995890Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent.log
+2026-10-08T15:46:11.7996458Z ./docs/qualification/resume-journal-3e50c5ad22c5/author-inputs.json
+2026-10-08T15:46:11.7996907Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/
+2026-10-08T15:46:11.7997418Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-390.png
+2026-10-08T15:46:11.7998114Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-320.png
+2026-10-08T15:46:11.7998680Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/transcript.json
+2026-10-08T15:46:11.7999250Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/header-layouts.json
+2026-10-08T15:46:11.7999838Z ./docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-1280.png
+2026-10-08T15:46:11.8000328Z ./docs/qualification/resume-journal-3e50c5ad22c5/files.json
+2026-10-08T15:46:11.8000688Z ./docs/qualification/watch-trends-afe225d6c6be/
+2026-10-08T15:46:11.8001044Z ./docs/qualification/watch-trends-afe225d6c6be/contract.md
+2026-10-08T15:46:11.8001478Z ./docs/qualification/watch-trends-afe225d6c6be/test-fixture-addendum.md
+2026-10-08T15:46:11.8001917Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/
+2026-10-08T15:46:11.8002333Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/receipt.json
+2026-10-08T15:46:11.8002822Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/capture-receipt.json
+2026-10-08T15:46:11.8003309Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/tests.log
+2026-10-08T15:46:11.8003768Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/capture.mjs
+2026-10-08T15:46:11.8004252Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/trends-desktop.png
+2026-10-08T15:46:11.8004759Z ./docs/qualification/watch-trends-afe225d6c6be/qualified/trends-phone.png
+2026-10-08T15:46:11.8005229Z ./docs/qualification/watch-trends-afe225d6c6be/source-freeze.json
+2026-10-08T15:46:11.8005668Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/
+2026-10-08T15:46:11.8006210Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/pre-candidate-inputs.json
+2026-10-08T15:46:11.8006825Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/full-suite.log
+2026-10-08T15:46:11.8007393Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/source-freeze.json
+2026-10-08T15:46:11.8008120Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/composition-receiver.mjs
+2026-10-08T15:46:11.8008747Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/native-evidence.tar.gz
+2026-10-08T15:46:11.8009314Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/README.md
+2026-10-08T15:46:11.8009908Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/independent-receiving.json
+2026-10-08T15:46:11.8010507Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/
+2026-10-08T15:46:11.8011095Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/desktop.png
+2026-10-08T15:46:11.8011706Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/phone.png
+2026-10-08T15:46:11.8012318Z ./docs/qualification/watch-trends-afe225d6c6be/current-composition/evidence-manifest.json
+2026-10-08T15:46:11.8012823Z ./docs/qualification/watch-trends-afe225d6c6be/baseline/
+2026-10-08T15:46:11.8013262Z ./docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.json
+2026-10-08T15:46:11.8013745Z ./docs/qualification/watch-trends-afe225d6c6be/baseline/receipt.json
+2026-10-08T15:46:11.8014211Z ./docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.log
+2026-10-08T15:46:11.8014807Z ./docs/qualification/watch-trends-afe225d6c6be/baseline/tests.log
+2026-10-08T15:46:11.8015244Z ./docs/qualification/watch-trends-afe225d6c6be/first-composition/
+2026-10-08T15:46:11.8015721Z ./docs/qualification/watch-trends-afe225d6c6be/first-composition/receipt.json
+2026-10-08T15:46:11.8016285Z ./docs/qualification/watch-trends-afe225d6c6be/first-composition/pointer-r1-failure.json
+2026-10-08T15:46:11.8016851Z ./docs/qualification/watch-trends-afe225d6c6be/first-composition/tests.log
+2026-10-08T15:46:11.8017397Z ./docs/qualification/watch-trends-afe225d6c6be/initial/
+2026-10-08T15:46:11.8017797Z ./docs/qualification/watch-trends-afe225d6c6be/initial/receipt.json
+2026-10-08T15:46:11.8018365Z ./docs/qualification/watch-trends-afe225d6c6be/initial/tests.log
+2026-10-08T15:46:11.8018864Z ./docs/qualification/watch-trends-afe225d6c6be/initial/watch-trends-before-pointer.js
+2026-10-08T15:46:11.8019398Z ./docs/qualification/watch-trends-afe225d6c6be/stylesheet-addendum.md
+2026-10-08T15:46:11.8019828Z ./docs/qualification/watch-trends-afe225d6c6be/README.md
+2026-10-08T15:46:11.8020213Z ./docs/qualification/watch-trends-afe225d6c6be/source.patch
+2026-10-08T15:46:11.8020624Z ./docs/qualification/watch-trends-afe225d6c6be/base-modes.json
+2026-10-08T15:46:11.8021031Z ./docs/qualification/watch-trends-afe225d6c6be/base-pins.json
+2026-10-08T15:46:11.8021429Z ./docs/qualification/direct-offline-download-c945953fdeb7/
+2026-10-08T15:46:11.8021903Z ./docs/qualification/direct-offline-download-c945953fdeb7/source-manifest.json
+2026-10-08T15:46:11.8022452Z ./docs/qualification/direct-offline-download-c945953fdeb7/delivery-baseline.json
+2026-10-08T15:46:11.8022968Z ./docs/qualification/direct-offline-download-c945953fdeb7/candidate.log
+2026-10-08T15:46:11.8023483Z ./docs/qualification/direct-offline-download-c945953fdeb7/candidate-receipt.json
+2026-10-08T15:46:11.8023997Z ./docs/qualification/direct-offline-download-c945953fdeb7/artifact.json
+2026-10-08T15:46:11.8024532Z ./docs/qualification/direct-offline-download-c945953fdeb7/online-before-download.png
+2026-10-08T15:46:11.8025100Z ./docs/qualification/direct-offline-download-c945953fdeb7/coordination.json
+2026-10-08T15:46:11.8025659Z ./docs/qualification/direct-offline-download-c945953fdeb7/downloaded-watch-reopened.png
+2026-10-08T15:46:11.8026235Z ./docs/qualification/direct-offline-download-c945953fdeb7/download-phone.png
+2026-10-08T15:46:11.8026731Z ./docs/qualification/direct-offline-download-c945953fdeb7/README.md
+2026-10-08T15:46:11.8027202Z ./docs/qualification/direct-offline-download-c945953fdeb7/baseline.log
+2026-10-08T15:46:11.8027709Z ./docs/qualification/direct-offline-download-c945953fdeb7/baseline-receipt.json
+2026-10-08T15:46:11.8028217Z ./screenshots/
+2026-10-08T15:46:11.8028427Z ./screenshots/desktop.png
+2026-10-08T15:46:11.8028668Z ./screenshots/phone.png
+2026-10-08T15:46:11.8028876Z ./game.js
+2026-10-08T15:46:11.8029260Z ##[endgroup]
+2026-10-08T15:46:11.8044224Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=49]
+2026-10-08T15:46:11.8048934Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+2026-10-08T15:46:11.8054414Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-08T15:46:11.8057450Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+2026-10-08T15:46:11.8061647Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-08T15:46:11.8063797Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+2026-10-08T15:46:11.8131569Z ##[group]Run actions/upload-artifact@v4
+2026-10-08T15:46:11.8131886Z with:
+2026-10-08T15:46:11.8132085Z   name: github-pages
+2026-10-08T15:46:11.8132343Z   path: /home/runner/work/_temp/artifact.tar
+2026-10-08T15:46:11.8132632Z   retention-days: 1
+2026-10-08T15:46:11.8132851Z   if-no-files-found: error
+2026-10-08T15:46:11.8133094Z   compression-level: 6
+2026-10-08T15:46:11.8133310Z   overwrite: false
+2026-10-08T15:46:11.8133727Z   include-hidden-files: false
+2026-10-08T15:46:11.8133986Z ##[endgroup]
+2026-10-08T15:46:11.9750383Z (node:2510) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T15:46:11.9751266Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T15:46:11.9795461Z With the provided path, there will be 1 file uploaded
+2026-10-08T15:46:11.9802313Z Artifact name is valid!
+2026-10-08T15:46:11.9803123Z Root directory input is valid!
+2026-10-08T15:46:12.3844109Z Beginning upload of artifact content to blob storage
+2026-10-08T15:46:12.6983233Z (node:2510) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T15:46:13.5900841Z Uploaded bytes 8388608
+2026-10-08T15:46:13.7066966Z Uploaded bytes 11265126
+2026-10-08T15:46:13.7842527Z Finished uploading artifact content to blob storage!
+2026-10-08T15:46:13.7844573Z SHA256 digest of uploaded artifact zip is 7dc738cdd25eb9255be344e2c472eccf3da76c1ae497c700313938096c4e877a
+2026-10-08T15:46:13.7846306Z Finalizing artifact upload
+2026-10-08T15:46:14.0960046Z Artifact github-pages.zip successfully finalized. Artifact ID 11561837247
+2026-10-08T15:46:14.0961948Z Artifact github-pages has been successfully uploaded! Final size is 11265126 bytes. Artifact ID is 11561837247
+2026-10-08T15:46:14.0968757Z Artifact download URL: https://github.com/Jacob-Met/longwater-browser-demo/actions/runs/37803444620/artifacts/11561837247
+2026-10-08T15:46:14.1087510Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=2302]
+2026-10-08T15:46:14.1259495Z Post job cleanup.
+2026-10-08T15:46:14.2130273Z [command]/usr/bin/git version
+2026-10-08T15:46:14.2175155Z git version 2.55.0
+2026-10-08T15:46:14.2219878Z Temporarily overriding HOME='/home/runner/work/_temp/05ada1ee-2e78-408d-8dbc-40d205ff1bb5' before making global git config changes
+2026-10-08T15:46:14.2221231Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:46:14.2224996Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:14.2257650Z Removing SSH command configuration
+2026-10-08T15:46:14.2264715Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:46:14.2301100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:46:14.2544927Z Removing HTTP extra header
+2026-10-08T15:46:14.2551430Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:46:14.2598334Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:46:14.2848649Z Removing includeIf entries pointing to credentials config files
+2026-10-08T15:46:14.2858140Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:46:14.2892318Z includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git.path
+2026-10-08T15:46:14.2893730Z includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/worktrees/*.path
+2026-10-08T15:46:14.2894883Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T15:46:14.2895653Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T15:46:14.2902483Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git.path
+2026-10-08T15:46:14.2929704Z /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:14.2941406Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-0dc5829a\-dc80\-4134\-9368\-9e4f1e93c6c0\.config
+2026-10-08T15:46:14.2986329Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/worktrees/*.path
+2026-10-08T15:46:14.3024232Z /home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:14.3033715Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-0dc5829a\-dc80\-4134\-9368\-9e4f1e93c6c0\.config
+2026-10-08T15:46:14.3091339Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T15:46:14.3122664Z /github/runner_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:14.3134966Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-0dc5829a\-dc80\-4134\-9368\-9e4f1e93c6c0\.config
+2026-10-08T15:46:14.3184369Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T15:46:14.3214608Z /github/runner_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config
+2026-10-08T15:46:14.3222298Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-0dc5829a\-dc80\-4134\-9368\-9e4f1e93c6c0\.config
+2026-10-08T15:46:14.3263127Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:46:14.3504039Z Removing credentials config '/home/runner/work/_temp/git-credentials-0dc5829a-dc80-4134-9368-9e4f1e93c6c0.config'
+2026-10-08T15:46:14.3649624Z Cleaning up orphan processes
+2026-10-08T15:46:14.3939061Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

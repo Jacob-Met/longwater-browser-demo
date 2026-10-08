@@ -1,0 +1,122 @@
+{
+  "state": "passed",
+  "started": "2026-10-08T15:51:54.553Z",
+  "site": "https://jacobmetoyer.com/longwater-browser-demo/",
+  "sourceHead": "4fe0901a53f153ef2729ba72e287ece2fcb14001",
+  "sourceTree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+  "node": "v26.3.0",
+  "playwright": "1.62.1",
+  "artifact": {
+    "bytes": 280929,
+    "sha256": "f84055ec92204c9ebe393ee53afde322899b28abb0aa3393fc459607aa26e9ef",
+    "sourceSha256": "6562c889c64c0e7095f3cbe07a591d6ccf34b8745fa20a9c9e106d39d4d08f9a"
+  },
+  "chromium": "151.0.7922.34",
+  "inputs": [
+    {
+      "path": "index.html",
+      "bytes": 7070,
+      "sha256": "bdfdf3139cfdcf8dc8a39e406c1d83608d94b9ede28b59472700d7d0a66f976d",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/?receiving=6562c889c64c0e70"
+    },
+    {
+      "path": "style.css",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/style.css"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.css"
+    },
+    {
+      "path": "game.js",
+      "bytes": 21535,
+      "sha256": "43d7ab8d71924fe4b2c34747c8f1e58dc1f0ddc45671bb7dc3c92f9db8c60982",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/game.js"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.css"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.css"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.css"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/journal.js"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web.js"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-file.js"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.js"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-save.css"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-trends.js"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/watch-report.js"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "url": "https://jacobmetoyer.com/longwater-browser-demo/pkg/longwater_web_bg.wasm"
+    }
+  ],
+  "watch": {
+    "bytes": 1618,
+    "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+    "filename": "Longwater-watch-day-3.json",
+    "day": 3
+  },
+  "destinations": [
+    "separate public-site browser context",
+    "actual public offline download with networking disabled"
+  ],
+  "fullJournalEqual": true,
+  "offlineReopenEqual": true,
+  "offlineRequests": [],
+  "pageErrors": [],
+  "finished": "2026-10-08T15:51:57.999Z"
+}

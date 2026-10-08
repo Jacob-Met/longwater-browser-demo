@@ -1,0 +1,44 @@
+{
+  "mode": "negative",
+  "sourcePin": "e630f725f05b7910446e8da1e129a60617ae8e19",
+  "sourceTree": "c87baca24a832d99837a182564713eba138f86b5",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/hamon-longwater-choice-peer-965d2e86e979/negative-witness/receive-adoption-seam.mjs"
+  ],
+  "started": "2026-10-08T15:43:06.428Z",
+  "finished": "2026-10-08T15:43:10.727Z",
+  "exit": 1,
+  "signal": null,
+  "error": null,
+  "before": {
+    "composedFiles": 165,
+    "canonicalOwnerFiles": 114,
+    "allMatch": true
+  },
+  "after": {
+    "composedFiles": 165,
+    "canonicalOwnerFiles": 114,
+    "allMatch": true
+  },
+  "stdoutSha256": "6a35c2cfa07b738fff274e2fab5a390514abede94004e73df8ab9db86e7980e1",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "resultSha256": "a3b43253e4430cd04eba567c308fa8c596743edda923e4487a0a395c61e648ca",
+  "caseOutcomes": [
+    {
+      "name": "preview_cancel_keeps_comparison",
+      "outcome": "pass"
+    },
+    {
+      "name": "successful_adoption_clears_comparison",
+      "outcome": "pass"
+    },
+    {
+      "name": "failed_display_adoption_clears_comparison",
+      "outcome": "fail",
+      "error": "a replaced watch must not retain a visible comparison from its predecessor when display refresh fails\n\ntrue !== false\n"
+    }
+  ],
+  "passed": 2,
+  "failed": 1
+}

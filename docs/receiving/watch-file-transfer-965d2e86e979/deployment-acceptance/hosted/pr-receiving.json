@@ -1,0 +1,57 @@
+{
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "pr": 21,
+  "run": 37802239407,
+  "head": "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c",
+  "checkout": "6653464c3b28ae08bdfdfa17c55db5323fe1fc44",
+  "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+  "parents": [
+    "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+    "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c"
+  ],
+  "jobs": [
+    {
+      "id": 113397155209,
+      "name": "browser",
+      "conclusion": "success"
+    },
+    {
+      "id": 113397154626,
+      "name": "smoke",
+      "conclusion": "success"
+    }
+  ],
+  "totals": {
+    "tests": 92,
+    "passed": 92,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceReceiving": {
+    "commit": "7aca4d7d51cfd3c4ee3eb4b4c0d22e70a8db5d0c",
+    "tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "parents": [
+      "8285f06196afca462c149921240dd5748478ef71",
+      "e4e9bf82f6ebb363896559507a2fb5af07b490f5"
+    ],
+    "leaves": 247,
+    "allPathsModesTypesBlobsSizesEqual": true,
+    "receivedAt": "2026-10-08T15:36:58.670Z"
+  },
+  "scope": "Actual R6 hosted browser and smoke gate; merge and public deployment remain separate.",
+  "receivedAt": "2026-10-08T15:43:55.741Z",
+  "logs": [
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/r6-hosted-browser.log",
+      "bytes": 73904,
+      "sha256": "f012107daa049a9e0d5015669e49be0e5301e2e473419a4026f7c65d0d9308b9"
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-965d2e86e979/evidence/r6-hosted-smoke.log",
+      "bytes": 12572,
+      "sha256": "165dbb24905c9dd26aa15a9cba831d84c6e4f1b5f8db0749640dcf452b205000"
+    }
+  ]
+}

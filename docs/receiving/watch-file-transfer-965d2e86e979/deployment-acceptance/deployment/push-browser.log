@@ -1,0 +1,925 @@
+﻿2026-10-08T15:46:06.4046871Z Current runner version: '2.337.0'
+2026-10-08T15:46:06.4066807Z ##[group]Runner Image Provisioner
+2026-10-08T15:46:06.4067478Z Hosted Compute Agent
+2026-10-08T15:46:06.4067866Z Version: 20261002.596
+2026-10-08T15:46:06.4068294Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T15:46:06.4068804Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T15:46:06.4069265Z Worker ID: {ba922ea7-39ef-4dd2-96da-070ea3f258d2}
+2026-10-08T15:46:06.4069762Z Region: westus3
+2026-10-08T15:46:06.4070111Z Cloud: Azure
+2026-10-08T15:46:06.4070728Z ##[endgroup]
+2026-10-08T15:46:06.4071748Z ##[group]Operating System
+2026-10-08T15:46:06.4072142Z Ubuntu
+2026-10-08T15:46:06.4072831Z 24.04.5
+2026-10-08T15:46:06.4073163Z LTS
+2026-10-08T15:46:06.4073494Z ##[endgroup]
+2026-10-08T15:46:06.4073930Z ##[group]Runner Image
+2026-10-08T15:46:06.4074365Z Image: ubuntu-24.04
+2026-10-08T15:46:06.4074768Z Version: 20261004.327.1
+2026-10-08T15:46:06.4075615Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T15:46:06.4076634Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T15:46:06.4077209Z ##[endgroup]
+2026-10-08T15:46:06.4078006Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T15:46:06.4079488Z Contents: read
+2026-10-08T15:46:06.4079952Z Metadata: read
+2026-10-08T15:46:06.4080334Z Packages: read
+2026-10-08T15:46:06.4080810Z ##[endgroup]
+2026-10-08T15:46:06.4082384Z Secret source: Actions
+2026-10-08T15:46:06.4082960Z Cache mode: write
+2026-10-08T15:46:06.4083674Z Prepare workflow directory
+2026-10-08T15:46:06.4526228Z Prepare all required actions
+2026-10-08T15:46:06.4559789Z Getting action download info
+2026-10-08T15:46:06.7355874Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T15:46:07.0544351Z Complete job name: browser
+2026-10-08T15:46:07.1071119Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-08T15:46:07.1071686Z with:
+2026-10-08T15:46:07.1071962Z   repository: Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:07.1075141Z   token: ***
+2026-10-08T15:46:07.1075462Z   ssh-strict: true
+2026-10-08T15:46:07.1075789Z   ssh-user: git
+2026-10-08T15:46:07.1076042Z   persist-credentials: true
+2026-10-08T15:46:07.1076391Z   clean: true
+2026-10-08T15:46:07.1076645Z   sparse-checkout-cone-mode: true
+2026-10-08T15:46:07.1076938Z   fetch-depth: 1
+2026-10-08T15:46:07.1077180Z   fetch-tags: false
+2026-10-08T15:46:07.1077431Z   show-progress: true
+2026-10-08T15:46:07.1077709Z   lfs: false
+2026-10-08T15:46:07.1077944Z   submodules: false
+2026-10-08T15:46:07.1078198Z   set-safe-directory: true
+2026-10-08T15:46:07.1078480Z   allow-unsafe-pr-checkout: false
+2026-10-08T15:46:07.1078976Z ##[endgroup]
+2026-10-08T15:46:07.1797271Z Syncing repository: Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:07.1798602Z ##[group]Getting Git version info
+2026-10-08T15:46:07.1799342Z Working directory is '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T15:46:07.1800765Z [command]/usr/bin/git version
+2026-10-08T15:46:07.1878000Z git version 2.55.0
+2026-10-08T15:46:07.1892843Z ##[endgroup]
+2026-10-08T15:46:07.1904676Z Temporarily overriding HOME='/home/runner/work/_temp/9a45356c-ddc7-452b-b610-bed4fab53ea4' before making global git config changes
+2026-10-08T15:46:07.1905918Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:46:07.1908439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:07.2701391Z Deleting the contents of '/home/runner/work/longwater-browser-demo/longwater-browser-demo'
+2026-10-08T15:46:07.2705065Z ##[group]Initializing the repository
+2026-10-08T15:46:07.2709486Z [command]/usr/bin/git init /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:07.3495382Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T15:46:07.3496830Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T15:46:07.3497740Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T15:46:07.3498534Z hint: call:
+2026-10-08T15:46:07.3498889Z hint:
+2026-10-08T15:46:07.3499322Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T15:46:07.3499779Z hint:
+2026-10-08T15:46:07.3500215Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T15:46:07.3500995Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T15:46:07.3501509Z hint:
+2026-10-08T15:46:07.3501853Z hint: 	git branch -m <name>
+2026-10-08T15:46:07.3502227Z hint:
+2026-10-08T15:46:07.3502684Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T15:46:07.3503972Z Initialized empty Git repository in /home/runner/work/longwater-browser-demo/longwater-browser-demo/.git/
+2026-10-08T15:46:07.3505511Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:07.3689805Z ##[endgroup]
+2026-10-08T15:46:07.3690311Z ##[group]Disabling automatic garbage collection
+2026-10-08T15:46:07.3693218Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T15:46:07.3790031Z ##[endgroup]
+2026-10-08T15:46:07.3790633Z ##[group]Setting up auth
+2026-10-08T15:46:07.3796869Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:46:07.3833685Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:46:07.4249070Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:46:07.4280900Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:46:07.4464806Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:46:07.4508277Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:46:07.4707006Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T15:46:07.5000611Z ##[endgroup]
+2026-10-08T15:46:07.5001490Z ##[group]Fetching the repository
+2026-10-08T15:46:07.5009309Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +43038d28b08562a5f1c143b2773d925b4d28ca7d:refs/remotes/origin/longwater-demo
+2026-10-08T15:46:09.3721806Z From https://github.com/Jacob-Met/longwater-browser-demo
+2026-10-08T15:46:09.3723071Z  * [new ref]         43038d28b08562a5f1c143b2773d925b4d28ca7d -> origin/longwater-demo
+2026-10-08T15:46:09.3731781Z ##[endgroup]
+2026-10-08T15:46:09.3732572Z ##[group]Determining the checkout info
+2026-10-08T15:46:09.3733313Z ##[endgroup]
+2026-10-08T15:46:09.3733780Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T15:46:09.3957515Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T15:46:09.4059846Z ##[group]Checking out the ref
+2026-10-08T15:46:09.4069388Z [command]/usr/bin/git checkout --progress --force -B longwater-demo refs/remotes/origin/longwater-demo
+2026-10-08T15:46:09.4745037Z Switched to a new branch 'longwater-demo'
+2026-10-08T15:46:09.4750939Z branch 'longwater-demo' set up to track 'origin/longwater-demo'.
+2026-10-08T15:46:09.4758856Z ##[endgroup]
+2026-10-08T15:46:09.4799689Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T15:46:09.4822804Z 43038d28b08562a5f1c143b2773d925b4d28ca7d
+2026-10-08T15:46:09.5062182Z ##[group]Run npm ci
+2026-10-08T15:46:09.5062559Z [36;1mnpm ci[0m
+2026-10-08T15:46:09.5500880Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:46:09.5501299Z ##[endgroup]
+2026-10-08T15:46:10.5563712Z 
+2026-10-08T15:46:10.5564316Z added 2 packages, and audited 3 packages in 714ms
+2026-10-08T15:46:10.5568701Z 
+2026-10-08T15:46:10.5569090Z found 0 vulnerabilities
+2026-10-08T15:46:10.5977330Z ##[group]Run npx playwright install --with-deps chromium
+2026-10-08T15:46:10.5977656Z [36;1mnpx playwright install --with-deps chromium[0m
+2026-10-08T15:46:10.6033931Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:46:10.6034128Z ##[endgroup]
+2026-10-08T15:46:11.1023683Z Installing dependencies...
+2026-10-08T15:46:11.1080587Z Switching to root user to install dependencies...
+2026-10-08T15:46:11.1788449Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-08T15:46:11.2275846Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-08T15:46:11.2813244Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [531 kB]
+2026-10-08T15:46:11.2942893Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [640 B]
+2026-10-08T15:46:11.2984225Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]
+2026-10-08T15:46:11.3006045Z Get:10 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [474 kB]
+2026-10-08T15:46:11.3512459Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-08T15:46:11.3525988Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-08T15:46:11.3562925Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-08T15:46:11.3583506Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-08T15:46:11.4365670Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1375 kB]
+2026-10-08T15:46:11.4422410Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [306 kB]
+2026-10-08T15:46:11.4439198Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]
+2026-10-08T15:46:11.4506892Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+2026-10-08T15:46:11.4541720Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1761 kB]
+2026-10-08T15:46:11.4598582Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [401 kB]
+2026-10-08T15:46:11.4652105Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.0 kB]
+2026-10-08T15:46:11.4653154Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-10-08T15:46:11.5244467Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1106 kB]
+2026-10-08T15:46:11.5288439Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [226 kB]
+2026-10-08T15:46:11.5754841Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1218 kB]
+2026-10-08T15:46:11.5799964Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [245 kB]
+2026-10-08T15:46:11.5820052Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1613 kB]
+2026-10-08T15:46:11.5875946Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [371 kB]
+2026-10-08T15:46:11.5895524Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [11.6 kB]
+2026-10-08T15:46:16.6904032Z Fetched 12.1 MB in 1s (11.3 MB/s)
+2026-10-08T15:46:17.2697747Z Reading package lists...
+2026-10-08T15:46:17.2885152Z Reading package lists...
+2026-10-08T15:46:17.4837069Z Building dependency tree...
+2026-10-08T15:46:17.4842712Z Reading state information...
+2026-10-08T15:46:17.6337208Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+2026-10-08T15:46:17.6337650Z libasound2t64 set to manually installed.
+2026-10-08T15:46:17.6338036Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-10-08T15:46:17.6338961Z libatk-bridge2.0-0t64 set to manually installed.
+2026-10-08T15:46:17.6339279Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+2026-10-08T15:46:17.6339891Z libatk1.0-0t64 set to manually installed.
+2026-10-08T15:46:17.6340211Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-10-08T15:46:17.6340639Z libatspi2.0-0t64 set to manually installed.
+2026-10-08T15:46:17.6340899Z libcairo2 is already the newest version (1.18.0-3build1).
+2026-10-08T15:46:17.6341094Z libcairo2 set to manually installed.
+2026-10-08T15:46:17.6341290Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+2026-10-08T15:46:17.6341522Z libcups2t64 set to manually installed.
+2026-10-08T15:46:17.6341817Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+2026-10-08T15:46:17.6342116Z libdbus-1-3 set to manually installed.
+2026-10-08T15:46:17.6342397Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+2026-10-08T15:46:17.6342596Z libdrm2 set to manually installed.
+2026-10-08T15:46:17.6342784Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+2026-10-08T15:46:17.6342976Z libgbm1 set to manually installed.
+2026-10-08T15:46:17.6343205Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.9).
+2026-10-08T15:46:17.6343411Z libglib2.0-0t64 set to manually installed.
+2026-10-08T15:46:17.6343597Z libnspr4 is already the newest version (2:4.35-1.1build1).
+2026-10-08T15:46:17.6343779Z libnspr4 set to manually installed.
+2026-10-08T15:46:17.6343950Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+2026-10-08T15:46:17.6344131Z libnss3 set to manually installed.
+2026-10-08T15:46:17.6344547Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-10-08T15:46:17.6344746Z libpango-1.0-0 set to manually installed.
+2026-10-08T15:46:17.6344926Z libx11-6 is already the newest version (2:1.8.7-1build1).
+2026-10-08T15:46:17.6345102Z libx11-6 set to manually installed.
+2026-10-08T15:46:17.6345268Z libxcb1 is already the newest version (1.15-1ubuntu2).
+2026-10-08T15:46:17.6345449Z libxcb1 set to manually installed.
+2026-10-08T15:46:17.6345627Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+2026-10-08T15:46:17.6345830Z libxcomposite1 set to manually installed.
+2026-10-08T15:46:17.6346021Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+2026-10-08T15:46:17.6346208Z libxdamage1 set to manually installed.
+2026-10-08T15:46:17.6346382Z libxext6 is already the newest version (2:1.3.4-1build2).
+2026-10-08T15:46:17.6346559Z libxext6 set to manually installed.
+2026-10-08T15:46:17.6346736Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+2026-10-08T15:46:17.6346931Z libxfixes3 set to manually installed.
+2026-10-08T15:46:17.6347112Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+2026-10-08T15:46:17.6347303Z libxkbcommon0 set to manually installed.
+2026-10-08T15:46:17.6347486Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+2026-10-08T15:46:17.6347671Z libxrandr2 set to manually installed.
+2026-10-08T15:46:17.6347849Z xvfb is already the newest version (2:21.1.12-1ubuntu1.8).
+2026-10-08T15:46:17.6348097Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+2026-10-08T15:46:17.6348372Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+2026-10-08T15:46:17.6348574Z libfontconfig1 set to manually installed.
+2026-10-08T15:46:17.6348766Z fonts-liberation is already the newest version (1:2.1.5-3).
+2026-10-08T15:46:17.6348968Z fonts-liberation set to manually installed.
+2026-10-08T15:46:17.6405362Z The following additional packages will be installed:
+2026-10-08T15:46:17.6405592Z   xfonts-encodings xfonts-utils
+2026-10-08T15:46:17.6405747Z Recommended packages:
+2026-10-08T15:46:17.6405897Z   fonts-ipafont-mincho fonts-tlwg-loma
+2026-10-08T15:46:17.6524472Z The following NEW packages will be installed:
+2026-10-08T15:46:17.6524888Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+2026-10-08T15:46:17.6532148Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+2026-10-08T15:46:17.6532874Z   xfonts-utils
+2026-10-08T15:46:17.6536235Z The following packages will be upgraded:
+2026-10-08T15:46:17.6539526Z   libfreetype6
+2026-10-08T15:46:17.6677875Z 1 upgraded, 9 newly installed, 0 to remove and 20 not upgraded.
+2026-10-08T15:46:17.6678173Z Need to get 21.5 MB of archives.
+2026-10-08T15:46:17.6678379Z After this operation, 79.5 MB of additional disk space will be used.
+2026-10-08T15:46:17.6678619Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-08T15:46:17.7585413Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+2026-10-08T15:46:17.8927912Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+2026-10-08T15:46:18.0707831Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+2026-10-08T15:46:18.1359709Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+2026-10-08T15:46:18.2592677Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+2026-10-08T15:46:18.4742217Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfreetype6 amd64 2.13.2+dfsg-1ubuntu0.2 [403 kB]
+2026-10-08T15:46:18.5466076Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+2026-10-08T15:46:18.6208945Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+2026-10-08T15:46:18.6865775Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+2026-10-08T15:46:18.7550816Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+2026-10-08T15:46:18.9762893Z Fetched 21.5 MB in 1s (19.6 MB/s)
+2026-10-08T15:46:19.1309860Z Selecting previously unselected package fonts-ipafont-gothic.
+2026-10-08T15:46:19.1589137Z (Reading database ... 
+2026-10-08T15:46:19.1591102Z (Reading database ... 5%
+2026-10-08T15:46:19.1591336Z (Reading database ... 10%
+2026-10-08T15:46:19.1591569Z (Reading database ... 15%
+2026-10-08T15:46:19.1591785Z (Reading database ... 20%
+2026-10-08T15:46:19.1591971Z (Reading database ... 25%
+2026-10-08T15:46:19.1592162Z (Reading database ... 30%
+2026-10-08T15:46:19.1592320Z (Reading database ... 35%
+2026-10-08T15:46:19.1592494Z (Reading database ... 40%
+2026-10-08T15:46:19.1592669Z (Reading database ... 45%
+2026-10-08T15:46:19.1592812Z (Reading database ... 50%
+2026-10-08T15:46:19.1647065Z (Reading database ... 55%
+2026-10-08T15:46:19.2759765Z (Reading database ... 60%
+2026-10-08T15:46:19.4677474Z (Reading database ... 65%
+2026-10-08T15:46:19.6731687Z (Reading database ... 70%
+2026-10-08T15:46:19.8346787Z (Reading database ... 75%
+2026-10-08T15:46:19.9679541Z (Reading database ... 80%
+2026-10-08T15:46:20.0902462Z (Reading database ... 85%
+2026-10-08T15:46:20.1832108Z (Reading database ... 90%
+2026-10-08T15:46:20.3385382Z (Reading database ... 95%
+2026-10-08T15:46:20.3385660Z (Reading database ... 100%
+2026-10-08T15:46:20.3385982Z (Reading database ... 203191 files and directories currently installed.)
+2026-10-08T15:46:20.3424308Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+2026-10-08T15:46:20.3638540Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-10-08T15:46:20.9278043Z Selecting previously unselected package fonts-freefont-ttf.
+2026-10-08T15:46:20.9379349Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+2026-10-08T15:46:20.9492847Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-10-08T15:46:21.1606551Z Selecting previously unselected package fonts-tlwg-loma-otf.
+2026-10-08T15:46:21.1708246Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+2026-10-08T15:46:21.1715809Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-10-08T15:46:21.2025823Z Selecting previously unselected package fonts-unifont.
+2026-10-08T15:46:21.2124221Z Preparing to unpack .../3-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+2026-10-08T15:46:21.2132003Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+2026-10-08T15:46:21.4378390Z Selecting previously unselected package fonts-wqy-zenhei.
+2026-10-08T15:46:21.4477046Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+2026-10-08T15:46:21.4566171Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+2026-10-08T15:46:21.9207178Z Preparing to unpack .../5-libfreetype6_2.13.2+dfsg-1ubuntu0.2_amd64.deb ...
+2026-10-08T15:46:21.9377234Z Unpacking libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.2) over (2.13.2+dfsg-1ubuntu0.1) ...
+2026-10-08T15:46:21.9604661Z Selecting previously unselected package xfonts-encodings.
+2026-10-08T15:46:21.9706737Z Preparing to unpack .../6-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+2026-10-08T15:46:21.9713893Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-10-08T15:46:21.9957590Z Selecting previously unselected package xfonts-utils.
+2026-10-08T15:46:22.0059264Z Preparing to unpack .../7-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+2026-10-08T15:46:22.0067159Z Unpacking xfonts-utils (1:7.7+6build3) ...
+2026-10-08T15:46:22.0502928Z Selecting previously unselected package xfonts-cyrillic.
+2026-10-08T15:46:22.0605706Z Preparing to unpack .../8-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+2026-10-08T15:46:22.0613926Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-10-08T15:46:22.0896328Z Selecting previously unselected package xfonts-scalable.
+2026-10-08T15:46:22.0997292Z Preparing to unpack .../9-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+2026-10-08T15:46:22.1004778Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+2026-10-08T15:46:22.1763006Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+2026-10-08T15:46:22.1866984Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-10-08T15:46:22.1884686Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-10-08T15:46:22.1902201Z Setting up libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.2) ...
+2026-10-08T15:46:22.1923956Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-10-08T15:46:22.3663470Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-10-08T15:46:22.3782734Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+2026-10-08T15:46:22.3798521Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+2026-10-08T15:46:22.3817450Z Setting up xfonts-utils (1:7.7+6build3) ...
+2026-10-08T15:46:22.3854689Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-10-08T15:46:22.4091847Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+2026-10-08T15:46:22.4317752Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-08T15:46:22.6293662Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-08T15:46:22.6317364Z Not building database; man-db/auto-update is not 'true'.
+2026-10-08T15:46:22.6458002Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+2026-10-08T15:46:23.2129344Z 
+2026-10-08T15:46:23.2129889Z Running kernel seems to be up-to-date.
+2026-10-08T15:46:23.2130129Z 
+2026-10-08T15:46:23.2130214Z Restarting services...
+2026-10-08T15:46:23.2192200Z  systemctl restart php8.3-fpm.service
+2026-10-08T15:46:23.3105875Z 
+2026-10-08T15:46:23.3106814Z No containers need to be restarted.
+2026-10-08T15:46:23.3107205Z 
+2026-10-08T15:46:23.3107486Z No user sessions are running outdated binaries.
+2026-10-08T15:46:23.3107743Z 
+2026-10-08T15:46:23.3108075Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-08T15:46:24.1764792Z Downloading Chrome for Testing 151.0.7922.34 (playwright chromium v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-linux64.zip
+2026-10-08T15:46:25.0795474Z |                                                                                |   0% of 184.3 MiB
+2026-10-08T15:46:25.1676372Z |■■■■■■■■                                                                        |  10% of 184.3 MiB
+2026-10-08T15:46:25.2209411Z |■■■■■■■■■■■■■■■■                                                                |  20% of 184.3 MiB
+2026-10-08T15:46:25.2862139Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 184.3 MiB
+2026-10-08T15:46:25.3234561Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 184.3 MiB
+2026-10-08T15:46:25.3624476Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 184.3 MiB
+2026-10-08T15:46:25.3985876Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 184.3 MiB
+2026-10-08T15:46:25.4416227Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 184.3 MiB
+2026-10-08T15:46:25.4761783Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 184.3 MiB
+2026-10-08T15:46:25.5094866Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 184.3 MiB
+2026-10-08T15:46:25.5606522Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 184.3 MiB
+2026-10-08T15:46:27.4661641Z Chrome for Testing 151.0.7922.34 (playwright chromium v1234) downloaded to /home/runner/.cache/ms-playwright/chromium-1234
+2026-10-08T15:46:27.4671285Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+2026-10-08T15:46:28.3229151Z |                                                                                |   0% of 2.3 MiB
+2026-10-08T15:46:28.3256899Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+2026-10-08T15:46:28.3279233Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+2026-10-08T15:46:28.3293555Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+2026-10-08T15:46:28.3304873Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+2026-10-08T15:46:28.3316118Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+2026-10-08T15:46:28.3329294Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+2026-10-08T15:46:28.3337244Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+2026-10-08T15:46:28.3347424Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+2026-10-08T15:46:28.3356633Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+2026-10-08T15:46:28.3366519Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+2026-10-08T15:46:28.3757163Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+2026-10-08T15:46:28.3759227Z Downloading Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-headless-shell-linux64.zip
+2026-10-08T15:46:29.2989582Z |                                                                                |   0% of 114.7 MiB
+2026-10-08T15:46:29.5190173Z |■■■■■■■■                                                                        |  10% of 114.7 MiB
+2026-10-08T15:46:29.6693135Z |■■■■■■■■■■■■■■■■                                                                |  20% of 114.7 MiB
+2026-10-08T15:46:29.7084485Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 114.7 MiB
+2026-10-08T15:46:29.7343091Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 114.7 MiB
+2026-10-08T15:46:29.7585875Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 114.7 MiB
+2026-10-08T15:46:29.7917176Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.7 MiB
+2026-10-08T15:46:29.8208940Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.7 MiB
+2026-10-08T15:46:29.8499263Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.7 MiB
+2026-10-08T15:46:29.8807700Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.7 MiB
+2026-10-08T15:46:29.9206505Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.7 MiB
+2026-10-08T15:46:31.3500012Z Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1234
+2026-10-08T15:46:31.3836959Z ##[group]Run npm test
+2026-10-08T15:46:31.3837134Z [36;1mnpm test[0m
+2026-10-08T15:46:31.3892076Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:46:31.3892254Z ##[endgroup]
+2026-10-08T15:46:31.5139613Z 
+2026-10-08T15:46:31.5139783Z > test
+2026-10-08T15:46:31.5140052Z > node --test tests/*.test.mjs
+2026-10-08T15:46:31.5140206Z 
+2026-10-08T15:46:31.5559216Z TAP version 13
+2026-10-08T15:46:32.9581720Z # Subtest: the actual WASM watch exposes operable cells, actions, and complete readings
+2026-10-08T15:46:32.9601475Z ok 1 - the actual WASM watch exposes operable cells, actions, and complete readings
+2026-10-08T15:46:32.9601941Z   ---
+2026-10-08T15:46:32.9636185Z   duration_ms: 969.88335
+2026-10-08T15:46:32.9651872Z   type: 'test'
+2026-10-08T15:46:32.9684974Z   ...
+2026-10-08T15:46:33.4802145Z # Subtest: Tab, Enter, Space, arrows and shortcuts share one turn path
+2026-10-08T15:46:33.4807298Z ok 2 - Tab, Enter, Space, arrows and shortcuts share one turn path
+2026-10-08T15:46:33.4839749Z   ---
+2026-10-08T15:46:33.4841674Z   duration_ms: 520.275407
+2026-10-08T15:46:33.4842020Z   type: 'test'
+2026-10-08T15:46:33.4842330Z   ...
+2026-10-08T15:46:33.9789305Z # Subtest: unavailable actions and modified/repeated shortcuts do not spend a tide
+2026-10-08T15:46:33.9790546Z ok 3 - unavailable actions and modified/repeated shortcuts do not spend a tide
+2026-10-08T15:46:33.9790924Z   ---
+2026-10-08T15:46:33.9791198Z   duration_ms: 503.883301
+2026-10-08T15:46:33.9791439Z   type: 'test'
+2026-10-08T15:46:33.9791611Z   ...
+2026-10-08T15:46:36.4919010Z # Subtest: a player can finish all fourteen tides using only semantic controls and reset
+2026-10-08T15:46:36.4925853Z ok 4 - a player can finish all fourteen tides using only semantic controls and reset
+2026-10-08T15:46:36.4926395Z   ---
+2026-10-08T15:46:36.4926705Z   duration_ms: 2514.095359
+2026-10-08T15:46:36.4927038Z   type: 'test'
+2026-10-08T15:46:36.4927354Z   ...
+2026-10-08T15:46:37.0732959Z # Subtest: phone touch targets follow the canvas with separated notes and actions
+2026-10-08T15:46:37.0770840Z ok 5 - phone touch targets follow the canvas with separated notes and actions
+2026-10-08T15:46:37.0775821Z   ---
+2026-10-08T15:46:37.0776413Z   duration_ms: 581.406004
+2026-10-08T15:46:37.0776737Z   type: 'test'
+2026-10-08T15:46:37.0777054Z   ...
+2026-10-08T15:46:37.2561721Z # Subtest: failed WASM startup leaves an understandable error and no active controls
+2026-10-08T15:46:37.2591388Z ok 6 - failed WASM startup leaves an understandable error and no active controls
+2026-10-08T15:46:37.2601072Z   ---
+2026-10-08T15:46:37.2637587Z   duration_ms: 181.801633
+2026-10-08T15:46:37.2638230Z   type: 'test'
+2026-10-08T15:46:37.2638608Z   ...
+2026-10-08T15:46:37.3191984Z # Subtest: the journal preserves complete real WASM reports and all three cells across later choices
+2026-10-08T15:46:37.3211471Z ok 7 - the journal preserves complete real WASM reports and all three cells across later choices
+2026-10-08T15:46:37.3212174Z   ---
+2026-10-08T15:46:37.3212681Z   duration_ms: 1467.233864
+2026-10-08T15:46:37.3213019Z   type: 'test'
+2026-10-08T15:46:37.3213370Z   ...
+2026-10-08T15:46:37.3213934Z # Subtest: unavailable choices create no journal entry and journal keyboard reading spends no tide
+2026-10-08T15:46:37.3214659Z ok 8 - unavailable choices create no journal entry and journal keyboard reading spends no tide
+2026-10-08T15:46:37.3215188Z   ---
+2026-10-08T15:46:37.3215474Z   duration_ms: 668.685929
+2026-10-08T15:46:37.3215797Z   type: 'test'
+2026-10-08T15:46:37.3216089Z   ...
+2026-10-08T15:46:37.3216606Z # Subtest: all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal
+2026-10-08T15:46:37.3217403Z ok 9 - all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal
+2026-10-08T15:46:37.3217963Z   ---
+2026-10-08T15:46:37.3218254Z   duration_ms: 1808.700813
+2026-10-08T15:46:37.3218581Z   type: 'test'
+2026-10-08T15:46:37.3218867Z   ...
+2026-10-08T15:46:37.3219801Z # Subtest: phone readers can expand every note and cell without horizontal overflow
+2026-10-08T15:46:37.3220655Z ok 10 - phone readers can expand every note and cell without horizontal overflow
+2026-10-08T15:46:37.3221136Z   ---
+2026-10-08T15:46:37.3222590Z   duration_ms: 590.894972
+2026-10-08T15:46:37.3225676Z   type: 'test'
+2026-10-08T15:46:37.3226081Z   ...
+2026-10-08T15:46:37.3226522Z # Subtest: a failed simulation startup offers no fabricated watch history
+2026-10-08T15:46:37.3227103Z ok 11 - a failed simulation startup offers no fabricated watch history
+2026-10-08T15:46:37.3227559Z   ---
+2026-10-08T15:46:37.3231252Z   duration_ms: 271.848478
+2026-10-08T15:46:37.3231626Z   type: 'test'
+2026-10-08T15:46:37.3231948Z   ...
+2026-10-08T15:46:37.3232451Z # Subtest: an accepted native replay restores its full history, and a missing tide cannot replace it
+2026-10-08T15:46:37.3233219Z ok 12 - an accepted native replay restores its full history, and a missing tide cannot replace it
+2026-10-08T15:46:37.3233772Z   ---
+2026-10-08T15:46:37.3234124Z   duration_ms: 281.222763
+2026-10-08T15:46:37.3234475Z   type: 'test'
+2026-10-08T15:46:37.3234787Z   ...
+2026-10-08T15:46:37.4108862Z # Subtest: Reset reviews replacement before changing a native watch; cancel retains exact saved state and journal
+2026-10-08T15:46:37.4133029Z ok 13 - Reset reviews replacement before changing a native watch; cancel retains exact saved state and journal
+2026-10-08T15:46:37.4138460Z   ---
+2026-10-08T15:46:37.4138828Z   duration_ms: 1908.802305
+2026-10-08T15:46:37.4139184Z   type: 'test'
+2026-10-08T15:46:37.4139521Z   ...
+2026-10-08T15:46:37.4140132Z # Subtest: R uses the same review; Escape and the initially focused Enter action keep the watch
+2026-10-08T15:46:37.4144216Z ok 14 - R uses the same review; Escape and the initially focused Enter action keep the watch
+2026-10-08T15:46:37.4147662Z   ---
+2026-10-08T15:46:37.4147995Z   duration_ms: 575.508372
+2026-10-08T15:46:37.4148328Z   type: 'test'
+2026-10-08T15:46:37.4149777Z   ...
+2026-10-08T15:46:37.4150267Z # Subtest: confirming starts exactly the native opening and resets the saved journal once
+2026-10-08T15:46:37.4152100Z ok 15 - confirming starts exactly the native opening and resets the saved journal once
+2026-10-08T15:46:37.4152595Z   ---
+2026-10-08T15:46:37.4153785Z   duration_ms: 647.344736
+2026-10-08T15:46:37.4154100Z   type: 'test'
+2026-10-08T15:46:37.4154375Z   ...
+2026-10-08T15:46:37.4156076Z # Subtest: completed fourteen-tide outcome and full history survive a declined new watch
+2026-10-08T15:46:37.4156736Z ok 16 - completed fourteen-tide outcome and full history survive a declined new watch
+2026-10-08T15:46:37.4158309Z   ---
+2026-10-08T15:46:37.4158587Z   duration_ms: 1493.830664
+2026-10-08T15:46:37.4162075Z   type: 'test'
+2026-10-08T15:46:37.4164083Z   ...
+2026-10-08T15:46:37.4166228Z # Subtest: phone touch can cancel then deliberately confirm without horizontal overflow
+2026-10-08T15:46:37.4167999Z ok 17 - phone touch can cancel then deliberately confirm without horizontal overflow
+2026-10-08T15:46:37.4169608Z   ---
+2026-10-08T15:46:37.4169926Z   duration_ms: 804.26774
+2026-10-08T15:46:37.4170244Z   type: 'test'
+2026-10-08T15:46:37.4170768Z   ...
+2026-10-08T15:46:38.2738422Z # Subtest: the review blocks background game controls and ignores their keyboard shortcuts
+2026-10-08T15:46:38.2785455Z ok 18 - the review blocks background game controls and ignores their keyboard shortcuts
+2026-10-08T15:46:38.2811377Z   ---
+2026-10-08T15:46:38.2830848Z   duration_ms: 865.851378
+2026-10-08T15:46:38.2857933Z   type: 'test'
+2026-10-08T15:46:38.2887054Z   ...
+2026-10-08T15:46:39.2137377Z # Subtest: a saved-watch change from another tab invalidates an already open replacement review
+2026-10-08T15:46:39.2147667Z ok 19 - a saved-watch change from another tab invalidates an already open replacement review
+2026-10-08T15:46:39.2170837Z   ---
+2026-10-08T15:46:39.2198062Z   duration_ms: 939.604312
+2026-10-08T15:46:39.2199544Z   type: 'test'
+2026-10-08T15:46:39.2199719Z   ...
+2026-10-08T15:46:40.0323061Z # Subtest: unavailable browser storage still lets the player decline then explicitly start a fresh watch
+2026-10-08T15:46:40.0324681Z ok 20 - unavailable browser storage still lets the player decline then explicitly start a fresh watch
+2026-10-08T15:46:40.0325380Z   ---
+2026-10-08T15:46:40.0325698Z   duration_ms: 812.284445
+2026-10-08T15:46:40.0326044Z   type: 'test'
+2026-10-08T15:46:40.0327776Z   ...
+2026-10-08T15:46:40.6918627Z # Subtest: modified or held R and R while reading the journal remain inert
+2026-10-08T15:46:40.6924752Z ok 21 - modified or held R and R while reading the journal remain inert
+2026-10-08T15:46:40.6925441Z   ---
+2026-10-08T15:46:40.6925787Z   duration_ms: 664.621803
+2026-10-08T15:46:40.6926187Z   type: 'test'
+2026-10-08T15:46:40.6926533Z   ...
+2026-10-08T15:46:41.3118983Z # Subtest: ordinary actions still advance exactly the existing native simulation
+2026-10-08T15:46:41.3127473Z ok 22 - ordinary actions still advance exactly the existing native simulation
+2026-10-08T15:46:41.3128124Z   ---
+2026-10-08T15:46:41.3128488Z   duration_ms: 564.066808
+2026-10-08T15:46:41.3128837Z   type: 'test'
+2026-10-08T15:46:41.3129141Z   ...
+2026-10-08T15:46:42.2282333Z # Subtest: the assembled offline file preserves a declined watch and saves only an explicitly confirmed new watch
+2026-10-08T15:46:42.2285516Z ok 23 - the assembled offline file preserves a declined watch and saves only an explicitly confirmed new watch
+2026-10-08T15:46:42.2286221Z   ---
+2026-10-08T15:46:42.2286555Z   duration_ms: 973.359326
+2026-10-08T15:46:42.2286925Z   type: 'test'
+2026-10-08T15:46:42.2287243Z   ...
+2026-10-08T15:46:42.2831943Z # Subtest: a visitor downloads the current game and resumes its complete journal offline
+2026-10-08T15:46:42.2833428Z ok 24 - a visitor downloads the current game and resumes its complete journal offline
+2026-10-08T15:46:42.2834174Z   ---
+2026-10-08T15:46:42.2834472Z   duration_ms: 1858.232997
+2026-10-08T15:46:42.2834780Z   type: 'test'
+2026-10-08T15:46:42.2835260Z   ...
+2026-10-08T15:46:42.2835626Z # Subtest: the packaged watch plays and restores its complete journal offline
+2026-10-08T15:46:42.2836073Z ok 25 - the packaged watch plays and restores its complete journal offline
+2026-10-08T15:46:42.2836405Z   ---
+2026-10-08T15:46:42.2836581Z   duration_ms: 1224.299481
+2026-10-08T15:46:42.2836772Z   type: 'test'
+2026-10-08T15:46:42.2836945Z   ...
+2026-10-08T15:46:43.8161884Z # Subtest: a resumed watch reconstructs every earlier native report before accepting the next tide
+2026-10-08T15:46:43.8162928Z ok 26 - a resumed watch reconstructs every earlier native report before accepting the next tide
+2026-10-08T15:46:43.8163468Z   ---
+2026-10-08T15:46:43.8163750Z   duration_ms: 2154.97903
+2026-10-08T15:46:43.8164070Z   type: 'test'
+2026-10-08T15:46:43.8164352Z   ...
+2026-10-08T15:46:43.8164805Z # Subtest: a completed saved watch retains fourteen reports and the actual opening-to-final recap
+2026-10-08T15:46:43.8165501Z ok 27 - a completed saved watch retains fourteen reports and the actual opening-to-final recap
+2026-10-08T15:46:43.8165988Z   ---
+2026-10-08T15:46:43.8166295Z   duration_ms: 2207.635132
+2026-10-08T15:46:43.8166589Z   type: 'test'
+2026-10-08T15:46:43.8166844Z   ...
+2026-10-08T15:46:44.6464788Z # Subtest: failed saving keeps current reports and a successful explicit retry makes the whole journal resumable
+2026-10-08T15:46:44.6465763Z ok 28 - failed saving keeps current reports and a successful explicit retry makes the whole journal resumable
+2026-10-08T15:46:44.6466107Z   ---
+2026-10-08T15:46:44.6466260Z   duration_ms: 831.083255
+2026-10-08T15:46:44.6466458Z   type: 'test'
+2026-10-08T15:46:44.6466773Z   ...
+2026-10-08T15:46:45.2765402Z # Subtest: a save that disagrees with real replay is protected and cannot fabricate a journal
+2026-10-08T15:46:45.2766016Z ok 29 - a save that disagrees with real replay is protected and cannot fabricate a journal
+2026-10-08T15:46:45.2766359Z   ---
+2026-10-08T15:46:45.2766527Z   duration_ms: 629.002377
+2026-10-08T15:46:45.2766717Z   type: 'test'
+2026-10-08T15:46:45.2766881Z   ...
+2026-10-08T15:46:46.2749405Z # Subtest: another tab's saved branch stays authoritative while the local journal can continue unsaved
+2026-10-08T15:46:46.2772296Z ok 30 - another tab's saved branch stays authoritative while the local journal can continue unsaved
+2026-10-08T15:46:46.2784638Z   ---
+2026-10-08T15:46:46.2791262Z   duration_ms: 995.790423
+2026-10-08T15:46:46.2791683Z   type: 'test'
+2026-10-08T15:46:46.2792011Z   ...
+2026-10-08T15:46:46.3447841Z # Subtest: partial and completed watch-file adoption rebuilds exact downloadable reports online and offline
+2026-10-08T15:46:46.3470162Z ok 31 - partial and completed watch-file adoption rebuilds exact downloadable reports online and offline
+2026-10-08T15:46:46.3470850Z   ---
+2026-10-08T15:46:46.3471035Z   duration_ms: 2022.031538
+2026-10-08T15:46:46.3471270Z   type: 'test'
+2026-10-08T15:46:46.3471434Z   ...
+2026-10-08T15:46:46.3471854Z # Subtest: watch-file replacement rebuilds every native trend value online and in the current offline download
+2026-10-08T15:46:46.3472576Z ok 32 - watch-file replacement rebuilds every native trend value online and in the current offline download
+2026-10-08T15:46:46.3472989Z   ---
+2026-10-08T15:46:46.3480034Z   duration_ms: 1934.223764
+2026-10-08T15:46:46.3480322Z   type: 'test'
+2026-10-08T15:46:46.3480638Z   ...
+2026-10-08T15:46:46.5773411Z # Subtest: a real download transfers the exact partial watch and journal into another browser only after confirmation
+2026-10-08T15:46:46.5792116Z ok 33 - a real download transfers the exact partial watch and journal into another browser only after confirmation
+2026-10-08T15:46:46.5837211Z   ---
+2026-10-08T15:46:46.5840099Z   duration_ms: 1537.791925
+2026-10-08T15:46:46.5842045Z   type: 'test'
+2026-10-08T15:46:46.5850029Z   ...
+2026-10-08T15:46:46.5850774Z # Subtest: a complete native watch and journal transfer through the offline HTML without external requests
+2026-10-08T15:46:46.5851607Z ok 34 - a complete native watch and journal transfer through the offline HTML without external requests
+2026-10-08T15:46:46.5852242Z   ---
+2026-10-08T15:46:46.5852592Z   duration_ms: 1274.671988
+2026-10-08T15:46:46.5852935Z   type: 'test'
+2026-10-08T15:46:46.5853242Z   ...
+2026-10-08T15:46:46.5853724Z # Subtest: late file reads cannot replace subsequent play, selection, reset or a newer file preview
+2026-10-08T15:46:46.5854479Z ok 35 - late file reads cannot replace subsequent play, selection, reset or a newer file preview
+2026-10-08T15:46:46.5855020Z   ---
+2026-10-08T15:46:46.5855324Z   duration_ms: 986.033805
+2026-10-08T15:46:46.5855667Z   type: 'test'
+2026-10-08T15:46:46.5855961Z   ...
+2026-10-08T15:46:47.7174552Z # Subtest: play and reset invalidate an already visible preview and cancellation keeps the same file reusable
+2026-10-08T15:46:47.7175298Z ok 36 - play and reset invalidate an already visible preview and cancellation keeps the same file reusable
+2026-10-08T15:46:47.7175554Z   ---
+2026-10-08T15:46:47.7175670Z   duration_ms: 1142.053948
+2026-10-08T15:46:47.7175802Z   type: 'test'
+2026-10-08T15:46:47.7175908Z   ...
+2026-10-08T15:46:48.2684721Z # Subtest: invalid or oversized input and failed file reads keep active progress and stored bytes
+2026-10-08T15:46:48.2685522Z ok 37 - invalid or oversized input and failed file reads keep active progress and stored bytes
+2026-10-08T15:46:48.2685913Z   ---
+2026-10-08T15:46:48.2691995Z   duration_ms: 551.446269
+2026-10-08T15:46:48.2692413Z   type: 'test'
+2026-10-08T15:46:48.2692748Z   ...
+2026-10-08T15:46:48.8826384Z # Subtest: an opened but unsaved watch remains exportable and retries without duplicating journal tides
+2026-10-08T15:46:48.8828657Z ok 38 - an opened but unsaved watch remains exportable and retries without duplicating journal tides
+2026-10-08T15:46:48.8833569Z   ---
+2026-10-08T15:46:48.8834218Z   duration_ms: 613.261638
+2026-10-08T15:46:48.8834663Z   type: 'test'
+2026-10-08T15:46:48.8835043Z   ...
+2026-10-08T15:46:49.3102285Z # Subtest: a blocked browser store does not prevent opening, reviewing or downloading a watch
+2026-10-08T15:46:49.3141308Z ok 39 - a blocked browser store does not prevent opening, reviewing or downloading a watch
+2026-10-08T15:46:49.3150286Z   ---
+2026-10-08T15:46:49.3151002Z   duration_ms: 425.624848
+2026-10-08T15:46:49.3151263Z   type: 'test'
+2026-10-08T15:46:49.3151502Z   ...
+2026-10-08T15:46:50.0578178Z # Subtest: a true second-tab write cancels review and only a fresh explicit review can replace it
+2026-10-08T15:46:50.0622065Z ok 40 - a true second-tab write cancels review and only a fresh explicit review can replace it
+2026-10-08T15:46:50.0651270Z   ---
+2026-10-08T15:46:50.0698721Z   duration_ms: 747.085897
+2026-10-08T15:46:50.0764904Z   type: 'test'
+2026-10-08T15:46:50.0767730Z   ...
+2026-10-08T15:46:50.9582460Z # Subtest: phone preview wraps long names, keeps touch targets and supports keyboard confirmation and cancellation
+2026-10-08T15:46:50.9585324Z ok 41 - phone preview wraps long names, keeps touch targets and supports keyboard confirmation and cancellation
+2026-10-08T15:46:50.9586375Z   ---
+2026-10-08T15:46:50.9587058Z   duration_ms: 900.324326
+2026-10-08T15:46:50.9592519Z   type: 'test'
+2026-10-08T15:46:50.9592866Z   ...
+2026-10-08T15:46:52.6026272Z # Subtest: post-adoption display failure reports the opened watch, freezes stale controls and preserves download recovery
+2026-10-08T15:46:52.6027760Z ok 42 - post-adoption display failure reports the opened watch, freezes stale controls and preserves download recovery
+2026-10-08T15:46:52.6029201Z   ---
+2026-10-08T15:46:52.6034487Z   duration_ms: 1644.963067
+2026-10-08T15:46:52.6034911Z   type: 'test'
+2026-10-08T15:46:52.6035251Z   ...
+2026-10-08T15:46:53.5532384Z # Subtest: new-watch Keep and Escape preserve a file preview until deliberate replacement online and offline
+2026-10-08T15:46:53.5552668Z ok 43 - new-watch Keep and Escape preserve a file preview until deliberate replacement online and offline
+2026-10-08T15:46:53.5571084Z   ---
+2026-10-08T15:46:53.5571348Z   duration_ms: 950.367664
+2026-10-08T15:46:53.5571611Z   type: 'test'
+2026-10-08T15:46:53.5571799Z   ...
+2026-10-08T15:46:53.6032827Z # Subtest: export captures the active unsaved watch without touching storage or replaying a tide
+2026-10-08T15:46:53.6038841Z ok 44 - export captures the active unsaved watch without touching storage or replaying a tide
+2026-10-08T15:46:53.6039110Z   ---
+2026-10-08T15:46:53.6039237Z   duration_ms: 4.1797
+2026-10-08T15:46:53.6039366Z   type: 'test'
+2026-10-08T15:46:53.6039473Z   ...
+2026-10-08T15:46:53.6039723Z # Subtest: preview is read-only and deliberate replacement restores exact state, selection and full journal history
+2026-10-08T15:46:53.6040135Z ok 45 - preview is read-only and deliberate replacement restores exact state, selection and full journal history
+2026-10-08T15:46:53.6041101Z   ---
+2026-10-08T15:46:53.6041266Z   duration_ms: 3.899709
+2026-10-08T15:46:53.6041454Z   type: 'test'
+2026-10-08T15:46:53.6041619Z   ...
+2026-10-08T15:46:53.6041896Z # Subtest: a completed watch carries all fourteen native tides and its outcome
+2026-10-08T15:46:53.6042359Z ok 46 - a completed watch carries all fourteen native tides and its outcome
+2026-10-08T15:46:53.6042669Z   ---
+2026-10-08T15:46:53.6042824Z   duration_ms: 4.898082
+2026-10-08T15:46:53.6043010Z   type: 'test'
+2026-10-08T15:46:53.6043176Z   ...
+2026-10-08T15:46:53.6043521Z # Subtest: invalid, incompatible and tampered files cannot change the active watch or stored bytes
+2026-10-08T15:46:53.6044089Z ok 47 - invalid, incompatible and tampered files cannot change the active watch or stored bytes
+2026-10-08T15:46:53.6044493Z   ---
+2026-10-08T15:46:53.6044655Z   duration_ms: 3.834411
+2026-10-08T15:46:53.6044850Z   type: 'test'
+2026-10-08T15:46:53.6045016Z   ...
+2026-10-08T15:46:53.6053674Z # Subtest: preview and rejected native replay free temporary WASM sessions
+2026-10-08T15:46:53.6081144Z ok 48 - preview and rejected native replay free temporary WASM sessions
+2026-10-08T15:46:53.6088903Z   ---
+2026-10-08T15:46:53.6089313Z   duration_ms: 1.982033
+2026-10-08T15:46:53.6089510Z   type: 'test'
+2026-10-08T15:46:53.6089662Z   ...
+2026-10-08T15:46:53.6091349Z # Subtest: selection, accepted play and reset invalidate confirmation, including reset back to the same opening state
+2026-10-08T15:46:53.6092106Z ok 49 - selection, accepted play and reset invalidate confirmation, including reset back to the same opening state
+2026-10-08T15:46:53.6092547Z   ---
+2026-10-08T15:46:53.6092718Z   duration_ms: 1.804196
+2026-10-08T15:46:53.6092908Z   type: 'test'
+2026-10-08T15:46:53.6093073Z   ...
+2026-10-08T15:46:53.6093368Z # Subtest: cancel, an older preview and a lookalike object cannot authorize replacement
+2026-10-08T15:46:53.6093852Z ok 50 - cancel, an older preview and a lookalike object cannot authorize replacement
+2026-10-08T15:46:53.6094209Z   ---
+2026-10-08T15:46:53.6094370Z   duration_ms: 0.947907
+2026-10-08T15:46:53.6094555Z   type: 'test'
+2026-10-08T15:46:53.6094718Z   ...
+2026-10-08T15:46:53.6095045Z # Subtest: another tab changing storage during review prevents both active and stored replacement
+2026-10-08T15:46:53.6095620Z ok 51 - another tab changing storage during review prevents both active and stored replacement
+2026-10-08T15:46:53.6096147Z   ---
+2026-10-08T15:46:53.6096308Z   duration_ms: 1.009078
+2026-10-08T15:46:53.6096493Z   type: 'test'
+2026-10-08T15:46:53.6096664Z   ...
+2026-10-08T15:46:53.6096978Z # Subtest: a protected save is kept through preview and replaced only by explicit confirmation
+2026-10-08T15:46:53.6097764Z ok 52 - a protected save is kept through preview and replaced only by explicit confirmation
+2026-10-08T15:46:53.6098133Z   ---
+2026-10-08T15:46:53.6098294Z   duration_ms: 0.747645
+2026-10-08T15:46:53.6098484Z   type: 'test'
+2026-10-08T15:46:53.6098643Z   ...
+2026-10-08T15:46:53.6098983Z # Subtest: quota or unreadable storage retains prior bytes while the opened watch can still be exported
+2026-10-08T15:46:53.6099563Z ok 53 - quota or unreadable storage retains prior bytes while the opened watch can still be exported
+2026-10-08T15:46:53.6099954Z   ---
+2026-10-08T15:46:53.6100119Z   duration_ms: 1.323111
+2026-10-08T15:46:53.6100310Z   type: 'test'
+2026-10-08T15:46:53.6100762Z   ...
+2026-10-08T15:46:53.6101064Z # Subtest: storage unknown during preview is never silently replaced when it becomes readable
+2026-10-08T15:46:53.6101573Z ok 54 - storage unknown during preview is never silently replaced when it becomes readable
+2026-10-08T15:46:53.6101941Z   ---
+2026-10-08T15:46:53.6102103Z   duration_ms: 2.470398
+2026-10-08T15:46:53.6102292Z   type: 'test'
+2026-10-08T15:46:53.6102460Z   ...
+2026-10-08T15:46:53.6102766Z # Subtest: existing journal replay remains read-only and includes every native tide
+2026-10-08T15:46:53.6103287Z ok 55 - existing journal replay remains read-only and includes every native tide
+2026-10-08T15:46:53.6103622Z   ---
+2026-10-08T15:46:53.6103785Z   duration_ms: 0.515295
+2026-10-08T15:46:53.6103976Z   type: 'test'
+2026-10-08T15:46:53.6104145Z   ...
+2026-10-08T15:46:53.6104471Z # Subtest: existing two-tab protection still keeps the other watch when no file is opened
+2026-10-08T15:46:53.6105011Z ok 56 - existing two-tab protection still keeps the other watch when no file is opened
+2026-10-08T15:46:53.6105364Z   ---
+2026-10-08T15:46:53.6105530Z   duration_ms: 0.546312
+2026-10-08T15:46:53.6105725Z   type: 'test'
+2026-10-08T15:46:53.6105893Z   ...
+2026-10-08T15:46:53.6106264Z # Subtest: a partial actual watch downloads exact native readings without changing play or saved bytes
+2026-10-08T15:46:53.6106897Z ok 57 - a partial actual watch downloads exact native readings without changing play or saved bytes
+2026-10-08T15:46:53.6107315Z   ---
+2026-10-08T15:46:53.6107489Z   duration_ms: 1445.283531
+2026-10-08T15:46:53.6107697Z   type: 'test'
+2026-10-08T15:46:53.6107869Z   ...
+2026-10-08T15:46:53.6108208Z # Subtest: a complete watch retains all fourteen reports and reset cannot export the previous watch
+2026-10-08T15:46:53.6108809Z ok 58 - a complete watch retains all fourteen reports and reset cannot export the previous watch
+2026-10-08T15:46:53.6109211Z   ---
+2026-10-08T15:46:53.6109441Z   duration_ms: 3051.578883
+2026-10-08T15:46:53.6109647Z   type: 'test'
+2026-10-08T15:46:53.6110078Z   ...
+2026-10-08T15:46:53.6110574Z # Subtest: preparation failure preserves the exact watch and allows an explicit successful retry
+2026-10-08T15:46:53.6111174Z ok 59 - preparation failure preserves the exact watch and allows an explicit successful retry
+2026-10-08T15:46:53.6111582Z   ---
+2026-10-08T15:46:53.6111749Z   duration_ms: 598.602861
+2026-10-08T15:46:53.6111952Z   type: 'test'
+2026-10-08T15:46:53.6112128Z   ...
+2026-10-08T15:46:53.6112420Z # Subtest: the direct-open packaged game exposes the same report at phone width
+2026-10-08T15:46:53.6112905Z ok 60 - the direct-open packaged game exposes the same report at phone width
+2026-10-08T15:46:53.6113251Z   ---
+2026-10-08T15:46:53.6113420Z   duration_ms: 1063.664051
+2026-10-08T15:46:53.6113633Z   type: 'test'
+2026-10-08T15:46:53.6113799Z   ...
+2026-10-08T15:46:53.6114135Z # Subtest: renderer treats every name and note as literal text and never mutates its inputs
+2026-10-08T15:46:53.6114678Z ok 61 - renderer treats every name and note as literal text and never mutates its inputs
+2026-10-08T15:46:53.6115066Z   ---
+2026-10-08T15:46:53.6115236Z   duration_ms: 306.024656
+2026-10-08T15:46:53.6115438Z   type: 'test'
+2026-10-08T15:46:53.6115610Z   ...
+2026-10-08T15:46:53.6115902Z # Subtest: incomplete or nonfinite snapshots cannot become a successful report
+2026-10-08T15:46:53.6116528Z ok 62 - incomplete or nonfinite snapshots cannot become a successful report
+2026-10-08T15:46:53.6116836Z   ---
+2026-10-08T15:46:53.6116990Z   duration_ms: 1.045835
+2026-10-08T15:46:53.6117177Z   type: 'test'
+2026-10-08T15:46:53.6117338Z   ...
+2026-10-08T15:46:53.6117630Z # Subtest: closing and reopening the page resumes the same native watch and selected cell
+2026-10-08T15:46:53.6118367Z ok 63 - closing and reopening the page resumes the same native watch and selected cell
+2026-10-08T15:46:53.6136281Z   ---
+2026-10-08T15:46:53.6136486Z   duration_ms: 766.297435
+2026-10-08T15:46:53.6136695Z   type: 'test'
+2026-10-08T15:46:53.6136871Z   ...
+2026-10-08T15:46:53.6137200Z # Subtest: a fourteen-tide ending survives reload and explicit reset stores a fresh watch
+2026-10-08T15:46:53.6137726Z ok 64 - a fourteen-tide ending survives reload and explicit reset stores a fresh watch
+2026-10-08T15:46:53.6138071Z   ---
+2026-10-08T15:46:53.6138263Z   duration_ms: 1111.781554
+2026-10-08T15:46:53.6138471Z   type: 'test'
+2026-10-08T15:46:53.6138674Z   ...
+2026-10-08T15:46:53.6138922Z # Subtest: unavailable actions leave the saved history unchanged
+2026-10-08T15:46:53.6139162Z ok 65 - unavailable actions leave the saved history unchanged
+2026-10-08T15:46:53.6139386Z   ---
+2026-10-08T15:46:53.6139550Z   duration_ms: 542.901414
+2026-10-08T15:46:53.6139744Z   type: 'test'
+2026-10-08T15:46:53.6139945Z   ...
+2026-10-08T15:46:53.6140259Z # Subtest: failed replay preserves saved data while play continues until an explicit reset
+2026-10-08T15:46:53.6140966Z ok 66 - failed replay preserves saved data while play continues until an explicit reset
+2026-10-08T15:46:53.6141321Z   ---
+2026-10-08T15:46:53.6141498Z   duration_ms: 1455.694404
+2026-10-08T15:46:53.6141698Z   type: 'test'
+2026-10-08T15:46:53.6141862Z   ...
+2026-10-08T15:46:53.6142195Z # Subtest: quota failure retains the running tide and the visible retry saves without advancing it
+2026-10-08T15:46:53.6142754Z ok 67 - quota failure retains the running tide and the visible retry saves without advancing it
+2026-10-08T15:46:53.6143167Z   ---
+2026-10-08T15:46:53.6143284Z   duration_ms: 530.351575
+2026-10-08T15:46:53.6143413Z   type: 'test'
+2026-10-08T15:46:53.6143580Z   ...
+2026-10-08T15:46:53.6143872Z # Subtest: a blocked storage getter still allows a playable watch and later save retry
+2026-10-08T15:46:53.6144370Z ok 68 - a blocked storage getter still allows a playable watch and later save retry
+2026-10-08T15:46:53.6144718Z   ---
+2026-10-08T15:46:53.6144880Z   duration_ms: 263.531375
+2026-10-08T15:46:53.6145074Z   type: 'test'
+2026-10-08T15:46:53.6145242Z   ...
+2026-10-08T15:46:53.6145735Z # Subtest: two tabs detect divergent storage and do not overwrite the other watch
+2026-10-08T15:46:53.6146203Z ok 69 - two tabs detect divergent storage and do not overwrite the other watch
+2026-10-08T15:46:53.6146521Z   ---
+2026-10-08T15:46:53.6146680Z   duration_ms: 703.193156
+2026-10-08T15:46:53.6146863Z   type: 'test'
+2026-10-08T15:46:53.6147034Z   ...
+2026-10-08T15:46:53.6147272Z # Subtest: failed WASM startup never replaces an existing saved watch
+2026-10-08T15:46:53.6147657Z ok 70 - failed WASM startup never replaces an existing saved watch
+2026-10-08T15:46:53.6147940Z   ---
+2026-10-08T15:46:53.6148099Z   duration_ms: 467.454848
+2026-10-08T15:46:53.6148291Z   type: 'test'
+2026-10-08T15:46:53.6148456Z   ...
+2026-10-08T15:46:53.6148680Z # Subtest: the save revision pins the actual shipped WASM bytes
+2026-10-08T15:46:53.6149042Z ok 71 - the save revision pins the actual shipped WASM bytes
+2026-10-08T15:46:53.6149321Z   ---
+2026-10-08T15:46:53.6149490Z   duration_ms: 1.821263
+2026-10-08T15:46:53.6149689Z   type: 'test'
+2026-10-08T15:46:53.6149858Z   ...
+2026-10-08T15:46:53.6150052Z # Subtest: a new watch does not write until the player chooses a cell or tide
+2026-10-08T15:46:53.6150498Z ok 72 - a new watch does not write until the player chooses a cell or tide
+2026-10-08T15:46:53.6150809Z   ---
+2026-10-08T15:46:53.6151167Z   duration_ms: 3.203044
+2026-10-08T15:46:53.6151349Z   type: 'test'
+2026-10-08T15:46:53.6151511Z   ...
+2026-10-08T15:46:53.6151850Z # Subtest: reload replays actual accepted tides and restores the exact complete state and selection
+2026-10-08T15:46:53.6152429Z ok 73 - reload replays actual accepted tides and restores the exact complete state and selection
+2026-10-08T15:46:53.6152781Z   ---
+2026-10-08T15:46:53.6152934Z   duration_ms: 4.434595
+2026-10-08T15:46:53.6153116Z   type: 'test'
+2026-10-08T15:46:53.6153278Z   ...
+2026-10-08T15:46:53.6153564Z # Subtest: a completed fourteen-tide watch and its outcome survive reopening
+2026-10-08T15:46:53.6154003Z ok 74 - a completed fourteen-tide watch and its outcome survive reopening
+2026-10-08T15:46:53.6154323Z   ---
+2026-10-08T15:46:53.6154485Z   duration_ms: 3.508546
+2026-10-08T15:46:53.6154669Z   type: 'test'
+2026-10-08T15:46:53.6154833Z   ...
+2026-10-08T15:46:53.6155114Z # Subtest: refused actions are absent from storage and do not change native state
+2026-10-08T15:46:53.6155562Z ok 75 - refused actions are absent from storage and do not change native state
+2026-10-08T15:46:53.6155888Z   ---
+2026-10-08T15:46:53.6156048Z   duration_ms: 0.935234
+2026-10-08T15:46:53.6156233Z   type: 'test'
+2026-10-08T15:46:53.6156395Z   ...
+2026-10-08T15:46:53.6156686Z # Subtest: explicit reset persists a fresh watch that cannot resurrect the old history
+2026-10-08T15:46:53.6157162Z ok 76 - explicit reset persists a fresh watch that cannot resurrect the old history
+2026-10-08T15:46:53.6157498Z   ---
+2026-10-08T15:46:53.6157661Z   duration_ms: 1.027674
+2026-10-08T15:46:53.6157846Z   type: 'test'
+2026-10-08T15:46:53.6158004Z   ...
+2026-10-08T15:46:53.6158317Z # Subtest: malformed, unsupported, overlong and tampered saves remain byte-for-byte intact
+2026-10-08T15:46:53.6158848Z ok 77 - malformed, unsupported, overlong and tampered saves remain byte-for-byte intact
+2026-10-08T15:46:53.6159203Z   ---
+2026-10-08T15:46:53.6159360Z   duration_ms: 5.763265
+2026-10-08T15:46:53.6159550Z   type: 'test'
+2026-10-08T15:46:53.6159717Z   ...
+2026-10-08T15:46:53.6160070Z # Subtest: failed partial native replay frees its candidate and explicit reset replaces a protected save
+2026-10-08T15:46:53.6160809Z ok 78 - failed partial native replay frees its candidate and explicit reset replaces a protected save
+2026-10-08T15:46:53.6161198Z   ---
+2026-10-08T15:46:53.6161355Z   duration_ms: 1.390433
+2026-10-08T15:46:53.6161544Z   type: 'test'
+2026-10-08T15:46:53.6161716Z   ...
+2026-10-08T15:46:53.6162073Z # Subtest: a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide
+2026-10-08T15:46:53.6162683Z ok 79 - a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide
+2026-10-08T15:46:53.6163317Z   ---
+2026-10-08T15:46:53.6163427Z   duration_ms: 4.313372
+2026-10-08T15:46:53.6163548Z   type: 'test'
+2026-10-08T15:46:53.6163653Z   ...
+2026-10-08T15:46:53.6163845Z # Subtest: an unavailable localStorage getter does not prevent play and can later recover
+2026-10-08T15:46:53.6164232Z ok 80 - an unavailable localStorage getter does not prevent play and can later recover
+2026-10-08T15:46:53.6164579Z   ---
+2026-10-08T15:46:53.6164753Z   duration_ms: 0.77335
+2026-10-08T15:46:53.6164891Z   type: 'test'
+2026-10-08T15:46:53.6164994Z   ...
+2026-10-08T15:46:53.6165187Z # Subtest: retry after unreadable storage never overwrites a previously unknown saved watch
+2026-10-08T15:46:53.6165509Z ok 81 - retry after unreadable storage never overwrites a previously unknown saved watch
+2026-10-08T15:46:53.6165736Z   ---
+2026-10-08T15:46:53.6165839Z   duration_ms: 0.516971
+2026-10-08T15:46:53.6165959Z   type: 'test'
+2026-10-08T15:46:53.6166065Z   ...
+2026-10-08T15:46:53.6166245Z # Subtest: a stale tab detects another saved watch before writing its divergent tide
+2026-10-08T15:46:53.6166707Z ok 82 - a stale tab detects another saved watch before writing its divergent tide
+2026-10-08T15:46:53.6167038Z   ---
+2026-10-08T15:46:53.6167139Z   duration_ms: 2.079415
+2026-10-08T15:46:53.6167368Z   type: 'test'
+2026-10-08T15:46:53.6167476Z   ...
+2026-10-08T15:46:53.6167690Z # Subtest: storage change and clear notifications hold stale writes without mutating the current watch
+2026-10-08T15:46:53.6168050Z ok 83 - storage change and clear notifications hold stale writes without mutating the current watch
+2026-10-08T15:46:53.6168293Z   ---
+2026-10-08T15:46:53.6168394Z   duration_ms: 0.802383
+2026-10-08T15:46:53.6168512Z   type: 'test'
+2026-10-08T15:46:53.6168692Z   ...
+2026-10-08T15:46:53.6169008Z # Subtest: a failed reset write reports the unsaved state and retry cannot restore old actions
+2026-10-08T15:46:53.6169464Z ok 84 - a failed reset write reports the unsaved state and retry cannot restore old actions
+2026-10-08T15:46:53.6169746Z   ---
+2026-10-08T15:46:53.6169903Z   duration_ms: 0.526316
+2026-10-08T15:46:53.6170077Z   type: 'test'
+2026-10-08T15:46:53.6170242Z   ...
+2026-10-08T15:46:53.7284432Z # Subtest: opening trends expose five correctly labelled metrics without inventing a completed tide
+2026-10-08T15:46:53.7285169Z ok 85 - opening trends expose five correctly labelled metrics without inventing a completed tide
+2026-10-08T15:46:53.7294137Z   ---
+2026-10-08T15:46:53.7294498Z   duration_ms: 663.505376
+2026-10-08T15:46:53.7294715Z   type: 'test'
+2026-10-08T15:46:53.7294881Z   ...
+2026-10-08T15:46:53.7295272Z # Subtest: changed real WASM actions produce complete exact tables and separate cell series without changing the watch
+2026-10-08T15:46:53.7295945Z ok 86 - changed real WASM actions produce complete exact tables and separate cell series without changing the watch
+2026-10-08T15:46:53.7296387Z   ---
+2026-10-08T15:46:53.7296562Z   duration_ms: 1110.620404
+2026-10-08T15:46:53.7299641Z   type: 'test'
+2026-10-08T15:46:53.7312938Z   ...
+2026-10-08T15:46:54.1681545Z # Subtest: native keyboard controls retain earlier selection and focus while later tides arrive
+2026-10-08T15:46:54.1682244Z ok 87 - native keyboard controls retain earlier selection and focus while later tides arrive
+2026-10-08T15:46:54.1682757Z   ---
+2026-10-08T15:46:54.1683071Z   duration_ms: 440.147914
+2026-10-08T15:46:54.1683277Z   type: 'test'
+2026-10-08T15:46:54.1683441Z   ...
+2026-10-08T15:46:54.6643751Z # Subtest: selection and refused actions add no trend, and reset starts at the actual opening
+2026-10-08T15:46:54.6644352Z ok 88 - selection and refused actions add no trend, and reset starts at the actual opening
+2026-10-08T15:46:54.6644722Z   ---
+2026-10-08T15:46:54.6644899Z   duration_ms: 496.645566
+2026-10-08T15:46:54.6645099Z   type: 'test'
+2026-10-08T15:46:54.6645277Z   ...
+2026-10-08T15:46:55.0648747Z # Subtest: clicking the chart selects the tide and leaves keyboard focus on its slider
+2026-10-08T15:46:55.0650022Z ok 89 - clicking the chart selects the tide and leaves keyboard focus on its slider
+2026-10-08T15:46:55.0650686Z   ---
+2026-10-08T15:46:55.0650965Z   duration_ms: 400.07079
+2026-10-08T15:46:55.0651274Z   type: 'test'
+2026-10-08T15:46:55.0651559Z   ...
+2026-10-08T15:46:56.4537522Z # Subtest: partial and complete native replay retain the opening, all completed tides and the finished watch
+2026-10-08T15:46:56.4538943Z ok 90 - partial and complete native replay retain the opening, all completed tides and the finished watch
+2026-10-08T15:46:56.4539588Z   ---
+2026-10-08T15:46:56.4540262Z   duration_ms: 1388.709957
+2026-10-08T15:46:56.4540975Z   type: 'test'
+2026-10-08T15:46:56.4541939Z   ...
+2026-10-08T15:46:56.7654920Z # Subtest: invalid journal replay cannot replace an existing trends history
+2026-10-08T15:46:56.7658098Z ok 91 - invalid journal replay cannot replace an existing trends history
+2026-10-08T15:46:56.7658456Z   ---
+2026-10-08T15:46:56.7658642Z   duration_ms: 310.766054
+2026-10-08T15:46:56.7658882Z   type: 'test'
+2026-10-08T15:46:56.7659101Z   ...
+2026-10-08T15:46:57.2913402Z # Subtest: direct-open packaging embeds the same trends and reopens native saved readings offline
+2026-10-08T15:46:57.2914350Z ok 92 - direct-open packaging embeds the same trends and reopens native saved readings offline
+2026-10-08T15:46:57.2915402Z   ---
+2026-10-08T15:46:57.2915729Z   duration_ms: 526.657449
+2026-10-08T15:46:57.2916078Z   type: 'test'
+2026-10-08T15:46:57.2916392Z   ...
+2026-10-08T15:46:57.3452266Z 1..92
+2026-10-08T15:46:57.3452556Z # tests 92
+2026-10-08T15:46:57.3452724Z # suites 0
+2026-10-08T15:46:57.3452919Z # pass 92
+2026-10-08T15:46:57.3453078Z # fail 0
+2026-10-08T15:46:57.3453239Z # cancelled 0
+2026-10-08T15:46:57.3453424Z # skipped 0
+2026-10-08T15:46:57.3453588Z # todo 0
+2026-10-08T15:46:57.3453764Z # duration_ms 25807.039851
+2026-10-08T15:46:57.3667634Z Post job cleanup.
+2026-10-08T15:46:57.4276275Z [command]/usr/bin/git version
+2026-10-08T15:46:57.4312059Z git version 2.55.0
+2026-10-08T15:46:57.4339297Z Temporarily overriding HOME='/home/runner/work/_temp/09d41a9f-a73b-4bf2-8c1e-f88cdbf16af7' before making global git config changes
+2026-10-08T15:46:57.4339981Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:46:57.4343739Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/longwater-browser-demo/longwater-browser-demo
+2026-10-08T15:46:57.4380806Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:46:57.4414562Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:46:57.4627489Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:46:57.4660921Z http.https://github.com/.extraheader
+2026-10-08T15:46:57.4672153Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T15:46:57.4705417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:46:57.4918624Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:46:57.4949937Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:46:57.5265365Z Cleaning up orphan processes
+2026-10-08T15:46:57.5519165Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

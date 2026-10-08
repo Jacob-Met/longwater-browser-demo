@@ -1,0 +1,61 @@
+const fs=require("fs"),path=require("path"),cp=require("child_process"),crypto=require("crypto"),assert=require("assert/strict");
+const p="/Users/me/hamon-longwater-choice-peer-965d2e86e979",donor="/Users/me/hamon-longwater-report-peer-965d2e86e979";
+const incoming=JSON.parse(fs.readFileSync(p+"/incoming-d40.json"));
+const sha=b=>crypto.createHash("sha256").update(b).digest("hex"),blob=b=>crypto.createHash("sha1").update(Buffer.from("blob "+b.length+"\0")).update(b).digest("hex");
+const git=(root,...args)=>cp.execFileSync("/usr/bin/git",["-C",root,...args],{maxBuffer:25000000});
+function write(root,name,b,mode){const f=path.join(root,name);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,b,{mode:mode==="100755"?0o755:0o644});fs.chmodSync(f,mode==="100755"?0o755:0o644);}
+function init(root){git(root,"init","-q");git(root,"config","user.name","HAMON independent receiver");git(root,"config","user.email","receiver@localhost");}
+function commit(root,message){git(root,"add","--all");git(root,"commit","-q","-m",message);return{commit:git(root,"rev-parse","HEAD").toString().trim(),tree:git(root,"write-tree").toString().trim()};}
+function verify(root,tree){const files=tree.filter(x=>x.type==="blob").map(f=>{const b=fs.readFileSync(path.join(root,f.path));assert.equal(blob(b),f.sha,f.path);assert.equal((fs.statSync(path.join(root,f.path)).mode&0o111)?"100755":"100644",f.mode,f.path);return{path:f.path,mode:f.mode,git_blob:f.sha,bytes:b.length,sha256:sha(b)};});return files;}
+assert.ok(!fs.existsSync(p+"/upstream")&&!fs.existsSync(p+"/source"));
+fs.mkdirSync(p+"/upstream");
+for(const f of incoming.tree.tree.filter(x=>x.type==="blob")){
+ const provided=incoming.files.find(x=>x.path===f.path),b=provided?Buffer.from(provided.content,"utf8"):fs.readFileSync(path.join(donor,"baseline",f.path));
+ assert.equal(blob(b),f.sha,f.path);write(p+"/upstream",f.path,b,f.mode);
+}
+const upstreamFiles=verify(p+"/upstream",incoming.tree.tree);init(p+"/upstream");const upstream=commit(p+"/upstream","Receive exact canonical PR19 d40 null-invalidation source");
+assert.equal(upstream.tree,"8836dcd81d1b5aa5e7f85119a1cd5b50743aad26");
+fs.mkdirSync(p+"/source");
+for(const f of incoming.baseTree.tree.filter(x=>x.type==="blob"))write(p+"/source",f.path,fs.readFileSync(path.join(donor,"baseline",f.path)),f.mode);
+verify(p+"/source",incoming.baseTree.tree);init(p+"/source");const common=commit(p+"/source","Receive exact f321 common source for independent composition");
+assert.equal(common.tree,"b825a333b9d7f73a73b801f517b07c256aea5934");
+const r6Manifest=JSON.parse(fs.readFileSync(donor+"/fixed-receiving.json"));
+for(const f of r6Manifest.files){const b=fs.readFileSync(path.join(donor,"fixed",f.path));assert.equal(sha(b),f.sha256);write(p+"/source",f.path,b,f.mode);}
+const r6=commit(p+"/source","Receive exact accepted R6 runtime tree 6483543d");
+assert.equal(r6.tree,"ee897713a77123186959e89e5d43a3e7b10aaa2b");
+const originalPath="docs/receiving/watch-file-transfer-965d2e86e979/integration-seams/pr19";
+fs.cpSync(path.join(donor,"fixed",originalPath),p+"/original-witness",{recursive:true});
+const witness=fs.readFileSync(p+"/original-witness/receive-adoption-seam.mjs.source","utf8");
+assert.equal(sha(Buffer.from(witness)),"c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae");
+function once(text,needle,value){assert.equal(text.split(needle).length,2,"unique "+needle);return text.replace(needle,value);}
+function composeGame(original){let s=once(original,"\n\nconst canvas",'\nimport { WatchChoice } from "./watch-choice.js";\n\nconst canvas');s=once(s,"let pixelRatio = 1;\n","let pixelRatio = 1;\n"+'const historicalChoice = new WatchChoice(document.querySelector("#watch-choice"), {\n'+"  readHistory: () => watch.replayHistory(),\n"+"  createSession: () => new BrowserSession(),\n"+"});\n");return once(s,"function render() {\n","function render() {\n  historicalChoice.synchronize(state);\n");}
+function composeIndex(original){let s=once(original,'  <link rel="stylesheet" href="./watch-save.css">\n','  <link rel="stylesheet" href="./watch-save.css">\n  <link rel="stylesheet" href="./watch-choice.css">\n');return once(s,'    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>\n','    <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>\n'+'    <section id="watch-choice" class="watch-choice" aria-labelledby="choice-title" hidden></section>\n');}
+function composePackage(original){
+ let s=once(original,'"watch-save.css"','"watch-save.css", "watch-choice.css"');
+ s=once(s,'"watch-save.js"','"watch-save.js", "watch-choice.js"');
+ s=once(s,'"pkg/longwater_web_bg.wasm"];','"watch-choice-model.js", "pkg/longwater_web_bg.wasm"];');
+ s=once(s,"for (const name of modules) {",'const choice = replaceOnce(text("watch-choice.js"), JSON.stringify("./watch-choice-model.js"), JSON.stringify(dataUrl("text/javascript", files.get("watch-choice-model.js"))));\nfor (const name of modules) {');
+ return once(s,'name === "journal.js" ? journal : files.get(name)','name === "journal.js" ? journal : name === "watch-choice.js" ? choice : files.get(name)');
+}
+for(const [file,transform] of [["game.js",composeGame],["index.html",composeIndex],["scripts/package.mjs",composePackage]]){
+ const parent=git(p+"/source","show",common.commit+":"+file).toString(),actual=fs.readFileSync(p+"/upstream/"+file,"utf8");
+ assert.equal(transform(parent),actual,file+" exact d40 transform on common source");
+ const r6bytes=git(p+"/source","show",r6.commit+":"+file).toString();write(p+"/source",file,Buffer.from(transform(r6bytes)),"100644");
+}
+const moduleFiles=["watch-choice-model.js","watch-choice.js","watch-choice.css"];
+for(const name of moduleFiles)write(p+"/source",name,fs.readFileSync(p+"/upstream/"+name),"100644");
+assert.equal(sha(fs.readFileSync(p+"/source/watch-choice.js")),"984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d");
+let pack=cp.spawnSync("/opt/homebrew/bin/node",[p+"/source/scripts/package.mjs",p+"/source/downloads/Longwater-Fourteen-Tides.html"],{encoding:"utf8",timeout:15000});assert.equal(pack.status,0,pack.stderr);
+const negative=commit(p+"/source","Compose exact PR19 runtime into accepted R6 without the null catch seam");
+fs.writeFileSync(p+"/negative-packager.json",pack.stdout);
+const oldGame=fs.readFileSync(p+"/source/game.js","utf8"),needle='        state = null;\n        document.querySelector("#watch-journal").hidden = true;\n',replacement='        state = null;\n        historicalChoice.synchronize(null);\n        document.querySelector("#watch-journal").hidden = true;\n';
+write(p+"/source","game.js",Buffer.from(once(oldGame,needle,replacement)),"100644");
+pack=cp.spawnSync("/opt/homebrew/bin/node",[p+"/source/scripts/package.mjs",p+"/source/downloads/Longwater-Fourteen-Tides.html"],{encoding:"utf8",timeout:15000});assert.equal(pack.status,0,pack.stderr);
+const positive=commit(p+"/source","Receive allocation-free historical comparison invalidation after adopted display failure");
+fs.writeFileSync(p+"/positive-packager.json",pack.stdout);
+const sourceTree=git(p+"/source","ls-tree","-r","-z",positive.commit).toString().split("\0").filter(Boolean).map(s=>{const m=/^(\d+) blob ([0-9a-f]+)\t([\s\S]+)$/.exec(s);const b=git(p+"/source","show",positive.commit+":"+m[3]);return{path:m[3],mode:m[1],git_blob:m[2],bytes:b.length,sha256:sha(b)};});
+const receipt={format:"hamon-independent-pr19-r6-composition/1",remoteOwner:{commit:incoming.commit.sha,tree:upstream.tree,moduleSha256:sha(fs.readFileSync(p+"/upstream/watch-choice.js"))},nativeOwnerSnapshot:upstream,common,r6:{...r6,qualifiedNativeCommit:"6483543d13e1f0dade3eca18e359d1080f05a1b6"},negative,positive,files:sourceTree,upstreamFiles,ownedSourceChanges:git(p+"/source","diff","--name-status",r6.commit,positive.commit).toString(),nullOnlySourceChanges:git(p+"/source","diff","--name-status",negative.commit,positive.commit).toString(),ownerModulesExact:true,allThreeOriginalOwnerTransformsReconstructExactD40:true,sourceDirectory:p+"/source",sourceScope:"Runtime-only isolated receiving: three exact owner modules plus additive game/index/package wiring and the catch call; existing tests, workflows and docs retain R6 bytes. No broad current-project suite or owner PR rebase is claimed."};
+fs.writeFileSync(p+"/composition.json",JSON.stringify(receipt,null,2)+"\n");
+fs.writeFileSync(p+"/r6-to-choice.patch",git(p+"/source","diff","--binary",r6.commit,positive.commit));
+fs.writeFileSync(p+"/null-seam-only.patch",git(p+"/source","diff",negative.commit,positive.commit,"--","game.js"));
+console.log(JSON.stringify({upstream,common,r6,negative,positive,files:sourceTree.length,sourceChanges:receipt.ownedSourceChanges,nullChanges:receipt.nullOnlySourceChanges,receiptSha256:sha(fs.readFileSync(p+"/composition.json"))}));

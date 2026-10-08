@@ -1,0 +1,19 @@
+{
+  "format": "hamon-self-contained-source-replay/1",
+  "bundleSha256": "501ba09e93ea0992f67a56d2c4fb516d9e20a47aac6c9d4b12ae247cb2c39c3e",
+  "bundleBytes": 5207765,
+  "cloneExit": 0,
+  "cloneStderr": "Note: switching to 'd3a3502536e76b2c9860efe5ada73199c4a643bf'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\n",
+  "fsckExit": 0,
+  "fsckStdout": "",
+  "fsckStderr": "",
+  "qualifiedCandidate": {
+    "commit": "d3a3502536e76b2c9860efe5ada73199c4a643bf",
+    "tree": "2c603b7355e27218024902961a1ee0c02753fbd5"
+  },
+  "reconstructedCandidateTree": "2c603b7355e27218024902961a1ee0c02753fbd5",
+  "reconstructedCandidateFiles": 165,
+  "reconstructedOwnerTree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+  "reconstructedOwnerFiles": 114,
+  "mechanism": "The complete source bundle contains common f321, exact accepted R6, negative runtime composition and positive one-line successor. Reconstructing exact d40 uses the bundle common ancestor plus incoming-d40.json's exact thirteen changed/new blobs."
+}

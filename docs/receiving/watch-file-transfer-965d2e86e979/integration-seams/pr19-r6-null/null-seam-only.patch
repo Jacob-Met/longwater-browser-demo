@@ -1,0 +1,12 @@
+diff --git a/game.js b/game.js
+index 2a2b1bd..3639d6a 100644
+--- a/game.js
++++ b/game.js
+@@ -521,6 +521,7 @@ try {
+         // The imported watch is already active. Keep its file/save recovery
+         // available, but do not accept play against a display that is stale.
+         state = null;
++        historicalChoice.synchronize(null);
+         document.querySelector("#watch-journal").hidden = true;
+         [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
+         showSaveStatus();

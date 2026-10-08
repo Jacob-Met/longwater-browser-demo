@@ -1,0 +1,43 @@
+{
+  "format": "hamon-independent-integration-receiving/1",
+  "reviewer": "/root/current_integration",
+  "verdict": "ACCEPTED_PR19_D40_NULL_API_IN_R6_CATCH",
+  "qualifiedSource": {
+    "commit": "d3a3502536e76b2c9860efe5ada73199c4a643bf",
+    "tree": "2c603b7355e27218024902961a1ee0c02753fbd5"
+  },
+  "acceptedR6": {
+    "commit": "57ab2e1ac2a27648cae3a9fc50aff7154ffa7f16",
+    "tree": "ee897713a77123186959e89e5d43a3e7b10aaa2b",
+    "qualifiedNativeCommit": "6483543d13e1f0dade3eca18e359d1080f05a1b6"
+  },
+  "exactOwner": {
+    "commit": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+    "tree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+    "moduleSha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d"
+  },
+  "negative": {
+    "commit": "e630f725f05b7910446e8da1e129a60617ae8e19",
+    "tree": "c87baca24a832d99837a182564713eba138f86b5"
+  },
+  "negativeOutcome": "2 pass / 1 expected historical comparison invalidation failure",
+  "positiveOutcome": "3 pass / 0 fail",
+  "unchangedThreeCaseBodySha256": "10430e930088658ddb01a24ab451870490cc8e8eb390826addf28c34f09db816",
+  "originalWitnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+  "adaptedWitnessSha256": "a464778ac428b3727a7bf41e79744250a4b7288735aa90567e028982af53833c",
+  "positiveResultSha256": "a28a95d41136f2bab4dd9bc17a6439cc913f84af819b5110562d99ca0e795252",
+  "negativeResultSha256": "a3b43253e4430cd04eba567c308fa8c596743edda923e4487a0a395c61e648ca",
+  "exactAcceptedAndDownloadedWatchSha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a",
+  "childCleanup": "Original witness closes each browser context and, in finally, the browser and isolated HTTP server. Both native commands exited with empty stderr; no child remains from these commands.",
+  "sourceUnchanged": {
+    "composedFiles": 165,
+    "canonicalOwnerFiles": 114,
+    "allBytesAndModes": true
+  },
+  "limits": [
+    "Only the three declared actual adoption cases were replayed; the owner's prior 80/80 module gate and R6's 92/92 suite retain their original scope.",
+    "The fixture adapter changes current source/pin bindings, two required report routes and adds stricter frozen-source guards. Its inverse recovers the complete original witness. All three case bodies and behavioral assertions are exact.",
+    "This is an isolated runtime composition; PR19 workflow/docs/test-fixture rebase and final current-parent integration remain with its owner. No owner refs, source checkout, hosted app or installed service was changed."
+  ],
+  "utc": "2026-10-08T15:50:11.495Z"
+}
