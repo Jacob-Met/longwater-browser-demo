@@ -1,0 +1,145 @@
+{
+  "startedAt": "2026-10-08T15:42:08.183Z",
+  "sourceCommit": "9a91fbe76c63e0c63b88aeb677198961e05021ea",
+  "driverSha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+  "packaged": {
+    "bytes": 284732,
+    "sha256": "f5e85fac42e3356881baba68baaf0cba83cc12d90f339e6abd8ebcd76af6dafd",
+    "sourceSha256": "840ac9b35f573f70a80f06534d956b31ff7209b25efb7e00e52ebe84f553bb4f",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-report.css",
+      "practice-watch.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "practice-watch.js",
+      "watch-trends.js",
+      "watch-report.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:51905/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/style.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/journal.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-report.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-trends.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-save.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/practice-watch.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/game.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/pkg/longwater_web.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/journal.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-save.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/practice-watch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-trends.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/watch-report.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51905/pkg/longwater_web_bg.wasm",
+      "status": 200
+    }
+  ],
+  "offOrigin": [],
+  "offlineRequests": [],
+  "stages": {
+    "onlineBeforeDownload": {
+      "summary": "Day 1 of 14. Water 4; seed packs 5.",
+      "notes": "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.",
+      "journal": "Tide 1 · Gate · South ReachSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 70 cmSalt30 → 34 pptOxygen55 → 54 %Life49 → 50 %Canopy0 → 0 / 3South ReachDepth67 → 88 cmSalt40 → 33 pptOxygen43 → 37 %Life38 → 38 %Canopy0 → 0 / 3",
+      "journalEntries": 1,
+      "save": "Day 1 of 14 saved in this browser."
+    },
+    "onlineAfterDownload": {
+      "summary": "Day 1 of 14. Water 4; seed packs 5.",
+      "notes": "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.",
+      "journal": "Tide 1 · Gate · South ReachSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 70 cmSalt30 → 34 pptOxygen55 → 54 %Life49 → 50 %Canopy0 → 0 / 3South ReachDepth67 → 88 cmSalt40 → 33 pptOxygen43 → 37 %Life38 → 38 %Canopy0 → 0 / 3",
+      "journalEntries": 1,
+      "save": "Day 1 of 14 saved in this browser."
+    },
+    "offlineOpening": {
+      "summary": "Day 0 of 14. Water 5; seed packs 5.",
+      "notes": "Pick a cell, then choose Gate, Shade, or Seed.Your action is resolved against the live Rust simulation.",
+      "journal": "",
+      "journalEntries": 0,
+      "save": "Your watch will save in this browser after each tide."
+    },
+    "offlinePlayed": {
+      "summary": "Day 1 of 14. Water 4; seed packs 5.",
+      "notes": "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.",
+      "journal": "Tide 1 · Gate · South ReachSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 70 cmSalt30 → 34 pptOxygen55 → 54 %Life49 → 50 %Canopy0 → 0 / 3South ReachDepth67 → 88 cmSalt40 → 33 pptOxygen43 → 37 %Life38 → 38 %Canopy0 → 0 / 3",
+      "journalEntries": 1,
+      "save": "Day 1 of 14 saved in this browser."
+    },
+    "offlineReopened": {
+      "summary": "Day 1 of 14. Water 4; seed packs 5.",
+      "notes": "Freshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.",
+      "journal": "Tide 1 · Gate · South ReachSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · South Reach: water 67→74 cm, salt 40→30 ppt, oxygen 43→42%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; South Reach oxygen 42→39%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen -2; the water-depth/salinity rule shifts salt -1 ppt.Net · South Reach: water 67→88 cm, salt 40→33 ppt, oxygen 43→37%, biomass 38→38%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 70 cmSalt30 → 34 pptOxygen55 → 54 %Life49 → 50 %Canopy0 → 0 / 3South ReachDepth67 → 88 cmSalt40 → 33 pptOxygen43 → 37 %Life38 → 38 %Canopy0 → 0 / 3",
+      "journalEntries": 1,
+      "save": "Resumed your saved watch at day 1 of 14."
+    }
+  },
+  "passed": true,
+  "browserVersion": "154.0.8037.98",
+  "download": {
+    "url": "http://127.0.0.1:51905/downloads/Longwater-Fourteen-Tides.html",
+    "filename": "Longwater-Fourteen-Tides.html",
+    "bytes": 284732,
+    "sha256": "f5e85fac42e3356881baba68baaf0cba83cc12d90f339e6abd8ebcd76af6dafd"
+  },
+  "downloadLinkBounds": {
+    "x": 19,
+    "y": 524,
+    "width": 207.796875,
+    "height": 44
+  },
+  "finishedAt": "2026-10-08T15:42:10.273Z"
+}

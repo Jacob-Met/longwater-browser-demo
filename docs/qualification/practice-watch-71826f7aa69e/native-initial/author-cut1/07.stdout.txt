@@ -1,0 +1,14 @@
+✔ practice pointer controls show whole native tides and preserve the resumed active watch (1270.940334ms)
+✔ practice keyboard controls keep native refusals and reach the fourteen-tide outcome (476.048458ms)
+✔ practice restart and queued close events release only the owned native sessions (484.142292ms)
+✔ practice remains usable with blocked storage and retains the active watch when a modal cannot open (392.180417ms)
+✔ practice is operable by touch at 320 pixels without horizontal clipping (495.374125ms)
+✔ the deterministic offline game contains fresh practice without external assets or live-watch changes (761.023083ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4362.100667

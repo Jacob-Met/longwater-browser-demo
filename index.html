@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./watch-save.css">
   <link rel="stylesheet" href="./watch-choice.css">
   <link rel="stylesheet" href="./watch-file.css">
+  <link rel="stylesheet" href="./practice-watch.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -32,6 +33,14 @@
       </div>
       <p id="startup-error" hidden></p>
     </div>
+    <section class="practice-entry" aria-labelledby="practice-entry-title">
+      <div>
+        <h2 id="practice-entry-title">Try a practice watch</h2>
+        <p>Learn Gate, Shade, and Seed in a separate marsh. Your active watch and its saved progress stay as they are.</p>
+      </div>
+      <button id="practice-open" type="button" disabled>Open practice</button>
+      <p id="practice-entry-status" role="status" aria-live="polite"></p>
+    </section>
     <section id="watch-storage" aria-label="Watch progress">
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
       <button id="watch-save-retry" type="button" hidden>Try saving again</button>
@@ -85,6 +94,38 @@
         <button id="keep-watch" type="button" autofocus>Keep this watch</button>
         <button id="start-new-watch" type="button">Start new watch</button>
       </div>
+    </dialog>
+    <dialog id="practice-watch" class="practice-watch" aria-labelledby="practice-title" aria-describedby="practice-note">
+      <header>
+        <div>
+          <p class="practice-label">PRACTICE · SEPARATE WATCH</p>
+          <h2 id="practice-title">Learn the tides</h2>
+        </div>
+        <button type="button" data-practice-close>Close practice</button>
+      </header>
+      <p id="practice-note">Each practice action advances a whole tide in a fresh marsh. Practice never spends your active watch's resources or changes its progress. Closing discards this practice watch.</p>
+      <fieldset>
+        <legend>1. Select a practice cell</legend>
+        <div class="practice-options">
+          <button type="button" data-practice-cell="0" aria-pressed="false">North Bank</button>
+          <button type="button" data-practice-cell="1" aria-pressed="true">Heart Pool</button>
+          <button type="button" data-practice-cell="2" aria-pressed="false">South Reach</button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>2. Try one action and turn the tide</legend>
+        <div class="practice-options">
+          <button type="button" data-practice-action="gate"><strong>Gate</strong><small>Spend 1 water</small></button>
+          <button type="button" data-practice-action="shade"><strong>Shade</strong><small>Add canopy, up to 3</small></button>
+          <button type="button" data-practice-action="seed"><strong>Seed</strong><small>Spend 1 seed pack</small></button>
+        </div>
+      </fieldset>
+      <div class="practice-toolbar">
+        <p id="practice-summary"></p>
+        <button type="button" data-practice-restart>Restart practice</button>
+      </div>
+      <p id="practice-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <section id="practice-output" aria-label="Practice readings and tide result"></section>
     </dialog>
     <noscript>Longwater needs JavaScript enabled to run its local simulation.</noscript>
   </main>

@@ -1,0 +1,17 @@
+✔ a visitor downloads the current game and resumes its complete journal offline (2170.270583ms)
+✔ closing and reopening the page resumes the same native watch and selected cell (995.677208ms)
+✔ a fourteen-tide ending survives reload and explicit reset stores a fresh watch (742.274167ms)
+✔ unavailable actions leave the saved history unchanged (406.148666ms)
+✔ failed replay preserves saved data while play continues until an explicit reset (1113.224834ms)
+✔ quota failure retains the running tide and the visible retry saves without advancing it (357.288458ms)
+✔ a blocked storage getter still allows a playable watch and later save retry (321.27125ms)
+✔ two tabs detect divergent storage and do not overwrite the other watch (531.820416ms)
+✔ failed WASM startup never replaces an existing saved watch (325.118708ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8197.773875

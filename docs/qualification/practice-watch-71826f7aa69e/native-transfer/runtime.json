@@ -1,0 +1,24 @@
+{
+  "node": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--version"
+    ],
+    "version": "v26.3.0",
+    "stderr": ""
+  },
+  "chrome": {
+    "command": [
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--version"
+    ],
+    "version": "Google Chrome 154.0.8037.98",
+    "stderr": ""
+  },
+  "dependencies": {
+    "playwright": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright/package.json",
+    "playwrightSha256": "ca170ec143a88ed3043ac953eb3b2377b2b97304104f4e1e23316684ce2c35af",
+    "playwrightCore": "/Users/me/workspace/estate/production-evidence-49f845d0dece/browser-tools/node_modules/playwright-core/package.json",
+    "coreSha256": "07c47543631fef9508760365dee9fbe958c562093ec8d122543949ed231f233f"
+  }
+}

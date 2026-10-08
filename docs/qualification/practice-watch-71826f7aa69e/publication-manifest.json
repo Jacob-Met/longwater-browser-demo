@@ -1,0 +1,767 @@
+{
+  "schema": "longwater.practice-evidence-publication/1",
+  "target_commit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+  "source_tree": "5a68e29154987efea415b31fac044b2c57152438",
+  "payload_files": 95,
+  "payload_bytes": 911773,
+  "files": [
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/README.md",
+      "bytes": 9403,
+      "sha256": "6ea456fc3fbd6b6e64c8adec9b45fc0825a4cf5d786f96271989b43e4e9df414",
+      "git_blob": "ab923422e2ba954609c9b4a92d91d3c8346b8d9d",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/source-manifest.json",
+      "bytes": 7435,
+      "sha256": "d4a89f7ea0fbb6a31ea6c03b60c85c24ce4370d47bde3d76d1d019889de51764",
+      "git_blob": "2104f554c35124a323910e2a6f9820aeeaa267c6",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/environment-outcomes.json",
+      "bytes": 2383,
+      "sha256": "816d4623583e68ffe8b25f5f8e8e38a3e9f75bfe635d2c6acd3e6982c0e2363f",
+      "git_blob": "a32ebc9601efc199e4ea6e277b0c755145dc7804",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-wasm.mjs",
+      "bytes": 1043,
+      "sha256": "91bfe50e6af7749860af31b9c9ab0261092c3d734a32961ef01cec4be6246317",
+      "git_blob": "5f513b8d85646f67628cf89509900107ececcc10",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-ui.mjs",
+      "bytes": 927,
+      "sha256": "71a559fe153b05ef8721ae70553a96c1890153e00987c61ebf9f80abdb302e0d",
+      "git_blob": "90f834ceebf0f86399bf1ac0ba8e5a6d44703654",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-constraints.mjs",
+      "bytes": 793,
+      "sha256": "89a0cf835a86c115e756d116c085d7d2a6ec65c43702cc6194f35e52b1d8d854",
+      "git_blob": "fc3608874086d3420e8af92aa0868988babaa397",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-wasm.json",
+      "bytes": 10561,
+      "sha256": "daab716b24fb359bb9fda5f13ee9703bd5cf01f3163277888b9b86278b66a094",
+      "git_blob": "40243e3c3b859e908700890c6398b44715a9ab65",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-wasm.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-ui.json",
+      "bytes": 243,
+      "sha256": "165d94dae3a8a705a5899777501071ee629885a9494485b44091a8dcea86c59f",
+      "git_blob": "4b9b22db1e807e10c335036c3d9c6d005e97796a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-constraints.json",
+      "bytes": 2106,
+      "sha256": "d28ab281342a85e7b08c92ae37c73981fe0ee9b5caec4dc512679430356cdb7d",
+      "git_blob": "76d818d9a5e22ac27866fbe5d47f08c982e8cc61",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/baseline-runtime.json",
+      "bytes": 1163,
+      "sha256": "7bef377bc12153f3089d4a3098b2b47af26445ebe4af1e971eb5e656d1256f0e",
+      "git_blob": "a639cd5fa232b1e66088c1940cd1e168d7d23584",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/source-cut1.json",
+      "bytes": 1449,
+      "sha256": "401dedd689c7bf670327f1a34cd9ed36660375a45ab81d556445fdc919e5ea8f",
+      "git_blob": "6deac2f979c2c7d3bf2c5cc7c572918f62c6abda",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/source-cut2.json",
+      "bytes": 257,
+      "sha256": "1138021a34c0ffdc724e19b0cf69ab56ed590a123901998dfd1e036b61dc6473",
+      "git_blob": "1059869ddd89ccda974d82d90f04415f7b9ddf3c",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-receiver-cut1.json",
+      "bytes": 213,
+      "sha256": "f5544feedf5b1f3ddab6ea61c948afba74a6495b680d4f1b6428915161d071e5",
+      "git_blob": "09c72ed0cfddb25bf4504a8950ff37b02490696f",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/partial-git-snapshot.json",
+      "bytes": 5308,
+      "sha256": "56216668f99c4ab136d51c140cc9f23133647ccc1af2413e310492052a2802b1",
+      "git_blob": "355139a0e298fcf3285828177269501f4cd51674",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/receiving.json",
+      "bytes": 9609,
+      "sha256": "c64324ba8da2480ca87fe8b0af8e9c37eddbcb07c62f880df7f31ae093bf005a",
+      "git_blob": "640c989a0847bdb6917ce8ab3d98637a21eecdd2",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/01.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/01.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/02.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/02.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/03.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/03.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/04.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/04.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/05.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/05.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/06.stdout.txt",
+      "bytes": 551,
+      "sha256": "32f17821c9991b672d84ae87fd41f895fb361d7c5c01ad9c013df6d694576786",
+      "git_blob": "f9c6f8dbc10fc5786b2c3f7c63b52126b44b903b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/06.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/07.stdout.txt",
+      "bytes": 755,
+      "sha256": "f56adf4db5ec65ba70ba0dc7cc2dfd7ba75ed818002483f06782e534aca748d7",
+      "git_blob": "e0cce0090c803b4bff3a76ac73be6de366625e14",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/author-cut1/07.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/full-cut1/receiving.json",
+      "bytes": 680,
+      "sha256": "5e7d5e0c3ec5fa09b646a6ffc234d3814defb2927b5083a4312249cf26e9c6d2",
+      "git_blob": "a8a14d18769cff84e019f4fb5afbe411629b8f87",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/full-cut1/stdout.txt",
+      "bytes": 13066,
+      "sha256": "675d45b109aaad3ea547239390a27a2e86177dd5cdca16a92b78dcaff7b81465",
+      "git_blob": "fd5a9d18c9dfcd0d907caccb9c6e03a5659e9add",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/full-cut1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/repaired-fixtures/receiving.json",
+      "bytes": 655,
+      "sha256": "02208c6c637d7d0b77e8e102d22b490b0f4604c3123cabed49324f60ae2586a9",
+      "git_blob": "fce85e4cdb21ff6617a5dfd7476604e96ba2abb5",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/repaired-fixtures/stdout.txt",
+      "bytes": 952,
+      "sha256": "4b099fa94b6019ef40abf95b76f06219bf5d3c43f014eb5b2cae17de89d4223f",
+      "git_blob": "f1b3351cec10a6e2872865cd74c4b969db359ce7",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/repaired-fixtures/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/actual-download/receipt.json",
+      "bytes": 9104,
+      "sha256": "81ab72e986dc79cd5e3b4003a868598712fea1dda4eecb561b7a458f614c075c",
+      "git_blob": "353642b6139758cfeae65fc414e997a484441e61",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/screenshots/practice-opening.png",
+      "bytes": 128201,
+      "sha256": "fa4347651054a45faa75de20e935e4662cc56b34729b7a25894a0183afb04886",
+      "git_blob": "b8db92843b37b0841bb64ad4fdbfaaa3c57cd4ad",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/screenshots/practice-result.png",
+      "bytes": 153239,
+      "sha256": "6b9d40823047de37489eb50dcaf1e2def22e5921924a4ad842e5a45494e27194",
+      "git_blob": "4a0bc4cff3679701cbb653777568c790ea8a7e4b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/screenshots/practice-phone.png",
+      "bytes": 37777,
+      "sha256": "3213298f14eea9a9e8741f91f0a16600bebc84666437b46b356ac63a891e07f7",
+      "git_blob": "94a51763295cde057e62881578dc2bef0d1203fe",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-initial/publication-manifest.json",
+      "bytes": 13002,
+      "git_blob": "a46a8f4d732e979f20a402531998c7d1fbedef1a",
+      "sha256": "a6e2dc24c74157829dfaa9b31790dd91f480bb914555c3b024ff86634044c908",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/README.md",
+      "bytes": 4941,
+      "sha256": "613cd0980f9056f30d4469eb1b44fe1fb3acb877f986375275f5b9c239555cba",
+      "git_blob": "8f7efba56bc1a05c29577bd2e5e7a80eb044f955",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/source-review.json",
+      "bytes": 8935,
+      "sha256": "e793865b4d076e0489f912b46e00eb40ea97dcb76cecacbb5a66883fff482ea1",
+      "git_blob": "adfe5c8880ed0004ac50519f9fa8f9a7bd5de7cb",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/criteria.json",
+      "bytes": 1955,
+      "sha256": "c9781cd13bda655fbba76abb5cd01e1cd7ac62af80fa6e0def8152b880f92228",
+      "git_blob": "9b8a6db671cb588f9034874f441f555612c8683a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/criteria-v2.json",
+      "bytes": 2828,
+      "sha256": "36d7d226a838775bd5b852fc0a94ec8e3fc940c5d9370a9647ef0325054e590e",
+      "git_blob": "146d4425845765e9cafe896de111ec853a0dc0e6",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/independent-receive.mjs",
+      "bytes": 18528,
+      "sha256": "39f53c00bbdb5ff3a34eb1c189fc939d7d208ce142193cb444b5e3683d99d3f4",
+      "git_blob": "732af349f6c5f43d120d83ad33835ea8cb969fda",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/independent-receive-v2.mjs",
+      "bytes": 20808,
+      "sha256": "2676836f77a00bdbcdd1f67ddf8a00510ae6acd187f8327a0ed73813d40973df",
+      "git_blob": "23334b8b16e159ea55d376859b0deaa7fc27630a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/browser-telemetry-diagnostic.mjs",
+      "bytes": 2623,
+      "sha256": "03710ec9ac0a884840c7c5b9c18623361ebb9634ded1cd06619d798279514824",
+      "git_blob": "3c0e32c562685c4c351981526d843dab082e2a4e",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/syntax-check.json",
+      "bytes": 54,
+      "sha256": "6379c17d798191f995d43b0950ea7787779fe29c9af7354b25de37a514ff207d",
+      "git_blob": "a7d425255a3049a8b16db60ebf709fa7dae8ee2b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/syntax-check-v2.json",
+      "bytes": 54,
+      "sha256": "6379c17d798191f995d43b0950ea7787779fe29c9af7354b25de37a514ff207d",
+      "git_blob": "a7d425255a3049a8b16db60ebf709fa7dae8ee2b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/run1.stdout",
+      "bytes": 4796,
+      "sha256": "dfbeeaf98eeac3cb3508793401b09ab7eb44e71b551be9e62e4a8866006a4565",
+      "git_blob": "933a89831b75336f1f5bb0e2fd3f9e99e2f9bd05",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/run1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/run2.stdout",
+      "bytes": 8500,
+      "sha256": "12cdf7106db95f69a3338211ee1de3052ad14a63b91bf1262fd0eef3e926d536",
+      "git_blob": "207fac66d4924c453db1ccaeab57788a9164002b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/run2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/run1-receiving.json",
+      "bytes": 6061,
+      "sha256": "01b5caec6778be550cb7dab5c691fcc0bdc7d12f56eda7013fe12443b1872823",
+      "git_blob": "20f088f445677ae6016985c692d0df5a20a8a30d",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/receiving-v2.json",
+      "bytes": 13054,
+      "sha256": "bbc321b980e6fce45557220c1e72413d6b538204a96b3861ac2d1087a383bf02",
+      "git_blob": "408183bdc0d52e957a19dc6756f3c8a657d7259d",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/results/browser-telemetry-diagnostic.json",
+      "bytes": 3542,
+      "sha256": "8bbc356122d5532e0a7ca4b0ac652a4c5f122e25c56f2288fb6e02b9ab51a5aa",
+      "git_blob": "63ba862ab651f013ec06890ae417d4952c08be3a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-initial/publication-manifest.json",
+      "bytes": 5545,
+      "sha256": "746dbdd407614ecfa0fdbaf67f8e07fe15f8909313b4edf3a782091aad802122",
+      "git_blob": "5626821ea26426d1a13c374f81fc57ec7aa629f8",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/README.md",
+      "bytes": 6477,
+      "sha256": "fa0d2bfeb36de9ec98f9ac36530f918eca4d1d85bc166d3d35474459f36617f0",
+      "git_blob": "1ca9656b10ec7a8d03c2e5481df17f255201d6d1",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/source-cut.json",
+      "bytes": 19872,
+      "sha256": "602c490a0b7ca7796a1dcc6b4fa4767a8906df53d53bf9d5111ab2b374e604ed",
+      "git_blob": "f3cba11900571cb5784f335b0d83e0adf318ec5e",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/run-full-current.py",
+      "bytes": 2813,
+      "sha256": "061a3597d151cb948b63209f4f0a458f6460a6efd5adf9218f4c609e047a5772",
+      "git_blob": "24b8c753ed28a34b29fb1432c7f2c0011720b4ad",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/full-current/receiving.json",
+      "bytes": 13489,
+      "sha256": "6016646b7fc3e1f86f22b83db4a02bd9d60880615d1397e2a2422940ce5ad6e0",
+      "git_blob": "5ded0ec898d627fb98214bd16e14879a351411ce",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/full-current/stdout.txt",
+      "bytes": 10117,
+      "sha256": "6d0c0f4c1ce25e85d61ca91f1dda75b9927195e80485533355dcef426aa96028",
+      "git_blob": "ec0d036ad5af4c586cfede13271a1496fc8dee5c",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/full-current/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/package.json",
+      "bytes": 590,
+      "sha256": "03f89863122f1106f96b6d11acce2f71767bd424aebe9cd79ff55e6a22cc5638",
+      "git_blob": "3142e2829735b4c9f1d25617bec01b907aa43236",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/actual-download/receipt.json",
+      "bytes": 9324,
+      "sha256": "9c78bd3f7f700b6f2da624655ad17de082fd0bd213a45f3d7614c17805d57d7b",
+      "git_blob": "486bec0ca37ce7e7ee53aab53c723098c17f4866",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/runtime.json",
+      "bytes": 806,
+      "sha256": "e760f13c2d2a6dcca1f1ce963588647de47f672198a45b4d01bc7270081a2290",
+      "git_blob": "13ff68097548c6e43a75624345aa19d766998d06",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/screenshots/practice-result.png",
+      "bytes": 151760,
+      "sha256": "5f3644d17b80f77ca3a29df2f1f07dd26efe46371f6c3e17f0dcb241d075ca74",
+      "git_blob": "86bab9bb24af34f52cd7a2e01041a37182c58d2a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-transfer/publication-manifest.json",
+      "bytes": 3670,
+      "sha256": "ec44844745f5668b67bac25d8dbed0c2f7c834a973748737b75f99ec1a8c6e14",
+      "git_blob": "b004eef9fba5600a9fab343c57f77fd43b07e6b2",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/README.md",
+      "bytes": 4406,
+      "sha256": "e0bfd058ca1754f5f0d7acb3890c3694b75318edca6fa2a3de75b4410f9b8e18",
+      "git_blob": "96554930c2f0223830a2471d90f554567ee16223",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/criterion.json",
+      "bytes": 1308,
+      "sha256": "012fc7c0045dac92792f08e0d970c4cb44acf16e72daaabbb41e0d975355048f",
+      "git_blob": "222971cad5c070bf7c83d4b8b96b4d57c0b22c67",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/source-review.json",
+      "bytes": 4817,
+      "sha256": "0f371c9b9c4b69ea76d5893d9f10fee8e9512f2bde7c2692355bdfecd26df4ad",
+      "git_blob": "baf5f8ca7b0ae5ea71692508502cfc706835367c",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/source-pins.json",
+      "bytes": 3610,
+      "sha256": "f816bac09ddd2673b23af197e757e71120a32a9f655e9212768109be17c1db18",
+      "git_blob": "4c54e981e0867e6e69d4629c628cf717cc52e6b5",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/receiver.mjs",
+      "bytes": 13104,
+      "sha256": "68857cd71a0c123d66213e7210e90c2f046d37a5f83bfbd775b792579841df06",
+      "git_blob": "b087fbadd7fe9bbf7e282b561b9cd9e03619fe25",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/syntax-check.json",
+      "bytes": 210,
+      "sha256": "daf3c3d0b76f1044c1da9ba2f68f18f43339bd98d66a1a78edac96bbf626e5f8",
+      "git_blob": "29e66c7151459d52c4672cd8c86d30b9a6fa79bc",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/authored-incoming-watch.json",
+      "bytes": 1615,
+      "sha256": "6882da460c677fb66ea1706e5b5790e3efce55f6fe5f8e534769088017e3f956",
+      "git_blob": "3ff1915f83371f298b3e52c444701bad809d4912",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/receiving.json",
+      "bytes": 14052,
+      "sha256": "4c9d69c01fc2a1d80e1350e05b4dc810d73f2a5daed50559dff844fd71faa92c",
+      "git_blob": "bd404051529d9aa05460a4b2a9ba2a8470f4d923",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/run.json",
+      "bytes": 661,
+      "sha256": "9bbe6e27976652aacd8ba303910a07976bb09da69e729f17c3b8eaedd82c5a42",
+      "git_blob": "cd87af1349389247f64c06b3f6649ad7a9491c63",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/run.stdout",
+      "bytes": 11206,
+      "sha256": "07e4358460c576a269761799e0d310e3efe776a2d91c6330d164d64efcdfa718",
+      "git_blob": "4a1d8852c77d042c6e309d422b27c64a6d858506",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-transfer/publication-manifest.json",
+      "bytes": 3925,
+      "sha256": "bd238d6175ca64f3d0b7de3d4588539a2c3b5bbe77dd9fcac8562772f85407cc",
+      "git_blob": "da61ce881022c5baaa12d70da2cbe5de3fac74f6",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 25460,
+      "sha256": "1cedcbb4691a8bdfe84929f452903943f1dd73aaa5c4e536ff82cb032572be50",
+      "git_blob": "a36a02a3c9f0308bd40b541ccd24ac23935db075",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-choice/source-cut.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 2326,
+      "sha256": "43b677b7fabb7f35e0dc0608561d88cf598b9a999b62d329b1187e6fbc42ce07",
+      "git_blob": "df05b10fe6091fbc0e89b8621a013927ffdb5b3c",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-choice/adoption-runtime-proof.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 13015,
+      "sha256": "20c30299485eb15027a86cfb7f16d1166c3ec77cfd24ae9e4d2fb8dbd46caac0",
+      "git_blob": "4cf5d1d830d235168117b37100b62a77682b3f6d",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-choice/execution-checkpoint.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/native-choice/README.md",
+      "bytes": 1441,
+      "sha256": "88fef61ced6a7c64e9492c5a9ce7cdcaf36e124e5888caa0de47117ee7555d94",
+      "git_blob": "33966a17d28c417360f3204293461af1b03fb474",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 23224,
+      "sha256": "20876205757837f63b5e534864417cf15be724678cfeeba174d4b34401bfcb9e",
+      "git_blob": "6d886094fd31b0c06fd00a018b96db6e047e4c9f",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-choice/preparation.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/independent-choice/README.md",
+      "bytes": 1333,
+      "sha256": "8daa54962fe6002a56b0066a8fbd6053fe02fc0fccb3f6e1f15fccd599893a5a",
+      "git_blob": "6dd9e33892e9fe4ec98b6d27b2456ae6709ac805",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-baseline/receive-public-baseline.cjs",
+      "git_blob": "9d43bc89d2cedded4eb8d56470bd23dd3cc5e240",
+      "bytes": 4521,
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-baseline/receiving.json",
+      "git_blob": "723023b7ced528381706ab0852adf45dfa982d2d",
+      "bytes": 19450,
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-baseline/README.md",
+      "git_blob": "fb8d0e7bc781ce2a0ca665ec6dc8f264dd006178",
+      "bytes": 1649,
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 686,
+      "sha256": "97c95078d8242d1a54a5025279b707ad3476d439562962911974f60760847d59",
+      "git_blob": "9c43633971344f0344708447892f29fa809321c9",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-baseline/manifest.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 13547,
+      "sha256": "7ef1c0248e5d8979e7795ea56227dc446f8e7678ef3171b01376a43617ef7e68",
+      "git_blob": "c08926c02e858b322473b924b960cd0083730891",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-preparation/receive-public-practice.mjs",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "bytes": 1742,
+      "sha256": "db0b101e560bd8ed7876494288432d59d1bbfb1abaf5587f50d68e78066fc81d",
+      "git_blob": "149e0c54d4d4b22fef36ac5c372aafd0f6d4833c",
+      "path": "docs/qualification/practice-watch-71826f7aa69e/public-preparation/receiving.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/source-manifest.json",
+      "bytes": 6259,
+      "sha256": "2aa8f4e38e93a087d7fce2e1a8f4bb278b6652a1f102e2a7498672ccde23e414",
+      "git_blob": "02af40fd634cac001ad443bb8ea3ebcc06a57092",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/qualification/practice-watch-71826f7aa69e/README.md",
+      "bytes": 6189,
+      "sha256": "9a14dba5461411182caa6f1a81d5335bcedf1956b68f9a00a40ee08261827c98",
+      "git_blob": "7ce4d4e418754460fc7f1cba711d852f2224bca4",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "self_excluded": true
+}

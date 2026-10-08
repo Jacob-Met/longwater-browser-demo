@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "scope": "Current 43038 portable-watch and practice composition receiving; all 98 tests passed with source unchanged. No shared ref modified.",
+  "targetCommit": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+  "sourceCutSha256": "602c490a0b7ca7796a1dcc6b4fa4767a8906df53d53bf9d5111ab2b374e604ed",
+  "payloadFiles": 10,
+  "payloadBytes": 215248,
+  "files": [
+    {
+      "path": "README.md",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/publication-current/README.md",
+      "bytes": 6477,
+      "sha256": "fa0d2bfeb36de9ec98f9ac36530f918eca4d1d85bc166d3d35474459f36617f0",
+      "git": "1ca9656b10ec7a8d03c2e5481df17f255201d6d1"
+    },
+    {
+      "path": "source-cut.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/source-cut.json",
+      "bytes": 19872,
+      "sha256": "602c490a0b7ca7796a1dcc6b4fa4767a8906df53d53bf9d5111ab2b374e604ed",
+      "git": "f3cba11900571cb5784f335b0d83e0adf318ec5e"
+    },
+    {
+      "path": "run-full-current.py",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/run-full-current.py",
+      "bytes": 2813,
+      "sha256": "061a3597d151cb948b63209f4f0a458f6460a6efd5adf9218f4c609e047a5772",
+      "git": "24b8c753ed28a34b29fb1432c7f2c0011720b4ad"
+    },
+    {
+      "path": "full-current/receiving.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/full-current/receiving.json",
+      "bytes": 13489,
+      "sha256": "6016646b7fc3e1f86f22b83db4a02bd9d60880615d1397e2a2422940ce5ad6e0",
+      "git": "5ded0ec898d627fb98214bd16e14879a351411ce"
+    },
+    {
+      "path": "full-current/stdout.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/full-current/stdout.txt",
+      "bytes": 10117,
+      "sha256": "6d0c0f4c1ce25e85d61ca91f1dda75b9927195e80485533355dcef426aa96028",
+      "git": "ec0d036ad5af4c586cfede13271a1496fc8dee5c"
+    },
+    {
+      "path": "full-current/stderr.txt",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/full-current/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "package.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/evidence/prepare-r2/package.stdout.txt",
+      "bytes": 590,
+      "sha256": "03f89863122f1106f96b6d11acce2f71767bd424aebe9cd79ff55e6a22cc5638",
+      "git": "3142e2829735b4c9f1d25617bec01b907aa43236"
+    },
+    {
+      "path": "actual-download/receipt.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/source/test-results/offline-download/receipt.json",
+      "bytes": 9324,
+      "sha256": "9c78bd3f7f700b6f2da624655ad17de082fd0bd213a45f3d7614c17805d57d7b",
+      "git": "486bec0ca37ce7e7ee53aab53c723098c17f4866"
+    },
+    {
+      "path": "runtime.json",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/publication-current/runtime.json",
+      "bytes": 806,
+      "sha256": "e760f13c2d2a6dcca1f1ce963588647de47f672198a45b4d01bc7270081a2290",
+      "git": "13ff68097548c6e43a75624345aa19d766998d06"
+    },
+    {
+      "path": "screenshots/practice-result.png",
+      "nativePath": "/Users/me/hamon-longwater-practice-43038-71826f7aa69e/source/test-results/practice-result.png",
+      "bytes": 151760,
+      "sha256": "5f3644d17b80f77ca3a29df2f1f07dd26efe46371f6c3e17f0dcb241d075ca74",
+      "git": "86bab9bb24af34f52cd7a2e01041a37182c58d2a"
+    }
+  ]
+}

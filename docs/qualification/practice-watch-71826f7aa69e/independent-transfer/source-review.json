@@ -1,0 +1,127 @@
+{
+  "schema": "longwater-practice-transfer-source-review/1",
+  "reviewer": "estate-71826f7aa69e/coordination",
+  "target": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+  "target_tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+  "draft_tree": "e75108b71639c83ba3783af4fa637b4af493794a",
+  "target_leaves": 247,
+  "draft_leaves": 250,
+  "delta_count": 8,
+  "modified_existing": [
+    "README.md",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/watch-save.browser.test.mjs"
+  ],
+  "added": [
+    "practice-watch.css",
+    "practice-watch.js",
+    "tests/practice-watch.test.mjs"
+  ],
+  "preserved_outside": 242,
+  "complete_untruncated": true,
+  "exact_full_text_reversals": {
+    "game": true,
+    "package": true,
+    "fixture": true,
+    "html": true,
+    "readme": true,
+    "html_removed": {
+      "css_link": 1,
+      "entry_lines": 8,
+      "dialog_lines": 32
+    },
+    "readme_changes": {
+      "practice_section_lines": 25,
+      "existing_sentence_additions": 2,
+      "catalog_lines": 2
+    }
+  },
+  "private_source_unchanged": [
+    {
+      "path": "practice-watch.js",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "expected_git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "exact": true
+    },
+    {
+      "path": "practice-watch.css",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "expected_git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "exact": true
+    },
+    {
+      "path": "tests/practice-watch.test.mjs",
+      "git_blob": "47fecd0e58d345dcf89256fdf5fd65964b809a7a",
+      "expected_git_blob": "47fecd0e58d345dcf89256fdf5fd65964b809a7a",
+      "exact": true
+    }
+  ],
+  "target_controls_preserved": [
+    {
+      "path": "tests/browser.test.mjs",
+      "git_blob": "c1c1c85a404fad4d8894534187a884a6ded4de9f",
+      "exact": true
+    },
+    {
+      "path": "watch-file.js",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "exact": true
+    },
+    {
+      "path": "watch-file.css",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "exact": true
+    },
+    {
+      "path": "watch-save.js",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41",
+      "exact": true
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "exact": true
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "exact": true
+    },
+    {
+      "path": "tests/server.mjs",
+      "git_blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+      "exact": true
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "git_blob": "e7a43790537e085b85b69b8e4de60e56d415197a",
+      "exact": true
+    },
+    {
+      "path": "tests/watch-file.browser.test.mjs",
+      "git_blob": "54ddd8f212f3522d87257e515060e09fa15511b1",
+      "exact": true
+    }
+  ],
+  "offline_artifact": {
+    "path": "downloads/Longwater-Fourteen-Tides.html",
+    "git_blob": "f58260eeae1aad8681a05cc68ef13aa3199ff60f",
+    "still_target": true,
+    "status": "Draft only: still the old target bundle. Exact composed offline generation/receiving is required before publication."
+  },
+  "receiving_criterion": {
+    "schema": "longwater-practice-transfer-composition-criterion/1",
+    "reviewer": "estate-71826f7aa69e/coordination",
+    "receiving_target": "43038d28b08562a5f1c143b2773d925b4d28ca7d",
+    "target_tree": "aaffb920e4a3a0065756c234cdeb0a8a1631f1a2",
+    "private_runtime": {
+      "module_sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "css_sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29"
+    },
+    "case": "A real chosen watch file is held at its File.text completion while fresh practice opens and advances. Releasing the real bytes may reveal the inherited nonmodal preview but must not move focus out of practice, change accepted practice/live state or write the active save. Practice Escape must leave the preview available for explicit confirmation. A single Replace must adopt the exact imported record/journal, later practice must still start fresh and leave it unchanged, and the next imported live result must exactly match a separate native control replayed only through imported history.",
+    "boundary": "One source-composition case. Existing three independent cases and author controls stay frozen. The only injected scheduling seam delays the actual chosen File.text result; no product source, native result, or imported input is modified."
+  },
+  "conclusion": "Accept scoped source composition for receiving. No private source defect or loss of transfer/report/save behavior found in source. Publication remains pending regenerated offline artifact and composed receiving evidence."
+}

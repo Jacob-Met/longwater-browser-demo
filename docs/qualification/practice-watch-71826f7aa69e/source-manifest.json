@@ -1,0 +1,158 @@
+{
+  "schema": "longwater.practice-source-publication/1",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "ownership_issue": "https://github.com/Jacob-Met/longwater-browser-demo/issues/24",
+  "target_commit": "2451ec6fa29d10fa8bac53b59faf95c69fb9951c",
+  "target_tree": "60d5959531bef550d7af5db6ba3c1d2a2857f801",
+  "complete_source_tree_without_this_evidence": "5a68e29154987efea415b31fac044b2c57152438",
+  "source_files": [
+    {
+      "path": "game.js",
+      "bytes": 22031,
+      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+      "git_blob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "af0ae1eed760355f38ed6b22ae774f5fb53134cf"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9627,
+      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+      "git_blob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "4098a7e0023d3c74b2f0806e4cf1803d19b411e8"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3619,
+      "sha256": "ba2b3d7421cb7d3904b889374a7eef3e1cf13eb41dc1ae9604335c0abeb2128a",
+      "git_blob": "27643c9a225536ecb6a87e13082c4e5d352d5ca5",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "bb2a137fb0630f40d3d88b91983536c89cae52a5"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "bytes": 12282,
+      "sha256": "4e1ac60276b2e108a9b017e442d6861883b4ee403ca4ee10904b41d96b73149b",
+      "git_blob": "a931a956778867d759ebdb9bc0682a8f916d2be3",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "e25727035334c7662402fe81d787733dae2cf0f9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16136,
+      "sha256": "9e197e700354a78119f6d701a57aa88f6509bd7becce6ee668ff59c6e0658537",
+      "git_blob": "b1f4de22b45f51d8df9563940ff033bee6e14a53",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "642dc1fa3405bee45371094c560c26f2c986bd6d"
+    },
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": null
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": null
+    },
+    {
+      "path": "tests/practice-watch.test.mjs",
+      "bytes": 15913,
+      "sha256": "91ba360b8c0a17b1d73d81635ad7a6d4cfcf1fb0a570c0326381185d1f151038",
+      "git_blob": "47fecd0e58d345dcf89256fdf5fd65964b809a7a",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": null
+    },
+    {
+      "bytes": 4255,
+      "sha256": "274e02d2119f265b689327df2ee4f53fe3eed4181228d1423980da7e2dfb3732",
+      "git_blob": "79c56b48239f6ee01f89518abec2b4eaca37bf1e",
+      "path": "scripts/watch-choice-adoption-runtime.json",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "8b24b8d439dfb5eb34d2f87564cf7531c893f40a"
+    },
+    {
+      "bytes": 339166,
+      "sha256": "1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33",
+      "git_blob": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f",
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": "111bef4eb9d3df8adc6a5c44eb4a08b3009c441c"
+    },
+    {
+      "path": "tests/practice-choice.browser.test.mjs",
+      "bytes": 8688,
+      "sha256": "7ec115758e3bd80ecced104dbd5126f723e0ca27519574bed6c0dc02a34cee28",
+      "git_blob": "a06933246de72b545a0bfa48a50f6176d8fea4b7",
+      "mode": "100644",
+      "type": "blob",
+      "before_git_blob": null
+    }
+  ],
+  "unchanged_shipped_wasm": {
+    "path": "pkg/longwater_web_bg.wasm",
+    "bytes": 71368,
+    "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+    "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+  },
+  "offline_runtime_inputs_sha256": "4f1e41dc2df1bea2556cf6f699737b3b77c8de3c461c4675d22c3918749e6fdf",
+  "preservation": {
+    "five_shared_source_files_exact_reversal": true,
+    "original_practice_module_css_and_six_cases_unchanged": true,
+    "current_target_browser_failure_test_preserved": true,
+    "adoption_runtime_manifest_exact_reversal": true,
+    "adoption_cases_and_workflow_unchanged": true,
+    "historical_null_invalidation_unchanged": true,
+    "no_dependency_or_hosting_changes": true
+  },
+  "receiving_at_source_publication": {
+    "initial_e4e": {
+      "author_cases": 6,
+      "first_project_pass": 63,
+      "first_project_total": 72,
+      "affected_rerun_pass": 9,
+      "affected_rerun_total": 9,
+      "single_full_pass_claimed": false,
+      "independent_cases_passed": 3
+    },
+    "transfer_43038": {
+      "project_passed": 98,
+      "project_total": 98,
+      "independent_held_file_case_passed": 1,
+      "source_unchanged": true
+    },
+    "historical_choice_2451": {
+      "syntax_and_packaging": "passed on prepared 54-file Mac cut",
+      "full_mac_qualification": "unknown after timeout without PID and subsequent device-offline read failures; not retried",
+      "new_maintained_case_syntax": "passed via primary stdin",
+      "current_browser_and_hosted_execution": "pending"
+    },
+    "public": {
+      "baseline": "19 exact served assets match canonical2451; actual browser not executed",
+      "practice_delivery": "pending final source integration and exact live inputs"
+    }
+  },
+  "boundaries": [
+    "The frozen initial and43038 packets qualify their own source cuts.",
+    "The added historical/practice test did not exist in the prepared54-file Mac cut and has a separate exact source/syntax boundary.",
+    "The current target's112-test qualification is the peer's target baseline, not a claimed pass for this practice composition.",
+    "New hosted/alternate-native/public results are received against the eventual exact commit; this publication record is not silently rewritten."
+  ]
+}
