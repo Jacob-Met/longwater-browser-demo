@@ -1,6 +1,7 @@
 import init, { BrowserSession } from "./pkg/longwater_web.js";
 import { WatchJournal } from "./journal.js";
-import { SavedWatch, WATCH_SAVE_KEY } from "./watch-save.js";
+import { SavedWatch, WATCH_SAVE_KEY, MAX_SAVE_LENGTH } from "./watch-save.js";
+import { WatchFile } from "./watch-file.js";
 
 const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
@@ -11,6 +12,7 @@ const actionControls = [...document.querySelectorAll("[data-action]")];
 const context = canvas.getContext("2d", { alpha: false });
 const journal = new WatchJournal(document.querySelector("#watch-journal"));
 let watch;
+let watchFile;
 let state;
 let selected = 1;
 let message = "";
@@ -343,8 +345,10 @@ function announce(includeReport = true) {
 
 function selectCell(index, focus = false) {
   if (!state) return;
+  const selectionChanged = index !== watch.selected;
   selected = index;
   watch.select(index);
+  if (selectionChanged) watchFile?.invalidate();
   message = "";
   render();
   if (focus) cellControls[index].focus();
@@ -369,7 +373,10 @@ function act(action) {
   } catch (error) {
     message = String(error).replace(/^Error:\s*/, "");
   }
-  if (state !== previous) journal.record(previous, state);
+  if (state !== previous) {
+    watchFile?.invalidate();
+    journal.record(previous, state);
+  }
   render();
   announce();
   showSaveStatus();
@@ -378,6 +385,7 @@ function act(action) {
 function reset() {
   if (!watch) return;
   state = JSON.parse(watch.reset());
+  watchFile?.invalidate();
   journal.start(state);
   selected = watch.selected;
   message = "";
@@ -420,6 +428,7 @@ window.addEventListener("resize", resize);
 window.addEventListener("storage", event => {
   if (watch && (event.key === WATCH_SAVE_KEY || event.key === null)) {
     watch.storageChanged();
+    watchFile?.invalidate("The saved watch changed. Open the file again to review replacement.");
     showSaveStatus();
   }
 });
@@ -436,7 +445,30 @@ try {
   state = JSON.parse(watch.snapshot);
   selected = watch.selected;
   journal.restore(watch.replayHistory());
-  journal.setLifetime("Saved tides return with your watch. If saving is unavailable, keep this page open to keep the latest reports.");
+  journal.setLifetime("Saved tides return with your watch, including watches opened from a file. If saving is unavailable, download your watch before closing to keep the latest reports.");
+  watchFile = new WatchFile(document.querySelector("#watch-files"), {
+    watch,
+    maxLength: MAX_SAVE_LENGTH,
+    onRestore() {
+      try {
+        const restored = JSON.parse(watch.snapshot);
+        journal.restore(watch.replayHistory());
+        state = restored;
+        selected = watch.selected;
+        message = "";
+        render();
+        announce();
+        showSaveStatus();
+      } catch (error) {
+        // The imported watch is already active. Keep its file/save recovery
+        // available, but do not accept play against a display that is stale.
+        state = null;
+        [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
+        showSaveStatus();
+        throw error;
+      }
+    },
+  });
   resize();
   announce();
   showSaveStatus();

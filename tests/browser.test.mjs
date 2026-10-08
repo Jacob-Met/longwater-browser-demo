@@ -36,7 +36,7 @@ async function day(page) {
 test("the actual WASM watch exposes operable cells, actions, and complete readings", async () => {
   const { page, close } = await open();
   try {
-    assert.equal(await page.getByRole("button").count(), 7);
+    assert.equal(await page.locator("#playfield button").count(), 7);
     const cells = page.getByRole("button", { name: /^Cell [123]:/ });
     assert.equal(await cells.count(), 3);
     assert.equal(await cells.nth(1).getAttribute("aria-pressed"), "true");
@@ -153,7 +153,7 @@ test("failed WASM startup leaves an understandable error and no active controls"
     await page.route("**/*.wasm", route => route.abort());
     await page.goto(server.url);
     await page.waitForFunction(() => document.querySelector("#live")?.textContent.includes("could not start"));
-    assert.equal(await page.getByRole("button").count(), 7);
+    assert.equal(await page.locator("#playfield button").count(), 7);
     assert.equal(await page.getByRole("button").evaluateAll(els => els.every(el => el.disabled)), true);
   } finally { await context.close(); }
 });

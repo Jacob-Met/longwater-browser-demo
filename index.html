@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./journal.css">
   <link rel="stylesheet" href="./watch-trends.css">
   <link rel="stylesheet" href="./watch-save.css">
+  <link rel="stylesheet" href="./watch-file.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -32,7 +33,7 @@
     <section id="watch-storage" aria-label="Watch progress">
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
       <button id="watch-save-retry" type="button" hidden>Try saving again</button>
-      <p class="save-note">Progress stays in this browser. Reset begins a new watch and replaces the saved one.</p>
+      <p class="save-note">Progress saves in this browser. Reset begins a new watch and replaces the saved one.</p>
     </section>
     <!-- offline-download:start -->
     <section id="offline-copy" class="offline-copy" aria-labelledby="offline-copy-title">
@@ -41,6 +42,25 @@
       <a id="offline-download" href="./downloads/Longwater-Fourteen-Tides.html" download="Longwater-Fourteen-Tides.html">Download offline game</a>
     </section>
     <!-- offline-download:end -->
+    <section id="watch-files" aria-labelledby="watch-files-title">
+      <h2 id="watch-files-title">Carry your watch</h2>
+      <p>Save this watch and its journal as a file to continue in another browser or your offline game.</p>
+      <div class="watch-file-actions">
+        <button id="watch-file-download" type="button" disabled>Download watch</button>
+        <button id="watch-file-open" type="button" disabled>Open watch file</button>
+        <input id="watch-file-input" type="file" accept=".json,application/json" aria-label="Choose a Longwater watch file" hidden>
+      </div>
+      <section id="watch-file-preview" aria-labelledby="watch-file-preview-title" aria-describedby="watch-file-summary watch-file-warning" tabindex="-1" hidden>
+        <h3 id="watch-file-preview-title">Review watch file</h3>
+        <p id="watch-file-summary"></p>
+        <p id="watch-file-warning">Replace this page's watch and, when saving is available, this browser's saved watch. Download your current watch first to keep it.</p>
+        <div class="watch-file-actions">
+          <button id="watch-file-confirm" type="button">Replace current watch</button>
+          <button id="watch-file-cancel" type="button">Cancel</button>
+        </div>
+      </section>
+      <p id="watch-file-status" role="status" aria-live="polite"></p>
+    </section>
     <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>
     <p id="state-summary" class="visually-hidden">The first tide is gathering.</p>
     <div class="visually-hidden" aria-label="Marsh readings">
