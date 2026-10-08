@@ -1,0 +1,187 @@
+{
+  "basis": "Isolated in-memory runtime composition only; owner source and Git refs are read-only.",
+  "commit": "6ecfdde764cdb8754a01efa33cea099949e31175",
+  "tree": "e80a51351bcf46cb13b95faa081f39bf2466722b",
+  "incoming": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+  "exact_incoming_game_and_index_reconstructed": true,
+  "original_runtime": [
+    {
+      "path": "index.html",
+      "bytes": 6389,
+      "sha256": "f469fd12eaeeb016d1e43f75eb5805d18b21a5d760e759ee7208f045a99d379e",
+      "git_blob": "adb9301b2a76f91221450ca7e0a5b688383fe105"
+    },
+    {
+      "path": "style.css",
+      "bytes": 2366,
+      "sha256": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95",
+      "git_blob": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef"
+    },
+    {
+      "path": "game.js",
+      "bytes": 19674,
+      "sha256": "6b8b05d2e05f123bf6516ea90e4d1c60d895f294a2e5d2030502bd818dc4d048",
+      "git_blob": "f73108966026319dc26744056336affe3db95591"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6391,
+      "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+      "git_blob": "3f23199fa149f912930e9e2b6afad8c0b85752d0"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    }
+  ],
+  "served_runtime": [
+    {
+      "path": "index.html",
+      "bytes": 6542,
+      "sha256": "8465b6bc20dde635546055763cc5db7112d8ac27ebc07f5132b17a2018f81e41",
+      "git_blob": "ca94dc717b05f83cc53e1efebb7b8301ae6807d1"
+    },
+    {
+      "path": "style.css",
+      "bytes": 2366,
+      "sha256": "e7ff4d1b32e027d8ef4adedd6d18fdb83e9c8e92c3b158bf5bb78aaca5929a95",
+      "git_blob": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef"
+    },
+    {
+      "path": "game.js",
+      "bytes": 19939,
+      "sha256": "26d2df6772cea9317d6fad49f1d01c532f4390a99bdb5b83e5b7977e51b04d1b",
+      "git_blob": "9374767fb1bf6950b8dc3fb98217fb8b874a0d78"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6391,
+      "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+      "git_blob": "3f23199fa149f912930e9e2b6afad8c0b85752d0"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "watch-choice.js",
+      "bytes": 11624,
+      "sha256": "e3f5bf6eba985337c103d05b7f7729af726457b9992482782889b48cdf7e6a42",
+      "git_blob": "47c5aa633823c516e7beedb302eecd9e03fd4db4"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd"
+    },
+    {
+      "path": "watch-choice.css",
+      "bytes": 3742,
+      "sha256": "384d24905d8e9fe0beb45c0ec9c700274cd041c54916228612281d865d70ad7e",
+      "git_blob": "6e569c23111531649147d47635b124ea604ea59b"
+    }
+  ],
+  "harness_sha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+  "incoming_file_sha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451"
+}

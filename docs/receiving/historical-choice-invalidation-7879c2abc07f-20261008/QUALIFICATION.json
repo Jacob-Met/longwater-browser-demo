@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "scope": "Historical-choice null-state successor; coupled file-adoption repair remains pending.",
+  "source": {
+    "head": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18",
+    "tree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+    "parent": "5e975da11de1d57df6f8bd1407e9fd01bf862ca7",
+    "base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c"
+  },
+  "production": {
+    "path": "watch-choice.js",
+    "beforeBlob": "47c5aa633823c516e7beedb302eecd9e03fd4db4",
+    "afterBlob": "c06835946ec99c7edd8eb16334d597356aada060",
+    "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+    "onlySpanReplacement": {
+      "before": "  synchronize(stateToken) {\n    if (!stateToken || stateToken === this.#stateToken) return;\n",
+      "after": "  synchronize(stateToken) {\n    if (!stateToken) {\n      // A replaced watch can be unavailable to the display. Retire its old\n      // comparison without reading history or allocating a native session.\n      this.#stateToken = undefined;\n      this.#history.length = 0;\n      this.#clearResult(\"\");\n      this.tide.replaceChildren();\n      this.cell.replaceChildren();\n      this.details.open = false;\n      this.form.hidden = true;\n      this.root.hidden = true;\n      return;\n    }\n    if (stateToken === this.#stateToken) return;\n"
+    },
+    "api": "historicalChoice.synchronize(null)",
+    "effect": "Clear private history/result/status/tide-cell choices, close details, hide form/panel, reset state token, return before history read/native session allocation. All non-null logic remains exact."
+  },
+  "controllerGate": {
+    "path": "tests/watch-choice-invalidation.browser.test.mjs",
+    "blob": "500b9bf28087c71861743bf4d15993b4804fea93",
+    "bytes": 6846,
+    "sha256": "04b63e09c877bd949aceb017cbd624f1a152cbed5d0575772ad708d01479dbb1",
+    "uses": "Actual current WatchChoice/DOM and initialized shipped WASM. Existing live game/watch remains unchanged.",
+    "checks": [
+      "undefined startup does not read or allocate",
+      "real populated comparison allocates/frees two native sessions",
+      "null clears old display/private history without a read or allocation",
+      "repeated null and programmatic submit stay inert",
+      "same state token can reload and compare again",
+      "original source history/live/store remain unchanged"
+    ],
+    "allPreviousTestsExact": true
+  },
+  "currentRun": {
+    "run": 37791979048,
+    "browserJob": 113361474951,
+    "smokeJob": 113361475440,
+    "checkout": "2ea43cefe06690b11d91a033349ffa96148ff78f",
+    "checkoutTree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+    "checkoutParents": [
+      "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+      "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18"
+    ],
+    "result": {
+      "tests": 80,
+      "pass": 80,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationMs": 27328.916516
+    },
+    "rawLog": {
+      "bytes": 71305,
+      "sha256": "2ccc917d0d13c42655b2a27039b8e4c1d128b4dfef37cf98664cc0fb0e91668d"
+    },
+    "normalArtifact": {
+      "id": 11556678117,
+      "node_id": "MDg6QXJ0aWZhY3QxMTU1NjY3ODExNw==",
+      "name": "historical-choice-2ea43cefe06690b11d91a033349ffa96148ff78f",
+      "size_in_bytes": 1091984,
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/actions/artifacts/11556678117",
+      "archive_download_url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/actions/artifacts/11556678117/zip",
+      "expired": false,
+      "digest": "sha256:106f06ea74c2c8106f1f4770eac1d1db80cb860f65c04283766808856b1d6750",
+      "created_at": "2026-10-08T14:23:59Z",
+      "updated_at": "2026-10-08T14:23:59Z",
+      "expires_at": "2026-10-22T14:23:58Z",
+      "workflow_run": {
+        "id": 37791979048,
+        "repository_id": 1407985992,
+        "head_repository_id": 1407985992,
+        "head_branch": "work/historical-choice-7879c2abc07f-20261008",
+        "head_sha": "d40f0b9c8b5e8e80cb11608e374dcf23fd768b18"
+      }
+    },
+    "directPixelInspection": false
+  },
+  "package": {
+    "bytes": 274656,
+    "sha256": "d05dbe53209783053b09cd4017ba573b35fa982ad645bb9fdd3cf313eb1f1316",
+    "sourceSha256": "f92b16235ba40482a1b764efbe780a4d060ecd822d02ee8f0a0b5346660cf2f0",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-choice.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-choice.js",
+      "watch-trends.js",
+      "watch-choice-model.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "sourcePreservation": {
+    "parent": "5e975da11de1d57df6f8bd1407e9fd01bf862ca7",
+    "parentTree": "e971a78e6d319719d25e4ddb0a6555d008acd26c",
+    "tree": "8836dcd81d1b5aa5e7f85119a1cd5b50743aad26",
+    "leaves": 114,
+    "unchanged": 111,
+    "changes": [
+      {
+        "path": "downloads/Longwater-Fourteen-Tides.html",
+        "old": "b27ea398ecffef56cb491c8743d5f3dd3ecc2ba9",
+        "new": "49281a8672f6ec4483d8994863d92f513b91e03c"
+      },
+      {
+        "path": "watch-choice.js",
+        "old": "47c5aa633823c516e7beedb302eecd9e03fd4db4",
+        "new": "c06835946ec99c7edd8eb16334d597356aada060"
+      }
+    ],
+    "additions": [
+      {
+        "path": "tests/watch-choice-invalidation.browser.test.mjs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "500b9bf28087c71861743bf4d15993b4804fea93",
+        "size": 6846,
+        "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/blobs/500b9bf28087c71861743bf4d15993b4804fea93"
+      }
+    ],
+    "removed": 0,
+    "allUpdatedBlobsReadBackExact": true
+  },
+  "originalCoupledWitness": {
+    "author": "965d2e86e979/receiving_verification",
+    "origin": "Explicitly shared frozen Mac packet /Users/me/hamon-longwater-watch-file-peer-965d2e86e979/integration-seams-pr19-pr20-packet",
+    "copiedWithoutAnyByteChanges": true,
+    "totalFiles": 14,
+    "totalBytes": 140865,
+    "files": [
+      {
+        "path": "files.json",
+        "bytes": 2103,
+        "sha256": "17aefb6039666375d340897f46e1f58632b4b88b1879cf5db568e67627a55938"
+      },
+      {
+        "path": "README.md",
+        "bytes": 1942,
+        "sha256": "b84f6f07a26d3577bc6c9ba42958f065ccde3304af31d77190df5ce80a7462fa"
+      },
+      {
+        "path": "current-head-addendum.json",
+        "bytes": 4426,
+        "sha256": "be6c1000b7fa1e1e88c84fe3fc1210c46d75e4c9db19c538668e54aa20fe5ce2"
+      },
+      {
+        "path": "driver-result.json",
+        "bytes": 750,
+        "sha256": "5feea2e2e7fc11c725ac9712fec4a165b1644a38c709739e8e23dbf4a3ef3c30"
+      },
+      {
+        "path": "failed-display-actual-download.json.source",
+        "bytes": 1618,
+        "sha256": "bc32de847677b944f35989ed9225152b1a01d239617c4d7464e85d004112d48a"
+      },
+      {
+        "path": "github-source-summary.json",
+        "bytes": 16139,
+        "sha256": "8ff9dd1b1515ffa0bfc9684e6f61a3df00b12bacfc063cc0f300453751e943c9"
+      },
+      {
+        "path": "incoming-pr19.json",
+        "bytes": 21046,
+        "sha256": "558d8dd83756a036da0c4fc5392ad58b0617d38625a719cb856bc1abf593b451"
+      },
+      {
+        "path": "incoming-pr20.json",
+        "bytes": 31664,
+        "sha256": "32ca61f6e093b1c2bdeec54946078dcbfa517e7227f840b1ae65f52f5f008dea"
+      },
+      {
+        "path": "integration-seams-review.json",
+        "bytes": 6464,
+        "sha256": "f74230be7a45eeba1596c466a3d6123b7dc0b6e5819cc8cc5b196a74fb17991b"
+      },
+      {
+        "path": "native-dependency.json",
+        "bytes": 300,
+        "sha256": "45a942d48a4bec6e5382aa9c470de0c997b133c6c9a3f44df79ac27857f4f92e"
+      },
+      {
+        "path": "receive-adoption-seam.mjs.source",
+        "bytes": 12724,
+        "sha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae"
+      },
+      {
+        "path": "run.json",
+        "bytes": 34601,
+        "sha256": "6292f7fa88043de81ff39ca95a407aaef14114f24ecada77ebb5df795c6be052"
+      },
+      {
+        "path": "run.log",
+        "bytes": 402,
+        "sha256": "6a35c2cfa07b738fff274e2fab5a390514abede94004e73df8ab9db86e7980e1"
+      },
+      {
+        "path": "source-custody.json",
+        "bytes": 6686,
+        "sha256": "1c6d57680e7080d200fc052a38e3ff9e2fbb937c1158d7dc5bf49c5b20ab15b9"
+      }
+    ],
+    "actualResult": {
+      "pass": 2,
+      "fail": 1
+    },
+    "source": "Native local6ecfdde764cdb8754a01efa33cea099949e31175/treee80a51351bcf46cb13b95faa081f39bf2466722b, identical to public PR21 a84a42057a06a7e003ea02720f6b06c5b5b21091, with exact PR19c44a3d7 additions composed in memory.",
+    "controls": "Preview/cancel and ordinary successful day3 adoption PASS. Authored one-shot replayHistory refusal after accepted adoption FAIL: stored and actual downloaded day3 bytes equal bc32de84, game controls disabled, predecessor comparison visible.",
+    "bridge": {
+      "incoming": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+      "runtimeModuleTextsEqualPriorQualifiedSource": true,
+      "currentParent": "5e975da11de1d57df6f8bd1407e9fd01bf862ca7",
+      "originalWitnessSha256": "c57da7094d50fd78af2ef52024fa61dd90b31ca2aa226a59121ea50151d616ae",
+      "originalRunSha256": "6292f7fa88043de81ff39ca95a407aaef14114f24ecada77ebb5df795c6be052",
+      "moduleChanges": [
+        {
+          "path": "watch-choice.js",
+          "before": "47c5aa633823c516e7beedb302eecd9e03fd4db4",
+          "after": "c06835946ec99c7edd8eb16334d597356aada060"
+        }
+      ],
+      "scope": "Original native coupled 2/1 result only; new module and new controller gate do not yet qualify the owner catch."
+    },
+    "limitations": "Original witness owns its declared native Node26.3.0/Playwright1.62.1/Chromium151.0.7922.34 execution only. Read/copy by this lane is not a new run. It did not execute the successor module/catch."
+  },
+  "receiving": {
+    "sourceAcceptedBy": "Parent github_execution, independent direct source + native log + exact checkout review",
+    "handoffComment": "https://github.com/Jacob-Met/longwater-browser-demo/issues/12#issuecomment-6062043510",
+    "prDraft": true,
+    "remaining": "File owner #12 invokes accepted synchronize(null) in its post-adoption display-failure catch; exact original three-case coupled witness must pass against that current composition. No owner branch or worktree changed by this lane."
+  },
+  "priorPackets": {
+    "original": "d5fd969957b0d36afe7a497653e2b07d283a58ca",
+    "reset": "1c8a5fc33250cf953e7f195197dfedb9a3cb8ad3"
+  }
+}
