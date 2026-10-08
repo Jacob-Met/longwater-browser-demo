@@ -1,0 +1,45 @@
+{
+  "inspected_commit": "9407f172518d0d6b19146e2431bcabbb2c307241",
+  "tree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+  "decision": "Specific three-distinct-OS-browser-process persistence coverage remains absent from inspected accepted receiver sources; additive receiver justified. This does not assert absence in all uninspected private evidence.",
+  "accepted_pr": "https://github.com/Jacob-Met/longwater-browser-demo/pull/30",
+  "accepted_evidence": "PR30 hosted/native 119-test receiving and original-choice adoption evidence retained; inspected saved-watch/offline/practice tests use one launched browser with reload or page/context reopen.",
+  "inspected_test_blobs": [
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "git_blob": "a931a956778867d759ebdb9bc0682a8f916d2be3"
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "git_blob": "d00a431b81d462ac2585c7fe3b7e661134c5952d"
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "git_blob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01"
+    },
+    {
+      "path": "tests/practice-watch.test.mjs",
+      "git_blob": "47fecd0e58d345dcf89256fdf5fd65964b809a7a"
+    },
+    {
+      "path": "tests/watch-file.browser.test.mjs",
+      "git_blob": "54ddd8f212f3522d87257e515060e09fa15511b1"
+    }
+  ],
+  "ownership": "Receiving fixture only. Issue6, rewind #27, Undo #28, file/save #12 and comparison #29 owners retained; no product edits or source mutation.",
+  "historical": {
+    "commit": "b4c3b82e61c654d27c592c17ee161fd404602150",
+    "original_overall_exit": 1,
+    "offline_three_process": "passed",
+    "bfcache_prerequisite": "failed: back returned a different document identity",
+    "current_bfcache": "not executed",
+    "original_receipt_sha256": "43982f39dbc77565455e0f1d303a4495cd51032f97654d0466ebfbc764d17cb1"
+  },
+  "pre_execution_remote_readback": {
+    "observed_utc_minute": "2026-10-08T19:45Z",
+    "branch_commit": "9407f172518d0d6b19146e2431bcabbb2c307241",
+    "issue6_updated_at": "2026-10-08T16:53:56Z",
+    "issue6_comments": 4,
+    "source_and_owner_changes": "none since coverage inspection"
+  }
+}

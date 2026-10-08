@@ -1,0 +1,14 @@
+{
+  "status": "Compact evidence preserved locally; full archive upload failed",
+  "failed_archive_sha256": "788f53e21d7476c120107c5fe5e472e8f7806fbd83f4cba003641b371e880bb7",
+  "failed_archive_bytes": 330432,
+  "failure": "Upload helper exited1 before returning any saved identities: ENOSPC creating /tmp/openai-library-upload-*/logs; configured TMPDIR did not redirect that log path.",
+  "full_archive_original_private_path": "expired after execution",
+  "optional_original_screenshot": "not preserved; no replacement screenshot or browser rerun",
+  "current_raw_receipt": "preserved byte-exact",
+  "historical_raw_receipt": "preserved byte-exact; overall original exit1 and BFCache prerequisite failure retained",
+  "source_inputs": "22 authoritative immutable Git blobs listed in SOURCE-MANIFEST.json; five also hash-verified reusable historical inputs",
+  "final_save_recovery": "Existing historical synthetic save bytes exactly match the independently observed current final raw-save SHA256 c7be5945cc5caa335ed0fc23685257ebcb20c95cf8acd2a4b567eb677ff1b48a",
+  "prior_compact_sha256": "32e2479973d23d4dba207a8e78dbddc035b9fc5a801c8e0506423ea982de3cda",
+  "revision": "README now accurately documents compact checkout-based replay and distinguishes failed full-archive preservation. No scientific/product/runtime finding changed."
+}

@@ -1,0 +1,197 @@
+{
+  "created_at": "2026-10-08T19:51:14.052237+00:00",
+  "archive": {
+    "file_name": "Longwater-current-three-process-receiver-2026-10-08.zip",
+    "bytes": 330432,
+    "sha256": "788f53e21d7476c120107c5fe5e472e8f7806fbd83f4cba003641b371e880bb7",
+    "members": 37,
+    "crc_and_every_member_readback": "PASS"
+  },
+  "current_validation": {
+    "status": "PASS",
+    "source_commit": "9407f172518d0d6b19146e2431bcabbb2c307241",
+    "source_tree": "213c1143ca58a170dc4d22525e5e8a6f0c62061b",
+    "source_files": 22,
+    "unchanged_source_files": 22,
+    "source_after": [
+      {
+        "path": "index.html",
+        "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+        "git_blob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
+        "unchanged": true
+      },
+      {
+        "path": "style.css",
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+        "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+        "unchanged": true
+      },
+      {
+        "path": "journal.css",
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+        "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+        "unchanged": true
+      },
+      {
+        "path": "watch-trends.css",
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+        "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+        "unchanged": true
+      },
+      {
+        "path": "watch-save.css",
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+        "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+        "unchanged": true
+      },
+      {
+        "path": "watch-report.css",
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+        "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+        "unchanged": true
+      },
+      {
+        "path": "watch-file.css",
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+        "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+        "unchanged": true
+      },
+      {
+        "path": "watch-choice.css",
+        "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+        "git_blob": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+        "unchanged": true
+      },
+      {
+        "path": "practice-watch.css",
+        "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+        "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+        "unchanged": true
+      },
+      {
+        "path": "game.js",
+        "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+        "git_blob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
+        "unchanged": true
+      },
+      {
+        "path": "pkg/longwater_web.js",
+        "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+        "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316",
+        "unchanged": true
+      },
+      {
+        "path": "journal.js",
+        "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+        "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+        "unchanged": true
+      },
+      {
+        "path": "watch-save.js",
+        "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+        "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41",
+        "unchanged": true
+      },
+      {
+        "path": "watch-file.js",
+        "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+        "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040",
+        "unchanged": true
+      },
+      {
+        "path": "watch-choice.js",
+        "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+        "git_blob": "c06835946ec99c7edd8eb16334d597356aada060",
+        "unchanged": true
+      },
+      {
+        "path": "practice-watch.js",
+        "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+        "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+        "unchanged": true
+      },
+      {
+        "path": "watch-trends.js",
+        "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+        "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+        "unchanged": true
+      },
+      {
+        "path": "watch-report.js",
+        "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+        "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+        "unchanged": true
+      },
+      {
+        "path": "watch-choice-model.js",
+        "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+        "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+        "unchanged": true
+      },
+      {
+        "path": "pkg/longwater_web_bg.wasm",
+        "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+        "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/package.mjs",
+        "sha256": "ba2b3d7421cb7d3904b889374a7eef3e1cf13eb41dc1ae9604335c0abeb2128a",
+        "git_blob": "27643c9a225536ecb6a87e13082c4e5d352d5ca5",
+        "unchanged": true
+      },
+      {
+        "path": "package.json",
+        "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+        "git_blob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+        "unchanged": true
+      }
+    ],
+    "published_artifact_git_blob_expected": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f",
+    "current_case_count": 1,
+    "run_exit_code": 0,
+    "historical_overall_exit": 1,
+    "historical_bfcache_prerequisite": "FAIL; unchanged original evidence retained",
+    "current_bfcache": "NOT RUN",
+    "current_cases": [
+      {
+        "name": "completed offline watch survives full browser-process restart",
+        "status": "passed",
+        "launches": [
+          {
+            "phase": "partial",
+            "browser_pid": 2134754,
+            "starting_day": 0,
+            "saved_sha256": "f913a9bb6d701e5f4643f6377705d621e19bb1ed5c82eb6fe93d4c6977e78a17",
+            "ending_day": 5,
+            "exited_before_next_launch": true
+          },
+          {
+            "phase": "complete",
+            "browser_pid": 2134836,
+            "starting_day": 5,
+            "saved_sha256": "c7be5945cc5caa335ed0fc23685257ebcb20c95cf8acd2a4b567eb677ff1b48a",
+            "ending_day": 14,
+            "exited_before_next_launch": true
+          },
+          {
+            "phase": "reopen-completed",
+            "browser_pid": 2134924,
+            "starting_day": 14,
+            "saved_sha256": "c7be5945cc5caa335ed0fc23685257ebcb20c95cf8acd2a4b567eb677ff1b48a",
+            "ending_day": 14,
+            "exited_before_next_launch": true
+          }
+        ],
+        "published_artifact_git_blob": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f",
+        "errors": [],
+        "unexpected_requests": [],
+        "failure": null
+      }
+    ]
+  },
+  "source_manifest_sha256": "bf621bc9ffafa6d4d840bee275091d63fb921755c6d19c0bc05cac968e1e5ac3",
+  "receiver_sha256": "90d58106f9d16eb849092ed8fe418e76fc6b8bcbe3226006bb6e9e734519fb0b",
+  "historical_receipt_sha256": "43982f39dbc77565455e0f1d303a4495cd51032f97654d0466ebfbc764d17cb1",
+  "frozen_source_and_historical_evidence_preserved": true
+}

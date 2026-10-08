@@ -1,0 +1,7 @@
+{
+  "started_at": "2026-10-08T19:51:09.828419+00:00",
+  "finished_at": "2026-10-08T19:51:14.007437+00:00",
+  "exit_code": 0,
+  "stdout": "{\"status\":\"passed\",\"cases\":[{\"name\":\"completed offline watch survives full browser-process restart\",\"status\":\"passed\"}],\"source_unchanged\":true,\"receipt\":\"/dev/longwater-current-receiver-rdmbogri/packet/results/receipt.json\"}\n",
+  "stderr": ""
+}
