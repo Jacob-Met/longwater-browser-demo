@@ -1,0 +1,734 @@
+{
+  "head": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+  "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+  "leaves": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4eaefa1688acc46c18e632168daa8a6aad0e8f12",
+      "size": 1961
+    },
+    {
+      "path": ".gitignore",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7",
+      "size": 34
+    },
+    {
+      "path": ".nojekyll",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4af857e31d69a0ff86afae096a0157ada31442c8",
+      "size": 11418
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "af7159cae4317986e0265a42edd346f44326f48c",
+      "size": 6636
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/artifact.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a1e244f01be12cbf6aa21d27bc47cb07a8f2ed7d",
+      "size": 434
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/baseline-receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "e1704f843beb057c8bd4540b8210a95a4b47efcb",
+      "size": 3744
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/baseline.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "389c5fa702340df9945f85b1fb3f6bba5d85bf18",
+      "size": 912
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/candidate-receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6089fac854ad302ed500309d5e4dc62610a5a28f",
+      "size": 8412
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/candidate.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "3a226fe8bc3afe0240be84e02007b7a5a300a9f8",
+      "size": 301
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/coordination.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "f34fadd4dc435f00a9a35afee0727cacc5b03e62",
+      "size": 606
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/delivery-baseline.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4d9fba66748805039a785519bad8ba11509f1a71",
+      "size": 970
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/download-phone.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4bcaaa48da042117968bba826cc8c60315b9c03a",
+      "size": 103624
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/downloaded-watch-reopened.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "762fad24ea530b4634715320be7b9c525dcf926c",
+      "size": 157328
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/online-before-download.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "92f4ac748b81df99be698bf34b6bfd479167b41c",
+      "size": 161428
+    },
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/source-manifest.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c214e4eb23cbaa12696c3ea413696e528ed837e2",
+      "size": 11087
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c2de3671bb713a310c948a1648281b5830043831",
+      "size": 3964
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/joined-candidate-suite.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8e5991bffb71b3a2f46d08c874990e99e0d03214",
+      "size": 4005
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/old-packager-baseline.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "3cf543150fbe681dd2a98b542e4efd45db8339db",
+      "size": 1218
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/run.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c23860b6c1c2136756b0ed2ee4393a12e23e67cd",
+      "size": 1091
+    },
+    {
+      "path": "docs/qualification/offline-watch-566d51f04b31/source-verification.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b64f0247c98a843b21aca4eb4982698b4ad2a0c3",
+      "size": 21994
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "735a64c343b6ecdc9a80afb83e606d1fa73e2e79",
+      "size": 6878
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/author-inputs.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "50dbe0ebf4eae8c7dbf1ffb9b50a9cb985165bd7",
+      "size": 2062
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/before.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "47a41299286d672ff8a4d6c326e7108eb5a5ea4e",
+      "size": 1074
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/files.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "146d941833205329ac9e66364f7b37e2dc4db75f",
+      "size": 2442
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/receipts.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4164e686771582d6795b4035d4cdb73da567a616",
+      "size": 19561
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-composition/resumed-phone.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "71590f198d8e154883a01716ba1163ac8d9e18c7",
+      "size": 682035
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "03ee1e09c5c59619858f00c823c1a8bbdb1a7512",
+      "size": 792
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/header-layouts.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4f22de6d444a23d8ce2d4ebfa4cae61b23136e0b",
+      "size": 3835
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/transcript.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "e07ba8bd61771b5f883cf6305bda1fc80d83aed1",
+      "size": 61047
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-1280.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "03562efc5ea475e712fdf9ea680db95c3c37dded",
+      "size": 280517
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-320.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d926b7fa8f15e4815c4576451ab10a79f4d75987",
+      "size": 218016
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-independent/viewport-390.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6912607a703132878b5779036255aa095ef76d57",
+      "size": 236632
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/final-project-tests.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "7cf1db419575dfe45f8b4590da0f6e31466891a2",
+      "size": 4061
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/late-received-inputs.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "98cd0f49877a021d6d23750a566238af8f5c3f2c",
+      "size": 997
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/received-header.patch",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "41034cc1801127cfc4b3e17b4e5b6fc1b2b13dd7",
+      "size": 1453
+    },
+    {
+      "path": "docs/qualification/resume-journal-3e50c5ad22c5/source-and-runtime.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c17f4ca225170bfa452ae89100d90aeadf87baa3",
+      "size": 5980
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b8d045e0c7360bcfad9d5e390594384d0bc8440d",
+      "size": 6622
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/base-modes.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "42cc17766744bc4f1a04a247a7a1dadf73a34f8f",
+      "size": 2731
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/base-pins.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6744692bd4905f2243c78bc51cfc5791d5b26fbb",
+      "size": 11683
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "ef08c59eefe34d151c7b337dd32718a5e9850fe6",
+      "size": 328
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/missing-view.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "329cc2b2da3f9f5a1aaf988e43d8af944d9ccf89",
+      "size": 906
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "37749d4a19f0abfaef86f901d1b39c65372ad7e6",
+      "size": 484
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/baseline/tests.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "1b827d59fac0ea4c1da7f7b33717f1a32aee296f",
+      "size": 4005
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/contract.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "17104a26099c2d358ead0b82e462a1a1b19a65b6",
+      "size": 3978
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "63e1269dfb5dd7e500b4fc1670f08ea4c6f5b9e8",
+      "size": 6236
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/composition-receiver.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "052d5755b664dcc5f8bb287444a9b34182a89f51",
+      "size": 19583
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/evidence-manifest.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "482d0379b6ac46883a09099b44c1efe6d49196e9",
+      "size": 14985
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/full-suite.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c3d4e4653a6fda46e3ffe2e853a4dba180b20c67",
+      "size": 5091
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/independent-receiving.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c733c096683afe98e7435e239c4c555aac13afb7",
+      "size": 6025
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/native-evidence.tar.gz",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b835fd24e7b3e64861f8686479d0f09a8b6a7e43",
+      "size": 549635
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/pre-candidate-inputs.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "913785029a8823a7ba08c35ccf6da2eb52c15980",
+      "size": 37824
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/desktop.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "dbb3ac42da392ae6724aec4f34c05baeb0c8ac54",
+      "size": 65525
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/screenshots/phone.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "03894ad49eadaa4019fdc607388300f3c0293cad",
+      "size": 54845
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/current-composition/source-freeze.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "2bdff82303c6f5d25c3d91b5c96f9fb2bd22dd5e",
+      "size": 36060
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/pointer-r1-failure.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "460d7cc9c1970e3193e9dd0edbd453c5a75afea1",
+      "size": 558
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "1276c05178ecac8d26b9361734f6b9a48e50665e",
+      "size": 1072
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/first-composition/tests.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "622d988476625deedba256ad498b7d86a26eae77",
+      "size": 2082
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "997d702ac0638001e969ee967095f7354045aca2",
+      "size": 847
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/tests.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "05f0cfe851f0ec168c09a7323d5d251f895152dc",
+      "size": 865
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/initial/watch-trends-before-pointer.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "fab3efaa8db3d05c06c623e0dafbebba760501a3",
+      "size": 11342
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/capture-receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6c3f270c9f1df2349a37ae9a6c3f4415c4b68396",
+      "size": 3815
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/capture.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "67b15d61afa6a90a5e45b375dd99b60420a54458",
+      "size": 4319
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/receipt.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "f8339378f205c0178bdbea492d2c54dd779caa60",
+      "size": 1078
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/tests.log",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "93079219cfd70a01cf05cdccefadd4e5afd5ebc1",
+      "size": 4848
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/trends-desktop.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "3acaf30f7d2173e9493a36dad3eaad2806c5aea3",
+      "size": 77214
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/qualified/trends-phone.png",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c410b6e58d066f2f3dfb89cf0d62e71c3d59a30e",
+      "size": 95551
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/source-freeze.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d55321083466dd76b3abf4aa8342374dcd54beac",
+      "size": 4162
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/source.patch",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "1065ca93ae52092ef14cebf18daaf5b05f72f409",
+      "size": 35062
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/stylesheet-addendum.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "99eedddeba33d9ea0012a88f7a5d506b73646d3e",
+      "size": 977
+    },
+    {
+      "path": "docs/qualification/watch-trends-afe225d6c6be/test-fixture-addendum.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d29e00279a853a88a4b6a10f9f82169631f31b56",
+      "size": 818
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "9474e4b1811dcd58a824f49a64effc3287b72a69",
+      "size": 269543
+    },
+    {
+      "path": "game.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6d90719654bf7eae0d84bc8be0c749a7d80dba14",
+      "size": 18776
+    },
+    {
+      "path": "index.html",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "f232b8cc28681831dfef28a1729a3ad7403070fa",
+      "size": 5153
+    },
+    {
+      "path": "journal.css",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "size": 2465
+    },
+    {
+      "path": "journal.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "3f23199fa149f912930e9e2b6afad8c0b85752d0",
+      "size": 6391
+    },
+    {
+      "path": "package-lock.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+      "size": 1705
+    },
+    {
+      "path": "package.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+      "size": 277
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b13d183c5d8982d689c33b4195a797bebff4ede5",
+      "size": 1975
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "size": 8716
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "size": 71368
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm.d.ts",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "12f7f1826bc094fabfb3674665863d62884105bb",
+      "size": 865
+    },
+    {
+      "path": "screenshots/desktop.png",
+      "type": "blob",
+      "mode": "100755",
+      "sha": "e1954b199165b978dfdab2d9eaf1c5a245c37463",
+      "size": 116567
+    },
+    {
+      "path": "screenshots/phone.png",
+      "type": "blob",
+      "mode": "100755",
+      "sha": "57d7d16fada051808d0efe46e5057c4888071632",
+      "size": 47918
+    },
+    {
+      "path": "scripts/package.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8aa45d3a2b951297adee7199d8db052c1c8a982d",
+      "size": 3423
+    },
+    {
+      "path": "style.css",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "256e7f309d196d6e2a787b12a2892c62ab6bc5f8",
+      "size": 2366
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "7ceb05040d243cf844f12c1aba157d14327894e0",
+      "size": 8014
+    },
+    {
+      "path": "tests/journal.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "fd21553c02b93ce04e45b4fb88a83c4b09af85ff",
+      "size": 11727
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01",
+      "size": 8832
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "5252cf7c6af4e3b625879d35ea99399dadd04c2b",
+      "size": 3680
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "606b177e302414a465f2292452ae7caea3d792cf",
+      "size": 10880
+    },
+    {
+      "path": "tests/server.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070",
+      "size": 1609
+    },
+    {
+      "path": "tests/watch-choice-model.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "4eef83341f2b1b42c95b50d8d08b4447a9ae11d2",
+      "size": 11772
+    },
+    {
+      "path": "tests/watch-choice.browser.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "7e47c670c01979ebfa8c0b4f01f0f0fc22257f69",
+      "size": 16923
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "669dca1de5f39c2775fa912d094d331bc1f33148",
+      "size": 11657
+    },
+    {
+      "path": "tests/watch-save.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "05bd8b8b9fe277285afdacf391f08e9f792808cd",
+      "size": 10647
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d63f4884475077482b0bbbf2d9e457c61ad7ecef",
+      "size": 13968
+    },
+    {
+      "path": "watch-choice-model.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "size": 3694
+    },
+    {
+      "path": "watch-choice.css",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6e569c23111531649147d47635b124ea604ea59b",
+      "size": 3742
+    },
+    {
+      "path": "watch-choice.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "47c5aa633823c516e7beedb302eecd9e03fd4db4",
+      "size": 11624
+    },
+    {
+      "path": "watch-save.css",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "size": 473
+    },
+    {
+      "path": "watch-save.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "cc802ddd6041b76c7a491b487463636b82fda508",
+      "size": 7492
+    },
+    {
+      "path": "watch-trends.css",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "size": 2791
+    },
+    {
+      "path": "watch-trends.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "size": 11372
+    }
+  ]
+}

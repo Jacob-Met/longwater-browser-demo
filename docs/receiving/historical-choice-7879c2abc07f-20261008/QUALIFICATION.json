@@ -1,0 +1,373 @@
+{
+  "schema": 1,
+  "owner": "7879c2abc07f/github_execution/offhand_published_review",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 17,
+  "pr": 19,
+  "head": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+  "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+  "base": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+  "scope": "One complete already-played tide compared in fresh owned native sessions; no later alternate future is replayed.",
+  "sourceTreeBridge": {
+    "base": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+    "baseTree": "83c3d5e74377ff6403d1a531718d0674de02d9d2",
+    "head": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+    "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+    "baseLeaves": 99,
+    "qualifiedLeaves": 104,
+    "unchanged": 92,
+    "changed": [
+      {
+        "path": ".github/workflows/smoke.yml",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "4eaefa1688acc46c18e632168daa8a6aad0e8f12",
+        "size": 1961
+      },
+      {
+        "path": "README.md",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "4af857e31d69a0ff86afae096a0157ada31442c8",
+        "size": 11418
+      },
+      {
+        "path": "downloads/Longwater-Fourteen-Tides.html",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "9474e4b1811dcd58a824f49a64effc3287b72a69",
+        "size": 269543
+      },
+      {
+        "path": "game.js",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "6d90719654bf7eae0d84bc8be0c749a7d80dba14",
+        "size": 18776
+      },
+      {
+        "path": "index.html",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "f232b8cc28681831dfef28a1729a3ad7403070fa",
+        "size": 5153
+      },
+      {
+        "path": "scripts/package.mjs",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "8aa45d3a2b951297adee7199d8db052c1c8a982d",
+        "size": 3423
+      },
+      {
+        "path": "tests/watch-save.browser.test.mjs",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "669dca1de5f39c2775fa912d094d331bc1f33148",
+        "size": 11657
+      }
+    ],
+    "added": [
+      {
+        "path": "tests/watch-choice-model.test.mjs",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "4eef83341f2b1b42c95b50d8d08b4447a9ae11d2",
+        "size": 11772
+      },
+      {
+        "path": "tests/watch-choice.browser.test.mjs",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "7e47c670c01979ebfa8c0b4f01f0f0fc22257f69",
+        "size": 16923
+      },
+      {
+        "path": "watch-choice-model.js",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+        "size": 3694
+      },
+      {
+        "path": "watch-choice.css",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "6e569c23111531649147d47635b124ea604ea59b",
+        "size": 3742
+      },
+      {
+        "path": "watch-choice.js",
+        "type": "blob",
+        "mode": "100644",
+        "sha": "47c5aa633823c516e7beedb302eecd9e03fd4db4",
+        "size": 11624
+      }
+    ],
+    "removed": []
+  },
+  "dependencies": [
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+      "size": 1705,
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/blobs/7a89ee5d7b73496d9dafc85a93184182f6f14026"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+      "size": 277,
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/blobs/a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "size": 8716,
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/blobs/50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "size": 71368,
+      "url": "https://api.github.com/repos/Jacob-Met/longwater-browser-demo/git/blobs/faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    }
+  ],
+  "wasm": {
+    "bytes": 71368,
+    "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+  },
+  "browser": {
+    "package": "playwright",
+    "version": "1.62.1",
+    "installedChromium": "151.0.7922.34",
+    "build": "v1234",
+    "source": "Actual native CI install log and unchanged package-lock; execution uses that repository's ordinary default Playwright launcher.",
+    "nodeVersion": "The npm process version was not printed; no inferred Node version is claimed."
+  },
+  "baseline": {
+    "head": "32107fc51895487dee797cc4e192d45e3e096074",
+    "tree": "f380fa09be2d6f72fba59f055656f9dde68f2450",
+    "checkout": "39e97535a2cf68de4ecd28531ac9fa0392693471",
+    "run": 37786352661,
+    "browserJob": 113341984910,
+    "smokeJob": 113341985167,
+    "tests": 58,
+    "pass": 50,
+    "fail": 8,
+    "skipped": 0,
+    "classification": "49 existing tests and one native-play control passed; eight actual missing-lab assertions after native play failed.",
+    "observation": {
+      "summary": "Day 3 of 14. Water 4; seed packs 4.",
+      "selected": [
+        "false",
+        "false",
+        "true"
+      ],
+      "savedBytes": 1618,
+      "savedSelected": "south",
+      "turns": [
+        {
+          "action": "shade",
+          "cell": "heart"
+        },
+        {
+          "action": "gate",
+          "cell": "north"
+        },
+        {
+          "action": "seed",
+          "cell": "south"
+        }
+      ],
+      "snapshotDay": 3,
+      "journalCharacters": 11779
+    },
+    "log": {
+      "bytes": 222473,
+      "sha256": "9b3065f8cca6bccdc0b162c2d3ec75d07479dd36d3a2b2f9e12f8860af7ed628"
+    }
+  },
+  "firstCandidate": {
+    "head": "6adc15d3046fad122ceeb7ba3cc5c419f274e90a",
+    "tree": "f7d5265cfe21ba2742b7ca86e03baf5c0b51d16d",
+    "checkout": "d378f7bdeaa65c96563ec866723acaf01ff0d94b",
+    "run": 37787007225,
+    "browserJob": 113344216892,
+    "smokeJob": 113344216665,
+    "tests": 68,
+    "pass": 60,
+    "fail": 8,
+    "skipped": 0,
+    "newModelCases": 10,
+    "newBrowserCases": 9,
+    "newCasesPass": 19,
+    "failures": "Eight unchanged save-browser cases time out at startup; their private HTTP file map omits the new module and stylesheet dependencies. Three-entry fixture correction proposed; causal confirmation pending next exact-head runtime.",
+    "log": {
+      "bytes": 76166,
+      "sha256": "ec35cc3ac8aeea134520b14cf55ef56848b8e42bbd55d8a2430b42205e7fa8c5"
+    },
+    "artifact": {
+      "id": 11555171581,
+      "bytes": 1087884,
+      "sha256": "62118bd21b4c2fbecd0e569471b40f73c561844e8c0e8eb9fb3e0a9b05e31686",
+      "files": 4,
+      "pixelInspection": "pending"
+    }
+  },
+  "fixtureBridge": {
+    "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+    "leaves": 104,
+    "unchanged": 103,
+    "changed": "tests/watch-save.browser.test.mjs",
+    "oldBlob": "f01f4c9fed11e1e73bcfd8ba228d8ea24272ccc7",
+    "newBlob": "669dca1de5f39c2775fa912d094d331bc1f33148",
+    "exactThreeRowAddition": true,
+    "productAndFrozenBrowserUnchanged": true,
+    "removed": 0,
+    "added": 0
+  },
+  "final": {
+    "run": 37788091828,
+    "browserJob": 113347959039,
+    "smokeJob": 113347959370,
+    "checkout": "0786e5a4d5e8dbb88724a2550272105a90f2c1af",
+    "checkoutTree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+    "checkoutParents": [
+      "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+      "c44a3d7254f9103e6053d449b911a5aa019f957e"
+    ],
+    "tests": 68,
+    "pass": 68,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "durationMs": 22035.214582,
+    "log": {
+      "bytes": 66294,
+      "sha256": "5e54cc5f4b127e40e9b21ec4e7de2d40a422181b6ef8d82b568e5eaf8d33de0a"
+    },
+    "runConclusion": "success",
+    "artifact": [
+      {
+        "id": 11555520640,
+        "name": "historical-choice-0786e5a4d5e8dbb88724a2550272105a90f2c1af",
+        "bytes": 1088168,
+        "digest": "sha256:2f43641b1e828a147271c4e0873ba6ff50026e77dbb4f554e3d20535c5532cd5",
+        "expires_at": "2026-10-22T13:55:15Z"
+      }
+    ],
+    "passingCaseNames": [
+      "ok 1 - the actual WASM watch exposes operable cells, actions, and complete readings",
+      "ok 2 - Tab, Enter, Space, arrows and shortcuts share one turn path",
+      "ok 3 - unavailable actions and modified/repeated shortcuts do not spend a tide",
+      "ok 4 - a player can finish all fourteen tides using only semantic controls and reset",
+      "ok 5 - phone touch targets follow the canvas with separated notes and actions",
+      "ok 6 - failed WASM startup leaves an understandable error and no active controls",
+      "ok 7 - the journal preserves complete real WASM reports and all three cells across later choices",
+      "ok 8 - unavailable choices create no journal entry and journal keyboard reading spends no tide",
+      "ok 9 - all fourteen native tides remain reviewable with an exact final recap, then reset starts a fresh journal",
+      "ok 10 - phone readers can expand every note and cell without horizontal overflow",
+      "ok 11 - a failed simulation startup offers no fabricated watch history",
+      "ok 12 - an accepted native replay restores its full history, and a missing tide cannot replace it",
+      "ok 13 - a visitor downloads the current game and resumes its complete journal offline",
+      "ok 14 - the packaged watch plays and restores its complete journal offline",
+      "ok 15 - a resumed watch reconstructs every earlier native report before accepting the next tide",
+      "ok 16 - a completed saved watch retains fourteen reports and the actual opening-to-final recap",
+      "ok 17 - failed saving keeps current reports and a successful explicit retry makes the whole journal resumable",
+      "ok 18 - a save that disagrees with real replay is protected and cannot fabricate a journal",
+      "ok 19 - another tab's saved branch stays authoritative while the local journal can continue unsaved",
+      "ok 20 - each recorded choice reproduces the exact complete native tide and frees both sessions",
+      "ok 21 - alternative actions on every cell preserve every native field and the original input history",
+      "ok 22 - changed intermediate native readings or field notes are refused even with an exact final snapshot",
+      "ok 23 - a changed native opening and a changed completed action cannot become comparison authority",
+      "ok 24 - empty, malformed, overlong, reordered and incomplete histories refuse before allocating native state",
+      "ok 25 - historical canopy admission uses the selected tide and a native refusal frees its isolated session",
+      "ok 26 - exhausted current water and seed packs do not prevent an available historical alternative",
+      "ok 27 - successful and refused comparisons leave the actual SavedWatch, selection, storage bytes and next tide unchanged",
+      "ok 28 - read-only comparison remains available while the real watch cannot access storage",
+      "ok 29 - all fourteen admitted snapshots and the final native outcome remain reproducible",
+      "ok 30 - an opening watch stays playable before any historical choice is available",
+      "ok 31 - a completed historical alternative shows every native consequence without changing the active watch",
+      "ok 32 - recorded choices match exactly and changing controls clears a previous comparison",
+      "ok 33 - an unavailable historical choice refuses cleanly while an earlier available choice still works",
+      "ok 34 - panel keyboard choices remain separate from game shortcuts and phone readings fit",
+      "ok 35 - reset invalidates a comparison even when canvas geometry temporarily disappears",
+      "ok 36 - comparison reads native history when browser saving is unavailable",
+      "ok 37 - a closed watch can compare its final native tide without reopening the live watch",
+      "ok 38 - the directly opened packaged HTML contains the same isolated native comparison",
+      "ok 39 - closing and reopening the page resumes the same native watch and selected cell",
+      "ok 40 - a fourteen-tide ending survives reload and explicit reset stores a fresh watch",
+      "ok 41 - unavailable actions leave the saved history unchanged",
+      "ok 42 - failed replay preserves saved data while play continues until an explicit reset",
+      "ok 43 - quota failure retains the running tide and the visible retry saves without advancing it",
+      "ok 44 - a blocked storage getter still allows a playable watch and later save retry",
+      "ok 45 - two tabs detect divergent storage and do not overwrite the other watch",
+      "ok 46 - failed WASM startup never replaces an existing saved watch",
+      "ok 47 - the save revision pins the actual shipped WASM bytes",
+      "ok 48 - a new watch does not write until the player chooses a cell or tide",
+      "ok 49 - reload replays actual accepted tides and restores the exact complete state and selection",
+      "ok 50 - a completed fourteen-tide watch and its outcome survive reopening",
+      "ok 51 - refused actions are absent from storage and do not change native state",
+      "ok 52 - explicit reset persists a fresh watch that cannot resurrect the old history",
+      "ok 53 - malformed, unsupported, overlong and tampered saves remain byte-for-byte intact",
+      "ok 54 - failed partial native replay frees its candidate and explicit reset replaces a protected save",
+      "ok 55 - a storage quota failure keeps play in memory and retry saves exactly once without replaying a tide",
+      "ok 56 - an unavailable localStorage getter does not prevent play and can later recover",
+      "ok 57 - retry after unreadable storage never overwrites a previously unknown saved watch",
+      "ok 58 - a stale tab detects another saved watch before writing its divergent tide",
+      "ok 59 - storage change and clear notifications hold stale writes without mutating the current watch",
+      "ok 60 - a failed reset write reports the unsaved state and retry cannot restore old actions",
+      "ok 61 - opening trends expose five correctly labelled metrics without inventing a completed tide",
+      "ok 62 - changed real WASM actions produce complete exact tables and separate cell series without changing the watch",
+      "ok 63 - native keyboard controls retain earlier selection and focus while later tides arrive",
+      "ok 64 - selection and refused actions add no trend, and reset starts at the actual opening",
+      "ok 65 - clicking the chart selects the tide and leaves keyboard focus on its slider",
+      "ok 66 - partial and complete native replay retain the opening, all completed tides and the finished watch",
+      "ok 67 - invalid journal replay cannot replace an existing trends history",
+      "ok 68 - direct-open packaging embeds the same trends and reopens native saved readings offline"
+    ]
+  },
+  "offline": {
+    "bytes": 269543,
+    "sha256": "ea2ca5633d67b2a93cdc9f97305fc4b2f2647bf5d7f837b4cbf2ff79294113da",
+    "sourceSha256": "ca9dfe67d89f180ef597ea5c20b83ae1b18342f8cf31d484a1a92edbb6ffb778",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-choice.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-choice.js",
+      "watch-trends.js",
+      "watch-choice-model.js",
+      "pkg/longwater_web_bg.wasm"
+    ],
+    "qualification": "The actual hosted maintained download test compared the downloaded and committed HTML with a fresh current-source build, then played and reopened the file offline; all passed. New frozen browser tests also executed the historical comparison in a fresh directly opened generated HTML.",
+    "preparation": {
+      "bytes": 234591,
+      "sha256": "46baa81caa970435956c4ee57c1051514d9f4f9edef5820a3f901306d66f49a3",
+      "sourceSha256": "054ca53bbebab69439870fb8401a6f2d2ef9af95e5298ece3b1af45c7b1c98c8",
+      "exact": true
+    }
+  },
+  "remainingLimits": [
+    "Direct screenshot pixel inspection remains pending supported artifact transport; no visual acceptance is claimed.",
+    "Desktop Chrome and Chrome touch emulation were executed; physical-device and actual screen-reader acceptance are separate.",
+    "Portable watch-file #12, Reset review #15/PR20, optional sound #16 and readable report #18 are separately owned. This receipt binds current c442 plus our exact source; unintegrated owner compositions and file-open races are not claimed.",
+    "Storage semantics are unchanged; the existing non-transactional cross-tab limitations remain."
+  ]
+}

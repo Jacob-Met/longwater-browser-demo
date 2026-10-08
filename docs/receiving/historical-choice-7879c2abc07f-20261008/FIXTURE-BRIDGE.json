@@ -1,0 +1,28 @@
+{
+  "tree": "78ab03ad01e32663a585eee5d712ef0f7a174725",
+  "leaves": 104,
+  "unchanged": 103,
+  "changed": "tests/watch-save.browser.test.mjs",
+  "oldBlob": "f01f4c9fed11e1e73bcfd8ba228d8ea24272ccc7",
+  "newBlob": "669dca1de5f39c2775fa912d094d331bc1f33148",
+  "exactThreeRowAddition": true,
+  "productAndFrozenBrowserUnchanged": true,
+  "removed": 0,
+  "added": 0,
+  "exactAddition": "\n  [\"/watch-choice.js\", [\"watch-choice.js\", \"text/javascript\"]],\n  [\"/watch-choice-model.js\", [\"watch-choice-model.js\", \"text/javascript\"]],\n  [\"/watch-choice.css\", [\"watch-choice.css\", \"text/css\"]],",
+  "originalHead": "6adc15d3046fad122ceeb7ba3cc5c419f274e90a",
+  "currentHead": "c44a3d7254f9103e6053d449b911a5aa019f957e",
+  "independentReview": "Parent github_execution read the full original and proposed texts and independently verified reverse deletion of exactly these three rows reconstructs the original file.",
+  "coordination": [
+    {
+      "issue": 6,
+      "body": "Receiving coordination for #17 / PR #19: the first actual candidate ran 68 tests, with all 19 new actual-WASM/browser cases and original offline package parity passing. Its eight failures are the existing save-browser cases waiting for startup: their private files Map in tests/watch-save.browser.test.mjs does not serve the new watch-choice.js import or its model/CSS dependencies. I propose only three exact allow-list entries for /watch-choice.js, /watch-choice-model.js (text/javascript) and /watch-choice.css (text/css). All save assertions, storage fixtures, server behavior, production SavedWatch and owner #12 file lifecycle remain unchanged. Failed head 6adc15d3 and raw CI job113344216892 are retained. Parent is independently receiving this narrow dependency closure before publication; the original frozen nine-case browser fixture remains exact.",
+      "id": 6061402691
+    },
+    {
+      "issue": 12,
+      "body": "Receiving coordination for #17 / PR #19: the first actual candidate ran 68 tests, with all 19 new actual-WASM/browser cases and original offline package parity passing. Its eight failures are the existing save-browser cases waiting for startup: their private files Map in tests/watch-save.browser.test.mjs does not serve the new watch-choice.js import or its model/CSS dependencies. I propose only three exact allow-list entries for /watch-choice.js, /watch-choice-model.js (text/javascript) and /watch-choice.css (text/css). All save assertions, storage fixtures, server behavior, production SavedWatch and owner #12 file lifecycle remain unchanged. Failed head 6adc15d3 and raw CI job113344216892 are retained. Parent is independently receiving this narrow dependency closure before publication; the original frozen nine-case browser fixture remains exact.",
+      "id": 6061403039
+    }
+  ]
+}
