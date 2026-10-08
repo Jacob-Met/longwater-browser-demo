@@ -67,6 +67,25 @@ Your saved tides return with the watch when you reload or come back later. The
 journal restores the complete reports and the original opening readings, so its
 final comparison still covers all fourteen tides. Reset starts a fresh journal.
 
+### Keep a readable report
+
+After at least one accepted tide, choose **Download watch report** beside the
+journal. Open the downloaded HTML without the game or an internet connection,
+or print it using the browser's Print command. It retains the opening state,
+every completed action and tide event, the complete field notes, exact resource
+and cell readings, and the native outcome if the watch has closed.
+
+A partial watch is clearly marked with its completed tide count. The report is
+a one-time snapshot: later play does not update an existing download. It cannot
+resume a watch, and it contains no script, external resource or automatic action.
+Recorded from Longwater’s game simulation. Net changes include the action,
+the tide and dawn drift.
+
+Downloading leaves the game, selected cell, journal and saved-watch bytes
+unchanged. If preparation fails, keep playing or explicitly retry the download;
+the error does not clear progress. The browser's download settings determine
+where the file is saved.
+
 ### Compare the marsh readings
 
 **Watch trends**, inside the journal, plots the three cells together for one

@@ -1,0 +1,121 @@
+{
+  "head": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+  "receiver_sha256": "d33dec50eff9ec7d2b146ebf2963f6886ba41c3752217f97e06380d3cb932a18",
+  "browser": "154.0.8037.98",
+  "opening": {
+    "day": 0,
+    "cells": [
+      {
+        "id": "north",
+        "name": "North Bank",
+        "zone": "Upper reed shelf",
+        "material": "peat & cordgrass",
+        "depth": 34,
+        "salinity": 34,
+        "oxygen": 64,
+        "biomass": 44,
+        "shade": 0
+      },
+      {
+        "id": "heart",
+        "name": "Heart Pool",
+        "zone": "Inner tidal basin",
+        "material": "mud & glasswort",
+        "depth": 56,
+        "salinity": 30,
+        "oxygen": 55,
+        "biomass": 49,
+        "shade": 0
+      },
+      {
+        "id": "south",
+        "name": "South Reach",
+        "zone": "Outer brackish fringe",
+        "material": "silt & saltgrass",
+        "depth": 67,
+        "salinity": 40,
+        "oxygen": 43,
+        "biomass": 38,
+        "shade": 0
+      }
+    ],
+    "freshwater": 5,
+    "seedPacks": 5,
+    "report": null,
+    "finished": false,
+    "outcome": null
+  },
+  "after": {
+    "day": 1,
+    "cells": [
+      {
+        "id": "north",
+        "name": "North Bank",
+        "zone": "Upper reed shelf",
+        "material": "peat & cordgrass",
+        "depth": 55,
+        "salinity": 28,
+        "oxygen": 62,
+        "biomass": 45,
+        "shade": 0
+      },
+      {
+        "id": "heart",
+        "name": "Heart Pool",
+        "zone": "Inner tidal basin",
+        "material": "mud & glasswort",
+        "depth": 70,
+        "salinity": 34,
+        "oxygen": 54,
+        "biomass": 50,
+        "shade": 0
+      },
+      {
+        "id": "south",
+        "name": "South Reach",
+        "zone": "Outer brackish fringe",
+        "material": "silt & saltgrass",
+        "depth": 81,
+        "salinity": 43,
+        "oxygen": 40,
+        "biomass": 38,
+        "shade": 0
+      }
+    ],
+    "freshwater": 4,
+    "seedPacks": 5,
+    "report": {
+      "day": 1,
+      "action": "gate",
+      "cell": "north",
+      "event": {
+        "day": 1,
+        "name": "Spring tide",
+        "note": "A long lunar push carries brine inland.",
+        "depth": 14,
+        "salt": 4,
+        "oxygen": -3
+      },
+      "lines": [
+        "Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).",
+        "Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.",
+        "Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.",
+        "Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%."
+      ]
+    },
+    "finished": false,
+    "outcome": null
+  },
+  "control": "actual bundled WASM and browser agree on accepted first tide",
+  "required_report_control_present": false,
+  "observation": "Existing whole-game download and journal are present; no readable watch-report action exists",
+  "storage": {
+    "longwater.watch.v1": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"north\"}],\"selected\":\"north\",\"snapshot\":\"{\\\"day\\\":1,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":55,\\\"salinity\\\":28,\\\"oxygen\\\":62,\\\"biomass\\\":45,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":70,\\\"salinity\\\":34,\\\"oxygen\\\":54,\\\"biomass\\\":50,\\\"shade\\\":0},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":81,\\\"salinity\\\":43,\\\"oxygen\\\":40,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":4,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":1,\\\"action\\\":\\\"gate\\\",\\\"cell\\\":\\\"north\\\",\\\"event\\\":{\\\"day\\\":1,\\\"name\\\":\\\"Spring tide\\\",\\\"note\\\":\\\"A long lunar push carries brine inland.\\\",\\\"depth\\\":14,\\\"salt\\\":4,\\\"oxygen\\\":-3},\\\"lines\\\":[\\\"Freshwater gate · North Bank: water 34→41 cm, salt 34→24 ppt, oxygen 64→63%. Freshwater −1 (4 left).\\\",\\\"Spring tide · all three cells: water +14 cm, salt +4 ppt; North Bank oxygen 63→60%. A long lunar push carries brine inland.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · North Bank: water 34→55 cm, salt 34→28 ppt, oxygen 64→62%, biomass 44→45%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}"
+  },
+  "source_sha256": {
+    "journal.js": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+    "game.js": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145",
+    "scripts/package.mjs": "18ae7eb02a9455af18411ddf2d7b18a670ae3eecbb0a54940dbd2140f0addd83",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+  }
+}
