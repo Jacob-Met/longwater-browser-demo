@@ -28,11 +28,11 @@ Each page opens silently. The switch gives a short confirmation tone when sound 
 ## Controls
 
 - **Mouse / touch** — tap a cell card to select it, tap an action button to act,
-  tap the reset button (top right) to start a new watch
+  tap the reset button (top right) to review starting a new watch
 - **Keyboard** — `Tab` moves between the reset, cell, and action buttons;
   `Enter` or `Space` activates the focused control. With a game control focused,
   `1` `2` `3` select a cell, `←` `→` move selection, `G` gates, `H` shades,
-  `S` seeds, and `R` resets. Browser modifier chords and held-key repeats do
+  `S` seeds, and `R` opens the new-watch review. Browser modifier chords and held-key repeats do
   not trigger game shortcuts.
 - **Screen-reader access** — native buttons expose selection, action availability,
   and each cell's depth, salt, oxygen, life, and canopy readings. The Field notes
@@ -43,6 +43,19 @@ Each page opens silently. The switch gives a short confirmation tone when sound 
 The interface is responsive (compact stacked layout under 680px), supports
 HiDPI canvases, and gives focused controls a visible outline. Short phone
 screens scroll vertically so the field notes and action row remain separate.
+
+### Start a new watch deliberately
+
+Reset and the R shortcut first show how many of the fourteen tides the current
+watch has completed. **Keep this watch** is focused initially; activating it or
+pressing Escape leaves the simulation, selected cell, complete journal and
+saved progress unchanged. **Start new watch** performs the existing reset and
+reports whether the new watch could be saved.
+
+The review also protects a completed watch's outcome and journal. Game controls
+remain inactive behind the review. An observed saved-watch change from another
+tab dismisses an open review, so you can inspect the new status before choosing
+again. This does not make simultaneous cross-tab storage writes transactional.
 
 ## Review your watch
 

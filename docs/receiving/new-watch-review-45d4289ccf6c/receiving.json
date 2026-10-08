@@ -1,0 +1,132 @@
+{
+  "producer": "HAMON estate 45d4289ccf6c/production_recovery",
+  "issue": "https://github.com/Jacob-Met/longwater-browser-demo/issues/15",
+  "qualified_at": "2026-10-08T13:36:25.686275+00:00",
+  "source": {
+    "base": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+    "base_tree": "83c3d5e74377ff6403d1a531718d0674de02d9d2",
+    "native_commit": "3710126f722d7552d93dcd655a6aa400f77c7d74",
+    "native_tree": "e76bf9c70abd23d6a0fb494698dc8e2cd8576a6f",
+    "changed_paths": [
+      "README.md",
+      "downloads/Longwater-Fourteen-Tides.html",
+      "game.js",
+      "index.html",
+      "style.css",
+      "tests/browser.test.mjs",
+      "tests/journal.test.mjs",
+      "tests/new-watch.test.mjs",
+      "tests/package.test.mjs",
+      "tests/resume-journal.test.mjs",
+      "tests/watch-save.browser.test.mjs",
+      "tests/watch-trends.test.mjs"
+    ],
+    "all_other_base_leaves_exact": true,
+    "sha256": {
+      "game.js": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+      "index.html": "da53cc1d9209f0ad86e6dacf350370f8a7fa94400c5eb5d6bfe0c8932633ebcf",
+      "style.css": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "README.md": "2ee9e2e53e8635ecdfe014e45a868e5ef70046466442305422082175787852ea",
+      "downloads/Longwater-Fourteen-Tides.html": "3d279c685e3715a975c0bfbf5da882d18d55045163bd886f878e91d7437c60bb",
+      "tests/new-watch.test.mjs": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+      "tests/browser.test.mjs": "1e27769e0337d984254b8fd85158094043f7461e37915cee9a52b28310aa6cfb",
+      "tests/journal.test.mjs": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+      "tests/resume-journal.test.mjs": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+      "tests/watch-trends.test.mjs": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+      "tests/package.test.mjs": "17c4ba863a6d981c07d5615f1f1bd6e90c9d239f61b33979c3248bf9d17bd99c",
+      "tests/watch-save.browser.test.mjs": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5"
+    }
+  },
+  "native_runtime": {
+    "node": "26.3.0",
+    "playwright": "1.62.1",
+    "chromium": "153.0.8010.12",
+    "surfaces": [
+      "loopback HTTP",
+      "direct-open file:// with offline context",
+      "actual native downloaded HTML"
+    ]
+  },
+  "qualification": {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "passed": 60,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "source_inputs_exact_after": true,
+    "new_cases": 11,
+    "native_log_sha256": "d0f455e2cc43647f29e46047ca4a585adf6c43ca9aa8e70581c06e6407b6e568",
+    "corrected_ten_case_negative": {
+      "passed": 2,
+      "failed": 8
+    },
+    "additional_offline_negative": {
+      "passed": 0,
+      "failed": 1
+    },
+    "original_candidate_receiver_failure": {
+      "passed": 7,
+      "failed": 3,
+      "cause": "screenshot empty style artifact and native browser-chrome focus assumption"
+    },
+    "first_full_suite": {
+      "passed": 57,
+      "failed": 3,
+      "cause": "three old R helpers awaited explicit confirmation"
+    }
+  },
+  "unchanged_functions": {
+    "reset": {
+      "exact": true,
+      "sha256": "2d93945bcacaa068f42e8b3d0f249ce2c643b03f30bcbc5f9f11e024239598a1"
+    },
+    "act": {
+      "exact": true,
+      "sha256": "f62f6d3899d1d3c22ec6660ed4e41db88a299539bb5b170bafbf94f8b687ec62"
+    }
+  },
+  "protected_source_sha256": {
+    "watch-save.js": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+    "watch-save.css": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+    "journal.js": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b",
+    "journal.css": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+    "watch-trends.js": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+    "watch-trends.css": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+    "pkg/longwater_web.js": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+    "pkg/longwater_web_bg.wasm": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+    "scripts/package.mjs": "18ae7eb02a9455af18411ddf2d7b18a670ae3eecbb0a54940dbd2140f0addd83",
+    "package.json": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+    "package-lock.json": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+    ".github/workflows/smoke.yml": "f67215979d54aae4a3b1150c5d669ddc4f0200db03ded79b967e4187eeff08cf"
+  },
+  "offline_package": {
+    "file": "/Users/me/workspace/estate/longwater-new-watch-45d4289ccf6c/source/downloads/Longwater-Fourteen-Tides.html",
+    "bytes": 238916,
+    "sha256": "3d279c685e3715a975c0bfbf5da882d18d55045163bd886f878e91d7437c60bb",
+    "sourceSha256": "b4bf64fb39c64563b442f51f5c43d47d25e9a3cbbaed9962a80c232ec2154059",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-trends.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "native_source_bundle": {
+    "sha256": "5132818b8c5e93c88657d94dcf6e977f677a5d4734cadd3a50dd7ee5bf8165f0",
+    "bytes": 16885,
+    "requires": "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3",
+    "verify_returncode": 0
+  },
+  "hosted_ci": "Pending actual published head; no hosted success claimed in this native packet.",
+  "composition_scope": "Recorded isolated c442 source plus reset review. Later owner #12/#16/#17/#18 composition requires actual input receiving."
+}

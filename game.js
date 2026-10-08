@@ -7,6 +7,9 @@ const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
 const playfield = document.querySelector("#playfield");
 const resetControl = document.querySelector("#reset-control");
+const resetDialog = document.querySelector("#new-watch-review");
+const keepWatchControl = document.querySelector("#keep-watch");
+let resetReview = null;
 const cellControls = [...document.querySelectorAll("[data-cell]")];
 const actionControls = [...document.querySelectorAll("[data-action]")];
 const context = canvas.getContext("2d", { alpha: false });
@@ -391,6 +394,52 @@ function reset() {
   showSaveStatus();
 }
 
+function requestReset() {
+  if (!watch || !state || resetDialog.open) return;
+  resetReview = {
+    watch,
+    snapshot: watch.snapshot,
+    selected: watch.selected,
+    trigger: document.activeElement,
+  };
+  document.querySelector("#new-watch-progress").textContent =
+    "This watch has completed " + state.day + " of 14 tides.";
+  try {
+    resetDialog.showModal();
+    keepWatchControl.focus();
+  } catch {
+    resetReview = null;
+    live.textContent = "The new-watch review could not open. Your current watch is unchanged.";
+  }
+}
+
+function closeResetReview(notice) {
+  const trigger = resetReview?.trigger;
+  resetReview = null;
+  resetDialog.close();
+  trigger?.focus();
+  if (notice) live.textContent = notice;
+}
+
+keepWatchControl.addEventListener("click", () => {
+  closeResetReview("Kept this watch. Your progress and journal are unchanged.");
+});
+resetDialog.addEventListener("cancel", event => {
+  event.preventDefault();
+  closeResetReview("Kept this watch. Your progress and journal are unchanged.");
+});
+document.querySelector("#start-new-watch").addEventListener("click", () => {
+  if (!resetReview) return;
+  const reviewed = resetReview;
+  // A later accepted watch must be reviewed again before it can be replaced.
+  if (watch !== reviewed.watch || watch.snapshot !== reviewed.snapshot || watch.selected !== reviewed.selected) {
+    closeResetReview("This watch changed. Review again before starting a new watch.");
+    return;
+  }
+  closeResetReview();
+  reset();
+});
+
 function showSaveStatus() {
   if (!watch) return;
   const status = watch.status;
@@ -398,7 +447,7 @@ function showSaveStatus() {
   document.querySelector("#watch-save-retry").hidden = !status.canRetry;
 }
 
-resetControl.addEventListener("click", reset);
+resetControl.addEventListener("click", requestReset);
 cellControls.forEach((button, i) => button.addEventListener("click", () => selectCell(i)));
 actionControls.forEach(button => button.addEventListener("click", () => act(button.dataset.action)));
 playfield.addEventListener("keydown", event => {
@@ -417,7 +466,7 @@ playfield.addEventListener("keydown", event => {
       act(shortcuts[key]);
     } else if (key === "r") {
       event.preventDefault();
-      reset();
+      requestReset();
     }
   }
 });
@@ -426,6 +475,9 @@ window.addEventListener("storage", event => {
   if (watch && (event.key === WATCH_SAVE_KEY || event.key === null)) {
     watch.storageChanged();
     showSaveStatus();
+    if (resetReview) {
+      closeResetReview("The saved watch changed in another tab. Review again before starting a new watch.");
+    }
   }
 });
 document.querySelector("#watch-save-retry").addEventListener("click", () => {

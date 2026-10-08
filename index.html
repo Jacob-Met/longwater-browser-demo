@@ -16,7 +16,7 @@
 <body>
   <main id="stage" aria-labelledby="game-title">
     <h1 id="game-title" class="visually-hidden">Longwater: Fourteen Tides</h1>
-    <p id="instructions" class="visually-hidden">Steward three marsh cells through fourteen tides. Use Tab to reach each control and Enter or Space to activate it. With a game control focused, 1, 2, 3 or the arrow keys select a cell. G opens its gate, H adds shade, S plants seeds, and R resets the watch. Read each cell's description for its current measurements and Field notes for the complete tide report.</p>
+    <p id="instructions" class="visually-hidden">Steward three marsh cells through fourteen tides. Use Tab to reach each control and Enter or Space to activate it. With a game control focused, 1, 2, 3 or the arrow keys select a cell. G opens its gate, H adds shade, S plants seeds, and R opens a review before starting a new watch. Read each cell's description for its current measurements and Field notes for the complete tide report.</p>
     <div id="playfield" role="group" aria-label="Marsh stewardship controls" aria-describedby="instructions">
       <canvas id="game" aria-hidden="true"></canvas>
       <div id="controls">
@@ -38,7 +38,7 @@
     <section id="watch-storage" aria-label="Watch progress">
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>
       <button id="watch-save-retry" type="button" hidden>Try saving again</button>
-      <p class="save-note">Progress stays in this browser. Reset begins a new watch and replaces the saved one.</p>
+      <p class="save-note">Progress stays in this browser. Reset asks before starting a new watch and replacing the saved one.</p>
     </section>
     <!-- offline-download:start -->
     <section id="offline-copy" class="offline-copy" aria-labelledby="offline-copy-title">
@@ -60,6 +60,15 @@
       <ul id="report-lines"></ul>
     </section>
     <p id="live" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true">Loading Longwater…</p>
+    <dialog id="new-watch-review" aria-labelledby="new-watch-title" aria-describedby="new-watch-progress new-watch-effect">
+      <h2 id="new-watch-title">Start a new watch?</h2>
+      <p id="new-watch-progress"></p>
+      <p id="new-watch-effect">This clears the current watch and its journal, then saves the new watch in this browser when saving is available.</p>
+      <div class="new-watch-actions">
+        <button id="keep-watch" type="button" autofocus>Keep this watch</button>
+        <button id="start-new-watch" type="button">Start new watch</button>
+      </div>
+    </dialog>
     <noscript>Longwater needs JavaScript enabled to run its local simulation.</noscript>
   </main>
   <script type="module" src="./game.js"></script>
