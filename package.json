@@ -1,0 +1,12 @@
+{
+  "name": "longwater-browser-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tests/server.mjs",
+    "test": "node --test tests/browser.test.mjs tests/header-layout.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
