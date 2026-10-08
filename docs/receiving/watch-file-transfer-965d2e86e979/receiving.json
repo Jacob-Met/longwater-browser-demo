@@ -1,0 +1,129 @@
+{
+  "schema": "hamon.native_receiving.v1",
+  "worker": "estate-965d2e86e979",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "claim": 12,
+  "pr": 21,
+  "source": {
+    "canonicalParent": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "canonicalTree": "b825a333b9d7f73a73b801f517b07c256aea5934",
+    "nativeHead": "a20308625b823a8947c20fc8060a438112904e42",
+    "nativeTree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+    "publishedSourceHead": "d1b7d5793bd758e2b213412c17f5e1d59901752e",
+    "leaves": 113,
+    "untouchedIncomingLeaves": 99
+  },
+  "qualification": {
+    "sourceHead": "a20308625b823a8947c20fc8060a438112904e42",
+    "sourceTree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+    "started": "2026-10-08T14:18:40.843Z",
+    "finished": "2026-10-08T14:19:18.557Z",
+    "node": "v26.3.0",
+    "command": [
+      "/opt/homebrew/Cellar/node/26.3.0/bin/node",
+      "--test",
+      "--test-concurrency=1",
+      "--test-reporter=tap",
+      "tests/browser.test.mjs",
+      "tests/journal.test.mjs",
+      "tests/new-watch.test.mjs",
+      "tests/offline-download.test.mjs",
+      "tests/package.test.mjs",
+      "tests/resume-journal.test.mjs",
+      "tests/watch-file-trends.test.mjs",
+      "tests/watch-file.browser.test.mjs",
+      "tests/watch-file.test.mjs",
+      "tests/watch-save.browser.test.mjs",
+      "tests/watch-save.test.mjs",
+      "tests/watch-trends.test.mjs"
+    ],
+    "status": 0,
+    "signal": null,
+    "error": null,
+    "logBytes": 20331,
+    "logSha256": "acf2de01885c20e4acfc7e19a9bee9c1ba3b7fff6d3c2529ddc911e7c01dd3e8",
+    "totals": [
+      "# tests 85",
+      "# suites 0",
+      "# pass 85",
+      "# fail 0",
+      "# cancelled 0",
+      "# skipped 0",
+      "# todo 0",
+      "# duration_ms 37584.047167"
+    ]
+  },
+  "artifact": {
+    "file": "/Users/me/hamon-longwater-watch-file-965d2e86e979/reset-composition/downloads/Longwater-Fourteen-Tides.html",
+    "bytes": 257470,
+    "sha256": "47bdf53812ae8d0d595e9ff071fc66f55a05710cf2204777e4a7eff8f4e66aa2",
+    "sourceSha256": "a60add18d42bf64b1bdf8b9f238315ab2834c728f689ca7d20975a04c94ef66f",
+    "inputs": [
+      "index.html",
+      "style.css",
+      "journal.css",
+      "watch-trends.css",
+      "watch-save.css",
+      "watch-file.css",
+      "game.js",
+      "pkg/longwater_web.js",
+      "journal.js",
+      "watch-save.js",
+      "watch-file.js",
+      "watch-trends.js",
+      "pkg/longwater_web_bg.wasm"
+    ]
+  },
+  "independent": {
+    "receipt": "peer-review/receiving.json",
+    "sha256": "b19ea8e762894f14a405308cde361091ed0ce2fba8de3bb4f6f2487e6384d52e",
+    "scope": "source custody, exact composition and fresh native artifact generation/decode; no repeated core/browser execution"
+  },
+  "archive": {
+    "path": "evidence.tar.gz",
+    "bytes": 1053123,
+    "sha256": "c9cd83c9292bcbcf6263e77105ae43e03eea9b8d5a2cd8b19e9caaca7982ad0e",
+    "members": 148,
+    "memberBytes": 2479281
+  },
+  "peerPackets": [
+    {
+      "name": "composition-f50d5c1-packet",
+      "manifestSha256": "cdd3854186fa3da8a44bee2269de6edbc54b35ccb030ac67ded3ba007b85da02",
+      "files": 11,
+      "bytes": 292276
+    },
+    {
+      "name": "final-composition-6ecfdde7-packet",
+      "manifestSha256": "aa413159a594c45e040ae6b318c0c44c356f6404c9517f38686fb55f92e36cdd",
+      "files": 20,
+      "bytes": 386257
+    },
+    {
+      "name": "integration-seams-pr19-pr20-packet",
+      "manifestSha256": "17aefb6039666375d340897f46e1f58632b4b88b1879cf5db568e67627a55938",
+      "files": 14,
+      "bytes": 140865
+    },
+    {
+      "name": "r1-packet",
+      "manifestSha256": "892c63add5a624fae5770dcb13166cea0132486d243dbd1f5fa8cc1fb98bb6b9",
+      "files": 19,
+      "bytes": 119253
+    },
+    {
+      "name": "r2-packet",
+      "manifestSha256": "fb95b581acaa6adb65fa634901b5b4cb2a054066631eaaa83a415402237d8b96",
+      "files": 13,
+      "bytes": 67313
+    },
+    {
+      "name": "reset-composition-a2030862-packet",
+      "manifestSha256": "0ebc60280c491a3d78bed686e5a7ebf5b00abb5c97eb6af3eafe1ce2c2d6c206",
+      "files": 17,
+      "bytes": 414260
+    }
+  ],
+  "state": "native_source_and_artifact_qualified; publication_hosted_gate_and_public_runtime_are_separate_receipts",
+  "utc": "2026-10-08T14:37:18.136Z"
+}

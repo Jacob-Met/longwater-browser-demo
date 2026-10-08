@@ -1,0 +1,203 @@
+{
+  "disposition": "ACCEPTED_RESET_AND_WATCH_FILE_SOURCE_COMPOSITION_AND_ARTIFACT_IDENTITY",
+  "source": "a20308625b823a8947c20fc8060a438112904e42",
+  "tree": "cfb8079b2abfa8defbf6d767d35e065d9ba5a8af",
+  "parent_surrogate": "436deface944e881543f2a71d27ba7c07d2f6f25",
+  "canonical": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "canonical_tree": "b825a333b9d7f73a73b801f517b07c256aea5934",
+  "accepted_r4": {
+    "local": "6ecfdde764cdb8754a01efa33cea099949e31175",
+    "tree": "e80a51351bcf46cb13b95faa081f39bf2466722b",
+    "public_pr21_head": "a84a42057a06a7e003ea02720f6b06c5b5b21091"
+  },
+  "source_leaves": 113,
+  "canonical_leaves": 108,
+  "r4_leaves": 104,
+  "unchanged_canonical_leaves": 99,
+  "unchanged_r4_leaves": 92,
+  "changed_canonical_paths": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/browser.test.mjs",
+    "tests/package.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "watch-save.js"
+  ],
+  "public_incoming_all108_mode_blob_size_sha256_verified": true,
+  "three_way_exact_files": [
+    {
+      "path": "README.md",
+      "ancestor_sha256": "e1d881d2e88459440f60d855f5c67476caffe48b21a34339c1add2124045f3c8",
+      "incoming_sha256": "2ee9e2e53e8635ecdfe014e45a868e5ef70046466442305422082175787852ea",
+      "r4_sha256": "9bbac2b7a911352d2af6ae0e96b87e195e7350440942b671c4334cf04f4aea89",
+      "merged_sha256": "80e8359589e61b9ebd958e4b38d37d67a7e0adc4581331713febb9de783cd1bd"
+    },
+    {
+      "path": "game.js",
+      "ancestor_sha256": "bdff9668b26ec6d6cf751c98795e24916fd69e371e4dc299c356ef2af7e57145",
+      "incoming_sha256": "526bb72998bcabe57cf3038235d90d47b85ccb2dd646e500d69ef6b97687c312",
+      "r4_sha256": "6b8b05d2e05f123bf6516ea90e4d1c60d895f294a2e5d2030502bd818dc4d048",
+      "merged_sha256": "0b906c5e68da65b8c279945a23190a80721f63541d0cb8396aaf063146cc1aff"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "ancestor_sha256": "d4de8ef80b22cf699fb87bdcca4607d31f830ae1f97c7a18fe5187b3fbb0ca0d",
+      "incoming_sha256": "1e27769e0337d984254b8fd85158094043f7461e37915cee9a52b28310aa6cfb",
+      "r4_sha256": "9ca7b355efd7293d7400435460e5b58ed4c4b738b65cc4c6abc99b7c4871c230",
+      "merged_sha256": "da496bf736ab716387dfa47f69a0754e7aec209e9e0b98e092e29f10851e1601"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "ancestor_sha256": "505dab35b247ac2af924d1dacd879f2d6544b6f3c3721eefa3758ca2b7036c09",
+      "incoming_sha256": "17c4ba863a6d981c07d5615f1f1bd6e90c9d239f61b33979c3248bf9d17bd99c",
+      "r4_sha256": "1533c5312c574b4adbd45dad15cea08fbb4d6b3a734fec06f6afb124f749f2e1",
+      "merged_sha256": "fd44e61e1ac32181b6fdc79c81292f5a21ccd920396f515c03de7a7c7e7383ac"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "ancestor_sha256": "60ac85ed74d4f134f36d480ef2e79a0235b8d07320063b399eea1463c11bb062",
+      "incoming_sha256": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5",
+      "r4_sha256": "be09d89c209b1a5c11acbf15ebe95788810dc7b997cf6f15069f96f3c3a68494",
+      "merged_sha256": "dbd407d4c36b3b19acd629b2bd5e5338e1ee3a16f2fb8e746fce2e4cf570328f"
+    }
+  ],
+  "ordinary_leaf_composition_complete": true,
+  "html_inverse_recovers_complete_incoming_note_dialog_and_all_original_markup": true,
+  "qualified_file_panel_and_stylesheet_preserved": true,
+  "owned_browser": {
+    "path": "tests/watch-file.browser.test.mjs",
+    "sha256": "ad0788c92e561be4ec6839be21625d3613d763f7c076aff31acca457601c0920",
+    "four_confirm_adapters_reversed_to_entire_r4_source": true,
+    "sole_appended_test_sha256": "88d6e2151792db9ec053ce8704019a0ac9842660a6269c4edac1140fdc2d352f",
+    "peer_executed": false,
+    "source_review": "The appended case uses fresh online/offline contexts and actual native file generation. Keep via initially focused Enter and Escape retain preview, complete journal/day and stored bytes. Explicit file replacement reaches exact day3; subsequent R and confirmation return to native opening and an empty saved-turn list/journal."
+  },
+  "incoming_nine_confirmations_preserved_through_exact_source_composition": true,
+  "incoming_reset_css_and_new_suite_exact": true,
+  "r4_savedwatch_filecontroller_native_tests_and_coupled_trends_test_exact": true,
+  "historical_choice_runtime_not_included": true,
+  "artifact": {
+    "bytes": 257470,
+    "sha256": "47bdf53812ae8d0d595e9ff071fc66f55a05710cf2204777e4a7eff8f4e66aa2",
+    "git_blob": "3ce929dbe5545718ce333b7844721fa11d6d5ec2",
+    "source_sha256": "a60add18d42bf64b1bdf8b9f238315ab2834c728f689ca7d20975a04c94ef66f",
+    "fresh_output_equals_tracked": true
+  },
+  "native_packager": {
+    "command": [
+      "node",
+      "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/reset-composition-a2030862/runtime/scripts/package.mjs",
+      "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/reset-composition-a2030862/fresh-artifact.html"
+    ],
+    "started_at": "2026-10-08T14:22:08.937377+00:00",
+    "elapsed_seconds": 0.08448462502565235,
+    "exit_code": 0,
+    "node": "v26.3.0",
+    "log_sha256": "74ece6a0f6e1c6ce7ea239314cfb45e4b3fa4ffdd866b8934be91b3eb56e4e48"
+  },
+  "inputs": [
+    "index.html",
+    "style.css",
+    "journal.css",
+    "watch-trends.css",
+    "watch-save.css",
+    "watch-file.css",
+    "game.js",
+    "pkg/longwater_web.js",
+    "journal.js",
+    "watch-save.js",
+    "watch-file.js",
+    "watch-trends.js",
+    "pkg/longwater_web_bg.wasm"
+  ],
+  "embedded_inputs_verified": {
+    "pkg/longwater_web.js": {
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5"
+    },
+    "watch-trends.js": {
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "nested_in": "journal.js"
+    },
+    "journal.js": {
+      "bytes": 6391,
+      "sha256": "36648205dd192ffac9fcf76a2e62d261375db9ff0938c1c27167fce8106f233b"
+    },
+    "watch-save.js": {
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c"
+    },
+    "watch-file.js": {
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6"
+    },
+    "game.js": {
+      "bytes": 21471,
+      "sha256": "0b906c5e68da65b8c279945a23190a80721f63541d0cb8396aaf063146cc1aff"
+    },
+    "pkg/longwater_web_bg.wasm": {
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2"
+    },
+    "style.css": {
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1"
+    },
+    "journal.css": {
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21"
+    },
+    "watch-trends.css": {
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786"
+    },
+    "watch-save.css": {
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f"
+    },
+    "watch-file.css": {
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb"
+    }
+  },
+  "nested_journal_and_trends_reversed_to_exact_source": true,
+  "full_html_and_game_reverse_equal_source": true,
+  "source_unchanged_after_generation": true,
+  "prior_packets_reverified": [
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/r1-packet",
+      "manifest_sha256": "892c63add5a624fae5770dcb13166cea0132486d243dbd1f5fa8cc1fb98bb6b9",
+      "members_verified": 18
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/r2-packet",
+      "manifest_sha256": "fb95b581acaa6adb65fa634901b5b4cb2a054066631eaaa83a415402237d8b96",
+      "members_verified": 12
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/composition-f50d5c1-packet",
+      "manifest_sha256": "cdd3854186fa3da8a44bee2269de6edbc54b35ccb030ac67ded3ba007b85da02",
+      "members_verified": 10
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/final-composition-6ecfdde7-packet",
+      "manifest_sha256": "aa413159a594c45e040ae6b318c0c44c356f6404c9517f38686fb55f92e36cdd",
+      "members_verified": 19
+    },
+    {
+      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/integration-seams-pr19-pr20-packet",
+      "manifest_sha256": "17aefb6039666375d340897f46e1f58632b4b88b1879cf5db568e67627a55938",
+      "members_verified": 13
+    }
+  ],
+  "no_core_controller_or_browser_suites_repeated": true,
+  "limitations": [
+    "Actual browser execution, the reset suite and the appended online/offline coupling are root's separate native qualification.",
+    "The source preserves existing observed-change protection, without adding transactional cross-tab writes.",
+    "This exact R5 receiving does not include or accept an unlanded historical-choice or other-owner composition."
+  ]
+}
