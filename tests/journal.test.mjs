@@ -145,6 +145,7 @@ test("all fourteen native tides remain reviewable with an exact final recap, the
     assert.equal(await page.locator("#journal-entries > li").count(), 14, "a closed watch cannot append another tide");
     await page.locator("#watch-journal").screenshot({ path: "test-results/journal-complete.png" });
     await page.locator("#reset-control").click();
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.equal(await page.locator("#journal-entries > li").count(), 0);
     assert.equal(await recap.isVisible(), false);
     assert.equal(await page.locator("#journal-count").textContent(), "No tides yet");

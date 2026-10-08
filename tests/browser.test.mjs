@@ -125,6 +125,7 @@ test("a player can finish all fourteen tides using only semantic controls and re
     assert.match(await page.locator("#state-summary").textContent(), /watch closed/i);
     for (const action of ["Gate", "Shade", "Seed"]) assert.equal(await page.getByRole("button", { name: new RegExp(`^${action}`) }).getAttribute("aria-disabled"), "true");
     await page.getByRole("button", { name: "Reset watch" }).click();
+    await page.getByRole("button", { name: "Start new watch", exact: true }).click();
     assert.equal(await day(page), 0);
     assert.equal(await page.getByRole("button", { name: /^Cell 2:/ }).getAttribute("aria-pressed"), "true");
   } finally { await close(); }
