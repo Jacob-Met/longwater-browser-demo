@@ -1,0 +1,31 @@
+{
+  "sourceHead": "5e975da11de1d57df6f8bd1407e9fd01bf862ca7",
+  "sourceTree": "e971a78e6d319719d25e4ddb0a6555d008acd26c",
+  "previousPacket": "d5fd969957b0d36afe7a497653e2b07d283a58ca",
+  "files": [
+    {
+      "name": "QUALIFICATION.json",
+      "path": "docs/receiving/historical-choice-reset-7879c2abc07f-20261008/QUALIFICATION.json",
+      "bytes": 16062,
+      "sha256": "23b006541f9ae600958b3502bc4e5f0a2a48a8e8f123ae5633ad3cdc697a1bdc"
+    },
+    {
+      "name": "SOURCE-MANIFEST.json",
+      "path": "docs/receiving/historical-choice-reset-7879c2abc07f-20261008/SOURCE-MANIFEST.json",
+      "bytes": 23572,
+      "sha256": "8ea411db9da00c715c993ea0b116f6a9e6950cb6d41e4e2187c8c1ea40c09151"
+    },
+    {
+      "name": "final-browser.log",
+      "path": "docs/receiving/historical-choice-reset-7879c2abc07f-20261008/final-browser.log",
+      "bytes": 70849,
+      "sha256": "3ba339611fcf51e54d6beb1e9157de867ed43c0cafdab3310d86cdb349c92756"
+    },
+    {
+      "name": "README.md",
+      "path": "docs/receiving/historical-choice-reset-7879c2abc07f-20261008/README.md",
+      "bytes": 5135,
+      "sha256": "423bee8a6a257debedf15413755436a97c93265fda0aecf1172dacf8c29017b4"
+    }
+  ]
+}
