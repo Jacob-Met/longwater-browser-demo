@@ -89,8 +89,8 @@
   "native_packager": {
     "command": [
       "node",
-      "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/reset-composition-a2030862/runtime/scripts/package.mjs",
-      "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/reset-composition-a2030862/fresh-artifact.html"
+      "[redacted]/reset-composition-a2030862/runtime/scripts/package.mjs",
+      "[redacted]/reset-composition-a2030862/fresh-artifact.html"
     ],
     "started_at": "2026-10-08T14:22:08.937377+00:00",
     "elapsed_seconds": 0.08448462502565235,
@@ -169,27 +169,27 @@
   "source_unchanged_after_generation": true,
   "prior_packets_reverified": [
     {
-      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/r1-packet",
+      "path": "[redacted]/r1-packet",
       "manifest_sha256": "892c63add5a624fae5770dcb13166cea0132486d243dbd1f5fa8cc1fb98bb6b9",
       "members_verified": 18
     },
     {
-      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/r2-packet",
+      "path": "[redacted]/r2-packet",
       "manifest_sha256": "fb95b581acaa6adb65fa634901b5b4cb2a054066631eaaa83a415402237d8b96",
       "members_verified": 12
     },
     {
-      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/composition-f50d5c1-packet",
+      "path": "[redacted]/composition-f50d5c1-packet",
       "manifest_sha256": "cdd3854186fa3da8a44bee2269de6edbc54b35ccb030ac67ded3ba007b85da02",
       "members_verified": 10
     },
     {
-      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/final-composition-6ecfdde7-packet",
+      "path": "[redacted]/final-composition-6ecfdde7-packet",
       "manifest_sha256": "aa413159a594c45e040ae6b318c0c44c356f6404c9517f38686fb55f92e36cdd",
       "members_verified": 19
     },
     {
-      "path": "/Users/me/hamon-longwater-watch-file-peer-965d2e86e979/integration-seams-pr19-pr20-packet",
+      "path": "[redacted]/integration-seams-pr19-pr20-packet",
       "manifest_sha256": "17aefb6039666375d340897f46e1f58632b4b88b1879cf5db568e67627a55938",
       "members_verified": 13
     }
