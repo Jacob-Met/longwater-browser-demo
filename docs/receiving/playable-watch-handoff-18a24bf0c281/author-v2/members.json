@@ -1,0 +1,35 @@
+{
+  "kind": "public derivative whitelist; no archive or encoded raw record",
+  "files": [
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/README.md",
+      "bytes": 4510,
+      "sha256": "cd91490dc015cc2351842f004addc6d8f5fd4b8e0f54492ee696fb2decd06c4b",
+      "git_blob": "38f01dc01e48857591b725b7405d2650ff4d1c38"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/qualification.json",
+      "bytes": 3255,
+      "sha256": "8f8069a54d348a7ca44a5f9cebd162c78ea73d85516e792f4c8162a1e3c2b06c",
+      "git_blob": "1b392155815be401a583f26f7343f6d8ed5ac237"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/source-preservation.json",
+      "bytes": 5744,
+      "sha256": "27f9f65bb35348bdc71bc801d575aaeefaa6afe3c111b05b14c9e600fce141c9",
+      "git_blob": "745c9981e3ff29414d3298d05b8fdfb3ad661c2c"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/history.json",
+      "bytes": 2076,
+      "sha256": "5d791578121160a154e0181b8afece4250c00ac4215ec25bc52d3ac11c32ca71",
+      "git_blob": "1075516a92d7f4ba63e334703d9d4aa24b799ff0"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/affected.stdout.tap",
+      "bytes": 3000,
+      "sha256": "946de70b66d9cf123dfaca3a542f88f72ca238c42a5199caa15b5279086deb73",
+      "git_blob": "3ab31636a3d515a64f785d59c33bbf588b913be3"
+    }
+  ]
+}

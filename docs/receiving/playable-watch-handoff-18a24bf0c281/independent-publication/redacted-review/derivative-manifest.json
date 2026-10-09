@@ -1,0 +1,50 @@
+{
+  "scope": "Minimal public summary, public source pins, unchanged generic frozen drivers and actual synthetic recipient artifact; no raw archives/commands/host details included",
+  "raw_receipts_not_modified": true,
+  "public_files": [
+    {
+      "path": "README.md",
+      "bytes": 7042,
+      "sha256": "f0e2807baefa827b81d05dc2b9aa26dcd2e9c6df656fef3d98af129a75e70b3e",
+      "decoded_payloads_checked": 0
+    },
+    {
+      "path": "fixture-wrapper.mjs",
+      "bytes": 1149,
+      "sha256": "adca5e3fc9ff3b72f9469d9f2296f6756f24ab97d0efea41a6fee71f217d5df3",
+      "decoded_payloads_checked": 0
+    },
+    {
+      "path": "qualification.json",
+      "bytes": 1596,
+      "sha256": "4c7f66ef83a36a1264e19599ba3bc2521706d4e92ccfe751e59ef996ccc4eee6",
+      "decoded_payloads_checked": 0
+    },
+    {
+      "path": "receive-fixed.mjs",
+      "bytes": 5909,
+      "sha256": "a250420ae8dfc17844348835ef450842fb23eafc7124acd1c02f4dc8b1b7fd08",
+      "decoded_payloads_checked": 0
+    },
+    {
+      "path": "receive-transition.mjs",
+      "bytes": 7002,
+      "sha256": "81f6521452d0a0b3ed1f7a13b13388daa69b502d24960bc2e15d7c46c74e122c",
+      "decoded_payloads_checked": 0
+    },
+    {
+      "path": "received-watch.html",
+      "bytes": 346423,
+      "sha256": "a502f9b9b52cdef3cc9e81fcae72dac21eda163674d34565ddef9c184f176231",
+      "decoded_payloads_checked": 20
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 5638,
+      "sha256": "e7db62025ac4c12bca1a065d7da14e445981d4b5e704b66ccc4d5664a9295c83",
+      "decoded_payloads_checked": 0
+    }
+  ],
+  "literal_and_nested_base64_private_reference_scan_passed": true,
+  "scan_limit": "Known native roots, device identities and private estate URLs; no assertion of a universal secret detector"
+}

@@ -1,0 +1,51 @@
+{
+  "classification": "Explicit public derivative; private raw receipts are separately hash-bound and not included",
+  "candidate_commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+  "native_evidence_commit": "02589bc98983652b181b5705a026e285f167d064",
+  "pre_exposure_freeze": "b69f30e6b7b7bbaf9824933ac7cfeec0fec80f8c",
+  "counts": {
+    "original_observations": [
+      9,
+      9
+    ],
+    "v1_fixed_source": [
+      26,
+      26
+    ],
+    "v1_transition": [
+      8,
+      9
+    ],
+    "final_transition": [
+      9,
+      9
+    ],
+    "final_fixed_source": [
+      10,
+      10
+    ]
+  },
+  "actual_final_product_exits": [
+    1,
+    0
+  ],
+  "actual_final_product_calls": 2,
+  "original_or_v1_replayed": false,
+  "second_name_determinism_test_claimed": false,
+  "private_v1_packet_sha256": "5473da6070f64839596993d2b25a55fb0854dbd1b961be95ffc5396455cb9988",
+  "private_v2_packet": {
+    "bytes": 417396,
+    "sha256": "df6ec765313338f14792d0b04258062c0034acd687089a415697e596f1a4394d",
+    "raw_members": 78,
+    "custody_readback_verified": true,
+    "custody_receipt_sha256": "1ff42fa9d1e480dd1b3179148f1326409b1d1f3604654ee5c8d062f5dcbc38b8"
+  },
+  "reports": {
+    "v1_transition_sha256": "3dcebd2630ea1114dd3c4fb4b7f1e9d075bb056ab71502f4e46e13abae73f0e8",
+    "final_transition_sha256": "e7e65ac66db351f522bf72629c271fb80d2e83b28c7a678de9f174523d6ea060",
+    "final_fixed_source_sha256": "5b19f9025def66f1c719a0e120ef6bde201c8be18106f8568eccde2a7d2ec391"
+  },
+  "native_boundaries_accepted": true,
+  "browser_acceptance_separate": true,
+  "canonical_integration_claimed": false
+}

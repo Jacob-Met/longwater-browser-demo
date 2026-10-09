@@ -315,3 +315,7 @@ visible notice about this integration's persistence behavior.
 ## License
 
 No license file is present yet.
+
+### Share one playable watch file
+
+To carry the offline game and one explicitly selected watch in a single HTML file, see [Share a playable Longwater watch](WATCH_HANDOFF.md). The recipient reviews the included watch and explicitly chooses replacement; opening the file does not adopt its progress.

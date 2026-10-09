@@ -1,0 +1,58 @@
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+import {spawnSync} from "node:child_process";
+import {fileURLToPath} from "node:url";
+const root=path.dirname(fileURLToPath(import.meta.url));
+const owner=path.dirname(root);
+const source=path.join(root,"source");
+const result=path.join(root,"fixed-result");
+fs.mkdirSync(result); // Exclusive before any product child; no replay.
+const sha=b=>crypto.createHash("sha256").update(b).digest("hex");
+const read=p=>fs.readFileSync(p);
+const json=p=>JSON.parse(read(p).toString("utf8"));
+const identity=p=>{const s=fs.lstatSync(p,{bigint:true});return {sha256:sha(read(p)),bytes:Number(s.size),inode:String(s.ino),device:String(s.dev),mtime_ns:String(s.mtimeNs),mode:String(s.mode)};};
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+const intake=json(path.join(root,"candidate-intake.json"));
+const expected=json(path.join(owner,"fixture-expectations.json"));
+const input=path.join(owner,"fixtures","chosen <北>.json");
+const output=path.join(result,"received-watch.html");
+const ordinary=json(path.join(owner,"original-receiving/ordinary-packager.stdout"));
+const oldHtml=read(path.join(owner,"original-receiving/ordinary.html")).toString("utf8");
+const sourceBefore=intake.files.map(row=>({path:row.path,...identity(path.join(source,row.path))}));
+const inputBefore=identity(input);
+const command=[process.execPath,path.join(source,"scripts/package-watch.mjs"),input,"--output",output];
+const start=Date.now();
+const child=spawnSync(command[0],command.slice(1),{cwd:source,encoding:null,timeout:45000,maxBuffer:2*1024*1024});
+fs.writeFileSync(path.join(result,"stdout"),child.stdout??Buffer.alloc(0),{flag:"wx"});
+fs.writeFileSync(path.join(result,"stderr"),child.stderr??Buffer.alloc(0),{flag:"wx"});
+const checks=[];
+const check=(name,pass,observed)=>checks.push({name,pass:!!pass,observed});
+check("exact declared successor source admitted before child",sourceBefore.every(row=>row.sha256===intake.files.find(v=>v.path===row.path).sha256),sourceBefore);
+check("one actual fixed-source CLI succeeds",child.status===0&&!child.error&&!child.signal,{status:child.status,signal:child.signal,error:child.error?.message??null});
+let receipt=null,artifact=null;
+if(fs.existsSync(output)&&child.status===0){
+ const b=read(output),html=b.toString("utf8");
+ receipt=JSON.parse((child.stdout??Buffer.alloc(0)).toString("utf8").trim());
+ const selected=[...html.matchAll(/<script id="included-watch-data" type="application\/json">([\s\S]*?)<\/script>/g)];
+ const payload=selected.length===1?JSON.parse(selected[0][1]):null;
+ const main=h=>[...h.matchAll(/<script type="module" src="(data:text\/javascript;base64,[^"]+)"><\/script>/g)].map(m=>m[1]);
+ const styles=h=>[...h.matchAll(/href="(data:text\/css;base64,[^"]+)"/g)].map(m=>m[1]);
+ const oldMain=main(oldHtml),newMain=main(html);
+ check("actual output bytes and final-path receipt agree",receipt.file===output&&receipt.bytes===b.length&&receipt.sha256===sha(b),{file:output,bytes:b.length,sha256:sha(b),receipt});
+ check("included watch contains the exact original literal UTF-8 input",payload!==null&&payload.name===path.basename(input)&&Buffer.from(payload.watchBase64,"base64").equals(read(input)),payload);
+ check("input receipt and literal watch values remain exact",receipt.input.file===input&&receipt.input.bytes===inputBefore.bytes&&receipt.input.sha256===inputBefore.sha256&&receipt.watch.day===1&&receipt.watch.selected==="north",receipt.input);
+ check("included game module and all original CSS payloads match frozen ordinary artifact",oldMain.length===1&&same(newMain,oldMain)&&styles(oldHtml).length===8&&same(styles(html),styles(oldHtml)),{old_game_module_count:oldMain.length,new_game_module_count:newMain.length,styles_count:styles(html).length});
+ check("game bytes and source aggregate match already frozen ordinary package",receipt.game.bytes===ordinary.bytes&&receipt.game.sha256===ordinary.sha256&&receipt.game.sourceSha256===ordinary.sourceSha256,{expected:ordinary,observed:receipt.game});
+ check("controller receipt binds the declared successor controller",receipt.controllerSha256===sha(read(path.join(source,"included-watch.js"))),receipt.controllerSha256);
+ artifact={file:output,bytes:b.length,sha256:sha(b)};
+}else{
+ for(const name of ["actual output bytes and final-path receipt agree","included watch contains the exact original literal UTF-8 input","input receipt and literal watch values remain exact","included game module and all original CSS payloads match frozen ordinary artifact","game bytes and source aggregate match already frozen ordinary package","controller receipt binds the declared successor controller"])check(name,false,{output_exists:fs.existsSync(output),status:child.status});
+}
+const sourceAfter=intake.files.map(row=>({path:row.path,...identity(path.join(source,row.path))}));
+check("all fixed-source identities preserved",same(sourceBefore,sourceAfter),sourceAfter);
+check("selected input bytes and identity preserved",same(inputBefore,identity(input)),{before:inputBefore,after:identity(input)});
+const report={classification:"One successor fixed-source successful receiving control; no second-name determinism or original replay",candidate_commit:intake.author_commit,driver_sha256:sha(read(fileURLToPath(import.meta.url))),command,duration_ms:Date.now()-start,child:{status:child.status,signal:child.signal,error:child.error?.message??null,stdout_sha256:sha(child.stdout??Buffer.alloc(0)),stderr_sha256:sha(child.stderr??Buffer.alloc(0))},checks,passed:checks.filter(c=>c.pass).length,total:checks.length,artifact,receipt};
+fs.writeFileSync(path.join(result,"report.json"),JSON.stringify(report,null,2)+"\n",{flag:"wx"});
+console.log(JSON.stringify({passed:report.passed,total:report.total,artifact,report_sha256:sha(read(path.join(result,"report.json")))}));
+process.exitCode=checks.every(c=>c.pass)?0:2;

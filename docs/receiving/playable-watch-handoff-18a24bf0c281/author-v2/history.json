@@ -1,0 +1,54 @@
+{
+  "kind": "public derivative; historical raw originals remain private and unchanged",
+  "v1_source": "e4aa3666059b6e729e27d7ba907489a6e17bd565",
+  "v1_packet": {
+    "bytes": 1268322,
+    "sha256": "bcedbde0a58bae9879b321752d4ec05fbdd738d7b403181cd577d08904b74757",
+    "evidence_commit": "7e3144a31c4f37e5fcc6acb31f13dd3d48dff961",
+    "visibility": "private; no bytes embedded in public packet"
+  },
+  "original": {
+    "checks": 28,
+    "passed": 28,
+    "receipt_sha256": "81d730f6e74d72063a0166907535808dee49183533c2db8fbcb1ef62b250d025",
+    "replayed": false
+  },
+  "v1_authored_cli": {
+    "reported": 9,
+    "passed": 9,
+    "replayed": false
+  },
+  "v1_independent_recipient": {
+    "checks": 51,
+    "passed": 51,
+    "replayed": false
+  },
+  "v1_independent_publication": {
+    "checks": 26,
+    "passed": 26,
+    "replayed": false
+  },
+  "v1_source_transition": {
+    "checks": 9,
+    "passed": 8,
+    "report_bytes": 30791,
+    "report_sha256": "3dcebd2630ea1114dd3c4fb4b7f1e9d075bb056ab71502f4e46e13abae73f0e8",
+    "seal": "bb9d1cb64ccdbb88b8c47fe96eb0eebc769555c6",
+    "finding": "Published after an inert-comment validation-versus-packaging source transition. No changed simulation-semantics claim."
+  },
+  "v1_capability_fault": {
+    "checks": 78,
+    "passed": 76,
+    "finding": "Injected silent files setter retained no File, but controller dispatched change and reported delivery. Existing manual preview and recipient storage survived. Not claimed natural browser behavior."
+  },
+  "source_criteria_freeze": "e477d2e479592295bd245ecaece9e88528ca28d9",
+  "source_criteria_test_sha256": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+  "publication_successor_freeze": "b69f30e6b7b7bbaf9824933ac7cfeec0fec80f8c",
+  "recipient_successor_freeze": "0e152e525ae642686979a1c45373250bf9d679c8",
+  "raw_v2_archive": {
+    "bytes": 1193835,
+    "sha256": "0e29a08b56980de6974bac650b364c6a5c669fdb62cfa1fd713a4a0ec8c5c1d9",
+    "members": 162,
+    "visibility": "private; not embedded or linked to native locations in public packet"
+  }
+}

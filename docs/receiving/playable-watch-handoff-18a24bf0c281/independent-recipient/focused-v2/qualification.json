@@ -1,0 +1,131 @@
+{
+  "schema": "longwater-recipient-public-derivative-v1",
+  "representation": "Explicit public derivative; raw reports and archives withheld privately.",
+  "original_source": "e4aa3666059b6e729e27d7ba907489a6e17bd565",
+  "original_healthy_receiving": {
+    "checks": 51,
+    "passed": 51,
+    "original_baseline_passed": 50,
+    "original_baseline_failed": 1,
+    "baseline_failure": "Missing included-review capability; manual-input positive controls passed."
+  },
+  "initial_fault_receiving": {
+    "oracle_freeze": "b1dd05680d3581376e3d6ea6622635cb28a4c1ed",
+    "seal": "b7922931f86ba12802c79ab6f4acdb826c872a97",
+    "post_source_exposure": true,
+    "cases": 6,
+    "checks": 78,
+    "passed": 76,
+    "failed": 2,
+    "harness_errors": 0,
+    "raw_report_bytes": 95920,
+    "raw_report_sha256": "708069cd502a3c3e06d352f6310d22df0a54c8e7ed4070d64c729647acf1e48f",
+    "case_results": [
+      {
+        "case": "absent-File",
+        "checks": 13,
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "absent-DataTransfer",
+        "checks": 13,
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "throwing-File",
+        "checks": 13,
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "throwing-DataTransfer",
+        "checks": 13,
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "throwing-files-setter",
+        "checks": 13,
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "silent-files-setter",
+        "checks": 13,
+        "passed": 11,
+        "failed": 2
+      }
+    ],
+    "finding": "Silent injected setter refusal preserves state and manual preview but falsely reports included delivery and dispatches empty change."
+  },
+  "repaired_source": {
+    "commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+    "files": [
+      {
+        "path": "scripts/package-watch.mjs",
+        "bytes": 9761,
+        "sha256": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3"
+      },
+      {
+        "path": "included-watch.js",
+        "bytes": 3256,
+        "sha256": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6"
+      }
+    ]
+  },
+  "focused_successor": {
+    "oracle_freeze": "0e152e525ae642686979a1c45373250bf9d679c8",
+    "source_intake": "47220be5723011b658973c991cf2d22af25d7de0",
+    "acceptance_seal": "5b47b6f16acd50ca0d7953d3a12eb5218d1ea9af",
+    "driver_sha256": "218638e104d91e44e97f00776104a2468db9c4ecdb5c04edf82fd79baa328a10",
+    "frozen_before_repaired_source_intake": true,
+    "cases": 2,
+    "checks": 26,
+    "passed": 26,
+    "failed": 0,
+    "harness_errors": 0,
+    "case_results": [
+      {
+        "case": "silent-files-setter",
+        "passed": 13,
+        "failed": 0
+      },
+      {
+        "case": "normal-delivery",
+        "passed": 13,
+        "failed": 0
+      }
+    ],
+    "raw_report_bytes": 32881,
+    "raw_report_sha256": "db1fdc53028296660bf592ff843932cceb847a422adb4aac9b45cf5aea40b65f",
+    "browser_exit": 0,
+    "fixture": "Current recipient day3; pending manual day7; included donor day6.",
+    "actual_receiving": "Physical downloaded JSON, native storage/write counts, input-change events and explicit preview adoption."
+  },
+  "private_custody_digests": {
+    "fault_and_preparation_packet": {
+      "bytes": 102146,
+      "sha256": "f7217c631a6c5bbd6ae479d51c5fa9af94837601f62cd9fbea5e6c155c4d4e92"
+    },
+    "focused_successor_packet": {
+      "bytes": 310549,
+      "sha256": "5763d5865bde1bb98a01c67d8dadf20fcbad64f496de51b1bb377e568a4844b4"
+    }
+  },
+  "limits": [
+    "Faults are injected browser API compatibility controls, not observed natural silent refusal.",
+    "Only two focused successor cases were executed on repaired source.",
+    "Prior healthy51/full6case78 were not replayed or relabeled.",
+    "Authored Playwright gate remains UNRUN.",
+    "No cross-browser, hosted Actions, deployment or adoption claim."
+  ],
+  "redaction": {
+    "native_roots": "withheld",
+    "host_device_account_identifiers": "withheld",
+    "private_estate_references_and_urls": "withheld",
+    "raw_or_nested_archives": "not included",
+    "originals_modified": false
+  }
+}

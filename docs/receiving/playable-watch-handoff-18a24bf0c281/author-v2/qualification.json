@@ -1,0 +1,70 @@
+{
+  "kind": "public derivative of exact private native receipt; native paths, process and device identity omitted",
+  "source_commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/package-watch.test.mjs",
+    "tests/package-watch-source.test.mjs"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_seconds": 7.061645030975342,
+  "counts": {
+    "top_level": 8,
+    "nested": 7,
+    "reported": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "source_and_tests_unchanged": true,
+  "before": {
+    "scripts/package-watch.mjs": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3",
+    "included-watch.js": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+    "tests/package-watch.test.mjs": "f5b5f3e8144d5f4be62018f22ef30f258623435d8616fbf12bb38c5f83836eed",
+    "tests/included-watch.browser.test.mjs": "53a33d96bf599f5e3080a9ac9cda2725cf3f37f5b1a467e0382a7734387f8f72",
+    "tests/package-watch-source.test.mjs": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+    "WATCH_HANDOFF.md": "39b80642b0cf80376510433614856e403d18087ee9c4088389a2854aa1bef578",
+    "README.md": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2"
+  },
+  "after": {
+    "scripts/package-watch.mjs": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3",
+    "included-watch.js": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+    "tests/package-watch.test.mjs": "f5b5f3e8144d5f4be62018f22ef30f258623435d8616fbf12bb38c5f83836eed",
+    "tests/included-watch.browser.test.mjs": "53a33d96bf599f5e3080a9ac9cda2725cf3f37f5b1a467e0382a7734387f8f72",
+    "tests/package-watch-source.test.mjs": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+    "WATCH_HANDOFF.md": "39b80642b0cf80376510433614856e403d18087ee9c4088389a2854aa1bef578",
+    "README.md": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2"
+  },
+  "raw_receipt_sha256": "3d7100ac9b091cc2d2a6b652acd7eab6c3e5734ee210935e014a3664e446e2bc",
+  "stdout_sha256": "946de70b66d9cf123dfaca3a542f88f72ca238c42a5199caa15b5279086deb73",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original28_replayed": false,
+  "v1_source_replayed": false,
+  "authored_playwright": "UNRUN; no verified installed module; independent Chromium receiving is separate",
+  "independent_results": [
+    {
+      "receiver": "publication successor",
+      "source_commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+      "evidence_commit": "02589bc98983652b181b5705a026e285f167d064",
+      "transition_refusal": {
+        "passed": 9,
+        "checks": 9
+      },
+      "valid_output": {
+        "passed": 10,
+        "checks": 10
+      },
+      "scope": "Exactly two actual CLI calls; no eight-call baseline replay"
+    },
+    {
+      "receiver": "recipient capability successor",
+      "source_commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+      "evidence_commit": "5b47b6f16acd50ca0d7953d3a12eb5218d1ea9af",
+      "checks": 26,
+      "passed": 26,
+      "scope": "Exactly silent FileList assignment refusal and normal delivery; actual Chromium, no prior 51/full-six replay"
+    }
+  ]
+}

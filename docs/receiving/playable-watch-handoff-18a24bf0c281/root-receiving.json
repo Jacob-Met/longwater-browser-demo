@@ -1,0 +1,1103 @@
+{
+  "schema": "longwater-playable-watch-root-receiving-v1",
+  "representation": "Public derivative of exact root-received private native evidence; private paths, host/device identities, private URLs and raw archives are omitted",
+  "prepared_utc": "2026-10-09 02:07:12 UTC",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "issue": 35,
+  "receiving_worker": "estate-18a24bf0c281",
+  "qualification_status": "Accepted final native source and bounded independent receiving; prepared for isolated branch publication",
+  "qualification_source": {
+    "original_runtime": "7fd2bca0d0092c81f7cec547683aaf8cfb93a1c9",
+    "first_candidate": "e4aa3666059b6e729e27d7ba907489a6e17bd565",
+    "source_guard": "595722dff8b0ba33d2e732b289ea516d15607a2e",
+    "final": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+    "final_tree": "f65bdadf491be3f77b6f843ebafe91142abcad62"
+  },
+  "publication_plan": {
+    "sole_parent": "1a6590ae8bef03f71051d463ccd1881d3e733feb",
+    "base_tree": "029f2608df4945f5c40ef031489033644e9d24c8",
+    "branch": "work/playable-watch-handoff-18a24bf0c281-20261009",
+    "parent_leaves": 367,
+    "owned_paths_including_this_record": 27,
+    "modified_existing_paths": [
+      "README.md"
+    ],
+    "new_paths": 26,
+    "unrelated_leaves_preserved": 366,
+    "expected_total_leaves": 393,
+    "final_commit_tree_ref_readback": "Recorded after publication in issue35; this prepublication record does not self-assert its future commit"
+  },
+  "scope": {
+    "production": [
+      "scripts/package-watch.mjs",
+      "included-watch.js"
+    ],
+    "tests": [
+      "tests/package-watch.test.mjs",
+      "tests/package-watch-source.test.mjs",
+      "tests/included-watch.browser.test.mjs"
+    ],
+    "documentation": [
+      "WATCH_HANDOFF.md",
+      "README.md"
+    ],
+    "evidence_prefix": "docs/receiving/playable-watch-handoff-18a24bf0c281/",
+    "owner_boundaries": [
+      "Issue31/PR34 WatchFile adapter, freshness guard and ordinary packager hooks",
+      "Issue27/PR32 rewind",
+      "Issue6 save and issue12 file admission"
+    ],
+    "ordinary_game_runtime_simulation_dependencies_workflows_downloads": "All current inherited leaves remain exact"
+  },
+  "current_source_proof": {
+    "current_commit": "1a6590ae8bef03f71051d463ccd1881d3e733feb",
+    "current_tree": "029f2608df4945f5c40ef031489033644e9d24c8",
+    "leaves": 367,
+    "redacted_existing_paths_preserved": [
+      "docs/qualification/direct-offline-download-c945953fdeb7/coordination.json",
+      "docs/receiving/watch-file-transfer-965d2e86e979/peer-review/receiving.json"
+    ],
+    "runtime_sets_verified": [
+      {
+        "copy_set": "author original",
+        "exact_current_runtime_files": 23
+      },
+      {
+        "copy_set": "independent browser original",
+        "exact_current_runtime_files": 23
+      },
+      {
+        "copy_set": "independent browser candidate",
+        "exact_current_runtime_files": 23
+      },
+      {
+        "copy_set": "independent publication original",
+        "exact_current_runtime_files": 23
+      },
+      {
+        "copy_set": "independent publication candidate",
+        "exact_current_runtime_files": 23
+      }
+    ],
+    "workflow_blob": "a30df84dc29eb06f27e2848e979ecf2396a70a61"
+  },
+  "current_redacted_leaf_pins": [
+    {
+      "path": "docs/qualification/direct-offline-download-c945953fdeb7/coordination.json",
+      "mode": "100644",
+      "git_blob": "6d8062f39333e7f91749981008a2fdfbe5f2f81f"
+    },
+    {
+      "path": "docs/receiving/watch-file-transfer-965d2e86e979/peer-review/receiving.json",
+      "mode": "100644",
+      "git_blob": "a5857962666bc244df23094efb56ed7a875ae345"
+    }
+  ],
+  "original_runtime_projection": [
+    {
+      "path": "README.md",
+      "bytes": 16136,
+      "sha256": "9e197e700354a78119f6d701a57aa88f6509bd7becce6ee668ff59c6e0658537",
+      "git_blob": "b1f4de22b45f51d8df9563940ff033bee6e14a53"
+    },
+    {
+      "path": "game.js",
+      "bytes": 22031,
+      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c",
+      "git_blob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9627,
+      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208",
+      "git_blob": "4f5aafec0518dbf2075f72278d1b80670781eb8c"
+    },
+    {
+      "path": "journal.css",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "journal.js",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "git_blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 277,
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "git_blob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "practice-watch.css",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4"
+    },
+    {
+      "path": "practice-watch.js",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "git_blob": "e68f484848d9cf334a9eb35475973ffbe8a603b5"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 3619,
+      "sha256": "ba2b3d7421cb7d3904b889374a7eef3e1cf13eb41dc1ae9604335c0abeb2128a",
+      "git_blob": "27643c9a225536ecb6a87e13082c4e5d352d5ca5"
+    },
+    {
+      "path": "style.css",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+    },
+    {
+      "path": "watch-choice-model.js",
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "git_blob": "06e2fb072ce281f032e9c5c455372ff0eb60badd"
+    },
+    {
+      "path": "watch-choice.css",
+      "bytes": 3741,
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+      "git_blob": "1ce5b6c327978b953dcd9117162b03376fed31f3"
+    },
+    {
+      "path": "watch-choice.js",
+      "bytes": 12066,
+      "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+      "git_blob": "c06835946ec99c7edd8eb16334d597356aada060"
+    },
+    {
+      "path": "watch-file.css",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef"
+    },
+    {
+      "path": "watch-file.js",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "git_blob": "34c8490804e696e500e1362c629bb05a51ab3040"
+    },
+    {
+      "path": "watch-report.css",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "git_blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    },
+    {
+      "path": "watch-save.css",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-save.js",
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+    },
+    {
+      "path": "watch-trends.css",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-trends.js",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "git_blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/package-watch.mjs",
+      "bytes": 9761,
+      "sha256": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3",
+      "git_blob": "58e6b585dfe10ecf419a044b4aed3261242bd277"
+    },
+    {
+      "path": "included-watch.js",
+      "bytes": 3256,
+      "sha256": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+      "git_blob": "9be9d74dfe7d7b6f12d2036862560586281797bd"
+    },
+    {
+      "path": "tests/package-watch.test.mjs",
+      "bytes": 6334,
+      "sha256": "f5b5f3e8144d5f4be62018f22ef30f258623435d8616fbf12bb38c5f83836eed",
+      "git_blob": "c8fc242f8cd257a880d150d80573c47c5cc942d6"
+    },
+    {
+      "path": "tests/included-watch.browser.test.mjs",
+      "bytes": 12866,
+      "sha256": "53a33d96bf599f5e3080a9ac9cda2725cf3f37f5b1a467e0382a7734387f8f72",
+      "git_blob": "adacc1a109c296d4f6c5187e98d4c2f4c0e4d1ed"
+    },
+    {
+      "path": "tests/package-watch-source.test.mjs",
+      "bytes": 7255,
+      "sha256": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+      "git_blob": "e7cdefdbea29069454b03127673baab4d52946fa"
+    },
+    {
+      "path": "WATCH_HANDOFF.md",
+      "bytes": 3801,
+      "sha256": "39b80642b0cf80376510433614856e403d18087ee9c4088389a2854aa1bef578",
+      "git_blob": "66109bb47525f21fd4327ba1cf14cc4b9e54fa0c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16436,
+      "sha256": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2",
+      "git_blob": "57787a08282cb1d9c28d9cee49030d6c19e7cf35"
+    }
+  ],
+  "readme_preservation": {
+    "base": {
+      "bytes": 16136,
+      "sha256": "9e197e700354a78119f6d701a57aa88f6509bd7becce6ee668ff59c6e0658537",
+      "git_blob": "b1f4de22b45f51d8df9563940ff033bee6e14a53"
+    },
+    "final": {
+      "bytes": 16436,
+      "sha256": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2",
+      "git_blob": "57787a08282cb1d9c28d9cee49030d6c19e7cf35"
+    },
+    "inserted_bytes": 300,
+    "original_prefix_exact": true,
+    "insertion": "\n### Share one playable watch file\n\nTo carry the offline game and one explicitly selected watch in a single HTML file, see [Share a playable Longwater watch](WATCH_HANDOFF.md). The recipient reviews the included watch and explicitly chooses replacement; opening the file does not adopt its progress.\n"
+  },
+  "author_final": {
+    "archive_members_verified": 162,
+    "packet": {
+      "bytes": 1734383,
+      "sha256": "9ecc9dc09ef57fa49abd27715d9bb7b898618c184041510bf6a90f4ccf173026",
+      "git_blob": "b492de12e02f8db95ba2076210379e71dd87a313"
+    },
+    "source_commit": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+    "source_files": [
+      {
+        "path": "scripts/package-watch.mjs",
+        "bytes": 9761,
+        "sha256": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3",
+        "git_blob": "58e6b585dfe10ecf419a044b4aed3261242bd277"
+      },
+      {
+        "path": "included-watch.js",
+        "bytes": 3256,
+        "sha256": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+        "git_blob": "9be9d74dfe7d7b6f12d2036862560586281797bd"
+      },
+      {
+        "path": "tests/package-watch.test.mjs",
+        "bytes": 6334,
+        "sha256": "f5b5f3e8144d5f4be62018f22ef30f258623435d8616fbf12bb38c5f83836eed",
+        "git_blob": "c8fc242f8cd257a880d150d80573c47c5cc942d6"
+      },
+      {
+        "path": "tests/included-watch.browser.test.mjs",
+        "bytes": 12866,
+        "sha256": "53a33d96bf599f5e3080a9ac9cda2725cf3f37f5b1a467e0382a7734387f8f72",
+        "git_blob": "adacc1a109c296d4f6c5187e98d4c2f4c0e4d1ed"
+      },
+      {
+        "path": "tests/package-watch-source.test.mjs",
+        "bytes": 7255,
+        "sha256": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+        "git_blob": "e7cdefdbea29069454b03127673baab4d52946fa"
+      },
+      {
+        "path": "WATCH_HANDOFF.md",
+        "bytes": 3801,
+        "sha256": "39b80642b0cf80376510433614856e403d18087ee9c4088389a2854aa1bef578",
+        "git_blob": "66109bb47525f21fd4327ba1cf14cc4b9e54fa0c"
+      },
+      {
+        "path": "README.md",
+        "bytes": 16436,
+        "sha256": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2",
+        "git_blob": "57787a08282cb1d9c28d9cee49030d6c19e7cf35"
+      }
+    ],
+    "source_test_preservation": true,
+    "receipt": {
+      "bytes": 2129,
+      "sha256": "3d7100ac9b091cc2d2a6b652acd7eab6c3e5734ee210935e014a3664e446e2bc",
+      "git_blob": "bc68c52facb802af9cf01d64740282aff7ed6ee5"
+    },
+    "stdout": {
+      "bytes": 3000,
+      "sha256": "946de70b66d9cf123dfaca3a542f88f72ca238c42a5199caa15b5279086deb73",
+      "git_blob": "3ab31636a3d515a64f785d59c33bbf588b913be3"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 7.061645030975342,
+    "reported": 15,
+    "passed": 15,
+    "authored_playwright": "UNRUN"
+  },
+  "independent_results": [
+    {
+      "label": "author original",
+      "report_bytes": 43648,
+      "report_sha256": "81d730f6e74d72063a0166907535808dee49183533c2db8fbcb1ef62b250d025",
+      "checks": 28,
+      "passed": 28,
+      "failed": 0
+    },
+    {
+      "label": "publication original",
+      "report_bytes": 20199,
+      "report_sha256": "b065bbb58b2af82aafd82f87c613dd8d1619407b89761e1e06b43fa8ad1a99b1",
+      "checks": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "label": "publication historical fixed",
+      "report_bytes": 32603,
+      "report_sha256": "23d0515ec4f79d59e8e239986cd4dfaf86a5c79fd11c784126de989c583771a0",
+      "checks": 26,
+      "passed": 26,
+      "failed": 0,
+      "cli_calls": 8
+    },
+    {
+      "label": "publication historical transition",
+      "report_bytes": 30791,
+      "report_sha256": "3dcebd2630ea1114dd3c4fb4b7f1e9d075bb056ab71502f4e46e13abae73f0e8",
+      "checks": 9,
+      "passed": 8,
+      "failed": 1
+    },
+    {
+      "label": "publication final transition",
+      "report_bytes": 28909,
+      "report_sha256": "e7e65ac66db351f522bf72629c271fb80d2e83b28c7a678de9f174523d6ea060",
+      "checks": 9,
+      "passed": 9,
+      "failed": 0,
+      "cli_calls": 1,
+      "child_exit": 1
+    },
+    {
+      "label": "publication final fixed",
+      "report_bytes": 24418,
+      "report_sha256": "5b19f9025def66f1c719a0e120ef6bde201c8be18106f8568eccde2a7d2ec391",
+      "checks": 10,
+      "passed": 10,
+      "failed": 0,
+      "cli_calls": 1,
+      "child_exit": 0
+    },
+    {
+      "label": "recipient original healthy",
+      "report_bytes": 4957376,
+      "report_sha256": "6b3e07184615e3f8a2e838bcfa5d31a6aa797d2be7ec08825df9d1aa369e1210",
+      "checks": 51,
+      "passed": 50,
+      "failed": 1
+    },
+    {
+      "label": "recipient historical healthy",
+      "report_bytes": 4968338,
+      "report_sha256": "4c0bae8e3ac11ff7395abd38a143b5ce9d113d9020c78eca5296e10fced430ed",
+      "checks": 51,
+      "passed": 51,
+      "failed": 0
+    },
+    {
+      "label": "recipient historical faults",
+      "report_bytes": 95920,
+      "report_sha256": "708069cd502a3c3e06d352f6310d22df0a54c8e7ed4070d64c729647acf1e48f",
+      "checks": 78,
+      "passed": 76,
+      "failed": 2
+    },
+    {
+      "label": "recipient final focused",
+      "report_bytes": 32881,
+      "report_sha256": "db1fdc53028296660bf592ff843932cceb847a422adb4aac9b45cf5aea40b65f",
+      "checks": 26,
+      "passed": 26,
+      "failed": 0
+    },
+    {
+      "label": "author historical CLI TAP",
+      "report_sha256": "89f50da78605c1b41107a4c7cfa58bee3d841dbd775dfc8116e6e8fc261fcdfd",
+      "reported": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "label": "author final affected CLI TAP",
+      "report_sha256": "946de70b66d9cf123dfaca3a542f88f72ca238c42a5199caa15b5279086deb73",
+      "receipt_sha256": "3d7100ac9b091cc2d2a6b652acd7eab6c3e5734ee210935e014a3664e446e2bc",
+      "reported": 15,
+      "passed": 15,
+      "failed": 0,
+      "top_level": 8,
+      "nested": 7,
+      "returncode": 0,
+      "raw_before_after_exact": true
+    }
+  ],
+  "receiving_freezes": {
+    "author_initial": "eb6ccdc169e5313b719e271b54855691be47452c",
+    "author_source_repair_criteria": "e477d2e479592295bd245ecaece9e88528ca28d9",
+    "publication_source_transition": "2752adf1d0817d23fd9d0e8a8b5686deba30ce16",
+    "publication_final": "b69f30e6b7b7bbaf9824933ac7cfeec0fec80f8c",
+    "browser_initial": "d307ec24d17a44507b8dbac20279ee927ab54ec8",
+    "browser_faults_post_source_exposure": "b1dd05680d3581376e3d6ea6622635cb28a4c1ed",
+    "browser_final": "0e152e525ae642686979a1c45373250bf9d679c8"
+  },
+  "repair_meaning": {
+    "source_transition": "V1 published after an inert-comment change between validation and packaging; final source executes captured SavedWatch/glue/WASM bytes and requires exact decoded packaged bindings. The independent identical transition now refuses; author cache and restored-path controls separately pass. No changed simulation semantics are inferred from an inert comment.",
+    "file_delivery": "V1 injected silent FileList refusal dispatched an empty change and falsely reported delivery, with saved state and manual preview preserved. Final four-line readback requires exactly the intended File before change dispatch; both refusal and normal delivery pass the focused native receiver.",
+    "snapshot_boundary": "Exact validation trio bound to actual artifact bytes; no atomic snapshot of every unrelated source path is claimed"
+  },
+  "final_artifact_proof": {
+    "ordinary_game": {
+      "bytes": 339166,
+      "sha256": "1d8fd1112ccda3a9cfc06077915d2b13a303dcc128682afa1f85b0436f947c33",
+      "git_blob": "4c9b109de95b7e7bd62a9919bc2862040fc1dc6f"
+    },
+    "public_and_actual_handoff": {
+      "bytes": 346423,
+      "sha256": "a502f9b9b52cdef3cc9e81fcae72dac21eda163674d34565ddef9c184f176231",
+      "git_blob": "6b7cdba28ed25ed733985514c187400593020878"
+    },
+    "exact_original_module_and_CSS": true,
+    "original_module_imports": 6,
+    "watch_save": {
+      "bytes": 9891,
+      "sha256": "80a15bf859a2c8848bef458dfc94e21ae9924513028086539e5b6ae46aa9824c",
+      "git_blob": "b350738efe99cb89622105a8431483dc06ab6e41"
+    },
+    "glue": {
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "git_blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    "wasm": {
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "git_blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    "selected_watch": {
+      "bytes": 1546,
+      "sha256": "e43bdf893ffc9ede685af866e931b1d87c4793da277e2478fc8c2e20a5326a71",
+      "git_blob": "0a392cf1910f63f28fa51f9b4ca9fdb3f8d63bbe"
+    },
+    "controller": {
+      "bytes": 3256,
+      "sha256": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+      "git_blob": "9be9d74dfe7d7b6f12d2036862560586281797bd"
+    },
+    "root_source_pair_matches_both_final_receivers": true,
+    "stylesheet_data_links": 8,
+    "stylesheet_payloads": [
+      {
+        "path": "style.css",
+        "bytes": 3342,
+        "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+        "git_blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "journal.css",
+        "bytes": 2465,
+        "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+        "git_blob": "89d5e2413e32a9db5234727f54407e2a111f39af",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "watch-report.css",
+        "bytes": 571,
+        "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+        "git_blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "watch-trends.css",
+        "bytes": 2791,
+        "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+        "git_blob": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "watch-save.css",
+        "bytes": 473,
+        "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+        "git_blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "watch-choice.css",
+        "bytes": 3741,
+        "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+        "git_blob": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "watch-file.css",
+        "bytes": 1196,
+        "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+        "git_blob": "9aee526fc9225b5aea8242eed8fa543525574bef",
+        "exact_current_git_blob": true
+      },
+      {
+        "path": "practice-watch.css",
+        "bytes": 3650,
+        "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+        "git_blob": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+        "exact_current_git_blob": true
+      }
+    ],
+    "root_audit_corrections": [
+      {
+        "prior_check": "Compared empty style-tag collections; did not establish CSS preservation",
+        "prior_style_tag_count": 0,
+        "correction": "Parsed eight actual stylesheet link data URLs, required exact link/order equality, decoded all eight payloads and compared against archived ordinary source and current maintained Git blobs",
+        "product_or_oracle_changed": false,
+        "native_execution_repeated": false
+      }
+    ]
+  },
+  "browser_receiving_detail": {
+    "source": "0cadb4e4da43baa6e091b528ed59a48020ac159a",
+    "cases": 2,
+    "checks": 26,
+    "passed": 26,
+    "browser_exit": 0,
+    "recipient_tides": 3,
+    "pending_manual_tides": 7,
+    "included_tides": 6,
+    "before_confirmation_storage_writes": 0,
+    "explicit_adoption_storage_writes_per_case": 1,
+    "physical_exports": {
+      "recipient": {
+        "bytes": 1612,
+        "sha256": "dd636e22ad5096116a0da1f966c7799a6e23b18d765db3197f9481d2ebcd4f02"
+      },
+      "donor": {
+        "bytes": 1654,
+        "sha256": "d0c6f103635c2ee952fdb9d52eac8fa11264e1d7f33faf3e92b3b8b083c954bc"
+      },
+      "manual": {
+        "bytes": 1703,
+        "sha256": "1cf550abf027c56ad14855892d0c135c60c2fceb51da73a8cec738bd1fe71b6b"
+      }
+    },
+    "normal_delivery_note": "The change event contains the intended donor File; the existing handler subsequently clears the input, so its final empty FileList is not a delivery failure",
+    "fault_classification": "Explicit injected browser API compatibility control; not observed natural silent refusal",
+    "visual_scope": "Root inspected saved earlier continuation and fault images only; no final/mobile/accessibility visual qualification"
+  },
+  "private_raw_custody": {
+    "private_packets": [
+      {
+        "role": "author_v1",
+        "bytes": 1268322,
+        "sha256": "bcedbde0a58bae9879b321752d4ec05fbdd738d7b403181cd577d08904b74757",
+        "git_blob": "6391f8894f994d37da75d21e66e6b4e6a2d1c755",
+        "archives": [
+          {
+            "bytes": 879860,
+            "sha256": "b268f821a6e51bd0f9ec2d2fea3c715fdde67b9456faa81b913fd690098047bc",
+            "git_blob": "b2248a7e37a893e222c023c9d551f57988964f17",
+            "members": 98,
+            "symlink_records": 0,
+            "regular_members": 98
+          }
+        ],
+        "member_manifest_verification": {
+          "manifest_members": 98,
+          "regular_payloads_verified": 98,
+          "symlink_records_verified": 0,
+          "additional_internal_manifest": [],
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "independent_recipient_v1",
+        "bytes": 538252,
+        "sha256": "0d8043f83fc758b1ae3ceaa3da502ac2f3a11b2665819da636e729c2160abbd7",
+        "git_blob": "dc6a14e9dc470c93a271c2be9e9d466f016c71e2",
+        "archives": [
+          {
+            "bytes": 362800,
+            "sha256": "83b6c7bfab418b73cba21d2beee83983199682b8029405de0e29d4a233264db5",
+            "git_blob": "54eedae9d60f1ed173c97a9ecf2b60dc5c51ffcd",
+            "members": 109,
+            "symlink_records": 0,
+            "regular_members": 109
+          }
+        ],
+        "member_manifest_verification": {
+          "manifest_members": 108,
+          "regular_payloads_verified": 108,
+          "symlink_records_verified": 0,
+          "additional_internal_manifest": [
+            "archive-manifest.json"
+          ],
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "independent_publication_v1",
+        "bytes": 1201033,
+        "sha256": "5473da6070f64839596993d2b25a55fb0854dbd1b961be95ffc5396455cb9988",
+        "git_blob": "878b78fd8ae073c0f09e4e1e4cb5071b22271b7a",
+        "archives": [
+          {
+            "bytes": 734964,
+            "sha256": "803d40ff9f13390dd3b966f851ef872e470770fdc6e3ed527f69f884f494753f",
+            "git_blob": "f562f1aad0c4449aa8d745237cfcbc208c5508f0",
+            "members": 177,
+            "symlink_records": 2,
+            "regular_members": 175
+          }
+        ],
+        "member_manifest_verification": {
+          "manifest_members": 177,
+          "regular_payloads_verified": 175,
+          "symlink_records_verified": 2,
+          "additional_internal_manifest": [],
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "recipient_fault_and_successor_preparation",
+        "bytes": 102146,
+        "sha256": "f7217c631a6c5bbd6ae479d51c5fa9af94837601f62cd9fbea5e6c155c4d4e92",
+        "git_blob": "62d5fba4ff7f160f24d0676fdb49eb14684efa50",
+        "archives": [
+          {
+            "bytes": 64736,
+            "sha256": "3efceee5b2ef9fcab04013f77e09d98b9fc4e38175f3b7103705eaec668f6dfd",
+            "git_blob": "43fc4f0a2ee02ebc4fc31576e620967e1bda315e",
+            "members": 43,
+            "symlink_records": 0,
+            "regular_members": 43
+          }
+        ],
+        "member_manifest_verification": {
+          "regular_payloads_verified": 42,
+          "additional_internal_manifest": [
+            "archive-manifest.json"
+          ],
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "author_v2",
+        "bytes": 1734383,
+        "sha256": "9ecc9dc09ef57fa49abd27715d9bb7b898618c184041510bf6a90f4ccf173026",
+        "git_blob": "b492de12e02f8db95ba2076210379e71dd87a313",
+        "archives": [
+          {
+            "bytes": 1193835,
+            "sha256": "0e29a08b56980de6974bac650b364c6a5c669fdb62cfa1fd713a4a0ec8c5c1d9",
+            "git_blob": "4118ed2078af07df2c0f1d3f6437822a5b569bbf",
+            "members": 162,
+            "symlink_records": 0,
+            "regular_members": 162
+          }
+        ],
+        "member_manifest_verification": {
+          "regular_payloads_verified": 162,
+          "additional_internal_manifest": 0,
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "independent_publication_v2",
+        "bytes": 417396,
+        "sha256": "df6ec765313338f14792d0b04258062c0034acd687089a415697e596f1a4394d",
+        "git_blob": "bb830d3e684b7343ff9c2754b2df6db5d8646d5a",
+        "archives": [
+          {
+            "bytes": 303564,
+            "sha256": "a61914492d29e5141724be857b2251440a770d965bac7769d5a1e0d2a39e572b",
+            "git_blob": "52b65f59da10d7759a0e4f947560023678033f9c",
+            "members": 78,
+            "symlink_records": 0,
+            "regular_members": 78
+          }
+        ],
+        "member_manifest_verification": {
+          "regular_payloads_verified": 78,
+          "additional_internal_manifest": [],
+          "no_unlisted_payloads": true
+        }
+      },
+      {
+        "role": "independent_recipient_v2",
+        "bytes": 310549,
+        "sha256": "5763d5865bde1bb98a01c67d8dadf20fcbad64f496de51b1bb377e568a4844b4",
+        "git_blob": "f74381e222ae32f5e2d3fa295543bae1a4297ca5",
+        "archives": [
+          {
+            "bytes": 192736,
+            "sha256": "0f67f482737592afa68108d76d0d68683602562f18394fac4b8f1f86d0f5133f",
+            "git_blob": "caa5f50f8b5f35fef37670b52065e6abbde25f90",
+            "members": 30,
+            "symlink_records": 0,
+            "regular_members": 30
+          }
+        ],
+        "member_manifest_verification": {
+          "regular_payloads_verified": 29,
+          "additional_internal_manifest": [
+            "archive-manifest.json"
+          ],
+          "no_unlisted_payloads": true
+        }
+      }
+    ],
+    "base_manifest": {
+      "bytes": 2796,
+      "sha256": "9f684208b17ca9ce0680cf7a7c7dfaa383903bfcd20c2e2ae395597686c870a6",
+      "git_blob": "b1c0816fd76640516d8eaf800c8f72a8606f579b"
+    },
+    "base_manifest_unchanged": true,
+    "final_native_copies": {
+      "longwater_author_v2_private": {
+        "native_copy_readback_exact": true,
+        "bytes": 1734383,
+        "sha256": "9ecc9dc09ef57fa49abd27715d9bb7b898618c184041510bf6a90f4ccf173026",
+        "git_blob": "b492de12e02f8db95ba2076210379e71dd87a313"
+      },
+      "longwater_publication_v2_private": {
+        "native_copy_readback_exact": true,
+        "bytes": 417396,
+        "sha256": "df6ec765313338f14792d0b04258062c0034acd687089a415697e596f1a4394d",
+        "git_blob": "bb830d3e684b7343ff9c2754b2df6db5d8646d5a"
+      },
+      "longwater_browser_v2_private": {
+        "native_copy_readback_exact": true,
+        "bytes": 310549,
+        "sha256": "5763d5865bde1bb98a01c67d8dadf20fcbad64f496de51b1bb377e568a4844b4",
+        "git_blob": "f74381e222ae32f5e2d3fa295543bae1a4297ca5"
+      }
+    },
+    "append_receipt_digests": {
+      "author-v2-custody-receipt.json": {
+        "bytes": 1027,
+        "sha256": "3570f2a76c1a03149952db20a258bf8da7cf91aba7ada162d3c187f5d572643a",
+        "git_blob": "b47525f8f1991e0ea9c19c080cbf4ddb2cdde6dc"
+      },
+      "independent-publication-v2-custody.json": {
+        "bytes": 685,
+        "sha256": "1ff42fa9d1e480dd1b3179148f1326409b1d1f3604654ee5c8d062f5dcbc38b8",
+        "git_blob": "7968c55d3157940801ace9f6ef631538cffc6523"
+      },
+      "recipient-v2-custody-receipt.json": {
+        "bytes": 676,
+        "sha256": "3643f77809bd84d86bce51d986b9862a4d33a8f5d6b09e2ab32113b7a609a60f",
+        "git_blob": "16a217390c2e0652c580d8d8bddcba50b36ac24b"
+      }
+    },
+    "permissions": "Private directory0700 and packet files0600 recorded; file/directory sync and exact readback receipts retained",
+    "limits": "Native custody and reported fsync/readback do not establish power-loss durability, replication or a private remote backup",
+    "private_download_transfer": "Three private upload attempts returned HTTP403; no upload confirmed, finalization or retry. Raw bytes were withheld from public Git and preserved in the separately authorized native custody."
+  },
+  "public_derivatives": [
+    {
+      "role": "longwater_author_v2_public",
+      "bytes": 87181,
+      "sha256": "cb35da3e8f01060e811a7982e31602c48b25062114882f21b32a0f7e1413507f",
+      "git_blob": "772fff39bbb1d8c3aa83e232ad70f4e5cb6d03b0",
+      "entries": 13
+    },
+    {
+      "role": "longwater_publication_v2_public",
+      "bytes": 504807,
+      "sha256": "888a91c348b665bc403c3a7cd3f4563d04dd64061100cdaa9bf7a46da2ce2e4c",
+      "git_blob": "7ca0dd45fe5b38c3f7b7b372fe00acb37f5e2ab9",
+      "entries": 8
+    },
+    {
+      "role": "longwater_browser_v2_public",
+      "bytes": 8541,
+      "sha256": "2155b755ad8615e3af8d44cf68192f93b4a5cfba9df15b2a0212d9bc88d711a6",
+      "git_blob": "e09168265ba03f13dfb1787d8a2dc91ed579e752",
+      "entries": 3
+    }
+  ],
+  "independent_public_audit": {
+    "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/public-audit/audit.json",
+    "bytes": 33914,
+    "sha256": "5477d16f960a3b7a54384f68a1726c3d41291b3ecd8439e4305776c78e4e00b3",
+    "git_blob": "7cd63fb2027e92fe72e7f3d1a85d5e6524eb8f92",
+    "status": "accepted: no unresolved findings in the enumerated public bytes",
+    "scan": {
+      "top_level_payloads": 24,
+      "packet_metadata_objects": 3,
+      "embedded_payloads": 22,
+      "nodes": 49,
+      "unique_sha256": 48,
+      "findings": []
+    },
+    "limitation": "This is a finite inspection of these exact payloads and recognized literal encodings, not a claim to detect arbitrary secrets or obfuscated programs. No external URLs were visited."
+  },
+  "preserved_corrections_and_limits": [
+    "Original optional-command absence and missing included-review control were capability observations; existing manual review positive controls passed.",
+    "Publication oracle property-order comparison was corrected before first candidate exposure, with exact inverse retained.",
+    "Interrupted initial intake was reconciled before the sole original fixed-source campaign; no blind child replay.",
+    "A guessed source-manifest parent locator returned ENOENT; exact source was later bound to the actual manifest and full module bytes.",
+    "Author evidence packaging scope assertions failed before writes, first counting prior evidence and then omitting the separately authorized guide paragraph; both attempts and errors remain private.",
+    "An unexplained untracked receiving README was preserved with metadata and unresolved authorship; it was excluded from the explicitly authored public derivatives.",
+    "Public author prose was corrected from exact executed bytes to exact frozen bytes; source/tests and the UNRUN Playwright limitation remained exact.",
+    "Final public-audit companion packaging writes hit quota after audit.json had been saved; its exact existing audit bytes were received directly, with no audit or product replay.",
+    "Root byte-audit transport recovery did not replay native product commands.",
+    "Root CSS audit correction is recorded with the actual eight stylesheet payload proofs."
+  ],
+  "unrun_and_unclaimed": [
+    "Authored Playwright gate",
+    "Current hosted smoke/browser/choice-witness gates",
+    "Broader browser/platform support",
+    "Maintained-branch or live-demo integration",
+    "Owner adoption or live saved-watch mutation",
+    "Final mobile/accessibility visual qualification"
+  ],
+  "workflow_audit": {
+    "path": ".github/workflows/smoke.yml",
+    "bytes": 2242,
+    "sha256": "001e374e462e38abeaf4d192af26e8bc0e10becd63508bfb2bf1fe1b576a933a",
+    "git_blob": "a30df84dc29eb06f27e2848e979ecf2396a70a61",
+    "full_body": "name: smoke\n\non:\n  push:\n    branches: [longwater-demo]\n  pull_request:\n    branches: [longwater-demo]\n\n# A bad push here breaks the live demo for visitors, so keep this cheap and\n# fast: syntax-check the UI script and confirm every asset the page loads\n# actually exists and is non-empty.\njobs:\n  smoke:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4\n      - name: JS syntax check\n        run: node --check game.js\n      - name: Referenced assets exist and are non-empty\n        run: |\n          set -e\n          # .nojekyll is legitimately empty; everything else must be non-empty.\n          test -e .nojekyll || { echo \"missing: .nojekyll\"; exit 1; }\n          for f in index.html style.css game.js journal.js journal.css watch-save.js watch-save.css \\\n                   pkg/longwater_web.js pkg/longwater_web.d.ts \\\n                   pkg/longwater_web_bg.wasm pkg/longwater_web_bg.wasm.d.ts; do\n            test -s \"$f\" || { echo \"missing or empty: $f\"; exit 1; }\n          done\n          grep -q '\\./pkg/longwater_web.js' game.js\n          grep -q '\\./game.js' index.html\n          grep -q '\\./style.css' index.html\n          echo \"smoke OK\"\n\n  browser:\n    runs-on: ubuntu-latest\n    timeout-minutes: 8\n    steps:\n      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4\n      - name: Install browser test dependencies\n        run: npm ci\n      - name: Install Chromium\n        run: npx playwright install --with-deps chromium\n      - name: Play and resume the real WASM watch, including offline packaging\n        run: npm test\n      - name: Receive the original historical-choice file-adoption witness\n        run: node scripts/receive-watch-choice-adoption.mjs\n      - name: Emit the bounded authored historical-choice captures\n        if: always()\n        run: node scripts/emit-watch-choice-artifacts.mjs\n      - name: Preserve historical-choice receiving artifacts\n        if: always()\n        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4\n        with:\n          name: historical-choice-${{ github.sha }}\n          path: test-results/watch-choice\n          if-no-files-found: warn\n          retention-days: 14\n",
+    "inherited_and_current_default_identical": true,
+    "only_events": {
+      "push": {
+        "branches": [
+          "longwater-demo"
+        ]
+      },
+      "pull_request": {
+        "branches": [
+          "longwater-demo"
+        ]
+      }
+    },
+    "proposed_branch": "work/playable-watch-handoff-18a24bf0c281-20261009",
+    "matching_event": false,
+    "actions_policy": "No dispatch, rerun, schedule, self-hosted runner, PR, default-branch update, merge or tag",
+    "yaml_parse_passed": true
+  },
+  "published_payloads_except_this_record": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 16436,
+      "sha256": "cebd8bd891267a9ffc4f017e0f5b919cdeb26e3a85cf9d67b62c53ad3eaebbb2",
+      "git_blob": "57787a08282cb1d9c28d9cee49030d6c19e7cf35"
+    },
+    {
+      "path": "WATCH_HANDOFF.md",
+      "mode": "100644",
+      "bytes": 3801,
+      "sha256": "39b80642b0cf80376510433614856e403d18087ee9c4088389a2854aa1bef578",
+      "git_blob": "66109bb47525f21fd4327ba1cf14cc4b9e54fa0c"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/README.md",
+      "mode": "100644",
+      "bytes": 4572,
+      "sha256": "6ee7dbfc276003f3ef16029a795a11ff93744066e28639edfe09966ab75036cb",
+      "git_blob": "77e0893eaa60bd2bf01ad3df3383299289bc2ee8"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/README.md",
+      "mode": "100644",
+      "bytes": 4510,
+      "sha256": "cd91490dc015cc2351842f004addc6d8f5fd4b8e0f54492ee696fb2decd06c4b",
+      "git_blob": "38f01dc01e48857591b725b7405d2650ff4d1c38"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/affected.stdout.tap",
+      "mode": "100644",
+      "bytes": 3000,
+      "sha256": "946de70b66d9cf123dfaca3a542f88f72ca238c42a5199caa15b5279086deb73",
+      "git_blob": "3ab31636a3d515a64f785d59c33bbf588b913be3"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/history.json",
+      "mode": "100644",
+      "bytes": 2076,
+      "sha256": "5d791578121160a154e0181b8afece4250c00ac4215ec25bc52d3ac11c32ca71",
+      "git_blob": "1075516a92d7f4ba63e334703d9d4aa24b799ff0"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/members.json",
+      "mode": "100644",
+      "bytes": 1467,
+      "sha256": "348cb37ea89f44576de23bc999ac5ca64f1d0280025b0051412a706217c39c50",
+      "git_blob": "c00c97318b0c5e8f2e7f2116ef7687758cd0dbcd"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/qualification.json",
+      "mode": "100644",
+      "bytes": 3255,
+      "sha256": "8f8069a54d348a7ca44a5f9cebd162c78ea73d85516e792f4c8162a1e3c2b06c",
+      "git_blob": "1b392155815be401a583f26f7343f6d8ed5ac237"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/author-v2/source-preservation.json",
+      "mode": "100644",
+      "bytes": 5744,
+      "sha256": "27f9f65bb35348bdc71bc801d575aaeefaa6afe3c111b05b14c9e600fce141c9",
+      "git_blob": "745c9981e3ff29414d3298d05b8fdfb3ad661c2c"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/README.md",
+      "mode": "100644",
+      "bytes": 7042,
+      "sha256": "f0e2807baefa827b81d05dc2b9aa26dcd2e9c6df656fef3d98af129a75e70b3e",
+      "git_blob": "54fffeae88dd8ed490adde5f4fc73526722871f5"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/derivative-manifest.json",
+      "mode": "100644",
+      "bytes": 1769,
+      "sha256": "5dd14d2203acada7fc2635237576e5292c21ae662653f83d4a0ca5ef3fb1db52",
+      "git_blob": "5d99d4dd079b0036f4ec10c8a04723d7b79145df"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/fixture-wrapper.mjs",
+      "mode": "100644",
+      "bytes": 1149,
+      "sha256": "adca5e3fc9ff3b72f9469d9f2296f6756f24ab97d0efea41a6fee71f217d5df3",
+      "git_blob": "d9205cfa846f732f52f1d81eea3e35868aa83e10"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/qualification.json",
+      "mode": "100644",
+      "bytes": 1596,
+      "sha256": "4c7f66ef83a36a1264e19599ba3bc2521706d4e92ccfe751e59ef996ccc4eee6",
+      "git_blob": "aaeee93f1452691fcf2ed71a96c3b1c77644d475"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/receive-fixed.mjs",
+      "mode": "100644",
+      "bytes": 5909,
+      "sha256": "a250420ae8dfc17844348835ef450842fb23eafc7124acd1c02f4dc8b1b7fd08",
+      "git_blob": "5286e34cc42815e504e3e864a8a73f73458dd5b2"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/receive-transition.mjs",
+      "mode": "100644",
+      "bytes": 7002,
+      "sha256": "81f6521452d0a0b3ed1f7a13b13388daa69b502d24960bc2e15d7c46c74e122c",
+      "git_blob": "dffe72c7456467af0658fd5c9286dafc23a05f83"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/received-watch.html",
+      "mode": "100644",
+      "bytes": 346423,
+      "sha256": "a502f9b9b52cdef3cc9e81fcae72dac21eda163674d34565ddef9c184f176231",
+      "git_blob": "6b7cdba28ed25ed733985514c187400593020878"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-publication/redacted-review/source-provenance.json",
+      "mode": "100644",
+      "bytes": 5638,
+      "sha256": "e7db62025ac4c12bca1a065d7da14e445981d4b5e704b66ccc4d5664a9295c83",
+      "git_blob": "59e0c5ec77e146d9a9a9a0572154a659838225d8"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-recipient/focused-v2/README.md",
+      "mode": "100644",
+      "bytes": 2114,
+      "sha256": "50bb68d77b6d9f7cc2fe16f1055c3020527fcb19e6d51ae4224e01f597ee6c37",
+      "git_blob": "759d244c2c43283d5a708b89866f145694b28236"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-recipient/focused-v2/REDACTION.md",
+      "mode": "100644",
+      "bytes": 786,
+      "sha256": "75d0e69bc52286d25d9476fbd94d3d6af219b60f19e9bd5c6d8ff6ca52e3c570",
+      "git_blob": "ec158f63ed379f74433ee128151d4a1ad8328354"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/independent-recipient/focused-v2/qualification.json",
+      "mode": "100644",
+      "bytes": 4192,
+      "sha256": "4bd34265781896e67a83033793f36801b78102555dd260578da77f747cda4b1c",
+      "git_blob": "71ae9da46f98acf54abde6b8db4dbc12a33081f2"
+    },
+    {
+      "path": "docs/receiving/playable-watch-handoff-18a24bf0c281/public-audit/audit.json",
+      "mode": "100644",
+      "bytes": 33914,
+      "sha256": "5477d16f960a3b7a54384f68a1726c3d41291b3ecd8439e4305776c78e4e00b3",
+      "git_blob": "7cd63fb2027e92fe72e7f3d1a85d5e6524eb8f92"
+    },
+    {
+      "path": "included-watch.js",
+      "mode": "100644",
+      "bytes": 3256,
+      "sha256": "6c16fe4320ea180eb9257c5f19d97419c06c0da18c5a556099e22290a60885f6",
+      "git_blob": "9be9d74dfe7d7b6f12d2036862560586281797bd"
+    },
+    {
+      "path": "scripts/package-watch.mjs",
+      "mode": "100644",
+      "bytes": 9761,
+      "sha256": "03eaca1e36dd6244f69d1334da55643ebbf373bf87f04a35fa535f82c6531ce3",
+      "git_blob": "58e6b585dfe10ecf419a044b4aed3261242bd277"
+    },
+    {
+      "path": "tests/included-watch.browser.test.mjs",
+      "mode": "100644",
+      "bytes": 12866,
+      "sha256": "53a33d96bf599f5e3080a9ac9cda2725cf3f37f5b1a467e0382a7734387f8f72",
+      "git_blob": "adacc1a109c296d4f6c5187e98d4c2f4c0e4d1ed"
+    },
+    {
+      "path": "tests/package-watch-source.test.mjs",
+      "mode": "100644",
+      "bytes": 7255,
+      "sha256": "a1b56915971b93f0adfd57b0bf030853a162375cefeda6bf8d9db24a7da7c94f",
+      "git_blob": "e7cdefdbea29069454b03127673baab4d52946fa"
+    },
+    {
+      "path": "tests/package-watch.test.mjs",
+      "mode": "100644",
+      "bytes": 6334,
+      "sha256": "f5b5f3e8144d5f4be62018f22ef30f258623435d8616fbf12bb38c5f83836eed",
+      "git_blob": "c8fc242f8cd257a880d150d80573c47c5cc942d6"
+    }
+  ]
+}
