@@ -13,6 +13,7 @@ export class WatchFile {
   #generation = 0;
   #reading = false;
   #preview = null;
+  #sourceCurrent = null;
 
   constructor(root, { watch, maxLength, onRestore }) {
     this.#watch = watch;
@@ -55,6 +56,7 @@ export class WatchFile {
     this.#generation++;
     this.#reading = false;
     this.#preview = null;
+    this.#sourceCurrent = null;
     this.#watch.cancelFile();
     const focused = this.#panel.contains(document.activeElement);
     this.#panel.hidden = true;
@@ -68,7 +70,16 @@ export class WatchFile {
     this.#clear(pending ? message : "");
   }
 
-  async #read(file) {
+  // A shelf supplies one deliberately chosen File. Keep the normal file path
+  // and its native admission/replacement; bind this extra source until adoption.
+  reviewFile(file, sourceCurrent = null) {
+    if (sourceCurrent !== null && typeof sourceCurrent !== "function") {
+      throw new TypeError("The file source check must be a function.");
+    }
+    return this.#read(file, sourceCurrent);
+  }
+
+  async #read(file, sourceCurrent = null) {
     this.#clear("");
     const generation = this.#generation;
     if (file.size > this.#maxLength) {
@@ -80,9 +91,14 @@ export class WatchFile {
     try {
       const raw = await file.text();
       if (generation !== this.#generation) return;
+      if (sourceCurrent && !sourceCurrent()) {
+        this.#clear("The shelf entry changed or cannot be read. Open the shelf and review it again. Your current watch has been kept.");
+        return;
+      }
       const preview = this.#watch.previewFile(raw);
       this.#reading = false;
       this.#preview = preview;
+      this.#sourceCurrent = sourceCurrent;
       this.#title.textContent = "Open " + file.name + "?";
       this.#summary.textContent = "Day " + preview.day + " of 14. " + preview.cell + " selected. "
         + (preview.finished ? "Watch complete: " + preview.outcome + "." : "Watch in progress.")
@@ -100,6 +116,9 @@ export class WatchFile {
     if (!this.#preview) return;
     const day = this.#preview.day;
     try {
+      if (this.#sourceCurrent && !this.#sourceCurrent()) {
+        throw new Error("The shelf entry changed or cannot be read. Open the shelf and review it again.");
+      }
       this.#watch.restoreFile(this.#preview);
     } catch (error) {
       this.#clear(String(error.message || error) + " Your current watch has been kept.");

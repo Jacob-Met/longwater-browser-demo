@@ -187,6 +187,14 @@ remains available in this page and **Download watch** can preserve it.
 A watch file contains progress; the separately packaged HTML contains the game.
 Use the watch-file controls in either copy to carry the same watch between them.
 
+## Keep named watches on your shelf
+
+Open **Watch shelf** below the carry-watch controls. Type a name and choose **Keep current watch** to keep a separate copy of the active watch, including its selected cell, accepted tides and complete journal. Later play does not update that kept copy. The shelf holds up to twelve entries within 256 KB; it never replaces an older entry automatically, even when names match.
+
+Each entry shows its replayed day, selected cell and completion. **Open watch** shows the existing file review; only **Replace current watch** adopts that exact watch. You can cancel the review or close the shelf without replacing progress. A changed shelf entry or saved watch must be reviewed again. **Rename** changes one entry's name; **Remove from shelf** asks before removing that entry and leaves the active watch alone.
+
+The shelf uses this browser's local storage, separately from the current watch's automatic save. Other browsers and different offline-file contexts can have separate shelves. **Download watch** remains the portable backup. If storage is unavailable, full, unreadable or changed in another tab, the shelf shows the problem and preserves unaccepted changes; **Refresh shelf** reads its current contents. Unreadable stored watches stay visible and cannot be opened.
+
 ## Screenshots
 
 ![Longwater on desktop](screenshots/desktop.png)

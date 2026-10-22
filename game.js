@@ -4,6 +4,7 @@ import { SavedWatch, WATCH_SAVE_KEY, MAX_SAVE_LENGTH } from "./watch-save.js";
 import { WatchChoice } from "./watch-choice.js";
 import { WatchFile } from "./watch-file.js";
 import { PracticeWatch } from "./practice-watch.js";
+import { WatchShelf } from "./watch-shelf.js";
 
 const canvas = document.querySelector("#game");
 const live = document.querySelector("#live");
@@ -534,6 +535,9 @@ try {
   announce();
   showSaveStatus();
   new PracticeWatch(document.querySelector("#practice-watch"), document.querySelector("#practice-open"), () => new BrowserSession());
+  new WatchShelf(document.querySelector("#watch-shelf"), document.querySelector("#shelf-open"), {
+    watch, watchFile, createSession: () => new BrowserSession(),
+  });
 } catch (error) {
   live.textContent = `Longwater could not start: ${String(error)}`;
   const errorMessage = document.querySelector("#startup-error");

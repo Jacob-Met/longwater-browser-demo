@@ -3,9 +3,9 @@
   "runtime": [
     {
       "path": "index.html",
-      "bytes": 9627,
-      "gitBlob": "4f5aafec0518dbf2075f72278d1b80670781eb8c",
-      "sha256": "47a1175e58573a645c2d77150d3e9df87e4599616369b167a064c3858b762208"
+      "bytes": 12482,
+      "gitBlob": "cae310fab72ce5fc540c456fdb0b5b97531d9902",
+      "sha256": "cf84bdfd4776caf9776e346f33559ecbf1d07e897b990d6f2c3ca18364f78392"
     },
     {
       "path": "style.css",
@@ -51,9 +51,9 @@
     },
     {
       "path": "game.js",
-      "bytes": 22031,
-      "gitBlob": "c62050cc78f600abc90575754ef7c9ca0d6a1ff8",
-      "sha256": "4fcc1a4d700a0b5af46f0c47d90c5c672d09e8437f5cc18bed8b2de41c33801c"
+      "bytes": 22247,
+      "gitBlob": "6a90da6bf4f230784178967c7fc9b9d9e8e8f83c",
+      "sha256": "9a8fa0ae31ca9e94b14eacaa76a5c47f8a6a980e4abdf312b2c7f62da37b0934"
     },
     {
       "path": "pkg/longwater_web.js",
@@ -75,9 +75,9 @@
     },
     {
       "path": "watch-file.js",
-      "bytes": 5475,
-      "gitBlob": "34c8490804e696e500e1362c629bb05a51ab3040",
-      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6"
+      "bytes": 6382,
+      "gitBlob": "13d38216835b3badfd1bccd74cff3c6fe8e6beb6",
+      "sha256": "dc7704672cf8aca9520cb965deb4c2f36c40b5b40ba82cdbb3d33bd9e0c16f15"
     },
     {
       "path": "watch-trends.js",
@@ -120,6 +120,24 @@
       "bytes": 8384,
       "gitBlob": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
       "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18"
+    },
+    {
+      "path": "watch-shelf.js",
+      "bytes": 7421,
+      "gitBlob": "5072be75b53fe428d33914ede972002527daa083",
+      "sha256": "29a60b5d6867ce998c7b13011073a1817c108f79f1c4fa06005ff4338b361019"
+    },
+    {
+      "path": "watch-shelf-model.js",
+      "bytes": 9972,
+      "gitBlob": "634e747575bbba0e1a239127211d04fa4f9f6aee",
+      "sha256": "4b10cb120884ed3cac446816a342355cddaf219bff9717cbbed65e33fe487d4f"
+    },
+    {
+      "path": "watch-shelf.css",
+      "bytes": 2839,
+      "gitBlob": "390ac6b9183e91718e21e5975d89e65352076261",
+      "sha256": "ffacb377fa11d6354e796daf566fe9db6df0d91abd854fe724df420417caf825"
     }
   ]
 }

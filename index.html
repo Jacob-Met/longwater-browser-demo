@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./watch-choice.css">
   <link rel="stylesheet" href="./watch-file.css">
   <link rel="stylesheet" href="./practice-watch.css">
+  <link rel="stylesheet" href="./watch-shelf.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -72,6 +73,12 @@
       </section>
       <p id="watch-file-status" role="status" aria-live="polite"></p>
     </section>
+    <section class="shelf-entry" aria-labelledby="shelf-entry-title">
+      <h2 id="shelf-entry-title">Keep a watch on your shelf</h2>
+      <p>Name separate attempts or completed watches, then choose one to revisit. Each kept copy stays as it was when you saved it.</p>
+      <button id="shelf-open" type="button" disabled>Open watch shelf</button>
+      <p id="shelf-entry-status" role="status" aria-live="polite">Up to 12 named watches, kept in this browser.</p>
+    </section>
     <section id="watch-journal" class="watch-journal" aria-labelledby="journal-title" hidden></section>
     <section id="watch-choice" class="watch-choice" aria-labelledby="choice-title" hidden></section>
     <p id="state-summary" class="visually-hidden">The first tide is gathering.</p>
@@ -126,6 +133,47 @@
       </div>
       <p id="practice-status" role="status" aria-live="polite" aria-atomic="true"></p>
       <section id="practice-output" aria-label="Practice readings and tide result"></section>
+    </dialog>
+    <dialog id="watch-shelf" class="watch-shelf" aria-labelledby="shelf-title" aria-describedby="shelf-note">
+      <header>
+        <h2 id="shelf-title">Your watch shelf</h2>
+        <button id="shelf-close" type="button">Close shelf</button>
+      </header>
+      <p id="shelf-note">Keep named copies of your active watch. Opening an entry asks before replacing the active watch. This shelf stays in this browser; Download watch keeps a portable copy.</p>
+      <form id="shelf-keep-form">
+        <label for="shelf-name">Name this watch</label>
+        <input id="shelf-name" name="watch-name" type="text" maxlength="120" autocomplete="off" aria-describedby="shelf-name-help">
+        <p id="shelf-name-help">Up to 60 characters. The same name can label separate entries.</p>
+        <div class="shelf-actions">
+          <button id="shelf-keep" type="submit">Keep current watch</button>
+        </div>
+      </form>
+      <div class="shelf-toolbar">
+        <h3 id="shelf-list-title">Kept watches</h3>
+        <button id="shelf-refresh" type="button">Refresh shelf</button>
+      </div>
+      <p id="shelf-capacity"></p>
+      <p id="shelf-status" role="status" aria-live="polite" tabindex="-1"></p>
+      <p id="shelf-empty">No watches have been kept on this shelf yet.</p>
+      <ul id="shelf-list" aria-labelledby="shelf-list-title"></ul>
+      <form id="shelf-rename" hidden>
+        <h3 id="shelf-rename-title">Rename this entry</h3>
+        <label for="shelf-rename-name">New name</label>
+        <input id="shelf-rename-name" type="text" maxlength="120" autocomplete="off">
+        <div class="shelf-actions">
+          <button type="submit">Save name</button>
+          <button id="shelf-rename-cancel" type="button">Cancel rename</button>
+        </div>
+      </form>
+      <section id="shelf-remove-review" aria-labelledby="shelf-remove-title" hidden>
+        <h3 id="shelf-remove-title">Remove a kept watch?</h3>
+        <p id="shelf-remove-name"></p>
+        <p>This removes only that shelf entry. Your active watch and any downloaded files stay as they are.</p>
+        <div class="shelf-actions">
+          <button id="shelf-remove-cancel" type="button">Keep this entry</button>
+          <button id="shelf-remove-confirm" type="button">Remove entry</button>
+        </div>
+      </section>
     </dialog>
     <noscript>Longwater needs JavaScript enabled to run its local simulation.</noscript>
   </main>
