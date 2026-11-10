@@ -1,0 +1,286 @@
+{
+  "schema": "longwater.sound.native-receiving.manifest.v1",
+  "at": "2026-10-08T14:26:57.215097+00:00",
+  "source_commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "source_tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "payload_files": 55,
+  "payload_bytes": 1844505,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7499,
+      "sha256": "8baf84e04b2e53452eba6edf46cd611b23cd45b170e6731ac9eaf1d5afa5ed07"
+    },
+    {
+      "path": "author-review-packet/native-qualification-summary.json",
+      "bytes": 3189,
+      "sha256": "fbeece22a4678e015552d8546b041b30e34f6f1fa33f5da47c5b421dfab2002e"
+    },
+    {
+      "path": "author-review-packet/production.patch",
+      "bytes": 11392,
+      "sha256": "d93fe656bd06bdbc91816c9f7d19cb848c6dcc21cd76b3ef7cc845446a851a4f"
+    },
+    {
+      "path": "author-review-packet/source-review-pins.json",
+      "bytes": 2055,
+      "sha256": "6ef2d752f860dbd0126636efb545591d2e2c8b08e4701c6eb384bc6cf60e8082"
+    },
+    {
+      "path": "composed-source-commit.json",
+      "bytes": 1652,
+      "sha256": "70876ea8e7949e8de872c94501c92c0db30b3611b3b9b79032a157b00e2679a6"
+    },
+    {
+      "path": "composition-custody.json",
+      "bytes": 5005,
+      "sha256": "718b09cca3837cdff704ca811059707412b06f3e98bd40e5a2898fd10950c803"
+    },
+    {
+      "path": "composition-merge-tree.json",
+      "bytes": 572,
+      "sha256": "2ac174fee1b1b8389b997130c96a3bd79d3ea7613fec092f13d702e80b84b81c"
+    },
+    {
+      "path": "composition-tree-manifest.json",
+      "bytes": 18162,
+      "sha256": "5b9c9833bd1b8140d7bd787743a2fa5ea85f0283d5fe7b6de8289f8ae7220479"
+    },
+    {
+      "path": "current-source-receipt.json",
+      "bytes": 2681,
+      "sha256": "88b1b0351e4444b53c35807df864fcb0ddb8efc6d029407085d112c4dc9a5461"
+    },
+    {
+      "path": "current-tree-manifest.json",
+      "bytes": 18162,
+      "sha256": "b58b97d19ac7cf25bda32f03d5124d3075121c5fe756894f543bdddada18a7fd"
+    },
+    {
+      "path": "evidence/composed-reset/browser.log",
+      "bytes": 4385,
+      "sha256": "117d1404313e8c3e7bedc3691a1f9db45e3bd8f0653a3e1b553d18569096a9d4"
+    },
+    {
+      "path": "evidence/composed-reset/receipt.json",
+      "bytes": 10086,
+      "sha256": "bc91ef4dc708bd90c55dc34225e0084b1fa83eaa82d370659139b4e4bd2094c0"
+    },
+    {
+      "path": "evidence/composed-reset/receive-composed-reset-cdp-initial.mjs",
+      "bytes": 19622,
+      "sha256": "257797c9979fe83350b9638fed6bc3e75f476dfbdf8d044acfe65fbb0e64ae34"
+    },
+    {
+      "path": "evidence/composed-reset/receiver-correction.json",
+      "bytes": 802,
+      "sha256": "16e664a0e09b7843b6fa65584c4055e9a9e9015147e34c40c4dfc467ffc406aa"
+    },
+    {
+      "path": "evidence/composed-reset/receiver-correction.patch",
+      "bytes": 913,
+      "sha256": "b15762223c89d2f3ed6acdd4c6a53a00ad2c8e641ab279b9af3f03d4cc58cf3a"
+    },
+    {
+      "path": "evidence/composed-reset-v2/browser.log",
+      "bytes": 4117,
+      "sha256": "0a809a7d2fa14a8f504b2e201dfcc90b23137ffe259d584e0c7bb03712ce2476"
+    },
+    {
+      "path": "evidence/composed-reset-v2/composed-reset-review-320.png",
+      "bytes": 46693,
+      "sha256": "dd07e55e74e5f43ec5117a404d2caeac94c9217d6ed026608e9fbf2f1e7e5f60"
+    },
+    {
+      "path": "evidence/composed-reset-v2/desktop-http-sound-after-new-watch.png",
+      "bytes": 171959,
+      "sha256": "3b2c8da8d0ad25e93e4cf2a584e2c9f19495e54e2afaf060886a4882f0972f7e"
+    },
+    {
+      "path": "evidence/composed-reset-v2/desktop-http-state-custody.json",
+      "bytes": 16946,
+      "sha256": "ad9a1c9f919e4ee14a52bbb2b10763989cd5b8bc5422adad93e4c59b7c08523d"
+    },
+    {
+      "path": "evidence/composed-reset-v2/offline-320-sound-after-new-watch.png",
+      "bytes": 112761,
+      "sha256": "4c6e5af4f5ddcf7fce21805bd8ac9fa0ce8791d2473bb8700b6b8af1c85be880"
+    },
+    {
+      "path": "evidence/composed-reset-v2/offline-320-state-custody.json",
+      "bytes": 16946,
+      "sha256": "ad9a1c9f919e4ee14a52bbb2b10763989cd5b8bc5422adad93e4c59b7c08523d"
+    },
+    {
+      "path": "evidence/composed-reset-v2/receipt.json",
+      "bytes": 13708,
+      "sha256": "9bc6f37588e5dda811d29a2e119f056a892482951c5b97d9a2a4f239c7703600"
+    },
+    {
+      "path": "evidence/fixture-server-followup/after-watch-save.browser.test.mjs",
+      "bytes": 11833,
+      "sha256": "303989848c868b23cd4f781f6e7711fbb38dc7085131f3ab7e093da353573e91"
+    },
+    {
+      "path": "evidence/fixture-server-followup/before-watch-save.browser.test.mjs",
+      "bytes": 11714,
+      "sha256": "741ba9b5627db6ea8ff6d7b7271453b39217a78bc0f250b9655eeec7a749b4c5"
+    },
+    {
+      "path": "evidence/fixture-server-followup/fixture-followup-receipt.json",
+      "bytes": 1333,
+      "sha256": "b0d21e9314a6f8dd3da20424854ac540a342af192c31ad9ff85911f92ccd3642"
+    },
+    {
+      "path": "evidence/fixture-server-followup/fixture-routes.patch",
+      "bytes": 566,
+      "sha256": "fa286e90f54886302b40715e70e0a9527cdc4d3062ede90c51e13ffc21b589e1"
+    },
+    {
+      "path": "evidence/mac-audio-initial/correction-receipt.json",
+      "bytes": 804,
+      "sha256": "2c73fa6e6658a2a8ebc450642d98f17053de4d89850c5ae5245c717a76b7e690"
+    },
+    {
+      "path": "evidence/mac-audio-initial/receipt.json",
+      "bytes": 8459,
+      "sha256": "78fe8f1374c868d3646cf84a15c58122d734a827f7ecd845e875ccbe72b4bfe1"
+    },
+    {
+      "path": "evidence/mac-audio-initial/receiver-correction.captured.patch",
+      "bytes": 823,
+      "sha256": "86c809466ed53cb7a364639a0f29e024be2ef43e16cbc1b3b7845f5db900653b"
+    },
+    {
+      "path": "evidence/mac-audio-initial/tests.log",
+      "bytes": 4248,
+      "sha256": "6c1f1698a9e2fa46dbf17a3f3cec0df93fcd65e883ff793947872df4eb8280b8"
+    },
+    {
+      "path": "evidence/mac-audio-initial/watch-audio.test.mjs",
+      "bytes": 18918,
+      "sha256": "7d49e492905dbfe11bcee0ac76c71407dfd696a588e9f4821233ba4e13bd3a5f"
+    },
+    {
+      "path": "evidence/mac-baseline/receipt.json",
+      "bytes": 8976,
+      "sha256": "a2aabea201f253129afad9818ce906f7d635a39613666e3a13fa09a00e677076"
+    },
+    {
+      "path": "evidence/mac-baseline/receive-baseline-v2.mjs",
+      "bytes": 4511,
+      "sha256": "da9f5b2967f81daa14f38a557e463f0eb113cb6a475ab16222a8df9919d9f809"
+    },
+    {
+      "path": "evidence/mac-capture-manifest.json",
+      "bytes": 1578,
+      "sha256": "b93fdb5c39e9189dd761fc88b8a7854874d310b646eaa6cd0fa089cd038f3e4e"
+    },
+    {
+      "path": "evidence/mac-maintained-incomplete/incomplete-receipt.json",
+      "bytes": 891,
+      "sha256": "3137da094da72d6a0f9d5289c6381ef48c8f65250df266065ebc9032e8096c10"
+    },
+    {
+      "path": "evidence/mac-maintained-incomplete/post-failure-primary-capture.json",
+      "bytes": 4004,
+      "sha256": "d437371a3c65ff7924cb3f34754c14d9f0523513286f08273222333a7f16499f"
+    },
+    {
+      "path": "evidence/mac-maintained-incomplete/tests.log",
+      "bytes": 4084,
+      "sha256": "7c0789a4adbea39ff819b4daa0761b33f54e55f0f2d397c4ac0b2a47be17b47f"
+    },
+    {
+      "path": "evidence/thinkpad-cdp/audio-faults.json",
+      "bytes": 19093,
+      "sha256": "3510524700a7686ef49402f1d25deb07272abf58e565997319472156361ad42d"
+    },
+    {
+      "path": "evidence/thinkpad-cdp/browser.log",
+      "bytes": 4648,
+      "sha256": "289908b13799a3d71839ab0fdf0f840a4416ef3a1fb252b6145761dfc14327b9"
+    },
+    {
+      "path": "evidence/thinkpad-cdp/fourteen-tide-parity.json",
+      "bytes": 430302,
+      "sha256": "4187502f2334bdba53b15a06ec154d0e2d12903cb70d7193e97712a893f485bd"
+    },
+    {
+      "path": "evidence/thinkpad-cdp/offline-sound-320.png",
+      "bytes": 111662,
+      "sha256": "452c6dd9f12b3d79933dcf3f8f7f5a658f23b853a2bc8cd7ccb91e64add94eb0"
+    },
+    {
+      "path": "evidence/thinkpad-cdp/receipt.json",
+      "bytes": 347355,
+      "sha256": "4a616ee48e09046614ab33a370739b5ba139e18d3ccd6bf91739f81daf752abe"
+    },
+    {
+      "path": "memory-area-custody.json",
+      "bytes": 546,
+      "sha256": "4a3a2145489608fe0e72eb0a5f039bb3a436c934152c86d3ff1a0b36c13d904b"
+    },
+    {
+      "path": "original-audio-source-commit.json",
+      "bytes": 3950,
+      "sha256": "4827ab00a6936c054b8c9c8a9f32c1623d1809e52777913fc70736e440412f0e"
+    },
+    {
+      "path": "original-source/README.md",
+      "bytes": 11111,
+      "sha256": "8f8c9fcde7fc1a2f41686c5fa75adb61980e2bf18f4a9598f68ec29a45fa9206"
+    },
+    {
+      "path": "original-source/downloads/Longwater-Fourteen-Tides.html",
+      "bytes": 246102,
+      "sha256": "e613754441068807aea8c3b4ee13103bb699cefff2ccc43d693e91cdc77bebce"
+    },
+    {
+      "path": "original-source/game.js",
+      "bytes": 18753,
+      "sha256": "01e668442de3d72a2a7d88007bacc11c60174bdca72590664d559051f2b6c956"
+    },
+    {
+      "path": "original-source/index.html",
+      "bytes": 5395,
+      "sha256": "7776f88a2f4d891adc086c2b17293f3a78c483d9f0134aa9ed452517b97395c9"
+    },
+    {
+      "path": "original-source/scripts/package.mjs",
+      "bytes": 3182,
+      "sha256": "0d666fdbfdce7b55eb1c5a5224efc32347c3cb044ef8f3dba473c964cbb85312"
+    },
+    {
+      "path": "original-source/tests/watch-audio.test.mjs",
+      "bytes": 18918,
+      "sha256": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70"
+    },
+    {
+      "path": "original-source/watch-audio.css",
+      "bytes": 757,
+      "sha256": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5"
+    },
+    {
+      "path": "original-source/watch-audio.js",
+      "bytes": 5488,
+      "sha256": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb"
+    },
+    {
+      "path": "receivers/receive-composed-reset-cdp.mjs",
+      "bytes": 19694,
+      "sha256": "ac5caf82f4e7563e559c03c679e78f56dd6539fec0026872eca413ebd55f270e"
+    },
+    {
+      "path": "receivers/receive-sound-cdp.mjs",
+      "bytes": 20983,
+      "sha256": "c44ab1182a2a5fcfe24ba90fcdc10a1b7460aa9fab331a6db0dfa626397e5e87"
+    },
+    {
+      "path": "source-custody.json",
+      "bytes": 4517,
+      "sha256": "162b65fac697adff7fad9befd407cbda007b130be1e5832dcc7a0bb118007aa4"
+    }
+  ],
+  "scope": "Author source/native evidence frozen before independent peer review and headed hosted gate; later packets are additive."
+}

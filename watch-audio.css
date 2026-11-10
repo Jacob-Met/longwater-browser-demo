@@ -1,0 +1,7 @@
+.watch-audio { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 14px; margin: 12px 0; padding: 8px 16px; border: 1px solid rgba(156, 210, 184, .22); border-radius: 12px; background: #071b22; }
+.watch-audio label { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 600; cursor: pointer; }
+.watch-audio input { width: 20px; height: 20px; margin: 0; accent-color: #72e2b4; cursor: pointer; }
+.watch-audio input:focus-visible { outline: 3px solid #e6f0e5; outline-offset: 4px; }
+.watch-audio input:disabled { cursor: not-allowed; }
+#sound-status { color: #c1d6ca; font-size: .9rem; overflow-wrap: anywhere; }
+#sound-note { flex-basis: 100%; margin: 0 0 4px; color: #a8c1b4; font-size: .85rem; line-height: 1.5; }

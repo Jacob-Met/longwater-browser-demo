@@ -1,0 +1,283 @@
+{
+  "at": "2026-10-08T14:50:15.379503+00:00",
+  "reviewer": "ChatGPT github_receiving / estate-45d4289ccf6c",
+  "scope": "Read-only independent current-report composition source check; no tests or source writes",
+  "base": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+  "base_tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+  "previous_qualified_source": "b49cccbb55d1df50821ebf015719e6dcd764bcb7",
+  "prospective_tree": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "observed_head": "b49cccbb55d1df50821ebf015719e6dcd764bcb7",
+  "base_leaves": 135,
+  "candidate_leaves": 154,
+  "changed_existing": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/watch-save.browser.test.mjs"
+  ],
+  "added_paths": [
+    "docs/receiving/optional-sound-45d4289ccf6c/README.md",
+    "docs/receiving/optional-sound-45d4289ccf6c/artifact-manifest.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/evidence.tar.gz",
+    "docs/receiving/optional-sound-45d4289ccf6c/fixture-receipt.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/fixture-routes.patch",
+    "docs/receiving/optional-sound-45d4289ccf6c/native-persistence-receipt.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/native-qualification.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/package-receipt.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/peer-review/README.md",
+    "docs/receiving/optional-sound-45d4289ccf6c/peer-review/artifact-manifest.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/peer-review/native-source-proof.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/peer-review/native-source-proof.py",
+    "docs/receiving/optional-sound-45d4289ccf6c/peer-review/source-review.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/preview-offline-320.png",
+    "docs/receiving/optional-sound-45d4289ccf6c/publication-manifest.json",
+    "docs/receiving/optional-sound-45d4289ccf6c/source-receipt.json",
+    "tests/watch-audio.test.mjs",
+    "watch-audio.css",
+    "watch-audio.js"
+  ],
+  "unrelated_main_leaves_exact": 129,
+  "all_nineteen_added_leaves_exact_to_prior_qualified_audio_source": true,
+  "unchanged_audio_and_game_paths": [
+    "watch-audio.js",
+    "watch-audio.css",
+    "game.js",
+    "tests/watch-audio.test.mjs"
+  ],
+  "packager_two_entry_inverse_exact_base": true,
+  "fixture_two_route_inverse_exact_base": true,
+  "index_diff_against_prospective_tree": "",
+  "working_diff_against_index": "",
+  "author_custody_sha256": "1bc425cdda07ba621ef6dc8da3c968e38fc0b3bbf7e1f2efa4f39a5e4270c412",
+  "working_source_files_exact_to_immutable_tree": [
+    {
+      "path": ".github/workflows/smoke.yml",
+      "sha256": "f67215979d54aae4a3b1150c5d669ddc4f0200db03ded79b967e4187eeff08cf",
+      "bytes": 1624,
+      "blob": "5e591a2c783d26cae9c4e2b1986bbe4931257380"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "76a8c85c5cde609d309b74ba3cc9c08b776fe95457466c01f364baab341d6b3f",
+      "bytes": 34,
+      "blob": "9008f8aecd2a48bd95c6f78954fc337f0f28e5a7"
+    },
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "README.md",
+      "sha256": "57d6f48c14e544a60a4c2ed19dfb9aebf6bb9add87f75d3833590d1c9cc4ef42",
+      "bytes": 12865,
+      "blob": "1f56f27aeb198814ef9fccbc8450f80c36454709"
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "sha256": "9fda8d678b96eeaa1d7e2616bd1d9bbb1eb7d8a3420003dac441ec1b9a909f70",
+      "bytes": 273802,
+      "blob": "c0020f582cd6de8fbd62124cf9447df9ef58d16f"
+    },
+    {
+      "path": "game.js",
+      "sha256": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+      "bytes": 20550,
+      "blob": "3b25477362ff4cc430d186b067cce2d432ce6771"
+    },
+    {
+      "path": "index.html",
+      "sha256": "11e666e695a002e9e0ea992dd52472af0c1993232a15b743a0fb25ab0f487cb0",
+      "bytes": 6076,
+      "blob": "62c226fcd37364b7fbb54538b21e3d65b5e18367"
+    },
+    {
+      "path": "journal.css",
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "bytes": 2465,
+      "blob": "89d5e2413e32a9db5234727f54407e2a111f39af"
+    },
+    {
+      "path": "journal.js",
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "bytes": 6603,
+      "blob": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+      "bytes": 1705,
+      "blob": "7a89ee5d7b73496d9dafc85a93184182f6f14026"
+    },
+    {
+      "path": "package.json",
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "bytes": 277,
+      "blob": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f"
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "sha256": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91",
+      "bytes": 1975,
+      "blob": "b13d183c5d8982d689c33b4195a797bebff4ede5"
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "bytes": 8716,
+      "blob": "50cef9486d91829183315c1a1fb31df1914d6316"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "bytes": 71368,
+      "blob": "faf26b8aa6a8887688249d6e3e34b3042c8babf3"
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm.d.ts",
+      "sha256": "57a7c56c28043e816869bd1dc1f1e0a062d4074593abeeeaaf682ec144d0041e",
+      "bytes": 865,
+      "blob": "12f7f1826bc094fabfb3674665863d62884105bb"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "sha256": "4aceeec048ef88c2fe755f6351a6bc0629155e04c5ad5c4d636e4708d10920c1",
+      "bytes": 3300,
+      "blob": "5c0109e49d9ce989ec91645a449077dc790c486d"
+    },
+    {
+      "path": "style.css",
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "bytes": 3342,
+      "blob": "7cfc051bfd89e25a028397fbadcd05508e13aaea"
+    },
+    {
+      "path": "tests/browser.test.mjs",
+      "sha256": "32bffda07eb7417acdec95784d7056f1078e7681fa2cf41933ba9b5dd2b307a8",
+      "bytes": 8222,
+      "blob": "5f3e260b13e48f80616fa19977a07225431db1d2"
+    },
+    {
+      "path": "tests/journal.test.mjs",
+      "sha256": "500b4c1819e06e56a9811f0d0f30cbc967f8bc4bc16079fca123d33223e23517",
+      "bytes": 11813,
+      "blob": "1a5cac9d63ae93b87fbf5bf5445608f9f574bcf6"
+    },
+    {
+      "path": "tests/new-watch.test.mjs",
+      "sha256": "b925c7e2f3b6e19b5d4248e38caf5f2c6872d1ceeb12020e989e5da757b89344",
+      "bytes": 16946,
+      "blob": "f1c8cedb83efe17ff20b99f4d9778bd2ae774c10"
+    },
+    {
+      "path": "tests/offline-download.test.mjs",
+      "sha256": "4dd27606a16dc4a08819fe991d5dcad80deacb6f729dfc5c34912d0bc045d988",
+      "bytes": 8832,
+      "blob": "1df32f9d4b5b53d061e0ae4790260ea7e7947f01"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "sha256": "3c5e24f4a160a3145072557444e247bd0ef3929b0267906b07b4b1548f9f0087",
+      "bytes": 3888,
+      "blob": "fc381bcc2d1887484f0afbb097ab8ad8f7f69b5a"
+    },
+    {
+      "path": "tests/resume-journal.test.mjs",
+      "sha256": "feb9d2ea3022c7b38743b3b5a687031a9858966102005693203c6268b7946023",
+      "bytes": 11052,
+      "blob": "d00a431b81d462ac2585c7fe3b7e661134c5952d"
+    },
+    {
+      "path": "tests/server.mjs",
+      "sha256": "5d9bc0203b07a7e4d9203517614b42b278aae1dbd1c068a0d194183435a105e6",
+      "bytes": 1609,
+      "blob": "f5ff72aadbec5ed62b16c05bbfaeddd75602b070"
+    },
+    {
+      "path": "tests/watch-audio.test.mjs",
+      "sha256": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70",
+      "bytes": 18918,
+      "blob": "1bc90b4c3c65545cd9625450caf35fc81926a1a0"
+    },
+    {
+      "path": "tests/watch-report.test.mjs",
+      "sha256": "d6d0377eeb5036d78f1e4a25d3baae002394c2c5c9cfa812073dac5a66ec2558",
+      "bytes": 14191,
+      "blob": "d835b6f14e0cd78b3a9c293d2ac3199ffcb82909"
+    },
+    {
+      "path": "tests/watch-save.browser.test.mjs",
+      "sha256": "05b980b2d42b036a3f7cbabb86de4e5428d876b597956fed4eecd1ed3f646fbb",
+      "bytes": 11956,
+      "blob": "1091efc374a4e731133cac8c4f929d5c74560216"
+    },
+    {
+      "path": "tests/watch-save.test.mjs",
+      "sha256": "3310559d3bfec2730992589757b5e2f26dc8b2487b2e2f9b166e4a42de597fb5",
+      "bytes": 10647,
+      "blob": "05bd8b8b9fe277285afdacf391f08e9f792808cd"
+    },
+    {
+      "path": "tests/watch-trends.test.mjs",
+      "sha256": "4fe6ceb860488f82bc03f0c7a068910a809980dd8b40c13ddc8bb0d9ade59496",
+      "bytes": 14059,
+      "blob": "dab952c5f832c4b83492e47aaec8d42a4976cf0b"
+    },
+    {
+      "path": "watch-audio.css",
+      "sha256": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5",
+      "bytes": 757,
+      "blob": "b475f309fc660d8a3ea9869e64e6053b5ba04f56"
+    },
+    {
+      "path": "watch-audio.js",
+      "sha256": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb",
+      "bytes": 5488,
+      "blob": "2d211493db0d837bfb57abfbf676f95c64bb204a"
+    },
+    {
+      "path": "watch-report.css",
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "bytes": 571,
+      "blob": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6"
+    },
+    {
+      "path": "watch-report.js",
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "bytes": 9346,
+      "blob": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7"
+    },
+    {
+      "path": "watch-save.css",
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "bytes": 473,
+      "blob": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007"
+    },
+    {
+      "path": "watch-save.js",
+      "sha256": "34c7a86005df0534bf90a07db883b6f6fcbdf890d1c190f50860b63f7d59e2c8",
+      "bytes": 7492,
+      "blob": "cc802ddd6041b76c7a491b487463636b82fda508"
+    },
+    {
+      "path": "watch-trends.css",
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "bytes": 2791,
+      "blob": "04e9153a10a363c72f26d6779f8b5470db5936cc"
+    },
+    {
+      "path": "watch-trends.js",
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "bytes": 11372,
+      "blob": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0"
+    }
+  ],
+  "narrow_native_diff": "diff --git a/README.md b/README.md\nindex 0dc34c3..1f56f27 100644\n--- a/README.md\n+++ b/README.md\n@@ -18,6 +18,13 @@ reed canopy (Shade 0–3). Each tide, pick a cell and take one action:\n Every action is resolved against the live Rust simulation compiled to\n WebAssembly. Survive all fourteen tides to close the watch.\n \n+## Optional sound\n+\n+Switch **Sound cues** on below the marsh to hear quiet, original synthesized tones. Gate falls like a ripple, Shade uses a low pair of notes, and Seed rises in three short notes. A closing chord marks the actual end of the fourteen-tide watch. Sound adds feedback to the existing reports; it does not change the simulation or saved progress.\n+\n+Each page opens silently. The switch gives a short confirmation tone when sound is ready. Switching it off, hiding the page, or leaving the page stops sound and releases its audio context; returning stays silent until you enable it again. Unsupported or blocked audio leaves the game playable and displays an unavailable message. Interrupted audio can be enabled again with the switch. All tones are generated locally and included in the offline game, with no audio files, external requests or new dependency.\n+\n+\n ## Controls\n \n - **Mouse / touch** — tap a cell card to select it, tap an action button to act,\ndiff --git a/index.html b/index.html\nindex 5e7d5c7..62c226f 100644\n--- a/index.html\n+++ b/index.html\n@@ -12,6 +12,7 @@\n   <link rel=\"stylesheet\" href=\"./watch-report.css\">\n   <link rel=\"stylesheet\" href=\"./watch-trends.css\">\n   <link rel=\"stylesheet\" href=\"./watch-save.css\">\n+  <link rel=\"stylesheet\" href=\"./watch-audio.css\">\n </head>\n <body>\n   <main id=\"stage\" aria-labelledby=\"game-title\">\n@@ -30,6 +31,11 @@\n       </div>\n       <p id=\"startup-error\" hidden></p>\n     </div>\n+    <section class=\"watch-audio\" aria-label=\"Sound\">\n+      <label><input id=\"sound-enabled\" type=\"checkbox\" role=\"switch\" aria-describedby=\"sound-note sound-status\" disabled> Sound cues</label>\n+      <span id=\"sound-status\" role=\"status\">Off</span>\n+      <p id=\"sound-note\">Quiet tones for your actions and the closing tide.</p>\n+    </section>\n     <section id=\"watch-storage\" aria-label=\"Watch progress\">\n       <p id=\"watch-save-status\" role=\"status\" aria-live=\"polite\">Loading your saved watch…</p>\n       <button id=\"watch-save-retry\" type=\"button\" hidden>Try saving again</button>\ndiff --git a/scripts/package.mjs b/scripts/package.mjs\nindex a936acf..5c0109e 100644\n--- a/scripts/package.mjs\n+++ b/scripts/package.mjs\n@@ -4,8 +4,8 @@ import { dirname, resolve } from \"node:path\";\n import { fileURLToPath } from \"node:url\";\n \n const root = resolve(dirname(fileURLToPath(import.meta.url)), \"..\");\n-const styles = [\"style.css\", \"journal.css\", \"watch-trends.css\", \"watch-save.css\", \"watch-report.css\"];\n-const modules = [\"pkg/longwater_web.js\", \"journal.js\", \"watch-save.js\"];\n+const styles = [\"style.css\", \"journal.css\", \"watch-trends.css\", \"watch-save.css\", \"watch-report.css\", \"watch-audio.css\"];\n+const modules = [\"pkg/longwater_web.js\", \"journal.js\", \"watch-save.js\", \"watch-audio.js\"];\n const inputs = [\"index.html\", ...styles, \"game.js\", ...modules, \"watch-trends.js\", \"watch-report.js\", \"pkg/longwater_web_bg.wasm\"];\n const sourceHash = createHash(\"sha256\");\n const files = new Map();\ndiff --git a/tests/watch-save.browser.test.mjs b/tests/watch-save.browser.test.mjs\nindex d78f9eb..1091efc 100644\n--- a/tests/watch-save.browser.test.mjs\n+++ b/tests/watch-save.browser.test.mjs\n@@ -14,6 +14,8 @@ const files = new Map([\n   [\"/game.js\", [\"game.js\", \"text/javascript\"]],\n   [\"/watch-save.js\", [\"watch-save.js\", \"text/javascript\"]],\n   [\"/watch-save.css\", [\"watch-save.css\", \"text/css\"]],\n+  [\"/watch-audio.js\", [\"watch-audio.js\", \"text/javascript\"]],\n+  [\"/watch-audio.css\", [\"watch-audio.css\", \"text/css\"]],\n   [\"/journal.js\", [\"journal.js\", \"text/javascript\"]],\n   [\"/journal.css\", [\"journal.css\", \"text/css\"]],\n   [\"/watch-trends.js\", [\"watch-trends.js\", \"text/javascript\"]],\n",
+  "process_completion": {
+    "pid": 3289256,
+    "exit_code": 0
+  }
+}

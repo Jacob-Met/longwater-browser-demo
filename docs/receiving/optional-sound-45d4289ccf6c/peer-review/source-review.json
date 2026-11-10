@@ -1,0 +1,124 @@
+{
+  "schema": "longwater.optional-sound.independent-source-review.v1",
+  "reviewer": "ChatGPT github_receiving / estate-45d4289ccf6c",
+  "disposition": "Accepted for source and preserved bounded native receiving; final headed full maintained CI is required before integration.",
+  "reviewed_at": "2026-10-08T14:28:22.460094+00:00",
+  "repository_native_path": "/dev/shm/lw45-sound-composition/source",
+  "baseline": {
+    "commit": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+    "tree": "b825a333b9d7f73a73b801f517b07c256aea5934"
+  },
+  "received_product": {
+    "commit": "e9628acd0f977e42f7a5c062223976c199c10d16",
+    "tree": "4509c5c0e35daa69aeb8bdb2d8501b6a0fcd5e3d",
+    "parents": [
+      "0294898793e6a53ea13c21d90fc66d7f2158dc80",
+      "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c"
+    ]
+  },
+  "final_candidate": {
+    "commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+    "tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+    "parents": [
+      "e9628acd0f977e42f7a5c062223976c199c10d16"
+    ]
+  },
+  "independently_verified": {
+    "final_tree_leaves": 111,
+    "exact_base_leaves_outside_nine_changed_paths": 102,
+    "final_changed_paths": [
+      "README.md",
+      "downloads/Longwater-Fourteen-Tides.html",
+      "game.js",
+      "index.html",
+      "scripts/package.mjs",
+      "tests/watch-audio.test.mjs",
+      "tests/watch-save.browser.test.mjs",
+      "watch-audio.css",
+      "watch-audio.js"
+    ],
+    "clean_worktree": true,
+    "product_to_final_delta": [
+      "tests/watch-save.browser.test.mjs"
+    ],
+    "received_eight_product_and_audio_test_files_exact": true,
+    "game_four_addition_inverse_reconstructs_exact_landed_reset": true,
+    "fixture_two_route_row_inverse_reconstructs_exact_existing_receiver": true,
+    "native_source_proof_exit_code": 0,
+    "native_receipts_actual_hashes_counts_and_cleanup_read": true
+  },
+  "source_sha256": {
+    "README.md": "d46d093a30753aae688adea976dba40ab469cf813d271386d7e01b7dc11fe24c",
+    "downloads/Longwater-Fourteen-Tides.html": "e1c6de9ea013a36eb6e8b1af6024cd433238edc1c9a5eb22628f6842e5e9d7f6",
+    "game.js": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+    "index.html": "278f33ac6e926d294f871348d244be4ca0e47bb674ed4b1d120c1790b130dc97",
+    "scripts/package.mjs": "0d666fdbfdce7b55eb1c5a5224efc32347c3cb044ef8f3dba473c964cbb85312",
+    "tests/watch-audio.test.mjs": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70",
+    "watch-audio.css": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5",
+    "watch-audio.js": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb",
+    "tests/watch-save.browser.test.mjs": "303989848c868b23cd4f781f6e7711fbb38dc7085131f3ab7e093da353573e91"
+  },
+  "findings": [
+    {
+      "area": "Accepted-turn boundary",
+      "decision": "Accepted",
+      "basis": "The only gameplay hook adds WatchAudio.play inside the original state !== previous branch. Removing import, constructor, this narrow branch expansion, and ready call reproduces exact f321 game.js. Reset, persistence, journal and Rust/WASM behavior are unchanged."
+    },
+    {
+      "area": "Opt-in and cancellation",
+      "decision": "Accepted",
+      "basis": "No AudioContext is created before explicit opt-in. Enable reserves an attempt identity before awaiting resume and rejects late completions after mute/hide or a newer attempt. A 1.5-second timeout, interrupted context and explicit audio failures return to an unavailable/paused/off state; they do not queue future turn sounds."
+    },
+    {
+      "area": "Rapid input and teardown",
+      "decision": "Accepted",
+      "basis": "A new accepted cue releases the previous one. Mute, hidden handler and pagehide retire the attempt, clear active audio references, disconnect output and close the context. Audio failures are contained inside audio methods."
+    },
+    {
+      "area": "Offline and presentation scope",
+      "decision": "Accepted",
+      "basis": "The existing packager adds exactly the new stylesheet/module inputs. The control starts disabled until game startup, provides an explicit switch/status, wraps at narrow widths and has a 44-pixel label target. Recorded desktop HTTP and 320-pixel offline groups exercised the composed reset path."
+    },
+    {
+      "area": "Maintained private test server",
+      "decision": "Accepted source adaptation; execution pending",
+      "basis": "20724 adds only watch-audio.js and watch-audio.css allowlist rows with their correct MIME types. Their removal reconstructs the exact f321 receiver, preserving all previous assertions. This closes an actual imported-module fixture gap; author syntax success is not represented as full fixture execution."
+    }
+  ],
+  "received_evidence": [
+    {
+      "stage": "Original audio native CDP",
+      "sha256": "4a616ee48e09046614ab33a370739b5ba139e18d3ccd6bf91739f81daf752abe",
+      "status": "passed",
+      "groups": 4
+    },
+    {
+      "stage": "First composed receiver",
+      "sha256": "bc91ef4dc708bd90c55dc34225e0084b1fa83eaa82d370659139b4e4bd2094c0",
+      "status": "failed",
+      "groups": 0,
+      "reason": "Receiver incorrectly required document width 1265 to equal viewport 1280; negative remains preserved."
+    },
+    {
+      "stage": "Corrected composed receiver",
+      "sha256": "9bc6f37588e5dda811d29a2e119f056a892482951c5b97d9a2a4f239c7703600",
+      "status": "passed",
+      "groups": 2,
+      "scope": "Desktop HTTP and 320-pixel offline sound plus deliberate reset; three accepted turns, one decline and one confirm per group."
+    },
+    {
+      "stage": "Fixture-only source follow-up",
+      "sha256": "b0d21e9314a6f8dd3da20424854ac540a342af192c31ad9ff85911f92ccd3642",
+      "status": "source proof and syntax passed",
+      "behavioral_execution": "pending headed CI"
+    }
+  ],
+  "limits": [
+    "This independent review performed no application, browser, core or full-suite test rerun.",
+    "The counts represent two distinct successful receiving stages, not a new combined six-test execution by this reviewer.",
+    "Full maintained suite did not finish on Mac after ENOSPC. Actual final-headed hosted maintained suite remains required.",
+    "Physical speaker quality and subjective listening were not received. Signal evidence uses actual native OfflineAudioContext and browser context state.",
+    "The visibility boundary is an explicit hidden-handler injection, not a physical background-tab test.",
+    "Root retains final current-main composition, hosted-gate review and merge authority."
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "opening": {
+    "summary": "Day 0 of 14. Water 5; seed packs 5.",
+    "cells": [
+      "Upper reed shelf; peat & cordgrass. Depth 34 centimetres. Salt 34 parts per thousand. Oxygen 64 percent. Life 44 percent. Canopy 0 of 3.",
+      "Inner tidal basin; mud & glasswort. Depth 56 centimetres. Salt 30 parts per thousand. Oxygen 55 percent. Life 49 percent. Canopy 0 of 3.",
+      "Outer brackish fringe; silt & saltgrass. Depth 67 centimetres. Salt 40 parts per thousand. Oxygen 43 percent. Life 38 percent. Canopy 0 of 3."
+    ],
+    "selected": [
+      "false",
+      "true",
+      "false"
+    ],
+    "report": "Pick a cell, then choose Gate, Shade, or Seed.Your action is resolved against the live Rust simulation.",
+    "journal": "",
+    "saved": {}
+  },
+  "openingAudio": {
+    "status": "Off",
+    "checked": false,
+    "contexts": [],
+    "starts": []
+  },
+  "progressed": {
+    "summary": "Day 1 of 14. Water 4; seed packs 5.",
+    "cells": [
+      "Upper reed shelf; peat & cordgrass. Depth 48 centimetres. Salt 38 parts per thousand. Oxygen 63 percent. Life 45 percent. Canopy 0 of 3.",
+      "Inner tidal basin; mud & glasswort. Depth 77 centimetres. Salt 24 parts per thousand. Oxygen 51 percent. Life 49 percent. Canopy 0 of 3.",
+      "Outer brackish fringe; silt & saltgrass. Depth 81 centimetres. Salt 43 parts per thousand. Oxygen 40 percent. Life 38 percent. Canopy 0 of 3."
+    ],
+    "selected": [
+      "false",
+      "true",
+      "false"
+    ],
+    "report": "Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.",
+    "journal": "Tide 1 · Gate · Heart PoolSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 77 cmSalt30 → 24 pptOxygen55 → 51 %Life49 → 49 %Canopy0 → 0 / 3South ReachDepth67 → 81 cmSalt40 → 43 pptOxygen43 → 40 %Life38 → 38 %Canopy0 → 0 / 3",
+    "saved": {
+      "longwater.watch.v1": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"heart\"}],\"selected\":\"heart\",\"snapshot\":\"{\\\"day\\\":1,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":48,\\\"salinity\\\":38,\\\"oxygen\\\":63,\\\"biomass\\\":45,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":77,\\\"salinity\\\":24,\\\"oxygen\\\":51,\\\"biomass\\\":49,\\\"shade\\\":0},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":81,\\\"salinity\\\":43,\\\"oxygen\\\":40,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":4,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":1,\\\"action\\\":\\\"gate\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":1,\\\"name\\\":\\\"Spring tide\\\",\\\"note\\\":\\\"A long lunar push carries brine inland.\\\",\\\"depth\\\":14,\\\"salt\\\":4,\\\"oxygen\\\":-3},\\\"lines\\\":[\\\"Freshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).\\\",\\\"Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.\\\",\\\"Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}"
+    }
+  },
+  "acceptedAudio": {
+    "status": "On",
+    "checked": true,
+    "contexts": [
+      "running"
+    ],
+    "starts": [
+      {
+        "context": 0,
+        "at": 0.01,
+        "type": "sine"
+      },
+      {
+        "context": 0,
+        "at": 0.09533333333333333,
+        "type": "sine"
+      },
+      {
+        "context": 0,
+        "at": 0.1403333333333333,
+        "type": "sine"
+      }
+    ]
+  },
+  "staticReport": {
+    "title": "Longwater watch report",
+    "status": "Partial watch · 1 of 14 tides completed",
+    "tides": [
+      {
+        "tide": "1",
+        "heading": "Tide 1 · Gate · Heart Pool"
+      }
+    ],
+    "forbiddenElements": 0
+  },
+  "continued": {
+    "summary": "Day 2 of 14. Water 4; seed packs 5.",
+    "cells": [
+      "Upper reed shelf; peat & cordgrass. Depth 43 centimetres. Salt 40 parts per thousand. Oxygen 68 percent. Life 46 percent. Canopy 0 of 3.",
+      "Inner tidal basin; mud & glasswort. Depth 72 centimetres. Salt 24 parts per thousand. Oxygen 60 percent. Life 53 percent. Canopy 1 of 3.",
+      "Outer brackish fringe; silt & saltgrass. Depth 76 centimetres. Salt 45 parts per thousand. Oxygen 43 percent. Life 38 percent. Canopy 0 of 3."
+    ],
+    "selected": [
+      "false",
+      "true",
+      "false"
+    ],
+    "report": "Reed-bed shade · Heart Pool: canopy 0→1, salt 24→22 ppt, oxygen 51→55%, biomass 49→52%. Canopy blunts heat and drying.Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 55→58%. A short, quiet ebb leaves pools exposed.Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.Net · Heart Pool: water 77→72 cm, salt 24→24 ppt, oxygen 51→60%, biomass 49→53%.",
+    "journal": "Tide 1 · Gate · Heart PoolSpring tideA long lunar push carries brine inland.Full field notesFreshwater gate · Heart Pool: water 56→63 cm, salt 30→20 ppt, oxygen 55→54%. Freshwater −1 (4 left).Spring tide · all three cells: water +14 cm, salt +4 ppt; Heart Pool oxygen 54→51%. A long lunar push carries brine inland.Dawn drift · no growth window → biomass 0, dawn oxygen 0; the water-depth/salinity rule shifts salt 0 ppt.Net · Heart Pool: water 56→77 cm, salt 30→24 ppt, oxygen 55→51%, biomass 49→49%.Before → after this tideFreshwater: 5 → 4. Seed packs: 5 → 5.North BankDepth34 → 48 cmSalt34 → 38 pptOxygen64 → 63 %Life44 → 45 %Canopy0 → 0 / 3Heart PoolDepth56 → 77 cmSalt30 → 24 pptOxygen55 → 51 %Life49 → 49 %Canopy0 → 0 / 3South ReachDepth67 → 81 cmSalt40 → 43 pptOxygen43 → 40 %Life38 → 38 %Canopy0 → 0 / 3Tide 2 · Shade · Heart PoolNeap ebbA short, quiet ebb leaves pools exposed.Full field notesReed-bed shade · Heart Pool: canopy 0→1, salt 24→22 ppt, oxygen 51→55%, biomass 49→52%. Canopy blunts heat and drying.Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 55→58%. A short, quiet ebb leaves pools exposed.Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.Net · Heart Pool: water 77→72 cm, salt 24→24 ppt, oxygen 51→60%, biomass 49→53%.Before → after this tideFreshwater: 4 → 4. Seed packs: 5 → 5.North BankDepth48 → 43 cmSalt38 → 40 pptOxygen63 → 68 %Life45 → 46 %Canopy0 → 0 / 3Heart PoolDepth77 → 72 cmSalt24 → 24 pptOxygen51 → 60 %Life49 → 53 %Canopy0 → 1 / 3South ReachDepth81 → 76 cmSalt43 → 45 pptOxygen40 → 43 %Life38 → 38 %Canopy0 → 0 / 3",
+    "saved": {
+      "longwater.watch.v1": "{\"version\":1,\"simulation\":\"76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2\",\"turns\":[{\"action\":\"gate\",\"cell\":\"heart\"},{\"action\":\"shade\",\"cell\":\"heart\"}],\"selected\":\"heart\",\"snapshot\":\"{\\\"day\\\":2,\\\"cells\\\":[{\\\"id\\\":\\\"north\\\",\\\"name\\\":\\\"North Bank\\\",\\\"zone\\\":\\\"Upper reed shelf\\\",\\\"material\\\":\\\"peat & cordgrass\\\",\\\"depth\\\":43,\\\"salinity\\\":40,\\\"oxygen\\\":68,\\\"biomass\\\":46,\\\"shade\\\":0},{\\\"id\\\":\\\"heart\\\",\\\"name\\\":\\\"Heart Pool\\\",\\\"zone\\\":\\\"Inner tidal basin\\\",\\\"material\\\":\\\"mud & glasswort\\\",\\\"depth\\\":72,\\\"salinity\\\":24,\\\"oxygen\\\":60,\\\"biomass\\\":53,\\\"shade\\\":1},{\\\"id\\\":\\\"south\\\",\\\"name\\\":\\\"South Reach\\\",\\\"zone\\\":\\\"Outer brackish fringe\\\",\\\"material\\\":\\\"silt & saltgrass\\\",\\\"depth\\\":76,\\\"salinity\\\":45,\\\"oxygen\\\":43,\\\"biomass\\\":38,\\\"shade\\\":0}],\\\"freshwater\\\":4,\\\"seedPacks\\\":5,\\\"report\\\":{\\\"day\\\":2,\\\"action\\\":\\\"shade\\\",\\\"cell\\\":\\\"heart\\\",\\\"event\\\":{\\\"day\\\":2,\\\"name\\\":\\\"Neap ebb\\\",\\\"note\\\":\\\"A short, quiet ebb leaves pools exposed.\\\",\\\"depth\\\":-5,\\\"salt\\\":2,\\\"oxygen\\\":3},\\\"lines\\\":[\\\"Reed-bed shade · Heart Pool: canopy 0→1, salt 24→22 ppt, oxygen 51→55%, biomass 49→52%. Canopy blunts heat and drying.\\\",\\\"Neap ebb · all three cells: water -5 cm, salt +2 ppt; Heart Pool oxygen 55→58%. A short, quiet ebb leaves pools exposed.\\\",\\\"Dawn drift · suitable depth/salt/oxygen → biomass +1, dawn oxygen +2; the water-depth/salinity rule shifts salt 0 ppt.\\\",\\\"Net · Heart Pool: water 77→72 cm, salt 24→24 ppt, oxygen 51→60%, biomass 49→53%.\\\"]},\\\"finished\\\":false,\\\"outcome\\\":null}\"}"
+    }
+  },
+  "continuedAudio": {
+    "status": "On",
+    "checked": true,
+    "contexts": [
+      "running"
+    ],
+    "starts": [
+      {
+        "context": 0,
+        "at": 0.01,
+        "type": "sine"
+      },
+      {
+        "context": 0,
+        "at": 0.09533333333333333,
+        "type": "sine"
+      },
+      {
+        "context": 0,
+        "at": 0.1403333333333333,
+        "type": "sine"
+      },
+      {
+        "context": 0,
+        "at": 0.266,
+        "type": "triangle"
+      },
+      {
+        "context": 0,
+        "at": 0.34600000000000003,
+        "type": "sine"
+      }
+    ]
+  },
+  "download": {
+    "filename": "Longwater-watch-tide-01.html",
+    "bytes": 6480,
+    "sha256": "c3bc264f9d6ceb986acd38c7c32c655a5099dd1fad0de35b33514b74824852fc"
+  },
+  "geometry": {
+    "viewport": 1280,
+    "documentWidth": 1265,
+    "sound": {
+      "left": 59.5,
+      "right": 179.6875,
+      "width": 120.1875,
+      "height": 44
+    },
+    "report": {
+      "left": 65.5,
+      "right": 287.71875,
+      "width": 222.21875,
+      "height": 47.59375
+    }
+  }
+}

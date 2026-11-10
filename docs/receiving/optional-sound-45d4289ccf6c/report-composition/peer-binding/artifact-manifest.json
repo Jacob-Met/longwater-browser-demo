@@ -1,0 +1,15 @@
+{
+  "schema": "longwater.sound.report-receiving.peer-binding-manifest.v1",
+  "files": [
+    {
+      "path": "receiving-binding.json",
+      "bytes": 4314,
+      "sha256": "b2d716248030c18e59d31e0f539cc1ba1e3e752762f08f4373fe660d67ddc8ef"
+    },
+    {
+      "path": "verify-binding.py",
+      "bytes": 6016,
+      "sha256": "8264c0599f2ea81745467dbede53353ff4f02cad6b1734d1509dc6f7d7c88294"
+    }
+  ]
+}

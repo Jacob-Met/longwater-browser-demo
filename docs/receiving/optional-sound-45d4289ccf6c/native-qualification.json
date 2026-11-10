@@ -1,0 +1,93 @@
+{
+  "original-native-cdp": {
+    "path": "/dev/shm/lw45-sound-composition/evidence/thinkpad-cdp/receipt.json",
+    "sha256": "4a616ee48e09046614ab33a370739b5ba139e18d3ccd6bf91739f81daf752abe",
+    "status": "passed",
+    "groups": [
+      {
+        "name": "Fourteen actual WASM states and saved bytes match off/on/blocked",
+        "status": "passed"
+      },
+      {
+        "name": "Four explicit audio failures retain playable native turns",
+        "status": "passed"
+      },
+      {
+        "name": "Pending mute, real suspension and hidden handler discard audio without game mutation",
+        "status": "passed"
+      },
+      {
+        "name": "Actual offline artifact at320px plays five embedded bounded signals",
+        "status": "passed"
+      }
+    ],
+    "failure": null,
+    "cleanup": {
+      "browserExit": {
+        "code": 0,
+        "signal": null
+      },
+      "serverClosed": true,
+      "ownProfileRemoved": true,
+      "tempEntries": [],
+      "ownTempRootRemoved": true,
+      "sourceUnchanged": true
+    },
+    "receiver_sha256": "c44ab1182a2a5fcfe24ba90fcdc10a1b7460aa9fab331a6db0dfa626397e5e87"
+  },
+  "composition-initial": {
+    "path": "/dev/shm/lw45-sound-composition/evidence/composed-reset/receipt.json",
+    "sha256": "bc91ef4dc708bd90c55dc34225e0084b1fa83eaa82d370659139b4e4bd2094c0",
+    "status": "failed",
+    "groups": [],
+    "failure": {
+      "message": "Expected values to be strictly equal:\n\n1265 !== 1280\n",
+      "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1265 !== 1280\n\n    at file:///dev/shm/lw45-sound-composition/receive-composed-reset-cdp.mjs:190:14"
+    },
+    "cleanup": {
+      "browserExit": {
+        "code": 0,
+        "signal": null
+      },
+      "serverClosed": true,
+      "ownProfileRemoved": true,
+      "tempEntries": [],
+      "ownTempRootRemoved": true,
+      "sourceUnchanged": true
+    },
+    "receiver_sha256": "257797c9979fe83350b9638fed6bc3e75f476dfbdf8d044acfe65fbb0e64ae34"
+  },
+  "composition-final": {
+    "path": "/dev/shm/lw45-sound-composition/evidence/composed-reset-v2/receipt.json",
+    "sha256": "9bc6f37588e5dda811d29a2e119f056a892482951c5b97d9a2a4f239c7703600",
+    "status": "passed",
+    "groups": [
+      {
+        "name": "desktop-http composed sound and deliberate reset",
+        "status": "passed"
+      },
+      {
+        "name": "offline-320 composed sound and deliberate reset",
+        "status": "passed"
+      }
+    ],
+    "failure": null,
+    "cleanup": {
+      "browserExit": {
+        "code": 0,
+        "signal": null
+      },
+      "serverClosed": true,
+      "ownProfileRemoved": true,
+      "tempEntries": [],
+      "ownTempRootRemoved": true,
+      "sourceUnchanged": true
+    },
+    "receiver_sha256": "ac5caf82f4e7563e559c03c679e78f56dd6539fec0026872eca413ebd55f270e"
+  },
+  "limits": {
+    "maintained_suite": "Mac gate incomplete after ENOSPC; headed hosted full suite required",
+    "physical_audio": "No subjective physical-speaker acceptance; signal is qualified using actual native OfflineAudioContext and browser context state",
+    "visibility": "Explicit hidden-handler injection; no physical background-tab assertion"
+  }
+}

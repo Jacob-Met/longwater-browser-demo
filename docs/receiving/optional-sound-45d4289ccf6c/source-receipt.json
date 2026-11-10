@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-08T14:24:18.418883+00:00",
+  "source": "/dev/shm/lw45-sound-composition/source",
+  "commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "base": "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+  "base_tree": "b825a333b9d7f73a73b801f517b07c256aea5934",
+  "all_leaves": 111,
+  "changed_paths": [
+    "README.md",
+    "downloads/Longwater-Fourteen-Tides.html",
+    "game.js",
+    "index.html",
+    "scripts/package.mjs",
+    "tests/watch-audio.test.mjs",
+    "tests/watch-save.browser.test.mjs",
+    "watch-audio.css",
+    "watch-audio.js"
+  ],
+  "unrelated_current_main_leaves_exact": 102,
+  "pins": {
+    "README.md": {
+      "sha256": "d46d093a30753aae688adea976dba40ab469cf813d271386d7e01b7dc11fe24c",
+      "git_blob": "0f0b36c97ca7ba5e49e37803b608957e13d12d79",
+      "mode": "100644"
+    },
+    "downloads/Longwater-Fourteen-Tides.html": {
+      "sha256": "e1c6de9ea013a36eb6e8b1af6024cd433238edc1c9a5eb22628f6842e5e9d7f6",
+      "git_blob": "aa29f883e2515dca788d77c51578999b04d5d937",
+      "mode": "100644"
+    },
+    "game.js": {
+      "sha256": "24b99d9a69638efb74a1a5860619338959ff892e708a981af86b78d9b09c8dbf",
+      "git_blob": "3b25477362ff4cc430d186b067cce2d432ce6771",
+      "mode": "100644"
+    },
+    "index.html": {
+      "sha256": "278f33ac6e926d294f871348d244be4ca0e47bb674ed4b1d120c1790b130dc97",
+      "git_blob": "83cf965e73a2ac31a8e5259d07de72da28037196",
+      "mode": "100644"
+    },
+    "scripts/package.mjs": {
+      "sha256": "0d666fdbfdce7b55eb1c5a5224efc32347c3cb044ef8f3dba473c964cbb85312",
+      "git_blob": "8373ac5c27918479182477f6832dec764909e249",
+      "mode": "100644"
+    },
+    "tests/watch-audio.test.mjs": {
+      "sha256": "87de5e15a9763caa95dbf62f0f314129754ecf9af2060878adc25504c0ddeb70",
+      "git_blob": "1bc90b4c3c65545cd9625450caf35fc81926a1a0",
+      "mode": "100644"
+    },
+    "tests/watch-save.browser.test.mjs": {
+      "sha256": "303989848c868b23cd4f781f6e7711fbb38dc7085131f3ab7e093da353573e91",
+      "git_blob": "14df0d0ec1fe2a13b2079ed4bf4516f331df4777",
+      "mode": "100644"
+    },
+    "watch-audio.css": {
+      "sha256": "961f16d79568a79a80859424cf6669f22dd982c86304b51c72242e0c8697c6a5",
+      "git_blob": "b475f309fc660d8a3ea9869e64e6053b5ba04f56",
+      "mode": "100644"
+    },
+    "watch-audio.js": {
+      "sha256": "95afb204d8fd6f38db90e64c87b445d88170c58eb97fbff8c996c7d5fe82b6bb",
+      "git_blob": "2d211493db0d837bfb57abfbf676f95c64bb204a",
+      "mode": "100644"
+    }
+  },
+  "source_gate": "Native product/composition qualified, unchanged product bytes after two-row fixture adaptation; full headed hosted maintained gate pending"
+}

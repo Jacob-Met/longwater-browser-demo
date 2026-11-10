@@ -1,0 +1,25 @@
+{
+  "schema": "longwater.sound.report-composition.peer-manifest.v1",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1071,
+      "sha256": "b3801e5148b285a859bac2edd1d8b5fb560525c018b1823e5997179b26db3af7"
+    },
+    {
+      "path": "native-source-proof.json",
+      "bytes": 14805,
+      "sha256": "3e4aadb906fa08db251c939530c7c68fe086b2bb222d24480df1c11f517a1cfa"
+    },
+    {
+      "path": "native-source-proof.py",
+      "bytes": 3698,
+      "sha256": "e6133ff71f183c94be471429afc2583d7c9dc1dfcd8ae1d81306e86fb1013827"
+    },
+    {
+      "path": "source-review.json",
+      "bytes": 3224,
+      "sha256": "eac3f3b5428b38e529e4e39956c123e82e782b4555297f8b1bff1e3f478a2834"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-08T14:28:41.792183+00:00",
+  "origin": "/dev/shm/lw45-sound-composition",
+  "persisted_root": "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified",
+  "source_commit": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+  "source_tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+  "files": 301,
+  "all_bytes_read_back_exact": true,
+  "original_home_source_and_original_memory_source_preserved": true,
+  "reason": "Home filesystem capacity recovered; persist only our own previously qualified source/evidence without another test run."
+}

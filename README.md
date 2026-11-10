@@ -18,6 +18,13 @@ reed canopy (Shade 0–3). Each tide, pick a cell and take one action:
 Every action is resolved against the live Rust simulation compiled to
 WebAssembly. Survive all fourteen tides to close the watch.
 
+## Optional sound
+
+Switch **Sound cues** on below the marsh to hear quiet, original synthesized tones. Gate falls like a ripple, Shade uses a low pair of notes, and Seed rises in three short notes. A closing chord marks the actual end of the fourteen-tide watch. Sound adds feedback to the existing reports; it does not change the simulation or saved progress.
+
+Each page opens silently. The switch gives a short confirmation tone when sound is ready. Switching it off, hiding the page, or leaving the page stops sound and releases its audio context; returning stays silent until you enable it again. Unsupported or blocked audio leaves the game playable and displays an unavailable message. Interrupted audio can be enabled again with the switch. All tones are generated locally and included in the offline game, with no audio files, external requests or new dependency.
+
+
 ## Controls
 
 - **Mouse / touch** — tap a cell card to select it, tap an action button to act,
