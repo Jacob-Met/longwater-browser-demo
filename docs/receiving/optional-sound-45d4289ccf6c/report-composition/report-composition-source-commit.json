@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-08T14:53:02.522896+00:00",
+  "source": "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/source",
+  "branch": "refs/heads/feat/optional-sound-45d4289ccf6c",
+  "commit": "a272a9b7414549423a82f851ab048b5bc6c8c9be",
+  "tree": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "parents": [
+    "b49cccbb55d1df50821ebf015719e6dcd764bcb7",
+    "e4e9bf82f6ebb363896559507a2fb5af07b490f5"
+  ],
+  "worktree_clean": true,
+  "source_custody_sha256": "1bc425cdda07ba621ef6dc8da3c968e38fc0b3bbf7e1f2efa4f39a5e4270c412",
+  "native_receiving_sha256": "3368763097df12cb35fcda940001d02f1df51e8d74fdd7dbc1021828efaefb6f",
+  "native_groups": 2,
+  "hosted_maintained_gate": "pending",
+  "source_scope": "Exact prior audio with only actual landed readable report composition; no audio/module/core/report-owner changes"
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-08T14:50:19.685890+00:00",
+  "process": 3289972,
+  "status": "preflight_blocked",
+  "memory_available": 1482088448,
+  "shared_memory_available": 109277184,
+  "home_available": 42217705472,
+  "required_shared_memory_free": 201326592,
+  "browser_started": false,
+  "tests_run": 0,
+  "source_changed": false,
+  "reason": "Dedicated /dev/shm profile preflight stopped before any browser or test launch.",
+  "follow_up": "Use exclusively owned short /tmp/lw45-r profile on recovered native filesystem, explicitly --disable-dev-shm-usage; keep original receiver unexecuted and unchanged."
+}

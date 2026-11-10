@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./watch-rewind.css">
   <link rel="stylesheet" href="./practice-watch.css">
   <link rel="stylesheet" href="./watch-shelf.css">
+  <link rel="stylesheet" href="./watch-audio.css">
 </head>
 <body>
   <main id="stage" aria-labelledby="game-title">
@@ -42,6 +43,11 @@
       </div>
       <button id="practice-open" type="button" disabled>Open practice</button>
       <p id="practice-entry-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="watch-audio" aria-label="Sound">
+      <label><input id="sound-enabled" type="checkbox" role="switch" aria-describedby="sound-note sound-status" disabled> Sound cues</label>
+      <span id="sound-status" role="status">Off</span>
+      <p id="sound-note">Quiet tones for your actions and the closing tide.</p>
     </section>
     <section id="watch-storage" aria-label="Watch progress">
       <p id="watch-save-status" role="status" aria-live="polite">Loading your saved watch…</p>

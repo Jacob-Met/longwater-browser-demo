@@ -26,6 +26,8 @@ const files = new Map([
   ["/watch-shelf.js", ["watch-shelf.js", "text/javascript"]],
   ["/watch-shelf-model.js", ["watch-shelf-model.js", "text/javascript"]],
   ["/watch-shelf.css", ["watch-shelf.css", "text/css"]],
+  ["/watch-audio.js", ["watch-audio.js", "text/javascript"]],
+  ["/watch-audio.css", ["watch-audio.css", "text/css"]],
   ["/journal.js", ["journal.js", "text/javascript"]],
   ["/journal.css", ["journal.css", "text/css"]],
   ["/watch-trends.js", ["watch-trends.js", "text/javascript"]],

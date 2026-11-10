@@ -1,0 +1,192 @@
+{
+  "status": "original_sound_PR_published_forward_composition_required",
+  "repository": "Jacob-Met/longwater-browser-demo",
+  "pr": 23,
+  "url": "https://github.com/Jacob-Met/longwater-browser-demo/pull/23",
+  "head": "3fc05f635421eaaf1f49ba48732d38be1c3b6e70",
+  "tree": "8b7bb8f835d041b5445bff0708249b49207f2fc4",
+  "branch": "estate/45d4289ccf6c-optional-sound",
+  "commits": [
+    {
+      "native": "0294898793e6a53ea13c21d90fc66d7f2158dc80",
+      "hosted": "c11fcc0411f72d661aa2170f355e4f89c6e93226",
+      "tree": "f02a4a419d16143ffd058929f57eaecfa106f89f",
+      "parents": [
+        "c44245f45f21ddd14c4bfbb5cf8d5a21d0e98fe3"
+      ]
+    },
+    {
+      "native": "e9628acd0f977e42f7a5c062223976c199c10d16",
+      "hosted": "64e8f948a586b557286d28a2ae4b038087fea2c5",
+      "tree": "4509c5c0e35daa69aeb8bdb2d8501b6a0fcd5e3d",
+      "parents": [
+        "c11fcc0411f72d661aa2170f355e4f89c6e93226",
+        "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c"
+      ]
+    },
+    {
+      "native": "20724ac249d1bf4b4e60e8e3dbe46dc1f419cea4",
+      "hosted": "0a93a7779a1b5a55654937449c612d0848b51de2",
+      "tree": "5f8d2bc71da8e5f2956f04a71456b8b35e94e5be",
+      "parents": [
+        "64e8f948a586b557286d28a2ae4b038087fea2c5"
+      ]
+    },
+    {
+      "native": "b49cccbb55d1df50821ebf015719e6dcd764bcb7",
+      "hosted": "3fc05f635421eaaf1f49ba48732d38be1c3b6e70",
+      "tree": "8b7bb8f835d041b5445bff0708249b49207f2fc4",
+      "parents": [
+        "0a93a7779a1b5a55654937449c612d0848b51de2"
+      ]
+    }
+  ],
+  "readback": {
+    "head": "3fc05f635421eaaf1f49ba48732d38be1c3b6e70",
+    "branch": "estate/45d4289ccf6c-optional-sound",
+    "tree": "8b7bb8f835d041b5445bff0708249b49207f2fc4",
+    "leaves": 127,
+    "changedFilesVerified": 25,
+    "textFiles": 23,
+    "binaryFiles": 2,
+    "allNewPublishedBytesExact": true,
+    "received": [
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/fixture-receipt.json",
+        "sha": "15fface7eb5a067012357eea3956eae96a774752",
+        "characters": 1333
+      },
+      {
+        "path": "scripts/package.mjs",
+        "sha": "8373ac5c27918479182477f6832dec764909e249",
+        "characters": 3182
+      },
+      {
+        "path": "tests/watch-save.browser.test.mjs",
+        "sha": "14df0d0ec1fe2a13b2079ed4bf4516f331df4777",
+        "characters": 11833
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/fixture-routes.patch",
+        "sha": "e27fd424af62e30e70d17d79789371611afcc852",
+        "characters": 566
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/package-receipt.json",
+        "sha": "500b37a08c65debc83bbd4288883be21e5385c17",
+        "characters": 381
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/README.md",
+        "sha": "daabf8d40117f027699144d51a294aeb9d254b57",
+        "characters": 8191
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/peer-review/artifact-manifest.json",
+        "sha": "6e877d98aba1855d54427ff076e50c458c8a700d",
+        "characters": 688
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/artifact-manifest.json",
+        "sha": "56844a4b5dae0ae6c232fe6e7684b463d317ad22",
+        "characters": 10165
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/peer-review/native-source-proof.json",
+        "sha": "36d6725c06cc57ee2c21457590cfb1dc3fd0cbb3",
+        "characters": 4143
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/peer-review/README.md",
+        "sha": "30b7b2d27e13cead2e589b01bf0298d403ab611f",
+        "characters": 1287
+      },
+      {
+        "path": "README.md",
+        "sha": "0f0b36c97ca7ba5e49e37803b608957e13d12d79",
+        "characters": 11819
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/source-receipt.json",
+        "sha": "ba654168245f2f924c9e0bbca0c5415b05c89e61",
+        "characters": 2681
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/native-qualification.json",
+        "sha": "0386acaa2b5ff7c928b3ca51bcd02cda82ca06c8",
+        "characters": 3189
+      },
+      {
+        "path": "watch-audio.css",
+        "sha": "b475f309fc660d8a3ea9869e64e6053b5ba04f56",
+        "characters": 757
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/publication-manifest.json",
+        "sha": "52bbb0860daa367c0d6f1856821834423e861128",
+        "characters": 2747
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/peer-review/native-source-proof.py",
+        "sha": "387b1f05e232c37f502687dfdeb39b3d48e3db0e",
+        "characters": 3804
+      },
+      {
+        "path": "tests/watch-audio.test.mjs",
+        "sha": "1bc90b4c3c65545cd9625450caf35fc81926a1a0",
+        "characters": 18916
+      },
+      {
+        "path": "index.html",
+        "sha": "83cf965e73a2ac31a8e5259d07de72da28037196",
+        "characters": 6020
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/peer-review/source-review.json",
+        "sha": "dcf0c0e4557454cbbafec14300d6a57fff10a977",
+        "characters": 6552
+      },
+      {
+        "path": "docs/receiving/optional-sound-45d4289ccf6c/native-persistence-receipt.json",
+        "sha": "8d3edf81f3f26b89cf8f7f4e4db74e97d12139f5",
+        "characters": 555
+      },
+      {
+        "path": "game.js",
+        "sha": "3b25477362ff4cc430d186b067cce2d432ce6771",
+        "characters": 20541
+      },
+      {
+        "path": "downloads/Longwater-Fourteen-Tides.html",
+        "sha": "aa29f883e2515dca788d77c51578999b04d5d937",
+        "characters": 250423
+      }
+    ]
+  },
+  "archive": {
+    "git_blob": "f0aaed6003b0bf22893693073ab7fb5fa72f8a7d",
+    "sha256": "023fd87952452355e114b9219e328a325a8b675ac69ef9ef7456a6ddb24cedd1",
+    "bytes": 769798,
+    "base64_readback_exact": true
+  },
+  "preview": {
+    "git_blob": "0bf103b725ee6e57697e27f48a107c35d4c0429a",
+    "sha256": "4c6e5af4f5ddcf7fce21805bd8ac9fa0ce8791d2473bb8700b6b8af1c85be880",
+    "bytes": 112761,
+    "base64_readback_exact": true
+  },
+  "body": "## Player outcome\n\nEnable **Sound cues** below the marsh for quiet, original tones after accepted Gate, Shade and Seed actions, plus a closing cue when the fourteen-tide watch actually finishes. Every page opens silently. Mute, interrupted audio and unavailable browser audio leave the watch playable and preserve saved progress.\n\n## Changes\n\n- Add a separate sound switch, status and locally synthesized Web Audio module. A delayed enable is invalidated by mute or hiding the page; audio is not queued for later turns.\n- Place the gameplay hook only inside the existing accepted-turn branch. Unavailable actions, rejected native turns and attempts after completion stay silent.\n- Preserve the landed Reset/R review from PR #20. Cancel leaves the current watch and active audio intact; confirmation starts the new watch without an extra cue.\n- Include the same audio module and stylesheet through the existing offline packager, then regenerate the downloadable HTML.\n- Add nine maintained audio cases and only the two required audio routes to the private save-browser fixture. Every inherited assertion remains exact.\n\n## Exact source and custody\n\n**Head:** `3fc05f635421eaaf1f49ba48732d38be1c3b6e70`  \n**Tree:** `8b7bb8f835d041b5445bff0708249b49207f2fc4`\n\nThe complete 127-leaf tree is byte-for-byte equivalent to native evidence commit `b49cccbb55d1df50821ebf015719e6dcd764bcb7`. All 102 unrelated leaves from actual landed base `f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c` remain exact. The nine source/test changes and sixteen additive evidence files were read back individually, including both binary artifacts.\n\nThe history preserves the original audio tree at `c11fcc0411f72d661aa2170f355e4f89c6e93226`, its two-parent landed-reset composition at `64e8f948a586b557286d28a2ae4b038087fea2c5`, and the isolated fixture adaptation at `0a93a7779a1b5a55654937449c612d0848b51de2`.\n\nThe final standalone HTML is **250,427 bytes**, SHA-256 `e1c6de9ea013a36eb6e8b1af6024cd433238edc1c9a5eb22628f6842e5e9d7f6`. Shipped WASM/glue, save schema, journal/trends implementation, dependencies and workflow remain unchanged.\n\n## Validation\n\n| Stage | Result |\n| --- | --- |\n| Original audio, existing native ThinkPad Chromium/Node | Four substantive groups passed: 42 accepted real WASM turns with exact off/on/blocked state and saved-byte parity, explicit audio failures/lifecycle, direct offline play and actual rendered signals. |\n| Actual landed-reset composition | Both desktop HTTP and 320px offline route groups passed: cancel, confirm, next accepted action, sound-switch keyboard scope and mute preserve their intended state/cue behavior. |\n| Independent source review | Accepted exact product and fixture delta, all other base bytes, inverse reset/fixture proofs and primary receipt counts/cleanup. No duplicate browser/core run was claimed. |\n| Headed maintained GitHub Actions | **Pending on this exact PR head.** The expected maintained selection is the landed 60 cases plus the nine audio cases; no full hosted pass is claimed yet. |\n\nThe packet retains the initial Mac seven-pass/two-receiver-error result and its two activation-only corrections, the incomplete Mac gate after ENOSPC, and the first composed receiver's desktop scrollbar assertion error. Product bytes did not change for these receiver corrections. Every completed native receiving process and owned profile terminated.\n\n[Readable evidence and replay instructions](https://github.com/Jacob-Met/longwater-browser-demo/blob/3fc05f635421eaaf1f49ba48732d38be1c3b6e70/docs/receiving/optional-sound-45d4289ccf6c/README.md) · [Independent review](https://github.com/Jacob-Met/longwater-browser-demo/blob/3fc05f635421eaaf1f49ba48732d38be1c3b6e70/docs/receiving/optional-sound-45d4289ccf6c/peer-review/source-review.json) · [Actual 320px offline preview](https://github.com/Jacob-Met/longwater-browser-demo/blob/3fc05f635421eaaf1f49ba48732d38be1c3b6e70/docs/receiving/optional-sound-45d4289ccf6c/preview-offline-320.png)\n\nSignal qualification uses actual native AudioContext/OfflineAudioContext behavior. Physical-speaker listening and physical background-tab acceptance are separate; the hidden-handler boundary is explicitly injected. No global browser setting or live user session is used.\n\nCloses #16 after ordinary integration. Portable-watch #12/PR21, historical-choice #17/PR19 and readable-report #18 retain their owners and their future composition requirements. Merge and hosting remain with the parent integrator.\n",
+  "new_base": {
+    "sha": "e4e9bf82f6ebb363896559507a2fb5af07b490f5",
+    "tree": "1e07b279db3634a42e2ef5e7b72656529a2223c0",
+    "parents": [
+      "f3215e82795d881c27f0c0225aa8ea5fcd2bbe4c",
+      "b00da99b0cfed7e738bf046d436cca88ceeef192"
+    ],
+    "message": "Merge watch report with qualified Reset/R composition\n\nDownload readable watch reports from accepted tide history"
+  },
+  "mergeable": false,
+  "mergeable_state": "dirty",
+  "headed_gate": "not run while generated/shared integration files conflict",
+  "scope": "Only the now-landed readable report must be composed; unmerged historical/file owners remain excluded."
+}

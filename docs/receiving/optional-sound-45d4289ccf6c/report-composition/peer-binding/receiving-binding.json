@@ -1,0 +1,105 @@
+{
+  "at": "2026-10-08T14:53:53.729608+00:00",
+  "reviewer": "ChatGPT github_receiving / estate-45d4289ccf6c",
+  "disposition": "Exact independent source review bound to actual two-route native receipt and immutable source commit; full headed CI and merge remain pending.",
+  "source_commit": "a272a9b7414549423a82f851ab048b5bc6c8c9be",
+  "source_tree": "1e80c027be11d72ca91483c0dfedbf643cfa8109",
+  "source_parents": [
+    "b49cccbb55d1df50821ebf015719e6dcd764bcb7",
+    "e4e9bf82f6ebb363896559507a2fb5af07b490f5"
+  ],
+  "source_review_manifest_sha256": "14a179b1bf9bf05df35203e09745ebef3249e1f4f42cc1584b571b0198f14b25",
+  "native_receipt": {
+    "path": "/home/jacob/longwater-sound-45d4289ccf6c/final-qualified/evidence/composed-report-v3/receipt.json",
+    "bytes": 18334,
+    "sha256": "3368763097df12cb35fcda940001d02f1df51e8d74fdd7dbc1021828efaefb6f",
+    "status": "passed",
+    "started": "2026-10-08T14:52:00.801Z",
+    "finished": "2026-10-08T14:52:08.284Z",
+    "receiver_sha256": "87d676f34d9292d5cca42dc25d4338b4f11a8ce5049df4adce2a415f4581ed31",
+    "groups": [
+      {
+        "name": "desktop-http real report download preserves opted-in sound and watch",
+        "status": "passed",
+        "acceptedTurns": 2,
+        "actualDownloads": 1,
+        "nativeAudioContext": true,
+        "gameStateAndSaveUnchangedByDownload": true,
+        "optedInContextAndCueCountUnchangedByDownload": true,
+        "nextAcceptedTurnCued": true,
+        "downloadedReportRemainsImmutableAfterContinuation": true,
+        "downloadedReportSha256": "c3bc264f9d6ceb986acd38c7c32c655a5099dd1fad0de35b33514b74824852fc",
+        "stateCustodySha256": "4064192f3c35640ec705f3c2235fc05703e56e4cadea68abff2470d756761549",
+        "screenshotSha256": "51ea3aba3c2bf10ec83e01476fba84e05366f43f8e5316389813c2c801e4cda3",
+        "geometry": {
+          "viewport": 1280,
+          "documentWidth": 1265,
+          "sound": {
+            "left": 59.5,
+            "right": 179.6875,
+            "width": 120.1875,
+            "height": 44
+          },
+          "report": {
+            "left": 65.5,
+            "right": 287.71875,
+            "width": 222.21875,
+            "height": 47.59375
+          }
+        }
+      },
+      {
+        "name": "offline-320 real report download preserves opted-in sound and watch",
+        "status": "passed",
+        "acceptedTurns": 2,
+        "actualDownloads": 1,
+        "nativeAudioContext": true,
+        "gameStateAndSaveUnchangedByDownload": true,
+        "optedInContextAndCueCountUnchangedByDownload": true,
+        "nextAcceptedTurnCued": true,
+        "downloadedReportRemainsImmutableAfterContinuation": true,
+        "downloadedReportSha256": "c3bc264f9d6ceb986acd38c7c32c655a5099dd1fad0de35b33514b74824852fc",
+        "stateCustodySha256": "65078820ea40dfc501afcfb64f9817a81e665ade0ab3bdd28ca7bed44a8621e3",
+        "screenshotSha256": "8a8774e05e12212202c9d6474fc5eec4070527457e34ed9337ed7d4ba057f6f1",
+        "geometry": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "sound": {
+            "left": 17,
+            "right": 137.1875,
+            "width": 120.1875,
+            "height": 44
+          },
+          "report": {
+            "left": 23,
+            "right": 245.21875,
+            "width": 222.21875,
+            "height": 47.59375
+          }
+        }
+      }
+    ],
+    "cleanup": {
+      "browserExit": {
+        "code": 0,
+        "signal": null
+      },
+      "serverClosed": true,
+      "ownProfileRemoved": true,
+      "tempEntries": [],
+      "ownTempRootRemoved": true,
+      "sourceUnchanged": true
+    }
+  },
+  "all_37_reviewed_source_hashes_match_both_native_run_maps": true,
+  "complete_before_after_maps_equal": true,
+  "independent_tests_rerun": 0,
+  "limits": [
+    "This is a primary receipt/source binding, not a test execution by this reviewer.",
+    "The original four audio and two reset groups remain separate preserved stages.",
+    "The two earlier capacity stops occurred before this successful browser run according to author; no zero-test capacity stop is counted as a product pass.",
+    "Full maintained CI must qualify the final actual published head before integration.",
+    "Original physical-speaker and injected-visibility limitations remain unchanged."
+  ],
+  "binding_verifier_exit_code": 0
+}

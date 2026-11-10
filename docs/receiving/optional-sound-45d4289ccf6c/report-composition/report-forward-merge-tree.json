@@ -1,0 +1,5 @@
+{
+  "code": 1,
+  "stdout": "386ab09d52f1bba0da6443005917681ea338ef08\n100644 e0766ffac754fb3c4e7917b9bf90d0b6ef3ff2c0 1\tdownloads/Longwater-Fourteen-Tides.html\n100644 aa29f883e2515dca788d77c51578999b04d5d937 2\tdownloads/Longwater-Fourteen-Tides.html\n100644 389c3e21d1f216a7fb690675e77887935e47ee23 3\tdownloads/Longwater-Fourteen-Tides.html\n100644 5168cde362b0518431c78e694e3a57af78f4ee48 1\tscripts/package.mjs\n100644 8373ac5c27918479182477f6832dec764909e249 2\tscripts/package.mjs\n100644 a936acf9d0635fd6f774396adb03c3d1e40e6edd 3\tscripts/package.mjs\n\nAuto-merging README.md\nAuto-merging downloads/Longwater-Fourteen-Tides.html\nCONFLICT (content): Merge conflict in downloads/Longwater-Fourteen-Tides.html\nAuto-merging index.html\nAuto-merging scripts/package.mjs\nCONFLICT (content): Merge conflict in scripts/package.mjs\nAuto-merging tests/watch-save.browser.test.mjs\n",
+  "stderr": ""
+}
