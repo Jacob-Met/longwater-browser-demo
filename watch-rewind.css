@@ -1,0 +1,14 @@
+.watch-rewind { margin-top: 14px; padding-top: 14px; border-top: 1px solid #2a5650; }
+.watch-rewind button { min-height: 44px; padding: .65rem .9rem; border: 1px solid #72e2b4; border-radius: .65rem; background: #183c3d; color: #e6f0e5; font: inherit; cursor: pointer; }
+.watch-rewind button:disabled { opacity: .55; cursor: not-allowed; }
+.watch-rewind button:focus-visible { outline: 3px solid #efcb83; outline-offset: 3px; }
+#watch-rewind-hint, #watch-rewind-status { max-width: 72ch; margin: .65rem 0 0; line-height: 1.5; color: #c1d6ca; }
+#watch-rewind-status:empty { display: none; }
+#watch-rewind-review { width: min(34rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); overflow: auto; padding: 1.5rem; border: 1px solid #72e2b4; border-radius: 1rem; background: #102f35; color: #e6f0e5; box-shadow: 0 1.5rem 5rem #0008; }
+#watch-rewind-review::backdrop { background: #031218c9; }
+#watch-rewind-review h2 { margin: 0 0 1rem; font-size: 1.3rem; }
+#watch-rewind-review p { margin: .75rem 0; line-height: 1.5; overflow-wrap: anywhere; }
+#watch-rewind-resources { color: #efcb83; }
+#watch-rewind-review .rewind-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+#watch-rewind-review button { flex: 1 1 10rem; }
+#watch-rewind-review #watch-rewind-keep { background: #72e2b4; color: #071b22; font-weight: 700; }

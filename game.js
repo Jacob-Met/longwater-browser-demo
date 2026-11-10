@@ -3,6 +3,7 @@ import { WatchJournal } from "./journal.js";
 import { SavedWatch, WATCH_SAVE_KEY, MAX_SAVE_LENGTH } from "./watch-save.js";
 import { WatchChoice } from "./watch-choice.js";
 import { WatchFile } from "./watch-file.js";
+import { WatchRewind } from "./watch-rewind.js";
 import { PracticeWatch } from "./practice-watch.js";
 import { WatchShelf } from "./watch-shelf.js";
 
@@ -19,6 +20,7 @@ const context = canvas.getContext("2d", { alpha: false });
 const journal = new WatchJournal(document.querySelector("#watch-journal"));
 let watch;
 let watchFile;
+let watchRewind;
 let state;
 let selected = 1;
 let message = "";
@@ -253,6 +255,7 @@ function drawActions(l) {
 
 function render() {
   historicalChoice.synchronize(state);
+  watchRewind?.synchronize(state);
   if (!state || !context || width <= 0 || height <= 0) return;
   const l = layout();
   drawBackground();
@@ -393,6 +396,29 @@ function act(action) {
   showSaveStatus();
 }
 
+function refreshRestoredWatch() {
+  try {
+    const restored = JSON.parse(watch.snapshot);
+    journal.restore(watch.replayHistory());
+    state = restored;
+    selected = watch.selected;
+    message = "";
+    render();
+    announce();
+    showSaveStatus();
+  } catch (error) {
+    // The imported watch is already active. Keep its file/save recovery
+    // available, but do not accept play against a display that is stale.
+    state = null;
+    historicalChoice.synchronize(null);
+    watchRewind?.synchronize(null);
+    document.querySelector("#watch-journal").hidden = true;
+    [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
+    showSaveStatus();
+    throw error;
+  }
+}
+
 function reset() {
   if (!watch) return;
   state = JSON.parse(watch.reset());
@@ -485,6 +511,7 @@ window.addEventListener("resize", resize);
 window.addEventListener("storage", event => {
   if (watch && (event.key === WATCH_SAVE_KEY || event.key === null)) {
     watch.storageChanged();
+    watchRewind?.invalidate("The saved watch changed. Review the latest tide again.");
     watchFile?.invalidate("The saved watch changed. Open the file again to review replacement.");
     showSaveStatus();
     if (resetReview) {
@@ -509,26 +536,13 @@ try {
   watchFile = new WatchFile(document.querySelector("#watch-files"), {
     watch,
     maxLength: MAX_SAVE_LENGTH,
-    onRestore() {
-      try {
-        const restored = JSON.parse(watch.snapshot);
-        journal.restore(watch.replayHistory());
-        state = restored;
-        selected = watch.selected;
-        message = "";
-        render();
-        announce();
-        showSaveStatus();
-      } catch (error) {
-        // The imported watch is already active. Keep its file/save recovery
-        // available, but do not accept play against a display that is stale.
-        state = null;
-        historicalChoice.synchronize(null);
-        document.querySelector("#watch-journal").hidden = true;
-        [resetControl, ...cellControls, ...actionControls].forEach(button => { button.disabled = true; });
-        showSaveStatus();
-        throw error;
-      }
+    onRestore: refreshRestoredWatch,
+  });
+  watchRewind = new WatchRewind(document.querySelector("#watch-rewind"), {
+    watch,
+    onRewind() {
+      watchFile?.invalidate();
+      refreshRestoredWatch();
     },
   });
   resize();

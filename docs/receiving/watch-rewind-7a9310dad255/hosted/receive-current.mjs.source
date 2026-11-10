@@ -1,0 +1,325 @@
+import assert from "node:assert/strict";
+import crypto from "node:crypto";
+import fs from "node:fs/promises";
+import http from "node:http";
+import path from "node:path";
+import {spawn,execFileSync} from "node:child_process";
+import {fileURLToPath,pathToFileURL} from "node:url";
+
+const [sourceArg,manifestArg,evidenceArg,mode="candidate"]=process.argv.slice(2);
+if(!sourceArg||!manifestArg||!evidenceArg)throw Error("Expected SOURCE MANIFEST EVIDENCE [baseline|candidate]");
+const own=path.dirname(fileURLToPath(import.meta.url)),source=path.resolve(sourceArg),evidence=path.resolve(evidenceArg);
+const fixtureRaw=await fs.readFile(path.join(own,"fixtures.json"));
+const fixture=JSON.parse(fixtureRaw);
+const manifestRaw=await fs.readFile(manifestArg),manifest=JSON.parse(manifestRaw);
+assert.ok(Array.isArray(manifest.files));
+const byPath=new Map(manifest.files.map(row=>[row.path,row]));
+const baselineRuntime=["index.html","style.css","game.js","journal.js","journal.css","watch-save.js","watch-save.css","watch-trends.js","watch-trends.css","watch-file.js","watch-file.css","watch-report.js","watch-report.css","pkg/longwater_web.js","pkg/longwater_web_bg.wasm","watch-choice-model.js","watch-choice.js","watch-choice.css"];
+const runtime=mode==="baseline"?baselineRuntime:[...baselineRuntime,"watch-rewind.js","watch-rewind.css","practice-watch.js","practice-watch.css"];
+const sha=raw=>crypto.createHash("sha256").update(raw).digest("hex");
+const blob=raw=>crypto.createHash("sha1").update("blob "+raw.length+"\0").update(raw).digest("hex");
+const pin=raw=>({bytes:raw.length,sha:blob(raw),sha256:sha(raw)});
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const chrome="/snap/bin/chromium";
+const key="longwater.watch.v1";
+await fs.mkdir(evidence,{recursive:false});await fs.mkdir(path.join(evidence,"downloads"));
+const checks=[],requests=[],responses=[],exceptions=[],downloads=[],serverRequests=[],deliveries=[],contexts=[],injections=[];
+const pending=new Map(),sessionCase=new Map();
+let next=0,session=null,currentCase=null,server,browser,socket,profile,version,origin,fatal=null,chromeStderr="";
+const startedAt=new Date().toISOString();
+async function verifySource(){for(const row of manifest.files){const raw=await fs.readFile(path.join(source,row.path));assert.deepEqual(pin(raw),{bytes:row.bytes,sha:row.sha,sha256:row.sha256},row.path);}}
+function send(method,params={},sessionId=session){
+  const id=++next;return new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>{pending.delete(id);reject(Error("CDP timeout: "+method));},15000);
+    pending.set(id,{resolve,reject,timer});socket.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));
+  });
+}
+async function evaluate(expression,sessionId=session){const result=await send("Runtime.evaluate",{expression,returnByValue:true,awaitPromise:true},sessionId);if(result.exceptionDetails)throw Error(result.exceptionDetails.exception?.description||result.exceptionDetails.text);return result.result.value;}
+async function until(expression){const end=Date.now()+15000;while(Date.now()<end){if(await evaluate(expression))return;await delay(50);}throw Error("Browser condition not reached: "+expression);}
+async function click(selector){
+  const point=await evaluate("(()=>{const e=document.querySelector("+JSON.stringify(selector)+");if(!e||e.disabled)throw Error('Missing or disabled pointer target: '+"+JSON.stringify(selector)+");e.scrollIntoView({block:'center'});const r=e.getBoundingClientRect();if(!r.width||!r.height)throw Error('Hidden pointer target');return{x:r.x+r.width/2,y:r.y+r.height/2}})()");
+  await send("Input.dispatchMouseEvent",{type:"mousePressed",button:"left",clickCount:1,...point});await send("Input.dispatchMouseEvent",{type:"mouseReleased",button:"left",clickCount:1,...point});
+}
+async function press(keyName,code,virtual){
+  await send("Input.dispatchKeyEvent",{type:"keyDown",key:keyName,code,windowsVirtualKeyCode:virtual,nativeVirtualKeyCode:virtual});
+  await send("Input.dispatchKeyEvent",{type:"keyUp",key:keyName,code,windowsVirtualKeyCode:virtual,nativeVirtualKeyCode:virtual});
+}
+async function shot(name,selector){
+  if(selector)await evaluate("document.querySelector("+JSON.stringify(selector)+").scrollIntoView({block:'start'})");
+  await evaluate("new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))");
+  const result=await send("Page.captureScreenshot",{format:"png",captureBeyondViewport:false}),raw=Buffer.from(result.data,"base64");
+  const filename=currentCase+"-"+name+".png";await fs.writeFile(path.join(evidence,filename),raw);return{path:filename,...pin(raw)};
+}
+function bootstrap(initial,{blockRead=false,blockWrite=false}={}){
+  return "(()=>{const key="+JSON.stringify(key)+",initial="+JSON.stringify(initial)+",config="+JSON.stringify({blockRead,blockWrite})+";const get=Storage.prototype.getItem,set=Storage.prototype.setItem,remove=Storage.prototype.removeItem;if(sessionStorage.getItem('__longwater_receiver_seeded')!=='yes'){initial===null?remove.call(localStorage,key):set.call(localStorage,key,initial);sessionStorage.setItem('__longwater_receiver_seeded','yes');}const control={...config,readRaw:()=>get.call(localStorage,key),foreign:raw=>set.call(localStorage,key,raw)};Object.defineProperty(window,'__longwaterReceiver',{value:control});Storage.prototype.getItem=function(name){if(name===key&&control.blockRead)throw new DOMException('Independent receiver read refusal','SecurityError');return get.call(this,name)};Storage.prototype.setItem=function(name,value){if(name===key&&control.blockWrite)throw new DOMException('Independent receiver write refusal','QuotaExceededError');return set.call(this,name,value)};})()";
+}
+async function newPage(initial=fixture.twoSouth,options={}){
+  const {browserContextId}=await send("Target.createBrowserContext",{disposeOnDetach:true},null);
+  contexts.push(browserContextId);
+  await send("Browser.setDownloadBehavior",{behavior:"allowAndName",browserContextId,downloadPath:path.join(evidence,"downloads"),eventsEnabled:true},null);
+  const {targetId}=await send("Target.createTarget",{url:"about:blank",browserContextId},null);
+  session=(await send("Target.attachToTarget",{targetId,flatten:true},null)).sessionId;sessionCase.set(session,currentCase);
+  await send("Runtime.enable");await send("Page.enable");await send("DOM.enable");await send("Network.enable");
+  await send("Emulation.setDeviceMetricsOverride",{width:options.offline?390:1280,height:900,deviceScaleFactor:1,mobile:!!options.offline});
+  const script=bootstrap(initial,options);injections.push({case:currentCase,kind:"private-storage-fixture",sha256:sha(script),source:script});
+  await send("Page.addScriptToEvaluateOnNewDocument",{source:script});
+  const url=options.offline?pathToFileURL(path.join(source,"downloads/Longwater-Fourteen-Tides.html")).href:origin+"/index.html";
+  await send("Page.navigate",{url});
+  await until("!!document.querySelector('#watch-file-download')&&!document.querySelector('#watch-file-download').disabled");
+  return{browserContextId,targetId,session,url,offline:!!options.offline};
+}
+async function closePage(page){
+  await send("Target.disposeBrowserContext",{browserContextId:page.browserContextId},null);
+  contexts.splice(contexts.indexOf(page.browserContextId),1);
+}
+async function delivered(page){
+  const received=[];
+  for(const row of responses.filter(item=>item.session===page.session&&item.status===200&&!item.bound)){
+    const url=new URL(row.url);let relative;
+    if(url.origin===origin)relative=url.pathname.replace(/^\/+/,"");
+    else if(url.protocol==="file:"){const filename=fileURLToPath(url);if(filename.startsWith(source+path.sep))relative=path.relative(source,filename).split(path.sep).join("/");}
+    if(!relative||!byPath.has(relative))continue;
+    const body=await send("Network.getResponseBody",{requestId:row.requestId},page.session);
+    const raw=Buffer.from(body.body,body.base64Encoded?"base64":"utf8");
+    assert.equal(sha(raw),byPath.get(relative).sha256,relative);received.push({path:relative,...pin(raw)});row.bound=true;
+  }
+  if(page.offline)assert.ok(received.some(row=>row.path==="downloads/Longwater-Fourteen-Tides.html"));
+  else assert.deepEqual([...new Set(received.map(row=>row.path))].sort(),[...runtime].sort());
+  deliveries.push({case:currentCase,session:page.session,offline:page.offline,files:received});
+}
+async function observation(){
+  return evaluate("({raw:window.__longwaterReceiver.readRaw(),selected:[...document.querySelectorAll('[data-cell]')].filter(e=>e.getAttribute('aria-pressed')==='true').map(e=>Number(e.dataset.cell)),journal:[...document.querySelectorAll('#journal-entries>li')].map(e=>({tide:e.dataset.tide,text:e.textContent})),journalHidden:document.querySelector('#watch-journal').hidden,summary:document.querySelector('#state-summary').textContent,save:document.querySelector('#watch-save-status').textContent,retryHidden:document.querySelector('#watch-save-retry').hidden,comparison:{hidden:document.querySelector('#choice-result').hidden,tide:document.querySelector('#choice-result').dataset.tide||null,text:document.querySelector('#choice-result').textContent},file:{visible:!document.querySelector('#watch-file-preview').hidden,summary:document.querySelector('#watch-file-summary').textContent,status:document.querySelector('#watch-file-status').textContent},rewind:{present:!!document.querySelector('#watch-rewind'),visible:!!document.querySelector('#watch-rewind')&&!document.querySelector('#watch-rewind').hidden,open:!!document.querySelector('#watch-rewind-review')?.open,disabled:document.querySelector('#watch-rewind-open')?.disabled,status:document.querySelector('#watch-rewind-status')?.textContent}})");
+}
+function stable(seen){const {rewind,...rest}=seen;return rest;}
+async function openReview(day,action,cell){
+  await click("#watch-rewind-open");await until("document.querySelector('#watch-rewind-review').open");
+  const info=await evaluate("({active:document.activeElement.id,title:document.querySelector('#watch-rewind-title').textContent,summary:document.querySelector('#watch-rewind-summary').textContent,effect:document.querySelector('#watch-rewind-effect').textContent,save:document.querySelector('#watch-rewind-save-note').textContent,confirm:document.querySelector('#watch-rewind-confirm').textContent})");
+  assert.equal(info.active,"watch-rewind-keep");assert.equal(info.title.trim(),"Rewind one tide?");assert.equal(info.confirm.trim(),"Rewind tide "+day);
+  for(const value of [String(day),String(day-1),action,cell])assert.ok(info.summary.toLowerCase().includes(value.toLowerCase()),"Review summary contains "+value);
+  assert.ok(info.effect.trim());assert.ok(info.save.trim());return info;
+}
+async function confirmReview(){await click("#watch-rewind-confirm");await until("!document.querySelector('#watch-rewind-review').open");}
+async function watchDownload(label,expected){
+  const count=downloads.length;await click("#watch-file-download");
+  const end=Date.now()+15000;while(Date.now()<end&&!downloads.slice(count).some(row=>row.state==="completed"))await delay(50);
+  const download=downloads.slice(count).find(row=>row.state==="completed");assert.ok(download,"Actual watch download completed");
+  const raw=await fs.readFile(path.join(evidence,"downloads",download.guid));assert.equal(raw.toString("utf8"),expected);
+  assert.equal(download.suggestedFilename,"Longwater-watch-day-"+JSON.parse(JSON.parse(expected).snapshot).day+".json");
+  const filename=currentCase+"-"+label+".json";await fs.rename(path.join(evidence,"downloads",download.guid),path.join(evidence,filename));Object.assign(download,{savedAs:filename,...pin(raw)});
+  return{path:filename,...pin(raw)};
+}
+async function reportDownload(day){
+  const count=downloads.length;await click("#watch-report-download");
+  const end=Date.now()+15000;while(Date.now()<end&&!downloads.slice(count).some(row=>row.state==="completed"))await delay(50);
+  const download=downloads.slice(count).find(row=>row.state==="completed");assert.ok(download,"Actual report download completed");
+  const raw=await fs.readFile(path.join(evidence,"downloads",download.guid));
+  assert.equal(download.suggestedFilename,"Longwater-watch-tide-"+String(day).padStart(2,"0")+".html");
+  const parsed=await evaluate("(()=>{const d=new DOMParser().parseFromString("+JSON.stringify(raw.toString("utf8"))+",'text/html');return{sections:[...d.querySelectorAll('section.tide')].map(e=>({tide:Number(e.dataset.tide),text:e.textContent})),text:d.body.textContent}})()");
+  assert.deepEqual(parsed.sections.map(row=>row.tide),Array.from({length:day},(_,index)=>index+1));
+  for(const row of parsed.sections)for(const line of JSON.parse(fixture.snapshots[row.tide]).report.lines)assert.ok(row.text.includes(line),"Full native report line at tide "+row.tide);
+  const filename=currentCase+"-report-"+day+".html";await fs.rename(path.join(evidence,"downloads",download.guid),path.join(evidence,filename));Object.assign(download,{savedAs:filename,...pin(raw)});
+  return{path:filename,...pin(raw),sections:parsed.sections.map(row=>row.tide)};
+}
+async function fileReview(){
+  const document=await send("DOM.getDocument");const input=await send("DOM.querySelector",{nodeId:document.root.nodeId,selector:"#watch-file-input"});
+  await send("DOM.setFileInputFiles",{nodeId:input.nodeId,files:[path.join(own,"fixtures/foreignThree.json")]});
+  await until("!document.querySelector('#watch-file-preview').hidden");
+}
+async function compare(){
+  if(!await evaluate("document.querySelector('#choice-details').open"))await click("#choice-details>summary");
+  await click("#choice-run");await until("!document.querySelector('#choice-result').hidden");
+}
+async function reload(expected,count){
+  await delivered({session,offline:(await evaluate("location.protocol"))==="file:"});
+  await send("Page.reload",{ignoreCache:true});
+  await until("!!document.querySelector('#watch-file-download')&&!document.querySelector('#watch-file-download').disabled");
+  const seen=await observation();assert.equal(seen.raw,expected);assert.equal(seen.journal.length,count);
+  assert.deepEqual(seen.selected,[["north","heart","south"].indexOf(JSON.parse(expected).selected)]);
+  return seen;
+}
+async function test(name,initial,options,fn){
+  currentCase=name;let page;const start=new Date().toISOString();
+  try{page=await newPage(initial,options);const observed=await fn(page);await delivered(page);checks.push({name,passed:true,start,completed:new Date().toISOString(),observed});}
+  catch(error){let image=null,state=null;try{image=await shot("failure");state=await observation();}catch{}checks.push({name,passed:false,start,completed:new Date().toISOString(),failure:error.stack||String(error),state,image});}
+  finally{if(page)try{await closePage(page);}catch(error){checks.push({name:name+".cleanup",passed:false,failure:String(error)});}session=null;await fs.writeFile(path.join(evidence,"observations.json"),JSON.stringify(checks,null,2)+"\n");}
+}
+
+try{
+  await verifySource();assert.equal(sha(fixtureRaw),"c9521569705e88ee893e66a5ac27099ef2e491d99da727b6a454627b65a8639b");
+  for(const name of runtime)assert.ok(byPath.has(name),"Admitted runtime file "+name);
+  server=http.createServer(async(req,res)=>{
+    const relative=decodeURIComponent(new URL(req.url,"http://127.0.0.1").pathname).replace(/^\/+/,"")||"index.html";
+    if(relative==="__receiver__/peer"){res.writeHead(200,{"content-type":"text/html"});res.end("<!doctype html><title>Private receiving storage peer</title>");return;}
+    if(relative==="favicon.ico"){res.writeHead(204);res.end();return;}
+    if(!byPath.has(relative)){serverRequests.push({path:relative,status:404});res.writeHead(404);res.end();return;}
+    try{const raw=await fs.readFile(path.join(source,relative));serverRequests.push({path:relative,status:200,...pin(raw)});const type=({".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".wasm":"application/wasm"})[path.extname(relative)]||"application/octet-stream";res.writeHead(200,{"content-type":type,"cache-control":"no-store"});res.end(raw);}
+    catch(error){serverRequests.push({path:relative,status:500,error:String(error)});res.writeHead(500);res.end();}
+  });
+  await new Promise(resolve=>server.listen(0,"127.0.0.1",resolve));origin="http://127.0.0.1:"+server.address().port;
+  profile=await fs.mkdtemp(path.join(own,"headless-receiving-profile-"));version=execFileSync(chrome,["--version"],{encoding:"utf8",timeout:15000}).trim();
+  browser=spawn(chrome,["--headless=new","--disable-gpu","--no-first-run","--no-default-browser-check","--disable-background-networking","--disable-component-update","--disable-sync","--disable-extensions","--password-store=basic","--remote-debugging-address=127.0.0.1","--remote-debugging-port=0","--user-data-dir="+profile,"about:blank"],{stdio:["ignore","ignore","pipe"]});
+  const endpoint=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error("Chrome startup timeout: "+chromeStderr.slice(-2000))),15000);browser.once("error",error=>{clearTimeout(timer);reject(error);});browser.once("exit",code=>{clearTimeout(timer);reject(Error("Chrome exited "+code));});browser.stderr.on("data",raw=>{chromeStderr+=raw;const match=chromeStderr.match(/DevTools listening on (ws:\/\/127\.0\.0\.1:[^\s]+)/);if(match){clearTimeout(timer);resolve(match[1]);}});});
+  socket=new WebSocket(endpoint);await new Promise((resolve,reject)=>{socket.addEventListener("open",resolve,{once:true});socket.addEventListener("error",reject,{once:true});});
+  socket.addEventListener("message",event=>{
+    const message=JSON.parse(event.data);
+    if(message.id&&pending.has(message.id)){const item=pending.get(message.id);pending.delete(message.id);clearTimeout(item.timer);message.error?item.reject(Error(JSON.stringify(message.error))):item.resolve(message.result);}
+    const label=sessionCase.get(message.sessionId)||currentCase;
+    if(message.method==="Runtime.exceptionThrown")exceptions.push({case:label,session:message.sessionId,...message.params.exceptionDetails});
+    if(message.method==="Network.requestWillBeSent")requests.push({case:label,session:message.sessionId,url:message.params.request.url,method:message.params.request.method});
+    if(message.method==="Network.responseReceived")responses.push({case:label,session:message.sessionId,url:message.params.response.url,requestId:message.params.requestId,status:message.params.response.status});
+    if(message.method==="Browser.downloadWillBegin")downloads.push({case:currentCase,...message.params});
+    if(message.method==="Browser.downloadProgress"){const item=downloads.find(row=>row.guid===message.params.guid);if(item)Object.assign(item,message.params);}
+  });
+
+  if(mode==="baseline"){
+    await test("B0_actual_missing_control",fixture.twoSouth,{},async()=>{
+      const seen=await observation();assert.equal(seen.raw,fixture.twoSouth);assert.equal(seen.journal.length,2);assert.equal(seen.rewind.present,false);
+      assert.equal(await evaluate("!!document.querySelector('#watch-rewind-open')"),false);
+      return{expectedMissingFeature:true,seen};
+    });
+  }else{
+    await test("R1_pending_file_escape_and_real_adoption",fixture.twoSouth,{},async()=>{
+      await compare();await fileReview();const before=await observation();assert.equal(before.file.visible,true);
+      const review=await openReview(2,"Shade","South");
+      assert.deepEqual(stable(await observation()),stable(before));
+      await click("#watch-file-confirm");assert.equal((await observation()).rewind.open,true);assert.equal((await observation()).raw,before.raw);
+      await evaluate("document.querySelector('#watch-rewind-keep').focus()");await press("g","KeyG",71);assert.deepEqual(stable(await observation()),stable(before));
+      await press("Escape","Escape",27);await until("!document.querySelector('#watch-rewind-review').open");
+      assert.equal(await evaluate("document.activeElement.id"),"watch-rewind-open");assert.deepEqual(stable(await observation()),stable(before));
+      await click("#watch-file-confirm");await until("document.querySelectorAll('#journal-entries>li').length===3");
+      const after=await observation();assert.equal(after.raw,fixture.foreignThree);assert.deepEqual(after.selected,[0]);assert.equal(after.file.visible,false);
+      return{review,before,after,download:await watchDownload("adopted-original-file-review",fixture.foreignThree)};
+    });
+    await test("R2_confirm_readers_files_download_reload",fixture.twoSouth,{},async()=>{
+      await compare();await fileReview();const before=await observation(),review=await openReview(2,"Shade","South");
+      await confirmReview();const after=await observation();
+      assert.equal(after.raw,fixture.oneSouth);assert.deepEqual(after.selected,[2]);assert.equal(after.journal.length,1);assert.equal(after.comparison.hidden,true);assert.equal(after.comparison.tide,null);assert.equal(after.file.visible,false);
+      const download=await watchDownload("shortened-watch",fixture.oneSouth),report=await reportDownload(1),image=await shot("shortened-watch","#playfield"),resumed=await reload(fixture.oneSouth,1);
+      return{before,review,after,download,report,image,resumed};
+    });
+    await test("R3_completed_rewind_reload_new_continuation",fixture.fourteenNorth,{},async()=>{
+      assert.equal((await observation()).journal.length,14);
+      const review=await openReview(14,"Shade","Heart");await confirmReview();
+      const after=await observation();assert.equal(after.raw,fixture.thirteenNorth);assert.deepEqual(after.selected,[0]);assert.equal(after.journal.length,13);
+      const download=await watchDownload("day13-watch",fixture.thirteenNorth),report=await reportDownload(13),resumed=await reload(fixture.thirteenNorth,13);
+      await click('[data-action="seed"]');await until("document.querySelectorAll('#journal-entries>li').length===14");
+      const continued=await observation();assert.equal(continued.raw,fixture.alternateFourteenNorth);
+      return{review,after,download,report,resumed,continued,continuedDownload:await watchDownload("new-day14-watch",fixture.alternateFourteenNorth)};
+    });
+    await test("R4_first_tide_to_selected_opening",fixture.oneSouth,{},async()=>{
+      const review=await openReview(1,"Gate","Heart");await confirmReview();const after=await observation();
+      assert.equal(after.raw,fixture.zeroSouth);assert.deepEqual(after.selected,[2]);assert.equal(after.journal.length,0);assert.equal(after.rewind.disabled,true);
+      assert.equal(await evaluate("document.querySelector('#watch-report-download').disabled"),true);
+      const download=await watchDownload("selected-opening",fixture.zeroSouth),resumed=await reload(fixture.zeroSouth,0);
+      return{review,after,download,resumed};
+    });
+    await test("R5_protected_unsupported_store",fixture.unsupported,{},async()=>{
+      await click('[data-action="gate"]');await click('[data-cell="2"]');await click('[data-action="shade"]');await until("document.querySelectorAll('#journal-entries>li').length===2");
+      const before=await observation();assert.equal(before.raw,fixture.unsupported);assert.match(before.save,/kept|protect/i);
+      const review=await openReview(2,"Shade","South");await click("#watch-rewind-keep");assert.deepEqual(stable(await observation()),stable(before));
+      await openReview(2,"Shade","South");await confirmReview();const after=await observation();assert.equal(after.raw,fixture.unsupported);assert.equal(after.save,before.save);assert.equal(after.journal.length,1);assert.deepEqual(after.selected,[2]);assert.doesNotMatch(after.rewind.status,/saved in this browser/i);
+      return{before,review,after,download:await watchDownload("protected-local-prefix",fixture.oneSouth),image:await shot("protected-status","#watch-rewind")};
+    });
+    await test("R6_write_refusal_then_real_retry",fixture.twoSouth,{blockWrite:true},async()=>{
+      const before=await observation();await openReview(2,"Shade","South");await confirmReview();const after=await observation();
+      assert.equal(after.raw,fixture.twoSouth);assert.equal(after.journal.length,1);assert.equal(after.retryHidden,false);assert.match(after.save,/could not be saved/i);assert.doesNotMatch(after.rewind.status,/saved in this browser/i);
+      const unsaved=await watchDownload("unsaved-prefix",fixture.oneSouth);
+      await evaluate("window.__longwaterReceiver.blockWrite=false");await click("#watch-save-retry");
+      const saved=await observation();assert.equal(saved.raw,fixture.oneSouth);assert.equal(saved.retryHidden,true);
+      return{before,after,unsaved,saved,resumed:await reload(fixture.oneSouth,1)};
+    });
+    await test("R7_unreadable_foreign_store_recovery",fixture.foreignThree,{blockRead:true},async()=>{
+      await click('[data-action="gate"]');await until("document.querySelectorAll('#journal-entries>li').length===1");
+      const before=await observation();assert.equal(before.raw,fixture.foreignThree);assert.match(before.save,/could not be saved/i);
+      await openReview(1,"Gate","Heart");await evaluate("window.__longwaterReceiver.blockRead=false");await confirmReview();
+      const after=await observation();assert.equal(after.raw,fixture.foreignThree);assert.equal(after.journal.length,0);assert.match(after.save,/changed/i);assert.deepEqual(after.selected,[1]);
+      return{before,after,download:await watchDownload("local-opening-foreign-kept",fixture.zeroHeart)};
+    });
+    await test("R8_unobserved_same_document_foreign_write",fixture.twoSouth,{},async()=>{
+      await openReview(2,"Shade","South");await evaluate("window.__longwaterReceiver.foreign("+JSON.stringify(fixture.foreignThree)+")");await confirmReview();
+      const after=await observation();assert.equal(after.raw,fixture.foreignThree);assert.equal(after.journal.length,1);assert.match(after.save,/changed/i);
+      return{after,download:await watchDownload("local-prefix-foreign-kept",fixture.oneSouth)};
+    });
+    await test("R9_observed_actual_other_tab_write",fixture.twoSouth,{},async page=>{
+      const before=await observation();await openReview(2,"Shade","South");
+      const {targetId}=await send("Target.createTarget",{url:origin+"/__receiver__/peer",browserContextId:page.browserContextId},null);
+      const peer=(await send("Target.attachToTarget",{targetId,flatten:true},null)).sessionId;sessionCase.set(peer,currentCase);
+      await send("Runtime.enable",{},peer);
+      const end=Date.now()+15000;while(Date.now()<end&&!await evaluate("location.origin==="+JSON.stringify(origin),peer))await delay(50);
+      await evaluate("localStorage.setItem("+JSON.stringify(key)+","+JSON.stringify(fixture.foreignThree)+")",peer);
+      await until("!document.querySelector('#watch-rewind-review').open");
+      const after=await observation();assert.equal(after.raw,fixture.foreignThree);assert.deepEqual(after.journal,before.journal);assert.deepEqual(after.selected,before.selected);assert.match(after.save,/changed/i);
+      return{before,after,actualPeerTarget:targetId,download:await watchDownload("active-watch-foreign-kept",fixture.twoSouth)};
+    });
+    await test("R10_accepted_adoption_display_refusal",fixture.twoSouth,{},async()=>{
+      await compare();const before=await observation();await openReview(2,"Shade","South");
+      const injection="(async()=>{const {SavedWatch}=await import('./watch-save.js');const original=SavedWatch.prototype.replayHistory;window.__rewindDisplayRefusal={hits:0};SavedWatch.prototype.replayHistory=function(...args){if(JSON.parse(this.snapshot).day===1&&window.__rewindDisplayRefusal.hits===0){window.__rewindDisplayRefusal.hits++;throw Error('Independent one-shot post-adoption history-read refusal');}return original.apply(this,args);};})()";
+      injections.push({case:currentCase,kind:"one-shot-post-adoption-history-read-refusal",sha256:sha(injection),source:injection});await evaluate(injection);
+      await confirmReview();const after=await observation();
+      assert.equal(await evaluate("window.__rewindDisplayRefusal.hits"),1);assert.equal(after.raw,fixture.oneSouth);assert.equal(after.journalHidden,true);assert.equal(after.comparison.hidden,true);assert.equal(after.comparison.tide,null);
+      assert.equal(await evaluate("[...document.querySelectorAll('.game-control')].every(e=>e.disabled)"),true);
+      assert.ok(!after.rewind.visible||after.rewind.disabled);assert.equal(after.rewind.open,false);
+      const download=await watchDownload("accepted-watch-after-display-refusal",fixture.oneSouth),image=await shot("accepted-display-refusal","#watch-files");
+      return{before,after,injectedRefusals:1,download,image,resumed:await reload(fixture.oneSouth,1)};
+    });
+    await test("R11_phone_direct_open_standalone",null,{offline:true},async page=>{
+      await click('[data-action="gate"]');await click('[data-cell="2"]');await click('[data-action="shade"]');await until("document.querySelectorAll('#journal-entries>li').length===2");
+      assert.equal((await observation()).raw,fixture.twoSouth);const review=await openReview(2,"Shade","South");
+      const geometry=await evaluate("({width:innerWidth,dialog:(()=>{const e=document.querySelector('#watch-rewind-review'),r=e.getBoundingClientRect();return{x:r.x,right:r.right,top:r.top,bottom:r.bottom,width:r.width,scroll:e.scrollWidth,client:e.clientWidth}})(),buttons:[...document.querySelectorAll('#watch-rewind-review button')].map(e=>{const r=e.getBoundingClientRect();return{id:e.id,x:r.x,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height}})})");
+      assert.equal(geometry.width,390);assert.ok(geometry.dialog.x>=-1&&geometry.dialog.right<=391&&geometry.dialog.scroll<=geometry.dialog.client+1);
+      for(const button of geometry.buttons)assert.ok(button.width>0&&button.height>0&&button.x>=-1&&button.right<=391&&button.top>=0&&button.bottom<=901,button.id);
+      const reviewImage=await shot("phone-review");await confirmReview();const after=await observation();assert.equal(after.raw,fixture.oneSouth);assert.equal(after.journal.length,1);assert.deepEqual(after.selected,[2]);
+      const download=await watchDownload("offline-shortened-watch",fixture.oneSouth),image=await shot("phone-shortened","#playfield"),resumed=await reload(fixture.oneSouth,1);
+      assert.deepEqual(requests.filter(row=>row.session===page.session&&/^https?:/.test(row.url)),[]);
+      return{review,geometry,reviewImage,after,download,image,resumed};
+    });
+  }
+
+  await test("P1_practice_preserves_pending_file_review",fixture.twoSouth,{},async()=>{
+    await compare();await fileReview();const before=await observation();
+    await click("#practice-open");await until("document.querySelector('#practice-watch').open");
+    const focus=[];for(let i=0;i<12;i++){await press("Tab","Tab",9);const x=await evaluate("({inside:document.querySelector('#practice-watch').contains(document.activeElement),name:document.activeElement.id||document.activeElement.outerHTML.slice(0,150),rewind:document.querySelector('#watch-rewind-review').open})");assert.equal(x.inside,true);assert.equal(x.rewind,false);focus.push(x);}
+    await press("g","KeyG",71);assert.deepEqual(stable(await observation()),stable(before));
+    await click('[data-practice-cell="0"]');await click('[data-practice-action="gate"]');
+    await until("document.querySelector('#practice-summary').textContent.includes('Practice tide 1 / 14')");
+    const practice=await evaluate("({summary:document.querySelector('#practice-summary').textContent,status:document.querySelector('#practice-status').textContent})");
+    assert.match(practice.status,/Gate at North Bank/);assert.deepEqual(stable(await observation()),stable(before));
+    await press("Escape","Escape",27);await until("!document.querySelector('#practice-watch').open");assert.equal(await evaluate("document.activeElement.id"),"practice-open");assert.deepEqual(stable(await observation()),stable(before));
+    await openReview(2,"Shade","South");await click("#watch-rewind-keep");assert.deepEqual(stable(await observation()),stable(before));
+    await click("#watch-file-confirm");await until("document.querySelectorAll('#journal-entries>li').length===3");const after=await observation();assert.equal(after.raw,fixture.foreignThree);
+    return{before,focus,practice,after,download:await watchDownload("file-token-after-practice-and-rewind-cancel",fixture.foreignThree)};
+  });
+  await test("P2_rewind_modal_then_offline_practice",fixture.twoSouth,{offline:true},async page=>{
+    const before=await observation();await openReview(2,"Shade","South");const focus=[];
+    for(let i=0;i<8;i++){await press("Tab","Tab",9);const x=await evaluate("({inside:document.querySelector('#watch-rewind-review').contains(document.activeElement),name:document.activeElement.id,practice:document.querySelector('#practice-watch').open})");assert.equal(x.inside,true);assert.equal(x.practice,false);focus.push(x);}
+    await press("g","KeyG",71);assert.deepEqual(stable(await observation()),stable(before));
+    await click("#watch-rewind-keep");await click("#practice-open");await until("document.querySelector('#practice-watch').open");assert.match(await evaluate("document.querySelector('#practice-summary').textContent"),/Practice tide 0 \/ 14/);
+    await click('[data-practice-cell="2"]');await click('[data-practice-action="shade"]');await until("document.querySelector('#practice-summary').textContent.includes('Practice tide 1 / 14')");
+    const image=await shot("practice-phone","#practice-watch");assert.deepEqual(stable(await observation()),stable(before));
+    await press("Escape","Escape",27);await until("!document.querySelector('#practice-watch').open");assert.deepEqual(stable(await observation()),stable(before));
+    await openReview(2,"Shade","South");await confirmReview();const shorter=await observation();assert.equal(shorter.raw,fixture.oneSouth);assert.equal(shorter.journal.length,1);assert.deepEqual(shorter.selected,[2]);
+    await click("#practice-open");await until("document.querySelector('#practice-watch').open");const fresh=await evaluate("document.querySelector('#practice-summary').textContent");assert.match(fresh,/Practice tide 0 \/ 14/);
+    await click('[data-practice-action="gate"]');await until("document.querySelector('#practice-summary').textContent.includes('Practice tide 1 / 14')");await click("[data-practice-close]");await until("!document.querySelector('#practice-watch').open");assert.deepEqual(stable(await observation()),stable(shorter));
+    const download=await watchDownload("rewound-prefix-after-practice",fixture.oneSouth),resumed=await reload(fixture.oneSouth,1);assert.equal(await evaluate("document.querySelector('#practice-watch').open"),false);
+    assert.deepEqual(requests.filter(row=>row.session===page.session&&/^https?:/.test(row.url)),[]);
+    return{before,focus,image,shorter,fresh,download,resumed};
+  });
+  currentCase="R12_binding_cleanup";
+  try{
+    await verifySource();assert.deepEqual(exceptions,[]);
+    const external=requests.filter(row=>{const url=new URL(row.url);return url.protocol==="http:"?url.origin!==origin:url.protocol==="https:"?true:url.protocol==="file:"?!fileURLToPath(url).startsWith(source+path.sep):!["data:","blob:","about:"].includes(url.protocol);});
+    assert.deepEqual(external,[]);assert.equal(contexts.length,0);
+    checks.push({name:currentCase,passed:true,observed:{sourceFilesUnchanged:manifest.files.length,deliveredCases:deliveries.length,externalRequests:external,exceptions}});
+  }catch(error){checks.push({name:currentCase,passed:false,failure:error.stack||String(error)});}
+}catch(error){fatal=error.stack||String(error);}
+finally{
+  if(socket?.readyState===1){for(const id of [...contexts])try{await send("Target.disposeBrowserContext",{browserContextId:id},null);}catch{}try{await send("Browser.close",{},null);}catch{}socket.close();}
+  if(browser&&browser.exitCode===null)browser.kill("SIGTERM");if(browser&&browser.exitCode===null)await Promise.race([new Promise(resolve=>browser.once("exit",resolve)),delay(3000)]);
+  if(server){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}for(const item of pending.values())clearTimeout(item.timer);
+  let profileRemoved=false;if(profile){await fs.rm(profile,{recursive:true,force:true});profileRemoved=true;}
+  await fs.writeFile(path.join(evidence,"chrome-stderr.log"),chromeStderr);
+  const receipt={format:"longwater-independent-rewind-browser/v1",mode,startedAt,completedAt:new Date().toISOString(),source,head:manifest.head,tree:manifest.tree,sourceManifest:pin(manifestRaw),driver:pin(await fs.readFile(fileURLToPath(import.meta.url))),contract:pin(await fs.readFile(path.join(own,"BROWSER-CONTRACT.md"))),fixtures:pin(fixtureRaw),node:process.version,chrome:version,checks,requests,responses,serverRequests,deliveries,downloads,injections,exceptions,fatal,cleanup:{ownProfileRemoved:profileRemoved,ownServerClosed:!server?.listening},boundary:"Source-blind actual native browser receiving from frozen public contract. Private fictional storage, explicit fault controls and actual file input/downloads. No project/owner source changes, Git writes, personal session/provider or deployment."};
+  await fs.writeFile(path.join(evidence,"receipt.json"),JSON.stringify(receipt,null,2)+"\n");
+}
+console.log(JSON.stringify({passed:checks.filter(row=>row.passed).length,failed:checks.filter(row=>!row.passed).map(row=>row.name),fatal,evidence}));
+if(fatal||checks.some(row=>!row.passed))process.exitCode=1;
