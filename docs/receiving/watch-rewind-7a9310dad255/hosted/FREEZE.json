@@ -1,0 +1,141 @@
+{
+  "format": "longwater-rewind-hosted-receiver-freeze/v1",
+  "at": "2026-10-08T19:39:49.172859+00:00",
+  "author": "7a9310dad255/memory",
+  "candidate_semantic_source_unseen_during_case_freeze": true,
+  "original_driver": {
+    "bytes": 37548,
+    "sha256": "b0de3b5104a10c0e456b041fa7b242a6d0196b1391c91a10be9fc81a543e64cc",
+    "sha": "c207e6838b30fe78441fe2c44e100317411f0a6f"
+  },
+  "adaptation": {
+    "bytes": 9685,
+    "sha256": "975469c2b1fccf4acb79ec25d076a5b3da4ad19915bb4810093245a8beee508a",
+    "sha": "329b0a86719fe472394ab6123a72321af6e80371"
+  },
+  "case_block_sha256": "8dbc55cbc6f8fb5b46acf6085adde3b7ae42a6f96afdf634d4cea5858b98e50a",
+  "expected_cases": [
+    "R1_pending_file_escape_and_real_adoption",
+    "R2_confirm_readers_files_download_reload",
+    "R3_completed_rewind_reload_new_continuation",
+    "R4_first_tide_to_selected_opening",
+    "R5_protected_unsupported_store",
+    "R6_write_refusal_then_real_retry",
+    "R7_unreadable_foreign_store_recovery",
+    "R8_unobserved_same_document_foreign_write",
+    "R9_observed_actual_other_tab_write",
+    "R10_accepted_adoption_display_refusal",
+    "R11_phone_direct_open_standalone",
+    "P1_practice_preserves_pending_file_review",
+    "P2_rewind_modal_then_offline_practice",
+    "R12_binding_cleanup"
+  ],
+  "source_count": 28,
+  "runtime_count": 22,
+  "exact_public_source_tree": "e5ae7ecb90d00e79242d4d16dbcda067d845587a",
+  "all_public_source_blobs_and_modes_matched": true,
+  "frozen_inputs": {
+    "receive-current.mjs.source": {
+      "bytes": 37548,
+      "sha256": "b0de3b5104a10c0e456b041fa7b242a6d0196b1391c91a10be9fc81a543e64cc",
+      "sha": "c207e6838b30fe78441fe2c44e100317411f0a6f"
+    },
+    "fixtures.json": {
+      "bytes": 35126,
+      "sha256": "c9521569705e88ee893e66a5ac27099ef2e491d99da727b6a454627b65a8639b",
+      "sha": "5670cc3246359f8665cc8c4a7c6bd3dfd83a8550"
+    },
+    "fixtures/foreignThree.json": {
+      "bytes": 1615,
+      "sha256": "d451c3dcd660157de77a18af5ef499f9c52e1b37bdac986dfc97426384ad5445",
+      "sha": "9328ef22ef4390bb0e133e184748d52001cfd5a7"
+    },
+    "BROWSER-CONTRACT.md": {
+      "bytes": 8749,
+      "sha256": "f246dc040f47e418424446adc81cee1eaaa885b6ffeab7afe7182626967bd9f2",
+      "sha": "fd2fc0c8e3f00767d05a4acf0b41f031b44475be"
+    },
+    "COMPATIBILITY-CONTRACT.md": {
+      "bytes": 2473,
+      "sha256": "1cffef72979b941fe7753500fd162244e3801e7e92f09a7a1388ff97a3b024c4",
+      "sha": "d513ae865bf2cbaae53a550fa00780b802f7e184"
+    },
+    "source-manifest.json": {
+      "bytes": 7616,
+      "sha256": "c0ec74e6b7b6d815de08702fffe9d375d22fafff7c42b766a3cbb7741d772c5b",
+      "sha": "4804dae0398971a8f4f50b149ab5209f3872af65"
+    }
+  },
+  "substitutions": [
+    [
+      "const chrome=\"/snap/bin/chromium\";",
+      "const chrome=\"/__installed_playwright_chromium__\";"
+    ],
+    [
+      "version=execFileSync(chrome,[\"--version\"],{encoding:\"utf8\",timeout:15000}).trim();",
+      "version=execFileSync(chrome,[\"--version\"],{encoding:\"utf8\",timeout:60000}).trim();"
+    ],
+    [
+      "browser=spawn(chrome,[\"--headless=new\",",
+      "browser=spawn(chrome,[\"--headless=new\",\"--no-sandbox\","
+    ],
+    [
+      "chromeStderr.slice(-2000))),15000);browser.once",
+      "chromeStderr.slice(-2000))),60000);browser.once"
+    ]
+  ],
+  "exact_full_driver_inverse": true,
+  "case_block_unchanged": true,
+  "syntax_checks": [
+    {
+      "path": "/tmp/hamon-7a9310dad255-longwater-hosted-receiver-v3/payload/scripts/receive-watch-rewind.mjs",
+      "input": {
+        "bytes": 9685,
+        "sha256": "975469c2b1fccf4acb79ec25d076a5b3da4ad19915bb4810093245a8beee508a",
+        "sha": "329b0a86719fe472394ab6123a72321af6e80371"
+      },
+      "command": [
+        "/usr/bin/node",
+        "--check",
+        "/tmp/hamon-7a9310dad255-longwater-hosted-receiver-v3/payload/scripts/receive-watch-rewind.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "/tmp/hamon-7a9310dad255-longwater-hosted-receiver-v2/static-adapted-receiver.mjs",
+      "input": {
+        "bytes": 37579,
+        "sha256": "26e5b24852848f4e7c13ae5e3d908a91ded154cb8412bb932850aec74429b603",
+        "sha": "877f12683931c2b7ab76b595301bd74a3c06f8e5"
+      },
+      "command": [
+        "/usr/bin/node",
+        "--check",
+        "/tmp/hamon-7a9310dad255-longwater-hosted-receiver-v2/static-adapted-receiver.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "native_current_behavior": "incomplete; three separately preserved resource/transport outcomes",
+  "hosted_behavior": "pending; no browser invoked during adaptation",
+  "canonical_pattern_blob": "74ad35fa8dac6fb7343d5bb4bbd4afa533297338",
+  "output_isolation_correction": {
+    "from": "test-results/watch-rewind",
+    "to": "test-results/watch-rewind-independent",
+    "prior_adapter": {
+      "bytes": 9661,
+      "sha256": "f7e5653a471dad8a2378b5d47f865470a4d42307dac180314698c8830c89bf09",
+      "sha": "904a51d762b5202b6dc1fe470824cadaa2a4a28c"
+    },
+    "adapter_inverse_exact": true,
+    "readme_inverse_exact": true,
+    "all56_current_source_inputs_admitted": true,
+    "scanned_text_inputs": 53,
+    "new_output_reference_absent": true,
+    "prior_behavior": "Not executed: root source review found EEXIST after maintained tests already create old directory."
+  }
+}

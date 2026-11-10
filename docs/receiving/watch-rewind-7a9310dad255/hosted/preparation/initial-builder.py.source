@@ -1,0 +1,88 @@
+import pathlib,json,hashlib,re,subprocess,datetime,base64
+P=pathlib.Path('/home/jacob/snap/chromium/common/hamon-7a9310dad255-longwater-practice-receiving')
+Q=pathlib.Path('/tmp/hamon-7a9310dad255-longwater-hosted-receiver');Q.mkdir(exist_ok=False)
+stage=Q/'payload';stage.mkdir()
+prefix=pathlib.Path('docs/receiving/watch-rewind-7a9310dad255/hosted')
+area=stage/prefix;area.mkdir(parents=True)
+def pin(b):return {'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'sha':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()}
+def put(rel,b):
+ p=stage/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b);return p
+original=(P/'receive-current.mjs').read_bytes()
+assert pin(original)['sha256']=='b0de3b5104a10c0e456b041fa7b242a6d0196b1391c91a10be9fc81a543e64cc'
+m=json.loads((P/'candidate-source-manifest.json').read_text())
+public=json.loads(pathlib.Path('/tmp/hamon-7a9310dad255-longwater-hosted-public-tree.json').read_text())
+assert len(m['files'])==len(public['files'])==28
+by={e['path']:e for e in public['files']}
+for e in m['files']:
+ assert e['mode']==by[e['path']]['mode']=='100644'
+ assert e['sha']==by[e['path']]['sha'] and e['bytes']==by[e['path']]['size']
+ assert pin((P/'candidate-current-9407'/e['path']).read_bytes())=={k:e[k] for k in ['bytes','sha256','sha']}
+source={'format':'longwater-rewind-hosted-source/v1','public_parent':'9407f172518d0d6b19146e2431bcabbb2c307241','composed_source_tree':public['tree'],'producer_manifest_sha256':m['producer_manifest_sha256'],'files':m['files']}
+frozen={
+ 'receive-current.mjs.source':original,
+ 'fixtures.json':(P/'fixtures.json').read_bytes(),
+ 'fixtures/foreignThree.json':(P/'fixtures/foreignThree.json').read_bytes(),
+ 'BROWSER-CONTRACT.md':(P/'BROWSER-CONTRACT.md').read_bytes(),
+ 'COMPATIBILITY-CONTRACT.md':(P/'COMPATIBILITY-CONTRACT.md').read_bytes(),
+ 'source-manifest.json':(json.dumps(source,indent=2)+'\n').encode()
+}
+assert pin(frozen['fixtures.json'])['sha256']=='c9521569705e88ee893e66a5ac27099ef2e491d99da727b6a454627b65a8639b'
+marker='  if(mode==="baseline"){';text=original.decode();assert text.count(marker)==1
+caseblock=text[text.index(marker):];casehash=pin(caseblock.encode())['sha256']
+names=[n for n in re.findall(r'await test\("([^"]+)"',caseblock) if not n.startswith('B0_')]+['R12_binding_cleanup']
+assert len(names)==14 and len(set(names))==14,names
+expected={n:pin(b) for n,b in frozen.items()}
+template=pathlib.Path('/tmp/hamon-7a9310dad255-longwater-hosted-adapter.template.mjs').read_text()
+for token,replacement in [('__EXPECTED_INPUTS__',json.dumps(expected,indent=2)),('__EXPECTED_CASES__',json.dumps(names,indent=2)),('__CASE_BLOCK_SHA__',casehash)]:
+ assert template.count(token)==1;template=template.replace(token,replacement)
+adapter=put(pathlib.Path('scripts/receive-watch-rewind.mjs'),template.encode())
+for n,b in frozen.items():put(prefix/n,b)
+subs=[
+ ('const chrome="/snap/bin/chromium";','const chrome="/__installed_playwright_chromium__";'),
+ ('version=execFileSync(chrome,["--version"],{encoding:"utf8",timeout:15000}).trim();','version=execFileSync(chrome,["--version"],{encoding:"utf8",timeout:60000}).trim();'),
+ ('browser=spawn(chrome,["--headless=new",','browser=spawn(chrome,["--headless=new","--no-sandbox",'),
+ ('chromeStderr.slice(-2000))),15000);browser.once','chromeStderr.slice(-2000))),60000);browser.once')
+]
+adapted=text
+for before,after in subs:assert adapted.count(before)==1;adapted=adapted.replace(before,after,1)
+assert adapted[adapted.index(marker):]==caseblock
+inverse=adapted
+for before,after in reversed(subs):assert inverse.count(after)==1;inverse=inverse.replace(after,before,1)
+assert inverse.encode()==original
+temp=Q/'static-adapted-receiver.mjs';temp.write_text(adapted)
+syntax=[]
+for p in [adapter,temp]:
+ x=subprocess.run(['/usr/bin/node','--check',str(p)],capture_output=True)
+ syntax.append({'path':str(p),'input':pin(p.read_bytes()),'command':['/usr/bin/node','--check',str(p)],'returncode':x.returncode,'stdout':x.stdout.decode(),'stderr':x.stderr.decode()})
+ assert x.returncode==0
+readme="""# Frozen rewind browser receiver on the existing hosted browser job
+
+Run `node scripts/receive-watch-rewind.mjs` after the existing npm ci, Playwright Chromium installation and maintained project suite. The adapter creates new evidence at `test-results/watch-rewind`; upload that whole directory with an always-run artifact step. No dependency, product source, existing owner helper or workflow is changed in this payload.
+
+The original independent14-group executable and fictional fixtures are published verbatim. Its12 original rewind groups plus2 separately frozen practice coexistence groups retain every semantic helper, case, observation, assertion and CDP/condition/download deadline. The complete block beginning with the baseline/candidate dispatch, through every case and cleanup, has its own fixed SHA256 and stays byte-exact.
+
+Four reversible environment/bootstrap substitutions select the installed Playwright Chromium executable, disable only that private receiving browser's sandbox as Playwright's CI launcher does, and give the version-metadata and browser-startup handshakes60 seconds each. The execution still uses a fresh private profile and local fictional storage. A300-second child budget and isolated process group bound failure cleanup. The wrapper writes source/driver admission, executed receiver, stdout/stderr, raw browser receipts, real downloads and screenshots; failure remains a failed job with retained evidence. No test result is manufactured from source inspection.
+
+All28 source inputs, including the22 HTTP runtime files and actual standalone HTML, are pinned to the accepted composed tree e5ae7ecb90d00e79242d4d16dbcda067d845587a over public9407. Before browser startup the adapter checks each on-disk file against both its frozen SHA256/Gitblob/size and the actual checked-out HEAD blob/mode. It records the actual HEAD/tree and repeats source/input checks after execution. The checked-out product is served directly; no production rewrite occurs. Any later source change requires an explicit reviewed manifest update, not permissive rebinding.
+
+The frozen file is `receive-current.mjs.source`; `BROWSER-CONTRACT.md` is the original contract and `COMPATIBILITY-CONTRACT.md` adds the independently frozen practice controls. `FREEZE.json` records the exact input, adapter, case-block and native static-check pins. Only syntax and mechanical preservation were exercised for this hosted adaptation; hosted behavioral qualification remains pending.
+
+Current ThinkPad attempts remain incomplete: one ENOSPC attempt before case evidence, one15-second Chromium version timeout with a complete zero-case raw receipt, then another ENOSPC after the metadata-only adaptation. The exact available negative checkpoint is under `native-current-checkpoint/`. Missing captured stderr bytes are explicitly absent. The previous public2451-derived12/12 ThinkPad browser packet remains separate and unchanged; the original Mac6/12 observer failure and unknown correction-script delivery are not relabeled.
+
+The adapter follows the existing `scripts/receive-watch-choice-adoption.mjs` pattern (public9407 blob74ad35fa8dac6fb7343d5bb4bbd4afa533297338), without changing that helper or duplicating its three historical-choice cases. The existing browser workflow still owns installation, aggregate source tests and artifact upload.
+"""
+put(prefix/'README.md',readme.encode())
+checkpoint=pathlib.Path('/tmp/hamon-7a9310dad255-longwater-current9407-v3-checkpoint')
+for name in ['CHECKPOINT.md','MANIFEST.json','current9407-checkpoint.tar.gz']:put(prefix/'native-current-checkpoint'/name,(checkpoint/name).read_bytes())
+freeze={'format':'longwater-rewind-hosted-receiver-freeze/v1','at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'author':'7a9310dad255/memory','candidate_semantic_source_unseen_during_case_freeze':True,'original_driver':pin(original),'adaptation':pin(adapter.read_bytes()),'case_block_sha256':casehash,'expected_cases':names,'source_count':28,'runtime_count':22,'exact_public_source_tree':public['tree'],'all_public_source_blobs_and_modes_matched':True,'frozen_inputs':expected,'substitutions':subs,'exact_full_driver_inverse':True,'case_block_unchanged':True,'syntax_checks':syntax,'native_current_behavior':'incomplete; three separately preserved resource/transport outcomes','hosted_behavior':'pending; no browser invoked during adaptation','canonical_pattern_blob':'74ad35fa8dac6fb7343d5bb4bbd4afa533297338'}
+put(prefix/'FREEZE.json',(json.dumps(freeze,indent=2)+'\n').encode())
+files=[]
+for p in sorted(stage.rglob('*')):
+ if p.is_file():
+  b=p.read_bytes();files.append({'path':str(p.relative_to(stage)),'mode':'100644','native_path':str(p),**pin(b),'base64':base64.b64encode(b).decode()})
+payload={'format':'longwater-rewind-hosted-adapter-publication/v1','source_tree':'e5ae7ecb90d00e79242d4d16dbcda067d845587a','files':files,'no_workflow_or_product_edits':True}
+p=Q/'publication-payload.json';p.write_text(json.dumps(payload,indent=2)+'\n')
+for e in json.loads(p.read_text())['files']:assert pin(base64.b64decode(e['base64']))=={k:e[k] for k in ['bytes','sha256','sha']}
+receipt={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':[{k:v for k,v in e.items() if k!='base64'} for e in files],'total_bytes':sum(e['bytes'] for e in files),'payload':{'path':str(p),**pin(p.read_bytes())},'all_payload_bytes_read_back':True,'case_block_sha256':casehash,'native_browser_run':False}
+(Q/'seal-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+print(json.dumps(receipt,indent=2),flush=True)

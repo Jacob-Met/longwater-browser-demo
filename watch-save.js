@@ -60,6 +60,7 @@ export class SavedWatch {
   #blocked = false;
   #status;
   #filePreview = null;
+  #rewindPreview = null;
 
   constructor({ createSession, getStorage }) {
     this.#createSession = createSession;
@@ -165,6 +166,7 @@ export class SavedWatch {
       candidate.free();
       throw new Error("The saved watch changed in another tab. Open the file again to review replacement.");
     }
+    this.cancelRewind();
     this.#session.free();
     this.#session = candidate;
     this.#turns = pending.value.turns;
@@ -176,6 +178,76 @@ export class SavedWatch {
     // preview time, and rechecks observed storage before any attempted write.
     this.save();
     return this.snapshot;
+  }
+
+  // A rewind has its own review token. Reviewing it never consumes a pending
+  // file or gains file import's authority to replace protected browser data.
+  previewRewind() {
+    this.cancelRewind();
+    if (this.#turns.length === 0) throw new Error("There is no completed tide to rewind.");
+    const source = this.exportFile();
+    const history = this.replayHistory();
+    const current = JSON.parse(history.at(-1));
+    const previousSnapshot = history.at(-2);
+    const previous = JSON.parse(previousSnapshot);
+    if (current.day !== this.#turns.length || previous.day !== current.day - 1
+      || history.at(-1) !== this.snapshot || source !== this.exportFile()) {
+      throw new Error("This watch changed. Review the latest tide again.");
+    }
+    const value = JSON.parse(source);
+    const removed = value.turns.at(-1);
+    value.turns = value.turns.slice(0, -1);
+    value.snapshot = previousSnapshot;
+    const preview = Object.freeze({
+      day: current.day,
+      targetDay: previous.day,
+      action: removed.action,
+      cell: removed.cell,
+      cellName: current.cells[CELLS.indexOf(removed.cell)].name,
+      selected: this.#selected,
+      selectedCell: current.cells[this.#selected].name,
+      currentSnapshot: history.at(-1),
+      previousSnapshot,
+    });
+    this.#rewindPreview = { preview, source, session: this.#session, value };
+    return preview;
+  }
+
+  cancelRewind() { this.#rewindPreview = null; }
+
+  rewind(preview) {
+    const pending = this.#rewindPreview;
+    if (!pending || pending.preview !== preview) {
+      throw new Error("This watch changed. Review the latest tide again.");
+    }
+    let candidate;
+    let snapshot;
+    try {
+      if (pending.session !== this.#session || pending.source !== this.exportFile()) {
+        throw new Error("This watch changed. Review the latest tide again.");
+      }
+      candidate = replay(pending.value, this.#createSession);
+      snapshot = candidate.snapshot_json();
+      // Check again before adoption; a failed or superseded replay keeps both
+      // the active watch and any pending file review intact.
+      if (this.#rewindPreview !== pending || pending.session !== this.#session
+        || pending.source !== this.exportFile()) {
+        throw new Error("This watch changed. Review the latest tide again.");
+      }
+    } catch (error) {
+      candidate?.free();
+      this.cancelRewind();
+      throw error;
+    }
+    this.cancelRewind();
+    this.cancelFile();
+    this.#session.free();
+    this.#session = candidate;
+    this.#turns = pending.value.turns;
+    // Keep selection and the existing storage admission state. Rewind is a
+    // local accepted change; it never inherits Reset/file replacement powers.
+    this.save();
+    return snapshot;
   }
 
   // Supply native snapshot strings to readers such as the journal, beginning
@@ -207,6 +279,7 @@ export class SavedWatch {
   }
 
   #changed() {
+    this.cancelRewind();
     this.#blocked = true;
     this.#status = {
       kind: "changed",
@@ -243,6 +316,7 @@ export class SavedWatch {
     if (!Number.isInteger(index) || index < 0 || index >= CELLS.length) throw new Error("Unknown marsh cell.");
     if (index === this.#selected) return;
     this.#selected = index;
+    this.cancelRewind();
     this.cancelFile();
     this.save();
   }
@@ -254,6 +328,7 @@ export class SavedWatch {
     // only a successful call, so retrying a refused action never gains a tide.
     const snapshot = this.#session.take_turn(action, cell);
     this.#turns.push({ action, cell });
+    this.cancelRewind();
     this.cancelFile();
     this.save();
     return snapshot;
@@ -261,6 +336,7 @@ export class SavedWatch {
 
   reset() {
     const snapshot = this.#session.restart();
+    this.cancelRewind();
     this.cancelFile();
     this.#turns = [];
     this.#selected = 1;
@@ -279,6 +355,7 @@ export class SavedWatch {
   }
 
   storageChanged() {
+    this.cancelRewind();
     if (this.#blocked) return;
     try {
       const current = this.#getStorage().getItem(WATCH_SAVE_KEY);
@@ -288,5 +365,5 @@ export class SavedWatch {
     }
   }
 
-  free() { this.cancelFile(); this.#session.free(); }
+  free() { this.cancelRewind(); this.cancelFile(); this.#session.free(); }
 }

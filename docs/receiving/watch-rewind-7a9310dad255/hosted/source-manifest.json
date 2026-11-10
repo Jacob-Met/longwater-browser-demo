@@ -1,0 +1,232 @@
+{
+  "format": "longwater-rewind-hosted-source/v1",
+  "public_parent": "9407f172518d0d6b19146e2431bcabbb2c307241",
+  "composed_source_tree": "e5ae7ecb90d00e79242d4d16dbcda067d845587a",
+  "producer_manifest_sha256": "11e85e65ff524611a6a1746d7941c14a2e4128c1f09a1dc6c99ba9c838054f1e",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 17751,
+      "sha256": "476b80796fc176096544a5edd5be44e5c5ed5fe7970a4c250825fb5d378684a3",
+      "sha": "5aa33cf100c308f3383492bd7953a0a42dbea8c8",
+      "runtime_input": false
+    },
+    {
+      "path": "downloads/Longwater-Fourteen-Tides.html",
+      "mode": "100644",
+      "bytes": 359175,
+      "sha256": "3938b324385964da0fb1800999371f418f4a0d9fa2becc8433addd994d5ec33d",
+      "sha": "55af7f13b36ed3bcf2cb4f10222b0ed36c5b39b9",
+      "runtime_input": false
+    },
+    {
+      "path": "game.js",
+      "mode": "100644",
+      "bytes": 22405,
+      "sha256": "a234821e1a6f601ebb0670fdccd5f7f21f38da99dfb788f898e4ddac1dfd1a96",
+      "sha": "b7ae872c7a22996162c66bf605069ca30ceaa9ba",
+      "runtime_input": true
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "bytes": 10681,
+      "sha256": "21b3770e1c2b77a5d2ed319714f67e7b6137069ee699a3a706323cf418a1e001",
+      "sha": "bfda040212a3eb3ab2308018ff7c7c2360dcb60b",
+      "runtime_input": true
+    },
+    {
+      "path": "journal.css",
+      "mode": "100644",
+      "bytes": 2465,
+      "sha256": "ddee3ef72c3eb48f35e819770bce166a11ef82d1caad7d58a2ff68faab717b21",
+      "sha": "89d5e2413e32a9db5234727f54407e2a111f39af",
+      "runtime_input": true
+    },
+    {
+      "path": "journal.js",
+      "mode": "100644",
+      "bytes": 6603,
+      "sha256": "18d9e51518d165cb6a5ce00f3be17c2c96df761c1b98c49a4195e79db0275a30",
+      "sha": "fe06c30c1006e4be92204b8ff4bb42f7dea9aa0e",
+      "runtime_input": true
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "bytes": 1705,
+      "sha256": "80c0f538aba05d760d2da350a89ee45c7baa2270bdaab72230a71238a607b1eb",
+      "sha": "7a89ee5d7b73496d9dafc85a93184182f6f14026",
+      "runtime_input": false
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "bytes": 277,
+      "sha256": "366fbb956f7cad8b88d8cd93b45c90a73628995d32eab7ee61c8d11f2987a2a7",
+      "sha": "a594fc0e77cdbbe94fc0e47df27733eb8a194b1f",
+      "runtime_input": false
+    },
+    {
+      "path": "pkg/longwater_web.d.ts",
+      "mode": "100644",
+      "bytes": 1975,
+      "sha256": "2f191f12c3e0cd1422af5dca809738865025c270c0f563b27c8c096e3570fd91",
+      "sha": "b13d183c5d8982d689c33b4195a797bebff4ede5",
+      "runtime_input": false
+    },
+    {
+      "path": "pkg/longwater_web.js",
+      "mode": "100644",
+      "bytes": 8716,
+      "sha256": "8b429ccf2be678692226e8ba170d3b34b58d858d0ddd6d158cba3210526338a5",
+      "sha": "50cef9486d91829183315c1a1fb31df1914d6316",
+      "runtime_input": true
+    },
+    {
+      "path": "pkg/longwater_web_bg.wasm",
+      "mode": "100644",
+      "bytes": 71368,
+      "sha256": "76deec059601613d588f4685444d407da81b3339f7cf7bdaf1bd1a13b285dae2",
+      "sha": "faf26b8aa6a8887688249d6e3e34b3042c8babf3",
+      "runtime_input": true
+    },
+    {
+      "path": "practice-watch.css",
+      "mode": "100644",
+      "bytes": 3650,
+      "sha256": "44152eef4e21a6a0198e8994060ba9b5dc4cbb6d882f037897595c75c6927d29",
+      "sha": "4a38f1d84440a23e4ee15ca2504e216bf858c4b4",
+      "runtime_input": true
+    },
+    {
+      "path": "practice-watch.js",
+      "mode": "100644",
+      "bytes": 8384,
+      "sha256": "31c3839022c89aa86c761087aeb1788c2ae9315d8e297b8a2d34cda956b63b18",
+      "sha": "e68f484848d9cf334a9eb35475973ffbe8a603b5",
+      "runtime_input": true
+    },
+    {
+      "path": "scripts/package.mjs",
+      "mode": "100644",
+      "bytes": 3658,
+      "sha256": "88e9ac7d7bcbf1c9f7ed2846d3372d6748b551070b0cef241c9698eec17d28fe",
+      "sha": "2aba256a214ee09a7f737bbe1585f71f6b67b3ad",
+      "runtime_input": false
+    },
+    {
+      "path": "style.css",
+      "mode": "100644",
+      "bytes": 3342,
+      "sha256": "8d1658189947bc8ac01c227efdf22f2426e9acc1eef60175a05b99b0e27f9ae1",
+      "sha": "7cfc051bfd89e25a028397fbadcd05508e13aaea",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-choice-model.js",
+      "mode": "100644",
+      "bytes": 3694,
+      "sha256": "b9bdace11558b807d42d085fded94469f8cd18427c09836fa062d49338314747",
+      "sha": "06e2fb072ce281f032e9c5c455372ff0eb60badd",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-choice.css",
+      "mode": "100644",
+      "bytes": 3741,
+      "sha256": "3efcba842d64d7e9f81842f26f2e8a0cf22d9f1e5226774e1e0fa8517e4793e9",
+      "sha": "1ce5b6c327978b953dcd9117162b03376fed31f3",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-choice.js",
+      "mode": "100644",
+      "bytes": 12066,
+      "sha256": "984fb4150ab005785018b5f56d8eb061da8b9e977214a87c7bd93239727ec49d",
+      "sha": "c06835946ec99c7edd8eb16334d597356aada060",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-file.css",
+      "mode": "100644",
+      "bytes": 1196,
+      "sha256": "27f8042b3d0e0c322fea7eb3af8ac0c2da20d5884089afbd487f7357419b44eb",
+      "sha": "9aee526fc9225b5aea8242eed8fa543525574bef",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-file.js",
+      "mode": "100644",
+      "bytes": 5475,
+      "sha256": "89e148089548a204cb21ab6956c6dc7d61ced7cacfa92e1d3d17aaea062b7cf6",
+      "sha": "34c8490804e696e500e1362c629bb05a51ab3040",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-report.css",
+      "mode": "100644",
+      "bytes": 571,
+      "sha256": "b5ef69d3a10a306dbdf976df9bb49b13ac5b5cf38c99a8b389409e04fff934f5",
+      "sha": "b017c4c073c496e75aa951c33ff7cdfec7dc09d6",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-report.js",
+      "mode": "100644",
+      "bytes": 9346,
+      "sha256": "1d44bd246fed7b4d8e710829162f457b6edbad9f4cb9f0f23bb0a6492cf27a25",
+      "sha": "f1dd8b3cedd447eac99b55075a19e603ba5bcfe7",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-rewind.css",
+      "mode": "100644",
+      "bytes": 1345,
+      "sha256": "a6dc8d6b5def30c624de87f17d0efe75c709aa00e520ad2db2c396e9400b50c3",
+      "sha": "af70c747a36ff1d204ef662aad6e510a8af939e7",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-rewind.js",
+      "mode": "100644",
+      "bytes": 6408,
+      "sha256": "17a001b61d89204ab8f06b84dbda4de3ea8dbd7c9392bdfeb65d4ccf7cdd928a",
+      "sha": "87797f657158bc3055d2a6e7547e3e51196a48bf",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-save.css",
+      "mode": "100644",
+      "bytes": 473,
+      "sha256": "977087eb62fd7308d00d11767999fc2d4fae4e7e93f66edd1029528f33a7438f",
+      "sha": "8de9e0fefbf4d3d3cd1045fad93fbb0d3896b007",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-save.js",
+      "mode": "100644",
+      "bytes": 12845,
+      "sha256": "6bf368067c6a4804f79c6fdc241fe3159ffe1cf4f530a78b74ca4a9b0ea5aabc",
+      "sha": "846d0d1c54f27a6a6926c649450ce7838b038134",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-trends.css",
+      "mode": "100644",
+      "bytes": 2791,
+      "sha256": "037cb6f69558b873c868c3e9ec7249ccb6f7a7fd70fadfc8c9724e7948038786",
+      "sha": "04e9153a10a363c72f26d6779f8b5470db5936cc",
+      "runtime_input": true
+    },
+    {
+      "path": "watch-trends.js",
+      "mode": "100644",
+      "bytes": 11372,
+      "sha256": "d18fbe4167a48db37bbbc601ec97f4a7f1b9dd7706b4dd1b81670a355c099f0a",
+      "sha": "7e4bb64f3f6eef5bb265aa68f17c1b89cb9f67a0",
+      "runtime_input": true
+    }
+  ]
+}
